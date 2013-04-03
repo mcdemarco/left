@@ -1,0 +1,16 @@
+---
+layout: layout
+---
+
+  <h2>
+    <a href="{{ page.url }}">{{ page.title }}</a>
+  </h2>
+
+{% if page.byline %}
+  <section class="byline">
+    <span style="font-style:italic;padding-right:4px;">by</span> <span>{{ page.byline }}</span>
+  </section>
+{% endif %}
+
+{{ content }}
+

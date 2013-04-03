@@ -1,30 +1,27 @@
 .sidebar {
   position: inherit;
   width: inherit;
-  margin: 0;
-  padding: 25px; }
-  .sidebar img {
-    display: none; }
-  .sidebar .name {
-    display: inline; }
-    .sidebar .name #fname, .sidebar .name #lname {
-      font-size: 25px; }
+  margin: 25px;
+  padding: 35px;
+  box-shadow: -5px -5px 7px #ccc; }
   .sidebar .meta {
-    display: none; }
-  .sidebar ul {
-    padding: 25px; }
-  .sidebar li {
-    display: inline; }
-  .sidebar .sections {
-    margin: 0; }
-    .sidebar .sections a {
-      font-size: 16px;
-      margin: 0 20px 0 0;
-      padding: 5px 10px; }
+    margin-top: 15px; }
+    .sidebar .meta img {
+      display: inline-block;
+      margin-right: 15px; }
+  .sidebar .name {
+    color: #bebebe;
+    display: block; }
+  .sidebar .switch {
+    color: #bebebe;
+    display: block; }
 
 .content {
   margin: 0;
-  padding: 5px 25px;
+  padding: 15px 25px 5px 25px;
   width: inherit; }
   .content h1 {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
     margin: 0 0 5px 0; }

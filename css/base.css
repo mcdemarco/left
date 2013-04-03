@@ -22,8 +22,10 @@ a {
     padding: 0;
     margin-left: 2px;
     border-radius: 5px; }
+  .sidebar .block {
+    display: none; }
   .sidebar .name {
-    text-transform: uppercase;
+    display: none;
     margin: 10px 0 20px 0; }
     .sidebar .name #fname {
       padding-left: 1px;
@@ -35,13 +37,15 @@ a {
       font-weight: bold;
       letter-spacing: 1px;
       color: black; }
+  .sidebar .meta {
+      padding-bottom:5px;}
   .sidebar .meta a {
     margin-left: 0px;
     color: black; }
     .sidebar .meta a:hover {
       color: #227ce8; }
   .sidebar .sections {
-    margin: 15px 0 0 0; }
+    margin: 15px 0 15px 0; }
     .sidebar .sections a {
       padding: 3px 0;
       color: black;
@@ -53,9 +57,18 @@ a {
     .sidebar .sections ul {
       margin: 0;
       padding: 0; }
+    .sidebar .sections ul ul a {
+      color: #bebebe;
+      padding-left:7px;}
     .sidebar .sections li {
       list-style: none;
       margin-bottom: 7px; }
+    .sidebar .sections li li {
+      margin-bottom: 2px; }
+  .sidebar .switch {
+    display: none; }
+    .sidebar .switch a {
+      color: #939393; }
 
 .content {
   max-width: 650px;
@@ -63,9 +76,13 @@ a {
   margin-right: 20px;
   margin-bottom: 50px; }
   .content h1 {
-    color: #333;
+    color: #bebebe;
     font-family: "Yanone Kaffeesatz", Helvetica, sans-serif;
     font-weight: 400; }
+  .content h1 .description {
+    color: #ebebeb;}
+  .content h1 .booktitle {
+    color: #737373;}
   .content h1 a {
     color: #111;
     text-decoration: none; }
@@ -139,6 +156,10 @@ a {
       text-align: right;
       color: #111;
       font-style: normal; }
+  .content .by {
+    font-family: Helvetica, sans-serif;
+    color: #444;
+    text-align: right;}
   .content .byline {
     margin-bottom: 17px;
     font-family: "Yanone Kaffeesatz", Helvetica, sans-serif;
@@ -172,6 +193,11 @@ a {
       text-decoration: none; }
       .content .listing a:hover {
         text-decoration: underline; }
+    .content .listing li li {
+      text-align: right; 
+      border-bottom: none;}
+    .content .listing li li a {
+      color: #777777;}
   .content .meta {
     margin: 30px 0;
     padding: 10px 0;
@@ -191,6 +217,21 @@ a {
       padding-left: 60px; }
     .content .meta iframe {
       padding-left: 5px; }
+    .content .meta a {
+      padding-left: 5px;
+      padding-right: 5px; }
+  .content .nav {
+    margin: 30px auto;
+    padding: 10px 0;
+    text-align: center;
+    font-family: Helvetica, sans-serif; }
+    .content .nav a {
+      padding: 0 10px 0 10px;
+      text-decoration: none;}
+    .content .nav a.prev:before {
+      content: '\2329\00A0\00A0';}
+    .content .nav a.next:after {
+      content: '\00A0\00A0\232A';}
   .content .talk-design .color div {
     float: left;
     margin-right: 10px;

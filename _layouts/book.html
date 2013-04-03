@@ -1,0 +1,28 @@
+---
+layout: layout
+---
+
+  <h2>
+    <a href="{{ page.url }}">{{ page.title }}</a>
+  </h2>
+
+  {{ content }}
+
+  <section class="byline" style="text-align:right;">
+    {{ page.date | date: "%B %e, %Y" }}
+  </section>
+
+  <section class="nav">
+    {% if page.prev %}
+    <a class="prev" href="{{ page.prev }}.html">Previous</a>
+    {% endif %}
+    {% if page.up %}
+    <a class="up" href="{{ page.up }}.html">Up</a>
+    {% endif %}
+    {% if page.next %}
+    <a class="next" href="{{ page.next }}.html">Next</a>
+    {% endif %}
+  </section>
+
+
+
