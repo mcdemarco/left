@@ -1,0 +1,25 @@
+---
+layout: layout
+title: "Posts"
+menu: blog
+---
+
+  {% for post in site.posts limit: 5 %}
+
+  <h2>
+    <a href="{{ post.url }}">{{ post.title }}</a>
+  </h2>
+
+  <section class="byline">
+    {{ post.date | date: "%B %e, %Y" }}
+  </section>
+
+  {{ post.content }}
+    
+  {% endfor %}
+
+<!-- index links -->
+<div class="pagination">
+    <em>For more posts, see the <a href="/blog/archive.html">archives</a>.</em>
+</div>
+
