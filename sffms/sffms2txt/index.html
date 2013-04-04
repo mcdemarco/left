@@ -1,0 +1,57 @@
+---
+layout: page
+title: sffms2txt
+menu: sffms
+---
+
+<h3>plain text converter</h3>
+
+<p>This is a beta version of a forthcoming sffms to plain text converter.
+Upload a story file (e.g., <a href="/sffms/examples/oveja.tex"
+>oveja.tex</a>) and it will returned to you in plain-text format.
+Since this is a beta, you should edit the output in a text editor
+before emailing it to anyone.</p>
+
+<p>Italics and other fonts will be handled as specified below. Text
+  that the converter cannot interpret will be put in <b>[[double
+  brackets]]</b>.  The output file will have the extension
+  <tt>.txt</tt> and may be downloaded automatically, depending on your
+  browser.  No copy of your story is saved on the server.</p>
+
+<h3>conversion form</h3>
+
+<form enctype="multipart/form-data" action="sffms2txt.php" method="post">
+<input type="hidden" name="MAX_FILE_SIZE" value="3000000"/>
+<p>Handle italics with:
+<span  style="font-family: 'Courier New', Courier, monospace;">
+<br /><input type="radio" name="italicstyle" value="asterisk" checked="checked"/> *single asterisks*
+<input type="radio" name="italicstyle" value="doubleasterisk"/> **double asterisks**
+<br /><input type="radio" name="italicstyle" value="underline"/> _single underscores_
+<input type="radio" name="italicstyle" value="doubleunderline"/> __double underscores__
+<br /><input type="radio" name="italicstyle" value="none"/> no distinguishing markup
+</span>
+</p>
+<p>Handle the sffms <kbd>\thought{}</kbd> command the same way as:
+<br /><input type="radio" name="thoughtstyle" value="italic"
+checked="checked"/> italics (above)
+<br /><input type="radio" name="thoughtstyle" value="error"/> errors
+(<b>[[thought]]</b>)
+</p>
+<p>Handle boldface the same way as:
+<br /><input type="radio" name="boldstyle" value="italic" checked="checked"/> italics (above)
+<br /><input type="radio" name="boldstyle" value="error"/> errors
+(<b>[[bold]]</b>)
+</p>
+<p>Handle small caps the same way as:
+<br /><input type="radio" name="smallcapstyle" value="italic" checked="checked"/> italics (above)
+<br /><input type="radio" name="smallcapstyle" value="error"/> errors
+(<b>[[smallcaps]]</b>)
+</p>
+<p>
+Convert this file: <input name="userfile" type="file">
+<input type="submit" value="Send File"></p>
+</form>
+<p class="timestamp">
+<!-- hhmts start --> Last modified: Thu Apr  4 15:04:16 EDT 2013 <!-- hhmts end -->
+</p>
+

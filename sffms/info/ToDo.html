@@ -1,0 +1,63 @@
+---
+layout: page
+title: sffms to do list
+menu: sffms
+---
+
+<p>This is my to do list, as of version 2.1.  For a version history,
+see the <a href="/sffms/class/previous/" >archives</a>.  Email
+suggestions to the address listed in the documentation, or post them
+to the <kbd>rec.arts.sf.composition</kbd> newsgroup.</p>
+
+<h2>sffms class</h2>
+
+<ul>
+  <li>allow book formatting in novels by changing the underlying LaTeX class
+  from <kbd>report</kbd> to  <kbd>book</kbd>[class changed for 2.2]</li>
+  <li>allow parts in submission mode [done for 2.2]</li>
+  <li>change notitle to notitlepage for compatibility</li>
+  <li>add Times option [done for 2.2]</li>
+  <li>standardized markup for chapter inscriptions:<ul></li>
+  <li>add an epigraph command and call the epigraph package for it in
+  non-submission mode</li>
+  <li>add an inscription command as a quote env in both modes?</li></ul></li>
+  <li>use ellipsis package for ellipses</li>
+  <li>allow \tableofcontents in submission mode</li>
+  <li>provide a font environment that spans paragraphs</li>
+  <li>pass notitlepage directly to class; remove notitle logic</li>
+</ul>
+
+<h2>sffms support</h2>
+
+<ul>
+  <li>make an sffms2rtf converter [in progress]</li>
+  <li>LyX support [in progress]</li>
+  <li>get sffsmart to fix single quotes [pipe dream]</li>
+  <li>add a hyphen converter?</li>
+  <li>fancyhdr now dist. with LaTeX?</li>
+</ul>
+
+<h2>sffms documentation</h2>
+
+<ul>
+  <li>document \disposablestring command [done for 2.2]</li>
+  <li>document page shrinkage problems on-site</li>
+  <li>fix minor latex issues in the examples [some done?]</li>
+  <li>document partname and chaptername [done for 2.2]</li>
+  <li>document how to restart chapter numbering in a new part (see
+  qa/parts-rechapter.tex)</li>
+  <li>document handling long titles (\protect\\ )--a consequence of MakeUppercase [done for 2.2]</li>
+  <li>explain where the appropriate macro directory is, especially on
+  a mac [done for 2.2]</li>
+</ul>
+
+<h2>sffms bugs</h2>
+
+<ul>
+  <li>fix hyperref conflict [done for 2.2]</li>
+  <li>fix hyperref option conflict with smart option</li>
+  <li>fix \tableofcontents conflict with ulem.sty</li>
+  <li>[2.2] geometry option won't ignorehead</li>
+</ul>
+
+

@@ -256,3 +256,9 @@ p.noteboardlink + p {
 p.noteboardlink + p.noteboardlink {
     margin-top:0;
     margin-bottom:0; }
+p.timestamp {
+    color: #666;
+    font-size: smaller;
+    padding-top: 20px; }
+
+.alert {color: #991100;}

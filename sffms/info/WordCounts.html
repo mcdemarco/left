@@ -1,0 +1,52 @@
+---
+layout: page
+title: word counts
+menu: sffms
+---
+
+<h2>About counting words</h2>
+
+<p>"What Is a Word?" by Chuck Rothman: <a href="http://sfwa.org/writing/wordcount.htm">http://sfwa.org/writing/wordcount.htm</a>
+
+<h2>Methods for counting words</h2>
+
+<h3>LaTeX</h3>
+
+<p>Sffms has a basic word counter which inserts the word count into
+your manuscript.  Use the
+<kbd>\wordcount</kbd> command to adjust the word count manually.</p>
+
+<p>For more word counting options,
+try the <a href="http://www.ctan.org/tex-archive/macros/latex/contrib/wordcount/" >wordcount</a> script available on CTAN.</p>
+
+<h3>Emacs word count macro</h3>
+
+<p>If you use <a href="Emacs.html">emacs</a>, put the following code
+into your .emacs file.   <i>Control-c w</i> will count words in a
+highlighted region.  Use <i>control-x h</i> first in order to count
+the entire buffer.</p>
+
+<p>
+<pre>
+    ;; source: xemacs 20.3
+    (defun count-words-region (start end)
+       (interactive "r")
+       (save-excursion
+          (let ((n 0))
+           (goto-char start)
+           (while (&lt; (point) end)
+             (if (forward-word 1)
+                 (setq n (1+ n))))
+           (message "Region has %d words" n)
+           n)))
+</pre>
+<p>
+<pre>
+    (global-set-key "\C-cw" 'count-words-region)
+</pre>
+
+
+<h3>wc</h3>
+
+<p>Of course, there's always <i>wc</i>, the unix word counting program.
+

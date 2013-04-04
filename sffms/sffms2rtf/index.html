@@ -1,0 +1,28 @@
+---
+layout: page
+title: sffms2rtf
+menu: sffms
+---
+
+<h3>rtf converter</h3>
+
+<p>This is a beta version of a forthcoming sffms to rtf converter.
+Upload a story file (e.g., <a href="/sffms/examples/oveja.tex"
+>oveja.tex</a>) and it will returned to you in Rich Text Format.
+Since this is a beta, you should edit the output in a word processor
+before emailing it to anyone.</p>
+
+<p>Text that the converter could not interpret will be marked in <span style="color:
+red;">red</span>.  The output file will have the extension <tt>.rtf</tt>
+and may be downloaded automatically, depending on your browser.  No
+copy of your story is saved on the server.</p> 
+
+
+<form enctype="multipart/form-data" action="sffms2rtf.php" method="post">
+<input type="hidden" name="MAX_FILE_SIZE" value="3000000">
+Convert this file: <input name="userfile" type="file">
+<input type="submit" value="Send File">
+</form>
+<p class="timestamp"> 
+<!-- hhmts start --> Last modified: Thu Apr  4 15:07:25 EDT 2013 <!-- hhmts end -->
+</p>
