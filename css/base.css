@@ -242,3 +242,10 @@ a {
     font-weight: bold; }
   .content .talk-design .color .white {
     color: #fff; }
+
+div.smallbook {
+    display: inline-block;
+    padding: 10px;
+    font-size: smaller;
+    text-align: center;
+}
