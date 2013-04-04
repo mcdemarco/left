@@ -2,6 +2,7 @@
 layout: book
 title: "Jean-Luc, Deanna, and Keiko: No Naming Language At All"
 menu: conlang
+supertitle: The Accidental Conlanger
 date: 2008-10-03 00:05
 prev: index
 up: index

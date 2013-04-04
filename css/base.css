@@ -247,5 +247,12 @@ div.smallbook {
     display: inline-block;
     padding: 10px;
     font-size: smaller;
-    text-align: center;
-}
+    text-align: center; }
+p.noteboardlink {
+    margin-top:0;
+    margin-bottom:0; }
+p.noteboardlink + p {
+    margin-top:1.2em }
+p.noteboardlink + p.noteboardlink {
+    margin-top:0;
+    margin-bottom:0; }

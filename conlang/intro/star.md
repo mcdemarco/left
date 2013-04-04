@@ -2,6 +2,7 @@
 layout: book
 title: "A star shines on the hour of our meeting: The Intentional Conlanger"
 menu: conlang
+supertitle: The Accidental Conlanger
 date: 2008-09-14 22:29
 prev: index
 up: ../index

@@ -42,8 +42,8 @@
 
 <section class="content">
   <h1>{{ site.name }}:
-      {% if page.menu == 'conlang' %}
-      <span class="booktitle">The Accidental Conlanger</span>
+      {% if page.supertitle %}
+      <span class="booktitle">{{page.supertitle}}</span>
       {% else %}
       <span class="description">{{site.description}}</span>
       {% endif %}
@@ -98,6 +98,14 @@
 	  <li><a href="/gkc/quotes/">quotes</a></li>
 	  <li><a href="/gkc/books.html">works</a></li>
 	  <li><a href="/gkc/distrib/" title="Distributivism">distrib</a></li>
+	</ul>
+	{% endif %}
+	</li>
+	<li><a href="/social/" title="Social media">social</a>
+	{% if page.menu == 'social' %}
+	<ul>
+	  <li><a href="/social/tweets/">tweets</a></li>
+	  <li><a href="/social/notes/">noteboard</a></li>
 	</ul>
 	{% endif %}
 	</li>

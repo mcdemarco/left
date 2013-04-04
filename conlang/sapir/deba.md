@@ -2,6 +2,7 @@
 layout: book
 title: "De, Deb, Deba: Speedtalk and Philosophical Languages"
 menu: conlang
+supertitle: The Accidental Conlanger
 date: 2009-08-16 22:58
 prev: shaka
 up: index

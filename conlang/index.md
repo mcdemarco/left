@@ -2,6 +2,7 @@
 layout: book
 title: "About the Accidental Conlanger"
 menu: conlang
+supertitle: The Accidental Conlanger
 date: 2013-04-02 23:49
 next: toc
 ---

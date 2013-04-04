@@ -2,6 +2,7 @@
 layout: book
 title: "The fra'as guarded the farmlings with their krytoses: Calling It Bread"
 menu: conlang
+supertitle: The Accidental Conlanger
 date: 2008-10-01 21:01
 prev: someone
 up: index

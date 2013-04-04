@@ -2,6 +2,7 @@
 layout: book
 title: "Connavar of the Rigante: Derivative Naming Languages"
 menu: conlang
+supertitle: The Accidental Conlanger
 date: 2008-10-09 23:57
 prev: jean-luc
 up: index

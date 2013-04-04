@@ -2,6 +2,7 @@
 layout: book
 title: "Someone has a curiosity for you: The Illusion of a Language"
 menu: conlang
+supertitle: The Accidental Conlanger
 date: 2008-09-16 23:28
 prev: star
 up: index

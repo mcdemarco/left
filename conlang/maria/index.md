@@ -2,6 +2,7 @@
 layout: book
 title: "They call the wind Maria: Naming Languages"
 menu: conlang
+supertitle: The Accidental Conlanger
 date: 2008-10-02 00:00
 prev: ../intro/bread
 up: ../index

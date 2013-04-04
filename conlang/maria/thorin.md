@@ -2,6 +2,7 @@
 layout: book
 title: "Thorin son of Thrain son of Thror: Phonetic Naming Languages"
 menu: conlang
+supertitle: The Accidental Conlanger
 date: 2008-10-04 23:24
 prev: connavar
 up: index

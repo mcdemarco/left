@@ -3,7 +3,13 @@ layout: layout
 ---
 
   <h2>
-    <a href="{{ page.url }}">{{ page.title }}</a>
+    <a href="{{ page.url }}">
+    {% if page.title %}
+    {{ page.title }}
+    {% else %}
+    {{ page.date | date: "%B %e, %Y" }}
+    {% endif %}
+    </a>
   </h2>
 
 {% if page.byline %}

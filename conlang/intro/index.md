@@ -2,6 +2,7 @@
 layout: book
 title: "En la komenco: Introduction"
 menu: conlang
+supertitle: The Accidental Conlanger
 date: 2008-10-01 23:01
 prev: ../index
 up: ../index

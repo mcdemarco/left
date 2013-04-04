@@ -2,6 +2,7 @@
 layout: book
 title: "References"
 menu: conlang
+supertitle: The Accidental Conlanger
 date: 2008-09-12 01:03
 ---
 

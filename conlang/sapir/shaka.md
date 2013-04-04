@@ -2,6 +2,7 @@
 layout: book
 title: "Shaka, When the Walls Fell: Allusive Languages"
 menu: conlang
+supertitle: The Accidental Conlanger
 date: 2008-10-16 23:59
 prev: index
 up: index

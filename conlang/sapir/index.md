@@ -2,6 +2,7 @@
 layout: book
 title: "From Sapir to Worf: Experimental Languages"
 menu: conlang
+supertitle: The Accidental Conlanger
 date: 2008-10-17 01:14
 prev: ../maria/thorin
 up: ../index
