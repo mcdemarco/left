@@ -1,2 +1,4 @@
 _site
 *~
+bio/nonfiction/*
+.DS_Store
