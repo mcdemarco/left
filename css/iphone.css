@@ -25,3 +25,7 @@
     overflow: hidden;
     text-overflow: ellipsis;
     margin: 0 0 5px 0; }
+
+div.polaroids {
+    left: 15px;
+}
