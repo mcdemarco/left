@@ -1,1 +1,2 @@
+AddType image/svg+xml svg
 ErrorDocument 404 /404.html
