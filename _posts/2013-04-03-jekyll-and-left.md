@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Jekyll and Left"
-categories: posts
+tags: tools
 date: 2013-04-03 13:28
 ---
 [Octopress](http://octopress.org/) was repressing me, so I switched to a pure [jekyll](https://github.com/mojombo/jekyll) responsive theme called [Left](http://zachholman.com/posts/left/).  I've hacked it up a bit with navigation submenus, header rearrangements, and a simpler mobile stylesheet.  The source code is in my [github fork](https://github.com/mcdemarco/left).

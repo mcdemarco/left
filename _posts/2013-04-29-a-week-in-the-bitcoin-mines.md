@@ -1,10 +1,10 @@
 ---
 layout: post
 title: A Week in the Bitcoin Mines
-categories: posts
+tags: mac
 created: 2013-04-29 12:42:34
 ---
-I decided to try bitcoin mining after hearing a partial explanation that made it sound more  mathematically interesting than [it turned out to be](http://www.reddit.com/r/Bitcoin/comments/17so2c/explain_bitcoins_like_im_a_mathcs_undergrad/). (The moment of existential disappointment came when I read that the number of bitcoins cannot exceed 21 million.)
+I decided to try bitcoin mining after hearing a partial explanation that made it sound more mathematically interesting than [it turned out to be](http://www.reddit.com/r/Bitcoin/comments/17so2c/explain_bitcoins_like_im_a_mathcs_undergrad/). (The moment of existential disappointment came when I read that the number of bitcoins cannot exceed 21 million.)
 
 There's plenty of advice out there for the [rank newbie](http://www.businessinsider.com/how-to-mine-bitcoins-2013-3?op=1) that explains what bitcoins are and how to mine them with just a web browser at sites like [BitCoinPlus.com](http://bitcoinplus.com). My experience with web miners (during some downtime away from the *real* mines) was that they don't work now.  I suspect they may have worked back when Java plugins were less hoary and suspect, and bitcoins littered the intertubes like, well, bits. 
 

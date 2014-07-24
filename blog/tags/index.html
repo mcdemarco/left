@@ -1,0 +1,18 @@
+---
+layout: layout
+title: "Tags"
+menu: blog
+---
+
+<h2>Tag list</h2>
+
+  <ul class="listing">
+    {% for tag in site.tags %}
+    <li>
+      <span>{{ tag | last | size}} post(s)</span>
+      <a href="/{{ site.tag_dir }}/{{tag | first}}/">
+	{{ tag | first }}
+      </a>
+    </li>
+    {% endfor %}
+  </ul>

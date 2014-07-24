@@ -2,7 +2,7 @@
 layout: post
 title: Back on the Wagon
 created: 1302442760
-categories: mcd
+tags: mcd
 ---
 [School's](http://www.brandeis.edu/gps/programscourses/programs/listings/17.html) out, probably for summer, and I've been inspired to blog again by the recent flurry of [posts on self-publishing](http://lmmay.com/2011/03/21/barry-eisler-turned-down-500000-deal-to-indie-publish/).  But when I logged in after all these months since NaNoWriMo, Drupal distracted me from my intended topic by telling me I've been a member of my website for over six years.  It's been about that long since I sold [my first story](http://mcdemarco.net/node/76).
 

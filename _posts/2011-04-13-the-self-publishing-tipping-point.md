@@ -2,7 +2,7 @@
 layout: post
 title: The Self-Publishing Tipping Point
 created: 1302752810
-categories: publishing ebooks
+tags: publishing ebooks
 ---
 I found my way from [Dean Wesley Smith's twitter feed](http://twitter.com/#!/DeanWesleySmith) to L. M. May's posts on [learned helplessness](http://lmmay.com/2011/04/03/fiction-writers-and-learned-helplessness/) and [Barry Eisler going indie](http://lmmay.com/2011/03/21/barry-eisler-turned-down-500000-deal-to-indie-publish/).  I read Barry Eisler's long [two](http://barryeisler.blogspot.com/2011/03/ebooks-and-self-publishing-conversation.html) [part](http://barryeisler.blogspot.com/2011/04/ebooks-and-self-publishing-part-2.html) dialogue with Joe Konrath about self-publishing.  Dean has since posted some more self-publishing advice.
 

@@ -166,6 +166,9 @@ a {
     padding-left: 0px;
     font-size: 17px;
     color: #777; }
+  .content .byline a {
+    color: #777;
+    text-decoration:none;}
   .content .aside {
     background-color: #eeeeee;
     padding: 14px;
@@ -374,3 +377,12 @@ div.polaroids {
     box-shadow: 0 3px 6px rgba(0,0,0,.5); }
 
 /* end polaroid section */
+
+dl.biblio dd {
+    padding: 4px;
+}
+
+ul.tag_list, ul.tag_list li {
+    display:inline;
+    font-style:italic;
+}
