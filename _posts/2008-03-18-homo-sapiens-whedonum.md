@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Homo sapiens whedonum
+tags: 
 created: 1205896198
 ---
 I've finally gotten around to reading *Blindsight* by Peter Watts.  More on the book itself will follow, but first I have to link his [flash presentation](http://www.rifters.com/blindsight/vampires.htm) on the creation of *Homo sapiens whedonum*.  Not only is it educational for those of us genetically engineering our own fantasy creatures at home, but it's also filled with dark corporate humor.<!--break-->  I don't know why, but I had to download [a freestanding flash player](http://www.macosxhints.com/article.php?story=20031214212712395) to get the video to play correctly on my PowerBook.

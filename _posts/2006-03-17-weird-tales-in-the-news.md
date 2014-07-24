@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Weird Tales in the News
+tags: horror magazines
 created: 1142610079
 ---
 Via a mailing list:  The Washington Post reports on [Plato's Cream Pie and Other Horror Delicacies](http://www.washingtonpost.com/wp-dyn/content/article/2006/03/13/AR2006031301841.html) from the latest incarnation of [Weird Tales](http://en.wikipedia.org/wiki/Weird_Tales).

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Advice from Elsewhere
+tags: GTD
 created: 1106799964
 ---
 Here's some advice for geeks that, with the obvious phase-shift, may be helpful to writers:

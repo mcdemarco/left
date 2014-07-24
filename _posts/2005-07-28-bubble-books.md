@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Bubble Books
+tags: writing
 created: 1122566482
 ---
 I was part of a mind-mapping panel at [TNEO](http://www.sff.net/odyssey/tneo.html) yesterday.  I've [linked some links before](http://www.mcdemarco.net/node/127), but here's a book I found helpful:

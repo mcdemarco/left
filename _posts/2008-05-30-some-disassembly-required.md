@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Some Disassembly Required
+tags: 
 created: 1212120243
 ---
 Via [Daring Fireball](http://daringfireball.net/linked/2008/may#thu-29-august):  John August [advises screenwriters](http://johnaugust.com/archives/2008/does-a-working-writer-keep-improving) to improve their plotting skills through reverse-engineering.

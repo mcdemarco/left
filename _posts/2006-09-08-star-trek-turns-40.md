@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Star Trek Turns 40
+tags: tie-ins
 created: 1157743831
 ---
 Via [GeekPress](http://www.geekpress.com/2006/09/its-40th-anniversary-of-star-trek.html):  StarTrek.com looks at [Star Trek at 40](http://www.startrek.com/startrek/view/news/article/25215.html).

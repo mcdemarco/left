@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Learning a Language in the Digital Age
+tags: language
 created: 1111416504
 ---
 Via [Slashdot](http://slashdot.org/article.pl?sid=05/03/21/028208):  In [Learning a Language in the Digital Age](http://ummianum.typepad.com/my_weblog/2005/03/learning_a_lang.html), UmmRa reviews several flashcard programs:

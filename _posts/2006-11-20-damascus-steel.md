@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Damascus Steel
+tags: technology
 created: 1164043054
 ---
 Via  [GeekPress](http://www.geekpress.com/2006/11/damascus-steel-swords-may-owe-their.html):  Nature reports on [carbon nanotubes in Damascus steel](http://www.nature.com/news/2006/061113/full/061113-11.html).

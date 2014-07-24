@@ -1,6 +1,7 @@
 ---
 layout: post
 title: A Butterfly in Alaska
+tags: geology
 created: 1159985030
 ---
 Via [GeekPress](http://www.geekpress.com/2006/10/storm-swells-in-alaska-caused-breakup.html):  LiveScience reports that [a storm in Alaska](http://www.livescience.com/forcesofnature/061002_iceberg_wave.html) broke up an iceberg off Antarctica.

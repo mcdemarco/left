@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Habitable Planets for Man
+tags: 
 created: 1185151549
 ---
 Via [SFScope](http://sfscope.com/2007/07/habitable-planets-for-man-avai.html):  The RAND Corporation has released its legendary report, [Habitable Planets for Man](http://www.rand.org/pubs/reports/R414/) by Stephen H. Dole in PDF format.

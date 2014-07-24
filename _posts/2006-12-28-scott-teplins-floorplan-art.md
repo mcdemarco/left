@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Scott Teplin's Floorplan Art
+tags: 
 created: 1167326974
 ---
 Via [BoingBoing](http://www.boingboing.net/2006/12/27/scott_teplins_floorp.html):

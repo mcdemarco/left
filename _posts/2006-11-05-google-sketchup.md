@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Google SketchUp
+tags: mapping NaNoWriMo
 created: 1162756676
 ---
 [Google SketchUp](http://sketchup.google.com/) is what the NaNo poster from yesterday's blog entry went with to mock up his town.  It's a free 3D modelling program that claims to include spaceship support:

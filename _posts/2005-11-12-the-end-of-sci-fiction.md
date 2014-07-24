@@ -1,6 +1,7 @@
 ---
 layout: post
 title: The End of Sci Fiction
+tags: ezines markets
 created: 1131838278
 ---
 [SCI FICTION](http://www.scifi.com/scifiction/) is closing up shop for unspecified reasons:

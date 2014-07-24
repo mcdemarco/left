@@ -1,6 +1,7 @@
 ---
 layout: post
 title: On Hiring Writers
+tags: quotes
 created: 1125967128
 ---
 Here are a few quotes from Joseph Epstein.  The first two are from "Writing on the Brain," a review of _The Midnight Disease_ by Alice W. Flaherty published in _Commentary_, April 2004:

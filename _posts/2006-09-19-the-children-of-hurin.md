@@ -1,6 +1,7 @@
 ---
 layout: post
 title: The Children of Hurin
+tags: JRRT
 created: 1158691282
 ---
 Via [GeekPress](http://www.geekpress.com/2006/09/unfinished-tolkien-work-to-be.html):  The AP reports on a [new Tolkien work](http://www.cnn.com/2006/SHOWBIZ/books/09/18/books.newtolkien.ap/index.html) to be published by Houghton Mifflin.

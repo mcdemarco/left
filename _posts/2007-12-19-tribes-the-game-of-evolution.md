@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Tribes, the Game of Evolution
+tags: 
 created: 1198040423
 ---
 It may not be [Spore](http://www.spore.com/), but [Tribes](http://www.sjgames.com/tribes/) is a game of some science fictional interest, having been designed by David Brin and [Steve Jackson](http://www.io.com/~sj/).

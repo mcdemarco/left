@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Before Popping Off
+tags: 
 created: 1192422376
 ---
 The [Times Online](http://entertainment.timesonline.co.uk/tol/arts_and_entertainment/books/article2652789.ece) has more about Doris Lessing's belated Nobel prize:

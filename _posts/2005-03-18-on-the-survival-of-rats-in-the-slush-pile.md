@@ -1,6 +1,7 @@
 ---
 layout: post
 title: On the Survival of Rats in the Slush Pile
+tags: markets
 created: 1111170640
 ---
 Someone on one of my mailing lists mentioned [On the Survival of Rats in the Slush Pile](http://www.kingsfieldpublications.co.uk/rats.html) by Michael Allen.  From the blurb:

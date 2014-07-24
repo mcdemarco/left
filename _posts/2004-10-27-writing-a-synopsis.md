@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Writing a Synopsis
+tags: plot
 created: 1098934030
 ---
  I need to write a novel synopsis or two, so I googled for advice.  Pat McCutcheon has a book about it, [Writing the Fiction Synopsis: A Step by Step Approach ](http://www.gryphonbooksforwriters.com/WTFS.htm), but I don't think I need quite that much advice.  

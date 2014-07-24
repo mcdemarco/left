@@ -1,6 +1,7 @@
 ---
 layout: post
 title: A Quote a Day
+tags: quotes
 created: 1125548024
 ---
 Since I haven't had time to provide content lately, I've decided to add a category for quotations about writing.  I'll open with an anti-procrastination quote from Goethe:

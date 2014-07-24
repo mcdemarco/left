@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Brave New Words
+tags: 
 created: 1177035205
 ---
 <a href="http://blog.oup.com/2007/04/science_fiction/">The Oxford University Press blog</a> has an excerpt on profanity in science fiction, especially alternate f-words like fug, frell, and frak, from <em>Brave New Words</em>:

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Fondling Your Muse
+tags: writing
 created: 1127087816
 ---
 The <a href="http://www.writersdigest.com/muse/blurbomatic.asp">Blurb-o-Matic</a> says "Amazed, stunned, and breathless! An unparalleled must-read!"  What is this new metaliterary sensation?  <a href="http://www.writersdigest.com/muse/book.asp">Fondling Your Muse</a> by John Warner.  Read <a href="http://www.writersdigest.com/muse/excerpt.asp">an excerpt</a> or buy the book:

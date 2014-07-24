@@ -1,6 +1,7 @@
 ---
 layout: post
 title: About Writing
+tags: writing
 created: 1139104364
 ---
 <p>Via a mailing list: <a href="http://www.upne.com/0-8195-6715-9.html">About Writing</a> is Samuel Delaney's new collection of essays about writing from Wesleyan University Press.<p>

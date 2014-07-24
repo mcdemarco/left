@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Create Your Own Universe
+tags: astronomy
 created: 1154957507
 ---
 Via [GeekPress](http://www.geekpress.com/2006/08/japanese-scientists-plan-to-create.html):  [Physicists in Japan plan to create new universe in lab](http://www.casavaria.com/sentido/science/2006/06-0802-new-universe.htm).

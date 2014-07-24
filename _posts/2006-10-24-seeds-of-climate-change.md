@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Seeds of Climate Change
+tags: science
 created: 1161662966
 ---
 Via a mailing list:  Seed has an article up on [Climate-Changing Sci-Fi](http://www.seedmagazine.com/news/2006/10/climate_changing_scifi.php?page=1).

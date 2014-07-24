@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Campbell and Sturgeon Awards Announced
+tags: awards
 created: 1121267874
 ---
 <a href="http://www.scifi.com/scifiwire2005/index.php?id=31596">Sci Fi Wire reports</a> that the Campbell and Sturgeon Winners have been announced:

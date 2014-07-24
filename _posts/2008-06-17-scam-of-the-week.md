@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Scam of the Week
+tags: 
 created: 1213738741
 ---
 Via a mailing list:  [Victoria Strauss debunks](http://accrispin.blogspot.com/2008/06/victoria-strauss-fake-contest-alert.html#link) a fake [SFWA](http://www.sfwa.org/news/2008/boguswritingcontest.htm) contest.

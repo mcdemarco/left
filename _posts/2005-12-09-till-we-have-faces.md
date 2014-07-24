@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Till We Have Faces
+tags: authors
 created: 1134105676
 ---
 <p>The Narnia movie is prompting heated discussion of C. S. Lewis and his allegedly heavy-handed Christian allegory.  If you prefer a lighter touch with more sympathetic female characters, I highly recommend his last novel, <em>Till We Have Faces:  A Myth Retold</em>.  There's a nice synopsis (with spoilers) at <a href="http://www.litencyc.com/php/sworks.php?rec=true&UID=12321">the Literary Encyclopedia</a>.</p>

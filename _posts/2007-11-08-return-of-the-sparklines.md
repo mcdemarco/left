@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Return of the Sparklines
+tags: 
 created: 1194577750
 ---
 I've been looking for a cool NaNoWriMo widget to show off my paltry word count.  So far, I've found the sparklines:

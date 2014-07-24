@@ -1,6 +1,7 @@
 ---
 layout: post
 title: A Solution to the Fermi Paradox
+tags: astronomy
 created: 1135287300
 ---
 <p>Via <a href="http://del.icio.us/tag/scifi">del.icio.us scifi</a> and arXiv:  <a href="http://arxiv.org/abs/physics/0512062">A Solution to the Fermi Paradox: The Solar System, part of a Galactic Hypercivilization?</a></p>

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Alien Animal Planet
+tags: biology
 created: 1139352661
 ---
 Via [del.icio.us scifi](http://www.mcdemarco.net/aggregator/sources/25):  the Wired article [Alien Animal Planet](http://www.wired.com/wired/archive/14.02/alien.html) features "flying whales, walking trees, [and] three-eyed killer birds" cooked up by NASA and SETI.  Don't miss the story images section in the sidebar. <!--break-->

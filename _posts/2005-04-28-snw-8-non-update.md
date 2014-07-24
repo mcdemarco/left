@@ -1,6 +1,7 @@
 ---
 layout: post
 title: SNW 8 Non-Update
+tags: mcd
 created: 1114709355
 ---
 Still no picture, but you can pre-order if you'd like:

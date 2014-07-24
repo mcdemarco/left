@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Texturing and Modeling
+tags: mapping
 created: 1116441476
 ---
 The Big Book of Fractal Rendering:  

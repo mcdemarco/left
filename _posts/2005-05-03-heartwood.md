@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Heartwood
+tags: authors fantasy
 created: 1115145528
 ---
 Check out Barbara Campbell's first novel, out from DAW and up on Amazon today:

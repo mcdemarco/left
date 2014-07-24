@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Mapping on OS X
+tags: mapping NaNoWriMo
 created: 1162701173
 ---
 Someone in the [NaNoWriMo tech forum](http://www.nanowrimo.org/modules/newbb/viewforum.php?forum=157) asked about [freeware for making a town in OS X](http://www.nanowrimo.org/modules/newbb/viewtopic.php?topic_id=17718&start=0#forumpost285241).  Having a thousand words yet to write tonight, of course I went googling.

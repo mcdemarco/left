@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Strange New Worlds 9
+tags: tie-ins
 created: 1156300197
 ---
 I heard it through the grapevine that <em>Strange New Worlds 9</em> is out.  You don't have to buy the book to enter <a href="http://www.simonsays.com/content/feature.cfm?feature_id=5261&tab=24">the contest</a>, but it helps.  <!--break-->

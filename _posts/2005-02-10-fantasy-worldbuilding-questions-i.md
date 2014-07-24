@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Fantasy Worldbuilding Questions I
+tags: writing fantasy
 created: 1108014211
 ---
 <a href="http://www.sfwa.org/writing/worldbuilding1.htm">Fantasy Worldbuilding Questions Part 1</a> &copy;1996 Patricia Wrede [<a href="http://del.icio.us/tag/scifi">del.icio.us scifi</a>]:

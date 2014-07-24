@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Goodbye Cruel Word
+tags: 
 created: 1188754653
 ---
 Via [Daring Fireball](http://daringfireball.net/linked/2007/september#sun-02-poole):  [Steven Poole](http://stevenpoole.net/blog/goodbye-cruel-word/) says goodbye to Word.

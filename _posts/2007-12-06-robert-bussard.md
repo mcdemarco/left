@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Robert Bussard
+tags: 
 created: 1196956230
 ---
 Via a mailing list:  [The Santa Fe New Mexican's obituary](http://www.santafenewmexican.com/SantaFeNorthernNM/Robert_Bussard__1928_2007_Physicist_known_for_pursuits_into_fus)  for Robert Bussard (father of the Bussard Ramjet), who passed away this October, focuses on his work with the Tokamak and Polywell:

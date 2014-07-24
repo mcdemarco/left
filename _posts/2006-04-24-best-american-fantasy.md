@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Best American Fantasy
+tags: markets
 created: 1145911802
 ---
 Via a mailing list:  A new reprint anthology, [Best American Fantasy](http://www.bestamericanfantasy.com/), will be coming out next summer.

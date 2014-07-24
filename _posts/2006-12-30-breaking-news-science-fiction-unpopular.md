@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Breaking News:  Science Fiction Unpopular"
+tags: 
 created: 1167529980
 ---
 The November issue of IGMS asked the question, [Why Do People Not Read Science Fiction?](http://www.intergalacticmedicineshow.com/cgi-bin/mag.cgi?do=columns&vol=carol_pinchefsky&article=014)  I spotted an interesting theory on a mailing list--because [Sept. 11 Killed Star Trek](http://www.syfyportal.com/news423092.html):

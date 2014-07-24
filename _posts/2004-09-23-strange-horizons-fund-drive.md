@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Strange Horizons Fund Drive
+tags: ezines
 created: 1095986908
 ---
  It's not too late to help out with Strange Horizons' [September 2004 Fund Drive](http://www.strangehorizons.com/fund_drives/200409/main.shtml):

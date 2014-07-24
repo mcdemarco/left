@@ -1,6 +1,7 @@
 ---
 layout: post
 title: No LyX Support Yet
+tags: sffms
 created: 1163737826
 ---
 [LyX](http://www.lyx.org/) is a WYSIWYG front-end for [LaTeX](http://www.latex-project.org/), which, as a poster to the [NaNoWriMo Technology Forum](http://www.nanowrimo.org/modules/newbb/viewtopic.php?topic_id=1533) noticed, doesn't seem to work with [sffms](/sffms/).  I replied:

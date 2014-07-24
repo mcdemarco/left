@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Cover at Last
+tags: mcd
 created: 1116943533
 ---
 Thanks to J. A. D. for noticing that the cover of SNW8 is now up at Amazon:

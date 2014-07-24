@@ -1,6 +1,7 @@
 ---
 layout: post
 title: NaNoWriMo Word Count Graphic
+tags: NaNoWriMo
 created: 1099799102
 ---
  NaNo participant [lostcarpark](http://www.nanowrimo.org/userinfo.php?uid=8930) has provided a script to display your current word count in your blog, like so:

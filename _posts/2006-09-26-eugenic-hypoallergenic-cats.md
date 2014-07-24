@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Eugenic Hypoallergenic Cats
+tags: biology
 created: 1159280104
 ---
 Via [GeekPress](http://www.geekpress.com/2006/09/worlds-first-hypoallergenic-cats-are.html):  the BBC reports that [Allerca](http://www.allerca.com/) is [now selling hypoallergenic cats](http://news.bbc.co.uk/1/hi/health/5375900.stm).

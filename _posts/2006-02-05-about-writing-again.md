@@ -1,6 +1,7 @@
 ---
 layout: post
 title: About Writing Again
+tags: writing
 created: 1139182608
 ---
 <p>I couldn't find <em>About Writing</em> on Amazon last night, but today someone on the mailing list mentioned buying it.  I went back, and there it was:</p>

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: The Dark Lady
+tags: 
 created: 1212086537
 ---
 Via a mailing list:  [the NJJN reports](http://www.njjewishnews.com/njjn.com/022808/ltKosherBard.html) on a new Shakespearean authorship theory:  [the Dark Lady herself](http://www.darkladyplayers.com/) did it!

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Writing in Flow
+tags: writing
 created: 1133929282
 ---
 <p>I found <em>Writing in Flow</em> by Susan Perry among the used writing books in the basement of Brookline Booksmith.  You can read more about it at <a href="http://www.bunnyape.com/writinginflow.htm">the author's site</a> or check out the <a href="http://www.amazon.com/gp/product/customer-reviews/0898799295/">Amazon reviews</a>.</p>

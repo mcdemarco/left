@@ -1,6 +1,7 @@
 ---
 layout: post
 title: USPS Rate Hikes for Small Publishers
+tags: 
 created: 1177084617
 ---
 Via [Roy F. Moore](http://distributism.blogspot.com/2007/04/postal-service-threatens-small-press.html):  Time is running out to protest postal rate hikes affecting small publishers.  FreePress.net has a [letter-writing campaign](http://action.freepress.net/campaign/postal) you can join.<!--break-->

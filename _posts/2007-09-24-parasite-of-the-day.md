@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Parasite of the Day
+tags: 
 created: 1190674745
 ---
 Now on PlagueBlog:  everything you never wanted to know about [_Toxoplasma gondii_](http://plagueblog.blogspot.com/2007/09/toxoplasmosis-and-you.html).   Biology is stranger than fiction.

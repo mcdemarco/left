@@ -1,6 +1,7 @@
 ---
 layout: post
 title: OSC on Science and Ideology
+tags: 
 created: 1185546823
 ---
 Via [GeekPress](http://www.geekpress.com/2007/07/orson-scott-card-on-cognitive-bias-and.html):  [Orson Scott Card](http://www.ornery.org/essays/warwatch/2007-03-04-1.html) on the science of hot air.

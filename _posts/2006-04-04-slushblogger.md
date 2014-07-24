@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Slushblogger
+tags: magazines fantasy
 created: 1144197907
 ---
 Doug Cohen, slushmaster extraordinaire at [Realms of Fantasy](http://www.rofmagazine.com/), has started [a livejournal](http://slushmaster.livejournal.com/):

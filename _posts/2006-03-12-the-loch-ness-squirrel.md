@@ -1,6 +1,7 @@
 ---
 layout: post
 title: The Loch Ness Squirrel
+tags: biology
 created: 1142224579
 ---
 Via the Google feed of [Discovery Channel News](http://dsc.discovery.com/news/afp/20060306/rodent_ani.html):  

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Stargate Novels
+tags: tie-ins
 created: 1097721067
 ---
  I've been following the progress of Fandemonium Ltd.'s [Stargate Novels](http://www.stargatenovels.com/) for a few months now.  I've always wondered what was going on in the Stargate tie-in world, and I still don't know.  Fandemonium is a London-based publisher licensed to sell Stargate books pretty much everywhere except the US and Canada. (All we get here are the reissues of a handful of poorly-received books from in the early days of the movie and series.)

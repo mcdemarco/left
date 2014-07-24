@@ -1,6 +1,7 @@
 ---
 layout: post
 title: NaNoWriMo Profiles
+tags: NaNoWriMo
 created: 1161746746
 ---
 I noticed that <a href="http://www.nanowrimo.org/userinfo.php?uid=102616">araken</a> had a picture of himself in his profile, so I had to <a href="http://www.nanowrimo.org/userinfo.php?uid=4573">get one too</a>.  

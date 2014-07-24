@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Nancy Kress on Writing
+tags: writing
 created: 1128885350
 ---
 <p>I hadn't heard of these two how-to-write books by Nancy Kress until someone on a mailing list recommended them.  Both got five-star reviews at Amazon.  <em>Characters, Emotion &amp; Viewpoint</em> is new this year.</p>

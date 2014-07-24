@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Minerals for Plants, Animals and Man
+tags: biology
 created: 1119022143
 ---
 Via [del.icio.us (scifi)](http://del.icio.us/tag/scifi) and the Alberta government, [Minerals for Plants, Animals and Man](http://www1.agric.gov.ab.ca/$department/deptdocs.nsf/all/agdex789?opendocument):

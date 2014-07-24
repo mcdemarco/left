@@ -1,6 +1,7 @@
 ---
 layout: post
 title: This one doesn't go to 11
+tags: tie-ins
 created: 1159889746
 ---
 Dean Wesley Smith [announced in his forum](http://www.deanwesleysmith.com/forum/viewtopic.php?t=329) that he will not be editing _Strange New Worlds 11_, and also implied that there will be no volume 11:

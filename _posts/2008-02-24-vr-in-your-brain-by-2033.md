@@ -1,6 +1,7 @@
 ---
 layout: post
 title: VR in Your Brain by 2033
+tags: 
 created: 1203904977
 ---
 I found [this prediction](http://news.bbc.co.uk/1/hi/technology/7258105.stm) accidentally, through a disease search for [my other blog](http://plagueblog.blogspot.com/) that picked up on an odd statement about Parkinson's.  (I have no idea what the "pea-sized computer" refers to, unless it's some sort of misunderstanding of Deep Brain Stimulation.)  In any event, your friendly futurist Ray Kurzweil predicts that the successor to this mythical pea will be in-brain VR:

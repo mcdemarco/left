@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Tales of Future Past
+tags: sf
 created: 1109738927
 ---
 <a href="http://davidszondy.com/future/futurepast.htm">Tales of Future Past</a>  [via <a href="http://del.icio.us/tag/scifi">del.icio.us scifi</a>] features retrofuturistic images and commentary:

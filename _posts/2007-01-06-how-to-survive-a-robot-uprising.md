@@ -1,6 +1,7 @@
 ---
 layout: post
 title: How to Survive a Robot Uprising
+tags: 
 created: 1168142499
 ---
 <p><a href="http://www.robotuprising.com/">How to Survive a Robot Uprising</a> is a lovely little website about the eponymous book:</p>

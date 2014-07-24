@@ -1,6 +1,7 @@
 ---
 layout: post
 title: More Habitable Planets for Man
+tags: astronomy
 created: 1139582388
 ---
 Via GMail Web Clips:  Space.com reports on a ['Big' Discovery: Hypergiant Stars Might Harbor Planets](http://www.space.com/scienceastronomy/060208_hypergiant_stars.html).

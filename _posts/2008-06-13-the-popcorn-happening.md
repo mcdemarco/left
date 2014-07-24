@@ -1,6 +1,7 @@
 ---
 layout: post
 title: The Popcorn Happening
+tags: 
 created: 1213380796
 ---
 [SciFi.com reports](http://www.scifi.com/scifiwire/index.php?category=3&id=55911) about the light and fluffy B-movie content of M. Night Shyamalan's *The Happening*, which opens today:

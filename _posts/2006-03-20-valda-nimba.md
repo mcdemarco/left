@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Valda Nimba
+tags: conlangs JRRT
 created: 1142914692
 ---
 Here's a Lorem Ipsum generator that does [Quenya](http://www.lorem-ipsum.info/_quenya), [Esperanto](http://www.lorem-ipsum.info/_esperanto), and various non-constructed languages as well.

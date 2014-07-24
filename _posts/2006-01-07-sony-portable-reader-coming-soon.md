@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Sony Portable Reader Coming Soon
+tags: ebooks
 created: 1136691442
 ---
 Via a mailing list:  The [Sony Reader](http://products.sel.sony.com/pa/PRS/index.html) is due out this spring.  At 5" x 7" it's almost as small as a paperback and uses print-like [E Ink](http://www.eink.com/) technology.  

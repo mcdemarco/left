@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Extrasolar Earth-like Planet Found
+tags: 
 created: 1177533587
 ---
 Via [GeekPress](http://www.geekpress.com/2007/04/for-first-time-astronomers-have.html):   the Associated Press reports on the [discovery of a potentially habitable extrasolar planet](http://apnews.myway.com/article/20070424/D8ON8OSG0.html).

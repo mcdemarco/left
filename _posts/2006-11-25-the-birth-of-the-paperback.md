@@ -1,6 +1,7 @@
 ---
 layout: post
 title: The Birth of the Paperback
+tags: genre
 created: 1164497346
 ---
 Via a mailing list:  Michael Blowhard on how [Gold Medal Books](http://www.2blowhards.com/archives/2006/11/post_17.html) turned the paperback from a wartime fad into the mass-market phenomenon it is today.

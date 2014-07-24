@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Tuckerize me!
+tags: 
 created: 1207843439
 ---
 Via [UniversalHub](http://www.universalhub.com/node/13877):   Michael Burstein is [having a contest](http://mabfan.livejournal.com/369030.html) for people who preorder his new short story collection.  Winners will be Tuckerized at a later date.<!--break-->

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Be Careful What You Research
+tags: research
 created: 1099191976
 ---
  A romance writer had her home office raided because she was researching terrorism for a novel.  She recommended a few ways to avoid leaving an incriminating paper trail while researching.  There are a few copies of the article floating around; here are some places you may find it:

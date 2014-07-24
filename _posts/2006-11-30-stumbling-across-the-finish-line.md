@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Stumbling Across the Finish Line
+tags: 
 created: 1164940142
 ---
 Another year, another novel:

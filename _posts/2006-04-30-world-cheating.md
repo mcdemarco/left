@@ -1,6 +1,7 @@
 ---
 layout: post
 title: World-Cheating
+tags: mapping
 created: 1146411899
 ---
 Holly Lisle has lots of exercises and essays about writing at [her website](http://hollylisle.com/), and even a [podcast](http://hollylisle.libsyn.com/rss).  I was reading the one about worldbuilding, [How Much of My World Do I Build:  A Workshop for New Writers, Underbuilders, AND Overbuilders](http://hollylisle.com/fm/Workshops/how-much-do-i-build-workshop.html) when I got distracted by a statement about the lack of world-building software:<!--break-->

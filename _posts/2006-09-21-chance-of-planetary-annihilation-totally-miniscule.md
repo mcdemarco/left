@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Chance of Planetary Annihilation "Totally Miniscule"
+tags: physics
 created: 1158867162
 ---
 Via [GeekPress](http://www.geekpress.com/2006/09/despite-rumors-black-hole-factory-will.html):    LiveScience reports that [Despite Rumors, Black Hole Factory Will Not Destroy Earth](http://www.livescience.com/forcesofnature/060919_black_holes.html).

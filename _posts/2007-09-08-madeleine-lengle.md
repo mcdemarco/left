@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Madeleine L'Engle
+tags: 
 created: 1189305786
 ---
 Via [del.icio.us](http://www.mcdemarco.net/aggregator/sources/24):  The [New York Times remembers Madeleine L'Engle](http://www.nytimes.com/2007/09/08/books/07cnd-lengle.html?pagewanted=1&ei=5087%0A&em&en=9efcbc9f1c736256&ex=1189396800), who died Thursday at 88.<!--break-->

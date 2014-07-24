@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Miss Snark
+tags: publishing
 created: 1140571058
 ---
 If you haven't seen her yet, [Miss Snark, the literary agent](http://misssnark.blogspot.com/) is an educational and humorous Dear Abby for the publishing world.  For example, [in response to a reader](http://misssnark.blogspot.com/2006/02/too-fat-too-thin-too-tall-too-small.html) who'd received contradictory comments on a simultaneous submission to two different agents, Miss Snark responded:

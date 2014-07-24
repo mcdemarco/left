@@ -1,6 +1,7 @@
 ---
 layout: post
 title: More NaNoWriMo Widgets
+tags: NaNoWriMo
 created: 1163546280
 ---
 Here's the latest in word-count widget technology from [nowrists.com](http://nowrists.com/):

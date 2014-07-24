@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Giving it Away
+tags: ezines
 created: 1097465722
 ---
  From Writers' Weekly:  [10 Ways to Respond to Non-Paying Pubs' Excuses](http://www.writersweekly.com/the_latest_from_angelahoycom/002046_09292004.html) by Angela Hoy.  Thanks to [sf-f.org](http://sf-f.org/index.php?p=forView&id=1868) for the link.

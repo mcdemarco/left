@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Who Owns the One Ring?
+tags: 
 created: 1207188969
 ---
 Via [GeekPress](http://www.geekpress.com/2008/03/property-law-issues-in-lord-of-rings.html):  [The] [Lord of the Rings as Property Law](http://lawiscool.com/2008/03/29/lord-of-the-rings-as-property-law/). and [Property Law in The Lord of the Rings](http://volokh.com/posts/1206859543.shtml).  The latter features an itemized list of all ways, licit and ill, in which the One Ring is acquired by its various ill-fated possessors.  For example:

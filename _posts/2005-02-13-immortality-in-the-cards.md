@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Immortality in the cards
+tags: biology
 created: 1108355164
 ---
 The Seattle Times reports on an <a href="http://seattletimes.nwsource.com/html/nationworld/2002178868_immortal13.html">inventor who believes humans eventually will be immortal</a> [<a href="http://del.icio.us/tag/scifi">del.icio.us scifi</a>].

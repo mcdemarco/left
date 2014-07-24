@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Dead Woman Walking
+tags: 
 created: 1209956309
 ---
 Besides the [vampires](http://www.mcdemarco.net/node/401), I loved the use of obscure neurological conditions (such as the titular one) in Peter Watt's *Blindsight.*  One that stuck with me especially was [Cotard's syndrome](http://en.wikipedia.org/wiki/Cotard_delusion), in which one of the female characters believes that she is, in fact, dead.  Understandably, she has a hard time convincing the other characters of this fact since, aside from her change in affect, she is very much alive.

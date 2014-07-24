@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Opinion at ENC Press
+tags: genre
 created: 1102394065
 ---
  [ENC Press](http://www.encpress.com/) redid their web site and has a couple of opinion pieces up about the poverty of literary fiction and poetry today: 

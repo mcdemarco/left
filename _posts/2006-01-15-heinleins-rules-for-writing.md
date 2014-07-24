@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Heinlein's Rules for Writing
+tags: writing
 created: 1137367740
 ---
 Heinlein's rules of writing are:

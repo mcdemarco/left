@@ -1,6 +1,7 @@
 ---
 layout: post
 title: GeekSpeak
+tags: language
 created: 1106684617
 ---
 In the course of a [Slashdot article](http://slashdot.org/article.pl?sid=05/01/25/1628233) I came across a particularly poetic bit of geek-speak:  commenters noted that [the eternal September is now over](http://slashdot.org/comments.pl?sid=137252&cid=11469532).

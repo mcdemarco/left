@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Folksongs and Fantasy Names
+tags: names humor
 created: 1125968668
 ---
 Some fun from the news aggregator:

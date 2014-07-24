@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Who Needs a Muse?
+tags: authors
 created: 1099973120
 ---
  While we're in the month of cranking out the words, here's an inspirational tale for NaNoWriMo writers everywhere:  [Who Needs a Muse?](http://story.news.yahoo.com/news?tmpl=story&cid=64&ncid=762&e=13&u=/fo/20041028/bs_fo/a58b11578d8a5f7142c7048132c586b0)

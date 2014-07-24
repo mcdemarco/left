@@ -1,6 +1,7 @@
 ---
 layout: post
 title: On Cannon Mountain
+tags: 
 created: 1190390925
 ---
 At Making Light, Jim Macdonald [debunks a classic alien abduction story](http://nielsenhayden.com/makinglight/archives/009378.html) at, I must warn the reader, great length:

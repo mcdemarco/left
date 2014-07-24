@@ -1,6 +1,7 @@
 ---
 layout: post
 title: The Double Life of Alice B. Sheldon
+tags: authors
 created: 1154625184
 ---
 Via [del.icio.us](http://del.icio.us/tag/scifi):  The New York Times reviews [_James Tiptree Jr.: The Double Life of Alice B. Sheldon_](http://www.nytimes.com/2006/08/03/books/03masl.html?th&emc=th) by Julie Phillips.

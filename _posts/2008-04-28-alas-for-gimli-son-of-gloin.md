@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Alas for Gimli son of Gloin
+tags: 
 created: 1209438866
 ---
 Now I remember why I used to read *The Lord of the Rings* over school vacations:  it's long.  I'm not a regular doorstop fantasy trilogy reader, so it's still long every time.  But Gimli's parting from Galadriel near the end of *The Fellowship of the Ring* has reminded me why, in my quest to become a doorstop fantasy trilogy writer, I started with dwarves:

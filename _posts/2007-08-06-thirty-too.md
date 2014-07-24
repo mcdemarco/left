@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Thirty Too
+tags: 
 created: 1186454292
 ---
 [Language Log](http://itre.cis.upenn.edu/~myl/languagelog/archives/004800.html) traces *thirty* to the telegraph:

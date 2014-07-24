@@ -1,6 +1,7 @@
 ---
 layout: post
 title: The Language Construction Kit
+tags: conlangs
 created: 1095652388
 ---
  [The Language Construction Kit](http://www.zompist.com/kit.html) will help you get started conlanging:

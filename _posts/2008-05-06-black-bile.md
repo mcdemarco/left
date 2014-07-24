@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Black Bile
+tags: 
 created: 1210132399
 ---
 Someone mentioned melancholy on a mailing list, meaning by it nothing distinct from *depression,* but my ear picked it up and I wondered whether melancholy was still a legitimate affliction.  (The answer appears to be no, it's been replaced by [melancholic depression](http://en.wikipedia.org/wiki/Melancholic_depression).)

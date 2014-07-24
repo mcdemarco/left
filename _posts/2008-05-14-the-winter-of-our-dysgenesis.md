@@ -1,6 +1,7 @@
 ---
 layout: post
 title: The Winter of Our Dysgenesis
+tags: 
 created: 1210785037
 ---
 Via a mailing list:  [Demographic Winter](http://www.demographicwinter.com/index.html), a pretty website about "the decline of the human family."  From their FAQ:

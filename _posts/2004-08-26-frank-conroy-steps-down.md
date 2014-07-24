@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Frank Conroy Steps Down
+tags: workshops
 created: 1093535436
 ---
  From [CNN Entertainment](http://www.cnn.com/2004/SHOWBIZ/books/08/24/iowa.workshop.director.ap/index.html):

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: One-Pass Manuscript Revision
+tags: writing
 created: 1151546022
 ---
 Holly Lisle's [One-Pass Manuscript Revision: From First Draft to Last in One Cycle](http://hollylisle.com/fm/Workshops/one-pass-revision.html) is aimed at those who revise too much:

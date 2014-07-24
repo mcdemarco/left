@@ -1,6 +1,7 @@
 ---
 layout: post
 title: The Gene Wolfe Issue
+tags: 
 created: 1171475499
 ---
 Via [SciFi Wire](http://www.scifi.com/scifiwire/index.php?category=5&id=40135) reports that Gene Wolfe will be honored with a special issue of *Fantasy & Science Fiction*, including a new novella, "Memorare," described in the article.

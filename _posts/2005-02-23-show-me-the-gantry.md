@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Show Me the Gantry
+tags: humor
 created: 1109219657
 ---
 Catching up on my old email from SFWire, I found this [editorial by Scott Edelman](http://www.scifi.com/sfw/issue406/editorial.html) on why he won't be going to Mars.  He tried Antarctica and found he didn't have the right stuff to be an explorer:

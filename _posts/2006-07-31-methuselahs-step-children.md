@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Methuselah's Step-Children
+tags: biology
 created: 1154355842
 ---
 [Technovelgy reports](http://technovelgy.com/ct/Science-Fiction-News.asp?NewsNum=681) on a project that harks back to Heinlein's _Methuselah's Children_:

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: The E-Puzzler
+tags: 
 created: 1201412162
 ---
 Via [plime](http://www.plime.com/plime-com/l/48430/1/):  the [Toronto Star reports](http://www.thestar.com/News/article/295655) on the E-puzzler, the world's only mass-unshredding machine, and its progress in piecing together 16,250 bags full of shredded or torn up STASI documents.

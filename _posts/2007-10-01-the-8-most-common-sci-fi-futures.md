@@ -1,6 +1,7 @@
 ---
 layout: post
 title: The 8 Most Common Sci-Fi Futures
+tags: 
 created: 1191255517
 ---
 Via [GeekPress](http://www.geekpress.com/2007/10/8-most-common-sci-fi-visions-of-future.html): Cracked.com lists [The 8 Most Common Sci-Fi Visions of the Future (And Why They'll Never Happen)](http://www.cracked.com/index.php?name=News&sid=2373).

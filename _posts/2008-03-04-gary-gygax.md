@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Gary Gygax
+tags: 
 created: 1204685284
 ---
 Via [ICHC](http://icanhascheezburger.com/2008/03/04/dnd-kitteh-morns-loss-of-gary-gygax/): [Wired reports](http://blog.wired.com/underwire/2008/03/report-gary-gyg.html) the death of Gary Gygax at 69.

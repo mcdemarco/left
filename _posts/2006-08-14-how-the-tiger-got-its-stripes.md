@@ -1,6 +1,7 @@
 ---
 layout: post
 title: How the Tiger Got its Stripes
+tags: biology
 created: 1155585744
 ---
 [John Hawks](http://johnhawks.net/weblog/2006/08/07#leopard_spots_turing_2006) discusses Alan Turing's paper on "The chemical basis of morphogenesis":  

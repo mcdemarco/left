@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Novelist Shelved
+tags: 
 created: 1195102512
 ---
 [Universal Hub digs up](http://www.universalhub.com/node/11403) Norman Mailer's [auto-obituary from 1979](http://www.bostonmagazine.com/blogs/boston/2007/11/14/mailers-death-we-called-it/):

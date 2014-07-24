@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Kitty and the Midnight Hour
+tags: authors
 created: 1117053903
 ---
 I'm not alone; everyone has to wait for Amazon to put their book cover up:

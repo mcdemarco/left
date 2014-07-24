@@ -1,6 +1,7 @@
 ---
 layout: post
 title: New and Improved Antimatter Spaceship
+tags: technology
 created: 1145387764
 ---
 Via [GeekPress](http://www.geekpress.com/2006/04/new-and-improved-antimatter-spaceship.html):   PhysOrg.com reports on a [new and improved antimatter spaceship](http://www.physorg.com/news64499584.html) (re)designed by the NASA Institute for Advanced Concepts (NIAC).

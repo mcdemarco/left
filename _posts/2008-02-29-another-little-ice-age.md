@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Another Little Ice Age
+tags: 
 created: 1204299893
 ---
 Via [plime](http://www.plime.com/plime-com/l/52502/1/), but only because I'd been ignoring several other sources of this information:  the [Daily Tech reports](http://www.dailytech.com/Temperature+Monitors+Report+Worldwide+Global+Cooling/article10866.htm) that that overdue Ice Age may finally have arrived.

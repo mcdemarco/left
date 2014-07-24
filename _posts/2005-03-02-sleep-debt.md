@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Sleep Debt
+tags: writing science
 created: 1109824961
 ---
 Via [GeekPress](http://www.geekpress.com/2005_03_02_daily.html):  National Geographic reports on our national [sleep debt](http://news.nationalgeographic.com/news/2005/02/0224_050224_sleep.html): 

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Romance Covers
+tags: publishing
 created: 1117142597
 ---
 Here's that link to romance novel parody covers that's making the rounds:  [Longmire does Romance Novels](http://www.worldoflongmire.com/features/romance_novels/readers_covers.htm).  

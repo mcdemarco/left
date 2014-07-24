@@ -1,6 +1,7 @@
 ---
 layout: post
 title: The Clock of the Long Now
+tags: science
 created: 1160710278
 ---
 No, it's not a new Gene Wolfe novel; it's a [binary mechanical computer](http://www.longnow.org/projects/clock/) designed to keep time for 10,000 years, somewhere in the Nevada desert.  [Michael Chabon](http://www.michaelchabon.com/column/archives/2006/01/the_omega_glory.html) has a column up about the clock and our quickly disappearing future:

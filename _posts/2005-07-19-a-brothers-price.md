@@ -1,6 +1,7 @@
 ---
 layout: post
 title: A Brother's Price
+tags: authors
 created: 1121747614
 ---
 I couldn't resist Wen Spencer's latest:

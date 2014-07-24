@@ -1,6 +1,9 @@
 ---
 layout: post
 title: Offline Dictionaries
+tags:
+- English
+- tools
 created: 1093228232
 ---
  There are plenty of free on-line dictionaries and thesauri out there, but the selection is limited once you go off-line. [WordNet](http://www.cogsci.princeton.edu/~wn/) is an interesting variation on the thesaurus theme.  You can get a [MacOS X package](http://wordnet.sourceforge.net/) from Sourceforge.

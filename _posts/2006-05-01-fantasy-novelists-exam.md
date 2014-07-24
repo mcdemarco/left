@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Fantasy Novelist's Exam
+tags: names fantasy
 created: 1146533552
 ---
 Via a mailing list:  Rinkwork's [Fantasy Novelist's Exam](http://rinkworks.com/fnovel/)

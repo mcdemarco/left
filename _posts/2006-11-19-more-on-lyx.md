@@ -1,6 +1,7 @@
 ---
 layout: post
 title: More on LyX
+tags: sffms
 created: 1163969598
 ---
 I've been posting in the [NaNoWriMo Technology Forum](http://www.nanowrimo.org/modules/newbb/viewtopic.php?post_id=414055#forumpost414055) again instead of writing.  Here's today's dissertation on [sffms](/sffms/):

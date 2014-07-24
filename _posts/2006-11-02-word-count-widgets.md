@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Word Count Widgets
+tags: NaNoWriMo
 created: 1162522504
 ---
 This year NaNoWriMo is providing their own [word count widgets](http://www.nanowrimo.org/modules/cjaycontent/index.php?id=77):

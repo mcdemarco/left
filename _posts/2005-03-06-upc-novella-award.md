@@ -1,6 +1,7 @@
 ---
 layout: post
 title: UPC Novella Award
+tags: contests
 created: 1110143134
 ---
 Someone on one of my mailing lists mentioned the UPC Novella awards.  Here's the blurb from [Locus](http://www.locusmag.com/SFAwards/Db/UPC.html):

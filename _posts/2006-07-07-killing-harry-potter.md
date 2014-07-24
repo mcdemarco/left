@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Killing Harry Potter
+tags: authors
 created: 1152295424
 ---
 Via a mailing list:  [the Daily Mail reports](http://www.dailymail.co.uk/pages/live/articles/showbiz/showbiznews.html?in_article_id=392634&in_page_id=1773) that J. K. Rowling may kill off Harry Potter.

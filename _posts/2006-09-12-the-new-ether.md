@@ -1,6 +1,7 @@
 ---
 layout: post
 title: The New Ether
+tags: astronomy
 created: 1158079315
 ---
 Via [GeekPress](http://www.geekpress.com/2006/09/what-are-dark-matter-and-dark-energy.html):  National Geographic News reports on [Dark Matter's Rival: Ether Theory Challenges "Invisible Mass"](http://news.nationalgeographic.com/news/2006/09/060908-dark-matter.html).  It sounds like sarcasm but it's serious:

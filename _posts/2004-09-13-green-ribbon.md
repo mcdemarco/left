@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Green Ribbon
+tags: conlangs
 created: 1095054818
 ---
  Get your conlanging green ribbon from the [green ribbon page](http://www.io.com/~hmiller/lang/green-ribbon.html) at Herman Miller's [Language Page](http://www.io.com/~hmiller/lang/).

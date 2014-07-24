@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Kitty and The Midnight Hour
+tags: authors
 created: 1131587897
 ---
 <p>New from Warner Books, <em>Kitty and The Midnight Hour</em> by Carrie Vaughn, is a novel about snarky werewolves and vampire talk radio.</p>

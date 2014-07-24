@@ -1,6 +1,7 @@
 ---
 layout: post
 title: On the Kalends of January
+tags: 
 created: 1199214635
 ---
 Someone on a mailing list asked why New Year's Day is the first of January instead of some more significant date, like a religious holiday or the solstice.  Since I've done a fair share of calendar research for my writing and had a little more to do as homework for a class, I decided to answer the question at some length, and also blog it (below the cut).<!--break-->

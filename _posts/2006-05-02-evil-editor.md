@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Evil Editor
+tags: publishing
 created: 1146625870
 ---
 If you like [Miss Snark](http://misssnark.blogspot.com/2006/05/snarkometer-challenged.html), you'll love [Evil Editor](http://evileditor.blogspot.com/). 

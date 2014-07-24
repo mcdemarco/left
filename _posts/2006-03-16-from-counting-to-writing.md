@@ -1,6 +1,7 @@
 ---
 layout: post
 title: From Counting to Writing
+tags: language
 created: 1142534901
 ---
 Science News (via [GeekPress](http://www.geekpress.com/2006_03_14_daily.html#114209192910694727)) reports on the long road [From Counting to Writing](http://www.sciencenews.org/articles/20060311/mathtrek.asp):

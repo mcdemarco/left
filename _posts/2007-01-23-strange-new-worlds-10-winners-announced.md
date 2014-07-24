@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Strange New Worlds 10 Winners Announced
+tags: 
 created: 1169608771
 ---
 [Simon & Schuster has posted](http://www.simonsays.com/content/feature.cfm?sid=44&feature_id=5768&tab=24) the table of contents for *Strange New Worlds 10*.  Congratulations to all the winners!  I snuck into the Voyager section again with "The Day the Borg Came."  

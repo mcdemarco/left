@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Norman Mailer
+tags: 
 created: 1194747792
 ---
 The [New York Times](http://www.nytimes.com/2007/11/10/books/11mailer.html?_r=2&hp&oref=slogin&oref=slogin) eulogizes Norman Mailer (1923-2007);  I heard once that the obituaries of famous men are written ahead of time and kept on file, and the swiftness of this one (he only passed away this morning, and today's a Sunday) makes me believe it.<!--break-->

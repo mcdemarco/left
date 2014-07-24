@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Dark Energy Stars
+tags: astronomy
 created: 1143764838
 ---
 Via <a href="http://del.icio.us/tag/scifi">del.icio.us scifi</a>,  New Scientist on <a href="http://www.newscientistspace.com/channel/astronomy/mg18925423.600-three-cosmic-enigmas-one-audacious-answer.html">three cosmic enigmas, one audacious answer</a>:

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: When the Iceman Came
+tags: technology
 created: 1143047071
 ---
 Via [GeekPress](http://www.geekpress.com/2006_03_22_daily.html#114286902067420714):   [The Straight Dope](http://www.straightdope.com/columns/060317.html) on the ice business.

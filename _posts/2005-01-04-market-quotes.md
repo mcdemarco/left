@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Market Quotes
+tags: publishing
 created: 1104894160
 ---
  In his latest Market Report, [Ralan](http://www.ralan.com/) bemoans the state of SF publishing: 

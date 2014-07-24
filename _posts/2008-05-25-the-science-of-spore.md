@@ -1,6 +1,7 @@
 ---
 layout: post
 title: The Science of Spore
+tags: 
 created: 1211746208
 ---
 Via [Daring Fireball](http://daringfireball.net/linked/2008/may#fri-23-spore):  there's a new [Spore movie](http://www.spore.com/screenshots.php?movieID=10&play=hi) out about the "science" of Spore.  
