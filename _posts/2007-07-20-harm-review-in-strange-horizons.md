@@ -1,7 +1,7 @@
 ---
 layout: post
 title: HARM Review in Strange Horizons
-tags: 
+tags: reviews
 created: 1184904952
 ---
 Via [del.icio.us sf](http://www.mcdemarco.net/aggregator/sources/24):  [Strange Horizons reviews](http://www.strangehorizons.com/reviews/2007/07/harm_by_brian_a.shtml) Brian Aldiss's timely novel *HARM*.

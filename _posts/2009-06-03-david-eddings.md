@@ -1,6 +1,7 @@
 ---
 layout: post
 title: David Eddings
+tags: authors
 created: 1244087879
 ---
 Bruce Baugh at Tor.com has [a retrospective on the work of the late David Eddings](http://www.tor.com/index.php?option=com_content&view=blog&id=31896):

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: The Science of Fiction
+tags: reading
 created: 1217866634
 ---
 I found this old link while catching up on the [aggregator](/aggregator):  [New Scientist reports](http://www.newscientist.com/channel/opinion/mg19826621.700-the-science-of-fiction.html) on the psychological benefits of reading fiction.  You need a subscription to read the whole thing, but here's a quote I found by googling:

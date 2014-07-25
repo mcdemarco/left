@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Brain Food
+tags: biology
 created: 1248922197
 ---
 Via [Futurismic](http://futurismic.com/2009/07/23/more-blogs-about-science-and-food-the-neuroscience-of-obesity/):  Jonah Lehrer at [seed's science blogs](http://scienceblogs.com/cortex/2009/07/the_neuroscience_of_mcgriddles.php) discusses research into mutant taste-impaired mice who still prefer sugar and other indications of our basic drive for calories.

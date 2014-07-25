@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Spore for Beginners
+tags: gaming
 created: 1225252375
 ---
 On the Spore watch, Jason Henninger at Tor.com [discusses his losing battles with enemy microbes](http://www.tor.com/index.php?option=com_content&view=blog&id=7419) in the game of evolution:

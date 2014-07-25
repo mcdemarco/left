@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Run Away Now
-tags: 
+tags: astronomy
 created: 1200364734
 ---
 [Science Made Cool warns readers](http://www.sciencemadecool.com/2008/01/more-things-to.html) about the approaching killer cloud that could sterilize our corner of the galaxy in as little as 20 million years:

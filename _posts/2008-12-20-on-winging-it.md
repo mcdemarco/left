@@ -1,6 +1,7 @@
 ---
 layout: post
 title: On Winging It
+tags: writing
 created: 1229835161
 ---
 A couple of weeks back at Tor.com, Jane Lindskold blogged about [Practical Mysticism](http://www.tor.com/index.php?option=com_content&view=blog&id=9638), the fine art of letting your muse do the plotting:

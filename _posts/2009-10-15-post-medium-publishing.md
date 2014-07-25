@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Post-Medium Publishing
+tags: publishing
 created: 1255645873
 ---
 Via [HTLit](http://htlit.com/archives/October2009/GrahamonContent.html):  in Paul Graham's essay from last month on [Post-Medium Publishing](http://www.paulgraham.com/publishing.html), he made the economic argument that people have never paid for content, only for paper.

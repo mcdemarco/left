@@ -1,7 +1,8 @@
 ---
 layout: post
 title: Nuclear Fuel Cells Made by Dwarves
-tags: 
+tags:
+- Ted Chiang
 created: 1174858612
 ---
 Someone somewhere in the [news aggregator](/aggregator) linked to an old post of John Scalzi's with his [final word](http://www.scalzi.com/whatever/003887.html) on the perpetual debate over the difference between SF and F:

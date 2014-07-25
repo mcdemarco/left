@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Memory Sticks
+tags: reading
 created: 1249007346
 ---
 At [io9](http://io9.com/5326651/the-memory-of-feeling-is-not-feeling-memory-sticks-explores-human-computers),  a book review of *Memory Sticks* by Wood Ingham:

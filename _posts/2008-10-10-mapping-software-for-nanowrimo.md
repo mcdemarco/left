@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Mapping Software for NaNoWriMo
+tags: mapping NaNoWriMo
 created: 1223616810
 ---
 Once again, someone posted to the NaNoWriMo forums [looking for mapping software](http://www.nanowrimo.org/eng/node/3020623), and I replied.  The situation doesn't look much better than it did two NaNo's ago when I posted on [the state of mapping software for the Mac](http://www.mcdemarco.net/node/284).

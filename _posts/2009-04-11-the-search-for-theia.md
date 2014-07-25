@@ -1,6 +1,7 @@
 ---
 layout: post
 title: The Search for Theia
+tags: astronomy
 created: 1239501356
 ---
 [Science@NASA reports](http://science.nasa.gov/headlines/y2009/09apr_theia.htm) on the search of L4 and L5 for remnants of the hypothetical proto-planet Theia which may have crashed into Earth to form the Moon:

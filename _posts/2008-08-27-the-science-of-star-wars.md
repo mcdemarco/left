@@ -1,6 +1,7 @@
 ---
 layout: post
 title: The Science of Star Wars
+tags: astronomy workshops authors
 created: 1219862251
 ---
 Via a mailing list:  [BoingBoing](http://www.boingboing.net/2008/08/26/science-of-star-wars.html) reposts a brief excerpt from *The Science of Star Wars* by Jeanne Cavelos, my teacher from [Odyssey](http://www.sff.net/odyssey/).

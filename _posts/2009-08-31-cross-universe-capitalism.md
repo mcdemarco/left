@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Cross-Universe Capitalism
+tags: reviews
 created: 1251773463
 ---
 At [io9](http://io9.com/5107999/alternate-universes-are-big-business), there's a review of last year's *The Walls of the Universe* by Paul Melko.  I found it by accident in the library a couple of weeks ago, and I agree with the reviewer, more or less:

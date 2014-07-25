@@ -1,7 +1,7 @@
 ---
 layout: post
 title: China Miéville [not] at Brookline Booksmith Tonight
-tags: 
+tags: authors
 created: 1173112428
 ---
 China Miéville will be reading from <em>Un Lun Dun</em> at <a href="http://brooklinebooksmith.com/Events/MainEvent.html">Brookline Booksmith</a> (in Brookline, Massachusetts) at 7pm tonight (Monday, March 5th, 2007).

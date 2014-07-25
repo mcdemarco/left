@@ -1,7 +1,8 @@
 ---
 layout: post
 title: Charlie Stross on Readings
-tags: 
+tags:
+- Charlie Stross
 created: 1187380671
 ---
 Charlie Stross blogs about [doing readings](http://www.antipope.org/charlie/blog-static/2007/08/tools_of_the_trade_readings.html):

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Roll Your Own Magazine
-tags: 
+tags: magazines
 created: 1213902438
 ---
 Via a mailing list:  [MagCloud](http://magcloud.com) is a new print-on-demand magazine publisher.  You can [browse](http://magcloud.com/browse) magazines during the beta or [beg for](http://magcloud.com/home/BetaNotify) a publisher account.

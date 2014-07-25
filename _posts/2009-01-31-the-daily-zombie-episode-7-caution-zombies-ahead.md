@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "The Daily Zombie, Episode 7:  Caution Zombies Ahead!"
+tags: zombies
 created: 1233459672
 ---
 Via a mailing list:  [the Austin Daily News reports](http://www.kxan.com/dpp/news/Road_signs_warn_of_zombies) on zombie road signs.

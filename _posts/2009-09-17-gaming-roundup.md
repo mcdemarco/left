@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Gaming Roundup
+tags: gaming
 created: 1253209896
 ---
 I caught up on [Purple Pawn](http://www.purplepawn.com/) today and found all sorts of interesting gaming information:

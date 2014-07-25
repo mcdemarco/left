@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Pit on the Cheap
+tags: gaming
 created: 1231987304
 ---
 Yehuda has [easy instructions](http://jergames.blogspot.com/2009/01/wielding-decks-1-pit.html) for playing the classic stock trading card game [Pit](http://www.boardgamegeek.com/game/140) on the cheap with just two decks of regular playing cards.  This was the first installment of his [new series](http://jergames.blogspot.com/search/label/wielding%20the%20decks) on games you can play with regular cards.<!--break-->

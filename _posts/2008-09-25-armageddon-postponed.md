@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Armageddon Postponed
+tags: writing physics
 created: 1222399912
 ---
 [Technovelgy speculates](http://www.technovelgy.com/ct/Science-Fiction-News.asp?NewsNum=1892) on time-traveling tinkerers as a possible cause of the Large Hadron Collider's recent malfunction.  Somehow or other [our imminent death by planet-sucking black hole](http://hasthelargehadroncolliderdestroyedtheworldyet.com/) has been postponed until the spring, leaving us all plenty of time to do those last-minute things that a species should do before meeting its Maker.<!--break-->

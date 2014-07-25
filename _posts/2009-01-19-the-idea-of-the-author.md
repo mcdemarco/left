@@ -1,6 +1,7 @@
 ---
 layout: post
 title: The Idea of the Author
+tags: JRRT
 created: 1232422857
 ---
 I've been trying to catch up on the [aggregator](/aggregator), and one interesting old link I found was a [Tor.com post](http://www.tor.com/index.php?option=com_content&view=blog&id=10665) from mid-December about Verlyn Flieger’s "Tolkien and the Idea of the Book":

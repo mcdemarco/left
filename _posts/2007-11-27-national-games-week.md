@@ -1,7 +1,7 @@
 ---
 layout: post
 title: National Games Week
-tags: 
+tags: gaming
 created: 1196147275
 ---
 Last week was National Games Week, according to the [Deseret Morning News](http://deseretnews.com/article/1,5143,695229716,00.html).  (I'm not the only one who [missed it completely](http://www.nationalgamesweek.net/).)

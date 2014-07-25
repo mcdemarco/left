@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Neanderthal Park
+tags: biology
 created: 1218646732
 ---
 Via [plime](http://www.plime.com/science/l/71615/1/):  [Discovery News reports](http://dsc.discovery.com/news/2008/08/07/neanderthal-dna.html) on the successful sequencing of Neanderthal mitochondrial DNA.  Neanderthal Park is not far behind:

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Twitter Madness!
+tags: technology streams
 created: 1241464134
 ---
 Futurismic asks, [Is Twitter a threat to morality and ethics?](http://futurismic.com/2009/04/15/is-twitter-a-threat-to-morality-and-ethics/)

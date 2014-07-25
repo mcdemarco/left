@@ -1,6 +1,9 @@
 ---
 layout: post
 title: Post-NaNoWriMo
+tags:
+- NaNoWriMo
+- word processing
 created: 1259860552
 ---
 I took December 1st off, but according to [Alexandra Sokoloff](http://thedarksalon.blogspot.com/2009/12/nanowrimo-what-next.html), I don't deserve a break from my novel until it's actually finished.  I repented yesterday and went back to my novel, and also redeemed my 50% off coupon for Scrivener.  

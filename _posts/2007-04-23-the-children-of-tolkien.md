@@ -1,7 +1,7 @@
 ---
 layout: post
 title: The Children of Tolkien
-tags: 
+tags: JRRT reviews
 created: 1177345970
 ---
 <em>The Children of Hurin</em> is out, and Amazon has <a href="http://www.amazon.com/gp/feature.html/?docId=1000074611">a review by Christopher Tolkien's son Adam</a>:

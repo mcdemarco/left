@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Glass Explained
-tags: 
+tags: physics
 created: 1214964387
 ---
 Via [GeekPress](http://www.geekpress.com/2008/06/metallic-glass-update_27.html):  LiveScience [explains the bizarre properties of glass](http://www.livescience.com/technology/080623-glass-wings.html) that make its traffic jam of atoms neither a liquid nor a solid.

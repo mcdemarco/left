@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Brain Bugs
+tags: sf tie-ins
 created: 1219028723
 ---
 Via [del.icio.us sf](/aggregator/sources/24):  an old essay by Michael Wong surveys [Brain Bugs](http://www.stardestroyer.net/Empire/Essays/BrainBugs.html), the bum memes of Star Trek and science fiction in general.

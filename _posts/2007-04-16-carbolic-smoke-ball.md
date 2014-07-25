@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Carbolic Smoke Ball
-tags: 
+tags: steampunk technology
 created: 1176728853
 ---
 Via [Brass Goggles](http://www.brassgoggles.co.uk/brassgoggles/?p=466), the amazing Carbolic Smoke Ball! a Victorian snake-oil cure:

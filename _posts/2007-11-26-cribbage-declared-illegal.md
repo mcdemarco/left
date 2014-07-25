@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Cribbage Declared Illegal
-tags: 
+tags: gaming
 created: 1196107748
 ---
 I've been following (board)gaming news off and on lately, so I've decided to inaugurate a new [gaming category](http://www.mcdemarco.net/taxonomy_menu/1/73) with this ominous tale of an allegedly new gambling law in Maine:  [Cribbage players run afoul of state law](http://morningsentinel.mainetoday.com/news/local/4454216.html).

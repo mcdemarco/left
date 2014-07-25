@@ -1,7 +1,8 @@
 ---
 layout: post
 title: Doris Lessing Interviewed
-tags: 
+tags:
+- Doris Lessing
 created: 1186548175
 ---
 Via del.icio.us:  [The Boston Globe](http://www.boston.com/news/globe/ideas/articles/2007/08/05/qa_doris_lessing/?page=full) has an interview with Doris Lessing, in which she discusses her new novel, *The Cleft*, and why she'll never win the Nobel prize:

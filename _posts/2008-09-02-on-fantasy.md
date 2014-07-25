@@ -1,6 +1,7 @@
 ---
 layout: post
 title: On Fantasy
+tags: genre fantasy
 created: 1220413343
 ---
 I've found some interesting articles on genre since I added some [publishers](/aggregator/categories/10) and critics to the [aggregator](/aggregator).    First up is [Jo Walton's love-hate relationship with fantasy](http://www.tor.com/index.php?option=com_content&view=blog&id=4435) at Tor.com:

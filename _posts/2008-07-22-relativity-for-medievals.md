@@ -1,6 +1,8 @@
 ---
 layout: post
 title: Relativity For Medievals
+tags:
+- Greg Egan
 created: 1216761576
 ---
 Via [Night Shade Books](http://www.nightshadebooks.com/2008/07/22/the-big-idea-behind-incandescence/):   John Scalzi has [a guest post by Greg Egan](http://scalzi.com/whatever/?p=1064) discussing his new novel *Incandescence*.

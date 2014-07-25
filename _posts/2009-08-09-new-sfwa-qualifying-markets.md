@@ -1,6 +1,7 @@
 ---
 layout: post
 title: New SFWA Qualifying Markets
+tags: markets
 created: 1249824333
 ---
 I heard via a mailing list that [Flash Fiction Online](http://www.flashfictiononline.com/) is now a SFWA qualifying market (that is, one of the professional short fiction publications a sufficient number of sales to which qualify one for membership in the Science Fiction & Fantasy Writers of America organization).  I like writing flash (very short stories), so this may be my ticket to full SFWA membership.  A few other markets have gotten onto [the list](http://www.sfwa.org/join-us/sfwa-membership-requirements/#shortfiction) lately:  Tor.com, Apex, and the Grantville Gazette.  Announcements were made [here](http://www.sfwa.org/tag/qualifying-market/).

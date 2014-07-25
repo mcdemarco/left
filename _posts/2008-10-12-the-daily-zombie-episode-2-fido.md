@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "The Daily Zombie, Episode 2:  Fido"
+tags: zombies movies
 created: 1223865113
 ---
 I've been wanting to see [*Fido*](http://www.fidothefilm.com/) (rated R for "zombie-related violence") for a while.  I was not disappointed in this cross between *Shaun of the Dead* and *Lassie*, although the reviews at [Rotten Tomatoes](http://www.rottentomatoes.com/m/fido/?name_order=asc#contentReviews) were mixed and heavy with allegations that the movie is one idea stretched too far.

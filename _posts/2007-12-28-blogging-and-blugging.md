@@ -1,7 +1,8 @@
 ---
 layout: post
 title: Blogging and Blugging
-tags: 
+tags:
+- Doris Lessing
 created: 1198869618
 ---
 Doris Lessing's acceptance speech for the Nobel Prize in Literature is available [on the Nobel site](http://nobelprize.org/nobel_prizes/literature/laureates/2007/lessing-lecture_en.html).

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: NaNoWriMo Widgets
+tags: NaNoWriMo
 created: 1257784346
 ---
 The [NaNoWriMo Widgets](http://www.nanowrimo.org/eng/widgets) are up!

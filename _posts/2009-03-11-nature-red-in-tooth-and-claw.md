@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Nature, Red in Tooth and Claw
+tags: sf
 created: 1236821952
 ---
 Via [Futurismic](http://futurismic.com/2009/02/21/seeing-red-for-the-last-time/): more alternate news from the Alternate Reality News Service.  This time, they observe an endangered species in its natural habitat:

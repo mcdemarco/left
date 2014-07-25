@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Twenty-Sided Tolkien
+tags: JRRT
 created: 1233291389
 ---
 I don't remember where I found the link, but [The DM of the Rings](http://www.shamusyoung.com/twentysidedtale/?p=612) has provided me with hours of mock role-playing webcomic entertainment this week:

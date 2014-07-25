@@ -1,6 +1,7 @@
 ---
 layout: post
 title: The Ventral Tegmentum
+tags: biology
 created: 1231390380
 ---
 Via [plime](http://www.plime.com/plime-com/l/88068/1/):  [Scientific American](http://www.sciam.com/blog/60-second-science/post.cfm?id=this-is-your-brain-on-love-lasting-2009-01-06) finds true love in the ventral tegmentum.

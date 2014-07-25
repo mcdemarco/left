@@ -1,7 +1,7 @@
 ---
 layout: post
 title: WotF 23 Winners Announced
-tags: 
+tags: contests authors
 created: 1172383237
 ---
 The [fourth-quarter winners](http://wotfblog.galaxypress.com/2007/02/winners-announced-for-4th-qtr-writers.html) of the Writers of the Future contest bring the [table of contents](http://wotfblog.galaxypress.com/2007/01/winners-for-writers-of-future-xxiii.html) to a close, except possibly for some published finalists.  [Robert Sawyer](http://sfwriter.com/2007/02/writers-of-future-winners.html) has rave reviews for one of the stories:

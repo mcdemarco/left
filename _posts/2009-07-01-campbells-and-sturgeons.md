@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Campbells and Sturgeons
+tags: awards
 created: 1246503394
 ---
 Via [SFScope](http://sfscope.com/2009/06/campbell-and-sturgeon-award-wi-1.html):  the Campbell and Sturgeon awards have been announced.  The winners were Cory Doctorow, Ian McLeod (a tie), and James Alan Gardner.<!--break-->

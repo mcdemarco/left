@@ -1,7 +1,7 @@
 ---
 layout: post
 title: An Unnatural Base Pair
-tags: 
+tags: biology
 created: 1202327889
 ---
 Via [Technovelgy](http://www.technovelgy.com/ct/Science-Fiction-News.asp?NewsNum=1424):  scientists have discovered a new pair of molecules that fit into the double helix:

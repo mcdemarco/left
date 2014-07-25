@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Phase Drafting II
+tags: NaNoWriMo plot
 created: 1257303559
 ---
 I decided to experiment with [phase drafting](http://www.mcdemarco.net/node/693) by using the phase system to write a prologue for my [NaNoWriMo](http://www.nanowrimo.org/) novel.  My outline was 180 words, with a target of 10 draft words per outline word.  Altogether this would have been just one day's writing on my usual NaNoWriMo schedule.

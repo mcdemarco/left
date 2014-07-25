@@ -1,6 +1,7 @@
 ---
 layout: post
 title: The Yiddish Policemen's Union
+tags: sf reviews
 created: 1236912215
 ---
 Jon Evans at Tor.com [reviews *The Yiddish Policemen's Union*](http://www.tor.com/index.php?option=com_content&view=blog&id=15340):

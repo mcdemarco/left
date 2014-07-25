@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Cut the Cable
+tags: authors
 created: 1252418146
 ---
 Via [twitter](http://twitter.com/tobiasbuckell/status/3837465156):  Tobias Bucknell's writing advice is to [cut out cable](http://www.tobiasbuckell.com/2009/09/08/letting-go-of-cable/).

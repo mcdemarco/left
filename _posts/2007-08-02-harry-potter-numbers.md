@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Harry Potter Numbers
-tags: 
+tags: fantasy authors
 created: 1186112218
 ---
 Via [SFScope](http://sfscope.com/2007/08/many-many-potters.html):  Harry Potter is going out with a bang.

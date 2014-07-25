@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Ray Bradbury on SF
-tags: 
+tags: authors sf
 created: 1174950695
 ---
 Via [del.icio.us sf](http://del.icio.us/tag/science%2Bfiction), a link to the SciFi Channel's [interview with Ray Bradbury](http://www.scifi.com/sfw/interviews/sfw15376.html) and a quote picked up by the tagger:

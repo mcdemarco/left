@@ -1,6 +1,8 @@
 ---
 layout: post
 title: The Twilight Tipping Point
+tags:
+- paranormal romance
 created: 1228629105
 ---
 Via a mailing list:  [an article about *Twilight* in the LA Times Movies section](http://www.latimes.com/entertainment/news/movies/la-et-twilightnet29-2008nov29,0,5711081.story) tells how [Stephenie Meyer](http://www.stepheniemeyer.com/) became a bestseller through "a brilliant and strategic use of the Web."<!--break-->

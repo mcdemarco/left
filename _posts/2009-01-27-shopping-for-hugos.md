@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Shopping for Hugos
+tags: awards
 created: 1233118723
 ---
 Via [SF Awards Watch](http://www.sfawardswatch.com/?p=1347):  Craig Engler at SciFi Wire explains [how to buy a Hugo award nomination](http://scifiwire.com/2009/01/buy-a-hugo-award-nomination-for-850-win-for-8800.php).

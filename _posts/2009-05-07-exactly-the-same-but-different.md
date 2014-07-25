@@ -1,6 +1,9 @@
 ---
 layout: post
 title: Exactly the Same, But Different
+tags:
+- movies
+- Michael A. Burstein
 created: 1241754682
 ---
 Michael Burstein [reviews the new *Star Trek* movie](http://sfscope.com/2009/05/the-future-returnsa-review-of.html):

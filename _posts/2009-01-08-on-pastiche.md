@@ -1,6 +1,7 @@
 ---
 layout: post
 title: On Pastiche
+tags: genre
 created: 1231477069
 ---
 Via [Pyr-o-mania](http://pyrsf.blogspot.com/2009/01/can-fix-ups-be-fixed.html):  James Enge at Black Gate asks [Can Fix-Ups be Fixed?](http://www.blackgate.com/2009/01/07/an-ode-to-episodes-or-can-fix-ups-be-fixed/)  Fix-ups are pastiche novels assembled from short stories.

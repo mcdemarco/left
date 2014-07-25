@@ -1,6 +1,7 @@
 ---
 layout: post
 title: METAtropolis
+tags: sf
 created: 1232944128
 ---
 Via [John Scalzi](http://whatever.scalzi.com/?s=metatropolis):  the audio anthology of the ecopocalypse, [METAtropolis](http://whatever.scalzi.com/2009/01/09/metatropolis-reviews-award-pimp-addendum/), is [coming out in hardcover](http://whatever.scalzi.com/2009/01/09/the-printed-metatropolis/) this August from Subterranean Press.

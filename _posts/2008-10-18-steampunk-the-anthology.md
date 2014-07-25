@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Steampunk:  The Anthology"
+tags: steampunk
 created: 1224385564
 ---
 Via [del.icio.us sf](http://www.mcdemarco.net/aggregator/sources/24):  *Steampunk*, an anthology by Ann and Jeff VanderMeer, came out from [Tachyon Publications](http://www.tachyonpublications.com/book/Steampunk.html) in June.  This month there's an interview with the editors in [Genre Chicks](http://www.ingramlibrary.com/MRKNG/FD/1008/ra/Genre.html), which includes Jeff's handy definition of steampunk:

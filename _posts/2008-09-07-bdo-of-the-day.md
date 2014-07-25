@@ -1,6 +1,7 @@
 ---
 layout: post
 title: BDO of the Day
+tags: sf
 created: 1220846290
 ---
 Via [deli.cio.us](/aggregator/sources/24):  in his [blog entry of new, post-Singularity ideas](http://www.rudyrucker.com/blog/2008/08/25/fresh-sf-futures/), Rudy Rucker describes a variant of the [Alderson disk](http://www.mcdemarco.net/node/329).  Here's his even bigger Big Dumb Object:

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Black Sheep Review on Sci Fi Wire
-tags: 
+tags: reviews
 created: 1184956366
 ---
 [SCI FI Wire has a review](http://www.scifi.com/scifiwire/index.php?category=5&id=42514) of *Black Sheep* by Ben Peek, another timely science fiction novel.

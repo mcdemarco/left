@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Bacterial Bits
+tags: biology technology
 created: 1248752290
 ---
 At [Technovelgy](http://www.technovelgy.com/ct/Science-Fiction-News.asp?NewsNum=2428): the [Guardian reports](http://www.guardian.co.uk/science/blog/2009/jul/24/bacteria-computer) on solving the Hamiltonian path problem with *E. coli*.

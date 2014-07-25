@@ -1,7 +1,7 @@
 ---
 layout: post
 title: TaskPaper
-tags: 
+tags: tools GTD
 created: 1193369450
 ---
 It's been a while since I blogged about Getting Things Done, but a few days ago I spotted a new kid on the productivity block (in [John Gruber's linkblog](http://daringfireball.net/linked/2007/october#mon-22-taskpaper)).  [TaskPaper](http://hogbaysoftware.com/products/taskpaper), is the ultimate lightweight GTD application--so simple you could be using paper itself.<!--break-->  It goes without saying these days that this new cool indie product is for the Mac.

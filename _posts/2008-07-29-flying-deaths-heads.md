@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Flying Death's Heads
+tags: horror
 created: 1217308881
 ---
 Via [Universal Hub](http://www.universalhub.com/node/15714):  [Skulls in Brookline](http://harrumpher.com/?p=353) is a brief history of the winged death's head as seen in Walnut Street Cemetery in Brookline.<!--break-->

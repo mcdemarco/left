@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Authonomy
+tags: publishing
 created: 1228884943
 ---
 Via a mailing list:  HarperCollins has launched a website for aspiring authors, [Authonomy](http://www.authonomy.com/).

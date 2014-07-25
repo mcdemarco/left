@@ -1,7 +1,7 @@
 ---
 layout: post
 title: How to Hit a Deadline
-tags: 
+tags: authors writing
 created: 1176895734
 ---
 From somewhere in the [aggregator](/aggregator/), Maureen Johnson's illustrated advice on [How to Write a Book](http://maureenjohnson.blogspot.com/2006/07/how-to-write-book.html), or more precisely, how to hit a deadline:

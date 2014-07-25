@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Baking Your Own
+tags: technology
 created: 1252596001
 ---
 Via [John Gruber](http://daringfireball.net/linked/2009/09/09/august-baked):  screenwriter [John August](http://johnaugust.com/archives/2009/blogs-and-baked-goods) compares running your own blogging software to baking your own bread.

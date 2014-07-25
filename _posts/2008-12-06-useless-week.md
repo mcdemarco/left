@@ -1,6 +1,9 @@
 ---
 layout: post
 title: Useless Week
+tags:
+- Walter Jon Williams
+- writing
 created: 1228623865
 ---
 Walter Jon Williams blogged last week about [Useless Day](http://walterjonwilliams.blogspot.com/2008/12/useless-day.html), the unpredictable day of the week on which he gets nothing done.  I measure my writing in weeks, so I have Useless Weeks instead.  The first week of December, for example, is always a Useless Week of goofing off after NaNoWriMo.<!--break-->

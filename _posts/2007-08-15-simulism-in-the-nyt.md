@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Simulism in the NYT
-tags: 
+tags: simulism
 created: 1187151411
 ---
 [The New York Times](http://www.nytimes.com/2007/08/14/science/14tier.html?ei=5124&en=22efff4469281187&ex=1344744000&adxnnl=1&partner=permalink&exprod=permalink&adxnnlx=1187101355-5HWiLxChv9ReqvISlLpTnQ) belatedly discovers [simulism](http://www.simulism.org/):

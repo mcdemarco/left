@@ -1,6 +1,7 @@
 ---
 layout: post
 title: When Worlds Collide
+tags: astronomy
 created: 1223234054
 ---
 Via a mailing list:  [Spaceflight Now reports](http://spaceflightnow.com/news/n0810/02collision/) on a recent interplanetary collision.

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Linguistics at SFWA
+tags: language
 created: 1250993056
 ---
 The SFWA blog begins a series on [how linguistics can help you](http://www.sfwa.org/2009/08/how-linguistics-can-help-you/) by Juliette Wade with [how articulatory phonetics can help you](http://www.sfwa.org/2009/08/how-articulatory-phonetics-can-help-you/):

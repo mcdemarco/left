@@ -1,6 +1,7 @@
 ---
 layout: post
 title: The Great Moon Hoax
+tags: technology
 created: 1248317753
 ---
 Last week at Tor:  Justin Howe reviewed a book about [The Remarkable and True Account of Life on the Moon](http://www.tor.com/index.php?option=com_content&view=blog&id=38559) which was neither.

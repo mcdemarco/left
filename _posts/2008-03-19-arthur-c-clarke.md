@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Arthur C. Clarke
-tags: 
+tags: authors
 created: 1205982720
 ---
 Arthur C. Clarke passed away earlier today at 90.  See [ArthurCClarke.net](http://www.arthurcclarke.net/) for [links to commentary](http://www.arthurcclarke.net/?scifi=8) and [more](http://www.arthurcclarke.net/?scifi=4).  

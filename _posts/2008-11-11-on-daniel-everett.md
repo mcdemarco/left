@@ -1,6 +1,7 @@
 ---
 layout: post
 title: On Daniel Everett
+tags: language
 created: 1226380339
 ---
 Via [Language Log](http://languagelog.ldc.upenn.edu/nll/?p=819):  a [Guardian story](http://www.guardian.co.uk/world/2008/nov/10/daniel-everett-amazon) about former missionary Daniel Everett's life-changing study of Pirahã, which cost him two faiths and a marriage:

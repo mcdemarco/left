@@ -1,7 +1,7 @@
 ---
 layout: post
 title: First Things on Stephen King
-tags: 
+tags: horror authors
 created: 1182395030
 ---
 The February issue of *First Things* includes a retrospective by Ross Douthat: ["Stephen King’s American Apocalypse"](http://www.firstthings.com/article.php3?id_article=5416).

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: On Writing Hyperfiction
+tags: hyperfiction
 created: 1254186666
 ---
 A couple of weeks back Chris at Gimcrack'd linked [an interview with ChooseCo founder Shannon Gilligan](http://jezebel.com/5342799/why-choosing-your-own-adventure-can-really-pay-off), and also kicked off a series on [his own process for writing hyperfiction](http://www.gimcrackd.com/dross/?p=201):

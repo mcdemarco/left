@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Neil Gaiman's Bookshelves
+tags: authors streams
 created: 1252080304
 ---
 Via [Jenny Williams on twitter](http://twitter.com/jennywilliams/status/3758195538):  Shelfari has a virtual spread of [Neil Gaiman's bookshelves](http://blog.shelfari.com/my_weblog/2009/09/neil.html).

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Monopoly Killer
+tags: gaming
 created: 1238040509
 ---
 Via [Purple Pawn](http://www.purplepawn.com/2009/03/monopoly-killer-wired-speaks-out-on-settlers-of-catan/):  Wired [reviews The Settlers of Catan](http://www.wired.com/gaming/gamingreviews/magazine/17-04/mf_settlers), including a history of the game from its 1995 release to its continuing influence today.

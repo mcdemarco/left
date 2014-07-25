@@ -1,6 +1,8 @@
 ---
 layout: post
 title: Exhalation Online
+tags:
+- Ted Chiang
 created: 1238633879
 ---
 Via [io9](http://io9.com/5182800/pry-open-your-own-head-with-ted-chiangs-exhalation):  [Night Shade Books](http://www.nightshadebooks.com/2009/03/24/ted-chiangs-exhalation-now-available-for-download/) put Ted Chiang's Hugo-nominated short story ["Exhalation" online](http://www.nightshadebooks.com/downloads) in various formats.

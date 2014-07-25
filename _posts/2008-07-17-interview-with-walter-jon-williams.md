@@ -1,6 +1,8 @@
 ---
 layout: post
 title: Interview with Walter Jon Williams
+tags:
+- Walter Jon Williams
 created: 1216316779
 ---
 Via [Night Shade Books](http://www.nightshadebooks.com/2008/07/16/interviews-and-reviews/):  [Concept Sci-fi](http://www.conceptscifi.com/iwjwilliams.htm) has an interview with Walter Jon Williams up.  On cyberpunk, he said:

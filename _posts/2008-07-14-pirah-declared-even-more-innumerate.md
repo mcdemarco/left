@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Pirahã Declared Even More Innumerate
+tags: language
 created: 1216064300
 ---
 Thanks to [Geoff Jacoby](http://araken.livejournal.com/) for the link to [this MIT news release about Pirahã](http://web.mit.edu/newsoffice/2008/language-0624.html), now with even fewer numbers:

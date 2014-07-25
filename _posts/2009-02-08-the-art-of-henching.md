@@ -1,6 +1,7 @@
 ---
 layout: post
 title: The Art of Henching
+tags: comics
 created: 1234151894
 ---
 Suvudu investigates [The Art of Henching](http://www.suvudu.com/2009/01/the-art-of-henching.html), with all sorts of links and a Venture Bros. video.

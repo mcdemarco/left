@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Postponing Despair
-tags: 
+tags: JRRT quotes
 created: 1210651272
 ---
 My progress through *The Two Towers* has been slow.  Gimli had a nice moment in the Glittering Caves of Aglarond, but for quotable material I had to wait for Frodo to reach the Black Gate in book IV:

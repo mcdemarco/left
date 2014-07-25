@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Honorable Silence
-tags: 
+tags: contests
 created: 1197259654
 ---
 My SASE returned to me yesterday from the [Writers of the Future contest](http://www.writersofthefuture.com/), and inside was a cryptic letter saying, in part,

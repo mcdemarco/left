@@ -1,6 +1,9 @@
 ---
 layout: post
 title: On Page Inflation
+tags:
+- genre
+- Charlie Stross
 created: 1232509592
 ---
 Charlie Stross asks and answers the question, [Why are SF and fantasy novels the length they are?](http://www.antipope.org/charlie/blog-static/2008/12/why_are_sf_and_fantasy_novels.html)

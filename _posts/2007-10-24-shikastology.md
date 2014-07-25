@@ -1,7 +1,8 @@
 ---
 layout: post
 title: Shikastology
-tags: 
+tags:
+- Doris Lessing
 created: 1193282190
 ---
 At [Newsday](http://www.newsday.com/features/booksmags/ny-etdorislessing1011,0,1956124.story), Doris Lessing recalls the religion inspired by her space fiction series (the one she wishes more people would read):

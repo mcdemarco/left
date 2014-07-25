@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Chinny Chin Chin
+tags: language
 created: 1238038664
 ---
 Via [the Double-Tongued Dictionary](http://www.doubletongued.org/): Lexicographer Grant Barrett contemplates [children's nursery rhymes](http://www.doubletongued.org/index.php/grantbarrett/the_lore_and_rhymes_of_children/).  Here, for example, is the truth about the Three Little Pigs:

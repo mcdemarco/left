@@ -1,6 +1,7 @@
 ---
 layout: post
 title: On the Perils of Raw Databases
+tags: technology
 created: 1256428343
 ---
 This isn't really writing related; it's another adventure with my new Mac.  I use a very old genealogy program called [LifeLines](http://lifelines.sourceforge.net/), and last week I finally got around to updating it with [MacPorts](http://www.macports.org/) for Snow Leopard.  But when I went to open my ancestor database, it complained: "keyfile is wrong alignment."

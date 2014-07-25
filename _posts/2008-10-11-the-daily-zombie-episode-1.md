@@ -1,6 +1,7 @@
 ---
 layout: post
 title: The Daily Zombie, Episode 1
+tags: zombies
 created: 1223781816
 ---
 I've escalated the zombie research in preparation for NaNoWriMo.  Here are some links:

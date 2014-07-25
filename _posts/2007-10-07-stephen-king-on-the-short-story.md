@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Stephen King on the Short Story
-tags: 
+tags: authors
 created: 1191815036
 ---
 The _New York Times_ Sunday Book Review has an article by Stephen King on [What Ails the Short Story](http://www.nytimes.com/2007/09/30/books/review/King2-t.html?_r=2&oref=slogin&oref=slogin):

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: More Metropolis
+tags: movies
 created: 1215550104
 ---
 Via [SFScope](http://sfscope.com/2008/07/missing-third-of-metropolis-re.html):  an original print of *Metropolis* has been found in Argentina. 

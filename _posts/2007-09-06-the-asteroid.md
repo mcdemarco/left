@@ -1,7 +1,7 @@
 ---
 layout: post
 title: The Asteroid
-tags: 
+tags: astronomy
 created: 1189135791
 ---
 Via [GeekPress](http://www.geekpress.com/2007/09/scientists-have-traced-origin-of.html):  [Nature reports](http://www.nature.com/news/2007/070903/full/070903-9.html) that the source of the asteroid that allegedly wiped out the dinosaurs 65 million years ago has been found.

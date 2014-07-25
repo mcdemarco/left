@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Fiction as a Personality Test
+tags: genre
 created: 1238471778
 ---
 At Futurismic: [the economics of fiction](http://futurismic.com/2009/03/19/the-economics-of-fiction/) are not about pensions but about personality.

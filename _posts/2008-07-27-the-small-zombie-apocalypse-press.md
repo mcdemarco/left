@@ -1,6 +1,7 @@
 ---
 layout: post
 title: The Small Zombie Apocalypse Press
+tags: zombies
 created: 1217189827
 ---
 Via a contributor and fellow Odfellow:  [Bits of the Dead](http://www.amazon.com/Bits-Dead-Anthology-Piers-Anthony/dp/1897217811) is a zombie flash fiction anthology out from [Coscom Entertainment](http://www.coscomentertainment.com/).  

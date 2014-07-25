@@ -1,6 +1,7 @@
 ---
 layout: post
 title: The Stories of Now
+tags: authors
 created: 1253289232
 ---
 Via twitter:  Kim Stanley Robinson has an [article in New Scientist](http://www.newscientist.com/article/mg20327263.200-science-fiction-the-stories-of-now.html?full=true) about Virginia Woolf, Olaf Stapledon, the Booker Prize, the current golden age of British science fiction, and stories of now.  New Scientist also has eight flash stories up under [the fiction of now](http://www.newscientist.com/special/sci-fi-the-fiction-of-now), and [a flash contest](http://www.newscientist.com/article/dn17779-new-scientist-flash-fiction-competition-2009.html):  350 words or less, due October 15th.<!--break-->

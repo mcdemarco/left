@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 40 Years Ago Today
+tags: astronomy technology streams
 created: 1247799237
 ---
 [SFScope](http://sfscope.com/2009/07/40-years-ago-men-walked-on-the.html) has links about the 40th anniversary of Apollo 11, along with a mock-interview with Michael Collins.

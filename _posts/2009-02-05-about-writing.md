@@ -1,6 +1,7 @@
 ---
 layout: post
 title: About Writing
+tags: writing
 created: 1233810037
 ---
 At [io9](http://io9.com/5138216/samuel-delany-will-come-into-your-house-and-shred-your-notebooks):  Samuel Delany's *About Writing* is not your average how-to-write book.

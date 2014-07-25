@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Atlas Shrugs Again
+tags: authors
 created: 1237953195
 ---
 Via [io9](http://io9.com/5167528/economic-crisis-pushes-people-to-buy-ayn-rand-novel):  sales of Ayn Rand's socialist apocalypse, *Atlas Shrugged,* are rising as the economy tanks.  Quoting *The Guardian*:

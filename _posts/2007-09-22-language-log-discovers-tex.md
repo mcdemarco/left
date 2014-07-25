@@ -1,7 +1,8 @@
 ---
 layout: post
 title: Language Log Discovers TeX
-tags: 
+tags:
+- word processing
 created: 1190515089
 ---
 I noticed the mis-take in a [old Language Log post on hyphenization](http://itre.cis.upenn.edu/%7Emyl/languagelog/archives/004660.html):

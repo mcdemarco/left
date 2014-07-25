@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Books for Bridgeport
-tags: 
+tags: authors
 created: 1193117220
 ---
 Via [Gene Expression](http://www.gnxp.com/blog/2007/10/donors-choose.php):  Give the gift of science fiction (or at least, of medical thrillers) to urban high school students in Bridgeport, Connecticut, through [Donors Choose](http://www.donorschoose.org/donors/proposal.html?id=112105&challengeid=17147&zone=0).

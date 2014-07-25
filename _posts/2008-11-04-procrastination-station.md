@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Procrastination Station
+tags: NaNoWriMo
 created: 1225818806
 ---
 My own personal NaNoWriMo [procrastination station](http://www.nanowrimo.org/taxonomy/term/112) is [iDrops](http://www.idropsgame.com/), an online/iPod/iPhone version of the classic [SameGame](http://en.wikipedia.org/wiki/SameGame).  Despite much dropping of blocks, I still hit my goal of 2,000 words last night, for 6,000 total.<!--break-->

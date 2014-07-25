@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Fermi Paradox Solved?
+tags: astronomy
 created: 1235100320
 ---
 I posted this to a mailing list yesterday, but then forgot to blog it last night.  Via [Futurismic](http://futurismic.com/2009/02/02/fermi-paradox-solved/):  the physics arXiv blog [reports](http://arxivblog.com/?p=1167) on a possible solution to Fermi's Paradox.<!--break-->

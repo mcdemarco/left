@@ -1,6 +1,7 @@
 ---
 layout: post
 title: WordNet and Wordage
+tags: language tools
 created: 1222616508
 ---
 I was checking for updates to [WordNet](http://wordnet.princeton.edu/), a thesaurus program that I use, when I found a similar tool on-line:  [Wordage](http://wordage.info/).  There's no explicit information there about the dictionaries behind the Wordage interface, but I suspect WordNet was involved.  Wordage looks very handy, especially compared to the current state of WordNet usability.

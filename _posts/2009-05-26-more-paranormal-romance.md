@@ -1,6 +1,9 @@
 ---
 layout: post
 title: More Paranormal Romance
+tags:
+- paranormal romance
+- zombies
 created: 1243396070
 ---
 Via [io9](http://io9.com/5270821/people-are-falling-in-love-with-paranormal-romance): Publisher's Weekly discusses the runaway success of paranormal romance in ["When Love Is Strange"](http://www.publishersweekly.com/article/CA6660125.html).

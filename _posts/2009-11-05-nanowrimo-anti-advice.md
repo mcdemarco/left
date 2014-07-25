@@ -1,6 +1,7 @@
 ---
 layout: post
 title: NaNoWriMo Anti-Advice
+tags: NaNoWriMo streams
 created: 1257398798
 ---
 Via [HTLit](http://htlit.com/archives/November2009/NaNoWriMoAdvice.html):  Merlin Mann [advises against](http://www.43folders.com/2009/11/02/nanowrimo-advice) reading all that helpful plot advice I read yesterday.

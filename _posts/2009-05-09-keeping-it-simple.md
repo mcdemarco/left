@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Keeping it Simple
+tags: technology streams
 created: 1241927915
 ---
 Via [Daring Fireball](http://daringfireball.net/linked/2009/04/30/apple-twitter):  Apple's [business profile of Twitter](http://www.apple.com/business/profiles/twitter/) focuses on simplicity and, of course, Macs.  

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Phase Drafting
+tags: NaNoWriMo plot
 created: 1256929961
 ---
 Via a mailing list:  Johanna Harness [contemplates](http://www.johannaharness.com/Johanna_Harness/Blog/Entries/2009/9/3_Phase_Drafting.html) a new kind of outline, [Lazette Gifford's phase drafting](http://www.fmwriters.com/Visionback/Issue%2015/phase.htm), just in time for NaNoWriMo.

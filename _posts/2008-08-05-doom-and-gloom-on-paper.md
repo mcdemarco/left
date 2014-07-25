@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Doom and Gloom on Paper
+tags: magazines
 created: 1217992536
 ---
 Via [del.icio.us sf](/aggregator/sources/24):  [Warren Ellis reports](http://www.warrenellis.com/?p=6240) on declining subscriptions to print science fiction and fantasy magazines.

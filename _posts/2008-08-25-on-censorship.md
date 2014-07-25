@@ -1,6 +1,7 @@
 ---
 layout: post
 title: On Censorship
+tags: publishing
 created: 1219722997
 ---
 [Language Log's Bill Poser posts](http://languagelog.ldc.upenn.edu/nll/?p=525) about Salmon Rushdie, the definition of censorship, and *The Jewel of Medina*:

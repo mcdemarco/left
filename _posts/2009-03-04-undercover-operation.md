@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Undercover Operation
+tags: sf
 created: 1236228920
 ---
 Via [Futurismic](http://futurismic.com/2009/02/14/a-new-meaning-of-the-term-undercover-operation/):  more news from the Alternate Reality News Service.

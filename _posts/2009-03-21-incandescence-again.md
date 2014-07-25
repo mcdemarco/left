@@ -1,6 +1,8 @@
 ---
 layout: post
 title: Incandescence Again
+tags:
+- Greg Egan
 created: 1237694379
 ---
 At io9, [a belated review of Greg Egan's *Incandescence*](http://io9.com/5163907/the-rise-of-science-among-insects-in-greg-egans-incandescence):

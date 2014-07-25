@@ -1,6 +1,7 @@
 ---
 layout: post
 title: In the Mail
+tags: writing
 created: 1222226845
 ---
 Dean Wesley Smith posted recently about [keeping short stories in the mail](http://deanwesleysmith.com/index.php/2008/09/17/keeping-short-stories-in-the-mail/) to high-paying markets.  I have a couple of stories which have made or almost made all the sf/f genre rounds, so his advice will come in handy as always:

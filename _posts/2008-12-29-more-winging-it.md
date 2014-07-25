@@ -1,6 +1,7 @@
 ---
 layout: post
 title: More Winging It
+tags: authors writing
 created: 1230610499
 ---
 Via [io9](http://io9.com/5119938/space-opera-author-neal-asher-makes-it-up-as-he-goes-along):  Neal Asher is another author who admits to making it up as he goes along.

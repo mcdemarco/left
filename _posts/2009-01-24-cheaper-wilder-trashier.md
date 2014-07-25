@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Cheaper, Wilder, Trashier
+tags: publishing
 created: 1232854769
 ---
 Via a mailing list:  [Time magazine](http://www.time.com/time/printout/0,8816,1873122,00.html) contemplates the vanity press, readership numbers, fan fiction, and the future of publishing.

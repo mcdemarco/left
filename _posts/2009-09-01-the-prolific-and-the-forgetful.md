@@ -1,6 +1,7 @@
 ---
 layout: post
 title: The Prolific and the Forgetful
+tags: reading
 created: 1251858310
 ---
 I try to read a few books by a lot of authors rather than all the books by a few authors, but in certain cases I'm a fangirl and I try to read them all.  Usually this is easy to do, because the books are laid out in a particular order (Lois McMaster Bujold, Gene Wolfe), there aren't so many of them (Mary Doria Russell, Greg Egan), or I've been following them long enough to pick everything up (Walter Jon Williams, Doris Lessing).

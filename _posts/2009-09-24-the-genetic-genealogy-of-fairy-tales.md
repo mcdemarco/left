@@ -1,6 +1,7 @@
 ---
 layout: post
 title: The Genetic Genealogy of Fairy Tales
+tags: language 
 created: 1253840470
 ---
 I probably tweeted this back when it came out, but here, via a mailing list I'm trying to catch up on, is [the Telegraph's story on folktales](http://www.telegraph.co.uk/science/science-news/6142964/Fairy-tales-have-ancient-origin.html):

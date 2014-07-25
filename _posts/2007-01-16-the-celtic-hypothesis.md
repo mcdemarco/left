@@ -1,7 +1,7 @@
 ---
 layout: post
 title: The Celtic Hypothesis
-tags: 
+tags: language JRRT
 created: 1169002844
 ---
 On [LanguageLog](http://itre.cis.upenn.edu/~myl/languagelog/archives/004037.html), John McWhorter spots the Celtic Hypothesis in the wild and explains why it's not just another crackpot linguistic theory:

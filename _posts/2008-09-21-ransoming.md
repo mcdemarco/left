@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Ransoming
+tags: publishing gaming
 created: 1222055755
 ---
 [Bruce Baugh at Tor.com](http://www.tor.com/index.php?option=com_content&view=blog&id=5920) has a couple of interviews about *ransoming*:  holding your work hostage until the audience ponies up sufficient donations, as seen on PBS.  The post itself is about role-playing games, but the application to writing and other art is obvious.

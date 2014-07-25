@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Marrowthon
+tags: local
 created: 1239740714
 ---
 Sorry about the lack of posts recently.  Service should be restored by next week.

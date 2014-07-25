@@ -1,7 +1,7 @@
 ---
 layout: post
 title: On the Money
-tags: 
+tags: publishing authors
 created: 1172547661
 ---
 John Scalzi posted recently about his [Science Fiction Income](http://www.scalzi.com/whatever/004893.html), breaking it up into advances, royalties, foreign sales, etc.

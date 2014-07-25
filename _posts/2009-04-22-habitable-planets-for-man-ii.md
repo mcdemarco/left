@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Habitable Planets for Man II
+tags: astronomy
 created: 1240458453
 ---
 Via a mailing list:  [Universe Today reports](http://www.universetoday.com/2009/04/21/nearly-earth-sized-planet-watery-world-spotted-near-another-star/) on a newly-discovered Earth-like planet and its possibly watery companion.

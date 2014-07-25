@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Hopeless Courage
-tags: 
+tags: JRRT quotes
 created: 1211162867
 ---
 So I have finally reached the end of *The Two Towers*, where Sam makes another comment about hope in the following one-paragraph scene:

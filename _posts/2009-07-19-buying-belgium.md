@@ -1,6 +1,10 @@
 ---
 layout: post
 title: Buying Belgium
+tags:
+- astronomy
+- technology
+- Walter Jon Williams
 created: 1248056145
 ---
 Via [Angel Station](http://walterjonwilliams.blogspot.com/2009/07/philosophers-needed-apply-nasa.html): [One Giant Leap to Nowhere](http://www.nytimes.com/2009/07/19/opinion/19wolfe.html?_r=1&pagewanted=1), a depressing New York Times editorial by Tom Wolfe about the unexpected premature end of the space age forty years ago.  It's full of tempting quotes about unemployed rocket scientists and superpower single combat, but instead I'll just quote [the filk it reminded me of](http://fritterfae.livejournal.com/453005.html):

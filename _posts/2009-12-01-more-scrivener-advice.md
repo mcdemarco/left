@@ -1,6 +1,8 @@
 ---
 layout: post
 title: More Scrivener Advice
+tags:
+- word processing
 created: 1259729198
 ---
 Here's a link I didn't get a chance to post during the NaNoWriMo madness:  Scott Westerfeld's tip on [using Scrivener for pace charts](http://scottwesterfeld.com/blog/?p=1937):

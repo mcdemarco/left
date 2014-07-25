@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Charles Brown
+tags: magazines
 created: 1247575606
 ---
 [Locus](http://www.locusmag.com/News/2009/07/charles-n-brown-1937-2009.html) has an obituary up for Charles Brown.  

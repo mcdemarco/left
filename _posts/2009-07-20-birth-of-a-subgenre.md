@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Birth of a Subgenre
+tags: genre
 created: 1248148289
 ---
 Not quite as significant as the [birth of a genre](http://www.mcdemarco.net/node/621), the birth of a subgenre really only needs someone to give to airy nothing a local habitation and a name.  [Schott's Vocab](http://schott.blogs.nytimes.com/2009/07/17/literary-monster-mash-up/) documents the origin of a new one:

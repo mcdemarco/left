@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Alternate Reality News Service
+tags: sf
 created: 1235278414
 ---
 Futurismic has a highly entertaining [faq excerpt](http://futurismic.com/2009/02/07/alternate-reality-news-service-frequently-unasked-questions/) from the Alternate Reality News Service:

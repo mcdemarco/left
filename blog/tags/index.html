@@ -4,14 +4,18 @@ title: "Tags"
 menu: blog
 ---
 
+{% capture tag_list %}{% for tag in site.tags %}{{ tag | first }}{% if forloop.last != true%}|{% endif %}{% endfor %}{% endcapture %}
+{% assign sorted_tags = tag_list | split:'|' |  sort %}
+
+
 <h2>Tag list</h2>
 
   <ul class="listing">
-    {% for tag in site.tags %}
+    {% for tagname in sorted_tags %}
     <li>
-      <span>{{ tag | last | size}} post(s)</span>
-      <a href="/{{ site.tag_dir }}/{{tag | first}}/">
-	{{ tag | first }}
+      <span>{{ site.tags[tagname] | size}} post(s)</span>
+      <a href="/{{ site.tag_dir }}/{{ tagname | slugize }}/">
+	{{ tagname }}
       </a>
     </li>
     {% endfor %}

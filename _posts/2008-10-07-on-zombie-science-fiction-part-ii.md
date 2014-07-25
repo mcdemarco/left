@@ -1,6 +1,7 @@
 ---
 layout: post
 title: On Zombie Science Fiction, Part II
+tags: sf markets
 created: 1223436720
 ---
 As [previously promised](http://www.mcdemarco.net/node/474), the second part of [The End of Science Fiction](http://thefix-online.com/features/end-of-science-fiction-p2/) by Nader Elhefnawy, concerning the poor business prospects of the genre, went up at The Fix on September 15th.  First of all, you should watch your word counts:

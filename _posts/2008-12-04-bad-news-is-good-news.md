@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Bad News is Good News
+tags: markets
 created: 1228452955
 ---
 [I Should Be Writing](http://isbw.murlafferty.com/2008/12/04/links-around-publishing/) has some links about Black Wednesday, the day Houghton-Mifflin stopped buying books.  [Pyr-o-mania](http://pyrsf.blogspot.com/2008/12/buy-books-like-life-depended-on-it.html) and [John Scalzi](http://whatever.scalzi.com/2008/12/04/publishing-asks-why-it-is-in-a-rapidly-descending-handbasket/) recommend fighting the recession with a book shopping spree.  [Dean Wesley Smith](http://deanwesleysmith.com/index.php/2008/11/26/thinking-about-the-industry/) reminds us that for the publishing industry, bad news is good news:<!--break-->

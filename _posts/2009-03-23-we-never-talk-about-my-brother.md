@@ -1,6 +1,7 @@
 ---
 layout: post
 title: We Never Talk About My Brother
+tags: reviews
 created: 1237866952
 ---
 Also at io9, a [review of Peter S. Beagle's new short story collection](http://io9.com/5165314/peter-s-beagle-soars-with-we-never-talk-about-my-brother):

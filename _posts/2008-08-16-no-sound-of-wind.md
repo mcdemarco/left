@@ -1,6 +1,7 @@
 ---
 layout: post
 title: No Sound of Wind
+tags: quotes JRRT
 created: 1218945015
 ---
 I was going to title this post "Zombie Frodo," but that would imply some horrifying Lord of the Rings/Dawn of the Dead crossover, and this is just a quote I came across in my very slow rereading of the former.

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Disposable Books and Secondhand Bestsellers
+tags: publishing
 created: 1250861866
 ---
 Via [@StanCarey](http://twitter.com/StanCarey/status/3445576955):  the Guardian [reports](http://www.guardian.co.uk/books/2009/aug/21/dan-brown-oxfam-most-donated-books) on what flies on and off the shelves of Oxfam used book shops.

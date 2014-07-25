@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Not Even Dark Matter
-tags: 
+tags: astronomy
 created: 1187975454
 ---
 Via del.icio.us:  [Reuters reports](http://www.reuters.com/article/newsOne/idUSN2329057520070823) on a "gaping hole" in the universe:

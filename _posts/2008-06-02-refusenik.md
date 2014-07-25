@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Refusenik
-tags: 
+tags: movies
 created: 1212463878
 ---
 I saw [Refusenik](http://refusenikmovie.com/) tonight at the [Kendall Square Cinema](http://www.landmarktheatres.com/Films/films_frameset.asp?id=67092), and producer Laura Bialis also spoke afterwards about how the refuseniks' story inevitably took over the movie from her original subject:  protesters outside the Soviet Union.

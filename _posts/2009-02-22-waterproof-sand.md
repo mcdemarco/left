@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Waterproof Sand
+tags: technology
 created: 1235357890
 ---
 Via [Technovelgy](http://www.technovelgy.com/ct/Science-Fiction-News.asp?NewsNum=2128):  [Next Big Future reports](http://nextbigfuture.com/2009/02/waterproof-sand-could-green-deserts.html) on waterproof or hydrophobic sand.

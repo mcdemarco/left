@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Sand Sculptures 
+tags: technology
 created: 1242705442
 ---
 Via [Futurismic](http://futurismic.com/2009/04/21/rewriting-dune-arenaceous-antidesertification-architecture/):  some amazing pictures about the big idea of [turning desert into sandstone](http://bldgblog.blogspot.com/2009/04/sandstone.html).

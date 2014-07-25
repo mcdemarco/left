@@ -1,6 +1,7 @@
 ---
 layout: post
 title: The Legend of Sigurd and Gudrùn
+tags: JRRT
 created: 1232686782
 ---
 Via [SFScope](http://sfscope.com/2009/01/new-unpublished-tolkien-book-c.html):  HarperCollins is [apparently publishing](http://www.thebookseller.com/news/73781-new-tolkien-for-%20harpercollins.html) another lost Tolkien work this coming May.  This one is not his own fantasy, although it is once again edited by Christopher Tolkien:

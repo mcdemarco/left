@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Durin's Moon
-tags: 
+tags: JRRT calendars
 created: 1210640738
 ---
 See [the calendar category page](http://www.mcdemarco.net/taxonomy/term/78) for my previous blog entries about calculating Durin's Day.  Today's entry is a note on the interpretation of "new moon" in [the definition of Durin's Day](http://www.mcdemarco.net/node/411).  To recap:

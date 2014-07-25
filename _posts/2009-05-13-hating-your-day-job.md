@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Hating Your Day Job
+tags: writing
 created: 1242273133
 ---
 I'm behind again on the [aggregator](/aggregator), so here's a month-old article from the Fix about [the day job](http://thefix-online.com/features/what-about-the-day-job/):

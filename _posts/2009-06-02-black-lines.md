@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Black Lines
+tags: technology
 created: 1244001289
 ---
 This isn't really related to science fiction; it's more of a high-tech thriller story.  Bill at Switchback [tells the tale](http://www.transit.stunningabsurdity.com/?p=343) of a construction crew that hit a buried fiber-optic cable, prompting an immediate, unexpected response from men in black SUVs:

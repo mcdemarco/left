@@ -1,6 +1,8 @@
 ---
 layout: post
 title: The Stross Formula
+tags:
+- Charlie Stross
 created: 1219207768
 ---
 Last month [Jonathan McCalmont](http://www.sfdiplomat.net/), roving critic, described [the Stross Formula](http://www.sfdiplomat.net/sf_diplomat/the-stross-formula.html).  Charlie Stross responded in the comments with a cautionary tale of early success and contractual deadlines:

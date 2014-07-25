@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "The Daily Zombie, Episode 6:  Night of the Living Statisticians"
+tags: zombies
 created: 1229921377
 ---
 Via [Cognition and Culture](http://www.cognitionandculture.net/index.php?option=com_content&view=article&id=324:4-stone-hearth&catid=32:oliviers-blog&Itemid=34):  io9 charts [a statistical correlation between war and zombie movies](http://io9.com/5070243/war-and-social-upheaval-cause-spikes-in-zombie-movie-production).

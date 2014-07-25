@@ -1,7 +1,8 @@
 ---
 layout: post
 title: Division by Zero
-tags: 
+tags:
+- Ted Chiang
 created: 1174183050
 ---
 I was telling someone about this story and decided to google it, without any hope of finding it online.  But apparently it was reprinted by Fantastic Metropolis a few years ago and is still up there:  ["Division by Zero" by Ted Chiang](http://www.fantasticmetropolis.com/print.html?fn,division).<!--break-->

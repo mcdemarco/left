@@ -1,7 +1,8 @@
 ---
 layout: post
 title: Ted Chiang Novella
-tags: 
+tags:
+- Ted Chiang
 created: 1173819284
 ---
 I saw on [MetaFilter](http://ask.metafilter.com/58540/Forgotten-title-of-amazing-online-scifi-story) that Ted Chiang has a [novella coming out from Subterranean Press](http://subterraneanpress.com/index.php/2007/02/21/ted-chiang-announcing-the-merchant-and-the-alchemists-gate/):

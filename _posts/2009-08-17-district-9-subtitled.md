@@ -1,6 +1,7 @@
 ---
 layout: post
 title: District 9 Subtitled
+tags: movies
 created: 1250563055
 ---
 Jon Evans at [Tor.com](http://www.tor.com/index.php?option=com_content&view=blog&id=51552) explains some of the South African cultural references in *District 9*:

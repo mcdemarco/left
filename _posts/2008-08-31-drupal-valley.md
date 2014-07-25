@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Drupal Valley
+tags: drupal
 created: 1220211933
 ---
 The site was down for about 20 minutes for a [Drupal](http://drupal.org/) [upgrade](http://drupal.org/drupal-6.4).  The management apologizes for any inconvenience.  <!--break-->Drupal is a massive CMS with [odd, hard-coded defaults](http://drupal.org/node/118901), [picayune system requirements](http://drupal.org/node/186668), and [freakish](http://drupal.org/node/273871) [bugs](http://drupal.org/node/82690), all of which I run into every time I try to upgrade.

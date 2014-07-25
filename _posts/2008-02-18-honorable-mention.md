@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Honorable Mention
-tags: 
+tags: contests
 created: 1203356402
 ---
 Thanks to Joni for calling about the [honorable mention](http://wotfblog.galaxypress.com/2008/02/more-honorable-mentions-for-1st-quarter.html) Saturday night, explaining it to me (it's the top 5% of entrants), and printing everyone's name (so if you follow the blog entries about this quarter you can extrapolate a rough total number of submissions).<!--more-->

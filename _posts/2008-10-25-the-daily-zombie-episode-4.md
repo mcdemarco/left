@@ -1,6 +1,7 @@
 ---
 layout: post
 title: The Daily Zombie, Episode 4
+tags: zombies
 created: 1224992738
 ---
 Today on the Daily Zombie, just a few lighthearted zombie links:

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Federations
+tags: sf
 created: 1218167654
 ---
 Via [SFScope](http://sfscope.com/2008/08/john-joseph-adams-announces-op.html):  an open anthology, <em>Federations</em>, edited by John Joseph Adams, will pay 5 cents per word up to 5,000 words.

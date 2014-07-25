@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Armageddon Back on Schedule
+tags: physics
 created: 1233723746
 ---
 [Fox News reports](http://www.foxnews.com/story/0,2933,483477,00.html) that the Large Hadron Collider may suck us into that [planet-eating black hole](http://www.mcdemarco.net/node/480) after all:

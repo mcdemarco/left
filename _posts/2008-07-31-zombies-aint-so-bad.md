@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Zombies Ain't So Bad
+tags: supernatural gaming zombies
 created: 1217522342
 ---
 I played [Zombie Fluxx](http://www.fluxxgames.com/zombiefluxx.html) for the first time last night, and it got me thinking about [zombies](http://www.mcdemarco.net/node/444) and [horror](http://www.mcdemarco.net/node/445) again.  So I will attempt to explain their appeal.

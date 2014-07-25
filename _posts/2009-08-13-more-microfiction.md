@@ -1,6 +1,7 @@
 ---
 layout: post
 title: More Microfiction
+tags: markets streams
 created: 1250220713
 ---
 Via twitter, of course ([@eastgate](http://twitter.com/eastgate/statuses/3284731624)):  Dene Grigar's 24-hour [microfiction project](http://web.me.com/dgrigar/24-Hr._Micro-Elit_Project/Home.html) begins next Friday at midnight.

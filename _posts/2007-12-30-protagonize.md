@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Protagonize
-tags: 
+tags: hyperfiction
 created: 1198996881
 ---
 Via the [aggregator](/aggregator):  [Mashable](http://mashable.com/2007/12/28/protagonize) reviews [Protagonize](http://www.protagonize.com/), where interactive fiction becomes buzzword compliant:

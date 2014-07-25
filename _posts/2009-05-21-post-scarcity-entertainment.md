@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Post-Scarcity Entertainment
+tags: reading
 created: 1242964545
 ---
 Futurismic contemplates [the post-scarcity entertainment landscape](http://futurismic.com/2009/04/29/on-the-grazing-habits-of-the-post-scarcity-culture-vulture/):

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: More Steampunk Links
+tags: steampunk
 created: 1264783091
 ---
 The editors of Fantasy Magazine bring us [more steampunk links](http://www.fantasy-magazine.com/2010/01/steampunk-links-for-january-29-2010/), including eye candy,

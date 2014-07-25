@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "The Daily Zombie, Episode 3:  Greek Zombies"
+tags: biology zombies
 created: 1224730867
 ---
 In my ongoing zombie research, I came across [a three-part YouTube video](http://www.youtube.com/watch?v=sUWsagq-CDU) of Jan Sleutels expounding on Greek Zombies:  not your average shambling undead, but Julian Jaynes' pre-conscious ancient Greeks.  If you don't have time for all three parts, you can get [a draft of the paper](http://jan.sleutels.com/teksten/zombies.pdf) at his website.<!--break-->  Here's the abstract:

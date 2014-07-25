@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Non-Christian Narnias
+tags: JRRT fantasy
 created: 1267820244
 ---
 Via twitter: [Razib at Gene Expression digresses](http://scienceblogs.com/gnxp/2010/03/on_the_fundaments_of_fantasy.php) from gene expression to the question of religion and fantasy.  He manages to dig up more Jewish fantasy writers than Michael Weingrad did for his article in the Jewish Review of Books,  [Why There Is No Jewish Narnia](http://www.jewishreviewofbooks.com/publications/detail/why-there-is-no-jewish-narnia):

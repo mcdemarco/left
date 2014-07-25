@@ -1,7 +1,7 @@
 ---
 layout: post
 title: More Thing
-tags: 
+tags: movies sf
 created: 1195661972
 ---
 [Steve Sailer blogs "The Thing"](http://isteve.blogspot.com/2007/11/thing.html), a once and future creature feature with roots in the Golden Age of science fiction:

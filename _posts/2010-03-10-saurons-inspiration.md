@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Sauron's Inspiration
+tags: JRRT humor
 created: 1268202258
 ---
 If the template cuts this off, just click on it:
