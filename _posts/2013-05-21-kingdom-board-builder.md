@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Kingdom Board Builder"
-tags: mapping
+tags: mapping gaming
 created: 2013-05-21 13:48:51
 ---
 My husband and I were talking about designing a game like [Kingdom Builder](http://en.wikipedia.org/wiki/Kingdom_Builder) that would have (among other things) an even more modular hex board. That got me thinking about how I could prototype such a board. 
