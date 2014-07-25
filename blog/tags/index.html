@@ -13,7 +13,7 @@ menu: blog
   <ul class="listing">
     {% for tagname in sorted_tags %}
     <li>
-      <span>{{ site.tags[tagname] | size}} post(s)</span>
+      <span>{{ site.tags[tagname] | size}} posts</span>
       <a href="/{{ site.tag_dir }}/{{ tagname | slugize }}/">
 	{{ tagname }}
       </a>
