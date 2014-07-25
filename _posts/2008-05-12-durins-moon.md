@@ -4,7 +4,7 @@ title: Durin's Moon
 tags: JRRT calendars
 created: 1210640738
 ---
-See [the calendar category page](http://www.mcdemarco.net/taxonomy/term/78) for my previous blog entries about calculating Durin's Day.  Today's entry is a note on the interpretation of "new moon" in [the definition of Durin's Day](http://www.mcdemarco.net/node/411).  To recap:
+See [the calendar category page](/blog/tags/calendars/) for my previous blog entries about calculating Durin's Day.  Today's entry is a note on the interpretation of "new moon" in [the definition of Durin's Day]/node/411).  To recap:
 
 > "The first day of the dwarves’ New Year,” said Thorin, “is as all should know the first day of the last moon of Autumn on the threshold of Winter."<!--break-->
 

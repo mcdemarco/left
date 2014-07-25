@@ -4,7 +4,7 @@ title: Cribbage Declared Illegal
 tags: gaming
 created: 1196107748
 ---
-I've been following (board)gaming news off and on lately, so I've decided to inaugurate a new [gaming category](http://www.mcdemarco.net/taxonomy_menu/1/73) with this ominous tale of an allegedly new gambling law in Maine:  [Cribbage players run afoul of state law](http://morningsentinel.mainetoday.com/news/local/4454216.html).
+I've been following (board)gaming news off and on lately, so I've decided to inaugurate a new [gaming category](/blog/tags/gaming/) with this ominous tale of an allegedly new gambling law in Maine:  [Cribbage players run afoul of state law](http://morningsentinel.mainetoday.com/news/local/4454216.html).
 
 > "The rules are there; we don't understand them," O'Conner said. "(Cribbage) is like playing monopoly or dominos. We don't know where the law came from. They just made it up.<!--break--> In Waterville, they went in and confiscated their cribbage boards and cards. They were just playing for fun and not having a tournament or anything. Just a couple of guys playing at the bar."
 > 

@@ -10,4 +10,4 @@ Holly Lisle has lots of exercises and essays about writing at [her website](http
 
 Holly Lisle has some wonderful handmade maps--big color ones linked in the essay above, or monochrome ones like [the world of Korre](http://hollylisle.com/jpg/tonk_korre_map_small.jpg)--but there is software out there for those who want to cheat at world-building.  
 
-The first thing I found by googling was a suite from [ProFantasy Software](http://www.profantasy.com/).  [NBOS Software](http://www.nbos.com/) has a similar product line.  Check out my [mapping](http://www.mcdemarco.net/taxonomy/term/21) and [Terragen](http://www.mcdemarco.net/terragen) categories for some free options.
+The first thing I found by googling was a suite from [ProFantasy Software](http://www.profantasy.com/).  [NBOS Software](http://www.nbos.com/) has a similar product line.  Check out my [mapping](/blog/tags/mapping/) and [Terragen](/blog/tags/terragen/) categories for some free options.
