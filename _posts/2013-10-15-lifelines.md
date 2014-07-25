@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "LifeLines on Mountain Lion"
-tags: genealogy DNA
+tags: genealogy genetics
 created: 2013-10-15 14:13:00
 ---
 My husband got his 23andMe results back the other day, and his account was chock full of possible relatives.

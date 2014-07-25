@@ -2,7 +2,7 @@
 layout: post
 title: Schedules of Appearance
 tags:
-- Noreascon 2004
+- cons
 - Charlie Stross
 created: 1092538956
 ---

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Groundhog Day
-tags: movies supernatural
+tags: movies
 created: 1218690111
 ---
 *Groundhog Day* is this week's 99 cent movie rental in the iTunes store.  According to Wikipedia,

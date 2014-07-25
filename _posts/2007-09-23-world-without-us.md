@@ -1,7 +1,7 @@
 ---
 layout: post
 title: World Without Us
-tags: research science
+tags: science
 created: 1190600654
 ---
 <a href="http://www.worldwithoutus.com/"><em>The World Without Us</em></a> sounds like an essential aid for the apocalypse writer.  What's left after you kill <em>all</em> the characters?  Alan Weisman covers the factoids (the NYC Metro would flood in two days without electric pumps) and the final mark of late humanity on the new Earth (in the sample chapter on <a href="http://www.worldwithoutus.com/excerpt.html">persistent polymers</a>).<!--break-->

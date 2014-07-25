@@ -4,7 +4,7 @@ title: Neologisms
 tags:
 - tie-ins
 - movies
-- English
+- language
 created: 1097870261
 ---
  I submitted a neologism to the [Langmaker neologism collection](http://www.langmaker.com/db/eng_a2z_index.htm):

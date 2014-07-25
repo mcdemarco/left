@@ -1,7 +1,7 @@
 ---
 layout: post
 title: The Language of Independence
-tags: editing
+tags: language
 created: 1120674395
 ---
 You can read about my fourth of July [elsewhere](http://www.livejournal.com/users/mabfan/139060.html).  I didn't have any deep political thoughts about the reading of the Declaration of Independence; my deep thought was that _unalienable_ is not a word.

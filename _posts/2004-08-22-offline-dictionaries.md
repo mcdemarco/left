@@ -2,7 +2,7 @@
 layout: post
 title: Offline Dictionaries
 tags:
-- English
+- language
 - tools
 created: 1093228232
 ---

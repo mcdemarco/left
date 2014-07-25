@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Penflipping Recipes
+tags: recipes
 created: 2013-12-15 15:42:00
 ---
 Last post I mentioned that I've been using Penflip for [a cookbook](https://www.penflip.com/mcdemarco/the-new-kitchen-cookbook).  I've run into [some issues](https://alpha.app.net/mcdemarco/post/16633775), mainly involving images, but I still find it more convenient for my growing collection of recipes than dealing with [SpringPad](/stream/springs/recipes.html)'s interface.  I am especially reassured to have my cookbook checked out of git onto my own computer, where I feel it's safe from random UI changes like [the one that drove me off SpringPad](https://twitter.com/mcdemarco/status/336947399928983552).
