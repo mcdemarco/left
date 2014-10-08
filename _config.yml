@@ -5,6 +5,18 @@ rdiscount:
   extensions: [smart]
 future: true
 tag_dir: blog/tags
+collections:
+  recipes:
+    output: true
+    permalink: /recipes/:path/
+defaults:
+  -
+    scope:
+      path: ""
+      type: "recipes"
+    values:
+      layout: "recipe"
+      menu: "stream"
 
 name: m. c. de marco
 short_name: m.c.d.

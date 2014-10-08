@@ -1,0 +1,14 @@
+---
+layout: layout
+---
+
+<h1><a href="/stream/recipes/">The New Kitchen Cookbook</a></h1>
+
+{{ content }}
+
+<hr>
+
+<section id="recipeTOC">
+{% capture toc %}{% include contents.md %}{% endcapture %}
+{{ toc | markdownify }}
+</section>
