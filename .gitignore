@@ -1,5 +1,6 @@
 _site
 _recipes
+recipes/images
 *~
 bio/nonfiction/*
 .DS_Store

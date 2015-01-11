@@ -21,6 +21,7 @@
   - name: Hot Toddy
     filename: toddie
   - name: Pitúies
+    filename: pituie
 
 - name: Soup
   filename: soup
@@ -49,8 +50,12 @@
     filename: marble
   - name: Garlic Naan
     filename: naan
+  - name: Baguette
+    filename: baguette
   - name: Master Healthy No-Knead Recipe
     filename: healthy
+  - name: Healthy Rye
+    filename: rye
   - name: Yes-Knead Challah
     filename: challah
   - name: Artisan Bread Index
@@ -95,6 +100,8 @@
     filename: squash
   - name: Moroccan Spice Mix
     filename: spiceMix
+  - name: North African Spiced Carrot and Parsnip Salad
+    filename: carrotParsnip
   - name: Chickpea Salad with Fennel, Tomatoes and Olives
     filename: chickpeaFennel
   - name: Cucumber Salad
@@ -125,7 +132,7 @@
     filename: sushi
 
 - name: Pasta
-  filename: soup
+  filename: pasta
   files:
   - name: Orecchiette with Anchovy Sauce
     filename: orecchiette
@@ -151,6 +158,8 @@
     filename: chili
   - name: Beef Curry
     filename: curry
+  - name: Molha Quase à Moda de Pico
+    filename: molha
 
 - name: Poultry
   filename: poultry
@@ -165,12 +174,20 @@
     filename: bakedTurkeyChicken
   - name: Roasted Chicken Quarters with Butternut Squash
     filename: roastedWithSquash
+  - name: Tuscan Chicken with Olives and Capers
+    filename: tuscanChicken
+  - name: Treda
+    filename: treda
+  - name: Moroccan Spiced Chicken Stew
+    filename: thighStew
   - name: Turkey Scaloppini
     filename: scaloppini
   - name: Crockpot Bourbon Turkey Tenders
     filename: crockpotTurkey
   - name: Turkey Meatballs
     filename: turkeyballs
+  - name: Italian Wedding Soup
+    filename: italianWedding
 
 - name: Fish
   filename: fish
@@ -191,7 +208,7 @@
     filename: tapioca
   - name: Nutella Fudge with Sea Salt
     filename: nutellaFudge
-  - name: Almond Easy Fudge
+  - name: Tasty Easy Fudge
     filename: easyFudge
   - name: Easy Mints
     filename: easyMints
