@@ -74,6 +74,8 @@
     filename: cornbread
   - name: Bran Muffins for Mom
     filename: branMuffins
+  - name: Blueberry Corn Muffins
+    filename: blueberryCornMuffins
   - name: Banana Cranberry Muffins
     filename: bananaCranberry
   - name: Carrot Spice Muffins
