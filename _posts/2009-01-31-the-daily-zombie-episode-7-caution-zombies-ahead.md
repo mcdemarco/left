@@ -4,7 +4,7 @@ title: "The Daily Zombie, Episode 7:  Caution Zombies Ahead!"
 tags: zombies
 created: 1233459672
 ---
-Via a mailing list:  [the Austin Daily News reports](http://www.kxan.com/dpp/news/Road_signs_warn_of_zombies) on zombie road signs.
+Via a mailing list:  [the Austin Daily News reports](https://web.archive.org/web/20100830173640/http://www.kxan.com/dpp/news/Road_signs_warn_of_zombies) on zombie road signs.
 
 > Austin drivers making their morning commute were in for a surprise when two road signs on a busy stretch of road were taken over by hackers. The signs near the intersection of Lamar and Martin Luther King boulevards usually warn drivers about upcoming construction, but Monday morning they warned of  "zombies ahead."<!--break-->
 
@@ -20,4 +20,6 @@ Via [GeekPress](http://www.geekpress.com/2009/01/pride-and-prejudice-and-zombies
 
 And last but not least, a LOLzombie:
 
-![funny-pictures-these-cats-are-zombies](http://icanhascheezburger.wordpress.com/files/2009/01/funny-pictures-these-cats-are-zombies.jpg)
+![funny-pictures-these-cats-are-zombies](https://web.archive.org/web/20090408160035/http://icanhascheezburger.files.wordpress.com/2009/01/funny-pictures-these-cats-are-zombies.jpg)
+
+<!-- link checked 2015-I-28 -->
