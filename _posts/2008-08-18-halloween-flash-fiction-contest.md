@@ -4,7 +4,9 @@ title: Halloween Flash Fiction Contest
 tags: contests horror
 created: 1219116792
 ---
-Via [SFScope](http://sfscope.com/2008/08/apex-publications-annual-hallo.html):  Jay Lake will be judging Apex's [Annual Halloween Contest](http://www.apexbookcompany.com/news/2008/08/annual-apex-halloween-contest-information/).  The word limit is 1,000 words, and submissions (by email) are already open.  The theme is Election Horror.<!--break-->
+<!-- links checked 31-Jan-2015 -->
+
+Via [SFScope](http://sfscope.com/2008/08/apex-publications-annual-hallo/):  Jay Lake will be judging Apex's Annual Halloween Contest (~~http://www.apexbookcompany.com/news/2008/08/annual-apex-halloween-contest-information/~~).  The word limit is 1,000 words, and submissions (by email) are already open.  The theme is Election Horror.<!--break-->
 
 [Wikipedia](http://en.wikipedia.org/wiki/Flash_fiction) defines flash fiction flashily as 
  "fiction characterized by its extreme brevity."  When you actually write flash fiction, rather than warnings at the top of encyclopedia articles demanding references for simple definitions, then only certain subgenres of flash are characterized by their extreme brevity.  After you've written a few stories of exactly 100 words, a loose count of 2,000 is a comparative *War and Peace.*

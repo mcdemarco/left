@@ -6,7 +6,9 @@ tags:
 - Michael A. Burstein
 created: 1241754682
 ---
-Michael Burstein [reviews the new *Star Trek* movie](http://sfscope.com/2009/05/the-future-returnsa-review-of.html):
+<!-- links checked 31-Jan-2015 -->
+
+Michael Burstein [reviews the new *Star Trek* movie](http://sfscope.com/2009/05/the-future-returnsa-review-of/):
 
 > The obvious question: is the new re-envisioning of the old characters worth the wiping out of decades of established continuity?
 >

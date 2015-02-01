@@ -12,11 +12,16 @@ layout: layout
     </a>
   </h2>
 
-{% if page.byline %}
+  {% if page.byline %}
   <section class="byline">
-    <span style="font-style:italic;padding-right:4px;">by</span> <span>{{ page.byline }}</span>
+	  <span style="font-style:italic;padding-right:4px;">by</span> <span>{{ page.byline }}</span>
   </section>
-{% endif %}
+  {% endif %}
 
 {{ content }}
 
+  {% if page.checked %}
+  <section class="byline" style="text-align:right;">
+	    Links checked: {{ page.checked | date: "%B %e, %Y" }}
+  </section>
+  {% endif %}

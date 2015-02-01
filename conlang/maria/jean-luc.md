@@ -14,7 +14,7 @@ There are certainly situations in which no naming language is necessary:  mainst
 
 For choosing near-future names, I use The Baby Name Wizard's [Java NameVoyager](http://www.babynamewizard.com/voyager).  I don't usually need names from the 20th century, but the NameVoyager covers the entire period.  Keep in mind that these are baby names, so adult characters won't have them until at least twenty years later.  See, for example, the roller-coaster history of the name [Mariah](http://www.babynamewizard.com/voyager#prefix=MARIAH&ms=false&sw=f&exact=false).
 
-For surnames I usually resort to [U.S. census data](http://www.census.gov/genealogy/www/freqnames2k.html), which also covers first names in a less entertaining fashion than the NameVoyager.  The data is not broken down by age, but [August Kleimo's random name generator](http://www.kleimo.com/random/name.cfm) returns first and last names based on their census frequency.
+For surnames I usually resort to [U.S. census data](http://www.census.gov/topics/population/genealogy/data/2000_surnames.html), which once upon a time also covered first names in a less entertaining fashion than the NameVoyager.  The data is not broken down by age.
 
 Similar data can be easily googled for other nationalities and periods.
 
@@ -36,3 +36,5 @@ If you're not sure English would become unrecognizable in 10,000 years, then tak
 ### Alien Names
 
 When faced with some far-future John and Mary, one might be tempted to provide the author with the Federation Standard alibi---that he has translated appropriately futuristic names into pronounceable modern ones for reader convenience.  This alibi does not extend to alien names.  You should not, under any circumstances, call your aliens Priscilla or Alex or Jean-Luc.  This is an area in which a naming language is expected.
+
+<!-- links checked 31-I-2015 -->

@@ -10,6 +10,9 @@ layout: layout
 
   <section class="byline" style="text-align:right;">
     {{ page.date | date: "%B %e, %Y" }}
+	  {% if page.checked %}
+	    <br/>Links checked: {{ page.checked | date: "%B %e, %Y" }}
+	  {% endif %}
   </section>
 
   <section class="nav">

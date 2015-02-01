@@ -382,9 +382,20 @@ dl.biblio dd {
     padding: 4px;
 }
 
+dl.interview dd {
+    padding: 8px;
+}
+dl.interview dt {
+    font-style: italic;
+}
+
 ul.tag_list, ul.tag_list li {
     display:inline;
     font-style:italic;
+}
+
+p.indent {
+    text-indent: 5em;
 }
 
 /* recipes section */

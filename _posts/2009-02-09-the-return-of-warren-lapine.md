@@ -4,7 +4,9 @@ title: The Return of Warren Lapine
 tags: magazines
 created: 1234240886
 ---
-Via [SFScope](http://sfscope.com/2009/01/warren-lapine-returns-to-sf-wi.html):  Warren Lapine, former publisher of genre magazines including *Weird Tales* and *Absolute Magnitude*, is back in the business.
+<!-- links checked 31-Jan-2015 -->
+
+Via [SFScope](http://sfscope.com/2009/01/warren-lapine-returns-to-sf-wi/):  Warren Lapine, former publisher of genre magazines including *Weird Tales* and *Absolute Magnitude*, is back in the business.
 
 > Lapine is starting a new genre publishing company, to be called Tir Na Nog Press. He'll be giving DNA shareholders stock in the new company, at a rate of one-for-one.
 >
