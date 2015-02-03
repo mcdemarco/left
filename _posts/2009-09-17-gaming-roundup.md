@@ -3,11 +3,12 @@ layout: post
 title: Gaming Roundup
 tags: gaming
 created: 1253209896
+checked: 2015-02-03
 ---
 I caught up on [Purple Pawn](http://www.purplepawn.com/) today and found all sorts of interesting gaming information:
 
 * A [game-themed crossword puzzle](http://www.purplepawn.com/2009/08/board-game-themed-crossword-puzzle-from-merl-reagle/).
-* A guide to open-source [retro RPGs](http://totheblogmobile.com/2009/05/08/a-guide-to-retro-clone-roleplaying-games/).
+* A guide to open-source [retro RPGs](https://web.archive.org/web/20120111213452/http://totheblogmobile.com/2009/05/08/a-guide-to-retro-clone-roleplaying-games/).
 * [Settlers of Catan online for beginners](http://www.purplepawn.com/2009/09/catan-for-beginners-online/) (but the Java interface didn't work for me).
 * [Arimaa](http://arimaa.com/arimaa/): making chess harder for computers to play.<!--break-->
 * A paper about [making advanced Monte-Carlo Settlers bots](http://ticc.uvt.nl/icga/acg12/proceedings/Contribution100.pdf), and other [gaming theory research](http://www.purplepawn.com/2009/08/academic-game-scholarship-roundup/).

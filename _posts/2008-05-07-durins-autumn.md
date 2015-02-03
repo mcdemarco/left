@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Durin's Autumn
-tags: JRRT calendars
+tags: JRRT calendars dwarves
 created: 1210218731
 ---
 Durin's Days are coming soon, many thanks to Alan Eliasen and [Frink](http://futureboy.us/frinkdocs/).  This entry is just a note on the interpretation of "autumn" in [the definition of Durin's Day](http://www.mcdemarco.net/node/411) and of the dwarves' New Year in general.  To recap, in *The Hobbit*, the dwarves' New Year's Day is said to fall on the last new moon of autumn, where autumn is unfortunately not defined.<!--break-->
@@ -21,7 +21,7 @@ Autumn #1 pushes the New Year well into December, which was out of the question 
 
 Alan came up with Autumn #3 independently and I concurred, being a fan of cross-quarter days and seasons.  This option, however, does not quite produce the dates given in the Encyclopedia, even when adjusting the definition of "New Year's Day" to require that the entire month (not just the new moon) fall within "autumn."  The approach seemed promising at the time, though.
 
-I found Autumns #4 in Appendix D this morning; it was also unavailable last night.  When I set Frink to calculate New Years based on #4a, #4b, and #4c tonight, I finally found the source of the Encyclopedia's madness:  #4c.  My calculated values for #4c match their New Years.  (For the record, #4a and #4b, the more promising interpretations, do not match.)  
+I found Autumns #4 in Appendix D this morning; it was also unavailable last night.  When I set Frink to calculate New Years based on #4a, #4b, and #4c tonight, I finally found the source of the Encyclopedia's madness:  #4c.  My calculated values for #4c match their New Years.  (For the record, #4a and #4b, the more promising interpretations, do not match.)
 
 [Addendum:   Starting from the Encyclopedia's otherwise inexplicable claim (A) that the last new moon of autumn occurs within two weeks of October 6th, we get autumn ending on October 20th, and therefore beginning 54 days earlier, around August 27th, only a few days off from option #4c, September 1st--possibly because of rounding errors and the elves' interpolated days (which I ignored).   There's a two-week difference between the end of autumn as defined by (A) and the Encyclopedia's own dates for *yavie* of [August 12th through October 4th](http://www.glyphweb.com/arda/y/yavie.html).  I think this represents a misunderstanding of the dwarven New Year definition rather than a hole in my *yavie* theory, since the date of October 6th is otherwise too much of a coincidence.]
 

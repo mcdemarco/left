@@ -1,7 +1,8 @@
 ---
 layout: post
 title: The Mathematical Landscape
-tags: art
+tags: art comics
 created: 1258950803
+checked: 2015-02-03
 ---
-Here's a [landscape](http://abstrusegoose.com/a/211.htm) in pixels by Abstruse Goose.
+Here's a [landscape](http://abstrusegoose.com/211) in pixels by Abstruse Goose.
