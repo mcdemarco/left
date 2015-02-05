@@ -4,7 +4,7 @@ title: "References"
 menu: conlang
 supertitle: The Accidental Conlanger
 date: 2008-09-12 01:03
-checked: 2015-01-31
+checked: 2015-02-04
 ---
 
 The reference section is brought to you by the letter [&#331;](http://en.wikipedia.org/wiki/Velar_nasal).  Formerly an allophone of /n/ before /g/, /&#331;/ became phonetic in English when final /g/ became silent in words like "sing" /s&#618;&#331;/.  Cf. "sin", /s&#618;n/.
@@ -39,7 +39,7 @@ Most of the following links were or will be included in the main text of *The Ac
 #### Miscellany
 
 * [The Zompist bboard](http://www.incatena.org/) is a conlanging forum.
-* [A Conlang FAQ](http://www.geocities.com/Athens/Acropolis/9219/conlangfaq.html)
+* [A Conlang FAQ](http://www.deaneaston.com/index.php?p=1_10_A-Conlang-FAQ)
 
 #### Meta
 
