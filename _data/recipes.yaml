@@ -158,6 +158,8 @@
     filename: meatloaf
   - name: Beef and Bean Chili
     filename: chili
+  - name: Cincinnati Chili
+    filename: cincinChili
   - name: Beef Curry
     filename: curry
   - name: Molha Quase à Moda de Pico
