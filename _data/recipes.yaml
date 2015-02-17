@@ -32,6 +32,8 @@
     filename: cilantro
   - name: Sopa de Grao
     filename: chickpea
+  - name: Easy Pasta e Fagioli
+    filename: fazool
 
 - name: Bread
   filename: bread
@@ -198,6 +200,8 @@
   files:
   - name: Costco Salmon
     filename: costcoSalmon
+  - name: Salmon Steaks
+    filename: salmonSteaks
   - name: Baked Mackerel
     filename: mackerel
   - name: Fish Kuku
