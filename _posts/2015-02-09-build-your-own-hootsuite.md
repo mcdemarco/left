@@ -47,17 +47,12 @@ But, setting the user agent to a non-WebKit, non-Firefox, mobile (or non-modern)
 On the other hand, you may just want to use the non-mobile Facebook site in a full screen tab or in an extra-large tile.  In particular, if you want to use certain Facebook extensions like [FB Purity](http://www.fbpurity.com) or [Social Fixer](http://socialfixer.com), you will need to switch to the default user agent.  On the bright side, the default user agent will also spare you from being nagged to install mobile apps that you can't actually install on a desktop.
 
 
+### Updates
 
+I've noticed a lack of automatic refreshing of feeds when using my DIY Hootsuite setup.  Some sites have built-in refresh buttons, but the quickest solution is to right-click on a tab (in the tab bar at top) and choose **Reload All Tabs**.
 
+At the time of writing, I could read Ello with the **Android / Firefox 29** setting, but couldn't post or comment unless I switched back to **Mac / Firefox 29** and reloaded the page.
 
+If you're using Facebook or another social network where you're the product, you might want to consider installing [Privacy Badger](https://www.eff.org/privacybadger).
 
-
-
-
-
-
-
-
-
-
-
+For advanced tweaking of the UI, you may want to consider [Greasemonkey](https://addons.mozilla.org/en-us/firefox/addon/greasemonkey/).  The Greasemonkey scripts I use to undo some annoying mobile stuff are in [my userscripts repository](https://github.com/mcdemarco/userscripts/tree/master/demobilize) on GitHub.
