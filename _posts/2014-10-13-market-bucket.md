@@ -3,6 +3,7 @@ layout: post
 title: "Market Bucket"
 tags: ADN
 created: 2014-10-13 13:06:00
+class: release
 ---
 [Market Bucket](http://market-bucket.mcdemarco.net/) is a web app for grocery (and other) lists, running on the social networking platform [app.net](http://app.net/).  With it you can create simple or complicated lists, with or without archiving of completed items (for reuse of those items when you need more eggs, because you always need more eggs).  I always need more lists, so it also lets you create as many lists as you want, of whichever degree of complexity you want.  To use Market Bucket, you'll need a (free) app.net account, which should be offered to you when you click on the Authorize with App.net button.
 

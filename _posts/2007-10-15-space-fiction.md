@@ -4,6 +4,7 @@ title: Space Fiction
 tags:
 - Doris Lessing
 created: 1192474799
+class: short
 ---
 The LA Times calls Doris Lessing's Nobel prize [a victory for science fiction](http://www.latimes.com/entertainment/la-et-lessing15oct15,0,4487666.story) because she sometimes writes it:
 

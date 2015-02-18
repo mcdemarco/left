@@ -3,6 +3,7 @@ layout: post
 title: Black Bile
 tags: biology language
 created: 1210132399
+class: long
 ---
 Someone mentioned melancholy on a mailing list, meaning by it nothing distinct from *depression,* but my ear picked it up and I wondered whether melancholy was still a legitimate affliction.  (The answer appears to be no, it's been replaced by [melancholic depression](http://en.wikipedia.org/wiki/Melancholic_depression).)
 
@@ -18,4 +19,4 @@ The traditional Latin etymology of saudade is laughable even to an armchair ling
 
 The main trouble with the Arabic theory is a poor understanding of *sawda* itself:  how, when, where (besides Turkey), and why it became a synonym of *huzn* (not to mention of "love"), and how it mutated, if it did, into the uniquely Portuguese sense of "nostalgia."
 
-Until yesterday I had my own personal folk etymology of *saudade* as being "influenced" by *saúde,* health.   *Saúde* is in fact one of the words supposed to have turned the Latin *solitate* into the Arabic *sawda*, but my thoughts were more semantic than phonetic:  *saudade* is no longer a bile imbalance or in any sense a negative or unhealthy condition in Portuguese.  It is instead a fundamental part of the national character, the feeling that launched a thousand *fados,* and the proper balance of the humours.
+Until yesterday I had my own personal folk etymology of *saudade* as being "influenced" by *saúde,* health.  *Saúde* is in fact one of the words supposed to have turned the Latin *solitate* into the Arabic *sawda*, but my thoughts were more semantic than phonetic:  *saudade* is no longer a bile imbalance or in any sense a negative or unhealthy condition in Portuguese.  It is instead a fundamental part of the national character, the feeling that launched a thousand *fados,* and the proper balance of the humours.

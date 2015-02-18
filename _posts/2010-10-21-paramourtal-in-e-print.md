@@ -3,6 +3,7 @@ layout: post
 title: Paramourtal in e-Print
 tags: ebooks mcd Paramourtal
 created: 1287679897
+class: news
 ---
 <p><a href="http://amzn.to/9fdH7D">The Kindle version of <em>Paramourtal</em></a> is now up at Amazon, along with the trade paperback:</p>
 

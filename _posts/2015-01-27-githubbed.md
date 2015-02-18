@@ -5,6 +5,7 @@ tags:
 - tools
 - jekyll
 created: 2015-01-27 01:09:00
+class: site
 ---
 When [last I blogged](/blog/2015/01/12/collated/), I'd added yet another project to GitHub--my wandering recipe collection.  (My newest recipe is [Blueberry Corn Muffins](/recipes/quick-bread/blueberryCornMuffins/), and the [fudge photography](/recipes/sweets/easyFudge/) has also been posted.)  I also had a static mirror of my website on GitHub, from back when Dreamhost was being extremely flaky and my website was going down all the time.  In theory I could have had a [jekyll](http://jekyllrb.com) mirror of the site, but my jekyll is slow and probably not entirely compatible with [GitHub's jekyll](https://help.github.com/articles/using-jekyll-with-pages/), so I didn't attempt it.
 

@@ -3,6 +3,7 @@ layout: post
 title: "Crick Tickers, Cooters, and Games"
 tags: ADN
 created: 2014-07-21 12:04:00
+class: release
 ---
 I released [Crick Ticker](http://crick-ticker.mcdemarco.net/), a web-based stream marker manager for App.net, before leaving for Pinewoods a week and a half ago.  There are a few vacation photos up at [Favd](http://favd.net/user/mcdemarco), starting with the [red-bellied cooter](http://favd.net/pic/34966279), and we also played a lot of board games, which inspired me to update [my collection](http://boardgamegeek.com/collection/user/fiddly_bits?own=1&subtype=boardgame&ff=1) on BoardGameGeek.
 

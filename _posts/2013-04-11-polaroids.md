@@ -3,6 +3,7 @@ layout: post
 title: "Polaroids"
 tags: photos
 date: 2013-04-11 13:52
+class: long
 ---
 I've downloaded my Instagram photos using [Instaport](http://instaport.me/) and laid them out as [Polaroids](/stream/instagrams/).  The polaroid styling is based on [Polaroids with CSS3](http://www.zurb.com/playground/css3-polaroids) on Zurb and a similar post by [Paulund](http://www.paulund.co.uk/create-polaroid-image-with-css).  I tweaked them a little and added the handwriting font, a Google web font called [Patrick Hand SC](http://www.google.com/fonts/specimen/Patrick+Hand+SC).
 

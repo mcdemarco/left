@@ -3,6 +3,7 @@ layout: post
 title: "LifeLines on Mountain Lion"
 tags: genealogy genetics
 created: 2013-10-15 14:13:00
+class: long
 ---
 My husband got his 23andMe results back the other day, and his account was chock full of possible relatives.
 My 23andMe results have not attracted much in the way of near cousins over the years, but one popped up when I went in to look at his results (and mock his unexpected [lactose intolerance](http://plagueblog.blogspot.com/2008/05/lactose-intolerance-in-europe.html)--coincidentally, my new 2nd-to-3rd cousin is also from the same 81% lactose-intolerant region of Italy I pointed out in the link).

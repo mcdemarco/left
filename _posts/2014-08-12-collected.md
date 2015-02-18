@@ -6,6 +6,7 @@ tags:
 - jekyll
 - recipes
 created: 2014-08-12 00:20:00
+class: site
 ---
 Today I learned enough about Jekyll [collections](http://jekyllrb.com/docs/collections/) to import my [recipes](/stream/recipes/) as their raw markdown source from [Penflip](http://penflip.com/mcdemarco/).  I had intended to learn some Liquid to do some post-processing that would have made them even more convenient to read here, but I only learned enough to seriously question that plan.  Fortunately, Penflip itself seems to be back in active development, despite [my initial pessimism](/blog/2013/12/15/penflipping-recipes/).
 

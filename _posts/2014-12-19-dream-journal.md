@@ -3,6 +3,7 @@ layout: post
 title: "Keeping a Dream Journal"
 tags: writing tools Scrivener
 created: 2014-12-19 14:28:00
+class: long
 ---
 My dream journal entries often start out with *For reasons I don't now recall...*  Likewise, this post:  For reasons I don't now recall, I was looking into dream journaling software earlier this month.  Maybe I read something about the advantages of dream journaling for writers during NaNoWriMo season and finally took the time to investigate.
 

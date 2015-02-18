@@ -4,6 +4,7 @@ title: Knowing When You've Quit
 tags: writing
 created: 1262127105
 checked: 2015-02-03
+class: long
 ---
 I was pointed to [A Newbie's Guide to Publishing](http://jakonrath.blogspot.com/) via a mailing list.  It comes with [this handy summary](http://jakonrath.blogspot.com/2009/12/what-i-know.html) of the past five hundred blog posts.  Some of the advice struck me as much deeper than the topic of writing itself:
 

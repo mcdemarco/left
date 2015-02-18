@@ -5,6 +5,7 @@ tags:
 - Doris Lessing
 - writing
 created: 1192567845
+class: short
 ---
 Do you remember when you were in New Writers Class and your teacher told you what not to do once you were famous?  That, specifically, you should never shop your latest novel around under a pseudonym to see if anyone will buy it on merit alone.  Setting aside the risks to your ego, the number of people you'll annoy this way is astronomical.
 

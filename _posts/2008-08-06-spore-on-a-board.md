@@ -3,6 +3,7 @@ layout: post
 title: Spore on a Board
 tags: gaming
 created: 1218081247
+class: short
 ---
 I'm not enough of a gamer to write up session reports, but I saw part of a game of [Evo](http://www.boardgamegeek.com/game/1159) tonight and thought it was cute enough to blog about.  I would characterize the game as [Spore](http://www.spore.com/) on a Board.  You bid for mutant genes and dinosaur parts in order to evolve the fittest dinosaurs before the approaching comet strikes and wipes out fit and unfit indiscriminately, leaving nothing behind but the scoreboard. <!--break--> So perhaps that should be Spore on a Board with [Despair](http://despair.com/changewinds.html).
 

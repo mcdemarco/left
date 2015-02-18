@@ -3,6 +3,7 @@ layout: post
 title: Stumbling Across the Finish Line
 tags: NaNoWriMo
 created: 1164940142
+class: short
 ---
 Another year, another novel:
 

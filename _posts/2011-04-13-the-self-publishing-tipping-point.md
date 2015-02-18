@@ -3,9 +3,9 @@ layout: post
 title: The Self-Publishing Tipping Point
 tags: publishing ebooks
 created: 1302752810
+checked: 2015-01-31
+class: short
 ---
-<!-- links checked 31-Jan-2015 -->
-
 I found my way from [Dean Wesley Smith's twitter feed](http://twitter.com/#!/DeanWesleySmith) to L. M. May's posts on [learned helplessness](http://lmmay.com/2011/04/03/fiction-writers-and-learned-helplessness/) and [Barry Eisler going indie](https://web.archive.org/web/20120304145637/http://lmmay.com/2011/03/21/barry-eisler-turned-down-500000-deal-to-indie-publish/).  I read Barry Eisler's long [two](http://barryeisler.blogspot.com/2011/03/ebooks-and-self-publishing-conversation.html) [part](http://barryeisler.blogspot.com/2011/04/ebooks-and-self-publishing-part-2.html) dialogue with Joe Konrath about self-publishing.  Dean has since posted some more self-publishing advice.
 
 By chance I also found [a very short post by David Friedman](http://daviddfriedman.blogspot.com/2011/03/how-to-eliminate-publishing-industry.html) about how little need for the publishing industry remains after the advent of ebooks---a reprise of a three-year-old post whose time has now come.  Also by chance, I just got my first royalty payment for *Paramourtal* last week, and my mother(!) got a Kindle at the same time.

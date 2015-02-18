@@ -3,6 +3,7 @@ layout: post
 title: Fantasies of Justice
 tags: horror authors genre
 created: 1219374705
+class: short
 ---
 [Via whump.com](http://www.whump.com/moreLikeThis/2008/08/11/fantasies-of-political-agency/):  Lois McMaster Bujold spoke about genre in her [guest of honor speech](http://blog.myspace.com/index.cfm?fuseaction=blog.view&friendID=164952151&blogID=423204224) at the World Science Fiction Convention earlier this month. Here are her one-word genre definitions:
 

@@ -3,6 +3,7 @@ layout: post
 title: Books for the Accidental Conlanger
 tags: conlangs language
 created: 1163098736
+class: short
 ---
 Today I picked up some books I saw recommended while I was searching the new [conlang list archive](http://archives.conlang.info/).  [_The Unfolding of Language_](http://www.theunfoldingoflanguage.com/) is a fascinating, well-written book about language change aimed at the general language-changing public.  _Historical Linguistics_ has the nitty-gritty of sound change laws and the like, with plenty of examples.<!--break-->
 

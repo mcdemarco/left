@@ -3,6 +3,8 @@ layout: post
 title: "Build Your Own Hootsuite"
 tags: ADN how-to tools 
 created: 2015-02-09 18:10:00
+updated: 2015-02-17 11:54:37
+class: long
 ---
 I'm active on one social network, [App.net](http://app.net), but I have [many accounts](/stream/) out there, for which I have hopes of heights varying from *six feet under* to *maybe someday*.  Many of said accounts are on social networks that make [the allegedly dead](http://blog.aurynn.com/post/the-death-of-app.net) App.net look quite lively and mainstream by comparison.
 
@@ -47,7 +49,7 @@ But, setting the user agent to a non-WebKit, non-Firefox, mobile (or non-modern)
 On the other hand, you may just want to use the non-mobile Facebook site in a full screen tab or in an extra-large tile.  In particular, if you want to use certain Facebook extensions like [FB Purity](http://www.fbpurity.com) or [Social Fixer](http://socialfixer.com), you will need to switch to the default user agent.  On the bright side, the default user agent will also spare you from being nagged to install mobile apps that you can't actually install on a desktop.
 
 
-### Updates
+### Update 
 
 I've noticed a lack of automatic refreshing of feeds when using my DIY Hootsuite setup.  Some sites have built-in refresh buttons, but the quickest solution is to right-click on a tab (in the tab bar at top) and choose **Reload All Tabs**.
 

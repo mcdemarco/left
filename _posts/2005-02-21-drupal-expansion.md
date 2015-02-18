@@ -3,6 +3,7 @@ layout: post
 title: Drupal Expansion
 tags: mcd drupal
 created: 1109042159
+class: site
 ---
 Tweaking my website is not nearly as important to my writing career as, say, actually *writing*; nevertheless, tweak happens.  I'd been meaning to expand my use of Drupal on the site ever since I installed it in a corner directory to replace the infinitely geeky but not-so-user-friendly Blosxom.  What pushed me over the edge today was Google.
 

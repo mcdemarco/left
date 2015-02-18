@@ -3,6 +3,7 @@ layout: post
 title: On Zombie Science Fiction
 tags: genre fantasy sf
 created: 1220497545
+class: long
 ---
 I found the [The Well-Bitten Hand](http://www.helixsf.com/archives/Oct07/wellbittenhand.htm) via [The End of Science Fiction](http://thefix-online.com/features/end-of-science-fiction-p1/), linked by [SF Diplomat](http://www.sfdiplomat.net/sf_diplomat/2008/09/you-may-have-missed-links-020908.html).  Both articles put a stake through science fiction, a genre whose time has, apparently, gone.  "The Well-Bitten Hand" discusses the shambling undead corpse of sci-fi, ten years dead by John Barnes' account, as part of the general mortality of genres.  He eulogizes:
 

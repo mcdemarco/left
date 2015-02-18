@@ -4,6 +4,7 @@ title: Under the Wire
 tags: NaNoWriMo
 created: 1228103342
 checked: 2015-01-31
+class: short
 ---
 This is a late [NaNoWriMo](http://nanowrimo.org/participants/mcd) finish for me.  Usually I schedule an early completion to avoid the stress of last-minute noveling, but this month I got off-schedule and never quite got back on.  Now, thanks to a 10,000 word Thanksgiving weekend push, I have 50,000 words of a novel, a cool Viking winner's graphic, and an addiction to [House](http://www.fox.com/house/):<!--break-->
 

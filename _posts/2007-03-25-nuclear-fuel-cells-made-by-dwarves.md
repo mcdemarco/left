@@ -5,6 +5,7 @@ tags:
 - Ted Chiang
 - dwarves
 created: 1174858612
+class: long
 ---
 Someone somewhere in the [news aggregator](/aggregator) linked to an old post of John Scalzi's with his [final word](http://www.scalzi.com/whatever/003887.html) on the perpetual debate over the difference between SF and F:
 

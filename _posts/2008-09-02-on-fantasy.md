@@ -3,9 +3,9 @@ layout: post
 title: On Fantasy
 tags: genre fantasy
 created: 1220413343
+checked: 2015-01-31
+class: long
 ---
-<!-- links checked 31-Jan-2015 -->
-
 I've found some interesting articles on genre since I added some publishers and critics to the [aggregator](/aggregator).    First up is [Jo Walton's love-hate relationship with fantasy](http://www.tor.com/index.php?option=com_content&view=blog&id=4435) at Tor.com:
 
 > I hate it because it’s boring. It’s all the same. It’s warmed over Tolkien—not even variations on a theme from Tolkien, but repetition of the same theme from Tolkien, on one note. <!--break-->What I hate is what, on rec.arts.sf.written we used to call “extruded fantasy product”. I like reading things where I can put the book down half way through and not be able to predict what happens in the next half, down to where the beats will fall.

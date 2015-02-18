@@ -6,6 +6,7 @@ tags:
 - Doris Lessing
 - authors
 created: 1209097495
+class: long
 ---
 It's yet another school vacation week, judging from the absence of the crossing guard from the corner I cross every morning.  In my head I'm also on vacation though I've occasionally showed up at work this week, and school vacations put me in mind of *The Lord of the Rings.*  It calls to me like the One Ring itself from its place of honor on my bookshelves.
 

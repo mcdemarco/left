@@ -3,6 +3,7 @@ layout: post
 title: A Week in the Bitcoin Mines
 tags: technology
 created: 2013-04-29 12:42:34
+class: long
 ---
 I decided to try bitcoin mining after hearing a partial explanation that made it sound more mathematically interesting than [it turned out to be](http://www.reddit.com/r/Bitcoin/comments/17so2c/explain_bitcoins_like_im_a_mathcs_undergrad/). (The moment of existential disappointment came when I read that the number of bitcoins cannot exceed 21 million.)
 

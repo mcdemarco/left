@@ -3,6 +3,7 @@ layout: post
 title: Barbarian at the Gates
 tags: genre
 created: 1162170113
+class: short
 ---
 A reference on a mailing list to Kristine Kathryn Rusch's original argument made me realize I never linked it.  So here it is, [Barbarian Confessions](http://www.asimovs.com/_issue_0612/thoughtexperiments.shtml):
 

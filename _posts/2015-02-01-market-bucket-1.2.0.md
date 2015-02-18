@@ -3,6 +3,7 @@ layout: post
 title: "Market Bucket 1.2.0"
 tags: ADN
 created: 2015-02-01 13:47:00
+class: release
 ---
 I've upped [Market Bucket](http://market-bucket.mcdemarco.net/), my App.net-based grocery list app, to version 1.2.0.  The new version lets you sort lists alphabetically or by oldest to newest (in order of creation).  The default order is still newest to oldest.  There was also a bug fix of my one known bug.
 

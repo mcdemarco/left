@@ -6,5 +6,6 @@ tags:
 - Paramourtal
 - paranormal romance
 created: 1285104116
+class: news
 ---
 *Paramourtal*, a paranormal romance anthology featuring my story, "Sympathy From the Devil," is now available from [CreateSpace](https://www.createspace.com/3484341).  The Amazon listing will be up sometime in the next couple of weeks.

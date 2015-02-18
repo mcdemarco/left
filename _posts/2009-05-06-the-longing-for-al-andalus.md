@@ -3,6 +3,7 @@ layout: post
 title: The Longing for al-Andalus
 tags: authors reviews
 created: 1241668642
+class: short
 ---
 I don't usually write reviews, but somehow I've fallen 700 posts behind reading [the  aggregator](/aggregator) and rather than try to catch up enough to reblog something I'll just mention the last book I read:  *The Lions of Al-Rassan*.  There's quite a bit of information about it at [Guy Gavriel Kay's website](http://www.brightweavings.com/books/lions.htm), but perhaps [Wikipedia](http://en.wikipedia.org/wiki/The_Lions_of_Al-Rassan) sums it up best:
 

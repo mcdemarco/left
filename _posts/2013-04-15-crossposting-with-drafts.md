@@ -3,6 +3,7 @@ layout: post
 title: "Crossposting with Drafts"
 tags: tools
 date: 2013-04-15 14:24:16
+class: long
 ---
 I've been wanting crossposting software for a while now.  People I'd spotted successfully crossposting either did it manually in a browser or worked for Google (solving the Google+ problem through nepotism?), and Hootsuite only handled a couple of my networks. [Streamified](http://streamified.com/) did more but still not all (and is temporarily without an iOS client).  
 

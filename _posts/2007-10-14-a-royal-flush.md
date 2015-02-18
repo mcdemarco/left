@@ -4,6 +4,7 @@ title: A Royal Flush
 tags:
 - Doris Lessing
 created: 1192337361
+class: short
 ---
 Despite the [little grey man's predictions](/node/343), Doris Lessing won the 2007 Nobel Prize in literature.  She missed the call and got the news from reporters lying in wait at her home.  [A Reuters TV crew](http://www.reuters.com/article/reutersEdge/idUSL1363610220071014?pageNumber=1&sp=true) attempted to interview her:
 

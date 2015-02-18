@@ -3,6 +3,7 @@ layout: post
 title: Amazon Associate
 tags: mcd
 created: 1110865710
+class: site
 ---
 I signed up as an Amazon Associate, not so much for the kickbacks (which I don't expect to be significant) but for the handy links.  Unfortunately, my one forthcoming publication still doesn't have a picture in the Amazon database, so the effect is spoiled:
 

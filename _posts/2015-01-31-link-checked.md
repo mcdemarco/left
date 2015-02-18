@@ -6,6 +6,7 @@ tags:
 - jekyll
 - tools
 created: 2015-01-31 18:39:00
+class: site
 ---
 The website was in sore need of link checking; link blogs do not age well and the [link rot](http://en.wikipedia.org/wiki/Link_rot) is deep.  But I've cleaned up quite a bit of it (for the first time in a decade in [some places](/gkc/)), with a focus on non-blog content like [The Accidental Conlanger](/conlang/).  I put a fair amount of effort into keeping my own content alive (or at least propping [a tombstone](/aggregator/sources/24) up where it used to be), so it's always disappointing to see websites restructure away tons of content away altogether, or shuffle it around without putting in working redirects.
 

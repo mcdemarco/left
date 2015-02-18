@@ -3,6 +3,7 @@ layout: post
 title: "A Random Family Tree Generator"
 tags: tools writing dwarves
 created: 2014-01-14 12:09:00
+class: release
 ---
 During NaNoWriMo 2013, I wrote a novel about dwarves, and I also wrote a [Random Family Tree Generator](/tools/family-tree-generator/lineage.html) in order to populate several dwarf clans, fast.  I'd found a few versions of a generator for random medieval family trees (that is, trees of the descendants of a matriarch/patriarch pair) online, but I needed a bunch of other features, like non-human lifespans and gender ratios, and auto-generation and editing of the trees.  It also helped me quite a bit to display the tree as a tree rather than as the lists the original program had used.
 

@@ -3,6 +3,7 @@ layout: post
 title: Durin's Moon
 tags: JRRT calendars dwarves
 created: 1210640738
+class: long
 ---
 See [the calendar category page](/blog/tags/calendars/) for my previous blog entries about calculating Durin's Day.  Today's entry is a note on the interpretation of "new moon" in [the definition of Durin's Day]/node/411).  To recap:
 

@@ -3,6 +3,7 @@ layout: post
 title: A Terragen Planet Tutorial
 tags: mapping terragen
 date: 2005-09-11 18:00:00
+class: long
 ---
 
 <p>This tutorial is based on what I learned from the <a href="http://www.terradreams.de/All/Tutorials/SpaceTut/TutPlanet1ENGL.htm">TERRA-Dreams Planet Tutorial #1</a>.  (Note the correction at <a href="http://www.ashundar.com/forums.php?m=posts&amp;p=14325#14325">Ashundar</a> if you plan to follow that tutorial.)</p>

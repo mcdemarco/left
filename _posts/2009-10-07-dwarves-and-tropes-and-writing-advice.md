@@ -4,6 +4,7 @@ title: Dwarves and Tropes and Writing Advice
 tags: fantasy contests dwarves
 created: 1254940639
 checked: 2015-02-03
+class: short
 ---
 I was browsing the Writers of the Future blog for this quarter's results (more Honorable mentions are up, but no finalists yet) and I came across some old contest advice:  [K.D. Wentworth's top-five list of what not to do](http://wotfblog.blogspot.com/2007/07/top-five-disqualification-points-during.html) when entering the WotF contest.  To summarize:  grammatical errors, bad spelling, withholding information, tropes, and infodumps are bad; showing the sf/f content early on is good.<!--break-->
 

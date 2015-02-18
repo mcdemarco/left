@@ -3,6 +3,7 @@ layout: post
 title: Durin's Day
 tags: JRRT calendars quotes dwarves
 created: 1209584642
+class: short
 ---
 I've been rereading *The Hobbit* on the train, because it's more portable and durable than my 30-year-old Houghton Mifflin trade paperback edition of *The Lord of the Rings*, despite being even older (specifically, the 1966 Ballantine revised, "authorized" paperback edition).  Yesterday I reached the discussion of Durin's Day:
 

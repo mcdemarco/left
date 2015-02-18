@@ -3,6 +3,7 @@ layout: post
 title: "Kingdom Builder Randomizer"
 tags: gaming
 created: 2014-12-10 21:52:00
+class: release
 ---
 I supported the [Kingdom Builder](http://en.wikipedia.org/wiki/Kingdom_Builder) Big Box kickstarter, but only at the level of the Island expansion (a.k.a., Queenie 3), which arrived a while back.  Recently, I managed to fit in into my Little Big Box of the base set, the Nomads expansion, and the other two mini-expansions, Caves and Capitols.  (This was made difficult by the cute but bulky plastic boxes I use to hold the settlement pieces, but I prevailed.)
 

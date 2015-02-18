@@ -3,6 +3,7 @@ layout: post
 title: "Bicolorize"
 tags: anaglyph
 created: 2014-10-24 16:49:00
+class: release
 ---
 I was supposed to be working on my [NaNoWriMo](http://nanowrimo.org/) planning, but Peter scored me some anaglyph glasses early on in his weekend of playing with video gear, so instead I wrote a bookmarklet and slightly improved a Tetris game intended for use with anaglyph glasses.  I named the bookmarklet [Bicolorize](/bicolorize/); follow the link for a configuration form in which you customize the bookmarklet for your particular glasses and desired background color.  You can then play Tetris using the same configuration.
 

@@ -6,6 +6,7 @@ tags:
 - jekyll
 - recipes
 created: 2014-10-07 10:18:00
+class: site
 ---
 Penflip [recently announced](https://www.penflip.com/blog/folders) the addition of folders.  I've been wanting to get my recipes into single files/chapters for a while, and now I have.  (It was much easier with Git than in the Penflip UI.)  The results are visible at [Penflip](http://penflip.com/mcdemarco/) and [here on the site](/stream/recipes/).
 

@@ -3,6 +3,7 @@ layout: post
 title: Tens of Thousands of Worker Bees Commanded by Queen Elizabeth
 tags: local language
 created: 1201996991
+class: short
 ---
 Ben Zimmer of [Language Log](http://itre.cis.upenn.edu/~myl/languagelog/archives/005361.html) documents a couple of fun "incorrections":  the one alluded to in the title of this post, and one I spotted on [Universal Hub](http://www.universalhub.com/node/12588) and emailed to him:
 

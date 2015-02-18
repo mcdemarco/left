@@ -3,6 +3,7 @@ layout: post
 title: Too Interactive?
 tags: gaming technology
 created: 1245031438
+class: short
 ---
 I recently read game blogger Yehuda's Berlinger's [review of The Path](http://jergames.blogspot.com/2009/06/its-game-its-not-game-whatever-its-art.html), a not-quite-video game or "interactive entertainment."  The non-game sounded like exactly the sort of near-future science fiction interactive world to which my characters inevitably become addicted, wasting their lives away inside Matrix-style pods, etc., etc.  It's hardly my original idea; the notion of a participatory movie-like secondary reality is more of a trope working its way up to subgenre status.
 
