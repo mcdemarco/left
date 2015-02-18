@@ -405,6 +405,16 @@ ul.tag_list.recipes li:before {
     margin: 0 3px;
 }
 
+span.archive_tag {
+    float: none !important;
+    font-style:italic;
+}
+
+span.archive_tag a, span.archive_tag a:active, span.archive_tag a:visited {
+    color: #777;
+    padding-left: 3px;
+}
+
 p.indent {
     text-indent: 5em;
 }
