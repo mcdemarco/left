@@ -18,11 +18,30 @@ menu: blog
   </section>
 
   {{ post.content }}
+
+  {% capture lastlink %} 
+  {{ post.previous.url }} 
+  {% endcapture %} 
+  {% capture lasttitle %} 
+  {{ post.previous.title }} 
+  {% endcapture %} 
     
   {% endfor %}
 
-<!-- index links -->
+  <section class="meta">
+    <section class="copy byline" style="line-height: 1.7em;">
+      <img src="/images/avatar-color-cropped.png" style="height:50px; width:50px;"/>
+      <a href="/bio/"><span class="fixentity">&copy;</span> 2004&ndash;{{ site.time | date: "%Y" }} &nbsp; M. C. DeMarco</a>
+      <br />
+      <a href="{{ lastlink }}" title="{{ lasttitle }}"><span class="fixentity">&ll;</span> Previous</a>
+      |
+      <a href="/blog/archive.html">Archives</a>
+    </section>
+  </section>
+
+
+<!-- index links
 <div class="pagination">
     <em>For more posts, see the <a href="/blog/archive.html">archives</a>.</em>
 </div>
-
+ -->
