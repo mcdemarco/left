@@ -452,3 +452,7 @@ section#recipeTOC ul li a:hover,
 section#recipeTOC ul li a:active {
     color: #227ce8;
 }
+
+span.fixentity {
+    font-family: Helvetica, sans-serif;
+}
