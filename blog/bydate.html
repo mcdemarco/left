@@ -1,0 +1,31 @@
+---
+layout: layout
+title: "Date Archives"
+menu: blog
+---
+
+<h2>Blog Archives by Date</h2>
+
+<section>
+	<p>Blog archives by category are available on the <a href="/blog/archive.html">main archive</a> and <a href="/blog/linklog.html">linkblog</a> pages.  There is also a listing by <a href="/blog/tags/">tags</a>.</p>
+</section>
+
+{% for post in site.posts %}
+  {% capture currentyear %}{{post.date | date: "%B %Y"}}{% endcapture %}
+  {% if currentyear != year %}
+    {% unless forloop.first %}</ul>{% endunless %}
+    <h3>{{ currentyear }}</h3>
+    <ul class="listing">
+    {% capture year %}{{currentyear}}{% endcapture %} 
+  {% endif %}
+    <li>
+	    <span>{{ post.date | date: "%B %e, %Y" }}</span> 
+	    <a href="{{ post.url }}">{{ post.title }}</a>
+	    <span class="archive_tag">
+		    {% for tag in post.tags %}
+		    <a href="/{{ site.tag_dir }}/{{ tag }}">{{ tag }}</a>
+		    {% endfor %}
+	    </span>
+    </li>
+{% endfor %}
+

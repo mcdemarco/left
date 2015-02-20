@@ -456,3 +456,8 @@ section#recipeTOC ul li a:active {
 span.fixentity {
     font-family: Helvetica, sans-serif;
 }
+
+h3 + h4 {
+    margin-top:0;
+    padding-top:0;
+}
