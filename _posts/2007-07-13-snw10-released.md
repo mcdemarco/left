@@ -3,6 +3,7 @@ layout: post
 title: SNW10 Released
 tags: tie-ins mcd
 created: 1184347567
+class: news
 ---
 I got my contributor's copies of <em>Strange New Worlds 10</em> this week, and Amazon claims it was published, appropriately enough, on July 10th.  So shop early, shop often!
 
