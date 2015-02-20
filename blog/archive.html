@@ -4,11 +4,93 @@ title: "Archives"
 menu: blog
 ---
 
-<h2>Blog archives</h2>
+<h2>Blog archives: long form</h2>
+
+<section class="byline">Longer blog posts are listed first, followed by shorter posts, news, housekeeping and linkblog posts.</section>
 
   <ul class="listing">
     {% for post in site.posts %}
-	{% if post.class %}
+	{% if post.class == 'long' %}
+	  <li>
+		  <span>{{ post.date | date: "%B %e, %Y" }}</span> 
+		  <a href="{{ post.url }}">{{ post.title }}</a>
+		  <span class="archive_tag">
+			  {% for tag in post.tags %}
+			  <a href="/{{ site.tag_dir }}/{{ tag }}">{{ tag }}</a>
+			  {% endfor %}
+		  </span>
+	  </li>
+	{% endif %}
+    {% endfor %}
+  </ul>
+
+<h2>Blog archives: short form</h2>
+
+<section class="byline">Shorter posts.</section>
+
+  <ul class="listing">
+    {% for post in site.posts %}
+	{% if post.class == 'short' %}
+	  <li>
+		  <span>{{ post.date | date: "%B %e, %Y" }}</span> 
+		  <a href="{{ post.url }}">{{ post.title }}</a>
+		  <span class="archive_tag">
+			  {% for tag in post.tags %}
+			  <a href="/{{ site.tag_dir }}/{{ tag }}">{{ tag }}</a>
+			  {% endfor %}
+		  </span>
+	  </li>
+	{% endif %}
+    {% endfor %}
+  </ul>
+
+<h2>News archives</h2>
+
+<section class="byline">Ephemera of my writing career.</section>
+
+  <ul class="listing">
+    {% for post in site.posts %}
+	{% if post.class == 'news' %}
+	  <li>
+		  <span>{{ post.date | date: "%B %e, %Y" }}</span> 
+		  <a href="{{ post.url }}">{{ post.title }}</a>
+		  <span class="archive_tag">
+			  {% for tag in post.tags %}
+			  <a href="/{{ site.tag_dir }}/{{ tag }}">{{ tag }}</a>
+			  {% endfor %}
+		  </span>
+	  </li>
+	{% endif %}
+    {% endfor %}
+  </ul>
+
+<h2>Software archives</h2>
+
+<section class="byline">Posts announcing various software releases.</section>
+
+  <ul class="listing">
+    {% for post in site.posts %}
+	{% if post.class == 'release' %}
+	  <li>
+		  <span>{{ post.date | date: "%B %e, %Y" }}</span> 
+		  <a href="{{ post.url }}">{{ post.title }}</a>
+		  <span class="archive_tag">
+			  {% for tag in post.tags %}
+			  <a href="/{{ site.tag_dir }}/{{ tag }}">{{ tag }}</a>
+			  {% endfor %}
+		  </span>
+	  </li>
+	{% endif %}
+    {% endfor %}
+  </ul>
+
+<h2>Meta blog archives</h2>
+
+<section class="byline">Posts about my blogging software and blog housekeeping.</section>
+
+  <ul class="listing">
+    {% for post in site.posts %}
+	{% if post.class == 'site' %}
 	  <li>
 		  <span>{{ post.date | date: "%B %e, %Y" }}</span> 
 		  <a href="{{ post.url }}">{{ post.title }}</a>
@@ -23,6 +105,8 @@ menu: blog
   </ul>
 
 <h2>Linkblog archives</h2>
+
+<section class="byline">The more recent linkblog posts have been link checked.</section>
 
   <ul class="listing">
     {% for post in site.posts %}
