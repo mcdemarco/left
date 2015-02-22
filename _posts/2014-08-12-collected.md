@@ -1,10 +1,7 @@
 ---
 layout: post
 title: "Collected"
-tags:
-- tools
-- jekyll
-- recipes
+tags: jekyll recipes blogkeeping
 created: 2014-08-12 00:20:00
 class: site
 ---

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Advice from Elsewhere
-tags: GTD writing
+tags: GTD writing shortpost
 created: 1106799964
 class: short
 ---

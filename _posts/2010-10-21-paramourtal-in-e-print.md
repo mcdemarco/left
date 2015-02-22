@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Paramourtal in e-Print
-tags: ebooks mcd Paramourtal
+tags: ebooks Paramourtal news
 created: 1287679897
 class: news
 ---

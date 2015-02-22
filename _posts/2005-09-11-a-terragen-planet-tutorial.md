@@ -1,14 +1,15 @@
 ---
 layout: post
 title: A Terragen Planet Tutorial
-tags: mapping terragen
+tags: mapping terragen longpost how-to
 date: 2005-09-11 18:00:00
 class: long
+checked: 2015-02-21
 ---
 
-<p>This tutorial is based on what I learned from the <a href="http://www.terradreams.de/All/Tutorials/SpaceTut/TutPlanet1ENGL.htm">TERRA-Dreams Planet Tutorial #1</a>.  (Note the correction at <a href="http://www.ashundar.com/forums.php?m=posts&amp;p=14325#14325">Ashundar</a> if you plan to follow that tutorial.)</p>
+<p>This tutorial is based on what I learned from the <a href="http://www.terradreams.de/All/Tutorials/SpaceTut/TutPlanet1ENGL.htm">TERRA-Dreams Planet Tutorial #1</a>.  (Note <a href="http://www.terragen.org/index.php?topic=1811.0">this correction</a> if you plan to follow that tutorial.)</p>
 
-<p><strong>Update:</strong>  Jayhawker has added an <a href="http://www.ashundar.com/page.php?id=284">extended tutorial</a> with lovely illustrations to the <a href="http://www.ashundar.com/list.php?c=tutorials">Ashundar tutorials page</a>.</p>
+<p>Jayhawker added an <a href="https://web.archive.org/web/20060512002230/http://www.ashundar.com/page.php?id=285">extended tutorial</a> with lovely illustrations to the <a href="https://web.archive.org/web/20061017115721/http://www.ashundar.com/list.php?c=tutorials">Ashundar tutorials page</a>, neither of which, unfortunately, survived the forum updates at Ashundar.  There's also <a href="http://www.terragen.org/index.php?topic=2034.msg15903#msg15903">a shorter one</a> without pictures still online.</p>
 
 <hr>
 
@@ -16,7 +17,7 @@ class: long
 
 <p><img src="/files/terragen/planet2-4-2_200.jpg" alt="planet example" title=""></p>
 
-<p>You can see <a href="http://www.ashundar.com/CPG/displayimage.php?pos=-1689">a bigger version</a> in <a href="http://www.ashundar.com/CPG/index.php?cat=12123">my Ashundar gallery</a>.  Except for a little sharpening, this is pure Terragen output.</p>
+<p>You can see <a href="http://www.terragen.org/gallery/displayimage.php?pos=-1689">a bigger version</a> in <a href="http://www.terragen.org/gallery/index.php?cat=12123">my Ashundar gallery</a>.  Except for a little sharpening, this is pure Terragen output.</p>
 
 <p>This image is not just a standard Terragen terrain viewed from above, however.  It was created by means of some fakery:  the landscape had to be squashed down and the sky altered to get the island-planet effect.  The surface map had to be scaled down to match the squashed terrain.  The sun and waves were removed.  I did learn a bit about surface maps in the process, but otherwise making planets is not the ideal educational experience for a Terragen beginner.  </p>
 

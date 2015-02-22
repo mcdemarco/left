@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Honorable Mention IV
-tags: contests mcd
+tags: contests non-news
 created: 1247023184
 checked: 2015-02-04
 ---

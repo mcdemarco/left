@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Distributivism
-tags: authors
+tags: authors blogkeeping
 created: 1095733630
 class: site
 ---

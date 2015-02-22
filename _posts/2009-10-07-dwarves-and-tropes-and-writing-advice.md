@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Dwarves and Tropes and Writing Advice
-tags: fantasy contests dwarves
+tags: fantasy contests dwarves shortpost
 created: 1254940639
 checked: 2015-02-03
 class: short

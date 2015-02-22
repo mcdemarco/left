@@ -1,7 +1,7 @@
 ---
 layout: post
 title: On Fantasy
-tags: genre fantasy
+tags: genre fantasy longpost
 created: 1220413343
 checked: 2015-01-31
 class: long
@@ -10,7 +10,7 @@ I've found some interesting articles on genre since I added some publishers and 
 
 > I hate it because it’s boring. It’s all the same. It’s warmed over Tolkien—not even variations on a theme from Tolkien, but repetition of the same theme from Tolkien, on one note. <!--break-->What I hate is what, on rec.arts.sf.written we used to call “extruded fantasy product”. I like reading things where I can put the book down half way through and not be able to predict what happens in the next half, down to where the beats will fall.
 
-She concludes with a call for non-extruded recommendations that was amply answered.  I withheld comment, since my current fantasy reading is a Dragonlance novel (*The Secret of Pax Tharkas* by Douglas Niles), and yet I'm as allergic to fantasy doorstop trilogies as the next ranting blogger.  I don't think it's a matter of originality vs. recycling--an argument also made against [tie-ins](https://web.archive.org/web/20111018213723/http://www.sfdiplomat.net/sf_diplomat/2008/09/media-tie-ins-room-for-nuance.html)--because you can [string together old material into something new](http://www.antipope.org/charlie/blog-old/2005/02/21/).  I think it has more to do with reader expectations.
+She concludes with a call for non-extruded recommendations that was amply answered.  I withheld comment, since my current fantasy reading is a Dragonlance novel (*The Secret of Pax Tharkas* by Douglas Niles), and yet I'm as allergic to fantasy doorstop trilogies as the next ranting blogger.  I don't think it's a matter of originality vs. recycling---an argument also made against [tie-ins](https://web.archive.org/web/20111018213723/http://www.sfdiplomat.net/sf_diplomat/2008/09/media-tie-ins-room-for-nuance.html)---because you can [string together old material into something new](http://www.antipope.org/charlie/blog-old/2005/02/21/).  I think it has more to do with reader expectations.
 
 For example, when I pick up high fantasy, I expect Tolkien, and I'm invariably disappointed.  (This is an expectation I intentionally suspended for the Dragonlance book, but otherwise, it's hard to face 500 or so pages without proportional expectations.)  When I pick up science fiction, I expect Edgar Rice Burroughs, so I'm usually pleasantly surprised.
 

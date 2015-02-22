@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Black Bile
-tags: biology language
+tags: biology language longpost
 created: 1210132399
 class: long
 ---
@@ -9,7 +9,7 @@ Someone mentioned melancholy on a mailing list, meaning by it nothing distinct f
 
 [Melancholy](http://en.wikipedia.org/wiki/Melancholia) is Greek for *black bile,* one of the [four humours](http://en.wikipedia.org/wiki/Humorism).  (The Latin is *atra bilis*, which gives us the little-used adjective *atrabilious* but not much else.)  Even if you believe man does not [change](http://www.amazon.com/Changing-Nature-Man-Introduction-Historical/dp/039330115X), you have to admit that melancholy was formerly a humour to be kept in balance rather than a medical condition to be eradicated.  I'm a [strong Whorfian](http://en.wikipedia.org/wiki/Sapir-Whorf_hypothesis), so I think people who long ago believed in black bile are fundamentally different from those of us who today believe in serotonin.
 
-So I was surprised to find myself, by a chain of wikipedia links, in the black bile camp.  The source of my reactionary physiology is, strangely enough, [the Arabic take on melancholy](http://en.wikipedia.org/wiki/Melancholy#Melancholy_in_Arab_culture)--not because of any inherent difference from the classical approach, but because of its influence on those European cultures which had the closest calls with *dar al-Islam*, from which it reached its Whorfian claws into me.
+So I was surprised to find myself, by a chain of wikipedia links, in the black bile camp.  The source of my reactionary physiology is, strangely enough, [the Arabic take on melancholy](http://en.wikipedia.org/wiki/Melancholy#Melancholy_in_Arab_culture)---not because of any inherent difference from the classical approach, but because of its influence on those European cultures which had the closest calls with *dar al-Islam*, from which it reached its Whorfian claws into me.
 
 Black bile is usually translated *huzn* in Arabic, but *sawda*, black, is sometimes also taken to mean *black bile* or, alternately, *love* (apparently because love was one of the common causes of black bile imbalance).  It is from *sawda* that some interesting words that no longer quite mean "black bile" allegedly spring.  For example, the Bosnian word [*sevdah*](http://en.wikipedia.org/wiki/Sevdah) comes from *sawda* through the Turkish, and means *love* or *longing*.  Sevdah is also the name of the national music of Bosnia.
 

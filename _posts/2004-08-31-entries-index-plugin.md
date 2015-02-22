@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Entries Index Plugin
-tags: blosxom
+tags: blosxom blogkeeping
 created: 1093994745
 class: site
 ---

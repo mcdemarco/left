@@ -2,9 +2,9 @@
 layout: post
 title: Paramourtal in Print
 tags:
-- mcd
 - Paramourtal
 - paranormal romance
+- news
 created: 1285104116
 class: news
 ---

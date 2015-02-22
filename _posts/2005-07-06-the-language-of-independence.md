@@ -1,7 +1,7 @@
 ---
 layout: post
 title: The Language of Independence
-tags: language
+tags: language shortpost
 created: 1120674395
 class: short
 ---

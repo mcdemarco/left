@@ -1,7 +1,7 @@
 ---
 layout: post
 title: More SNW8 Reviews
-tags: reviews tie-ins mcd
+tags: reviews tie-ins news
 created: 1129863223
 class: news
 ---

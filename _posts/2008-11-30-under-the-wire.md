@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Under the Wire
-tags: NaNoWriMo
+tags: NaNoWriMo shortpost
 created: 1228103342
 checked: 2015-01-31
 class: short

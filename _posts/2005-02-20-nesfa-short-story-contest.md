@@ -1,7 +1,7 @@
 ---
 layout: post
 title: NESFA Short Story Contest
-tags: contests cons
+tags: contests cons news
 created: 1108961889
 class: news
 ---

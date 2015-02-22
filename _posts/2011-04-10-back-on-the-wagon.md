@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Back on the Wagon
-tags: mcd
+tags: non-news shortpost
 created: 1302442760
 checked: 2015-01-31
 class: short

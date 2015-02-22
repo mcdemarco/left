@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Kingdom Board Builder"
-tags: mapping gaming
+tags: mapping gaming longpost sharedware
 created: 2013-05-21 13:48:51
 class: long
 ---

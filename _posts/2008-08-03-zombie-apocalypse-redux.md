@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Zombie Apocalypse Redux
-tags: horror zombies
+tags: horror zombies longpost
 created: 1217737279
 class: long
 ---

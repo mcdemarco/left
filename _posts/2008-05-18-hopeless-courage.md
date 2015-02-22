@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Hopeless Courage
-tags: JRRT quotes
+tags: JRRT quotes longpost
 created: 1211162867
 class: long
 ---
@@ -17,6 +17,6 @@ While Loren Rosson classes Sam's [previous quote](http://www.mcdemarco.net/node/
 
 > One can only speculate why Tolkien allowed his true colors to show at these moments in the story after giving the theme of hope a thoroughly pagan treatment elsewhere. Maybe the sudden realization that one's "dead" friend isn't dead after all is enough to stand a world-view on its head.
 
-I wouldn't go so far as to stand Sam's Norse worldview on its head.  I haven't reread *The Return of the King* yet, but I think Sam soldiers on with the same hopeless courage he had until now.  Although Sam regrets leaving Frodo's side, he could hardly have escaped the oncoming Orcs while carrying Frodo's apparently dead body.  His despair saved them both.  Sam may regret his despair as--this one time--inappropriately placed, but his worldview still led him to the correct hopeless-courageous action.  A hopeful heart would not have survived the crossing of the Ephel Dúath.
+I wouldn't go so far as to stand Sam's Norse worldview on its head.  I haven't reread *The Return of the King* yet, but I think Sam soldiers on with the same hopeless courage he had until now.  Although Sam regrets leaving Frodo's side, he could hardly have escaped the oncoming Orcs while carrying Frodo's apparently dead body.  His despair saved them both.  Sam may regret his despair as---this one time---inappropriately placed, but his worldview still led him to the correct hopeless-courageous action.  A hopeful heart would not have survived the crossing of the Ephel Dúath.
 
 For even less hope, there's [Part II: Short-Term (Immediate) Hope](http://www.hollywoodjesus.com/lord_of_the_rings_guest_04.htm) and [Part III: The Etymology of Hope---*Amdir* and *Estel*](http://www.hollywoodjesus.com/lord_of_the_rings_guest_05.htm) by the same author.

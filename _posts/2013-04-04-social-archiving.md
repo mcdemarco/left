@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Social Archiving"
-tags: streams
+tags: streams blogkeeping
 date: 2013-04-04 15:28
 class: site
 ---

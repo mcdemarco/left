@@ -1,7 +1,7 @@
 ---
 layout: post
 title: On Zombie Science Fiction, Part II
-tags: sf markets
+tags: sf markets shortpost
 created: 1223436720
 class: long
 ---

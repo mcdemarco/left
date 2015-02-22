@@ -3,8 +3,8 @@ layout: post
 title: Market News
 tags: markets
 created: 1262203364
+checked: 2015-01-31
 ---
-<!-- links checked 31-Jan-2015 -->
 
 [Clarkesworld Magazine announced](http://clarkesworld.livejournal.com/149811.html) that they'll be accepting submissions up to 8,000 words in 2010, although they still prefer 4,000.
 

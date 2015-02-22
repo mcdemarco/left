@@ -1,7 +1,7 @@
 ---
 layout: post
 title: On the Kalends of January
-tags: calendars
+tags: calendars longpost
 created: 1199214635
 class: long
 ---

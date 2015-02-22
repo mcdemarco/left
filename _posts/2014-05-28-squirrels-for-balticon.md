@@ -1,9 +1,7 @@
 ---
 layout: post
 title: "Squirrels for Balticon"
-tags:
-- writing
-- cons
+tags: cons writing news
 created: 2014-05-28 20:04:00
 class: news
 ---

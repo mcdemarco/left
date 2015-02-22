@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Tens of Thousands of Worker Bees Commanded by Queen Elizabeth
-tags: local language
+tags: local language shortpost
 created: 1201996991
 class: short
 ---

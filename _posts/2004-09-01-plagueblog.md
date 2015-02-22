@@ -1,7 +1,7 @@
 ---
 layout: post
 title: PlagueBlog
-tags: science
+tags: science blogkeeping
 created: 1094014674
 class: site
 ---

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Too Interactive?
-tags: gaming technology
+tags: gaming technology shortpost
 created: 1245031438
 class: short
 ---

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Books for the Accidental Conlanger
-tags: conlangs language
+tags: conlangs language shortpost
 created: 1163098736
 class: short
 ---

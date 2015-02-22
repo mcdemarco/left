@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Forthcoming
-tags: drupal mcd
+tags: drupal blogkeeping
 created: 1120190110
 ---
 I finally got around to putting the Amazon link to [Strange New Worlds 8](http://www.psiphi.org/cgi/upc-db/1416503455.html) in the left-hand column, just in time for the July release date.

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Paramourtal on Smashwords
-tags: ebooks mcd Paramourtal
+tags: ebooks Paramourtal news
 created: 1288039077
 class: news
 ---

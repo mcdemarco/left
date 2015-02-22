@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Amazon Associate
-tags: mcd
+tags: blogkeeping
 created: 1110865710
 class: site
 ---

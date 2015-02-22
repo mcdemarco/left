@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Strange New Worlds Winners Announced
-tags: contests mcd
+tags: contests news
 created: 1104356799
 class: news
 ---

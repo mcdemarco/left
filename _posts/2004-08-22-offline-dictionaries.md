@@ -11,4 +11,6 @@ checked: 2015-02-04
 
 [JDict](http://jdict.sourceforge.net/), is a dict-protocol dictionary server you can run locally for your own use.  The easiest way to install JDict on MacOS X is with DICTatoro. The standard interface is a local web page, but the Mac version also includes a special configuration of OmniDictionary and a nice selection of free dictionaries.
 
-**Update:** DICTatoro and OmniDictionary appear to no longer be maintained, but you may be able to find an old copy if you search hard enough, and have an old enough computer to run them on.
+### Update
+
+DICTatoro and OmniDictionary appear to no longer be maintained, but you may be able to find an old copy if you search hard enough, and have an old enough computer to run them on.

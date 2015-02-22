@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Strange New Worlds 10 Winners Announced
-tags: mcd tie-ins
+tags: tie-ins news
 created: 1169608771
 class: news
 ---

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: The Longing for al-Andalus
-tags: authors reviews
+tags: authors reviews shortpost
 created: 1241668642
 class: short
 ---
@@ -11,6 +11,6 @@ I don't usually write reviews, but somehow I've fallen 700 posts behind reading 
 >
 > The three protagonists in the novel are from each of these three races and religions: Jehane bet Ishak, a Kindath physician in Fezana; Rodrigo Belmonte, a Jaddite captain of a company of cavalry (based on El Cid); and Ammar ibn Khairan, an Asharite poet, mercenary, and advisor to King Almalik of Cartada (loosely based on ibn Ammar).
 
-None of the links above, though, seem to capture the heart of the story:  the longing of the characters--even some of the pseudo-Christians--to hold on to the [*convivencia*](http://en.wikipedia.org/wiki/La_Convivencia) that the *Reconquista* is already destroying.
+None of the links above, though, seem to capture the heart of the story:  the longing of the characters---even some of the pseudo-Christians---to hold on to the [*convivencia*](http://en.wikipedia.org/wiki/La_Convivencia) that the *Reconquista* is already destroying.
 
 The book was a very apt gift from a friend.

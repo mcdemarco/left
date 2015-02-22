@@ -1,9 +1,7 @@
 ---
 layout: post
 title: "Octopressing"
-tags:
-- tools
-- jekyll
+tags: jekyll blogkeeping
 date: 2013-03-31 17:10
 class: site
 ---

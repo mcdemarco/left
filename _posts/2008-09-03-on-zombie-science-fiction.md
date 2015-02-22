@@ -1,7 +1,7 @@
 ---
 layout: post
 title: On Zombie Science Fiction
-tags: genre fantasy sf
+tags: genre fantasy sf longpost
 created: 1220497545
 class: long
 ---

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Jekyll and Left"
-tags: tools
+tags: jekyll blogkeeping
 date: 2013-04-03 13:28
 class: site
 ---

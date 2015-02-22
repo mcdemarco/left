@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Penflipping Recipes
-tags: recipes
+tags: recipes shortpost
 created: 2013-12-15 15:42:00
 class: short
 ---

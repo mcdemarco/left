@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Honorable Silence
-tags: contests
+tags: contests longpost
 created: 1197259654
 class: long
 ---

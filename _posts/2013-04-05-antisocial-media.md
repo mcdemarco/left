@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Antisocial Media"
-tags: streams 
+tags: streams shortpost
 date: 2013-04-05 14:06
 checked: 2015-02-04
 class: short

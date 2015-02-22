@@ -1,7 +1,7 @@
 ---
 layout: post
 title: SNW10 Released
-tags: tie-ins mcd
+tags: tie-ins news
 created: 1184347567
 class: news
 ---

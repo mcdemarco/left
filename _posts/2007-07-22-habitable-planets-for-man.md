@@ -3,8 +3,8 @@ layout: post
 title: Habitable Planets for Man
 tags: mapping geology genre astronomy
 created: 1185151549
+checked: 2015-01-31
 ---
-<!-- links checked 31-Jan-2015 -->
 
 Via [SFScope](http://sfscope.com/2007/07/habitable-planets-for-man-avai/):  The RAND Corporation has released its legendary report, [Habitable Planets for Man](http://www.rand.org/pubs/reports/R414/) by Stephen H. Dole in PDF format.
 

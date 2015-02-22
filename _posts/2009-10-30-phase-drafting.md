@@ -15,4 +15,6 @@ Via a mailing list:  Johanna Harness [contemplates](http://www.johannaharness.co
 
 Gifford reports speeds of up to 10,000 words per day using this method.
 
-**Update**:  Johanna's original post, ~~http://www.johannaharness.com/Johanna_Harness/Blog/Entries/2009/9/3_Phase_Drafting.html~~ was merged into a later one, *Phase Drafting (Novel Planning)*, linked above; the original post corresponds to the second half, subtitled *Phase Drafting:  September 3, 2009*.
+### Update
+
+Johanna's original post, ~~http://www.johannaharness.com/Johanna_Harness/Blog/Entries/2009/9/3_Phase_Drafting.html~~ was merged into a later one, *Phase Drafting (Novel Planning)*, linked above; the original post corresponds to the second half, subtitled *Phase Drafting:  September 3, 2009*.

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Paradox Inc. Revisited
-tags: publishing
+tags: publishing blogkeeping
 created: 1103691894
 class: site
 ---

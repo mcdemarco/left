@@ -3,6 +3,7 @@ layout: post
 title: A Royal Flush
 tags:
 - Doris Lessing
+- shortpost
 created: 1192337361
 class: short
 ---

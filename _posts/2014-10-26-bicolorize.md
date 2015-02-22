@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Bicolorize"
-tags: anaglyph
+tags: anaglyph sharedware
 created: 2014-10-24 16:49:00
 class: release
 ---

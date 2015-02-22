@@ -4,6 +4,7 @@ title: Choose Your Own Adventure
 tags:
 - interactive fiction
 - hyperfiction
+- shortpost
 created: 1095563682
 class: short
 ---

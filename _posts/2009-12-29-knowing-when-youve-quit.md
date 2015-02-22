@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Knowing When You've Quit
-tags: writing
+tags: writing longpost
 created: 1262127105
 checked: 2015-02-03
 class: long

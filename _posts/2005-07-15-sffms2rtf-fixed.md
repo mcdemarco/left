@@ -1,8 +1,9 @@
 ---
 layout: post
 title: sffms2rtf Fixed
-tags: sffms
+tags: sffms sharedware
 created: 1121462126
+class: release
 ---
 Thanks to Hannu Rajaniemi for alerting me to a bug in the [sffms2rtf converter](/sffms/sffms2rtf/).  I've fixed the problem and improved the script a bit so it won't rage out of control the next time my host's PHP settings change.
 

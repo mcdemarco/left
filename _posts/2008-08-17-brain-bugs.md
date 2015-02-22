@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Brain Bugs
-tags: sf tie-ins
+tags: sf tie-ins shortpost
 created: 1219028723
 class: short
 ---

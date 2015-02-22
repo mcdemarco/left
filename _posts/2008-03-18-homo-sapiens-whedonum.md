@@ -8,6 +8,6 @@ I've finally gotten around to reading *Blindsight* by Peter Watts.  More on the 
 
 The notes to the [free ebook edition](http://manybooks.net/pages/wattspother06Blindsight/-1.html) survey the field briefly before getting into the same details the slideshow above provides:
 
-> I'm hardly the first author to take a stab at rationalising vampirism in purely biological terms. Richard Matheson did it before I was born, and if the grapevine's right that damn Butler woman's latest novel will be all over the same territory before you even read this. I bet I'm the first to come up with the Crucifix Glitch to explain the aversion to crosses, though-- and once struck by that bit of inspiration, everything else followed.
+> I'm hardly the first author to take a stab at rationalising vampirism in purely biological terms. Richard Matheson did it before I was born, and if the grapevine's right that damn Butler woman's latest novel will be all over the same territory before you even read this. I bet I'm the first to come up with the Crucifix Glitch to explain the aversion to crosses, though--- and once struck by that bit of inspiration, everything else followed.
 
 The extended notes are also available in [a more convenient PDF format](http://www.rifters.com/real/shorts/PeterWatts_Blindsight_Endnotes.pdf).  There are plot spoilers in the notes, though not in the video.

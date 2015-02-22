@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Stargate Novels
-tags: tie-ins
+tags: tie-ins shortpost
 created: 1097721067
 class: short
 ---

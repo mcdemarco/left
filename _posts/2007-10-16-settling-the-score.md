@@ -4,6 +4,7 @@ title: Settling the Score
 tags:
 - Doris Lessing
 - writing
+- shortpost
 created: 1192567845
 class: short
 ---

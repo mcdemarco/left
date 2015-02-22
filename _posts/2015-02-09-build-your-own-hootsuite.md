@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Build Your Own Hootsuite"
-tags: ADN how-to tools 
+tags: ADN how-to tools longpost
 created: 2015-02-09 18:10:00
 updated: 2015-02-17 11:54:37
 class: long
@@ -10,7 +10,7 @@ I'm active on one social network, [App.net](http://app.net), but I have [many ac
 
 Streamified was the perfect thing for tracking multiple social networks, [back when it existed](https://web.archive.org/web/20130621190057/http://streamified.com/).  [Hootsuite](https://hootsuite.com) wasn't half bad either, back when its App.net plugin still worked (though its plugins never worked on mobile).  Yet there was and still is no app that supports every [semi-abandoned](https://diasporafoundation.org) and [up-and-not-coming](https://ello.co) network I'd want it to.  There's just a surfeit of paid solutions that are clearly not intended for ~~real humans~~ individual use, never mind for exotic, non-profitable social networks.
 
-One roll-your-own option I found was to [use RSS](http://themoonfromsyb.blogspot.com/2013/07/goodbye-google-reader-and-streamified.html) for reading and IFTTT for crossposting.  (I already have a [crossposting solution using Drafts](/blog/2013/04/15/crossposting-with-drafts/), but I don't use it much.)  Besides being a bit too much content for my light RSS reading habits, it also sounded like a lot of configuration--in the ideal scenario where all my little social networks supported RSS.  But [Ello](http://ello.co), for example, seems to only support selling T-shirts.
+One roll-your-own option I found was to [use RSS](http://themoonfromsyb.blogspot.com/2013/07/goodbye-google-reader-and-streamified.html) for reading and IFTTT for crossposting.  (I already have a [crossposting solution using Drafts](/blog/2013/04/15/crossposting-with-drafts/), but I don't use it much.)  Besides being a bit too much content for my light RSS reading habits, it also sounded like a lot of configuration---in the ideal scenario where all my little social networks supported RSS.  But [Ello](http://ello.co), for example, seems to only support selling T-shirts.
 
 Not every social network serves your feed as RSS, but every social network has a web page.  So I decided what I needed was a desktop browser with a column view that could put my feeds side-by-side-by-side-by-side.  Chrome has a primitive resizing plugin, [Tab Resize](https://chrome.google.com/webstore/detail/tab-resize-split-screen-l/bkpenclhmiealbebdopglffmfdiilejc?hl=en-US), that could simulate that, but it had too much chrome for my tastes (in both senses of the word).  Fortunately, Firefox has a couple of tiling extensions that are [much better](http://betanews.com/2014/07/12/view-all-your-firefox-tabs-at-once-with-tile-tabs/) than Tab Resize.
 
@@ -44,7 +44,7 @@ Be warned that user agent switching affects the entire browser and may cause som
 
 The user agent in the instructions was chosen specifically to work with Facebook.  Setting the user agent to iPhone, Chrome, or any other WebKit mobile browser will break Facebook.  The Facebook mobile site only behaves properly on Firefox with an explicit mobile Firefox user agent string; pretending to be a WebKit browser will just confuse it.
 
-But, setting the user agent to a non-WebKit, non-Firefox, mobile (or non-modern) browser (e.g., **Windows / IE 7** or IEMobile 9.0--an option I got by installing a different user agent switcher) will give you yet another mobile version of Facebook; it won't be pretty and it will be a bit buggy, but it's more compact than any of the other views so you might want to try it.
+But, setting the user agent to a non-WebKit, non-Firefox, mobile (or non-modern) browser (e.g., **Windows / IE 7** or IEMobile 9.0---an option I got by installing a different user agent switcher) will give you yet another mobile version of Facebook; it won't be pretty and it will be a bit buggy, but it's more compact than any of the other views so you might want to try it.
 
 On the other hand, you may just want to use the non-mobile Facebook site in a full screen tab or in an extra-large tile.  In particular, if you want to use certain Facebook extensions like [FB Purity](http://www.fbpurity.com) or [Social Fixer](http://socialfixer.com), you will need to switch to the default user agent.  On the bright side, the default user agent will also spare you from being nagged to install mobile apps that you can't actually install on a desktop.
 

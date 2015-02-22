@@ -1,7 +1,7 @@
 ---
 layout: post
 title: More on LyX
-tags: sffms
+tags: sffms longpost sharedware
 created: 1163969598
 class: long
 ---

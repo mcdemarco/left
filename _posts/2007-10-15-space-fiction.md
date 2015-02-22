@@ -3,6 +3,7 @@ layout: post
 title: Space Fiction
 tags:
 - Doris Lessing
+- shortpost
 created: 1192474799
 class: short
 ---

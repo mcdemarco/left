@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Boskone 43 Membership
-tags: cons ephemera
+tags: cons
 created: 1137425300
 checked: 2015-02-04
 ---

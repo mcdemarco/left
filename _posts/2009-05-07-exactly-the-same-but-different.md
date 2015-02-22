@@ -5,8 +5,8 @@ tags:
 - movies
 - Michael A. Burstein
 created: 1241754682
+checked: 2015-01-31
 ---
-<!-- links checked 31-Jan-2015 -->
 
 Michael Burstein [reviews the new *Star Trek* movie](http://sfscope.com/2009/05/the-future-returnsa-review-of/):
 

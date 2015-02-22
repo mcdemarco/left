@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Show Me the Gantry
-tags: humor
+tags: humor shortpost
 created: 1109219657
 class: short
 ---

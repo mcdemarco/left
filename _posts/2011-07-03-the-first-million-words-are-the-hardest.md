@@ -1,7 +1,7 @@
 ---
 layout: post
 title: The First Million Words are the Hardest
-tags: mcd NaNoWriMo contests
+tags: non-news NaNoWriMo contests shortpost
 created: 1309667380
 class: short
 ---

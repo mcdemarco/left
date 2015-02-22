@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Drupal Expansion
-tags: mcd drupal
+tags: drupal blogkeeping non-news
 created: 1109042159
 class: site
 ---

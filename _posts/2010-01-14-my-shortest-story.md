@@ -1,7 +1,7 @@
 ---
 layout: post
 title: My Shortest Story
-tags: mcd ezines streams
+tags: ezines streams news
 created: 1263506387
 class: news
 ---

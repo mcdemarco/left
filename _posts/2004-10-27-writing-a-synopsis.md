@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Writing a Synopsis
-tags: plot
+tags: plot shortpost writing
 created: 1098934030
 class: short
 ---

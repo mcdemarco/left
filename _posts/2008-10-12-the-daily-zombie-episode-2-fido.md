@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "The Daily Zombie, Episode 2:  Fido"
-tags: zombies movies
+tags: zombies movies longpost
 created: 1223865113
 class: long
 ---
@@ -11,7 +11,7 @@ That one idea is the zombie control collar.  In a technicolor alternate 1950s, s
 
 While superficially the story of a boy, his eponymous pet zombie, and its malfunctioning control collar, I think the movie is really about post-traumatic stress.  Timmy's dad seems to be your stereotypical distant 50s husband and father but his neglect stems from a horrible incident in the Zombie War, as does his obsession with paying for real funerals for his family---heads buried separately.  He drives both wife and son into the stiff arms of their new zombie, Fido.
 
-Their new neighbor, a famous war hero and ZomCon security chief played by Henry Czerny, is a sociopathic version of Captain von Trapp from *The Sound of Music*.  Terminally misanthropic, he drags his family from town to town so they won't get attached to anyone whose head might need some preemptive blowing off later--and that includes each other.  When his daughter says "my dad will kill me," she really means it.  You get the feeling there may have been other siblings previously, but in the movie Cindy is a very well-behaved only child.
+Their new neighbor, a famous war hero and ZomCon security chief played by Henry Czerny, is a sociopathic version of Captain von Trapp from *The Sound of Music*.  Terminally misanthropic, he drags his family from town to town so they won't get attached to anyone whose head might need some preemptive blowing off later---and that includes each other.  When his daughter says "my dad will kill me," she really means it.  You get the feeling there may have been other siblings previously, but in the movie Cindy is a very well-behaved only child.
 
 While Timmy and his mom seem to be relatively sane, even they as civilians are affected by the ongoing zombie cold war.  Recess for Timmy consists of target practice.  When his zombie accidentally eats a neighbor, Timmy is sorry but by no means traumatized.  Nor does he seem to mind when the contagion spreads to more friends and neighbors.  Perhaps most interestingly, Timmy never runs away from slobbering zombie death; he just turns his head and closes his eyes until some plot twist comes along to save him.
 

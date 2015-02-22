@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Strange New Worlds 8
-tags: mcd
+tags: news
 created: 1121109527
 class: news
 ---

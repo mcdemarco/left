@@ -6,7 +6,7 @@ created: 1190515089
 ---
 I noticed the mis-take in a [old Language Log post on hyphenization](http://itre.cis.upenn.edu/%7Emyl/languagelog/archives/004660.html):
 
->  In any case, pro-ofreaders were clearly not obsolete then.  Nor are they now.  Though brute-force methods -- really really big dictionaries with possible hyphenations specified -- can improve things considerably, and undoubtedly have.
+>  In any case, pro-ofreaders were clearly not obsolete then.  Nor are they now.  Though brute-force methods --- really really big dictionaries with possible hyphenations specified --- can improve things considerably, and undoubtedly have.
 
 But I knew TeX had a famous (well, to TeX geeks) hyphenation algorithm that was rumored to never mishy-phenate.<!--break-->
 

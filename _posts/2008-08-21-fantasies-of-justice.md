@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Fantasies of Justice
-tags: horror authors genre
+tags: horror authors genre shortpost
 created: 1219374705
 class: short
 ---
@@ -11,7 +11,7 @@ class: short
 
 She explained this conclusion at some length:
 
-> I expected to learn a lot about romance through writing one, and I did.  I was more surprised to learn something new to me about fantasy and science fiction -- which is how profoundly, intensely, relentlessly *political* most of the stories in these genres are.  The politics may be archaic or modern, fringe or realistic, naive or subtle, optimistic or dire, but by gum the characters had better be centrally engaged with them, for some extremely varied values of "engaged".  Even the world-building itself is often a political argument.  And, oh boy, are the political aspects of the fiction ever valorized in the reviews.  I had not noticed this the way a fish does not notice water.  Only when I'd stepped onto the shore of the neighboring genre and breathed a contrasting air did I discover there even could be a difference -- and what a difference it was.
+> I expected to learn a lot about romance through writing one, and I did.  I was more surprised to learn something new to me about fantasy and science fiction --- which is how profoundly, intensely, relentlessly *political* most of the stories in these genres are.  The politics may be archaic or modern, fringe or realistic, naive or subtle, optimistic or dire, but by gum the characters had better be centrally engaged with them, for some extremely varied values of "engaged".  Even the world-building itself is often a political argument.  And, oh boy, are the political aspects of the fiction ever valorized in the reviews.  I had not noticed this the way a fish does not notice water.  Only when I'd stepped onto the shore of the neighboring genre and breathed a contrasting air did I discover there even could be a difference --- and what a difference it was.
 
 The distinction between the personal and the political can be used to classify other genres as well.  Literary fiction, little as I've read of it, seems to be as purely personal as romance.  Thrillers, on the other hand, are almost always apocalyptically political, like (or so the claim is, anyway) science fiction.
 

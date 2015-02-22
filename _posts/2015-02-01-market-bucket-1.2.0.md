@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Market Bucket 1.2.0"
-tags: ADN
+tags: ADN sharedware
 created: 2015-02-01 13:47:00
 class: release
 ---

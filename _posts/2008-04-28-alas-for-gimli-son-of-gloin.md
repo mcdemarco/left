@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Alas for Gimli son of Gloin
-tags: JRRT quotes dwarves
+tags: JRRT quotes dwarves longpost
 created: 1209438866
 class: long
 ---

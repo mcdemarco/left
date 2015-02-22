@@ -3,8 +3,8 @@ layout: post
 title: Halloween Flash Fiction Contest
 tags: contests horror
 created: 1219116792
+checked: 2015-01-31
 ---
-<!-- links checked 31-Jan-2015 -->
 
 Via [SFScope](http://sfscope.com/2008/08/apex-publications-annual-hallo/):  Jay Lake will be judging Apex's Annual Halloween Contest (~~http://www.apexbookcompany.com/news/2008/08/annual-apex-halloween-contest-information/~~).  The word limit is 1,000 words, and submissions (by email) are already open.  The theme is Election Horror.<!--break-->
 

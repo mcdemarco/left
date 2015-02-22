@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Durin's Moon
-tags: JRRT calendars dwarves
+tags: JRRT calendars dwarves longpost
 created: 1210640738
 class: long
 ---

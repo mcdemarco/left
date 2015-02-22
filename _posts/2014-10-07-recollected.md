@@ -1,10 +1,7 @@
 ---
 layout: post
 title: "Recollected"
-tags:
-- tools
-- jekyll
-- recipes
+tags: jekyll recipes blogkeeping
 created: 2014-10-07 10:18:00
 class: site
 ---

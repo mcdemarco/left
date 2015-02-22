@@ -7,4 +7,6 @@ checked: 2015-02-03
 ---
 Via a mailing list:  last month at Slate, Josh Levin spent a week contemplating [the end of America](http://www.slate.com/id/2223210/landing/1).  The high point of the week was this Choose Your Own Apocalypse grid (~~http://sdn.slate.com/features/endofamerica/default.htm~~) featuring 144 apocalyptic and semi-apocalyptic endings.  Readers' [top five choices](http://www.slate.com/id/2224425/) started from Loose Nukes and went down from there.
 
-**Update**: Though the grid is down, the enumerated list can be found [in the Wayback Machine](https://web.archive.org/web/20130116182509/http://www.slate.com/sidebars/2009/08/how_is_america_going_to_endthe_top_144_scenarios.html).
+### Update
+
+Though the grid is down, the enumerated list can be found [in the Wayback Machine](https://web.archive.org/web/20130116182509/http://www.slate.com/sidebars/2009/08/how_is_america_going_to_endthe_top_144_scenarios.html).

@@ -8,7 +8,7 @@ Thanks to [Geoff Jacoby](http://araken.livejournal.com/) for the link to [this M
 
 > The work builds on a study published in 2004, which found that the Piraha had words to express the quantities "one," "two," and "many." The MIT researchers observed the same phenomenon when they asked Piraha speakers to describe sets of objects as they were added, from one to 10.
 >
->However, the MIT team decided to add a new twist--they started with 10 objects and asked the tribe members to count down. In that experiment, the tribe members used the word previously thought to mean "two" when as many as five or six objects were present, and they used the word for "one" for any quantity between one and four.<!--break-->
+>However, the MIT team decided to add a new twist---they started with 10 objects and asked the tribe members to count down. In that experiment, the tribe members used the word previously thought to mean "two" when as many as five or six objects were present, and they used the word for "one" for any quantity between one and four.<!--break-->
 >
 >This indicates that "these aren't counting numbers at all," said Gibson. "They're signifying relative quantities."
 >

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Spore on a Board
-tags: gaming
+tags: gaming shortpost
 created: 1218081247
 class: short
 ---

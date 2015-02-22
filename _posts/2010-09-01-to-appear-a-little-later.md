@@ -1,7 +1,7 @@
 ---
 layout: post
 title: To Appear A Little Later
-tags: mcd Paramourtal
+tags: Paramourtal news
 created: 1283367417
 class: news
 ---

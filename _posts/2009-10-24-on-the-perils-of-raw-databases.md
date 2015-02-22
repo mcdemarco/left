@@ -1,7 +1,7 @@
 ---
 layout: post
 title: On the Perils of Raw Databases
-tags: genealogy
+tags: genealogy longpost
 created: 1256428343
 class: long
 ---

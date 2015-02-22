@@ -1,7 +1,7 @@
 ---
 layout: post
 title: The Permanent Return of the Site
-tags: sf
+tags: sf blogkeeping
 created: 1107926579
 class: site
 ---

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Keeping a Dream Journal"
-tags: writing tools Scrivener
+tags: writing tools Scrivener longpost
 created: 2014-12-19 14:28:00
 class: long
 ---

@@ -3,8 +3,8 @@ layout: post
 title: The Return of Warren Lapine
 tags: magazines
 created: 1234240886
+checked: 2015-01-31
 ---
-<!-- links checked 31-Jan-2015 -->
 
 Via [SFScope](http://sfscope.com/2009/01/warren-lapine-returns-to-sf-wi/):  Warren Lapine, former publisher of genre magazines including *Weird Tales* and *Absolute Magnitude*, is back in the business.
 

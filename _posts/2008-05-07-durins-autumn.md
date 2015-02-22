@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Durin's Autumn
-tags: JRRT calendars dwarves
+tags: JRRT calendars dwarves longpost
 created: 1210218731
 class: long
 ---
@@ -24,7 +24,7 @@ Alan came up with Autumn #3 independently and I concurred, being a fan of cross-
 
 I found Autumns #4 in Appendix D this morning; it was also unavailable last night.  When I set Frink to calculate New Years based on #4a, #4b, and #4c tonight, I finally found the source of the Encyclopedia's madness:  #4c.  My calculated values for #4c match their New Years.  (For the record, #4a and #4b, the more promising interpretations, do not match.)
 
-[Addendum:   Starting from the Encyclopedia's otherwise inexplicable claim (A) that the last new moon of autumn occurs within two weeks of October 6th, we get autumn ending on October 20th, and therefore beginning 54 days earlier, around August 27th, only a few days off from option #4c, September 1st--possibly because of rounding errors and the elves' interpolated days (which I ignored).   There's a two-week difference between the end of autumn as defined by (A) and the Encyclopedia's own dates for *yavie* of [August 12th through October 4th](http://www.glyphweb.com/arda/y/yavie.html).  I think this represents a misunderstanding of the dwarven New Year definition rather than a hole in my *yavie* theory, since the date of October 6th is otherwise too much of a coincidence.]
+[Addendum:   Starting from the Encyclopedia's otherwise inexplicable claim (A) that the last new moon of autumn occurs within two weeks of October 6th, we get autumn ending on October 20th, and therefore beginning 54 days earlier, around August 27th, only a few days off from option #4c, September 1st---possibly because of rounding errors and the elves' interpolated days (which I ignored).   There's a two-week difference between the end of autumn as defined by (A) and the Encyclopedia's own dates for *yavie* of [August 12th through October 4th](http://www.glyphweb.com/arda/y/yavie.html).  I think this represents a misunderstanding of the dwarven New Year definition rather than a hole in my *yavie* theory, since the date of October 6th is otherwise too much of a coincidence.]
 
 It seems quite unlikely that the dwarves would use the elves' (anything, never mind their wacky) six solar seasons, when four solar seasons were the norm for man and hobbit alike.  Certainly the dwarves are more likely to do their own thing in cultural matters rather than haring after the elves like a bunch of Numenoreans.
 

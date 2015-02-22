@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Archiving the Noughties"
-tags: jekyll tools
+tags: jekyll blogkeeping
 created: 2015-02-20 10:45:00
 class: site
 ---

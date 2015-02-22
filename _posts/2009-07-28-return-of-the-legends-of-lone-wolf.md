@@ -4,8 +4,8 @@ title: Return of The Legends of Lone Wolf
 tags:
 - interactive fiction
 created: 1248831018
+checked: 2015-01-31
 ---
-<!-- links checked 31-Jan-2015 -->
 
 [SFScope reports](http://sfscope.com/2009/07/john-grant-signs-deal-to-repri/) on a deal to reprint *The Legends of Lone Wolf* series of tie-in novels for the *Lone Wolf* gamebooks:
 

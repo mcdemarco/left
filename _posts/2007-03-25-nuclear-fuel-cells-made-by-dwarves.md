@@ -4,6 +4,7 @@ title: Nuclear Fuel Cells Made by Dwarves
 tags:
 - Ted Chiang
 - dwarves
+- longpost
 created: 1174858612
 class: long
 ---
@@ -19,7 +20,7 @@ Now if you're like me and you have a NaNoWriMo novel with a passel of dwarves in
 
 [Ted Chiang](http://withboots.blogspot.com/2005/12/lets-try-this-again.html) distinguished between SF and fantasy doodads not by the language associated with them but by the mechanism powering them---impersonal physical laws vs. the "conscious intention" of the user.  In Ted Chiang's terms, it is not the case that any sufficiently advanced technology is indistinguishable from magic.  As long as the technology is universally accessible at the push of a button rather than a special (not universally accessible) act of will, it's not magic.
 
-This establishes firmly that my dwarves' nuclear fuel cells are SF devices, but what if they were the only ones who knew how to make them, and they refused to sell any to the hobbits, who were still using steam?  Magic, I would posit, is as much about access as willpower.  If everyone had exactly the same magical powers--say, every human had a D&D-style Wand of Lightning, we'd be in a second grey area between fantasy and science fiction:
+This establishes firmly that my dwarves' nuclear fuel cells are SF devices, but what if they were the only ones who knew how to make them, and they refused to sell any to the hobbits, who were still using steam?  Magic, I would posit, is as much about access as willpower.  If everyone had exactly the same magical powers---say, every human had a D&D-style Wand of Lightning, we'd be in a second grey area between fantasy and science fiction:
 
                 Science                        Magic
 

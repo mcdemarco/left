@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "LoneStarCon"
-tags: cons
+tags: cons blogkeeping
 created: 2013-08-25 14:26:00
 class: site
 ---

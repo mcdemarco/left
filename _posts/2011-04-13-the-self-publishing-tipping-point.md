@@ -1,7 +1,7 @@
 ---
 layout: post
 title: The Self-Publishing Tipping Point
-tags: publishing ebooks
+tags: publishing ebooks shortpost
 created: 1302752810
 checked: 2015-01-31
 class: short

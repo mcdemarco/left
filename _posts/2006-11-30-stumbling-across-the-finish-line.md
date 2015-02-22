@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Stumbling Across the Finish Line
-tags: NaNoWriMo
+tags: NaNoWriMo shortpost
 created: 1164940142
 class: short
 ---
