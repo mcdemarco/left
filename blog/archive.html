@@ -7,7 +7,7 @@ menu: blog
 <h2>Blog Archives</h2>
 
 <section>
-	<p>Longer blog posts are listed first, followed by <a href="#shortp">shorter posts</a>, <a href="#newsp">news</a> about my fiction, <a href="softp">software releases</a>, and <a href="#housep">blog housekeeping posts</a>.  My <a href="/blog/linklog.html">linkblog</a> is archived on a separate page due to length and age.  There's also an <a href="/blog/bydate.html">archive by date</a> and a listing by <a href="/blog/tags/">tags</a>.</p>
+	<p>Longer blog posts are listed first, followed by <a href="#shortp">shorter posts</a>, <a href="#newsp">news</a> about my fiction, <a href="softp">software releases</a>, and <a href="#housep">blog housekeeping posts</a>.  My old <a href="/blog/linklog.html">linkblog</a> is archived on a separate page due to length and age.  There's also an <a href="/blog/bydate.html">archive by date</a> and a listing by <a href="/blog/tags/">tags</a>.</p>
 </section>
 
 <h3 id="longp">Long posts</h3>
@@ -17,13 +17,15 @@ menu: blog
 <section class="listing">
   <ul>
     {% for post in site.posts %}
-	{% if post.class == 'long' %}
+	{% if post.tags contains 'longpost' %}
 	  <li>
 		  <span>{{ post.date | date: "%B %e, %Y" }}</span> 
 		  <a href="{{ post.url }}">{{ post.title }}</a>
 		  <span class="archive_tag">
 			  {% for tag in post.tags %}
+			  {% if tag != 'longpost' %}
 			  <a href="/{{ site.tag_dir }}/{{ tag }}">{{ tag }}</a>
+			  {% endif %}
 			  {% endfor %}
 		  </span>
 	  </li>
@@ -39,13 +41,15 @@ menu: blog
 <section class="listing">
   <ul>
     {% for post in site.posts %}
-	{% if post.class == 'short' %}
+	{% if post.tags contains 'shortpost' %}
 	  <li>
 		  <span>{{ post.date | date: "%B %e, %Y" }}</span> 
 		  <a href="{{ post.url }}">{{ post.title }}</a>
 		  <span class="archive_tag">
 			  {% for tag in post.tags %}
+			  {% if tag != 'shortpost' %}
 			  <a href="/{{ site.tag_dir }}/{{ tag }}">{{ tag }}</a>
+			  {% endif %}
 			  {% endfor %}
 		  </span>
 	  </li>
@@ -61,13 +65,15 @@ menu: blog
 <section class="listing">
   <ul>
     {% for post in site.posts %}
-	{% if post.class == 'news' %}
+	{% if post.tags contains 'news' %}
 	  <li>
 		  <span>{{ post.date | date: "%B %e, %Y" }}</span> 
 		  <a href="{{ post.url }}">{{ post.title }}</a>
 		  <span class="archive_tag">
 			  {% for tag in post.tags %}
+			  {% if tag != 'news' %}
 			  <a href="/{{ site.tag_dir }}/{{ tag }}">{{ tag }}</a>
+			  {% endif %}
 			  {% endfor %}
 		  </span>
 	  </li>
@@ -83,13 +89,15 @@ menu: blog
 <section class="listing">
   <ul>
     {% for post in site.posts %}
-	{% if post.class == 'release' %}
+	{% if post.tags contains 'sharedware' %}
 	  <li>
 		  <span>{{ post.date | date: "%B %e, %Y" }}</span> 
 		  <a href="{{ post.url }}">{{ post.title }}</a>
 		  <span class="archive_tag">
 			  {% for tag in post.tags %}
+			  {% if tag != 'sharedware' %}
 			  <a href="/{{ site.tag_dir }}/{{ tag }}">{{ tag }}</a>
+			  {% endif %}
 			  {% endfor %}
 		  </span>
 	  </li>
@@ -105,13 +113,15 @@ menu: blog
 <section class="listing">
   <ul>
     {% for post in site.posts %}
-	{% if post.class == 'site' %}
+	{% if post.tags contains 'blogkeeping' %}
 	  <li>
 		  <span>{{ post.date | date: "%B %e, %Y" }}</span> 
 		  <a href="{{ post.url }}">{{ post.title }}</a>
 		  <span class="archive_tag">
 			  {% for tag in post.tags %}
+			  {% if tag != 'blogkeeping' %}
 			  <a href="/{{ site.tag_dir }}/{{ tag }}">{{ tag }}</a>
+			  {% endif %}
 			  {% endfor %}
 		  </span>
 	  </li>

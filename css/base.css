@@ -261,7 +261,8 @@ div.smallbook {
     display: inline-block;
     padding: 10px;
     font-size: smaller;
-    text-align: center; }
+    text-align: center;
+    width: 160px;}
 p.noteboardlink {
     margin-top:0;
     margin-bottom:0; }

@@ -7,14 +7,14 @@ menu: blog
 <h2>Linkblog archives</h2>
 
 <section>
-	<p>My blog was once mainly a linkblog, although in a regular blog layout (<em>i.e.</em>, the links below will take you to my posts, not the linked posts) with some commentary on the links.  I've separated the link posts from <a href="/blog/archive.html">my regular blog archives</a> and listed them here.</p>
+	<p>My blog was once mainly a linkblog, although in a regular blog layout (<em>i.e.</em>, the links below will take you to my posts, not off the site) with some commentary on the links.  I've separated the link posts from <a href="/blog/archive.html">my regular blog archives</a> and listed them here.</p>
 	<p>The more recent linkblog posts have been link checked.</p>
 </section>
 
 <section class="listing">
   <ul>
     {% for post in site.posts %}
-	{% if post.class %}
+	{% if post.tags contains 'longpost' or post.tags contains 'shortpost' or post.tags contains 'news' or post.tags contains 'sharedware' or post.tags contains 'blogkeeping' %}
 	{% else %}
 	  <li>
 		  <span>{{ post.date | date: "%B %e, %Y" }}</span> 

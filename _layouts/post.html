@@ -13,7 +13,9 @@ menu: blog
     {% for tag in page.tags %}
     | <a href="/{{ site.tag_dir }}/{{ tag }}">{{ tag }}</a>
     {% endfor %}
-
+	  {% if page.checked %}
+	  <span style="float:right;"> Links checked: {{ page.checked | date: "%B %e, %Y" }}</span>
+	  {% endif %}
   </section>
 
   {{ content }}
