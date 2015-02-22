@@ -15,5 +15,6 @@ Since at first I only intended to use my "categories" to distinguish linkblog po
 
 But one jekyll feature I never intend to enable is [pagination](http://jekyllrb.com/docs/pagination/); *n* posts on a page feels too much like resurrecting [Drupal](/blog/2013/03/31/octopressing/) and all its database-backed ways.  For a static blog without even any JavaScript (I removed my last social media button, *Follow me on App.net*, to make room for page navigation), navigating from page to page should be fast enough for the few people who actually want to do it.  I *would* like to add intermediate date archives like [this](https://github.com/tuananh/ArchiveGenerator#readme) to spruce up those Drupal-like paths (*e.g.*, [/blog/2015/02/](/blog/2015/02/)) that now return the extraordinarily ugly Apache index page.
 
+### Update
 
-
+I reimplemented the categories as tags: [longpost](/blog/tags/longpost/), [shortpost](/blog/tags/shortpost/), [sharedware](/blog/tags/sharedware/) for my software, [news](/blog/tags/news/) about my fiction, and [blogkeeping](/blog/tags/blogkeeping/).
