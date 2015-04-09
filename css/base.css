@@ -207,6 +207,8 @@ a {
       text-decoration: none; }
       .content .listing a:hover {
         text-decoration: underline; }
+        .content .listing a.archive_list_article_title:hover {
+	  text-decoration: none; }
     .content .listing li li {
       text-align: right; 
       border-bottom: none;}

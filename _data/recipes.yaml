@@ -114,6 +114,8 @@
     filename: tomatoWatermelon
   - name: Grape Tomato and Avocado Salad
     filename: tomatoAvocado
+  - name: Breakfast Lentils
+    filename: breakfastLentils
 
 - name: Rice
   filename: rice
@@ -192,6 +194,8 @@
     filename: crockpotTurkey
   - name: Turkey Meatballs
     filename: turkeyballs
+  - name: Turkey Chili
+    filename: turkeyChili
   - name: Italian Wedding Soup
     filename: italianWedding
 

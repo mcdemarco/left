@@ -8,7 +8,7 @@ date: 2014-10-07 01:25
   {% for foodie in site.data.recipes %}
   <li>
     {% if foodie.files != null %}
-    <a class="archive_list_article_link">{{foodie.name}}</a>
+    <a class="archive_list_article_title">{{foodie.name}}</a>
     <ul class="tag_list recipes">
       {% for innerFoodie in foodie.files %}
       <li class="inline archive_list"><a class="tag_list_link" href="/recipes/{{ foodie.filename }}/{{ innerFoodie.filename }}">{{ innerFoodie.name }}</a></li>
