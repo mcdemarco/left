@@ -1,0 +1,60 @@
+---
+layout: page
+title: ColourLoving Bookmarklets
+menu: tools
+---
+
+<p>These bookmarklets make it easier to create palettes and patterns on the <a href="http://www.colourlovers.com">COLOURlovers website</a>.  You don't need to be logged in to Coolors or ColourLovers to use these bookmarklets, but you will need to be logged into ColourLovers to save palettes or patterns.  Whether or not you're logged in, palettes and patterns will not save or publish automatically; you will need to do that step, as well as provide titles.</p>
+
+		<h2>Palette Creation</h2>
+
+		<p>Both bookmarklets are designed to import <a href="http://app.coolors.co/">Coolors</a> palettes to ColourLovers.  To use the basic bookmarklet, "Palettize", select your palette at Coolors and click on the bookmarklet.  This will open up a ColourLovers window or tab (depending on your browser settings) with your colors filled in to the basic palette creator.  All you need to do is name and save the palette.</p>
+
+		<p>To use the advanced bookmarklet, "Copasetic", select your palette at Coolors and copy the full Coolors URL.  Then open <a href="http://www.colourlovers.com/copaso/ColorPaletteSoftware">Copaso</a>.  Click on the bookmarklet to open a popup, and paste the Coolors URL into the popup.  Nothing obvious will happen, but you can now click on each blank color swatch and hit return (five times) to get your colors.  Then you can adjust your palette widths, enter a title, and save.</p>
+
+
+		<h2>Pattern Creation (from a pattern and a palette)</h2>
+
+		<p>To use the pattern creation bookmarklet, "P&amp;P", open the COLOURlovers page for the palette you want to use to color a pattern and click on the bookmarklet.  Do the same on the page for the pattern or pattern template you want to color.  If you have selected both a palette and a pattern in the current browser, the bookmarklet will open up a link to create that pattern from that palette.</p>
+
+		<p>The bookmarklet stores both your pattern and your palette, so the next time you click the bookmarklet on, say, a pattern, it will combine it with the last palette you used.</p>
+
+		
+		<h2>Install the Bookmarklet</h2>
+
+		<p>To install the basic bookmarklet, drag this link to your Favorites or Bookmarks bar: <a class='bookmarkletAnchor' href='javascript:(function(){window.open("http://www.colourlovers.com/palettes/add?colors=" + window.location.pathname.split("/")[1].split("-").join(","));})();'>Palettize</a>.</p>
+
+		<p>To install the Copaso bookmarklet, drag this link to your Favorites or Bookmarks bar: <a class='bookmarkletAnchor' href='javascript:(function(){var coolors=prompt("Go to COPASO first!  Then enter the coolors.co url here:","");var colors = coolors.split("/")[3].split("-");color_0.onclick=getFunc(0);color_1.onclick=getFunc(1);color_2.onclick=getFunc(2);color_3.onclick=getFunc(3);color_4.onclick=getFunc(4);function getFunc(n) {return function(){basicHex.value = colors[n];basicHex.focus();}};})();'>Copasetic</a>.</p>
+
+		<p>To install the pattern creation bookmarklet, drag this link to your Favorites or Bookmarks bar: <a class='bookmarkletAnchor' href='javascript:(function(){var pattern=document.getElementsByClassName("create-pattern")[0].href.parseQuery()["patternDefinitionID"];var colors=document.getElementsByClassName("create-pattern")[0].href.parseQuery()["colors"];var palette=document.getElementsByClassName("create-pattern")[0].href.parseQuery()["pID"];if (pattern) try {window.localStorage.patternDefinitionID = pattern} catch(e){};if (palette) try {window.localStorage.pID = palette; window.localStorage.colors = colors;} catch(e){};if (window.localStorage.colors && window.localStorage.pID && window.localStorage.patternDefinitionID) window.open("http://www.colourlovers.com/patterns/add?colors=" + window.localStorage.colors + "&pID=" + window.localStorage.pID + "&patternDefinitionID=" + window.localStorage.patternDefinitionID);})();'>P&amp;P</a>.</p>
+
+
+		<h3>Bookmarklets on iOS</h3>
+
+		<p>To install any bookmarklet directly on an iPhone or iPad, you can follow <a href="https://stevesouders.com/mobileperf/iphonesteps.php">these instructions on adding a bookmarklet to Mobile Safari</a>, but I find it's easier to add the bookmarklet to desktop Safari and let iCloud sync it.  (Syncing can be set up under Settings | iCloud | Safari on iOS, and System Preferences | iCloud | Safari on MacOS.)</p>
+
+		<p>Note that the Copasetic and P&amp;P bookmarklets wil not be much use on an iPhone, iPad, or other touch screen because the ColourLovers tools are not very responsive.  The Palettize bookmarklet will work, but you may have some trouble finding the popup to name your new colors (if your palette happens to include new colors).  Try pinching to find it.</p>
+
+
+		<h2>Links and Credits</h2>
+
+		<p>These bookmarklets are by M. C. DeMarco.  They do not use the COLOURlovers API, only javascript.  Here's some of my other handy stuff:</p>
+
+		<ul>
+			<li><a href="https://mcdemarco.github.io/betide/">Betide</a>, a pattern viewer that does use the COLOURlovers API.</li>
+			<li><a href="https://mcdemarco.github.io/color-tide/">Colour Tide</a>, a palette and pattern viewer that has more, but choppier, animation than Betide, based on Ryan Ludwig's Color Tide.</li>
+			<li>I am <a href="http://www.colourlovers.com/lover/mcdemarco/">mcdemarco</a> at COLOURlovers.</li>
+		</ul>
+
+		<p>Here are some other people's handy stuff:
+
+		<ul>
+			<li>YCC2106's <a href="http://www.codenamecuttlefish.com/project-files/bookmarklet/">palette and pattern browsing bookmarklets</a> are very handy with P&amp;P.</li>
+			<li>YCC2106's <a href="http://www.codenamecuttlefish.com">other color widgets</a>.</li>
+			<li>YCC2106's <a href="http://www.colourlovers.com/group/Interpretation_Fun/conversations/9196/Places_To_find_inspiration_guides_exercices...">resource list</a> in the ColourLovers forums.</li>
+			<li>Desvil's <a href="http://desvil.url.ph/resizable_com.htm">Get some CL code!</a> page for making badge code.</li>
+			<li>The ColourLovers <a href="https://chrome.google.com/webstore/detail/colourlovers-plus/idooljoondffplplkchpfadonhpdlimk">Google Chrome extension</a>, which does notifications, ad blocking, and some page reformatting.</li>
+			<li>The original <a href="http://ryan-ludwig.github.io/color-tide/">Color Tide</a> by Ryan Ludwig.</li>
+			<li>And <a href="http://app.coolors.co/">Coolors</a>, of course!</li>
+		</ul>
+
