@@ -72,12 +72,22 @@ menu: tools
 
 		<p>To install the pattern creation bookmarklet, drag this link to your Favorites or Bookmarks bar: <a class='bookmarkletAnchor' href='javascript:(function(){if (document.getElementsByClassName("create-pattern").length > 0) {var pattern=document.getElementsByClassName("create-pattern")[0].href.parseQuery()["patternDefinitionID"];var colors=document.getElementsByClassName("create-pattern")[0].href.parseQuery()["colors"];var palette=document.getElementsByClassName("create-pattern")[0].href.parseQuery()["pID"];if (pattern) try {window.localStorage.patternDefinitionID = pattern} catch(e){};if (palette) try {window.localStorage.pID = palette; window.localStorage.colors = colors;} catch(e){};if (window.localStorage.colors && window.localStorage.pID && window.localStorage.patternDefinitionID) window.open("http://www.colourlovers.com/patterns/add?colors=" + window.localStorage.colors + "&pID=" + window.localStorage.pID + "&patternDefinitionID=" + window.localStorage.patternDefinitionID);} else {alert("To use this bookmarklet, you should be on a palette, pattern, or pattern template page at COLOURlovers.com.");}})();'>P&amp;P</a>  (last updated May 6th, 2015 with error handling).</p>
 
-
+		
 		<h3>Bookmarklets on iOS</h3>
 
 		<p>To install any bookmarklet directly on an iPhone or iPad, you can try to follow <a href="https://stevesouders.com/mobileperf/iphonesteps.php">these instructions</a> or <a href="http://www.howtogeek.com/189358/beginner-geek-how-to-use-bookmarklets-on-any-device/">these other instructions</a> on adding a bookmarklet to Mobile Safari, but I find that approach fails even more often than syncing.  I've just given up and added the bookmarklets to desktop Safari instead, then let iCloud sync them.  (Syncing can be set up under Settings | iCloud | Safari on iOS, and System Preferences | iCloud | Safari on MacOS.)</p>
 
-		<p>Note that the Copasetic and P&amp;P bookmarklets wil not be much use on an iPhone, iPad, or other touch screen because the ColourLovers tools are not very responsive (so you cannot adjust your palette widths or reorder your pattern colors).  The Palettize, averaging, and Blend bookmarklets should work normally, but the new palette or color page may open silently in the background (making it look like it isn't working), or you may have some trouble finding the popup to name your new colors (if your palette happens to include new colors).  Try pinching in that case.</p>
+		<p>Note that the Copasetic and P&amp;P bookmarklets wil not be much use on an iPhone, iPad, or other touch screen because the ColourLovers tools are not very responsive (so you cannot adjust your palette widths or reorder your pattern colors).</p>
+
+		<h3>Troubleshooting</h3>
+
+		<p>You may need to turn off your popup blockers to use some of the bookmarklets---especially Bovage, which opens two new windows at once.</p>
+
+		<p>Note that palette and pattern licenses may intefere with the other bookmarklets, not just P&amp;P.</p>
+		
+		<p>The Palettize, averaging, and blending bookmarklets should work normally on a touchscreen, but the new palette or color page may open silently in the background (making it look like it isn't working).</p>
+
+		<p>You may also have some trouble finding the popup to name your new colors (if your palette happens to include new colors) on a touch screen.  Try pinching in that case.</p>
 
 
 		<h2>Links and Credits</h2>
