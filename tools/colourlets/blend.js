@@ -58,7 +58,7 @@ javascript: (function() {
 					var w2 = window.localStorage.widths2.split(",");
 				}
 				var wB = [];
-				for (c = 0; c < 5; c++) {
+				for (var c = 0; c < 5; c++) {
 					pbColor = ("0" + Math.round(((parseInt(c1[c].substring(0, 2), 16) + parseInt(c2[c].substring(0, 2), 16)) / 2)).toString(16)).slice(-2) + ("0" + Math.round(((parseInt(c1[c].substring(2, 4), 16) + parseInt(c2[c].substring(2, 4), 16)) / 2)).toString(16)).slice(-2) + ("0" + Math.round(((parseInt(c1[c].substring(4, 6), 16) + parseInt(c2[c].substring(4, 6), 16)) / 2)).toString(16)).slice(-2);
 					colorBoxOnMouseDown(c);
 					basicHex.value = pbColor;
