@@ -14,10 +14,7 @@ javascript:(function() {
 			}
 		}
 		if (colors.length < 4) {
-			colors.push("333333");
-			colors.push("666666");
-			colors.push("999999");
-			colors.push("cccccc");
+			colors.push("333333","666666","999999","cccccc");
 		}
 		var pos;
 		while (colors.length > 4) {
