@@ -4,11 +4,11 @@ title: ColourLoving Bookmarklets
 menu: tools
 ---
 
-		<p>These bookmarklets make it easier to create palettes and patterns on the <a href="http://www.colourlovers.com">COLOURlovers website</a>.  You don't need to be logged in to ColourLovers or Coolors to use these bookmarklets, but you will need to be logged into ColourLovers to save palettes or patterns.  Whether or not you're logged in, palettes and patterns will not save or publish automatically; you will need to do that step, as well as provide titles.</p>
+		<p>The following bookmarklets make it easier to create palettes and patterns on the <a href="http://www.colourlovers.com">COLOURlovers website</a>.  The bookmarklets themselves are after the instructions, in the <a href="#install">Install the Bookmarklets</a> section.</p>
 
-		<p>The bookmarklets are below the following instructions, under <a href="#install">Install the Bookmarklets</a>.</p>
-		
-		<h2>Palette Creation</h2>
+		<p>If you're not sure what a bookmarklet is, check out <a href="http://en.m.wikipedia.org/wiki/Bookmarklet">the Wikipedia article</a>.  You don't need to be logged in to ColourLovers or Coolors to use these bookmarklets, but you will need to be logged into ColourLovers to save palettes, patterns, or colors.  Whether or not you're logged in, palettes and patterns will not save or publish automatically; you will need to do that step, as well as provide titles.</p>
+
+<h2>Palette Creation</h2>
 
 		<p>Two of the palette creation bookmarklets are designed to import <a href="http://app.coolors.co/">Coolors</a> palettes to ColourLovers.  The other two make gradient palettes--a single gradient palette or a block blend.</p>
 		
@@ -16,7 +16,9 @@ menu: tools
 
 		<p id="copasetic">To use the advanced bookmarklet, "Copasetic", select your palette at Coolors and copy the full Coolors URL.  Then open <a href="http://www.colourlovers.com/copaso/ColorPaletteSoftware">Copaso</a>.  Click on the bookmarklet to open a popup, and paste the Coolors URL into the popup.  When you hit enter, Copaso will be populated with your colors.  Then you can adjust your palette widths, enter a title, and publish.</p>
 
-		<h3 id="gradient">Gradient</h3>
+		<p>You can also use the latest version of Copasetic to turn a COLOURlovers URL that contains a color list into a palette in Copaso.  This is useful for converting basic palettes into palettes with widths; just click on the link for creating a pattern from the palette and grab the URL of the page that opens.  It's also handy for use with my 5x5 bookmarklet (which can only make basic palettes); instead of saving the basic palette, copy the URL for use with Copasetic.</p>
+
+	<h3 id="gradient">Gradient</h3>
 
 		<p>"Gradient" takes two colors and creates a gradient palette from them.  It does this using Copaso so you can optionally adjust the widths before saving.  You can also reverse the palette.</p>
 
@@ -24,7 +26,7 @@ menu: tools
 
 		<p>Once you've published the palette, you can click Gradient again while on the Copaso page instead of clicking the link to it on the little publication popup.   This will take you to your new palette's page, where you can click Gradient again to (temporarily) put badge code for the source colors and the new palette into the badge code field of the gradient palette.  Then you can copy and paste it as usual.  See the <a href="#blend">Blend</a> bookmarklet below for a badge example and what to do if you forget a step; it works very similarly.</p>
 
-		<h3 id="fivexfive">5x5</h3>
+	<h3 id="fivexfive">5x5</h3>
 
 		<p>"5x5" takes four colors (at random or your choice), shows you their 5x5 gradient block blend, and optionally lets you publish the five palettes.  It can put the 5x5 block picture into the description of each palette.</p>
 
@@ -34,17 +36,17 @@ menu: tools
 
 		<p>You don't need to publish all 5 palettes for the 5x5 block blend picture to work; it's just plain HTML (with a bit of weirdness to avoid the new COLOURlovers spam filters).</p>
 
-		<h2 id="average">Palette Averaging</h2>
+<h2 id="average">Palette Averaging</h2>
 
 		<p>The averaging bookmarklets calculate the average color of the colors in a palette, and opens the ColourLovers color page for that color in a new window or tab.  There are versions for the simple average, "Average", and weighted average, "Weiverage".  (The weighted average takes palette widths into account.)</p>
 
 		<p id="bovage">There's also a version, "Bovage", that does both averages.  It will skip the weighted average when there are no palette widths.  When creating both, the bookmarklet adds a query string that says "weighted" or "unweighted" to the URL to indicate which color is which, since different browsers may display the new tabs or windows in different orders.  It also has also an option to fill in the new color description with the source palette badge, by clicking "Bovage" again on the color creation page (if you found a new color and clicked on the link to name it).</p>
 		
-		<h2>Palette Blending</h2>
+<h2>Palette Blending</h2>
 
 		<p>The palette blending bookmarklets blend the colors of one palette with another palette ("Blend") or with a single color ("Wash") to create a new palette in Copaso.  Both bookmarklets optionally put together all the badge code for you (in A + B = C format) for cutting-and-pasting (in addition to putting the source palette(s)/color into the description of the new palette in A+B format).</p>
 
-		<h3 id="blend">Blend</h3>
+	<h3 id="blend">Blend</h3>
 		
 		<p>"Blend" takes two palettes and blends each of the five colors into a new palette you can save in Copaso.  It also adds the badges of the original palettes to the description of the blended palette, interpolates the palette widths, and puts the three badges together for you.  You can also reverse one of the palettes (say, if one palette goes from light to dark shades and the other from dark to light, but you want to blend the lighter colors with lighter and darker with darker).</p>
 
@@ -54,7 +56,7 @@ menu: tools
 
 		<p>The bookmarklet rotates through palettes, so if you're trying to choose two new ones, just close the Copaso window that opens up when you click Blend on the first palette page and click Blend again on the second palette page.  It will not add your blended palette to the queue, but you can add it manually (after picking another palette).</p>
 
-		<h3 id="wash">Wash</h3>
+	<h3 id="wash">Wash</h3>
 		
 		<p>The colorwashing bookmarklet, "Wash", is very similar to "Blend".  Instead of mixing two palettes, it mixes a single palette with a selected color.  As with "Blend", you pick the palette and color by clicking on the Wash bookmarklet while you are on the source palette or color's page.  Once you've selected both, it will also open a blank Copaso page, where you need to click Wash again.</p>
 
@@ -65,21 +67,21 @@ menu: tools
 		<p>The bookmarklet saves the palette and the color, so if you're trying to choose two new ones, just close the Copaso window that opens up when you click Wash on the first palette or color page, and then click Wash again on the other palette or color page.</p>
 
 
-		<h2 id="pandp">Pattern Creation (from a pattern and a palette)</h2>
+<h2 id="pandp">Pattern Creation (from a pattern and a palette)</h2>
 
-		<p>The pattern creation bookmarklet, "P&amp;P", creates a pattern with a particular palette, a task usually accomplished by editing the ColourLovers URLs manually.</p>
+		<p>The pattern creation bookmarklet, "P&amp;P", creates a pattern with a particular palette (a task usually accomplished by editing the ColourLovers URLs manually).</p>
 
 		<p>To use P&amp;P, open the COLOURlovers page for the palette you want to use to color a pattern and click on the bookmarklet.  Do the same on the page for the pattern or pattern template you want to color.  (You can do these in either order.)  If you have selected both a palette and a pattern in the current browser, the bookmarklet will open up a link to create that pattern from that palette.</p>
 
 		<p>The bookmarklet stores both your pattern and your palette, so the next time you click the bookmarklet on, say, a pattern, it will combine it with the last palette you used.  If the bookmarklet fails mysteriously, check the license on the palette or pattern you clicked on; it may not permit reuse.</p>
 
-		<h2 id="install">Install the Bookmarklets</h2>
+<h2 id="install">Install the Bookmarklets</h2>
 
 		<p>To install the bookmarklets, drag one or more of these links to your Favorites or Bookmarks bar:</p>
 
 		<ul>
 			<li><a class='bookmarkletAnchor' href='javascript:(function(){if (window.location.href.indexOf("coolors.co") > -1) {window.open("http://www.colourlovers.com/palettes/add?colors=" + window.location.pathname.substring(location.pathname.lastIndexOf("/")+1).split("-").join(","));} else {alert("You should be at coolors.co to use this bookmarklet.");}})();'>Palettize</a>, the basic Coolors import bookmarklet</li><!--  (last updated May 6th, 2015 with error handling) -->
-			<li><a class='bookmarkletAnchor' href='javascript:(function(){var coolors=prompt("Go to COPASO first!  Then enter a coolors.co url here:","");var colors = coolors.substring(coolors.lastIndexOf("/")+1).split("-");for(var c=0;c<5;c++){colorBoxOnMouseDown(c);basicHex.value = colors[c];updateBasicFromForm("","basicHex",true);};})();'>Copasetic</a>, the advanced Coolors import bookmarklet that also lets you edit widths</li><!-- (last updated May 5th, 2015 for ease of use) -->
+			<li><a class='bookmarkletAnchor' href='javascript:(function(){var coolors=prompt("Open COPASO first!  Then enter a coolors.co or COLOURlovers url here:","");var colors;if (coolors.indexOf("coolors") > -1) {colors = coolors.substring(coolors.lastIndexOf("/")+1).split("-");} else {colors = coolors.split("colors=")[1].split("&")[0].split(",");} for(var c=0;c<5;c++){colorBoxOnMouseDown(c);basicHex.value = colors[c];updateBasicFromForm("","basicHex",true);};})();'>Copasetic</a>, the advanced Coolors import bookmarklet that also lets you edit widths (updated May 21st, 2015 to accept COLOURlovers URLs as well)</li>
 			<li><a class='bookmarkletAnchor' href='javascript:(function(){if(document.getElementsByClassName(%22create-a-palette%22).length%3E0){var%20e=document.getElementsByClassName(%22create-a-palette%22)[0].href.parseQuery().colors,o=document.getElementsByClassName(%22share-on%22)[0].parentElement.querySelector(%22input%22).value;if(e)if(window.localStorage.grColor1){if(window.localStorage.grColor2)try{window.localStorage.grColor1=window.localStorage.grColor2,window.localStorage.grBadge1=window.localStorage.grBadge2,window.localStorage.grColor2=e,window.localStorage.grBadge2=o,window.localStorage.removeItem(%22grPaletteID%22)}catch(a){}else%20try{window.localStorage.grColor2=e,window.localStorage.grBadge2=o}catch(a){}window.open(%22http://www.colourlovers.com/copaso/ColorPaletteSoftware%22)}else%20try{window.localStorage.grColor1=e,window.localStorage.grBadge1=o}catch(a){}}else%20if(document.getElementById(%22pD_paletteDescription%22))if(_paletteID){try{window.localStorage.grPaletteID=_paletteID}catch(a){}window.location=%22http://www.colourlovers.com/palette/%22+_paletteID}else{if(%22%22!=document.getElementById(%22pD_paletteDescription%22).value){var%20t=window.localStorage.grColor1,r=window.localStorage.grBadge1;try{window.localStorage.grColor1=window.localStorage.grColor2,window.localStorage.grBadge1=window.localStorage.grBadge2,window.localStorage.grColor2=t,window.localStorage.grBadge2=r}catch(a){}}for(var%20l=window.localStorage.grColor1,n=window.localStorage.grColor2,g=0;5%3Eg;g++){var%20c=g/4,w=(4-g)/4,i=(%220%22+Math.round(parseInt(l.substring(0,2),16)*w+parseInt(n.substring(0,2),16)*c).toString(16)).slice(-2)+(%220%22+Math.round(parseInt(l.substring(2,4),16)*w+parseInt(n.substring(2,4),16)*c).toString(16)).slice(-2)+(%220%22+Math.round(parseInt(l.substring(4,6),16)*w+parseInt(n.substring(4,6),16)*c).toString(16)).slice(-2);colorBoxOnMouseDown(g),basicHex.value=i,updateBasicFromForm(%22%22,%22basicHex%22,!0)}document.getElementById(%22pD_paletteDescription%22).value=window.localStorage.grBadge1+%22+%22+window.localStorage.grBadge2}else%20if(document.getElementsByClassName(%22create-pattern%22).length%3E0%26%26window.localStorage%26%26window.localStorage.grPaletteID%26%26window.localStorage.grPaletteID==document.getElementsByClassName(%22create-pattern%22)[0].href.parseQuery().pID){var%20s=document.getElementsByClassName(%22share-on%22)[0].parentElement.querySelector(%22input%22);s.value=window.localStorage.grBadge1+%22%3Cbr%20/%3E+%3Cbr%20/%3E%22+window.localStorage.grBadge2+%22%3Cbr%20/%3E=%3Cbr%20/%3E%22+s.value;var%20d=document.getElementsByClassName(%22share-on%22)[0].parentElement.querySelectorAll(%22h5%22)[1];d.innerHTML=%22Gradient%20Badge%20Code%22,d.style.color=%22red%22}else%20alert(%22To%20use%20this%20bookmark,%20you%20should%20be%20on%20a%20palette%20page%20or%20the%20COPASO%20page%20at%20COLOURlovers.com.%22)})();'>Gradient</a> creates gradient palettes (added May 15th, 2015)</li>
 			<li><a class='bookmarkletAnchor' href="javascript:(function(){function%20e(){a[0][0]=r[0],a[0][4]=r[2],a[4][0]=r[1],a[4][4]=r[3];var%20e,n,i,o,s,d,l;for(e=0;5%3Ee;e++)i=e/4,o=(4-e)/4,s=a[0][0],d=a[0][4],a[0][e]=(%220%22+Math.round(parseInt(s.substring(0,2),16)*o+parseInt(d.substring(0,2),16)*i).toString(16)).slice(-2)+(%220%22+Math.round(parseInt(s.substring(2,4),16)*o+parseInt(d.substring(2,4),16)*i).toString(16)).slice(-2)+(%220%22+Math.round(parseInt(s.substring(4,6),16)*o+parseInt(d.substring(4,6),16)*i).toString(16)).slice(-2),s=a[4][0],d=a[4][4],a[4][e]=(%220%22+Math.round(parseInt(s.substring(0,2),16)*o+parseInt(d.substring(0,2),16)*i).toString(16)).slice(-2)+(%220%22+Math.round(parseInt(s.substring(2,4),16)*o+parseInt(d.substring(2,4),16)*i).toString(16)).slice(-2)+(%220%22+Math.round(parseInt(s.substring(4,6),16)*o+parseInt(d.substring(4,6),16)*i).toString(16)).slice(-2);l='%3Cdiv%20style=%22width:'+t+'px;%22%3E';var%20u=t/5;for(n=0;5%3En;n++){for(l+='%3Cdiv%20style=%22width:'+t+'px;%22%3E',e=0;5%3Ee;e++)i=e/4,o=(4-e)/4,s=a[0][n],d=a[4][n],a[e][n]=(%220%22+Math.round(parseInt(s.substring(0,2),16)*o+parseInt(d.substring(0,2),16)*i).toString(16)).slice(-2)+(%220%22+Math.round(parseInt(s.substring(2,4),16)*o+parseInt(d.substring(2,4),16)*i).toString(16)).slice(-2)+(%220%22+Math.round(parseInt(s.substring(4,6),16)*o+parseInt(d.substring(4,6),16)*i).toString(16)).slice(-2),l+='%3Cdiv%20class=%22pattern%22%20style=%22display:inline-block;width:'+u+%22px;height:%22+u+%22px;background-color:%23%22+a[e][n]+'%22%3E%3C/div%3E';l+=%22%3C/div%3E%22}l+=%22%3C/div%3E%22;try{window.localStorage.fiveBadge=l}catch(c){}if(!document.getElementById(%22fiveOverlay%22)){var%20g=document.createElement(%22div%22);g.style.cssText=%22position:absolute;width:100%25;height:100%25;top:0;left:0;background-color:rgba(0,0,0,0.3);z-index:100;overflow:hidden;%22,g.innerHTML='%3Cdiv%20id=%22fiveOverlay%22%20style=%22margin:10px;%22%3E%3Cdiv%20id=%22fiveBadge%22%3E%3C/div%3E%3Cdiv%20id=%22fiveUI%22%3E%3C/div%3E%3Cdiv%3E%3Cbutton%20type=%22button%22%20style=%22background-color:white;border-radius:5px;padding:0%205px;%22%20onclick=%22fivePublish();%22%3EPublish%3C/button%3E%20%3Cbutton%20type=%22button%22%20style=%22background-color:white;border-radius:5px;padding:0%205px;%22%20onclick=%22this.parentElement.parentElement.parentElement.remove();%22%3EClose%3C/button%3E%3C/div%3E%3C/div%3E',document.body.appendChild(g)}document.getElementById(%22fiveBadge%22).innerHTML=l}var%20t=200,n=document.getElementsByClassName(%22color%22);if(document.getElementById(%22paletteDesc%22)%26%26window.localStorage.fiveBadge)document.getElementById(%22paletteDesc%22).value=window.localStorage.fiveBadge;else%20if(n.length%3E4){for(var%20r=[],i=0;i%3Cn.length;i++)if(n[i].href%26%26n[i].href.indexOf(%22color/%22)%3E0){var%20o=n[i].href.split(%22color/%22)[1].split(%22/%22)[0];6==o.length%26%26-1==r.indexOf(o)%26%26r.push(o)}r.length%3C4%26%26(r.push(%22333333%22),r.push(%22666666%22),r.push(%22999999%22),r.push(%22cccccc%22));for(var%20s;r.length%3E4;)s=parseInt(Math.random()*r.length),r=r.slice(0,s).concat(r.slice(s+1,r.length));for(var%20a=new%20Array(5),d=0;5%3Ed;d++)a[d]=new%20Array(5);e(),document.getElementById(%22fiveUI%22).innerHTML='%3Cbr%20style=%22clear:both%22%20/%3E';for(var%20d=0;4%3Ed;d++)document.getElementById(%22fiveUI%22).innerHTML+='%3Cinput%20type=%22text%22%20onchange=%22fiveRedraw('+d+')%22%20size=5%20id=%22fiveC'+d+'%22%20value=%22'+r[d]+'%22/%3E',1==d%26%26(document.getElementById(%22fiveUI%22).innerHTML+=%22%3Cbr/%3E%22)}else%20alert(%22To%20use%20this%20bookmarklet,%20you%20should%20be%20on%20a%20COLOURlovers%20page%20with%20more%20colors%20on%20it.%22);window.fiveRedraw=function(t){r[t]=document.getElementById(%22fiveC%22+t).value,e()},window.fivePublish=function(){for(var%20e=0;5%3Ee;e++){for(var%20t=%22http://www.colourlovers.com/palettes/add%3Fcolors=%22,n=0;5%3En;n++)t+=a[n][e]+(4%3En%3F%22,%22:%22%22);window.open(t)}}})();">5x5</a>, the block blender (added May 18, 2015)</li>
 			
@@ -93,29 +95,30 @@ menu: tools
 			<li><a class='bookmarkletAnchor' href='javascript:(function(){if (document.getElementsByClassName("create-pattern").length > 0) {var pattern=document.getElementsByClassName("create-pattern")[0].href.parseQuery()["patternDefinitionID"];var colors=document.getElementsByClassName("create-pattern")[0].href.parseQuery()["colors"];var palette=document.getElementsByClassName("create-pattern")[0].href.parseQuery()["pID"];if (pattern) try {window.localStorage.patternDefinitionID = pattern} catch(e){};if (palette) try {window.localStorage.pID = palette; window.localStorage.colors = colors;} catch(e){};if (window.localStorage.colors && window.localStorage.pID && window.localStorage.patternDefinitionID) window.open("http://www.colourlovers.com/patterns/add?colors=" + window.localStorage.colors + "&pID=" + window.localStorage.pID + "&patternDefinitionID=" + window.localStorage.patternDefinitionID);} else {alert("To use this bookmarklet, you should be on a palette, pattern, or pattern template page at COLOURlovers.com.");}})();'>P&amp;P</a> combines a pattern and a palette</li><!-- (last updated May 6th, 2015 with error handling) -->
 		</ul>
 
-		<h3 id="ios">Bookmarklets on iOS</h3>
+	<h3 id="ios">Bookmarklets on iOS</h3>
 
-		<p>Note that the Copasetic and P&amp;P bookmarklets wil not be much use on an iPhone, iPad, or other touch screens because the ColourLovers tools are not very responsive.  You will not be able to adjust your palette widths or reorder your pattern colors on a touchscreen.</p>
+		<p>Note that the Copasetic and P&amp;P bookmarklets wil not be much use on an iPhone, iPad, or other touch screens because the ColourLovers tools are not very responsive.  That means you will not be able to adjust your palette widths or reorder your pattern colors on a touchscreen.</p>
 
 		<p>Personally, I've given up on adding bookmarklets directly in iOS; I add them to desktop Safari instead, then let iCloud sync them.  Syncing can be set up under Settings | iCloud | Safari on iOS, and System Preferences | iCloud | Safari on MacOS.  The syncing process is somewhat flaky, but still much more reliable than trying to add a bookmarklet in iOS itself.</p>
 
 		<p>If you're feeling brave or can't use iCloud syncing, there are instructions out there for installing any bookmarklet directly on an iPhone or iPad.  Try <a href="https://stevesouders.com/mobileperf/iphonesteps.php">these instructions</a> or <a href="http://www.howtogeek.com/189358/beginner-geek-how-to-use-bookmarklets-on-any-device/">these other instructions</a> on adding a bookmarklet to Mobile Safari, or search for directions for your mobile browser of choice.  Note that this process is in no way user-friendly, nor particularly likely to succeed.  Nevertheless, if you need the raw text of the compressed bookmarklet for iOS voodoo, you can get it in the <a href="#source">source</a> section below.</p>
 
-		<h3 id="troubleshooting">Troubleshooting</h3>
+	<h3 id="troubleshooting">Troubleshooting</h3>
 
-		<p>You may need to turn off your popup blockers to use some of the bookmarklets---especially Bovage, which opens two new windows at once.</p>
+		<p>You may need to turn off your popup blockers to use some of the bookmarklets---especially Bovage, which opens two new windows at once, and 5x5, which opens five when you click Publish.</p>
 
-		<p>If a bookmarklet fails silently, check the palette or pattern license; licensing may intefere with the other bookmarklets, although it happens most frequently with P&amp;P.  Also check that the page has fully loaded, especially if you're on a slow connection.  If not, just click the bookmarklet again once the page is loaded.</p>
-		
-		<p>The Palettize, averaging, and blending bookmarklets should work normally on a touchscreen, but the new palette or color page may open silently in the background (making it look like it isn't working).</p>
+		<p>If a bookmarklet fails silently, check the palette or pattern license; licensing restrictions may intefere with the other bookmarklets, although it happens most frequently with P&amp;P.  Also make sure that the page has fully loaded, especially if you're on a slow connection, aren't running an ad blocker, and/or are on the COPASO page.  If the page was still loading, you can just click the bookmarklet again once it's done.</p>
+
+		<p>If you have trouble with widths (i.e., you don't get the interpolated widths with Blend, or you don't get a weighted average of a palette from the appropriate averaging bookmarklets), be sure you are looking at the version of the palette with the widths when you use the bookmarklet.</p>
+
+		<p>The Palettize, gradient, averaging, and blending bookmarklets should work normally on a touchscreen, but the new palette or color page may open silently in a background tab (making it look like the bookmarklet isn't working).</p>
 
 		<p>On a small screen, you may also have some trouble finding the popup to name your new colors (if your palette happens to include new colors).  Try pinching.</p>
 
-		<p>The Gradient, Blend and Wash bookmarklets may be longer than some older browsers support.  (The only fix for that is to get a newer browser.)  If you bookmarked them before I compressed them, they may also silently fail to sync over iCloud due to <a href="https://support.apple.com/en-us/HT202158">iCloud bookmarklet size limits</a>.</p>
+		<p>The Gradient, Blend, Wash and 5x5 bookmarklets may be longer than some older browsers support.  (The only fix for that is to get a newer browser.)  Also, if you bookmarked Blend before I compressed it, it may also silently fail to sync over iCloud due to <a href="https://support.apple.com/en-us/HT202158">iCloud bookmarklet size limits</a>.  I'm still having unexplained syncing issues with Wash and 5x5, so don't be surprised if they don't sync for you, either.</p>
 
-		<p>If you have trouble with widths (i.e., you don't get the interpolated widths with Blend, or you don't get a weighted average of a palette from the averaging bookmarklets), be sure you are looking at the version of the palette with the widths when you use the bookmarklet.</p>
 
-		<h2 id="source">Source</h2>
+<h2 id="source">Source</h2>
 
 		<p>For the source of the shorter bookmarklets, you can view the source of this page or paste the bookmarklet code into <a href="http://www.jspretty.com">a code beautifier</a>.  (Most beautifiers are unusable with a touchscreen; if you're on mobile, try <a href="http://prettyprinter.de/index.php">this one</a> instead.)</p>
 
@@ -130,7 +133,7 @@ menu: tools
 
 		<p>
 
-		<h2 id="links">Links and Credits</h2>
+<h2 id="links">Links and Credits</h2>
 
 		<p>These bookmarklets are by <a href="/bio/">M. C. DeMarco</a>.  They do not use the COLOURlovers API, only javascript.  I also <a href="/blog/2015/04/22/colourloving/">blogged about making them and my color widgets</a>, with more details of how and why.  I used <a href="http://chriszarate.github.io/bookmarkleter/">this compressor</a> to make the compressed versions.</p>
 
