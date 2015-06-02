@@ -36,7 +36,7 @@ javascript: (function() {
 			if (window.localStorage && window.localStorage.hueAngle)
 				hueA = window.localStorage.hueAngle;
 			if (document.getElementById("pD_paletteDescription").value != "") {
-				var promptText = htmlDecode("The current color hue angle is " + hueA +"&deg;. Enter a new angle in the box.  For example, 180&deg; will give you the complementary color, 120&deg; or 240&deg; gives a triad color, 90&deg; gives the farthest blend color, 45&deg; gives the hue + 2 blend color, etc.  You don't need to include the degree symbol.  Negative angles are allowed.");
+				var promptText = htmlDecode("The current color hue angle is " + hueA +"&deg;. Enter a new angle in the box.  For example, 180&deg; will give you the complementary color, 120&deg; or 240&deg; gives a triad color, 90&deg; gives the farthest blend color, 45&deg; gives the hue + 2 blend color, etc.  You don&apos;t need to include the degree symbol.  Negative angles are allowed.");
 				var tempA=prompt(promptText,"");
 				tempA = parseInt(tempA,10);
 				if (tempA >= -360 && tempA <= 360)
@@ -45,7 +45,7 @@ javascript: (function() {
 					window.localStorage.hueAngle = hueA;
 				} catch (e) {}
 			}
-			//Make the angles a bit more intuitive for the blend UI.
+			/*Make the angles a bit more intuitive for the blend UI.*/
 			var H =  -hueA;
 			var c1 = window.localStorage.hueColors.split(",");
 			var w1 = window.localStorage.hueWidths.split(",");
@@ -80,11 +80,9 @@ javascript: (function() {
 	} else {
 		alert("To use this bookmarklet, you should be on a palette page or the COPASO page at COLOURlovers.com.");
 	}
-
 	function htmlDecode(html) {
 		var div = document.createElement("div");
 		div.innerHTML = html;
 		return div.childNodes[0].nodeValue;
-	}
-	
+	}	
 })();
