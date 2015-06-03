@@ -61,7 +61,8 @@ javascript: (function() {
 				out.r = (.299+.701*U+.168*W)*inc.r + (.587-.587*U+.330*W)*inc.g + (.114-.114*U-.497*W)*inc.b;
 				out.g = (.299-.299*U-.328*W)*inc.r + (.587+.413*U+.035*W)*inc.g + (.114-.114*U+.292*W)*inc.b;
 				out.b = (.299-.3*U+1.25*W)*inc.r + (.587-.588*U-1.05*W)*inc.g + (.114+.886*U-.203*W)*inc.b;
-				var hueColor = ("0" + Math.round(out.r).toString(16)).slice(-2) + ("0" + Math.round(out.g).toString(16)).slice(-2) + ("0" + Math.round(out.b).toString(16)).slice(-2);
+				var hueColor = ("0" + rgbRound(out.r).toString(16)).slice(-2) + ("0" + rgbRound(out.g).toString(16)).slice(-2) + ("0" + rgbRound(out.b).toString(16)).slice(-2);
+				/*console.log(c1[c] + ": " + inc.r + "," + inc.g + "," + inc.b + " -> " + hueColor + ": " + out.r + "," + out.g + "," + out.b);*/
 				colorBoxOnMouseDown(c);
 				basicHex.value = hueColor;
 				updateBasicFromForm("", "basicHex", true);
@@ -84,5 +85,11 @@ javascript: (function() {
 		var div = document.createElement("div");
 		div.innerHTML = html;
 		return div.childNodes[0].nodeValue;
+	}	
+	function rgbRound(floatRGB) {
+		var rounded = Math.round(floatRGB);
+		if (rounded > 255) return 255;
+		else if (rounded < 0) return 0;
+		else return rounded;
 	}	
 })();
