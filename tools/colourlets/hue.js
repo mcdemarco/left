@@ -36,7 +36,7 @@ javascript: (function() {
 			if (window.localStorage && window.localStorage.hueAngle)
 				hueA = window.localStorage.hueAngle;
 			if (document.getElementById("pD_paletteDescription").value != "") {
-				var promptText = htmlDecode("The current color hue angle is " + hueA +"&deg;. Enter a new angle in the box.  For example, 180&deg; will give you the complementary color, 120&deg; or 240&deg; gives a triad color, 90&deg; gives the farthest blend color, 45&deg; gives the hue + 2 blend color, etc.  You don&apos;t need to include the degree symbol.  Negative angles are allowed.");
+				var promptText = htmlDecode("The current color hue angle is " + hueA +"&deg;. Enter a new angle in the box.  For example, 180&deg; will give you the complementary colors, 120&deg; or 240&deg; triad colors, 90&deg; the farthest blend color, 45&deg; the hue + 2 blend color, etc.  You don&apos;t need to include the degree symbol.  Negative angles are allowed.");
 				var tempA=prompt(promptText,"");
 				tempA = parseInt(tempA,10);
 				if (tempA >= -360 && tempA <= 360)
