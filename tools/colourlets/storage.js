@@ -6,10 +6,11 @@ javascript: (function() {
 			if (document.getElementById("pD_paletteDescription") || document.getElementById("paletteDesc") || document.getElementById("colorDesc") || document.getElementById("patternDesc") || document.getElementById("ajax-comments")) {
 				var element = (document.getElementById("pD_paletteDescription") ? document.getElementById("pD_paletteDescription") : (document.getElementById("paletteDesc") ? document.getElementById("paletteDesc") : (document.getElementById("colorDesc") ? document.getElementById("colorDesc") : (document.getElementById("patternDesc") ? document.getElementById("patternDesc") : document.getElementById("ajax-comments")))));
 				if (!element.value || element.value.indexOf(badge) < 0) {
-					if (document.getElementById("ajax-comments"))
+					if (document.getElementById("ajax-comments")) {
 						element.value = (element.value ? element.value + "<br/>" : "") + badge;
-					else
+					} else {
 						element.value = badge + (element.value ? "<br/>" + element.value : "");
+					}
 				} else {
 					openBadgeEditor(badge);
 				}
