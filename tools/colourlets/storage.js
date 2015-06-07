@@ -3,24 +3,32 @@ javascript: (function() {
 		var badge;
 		if (window.localStorage && window.localStorage.stoBadge) {
 			badge = window.localStorage.stoBadge;
-			if (document.getElementById("pD_paletteDescription") || document.getElementById("paletteDesc") || document.getElementById("colorDesc") || document.getElementById("patternDesc")) {
-				var element = (document.getElementById("pD_paletteDescription") ? document.getElementById("pD_paletteDescription") : (document.getElementById("paletteDesc") ? document.getElementById("paletteDesc") : (document.getElementById("colorDesc") ? document.getElementById("colorDesc") : document.getElementById("patternDesc"))));
-				element.value = badge + (element.value ? "<br/" + element.value : "");
+			if (document.getElementById("pD_paletteDescription") || document.getElementById("paletteDesc") || document.getElementById("colorDesc") || document.getElementById("patternDesc") || document.getElementById("ajax-comments")) {
+				var element = (document.getElementById("pD_paletteDescription") ? document.getElementById("pD_paletteDescription") : (document.getElementById("paletteDesc") ? document.getElementById("paletteDesc") : (document.getElementById("colorDesc") ? document.getElementById("colorDesc") : (document.getElementById("patternDesc") ? document.getElementById("patternDesc") : document.getElementById("ajax-comments")))));
+				if (!element.value || element.value.indexOf(badge) < 0) {
+					if (document.getElementById("ajax-comments"))
+						element.value = (element.value ? element.value + "<br/>" : "") + badge;
+					else
+						element.value = badge + (element.value ? "<br/>" + element.value : "");
+				} else {
+					openBadgeEditor(badge);
+				}
 			} else {
-				var tempB = prompt("Edit your stored description here:",badge);
-				if (tempB != badge)
-					badge = tempB;
-				try {
-					window.localStorage.stoBadge = badge;
-				} catch (e) {}
+				openBadgeEditor(badge);
 			}
 		} else {
-			badge = prompt("Enter the description text or HTML to store here:","");
-			try {
-				window.localStorage.stoBadge = badge;
-			} catch (e) {}
+			openBadgeEditor("");
 		}
 	} else {
 		alert("To use this bookmarklet, you should be on a COLOURlovers page.");
+	}
+
+	function openBadgeEditor(badge){
+		var tempB = prompt("Edit your stored description or comment here:",badge);
+		if (tempB && tempB != badge) {
+			try {
+				window.localStorage.stoBadge = tempB;
+			} catch (e) {}
+		}
 	}
 })();
