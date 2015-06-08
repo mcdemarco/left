@@ -85,7 +85,7 @@ javascript: (function() {
 			resetPaletteWidthSliders();
 			resetPaletteWidthSliders();
 			resetPaletteWidthSliders();
-			document.getElementById("pD_paletteDescription").value = window.localStorage.hue2PaletteBadge;
+			document.getElementById("pD_paletteDescription").value = window.localStorage.hue2PaletteBadge + " to " + window.localStorage.hue2ColorBadge;
 		}
 	} else {
 		alert("To use this bookmarklet, you should be on a palette page or the COPASO page at COLOURlovers.com.");
