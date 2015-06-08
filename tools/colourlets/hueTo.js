@@ -42,20 +42,13 @@ javascript: (function() {
 			window.location = "http://www.colourlovers.com/palette/" + _paletteID;
 		} else {
 			var hue2S;
-			console.log("0: " + hue2S);
 			if (window.localStorage && window.localStorage.hue2Swatch)
 				hue2S = parseInt(window.localStorage.hue2Swatch,10);
 			else
 				hue2S = 0;
-			console.log("1: " + hue2S);
 			if (document.getElementById("pD_paletteDescription").value != "") {
-				console.log("2: " + hue2S);
 				//Toggle swatch.  Note that the js needs escaping.
-				console.log("3: " + hue2S);
-				hue2S = (hue2S + 1);
-				console.log("4: " + hue2S);
-				hue2S = hue2S % 5;
-				console.log("5: " + hue2S);
+				hue2S = (hue2S + 1) % 5;
 				try {
 					window.localStorage.hue2Swatch = hue2S;
 				} catch (e) {}
@@ -65,18 +58,19 @@ javascript: (function() {
 			var c2 = window.localStorage.hue2Color;
 			var wW = [];
 			// Determine the conversion for the current swatch.
-			var source = RGB2YIQ(rgb2RGB(c1[hue2S]));
-			var target = RGB2YIQ(rgb2RGB(c2));
+			var source = rgb2RGB(c1[hue2S]);
+			var target = rgb2RGB(c2);
 			// Apply the conversion to the full palette.
-			var H = source.y/target.y;
-			var U = source.i/target.i;
-			var W = source.q/target.q;
+			var convert = new Array(3);
+			convert.r = target.r - source.r;
+			convert.g = target.g - source.g;
+			convert.b = target.b - source.b;
 			for (var c = 0; c < 5; c++) {
 				var inc = rgb2RGB(c1[c]);
 				var out = new Array(3);
-				out.r = (.299+.701*U+.168*W)*inc.r + (.587-.587*U+.330*W)*inc.g + (.114-.114*U-.497*W)*inc.b;
-				out.g = (.299-.299*U-.328*W)*inc.r + (.587+.413*U+.035*W)*inc.g + (.114-.114*U+.292*W)*inc.b;
-				out.b = (.299-.3*U+1.25*W)*inc.r + (.587-.588*U-1.05*W)*inc.g + (.114+.886*U-.203*W)*inc.b;
+				out.r = inc.r + convert.r;
+				out.g = inc.g + convert.g;
+				out.b = inc.b + convert.b;
 				var hue2Color = ("0" + rgbRound(out.r).toString(16)).slice(-2) + ("0" + rgbRound(out.g).toString(16)).slice(-2) + ("0" + rgbRound(out.b).toString(16)).slice(-2);
 				colorBoxOnMouseDown(c);
 				basicHex.value = hue2Color;
@@ -103,14 +97,6 @@ javascript: (function() {
 		outColor.r = parseInt(cssColor.substring(0, 2), 16);
 		outColor.g = parseInt(cssColor.substring(2, 4), 16);
 		outColor.b = parseInt(cssColor.substring(4, 6), 16);
-		return outColor;
-	}
-	function RGB2YIQ(rgbVector) {
-		//Convert an rgb vector to a YIQ color.
-		var outColor = new Array(3);
-		outColor.y = 0.299*rgbVector.r + 0.587*rgbVector.g + 0.114*rgbVector.b;
-		outColor.i = 0.596*rgbVector.r - 0.275*rgbVector.g - 0.321*rgbVector.b;
-		outColor.q = 0.212*rgbVector.r - 0.528*rgbVector.g + 0.311*rgbVector.b;
 		return outColor;
 	}
 	function rgbRound(floatRGB) {
