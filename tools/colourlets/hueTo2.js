@@ -67,7 +67,7 @@ javascript: (function() {
 			convert.v = (target.v - source.v) / source.v;
 			for (var c = 0; c < 5; c++) {
 				if (c == hue2S) {
-					//We don't do the transform on the target slot because it can change the RGB color slightly.
+					//We do not do the transform on the target slot because it can change the RGB color slightly.
 					colorBoxOnMouseDown(c);
 					basicHex.value = c2;
 					updateBasicFromForm("", "basicHex", true);
@@ -100,15 +100,7 @@ javascript: (function() {
 	} else {
 		alert("To use this bookmarklet, you should be on a palette page or the COPASO page at COLOURlovers.com.");
 	}
-	
-	function rgb2RGB(cssColor) {
-		//Convert an rgb string to a vector.
-		var outColor = new Array(3);
-		outColor.r = parseInt(cssColor.substring(0, 2), 16);
-		outColor.g = parseInt(cssColor.substring(2, 4), 16);
-		outColor.b = parseInt(cssColor.substring(4, 6), 16);
-		return outColor;
-	}
+
 	function getHSV(cssColor,position) {
 		//Convert an rgb string to an HSV vector with Copaso.
 		colorBoxOnMouseDown(position);
