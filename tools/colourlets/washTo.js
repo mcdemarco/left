@@ -22,9 +22,9 @@ javascript: (function() {
 			palette = document.getElementsByClassName("create-pattern")[0].href.parseQuery()["pID"];
 			if (window.localStorage && window.localStorage.wash2PaletteID && palette == window.localStorage.wash2PaletteID) {
 				var wash2BadgeElement = document.getElementsByClassName("share-on")[0].parentElement.querySelector("input");
-				wash2BadgeElement.value = window.localStorage.hue2PaletteBadge + (window.localStorage.wash2ColorBadge ? "<br />+ " + window.localStorage.washPercentage + "%<br/>" + window.localStorage.wash2ColorBadge : " + #" + window.localStorage.wash2Color) + "<br />&rightarrow;<br />" + window.localStorage.hue2ColorBadge + "<br />=<br />" + wash2BadgeElement.value;
+				wash2BadgeElement.value = window.localStorage.hue2PaletteBadge + (window.localStorage.wash2ColorBadge ? "<br />+ " + window.localStorage.washPercentage + "% <br />" + window.localStorage.wash2ColorBadge : " + #" + window.localStorage.wash2Color) + "<br />=<br />" + wash2BadgeElement.value;
 				var wash2BadgeH5 = document.getElementsByClassName("share-on")[0].parentElement.querySelectorAll("h5")[1];
-				wash2BadgeH5.innerHTML = "HueTo Badge Code";
+				wash2BadgeH5.innerHTML = "WashTo Badge Code";
 				wash2BadgeH5.style.color = "red";
 				return;
 			} else {
@@ -53,7 +53,7 @@ javascript: (function() {
 				window.location = "http://www.colourlovers.com/palette/" + _paletteID;
 			}
 		} else {
-			var washP = 25;
+			var washP = 33;
 			if (window.localStorage && window.localStorage.washPercentage)
 				washP = window.localStorage.washPercentage;
 			var wP = washP/100;
@@ -92,14 +92,19 @@ javascript: (function() {
 					window.localStorage.wash2ColorBadge = "";
 				} catch (e) {}
 				for (var c = 0; c < 5; c++) {
-					var inc = rgb2RGB(c1[c]);
-					var out = new Array(3);
-					out.r = inc.r * dP + convert.r * wP;
-					out.g = inc.g * dP + convert.g * wP;
-					out.b = inc.b * dP + convert.b * wP;
-					var hue2Color = ("0" + rgbRound(out.r).toString(16)).slice(-2) + ("0" + rgbRound(out.g).toString(16)).slice(-2) + ("0" + rgbRound(out.b).toString(16)).slice(-2);
 					colorBoxOnMouseDown(c);
-					basicHex.value = hue2Color;
+					if (c == hue2S) {
+						//We do not do the transform on the target slot because it can change the RGB color slightly.
+						basicHex.value = c2;
+					} else {
+						var inc = rgb2RGB(c1[c]);
+						var out = new Array(3);
+						out.r = inc.r * dP + convert.r * wP;
+						out.g = inc.g * dP + convert.g * wP;
+						out.b = inc.b * dP + convert.b * wP;
+						var hue2Color = ("0" + rgbRound(out.r).toString(16)).slice(-2) + ("0" + rgbRound(out.g).toString(16)).slice(-2) + ("0" + rgbRound(out.b).toString(16)).slice(-2);
+						basicHex.value = hue2Color;
+					}
 					updateBasicFromForm("", "basicHex", true);
 					if (c < 4) {
 						wW[c] = Math.round(parseFloat(w1[c]) * (92 * 5));

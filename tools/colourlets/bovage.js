@@ -31,6 +31,8 @@ javascript: (function() {
 			avColor = ("0" + Math.round(red).toString(16)).slice(-2) + ("0" + Math.round(green).toString(16)).slice(-2) + ("0" + Math.round(blue).toString(16)).slice(-2);
 			window.open("http://www.colourlovers.com/color/" + avColor + "?weighted");
 		}
+	} else if (document.title && document.title.indexOf("Invalid Color") > 0) {
+			document.location = document.location.href.split("?")[0].replace("color/","colors/add?hex=");
 	} else if (document.getElementById("add-mod-color-form") && document.getElementById("colorDesc").value=="") {
 		if (window.localStorage && window.localStorage.avBadge)
 			document.getElementById("colorDesc").value = "An average of \n" + window.localStorage.avBadge;

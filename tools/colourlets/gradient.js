@@ -11,6 +11,7 @@ javascript: (function() {
 						window.localStorage.grColor2 = grColor;
 						window.localStorage.grBadge2 = grBadge;
 						window.localStorage.removeItem("grPaletteID");
+						window.localStorage.removeItem("expPaletteID");
 					} catch (e) {}
 				} else {
 					try {
@@ -62,6 +63,6 @@ javascript: (function() {
 		gradientBadgeH5.innerHTML = "Gradient Badge Code";
 		gradientBadgeH5.style.color = "red";
 	} else {
-		alert("To use this bookmark, you should be on a palette page or the COPASO page at COLOURlovers.com.");
+		alert("To use this bookmark, you should be on a color page or the COPASO page at COLOURlovers.com.");
 	}
 })();
