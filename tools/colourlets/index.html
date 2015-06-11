@@ -143,7 +143,10 @@ menu: tools
 
 		<p>The bookmarklet stores both your pattern and your palette, so the next time you click the bookmarklet on, say, a pattern, it will combine it with the last palette you used.  If the bookmarklet fails mysteriously, check the license on the palette or pattern you clicked on; it may not permit reuse.</p>
 
-	<h3 id="storage">Storing Text</h3>
+
+	<h3>Miscellany</h3>
+		
+	<h4 id="storage">Storing Text</h4>
 
 		<p>The text auto-population bookmarklet, "Storage", adds stored text (including HTML) of your choice to the description of a color, palette, or pattern that you're creating or editing, or to the comment box on a page you're not currently editing.  If there's already text there, it adds the stored text and a linebreak at the beginning of the existing description, or at the end of the existing comment.</p>
 
@@ -151,6 +154,9 @@ menu: tools
 
 		<p>Regardless of the type of ColourLovers page you're on, if you click Storage a second time, it will show you your current text and ask if you want to change it.  In that case be careful not to accidentally post a comment populated with the previous text, or with both versions of the text.</p>
 
+	<h4 id="random">Random</h4>
+
+		<p>"Random" takes you to a random page on the current pager: a random page of a user's patterns, a random page from your search results, a random page in a comment thread, etc.  To use, just click it.</p>
 		
 <h2 id="install">Install the Bookmarklets</h2>
 
@@ -190,6 +196,8 @@ menu: tools
 			<li><a class='bookmarkletAnchor' href='javascript:(function(){if (document.getElementsByClassName("create-pattern").length > 0) {var pattern=document.getElementsByClassName("create-pattern")[0].href.parseQuery()["patternDefinitionID"];var colors=document.getElementsByClassName("create-pattern")[0].href.parseQuery()["colors"];var palette=document.getElementsByClassName("create-pattern")[0].href.parseQuery()["pID"];if (pattern) try {window.localStorage.patternDefinitionID=pattern} catch(e){};if (palette) try {window.localStorage.pID=palette; window.localStorage.colors=colors;} catch(e){};if (window.localStorage.colors && window.localStorage.pID && window.localStorage.patternDefinitionID) window.open("http://www.colourlovers.com/patterns/add?colors=" + window.localStorage.colors + "&pID=" + window.localStorage.pID + "&patternDefinitionID=" + window.localStorage.patternDefinitionID);} else {alert("To use this bookmarklet, you should be on a palette, pattern, or pattern template page at COLOURlovers.com.");}})();'>P&amp;P</a> combines a pattern and a palette</li><!-- (last updated May 6th, 2015 with error handling) -->
 
 			<li><span>updated June 7th, 2015 to do comments</span> <a class='bookmarkletAnchor' href='javascript:(function() {if (window.location.hostname.indexOf("colourlovers") > 0) {var badge;if (window.localStorage && window.localStorage.stoBadge) {badge = window.localStorage.stoBadge;if (document.getElementById("pD_paletteDescription") || document.getElementById("paletteDesc") || document.getElementById("colorDesc") || document.getElementById("patternDesc") || document.getElementById("ajax-comments")) {var element = (document.getElementById("pD_paletteDescription") ? document.getElementById("pD_paletteDescription") : (document.getElementById("paletteDesc") ? document.getElementById("paletteDesc") : (document.getElementById("colorDesc") ? document.getElementById("colorDesc") : (document.getElementById("patternDesc") ? document.getElementById("patternDesc") : document.getElementById("ajax-comments")))));if (!element.value || element.value.indexOf(badge) < 0) {if (document.getElementById("ajax-comments")) {element.value = (element.value ? element.value + "<br/>" : "") + badge;} else {element.value = badge + (element.value ? "<br/>" + element.value : "");}} else {openBadgeEditor(badge);}} else {openBadgeEditor(badge);}} else {openBadgeEditor("");}} else {alert("To use this bookmarklet, you should be on a COLOURlovers page.");}function openBadgeEditor(badge){var tempB = prompt("Edit your stored description or comment here:",badge);if (tempB && tempB != badge) {try {window.localStorage.stoBadge = tempB;} catch (e) {}}}})();'>Storage</a>, the description/comment storage bookmarklet</li>
+
+			<li><span>added June 11th, 2015</span> <a class='bookmarkletAnchor' href='javascript:(function() {var pagers = document.getElementsByClassName("paging");if (pagers.length > 0 && pagers[0].getElementsByTagName("a").length > 0) {var links = pagers[0].getElementsByTagName("a");var lastLink = links[links.length - 2];var lastNumber = lastLink.innerHTML;var n = lastLink.href.indexOf(lastNumber);if (n < 0) {alert("This pager does not work with Random.");} else {var randNumber = Math.floor(Math.random() * lastNumber + 1);lastLink.href = lastLink.href.replace("page=" + lastNumber, "page=" + randNumber);lastLink.click();}} else {alert("To use this bookmarklet, you should be on a COLOURlovers page that has a pager.");}})();'>Random</a> picks a random page from a page list</li>
 		</ul>
 		</section>
 		
