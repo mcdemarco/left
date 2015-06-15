@@ -3,7 +3,7 @@ javascript: (function() {
 	if (pagers.length > 0 && pagers[0].getElementsByTagName("a").length > 0) {
 		var links = pagers[0].getElementsByTagName("a");
 		var lastLink = links[links.length - 2];
-		var lastNumber = lastLink.innerHTML;
+		var lastNumber = lastLink.innerHTML.replace(",","");
 		var n = lastLink.href.indexOf(lastNumber);
 		if (n < 0) {
 			alert("This pager does not work with Random.");

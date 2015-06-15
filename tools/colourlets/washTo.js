@@ -77,20 +77,20 @@ javascript: (function() {
 			// Determine the conversion for the current swatch.
 			var source = rgb2RGB(c1[hue2S]);
 			var target = rgb2RGB(c2);
-			// Apply the conversion to the full palette.
 			var convert = new Array(3);
-			/*target.r = source.r * (1- wP) + convert.r * wP;
-			target.r = (source.r - source.r * wP) + convert.r * wP;
-			(target.r - source.r  +  source.r * wP)  = convert.r * wP;*/
-			convert.r = rgbRoundTest(target.r/wP - source.r/wP  +  source.r);
-			convert.g = rgbRoundTest(target.g/wP - source.g/wP  +  source.g);
-			convert.b = rgbRoundTest(target.b/wP - source.b/wP  +  source.b);
-			if (convert.r > -1 && convert.g > -1 && convert.g > -1) {
-				var wash2Color = ("0" + rgbRound(convert.r).toString(16)).slice(-2) + ("0" + rgbRound(convert.g).toString(16)).slice(-2) + ("0" + rgbRound(convert.b).toString(16)).slice(-2);
+			/*target.r = source.r * dP + convert.r * wP;
+			 convert.r * wP = target.r - source.r * dP;
+			 convert.r = target.r/wP  - source.r*(dP/wP) */
+			convert.r = target.r/wP - source.r*(dP/wP);
+			convert.g = target.g/wP - source.g*(dP/wP);
+			convert.b = target.b/wP - source.b*(dP/wP);
+			if (rgbTest(convert)) {
+				var wash2Color = rgb2CSS(convert);
 				try {
 					window.localStorage.wash2Color = wash2Color;
 					window.localStorage.wash2ColorBadge = "";
 				} catch (e) {}
+				// Apply the conversion to the full palette.
 				for (var c = 0; c < 5; c++) {
 					colorBoxOnMouseDown(c);
 					if (c == hue2S) {
@@ -102,7 +102,7 @@ javascript: (function() {
 						out.r = inc.r * dP + convert.r * wP;
 						out.g = inc.g * dP + convert.g * wP;
 						out.b = inc.b * dP + convert.b * wP;
-						var hue2Color = ("0" + rgbRound(out.r).toString(16)).slice(-2) + ("0" + rgbRound(out.g).toString(16)).slice(-2) + ("0" + rgbRound(out.b).toString(16)).slice(-2);
+						var hue2Color = rgb2CSS(out);
 						basicHex.value = hue2Color;
 					}
 					updateBasicFromForm("", "basicHex", true);
@@ -142,6 +142,11 @@ javascript: (function() {
 		outColor.b = parseInt(cssColor.substring(4, 6), 16);
 		return outColor;
 	}
+	function rgb2CSS(convert) {
+		//Convert an rgb vector back to a color.
+		var outColor = ("0" + rgbRound(convert.r).toString(16)).slice(-2) + ("0" + rgbRound(convert.g).toString(16)).slice(-2) + ("0" + rgbRound(convert.b).toString(16)).slice(-2);
+		return outColor;
+	}
 	function rgbRound(floatRGB) {
 		//Round with bounding.
 		var rounded = Math.round(floatRGB);
@@ -149,11 +154,14 @@ javascript: (function() {
 		else if (rounded < 0) return 0;
 		else return rounded;
 	}	
-	function rgbRoundTest(floatRGB) {
-		//Round with failure.
-		var rounded = Math.round(floatRGB);
-		if (rounded > 255) return -1;
-		else if (rounded < 0) return -1;
-		else return rounded;
+	function rgbTest(vectorRGB,divisor) {
+		//Test an RGB vector for rgbness.
+		var rounded = (divisor ? Math.round(vectorRGB.r/divisor) : Math.round(vectorRGB.r));
+		if (rounded > 255 || rounded < 0) {return false;}
+		rounded = (divisor ? Math.round(vectorRGB.g/divisor) : Math.round(vectorRGB.g));
+		if (rounded > 255 || rounded < 0) {return false;}
+		rounded = (divisor ? Math.round(vectorRGB.b/divisor) : Math.round(vectorRGB.b));
+		if (rounded > 255 || rounded < 0) {return false;}
+		return true;
 	}	
 })();

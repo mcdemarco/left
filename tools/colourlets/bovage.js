@@ -32,10 +32,16 @@ javascript: (function() {
 			window.open("http://www.colourlovers.com/color/" + avColor + "?weighted");
 		}
 	} else if (document.title && document.title.indexOf("Invalid Color") > 0) {
-			document.location = document.location.href.split("?")[0].replace("color/","colors/add?hex=");
+			document.location = document.location.href.replace("?","&").replace("color/","colors/add?hex=");
 	} else if (document.getElementById("add-mod-color-form") && document.getElementById("colorDesc").value=="") {
-		if (window.localStorage && window.localStorage.avBadge)
-			document.getElementById("colorDesc").value = "An average of \n" + window.localStorage.avBadge;
+		if (window.localStorage && window.localStorage.avBadge) {
+			var badgeArticle = "An ";
+			var weighting = window.location.href.split("&");
+			if (weighting[1])
+				badgeArticle = "The " + (weighting[1] == "unweighted" ? "" : weighting[1]);
+			document.getElementById("colorDesc").value = badgeArticle + " average of \n" + window.localStorage.avBadge;
+		}
+		document.getElementById("colorTitle").focus();
 	} else {
 		alert("To use this bookmarklet, you should be on a palette page or a color naming page at COLOURlovers.com.");
 	}
