@@ -38,8 +38,8 @@ javascript: (function() {
 			var badgeArticle = "An ";
 			var weighting = window.location.href.split("&");
 			if (weighting[1])
-				badgeArticle = "The " + (weighting[1] == "unweighted" ? "" : weighting[1]);
-			document.getElementById("colorDesc").value = badgeArticle + " average of \n" + window.localStorage.avBadge;
+				badgeArticle = "The " + (weighting[1] == "unweighted" ? "" : weighting[1] + " ");
+			document.getElementById("colorDesc").value = badgeArticle + "average of \n" + window.localStorage.avBadge;
 		}
 		document.getElementById("colorTitle").focus();
 	} else {
