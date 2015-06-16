@@ -33,15 +33,22 @@ javascript: (function() {
 		}
 	} else if (document.title && document.title.indexOf("Invalid Color") > 0) {
 			document.location = document.location.href.replace("?","&").replace("color/","colors/add?hex=");
-	} else if (document.getElementById("add-mod-color-form") && document.getElementById("colorDesc").value=="") {
+	} else if ((document.getElementById("add-mod-color-form") && document.getElementById("colorDesc").value=="") || document.getElementsByClassName("create-a-palette").length > 0) {
 		if (window.localStorage && window.localStorage.avBadge) {
-			var badgeArticle = "An ";
-			var weighting = window.location.href.split("&");
+			var boBadge = "This color is ";
+			var weighting = window.location.href.split((document.getElementById("add-mod-color-form") ? "&" : "?"));
 			if (weighting[1])
-				badgeArticle = "The " + (weighting[1] == "unweighted" ? "" : weighting[1] + " ");
-			document.getElementById("colorDesc").value = badgeArticle + "average of \n" + window.localStorage.avBadge;
+				boBadge += "the " + (weighting[1] == "unweighted" ? "" : weighting[1] + " ");
+			else 
+				boBadge += "an ";
+			boBadge += "average of \n" + window.localStorage.avBadge;
+			if (document.getElementById("colorDesc")) {
+				document.getElementById("colorDesc").value = boBadge;
+				document.getElementById("colorTitle").focus();
+			} else {
+				document.getElementById("ajax-comments").value = boBadge;
+			}
 		}
-		document.getElementById("colorTitle").focus();
 	} else {
 		alert("To use this bookmarklet, you should be on a palette page or a color naming page at COLOURlovers.com.");
 	}
