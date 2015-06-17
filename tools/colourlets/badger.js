@@ -1,4 +1,4 @@
-javascript: (function() {
+javascript:(function() {
 	if (document.getElementsByClassName("share-on").length > 0) {
 		var addBadge = document.getElementsByClassName("share-on")[0].parentElement.querySelector("input").value;
 		if (window.localStorage) {
@@ -19,6 +19,12 @@ javascript: (function() {
 				} else {
 					element.value = badge + (element.value ? "<br/>" + element.value : "");
 				}
+			}
+			element.focus();
+			if (confirm("Do you want to clear your badges now?")) {
+				try {
+					window.localStorage.removeItem("bajBadge");
+				} catch (e) {}
 			}
 		} else {
 			if (confirm("Do you want to clear your stored badges?")) {
