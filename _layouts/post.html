@@ -3,27 +3,29 @@ layout: layout
 menu: blog
 ---
 
-
+<article class="h-entry">
   <h2>
-    <a href="{{ page.url }}">{{ page.title }}</a>
+    <a href="{{ page.url }}" class="u-url p-name">{{ page.title }}</a>
   </h2>
 
   <section class="byline">
-    {{ page.date | date: "%B %e, %Y" }}
+    <time class="dt-published">{{ page.date | date: "%B %e, %Y" }}</time>
     {% for tag in page.tags %}
-    | <a href="/{{ site.tag_dir }}/{{ tag }}">{{ tag }}</a>
+    | <a class="p-category" href="/{{ site.tag_dir }}/{{ tag }}">{{ tag }}</a>
     {% endfor %}
 	  {% if page.checked %}
 	  <span style="float:right;"> Links checked: {{ page.checked | date: "%B %e, %Y" }}</span>
 	  {% endif %}
   </section>
 
-  {{ content }}
-
+	<section class="e-content">
+		{{ content }}
+	</section>
+	
   <section class="meta">
     <section class="copy byline" style="line-height: 1.7em;">
       <img src="/images/avatar-color-cropped.png" style="height:50px; width:50px;"/>
-      <a href="/bio/"><span class="fixentity">&copy;</span> {{ page.date | date: "%Y" }} &nbsp; M. C. DeMarco</a>
+      <span><span class="fixentity">&copy;</span> {{ page.date | date: "%Y" }} <a class="p-author h-card" href="http://mcdemarco.net/" rel="author">M. C. DeMarco</a></span>
       <br />
       {% if page.previous %}
       <a href="{{ page.previous.url }}" title="{{ page.previous.title }}"><span class="fixentity">&ll;</span> Previous</a>
@@ -38,3 +40,6 @@ menu: blog
       {% endif %}
     </section>
   </section>
+
+</article>
+		
