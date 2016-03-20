@@ -1,0 +1,15 @@
+---
+layout: page
+title: "Tools for Finding Worlds"
+menu: tools
+date: 2016-01-26 11:15:00
+---
+[504](https://boardgamegeek.com/boardgame/175878/504) is an unusually modular board game by Friedemann Friese, the creator of [Power Grid](https://boardgamegeek.com/boardgame/2651/power-grid).  There are 504 different games, or "worlds", to explore in the modular rule system, each using three different mechanics from a set of 9 possibilities.  The mechanics get different weights according to the order in which the modules are selected.  Each world has a unique name; for example, the recommended starter world is 123: The World of Traveling Pioneers with a Bias to Individualism, using the modules Pick Up & Deliver, Race, and Privileges.
+
+The [504 Almanac](/504almanac/) is my experiment in navigating publicly-available information about these worlds, most of which is buried on websites where navigation is difficult or obscure. The almanac provides a big, easy-to-use, (relatively) mobile-friendly navigation UI, as well as keyboard and URL navigation. (For example, the almanac for world 123 can be reached at [mcdemarco.net/504almanac/#123](/504almanac/#123).)  To randomize with the keyboard, press `r`.
+
+All links are to off-site information:  individual pages for rating each world at [the official 504 website](http://504-2f.de), rules for each world at the unofficial (but adequately blessed) [rules site](http://504rules.github.io/), and any tagged content for that world (or partial world description, e.g., 12x) at [BoardGameGeek](https://boardgamegeek.com/boardgame/175878/504).
+
+The code is available on [bitbucket](https://bitbucket.org/mcdemarco/504almanac/), under the MIT license.  The moving bits are based on the draggable balls demo for React Motion by Cheng Lou, also available under the MIT License.
+
+I wrote a bit more about the almanac project [in the blog](/blog/2016/02/07/504-almanac/).

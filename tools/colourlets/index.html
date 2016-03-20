@@ -173,11 +173,13 @@ menu: tools
 
 		<p>"Random" takes you to a random page on the current pager: a random page of a user's patterns, a random page from your search results, a random page in a comment thread, etc.  To use, just click it.</p>
 		
-	<h4 id="penny">Penny Jar</h4>
+	<h4 id="penny">Penny Jar and Penny Generator</h4>
 
 		<p>"Penny Jar" takes an unloved color and turns it into a penny-shaped tip. To use, click it while on the color page for the unloved color (with the title Invalid Color and the button to name the color), then click it again on a page with a comment box.  You can copy the penny elsewhere once you've gotten it into a comment box, or post the comment.</p>
 
 		<p>If you don't want to leave the color as a tip (or don't want to claim a tip you received), you can also post it to the group <a href="http://www.colourlovers.com/group/Take_a_Penny_Leave_a_Penny/">Take A Penny, Leave A Penny</a> for someone else to claim.</p>
+
+		<p>Though I usually discover unnamed colors using Bovage, I made another bookmarklet, "Penny Generator", to look for unclaimed colors directly.  Unlike my other bookmarklets, it uses <a href="http://llllll.li/randomColor/">an external script</a> to generate colors, then opens them in separate pages at ColourLovers.  Please note that there are <a href="http://www.colourlovers.com/group/Take_a_Penny_Leave_a_Penny/conversations/22689/Some_more_pennies_without_names_)?page=8#comment-244885">better tools</a> for finding lots of unclaimed colors; mine is just a proof of concept.</p>
 		
 <h2 id="install">Install the Bookmarklets</h2>
 
@@ -225,6 +227,8 @@ menu: tools
 
 			<li><span>updated June 12th, 2015 for extra-long lists</span> <a class='bookmarkletAnchor' href='javascript:(function() {var pagers = document.getElementsByClassName("paging");if (pagers.length > 0 && pagers[0].getElementsByTagName("a").length > 0) {var links = pagers[0].getElementsByTagName("a");var lastLink = links[links.length - 2];var lastNumber = lastLink.innerHTML.replace(",","");var n = lastLink.href.indexOf(lastNumber);if (n < 0) {alert("This pager does not work with Random.");} else {var randNumber = Math.floor(Math.random() * lastNumber + 1);lastLink.href = lastLink.href.replace("page=" + lastNumber, "page=" + randNumber);lastLink.click();}} else {alert("To use this bookmarklet, you should be on a COLOURlovers page that has a pager.");}})();'>Random</a> picks a random page from a page list</li>
 			<li><span>updated June 19, 2015 with hex code in title</span> <a class='bookmarkletAnchor' href='javascript:(function() {var color;if (document.title && document.title.indexOf("Invalid Color") > 0) {color = document.location.href.split("color/")[1].substring(0,6);try {window.localStorage.pennyColor = color;} catch (e) {}} else if (document.getElementById("ajax-comments")) {if (window.localStorage && window.localStorage.pennyColor) {color = window.localStorage.pennyColor;var pennyBadge = "A color penny tip... ";pennyBadge += "<div><a title=\"color penny for #" + color + "\" href=\"http://www.colourlovers.com/color/" + color + "\"><span class=\"color\" style=\"width:16px;height:16px;margin:4px;border-radius:50%;border:2px solid rgba(0,0,0,0.3);background-color:#" + color + ";\"></span></a></div>";document.getElementById("ajax-comments").value += pennyBadge;document.getElementById("ajax-comments").focus();}} else {alert("To use this bookmarklet, you should be on an unloved color page or a page you can comment on at COLOURlovers.com.");}})();'>Penny Jar</a> turns an unloved color into a penny-shaped tip</li>
+			<li><span>added August 30, 2015</span> <a class=bookmarkletAnchor' href='javascript:(function(){function%20o(){for(var%20o=prompt(%22How%20many%20random%20colors%3F%22,%225%22),r=prompt(%22In%20what%20hue%3F%20(pink,%20red,%20orange,%20yellow,%20green,%20blue,%20purple,%20monochrome)%22,%22random%22),e=prompt(%22Light%20or%20dark%3F%22,%22random%22),n=randomColor({count:parseInt(o,10),hue:r,luminosity:e}),t=0;t%3Cn.length;t++)window.open(%22http://www.colourlovers.com/color/%22+n[t].substring(1,7))}if(0===document.getElementsByClassName(%22randomColorScriptAdded%22).length){var%20r=document.body.appendChild(document.createElement(%22script%22));r.src=%22https://cdnjs.cloudflare.com/ajax/libs/randomcolor/0.4.0/randomColor.min.js%22,r.className=%22randomColorScriptAdded%22,window.setTimeout(o,1e3)}else%20o()})();'>Penny Generator</a> opens random colors</li>
+
 		</ul>
 		</section>
 		
@@ -271,22 +275,23 @@ menu: tools
 
 		<section class="listing">
 		<ul>
+			<li>Blend: <a href="blend.js">uncompressed source</a>, <a href="blend-compressed-encoded.js">compressed source</a></li>
 			<li>Bovage: <a href="bovage.js">uncompressed source</a>, <a href="bovage-compressed-encoded.js">compressed source</a></li>
 			<li>Copasedit: <a href="copasedit.js">uncompressed source</a>, <a href="copasedit-compressed-encoded.js">compressed source</a></li>
-			<li>Blend: <a href="blend.js">uncompressed source</a>, <a href="blend-compressed-encoded.js">compressed source</a></li>
-			<li>Gradient: <a href="gradient.js">uncompressed source</a>, <a href="gradient-compressed-encoded.js">compressed source</a></li>
 			<li>Exponent: <a href="exponent.js">uncompressed source</a>, <a href="exponent-compressed-encoded.js">compressed source</a></li>
-			<li>Wash: <a href="wash.js">uncompressed source</a>, <a href="wash-compressed-encoded.js">compressed source</a></li>
+			<li>Gradient: <a href="gradient.js">uncompressed source</a>, <a href="gradient-compressed-encoded.js">compressed source</a></li>
 			<li>Hue: <a href="hue.js">uncompressed source</a>, <a href="hue-compressed-encoded.js">compressed source</a></li>
 			<li>HueTo: <a href="hueTo.js">uncompressed source</a>, <a href="hueTo-compressed-encoded.js">compressed source</a></li>
 			<li>HueTo2: <a href="hueTo2.js">uncompressed source</a>, <a href="hueTo2-compressed-encoded.js">compressed source</a></li>
+			<li>Penny Generator: <a href="pennyGenerator.js">uncompressed source</a></li>
+			<li>Wash: <a href="wash.js">uncompressed source</a>, <a href="wash-compressed-encoded.js">compressed source</a></li>
 			<li>WashTo: <a href="washTo.js">uncompressed source</a>, <a href="washTo-compressed-encoded.js">compressed source</a></li>
 		</ul>
 		</section>
 		
 <h2 id="links">Links and Credits</h2>
 
-		<p>These bookmarklets are by <a href="/bio/">M. C. DeMarco</a>.  They do not use the COLOURlovers API, only javascript.  I also <a href="/blog/2015/04/22/colourloving/">blogged about making them and my color widgets</a>, with more details of how and why.  I used <a href="http://chriszarate.github.io/bookmarkleter/">this compressor</a> to make the compressed versions.</p>
+<p>These bookmarklets are by <a href="/bio/">M. C. DeMarco</a>.  They do not use the COLOURlovers API, only javascript.  I also <a href="/blog/2015/04/22/colourloving/">blogged about making them and my color widgets</a>, with more details of how and why.  I used <a href="http://chriszarate.github.io/bookmarkleter/">this compressor</a> to make the compressed versions, and <a href="http://llllll.li/randomColor/">this code</a> for the Penny Generator.</p>
 
 		<p>Here's some of my other handy stuff:</p>
 
