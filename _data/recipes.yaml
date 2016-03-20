@@ -60,6 +60,8 @@
     filename: rye
   - name: Yes-Knead Challah
     filename: challah
+  - name: Parker House Rolls
+    filename: parkerHouseRolls
   - name: Artisan Bread Index
     filename: artisanIndex
 
@@ -69,6 +71,8 @@
   - name: Blueberry Yogurt Pancakes
     filename: blueberryPancakes
   - name: Non-dairy Pancakes
+    filename: pancakes
+  - name: Dairy Pancakes
     filename: pancakes
   - name: Crepes
     filename: crepes
@@ -80,6 +84,8 @@
     filename: blueberryCornMuffins
   - name: Banana Cranberry Muffins
     filename: bananaCranberry
+  - name: Honey Pear Muffins
+    filename: honeyPear
   - name: Carrot Spice Muffins
     filename: carrotSpice
   - name: Savory Zucchini Muffins
@@ -106,6 +112,10 @@
     filename: roastedPotatoes
   - name: Roasted Green Beans
     filename: roastedHaricots
+  - name: Roasted Broccoli
+    filename: roastedBroccoli
+  - name: Roasted Okra
+    filename: roastedOkra
   - name: Moroccan Spice Mix
     filename: spiceMix
   - name: North African Spiced Carrot and Parsnip Salad
@@ -156,6 +166,8 @@
     filename: bolognese
   - name: Meat Sauce
     filename: meatsauce
+  - name: Soba Salad
+    filename: sobaSalad
 
 - name: Meat
   filename: meat
@@ -196,6 +208,8 @@
     filename: thighStew
   - name: Turkey Scaloppini
     filename: scaloppini
+  - name: Baked Turkey Tenders
+    filename: bakedTurkeyTenders
   - name: Crockpot Bourbon Turkey Tenders
     filename: crockpotTurkey
   - name: Turkey Meatballs
@@ -216,6 +230,8 @@
     filename: salmonSteaks
   - name: Baked Mackerel
     filename: mackerel
+  - name: Fried Smelt
+    filename: friedSmelt
   - name: Fish Kuku
     filename: kuku
   - name: Salmon Poke
@@ -234,6 +250,8 @@
     filename: easyMints
   - name: Candied Grapefruit Peels
     filename: grapefruitPeels
+  - name: Sonhos (Portuguese Doughnuts)
+    filename: sonhos
 
 - name: C is for Cookie
   filename: cookies
@@ -252,6 +270,8 @@
     filename: lemonDrop
   - name: Chocolate Chip Cookies
     filename: chocolateChip
+  - name: Hermit Cookies
+    filename: hermits
   - name: Almond Butter Cutouts
     filename: almondButter
   - name: Nan Berenji
@@ -274,3 +294,7 @@
     filename: pear
   - name: Pecan Pie
     filename: pecan
+  - name: Blueberry Turnovers
+    filename: blueberryTurnovers
+  - name: Spanakopita
+    filename: spanakopita
