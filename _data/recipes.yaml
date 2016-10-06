@@ -22,6 +22,8 @@
     filename: toddy
   - name: Pitúies
     filename: pituie
+  - name: Seder Plate
+    filename: seder
 
 - name: Soup
   filename: soup
@@ -34,12 +36,18 @@
     filename: chickpea
   - name: Easy Pasta e Fagioli
     filename: fazool
+  - name: Matzah Ball Soup
+    filename: matzaball
+  - name: Italian Wedding Soup
+    filename: italianWedding
 
 - name: Bread
   filename: bread
   files:
   - name: Bread Advice
     filename: advice
+  - name: Bread Math
+    filename: math
   - name: Cornstarch Wash
     filename: cornstarch
   - name: Caramel Coloring for Pumpernickel Bread
@@ -62,6 +70,10 @@
     filename: challah
   - name: Parker House Rolls
     filename: parkerHouseRolls
+  - name: Garlic Breadsticks
+    filename: garlicBreadsticks
+  - name: Spicy Cinnamon Flatbread
+    filename: cinnamonFlatbread
   - name: Artisan Bread Index
     filename: artisanIndex
 
@@ -73,7 +85,7 @@
   - name: Non-dairy Pancakes
     filename: pancakes
   - name: Dairy Pancakes
-    filename: pancakes
+    filename: pancakesD
   - name: Crepes
     filename: crepes
   - name: Non-dairy Cornbread
@@ -86,8 +98,12 @@
     filename: bananaCranberry
   - name: Honey Pear Muffins
     filename: honeyPear
+  - name: Chocolate Ricotta Mini Muffins
+    filename: chocolateRicotta
   - name: Carrot Spice Muffins
     filename: carrotSpice
+  - name: Carrot Corn Mini Muffins
+    filename: carrotCorn
   - name: Savory Zucchini Muffins
     filename: zucchini
 
@@ -116,18 +132,24 @@
     filename: roastedBroccoli
   - name: Roasted Okra
     filename: roastedOkra
+  - name: Tzimmes
+    filename: tzimmes
+  - name: Polenta
+    filename: polenta
   - name: Moroccan Spice Mix
     filename: spiceMix
   - name: North African Spiced Carrot and Parsnip Salad
     filename: carrotParsnip
   - name: Chickpea Salad with Fennel, Tomatoes and Olives
     filename: chickpeaFennel
-  - name: Cucumber Salad
+  - name: Mizeria (Polish Cucumber Salad)
     filename: cucumber
   - name: Tomato and Watermelon Salad
     filename: tomatoWatermelon
   - name: Grape Tomato and Avocado Salad
     filename: tomatoAvocado
+  - name: Waldorf Salad
+    filename: waldorfSalad
   - name: Breakfast Lentils
     filename: breakfastLentils
 
@@ -140,7 +162,7 @@
     filename: stuffedPeppers
   - name: Roz bil Shaghria
     filename: roz
-  - name: Risotto
+  - name: About Risotto
     filename: aboutRisotto
   - name: Saffron Risotto
     filename: saffronRisotto
@@ -174,6 +196,10 @@
   files:
   - name: Meatballs
     filename: meatballs
+  - name: Fake Bolognese Sauce
+    filename: bolognese
+  - name: Meat Sauce
+    filename: meatsauce
   - name: Meatloaf for Passover
     filename: meatloaf
   - name: Beef and Bean Chili
@@ -206,6 +232,8 @@
     filename: treda
   - name: Moroccan Spiced Chicken Stew
     filename: thighStew
+  - name: Spicy Asian Chicken
+    filename: asianChicken
   - name: Turkey Scaloppini
     filename: scaloppini
   - name: Baked Turkey Tenders
@@ -228,6 +256,10 @@
     filename: pankoSalmon
   - name: Salmon Steaks
     filename: salmonSteaks
+  - name: Broiled Salmon
+    filename: broiledSalmon
+  - name: Baked Trout
+    filename: trout
   - name: Baked Mackerel
     filename: mackerel
   - name: Fried Smelt
@@ -252,6 +284,10 @@
     filename: grapefruitPeels
   - name: Sonhos (Portuguese Doughnuts)
     filename: sonhos
+  - name: Sufganiyot (Jelly Doughnuts)
+    filename: sufganiyot
+  - name: Haroset
+    filename: haroset
 
 - name: C is for Cookie
   filename: cookies
@@ -268,6 +304,8 @@
     filename: aniseDrop
   - name: Anginetti
     filename: lemonDrop
+  - name: Palmiers
+    filename: palmiers
   - name: Chocolate Chip Cookies
     filename: chocolateChip
   - name: Hermit Cookies
@@ -278,6 +316,8 @@
     filename: riceFlour
   - name: Red Bean Paste Hamantaschen
     filename: redBeanHamantaschen
+  - name: Suspiros (Meringues)
+    filename: suspiros
 
 - name: Pie!
   filename: pie
@@ -296,5 +336,7 @@
     filename: pecan
   - name: Blueberry Turnovers
     filename: blueberryTurnovers
+  - name: Pastéis de Nata
+    filename: pasteisDeNata
   - name: Spanakopita
     filename: spanakopita

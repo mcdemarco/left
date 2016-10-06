@@ -9,4 +9,4 @@ Disallow: /files/recipes/
 Disallow: /node/
 Disallow: /social/
 Disallow: /tamination/
-
+Disallow: /tools/504/rules/

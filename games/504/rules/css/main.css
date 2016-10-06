@@ -1,0 +1,424 @@
+* {
+	font-size: 12px;
+}
+
+.row.top > div {
+	display:flex;
+	margin:0 auto;
+}
+
+body { background-color:#ddd; }
+
+.top {
+	display:flex;
+}
+
+.quickMenu {
+	position:absolute;
+	right:0.6em;
+	top:1em;
+}
+
+.quickMenu div {
+	display:inline-block;
+}
+
+.quickMenu .btn-sm {
+	font-size:1.5em;
+	padding:5px 3px;
+}
+
+.top p {
+	margin-bottom: 0;
+}
+
+p {
+	margin-bottom: 0.75em;
+	border-bottom:1px dashed rgba(56, 143, 127,0.3); 
+	padding-bottom: 0.75em;
+}
+
+p:last-child {
+	margin-bottom: 0;
+	padding-bottom: 0;
+	border-bottom:none;
+}
+
+.dice {
+	font-size: 25px;
+}
+
+ul.parts {
+	padding-left: 0;
+}
+ul.parts li {
+	display: inline;
+	list-style-type: none;
+}
+
+ul.parts li:after {
+	content: ", ";
+}
+
+ul.parts li:last-child:after {
+	content: "";
+}
+
+ul.parts span {
+	width: 1.5em;
+	height: 1.5em;
+	font-size: 0.8em;
+	padding: 1px;
+	margin-right: 0.2em;
+	display: inline-block;
+	line-height: 100%;
+	-moz-border-radius: 50%;
+	border-radius: 50%;
+	border: 1px solid black;
+	text-align: center;
+}
+
+ol {
+	padding-left: 15px;
+}
+
+.example img {
+	width: 300px;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table td, table th {
+	text-align: center;
+	border: 1px solid black;
+	padding: 0.2em;
+}
+
+table th {
+	font-weight: bold;
+}
+
+.icon {
+	display: inline-block;
+	line-height: 100%;
+	width: 1em;
+	height: 1em;
+	background-size: 1em 1em;
+}
+
+.bigicon {
+	display: inline-block;
+	line-height: 100%;
+	width: 2em;
+	height: 2em;
+	background-size: 2em 2em;
+	vertical-align: middle;
+}
+
+.meeple {
+	width: 1.5em;
+	height: 1.5em;
+}
+
+.grass { background-image: url('../img/grass-icon.png'); }
+.forest { background-image: url('../img/forest-icon.png'); }
+.grain { background-image: url('../img/grain-icon.png'); }
+.desert { background-image: url('../img/desert-icon.png'); }
+.city { background-image: url('../img/city-icon.png'); }
+.mountain { background-image: url('../img/mountain-icon.png'); }
+.factory { background-image: url('../img/factory-bigicon.png'); }
+.water-adjacent { background-image: url('../img/water-adjacent-icon.png'); }
+
+.heading.map1 { background-image: url('../img/map1.png'); background-position:80% 60%; background-repeat:no-repeat; }
+.heading.map1.players2 { background-image: url('../img/map1-2p.png'); background-position:80% 60%; background-repeat:no-repeat; }
+.heading.map1.players3 { background-image: url('../img/map1-3p.png'); background-position:80% 60%; background-repeat:no-repeat; }
+.heading.map1.players4 { background-image: url('../img/map1-4p.png'); background-position:80% 60%; background-repeat:no-repeat; }
+.heading.map2 { background-image: url('../img/map2.png'); background-position:80% 60%; background-repeat:no-repeat; }
+.heading.map3 { background-image: url('../img/map3.png'); background-position:80% 60%; background-repeat:no-repeat; }
+.heading.map4 { background-image: url('../img/map4.png'); background-position:80% 60%; background-repeat:no-repeat; }
+.heading.map5 { background-image: url('../img/map5.png'); background-position:80% 60%; background-repeat:no-repeat; }
+.heading p { border:none; margin:0; padding:0; }
+
+
+.navbar-default {
+    background-color: #ddd;
+    border-color: #E7E7E7;
+	background-image: linear-gradient(to bottom,#ccc 0,#bbb 100%);
+}
+
+.top h2 {
+	font-size: 1.1em;
+	font-weight: bold;
+	margin: 0;
+}
+
+.name h1 {
+	font-size: 1.5em;
+	font-weight: bold;
+	margin: 1em 0;
+	line-height: 1.5em;	
+	padding-right:5em;
+}
+
+.name h1 span {
+	font-size: 1em;
+}
+
+.name .col-md-12, .name .col-xs-12 {
+	background-color: #333;
+	color: white;
+}
+
+.name input {
+	color: black;
+	width: 3em;
+}
+
+.top .edge {
+	padding-left: 0;
+	padding-right: 0;
+}
+
+.top .heading {
+	background-color: #333;
+	color: white;
+	height: auto;
+	margin-top: -15px;
+	margin-bottom: 15px;
+	border-radius: 0 0 15px 15px;
+	padding-left: 15px;
+	padding-right: 15px;
+	padding-top: 25px;
+	display: inline-block;
+	width: 100%;
+	padding-bottom: 0.25em;
+}
+
+.section {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	margin-bottom: 1em;
+}
+
+.section .col-md-2 {
+	background-color: #388f7f;
+	border-radius: 0 15px 15px 0;
+	padding: 15px;
+	margin: 0;
+	min-width:120px;
+}
+
+.section .col-md-2 h1 {
+	color: white;
+	font-size: 1.1em;
+	font-weight: bold;
+	margin: 0;
+}
+
+.section .col-md-10 {
+	border: none;
+	margin-left: -15px;
+	padding: 1em 4em 1em 2em;
+	background-color: #fff;
+	border-radius: 1em;
+}
+
+.notes {
+	margin-bottom: 15px;
+	background-color: #fff;
+	padding: 2em;
+	border-radius: 1em;
+	margin-right: 0px;
+}
+
+.note {
+	margin-bottom: 10px;
+}
+
+.note h2 {
+	font-size: 1.1em;
+	font-weight: bold;
+	margin: 0;
+	display: inline-block;
+}
+
+.note h2.invert {
+	vertical-align: top;
+	color: white;
+	background-color: #CC6D62;
+	padding:3px 8px;
+	margin:3px 0;
+	border-radius: 15px;
+}
+
+.note p {
+	margin: 0;
+	border-bottom:none;
+}
+
+.warning  {
+	border: 1px solid #972f86;
+	border-top: 5px solid #972f86;
+	border-bottom: 5px solid #972f86;
+	margin-right: 0;
+	margin-bottom: 15px;
+	padding: 7px;
+	background-color:#fff;
+}
+
+.privileges img { width:100%; max-width:73px; }
+.privileges>div { padding-bottom:20px; }
+.cards h3 { margin: 0 0 0.7em 0; padding-bottom: 0.3em; border-bottom:1px dashed rgba(56, 143, 127,0.3); font-size:1.5em; }
+
+#menu {
+	width:100%;
+	background-color:#666;
+	padding:1em;
+	color:#fff;
+	display:none;
+}
+
+#menu .modules button img {
+	width:100%;
+	max-width:32px;
+}
+
+
+
+#menu p { color:#000; border:none; margin:0; padding:0; }
+
+#menu .modules button .locked {
+	position:absolute;
+	right:0;
+	top:0;
+	z-index:0;
+	margin:2px;
+	padding:0;
+	opacity:0.7;
+}
+
+#menu .modules button.stateon {
+}
+#menu .modules button.stateon img {
+	opacity:1;
+}
+#menu .modules button.stateoff  {
+	background-color:#ccc;
+	opacity:0.7;
+}
+#menu .modules button.stateoff img {
+	opacity:0.3;
+}
+
+#menu .modules button.statelock {
+	opacity:1;
+}
+
+#menu input {
+	vertical-align:text-bottom;
+	margin-right:6px;
+}
+
+#menu label {
+	margin:0px;
+	padding:0 0 0 6px;
+}
+
+#menu div.countries {
+}
+
+#menu div.countries ul {
+	list-style: none;
+	float:right;
+}
+
+#menu div.countries ul li {
+	float:left;
+	margin:3px;
+}
+
+#menu div.countries ul li.off {
+	opacity:0.3;
+}
+
+.section .mod1, .section .mod1 h1, .mod1 { background-color:#97b911; color:#000000; }
+.section .mod2, .section .mod2 h1, .mod2 { background-color:#009ee0; color:#FFFFFF; }
+.section .mod3, .section .mod3 h1, .mod3 { background-color:#007930; color:#FFFFFF; }
+.section .mod4, .section .mod4 h1, .mod4 { background-color:#a7d6c9; color:#000000; }
+.section .mod5, .section .mod5 h1, .mod5 { background-color:#cd071e; color:#FFFFFF; }
+.section .mod6, .section .mod6 h1, .mod6 { background-color:#ffed00; color:#000000; }
+.section .mod7, .section .mod7 h1, .mod7 { background-color:#e06c9e; color:#FFFFFF; }
+.section .mod8, .section .mod8 h1, .mod8 { background-color:#f7a800; color:#000000; }
+.section .mod9, .section .mod9 h1, .mod9 { background-color:#972f86; color:#FFFFFF; }
+
+#worldno span { padding:4px 10px; }
+
+@media print {
+	* {
+		font-size: 10px;
+	}
+	
+	body { background-color:#fff; }
+	/*
+	.container {
+		page-break-after: always;
+	}
+       */
+	.row {
+		page-break-inside: avoid;
+	}
+	
+	#editbutton, #randomize {
+		display: none;
+	}
+	p {
+		margin-bottom: 5px;
+		padding-bottom:0;
+		border:none;
+	}
+	.name .col-md-12, .name .col-xs-12 {
+		background-color: black;
+		color: white;
+	}
+	.top .heading {
+		background-color: black;
+		color: white;
+		height: 75px;
+		margin-top: -15px;
+		margin-bottom: 15px;
+		border-radius: 0 0 15px 15px;
+		padding-left: 15px;
+		padding-right: 15px;
+		padding-top: 25px;
+	}
+	.section .col-md-2 {
+		background-color: black;
+		border-radius: 0 15px 15px 0;
+		padding: 15px;
+		margin: 0;
+	}
+	.section .col-md-10 {
+		border: 1px solid black;
+		margin-left: -15px;
+		padding-left: 30px;
+		padding-top:0;
+		padding-bottom:0;
+	}
+	
+	#menu, 
+	#menu * { 
+		display:none!important;
+		visibility: hidden;
+	}
+	
+	.section .col-md-2.col-xs-2, #worldno span, .section .col-md-2.col-xs-2 h1 { background-color: #000 !important; color: #FFFFFF !important; }
+
+	#worldno span { padding:0; }
+	
+	.cards { display:none; }
+
+}

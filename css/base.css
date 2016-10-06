@@ -277,6 +277,8 @@ p.timestamp {
     color: #666;
     font-size: smaller;
     padding-top: 20px; }
+a.hidden {
+    display:none;}
 
 .alert {color: #991100;}
 

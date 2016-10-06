@@ -11,4 +11,4 @@ My app.net app [Paste](http://paste-app.net) is a pinboard-style app that I some
 
 I wrote a reading tool, a [bicolorization bookmarklet](/bicolorize/), along with some revisions to an existing bicolored Tetris game, intended for use with anaglyph glasses.  As usual, there are more details [in the blog](/blog/2014/10/26/bicolorize/).
 
-I've also made a couple of [gaming tools](/tools/kb/) for my favorite board game, Kingdom Builder, an [almanac](/tools/504/) for the game 504, and some [bookmarklets](/tools/colourlets/) for the ColourLovers website.
+I've also made a few [gaming tools](/games/), and some [bookmarklets](/tools/colourlets/) for the ColourLovers website.
