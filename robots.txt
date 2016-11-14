@@ -10,3 +10,4 @@ Disallow: /node/
 Disallow: /social/
 Disallow: /tamination/
 Disallow: /tools/504/rules/
+Disallow: /tools/scree/1.0/
