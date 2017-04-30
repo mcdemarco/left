@@ -22075,7 +22075,7 @@
 				null,
 				_react2.default.createElement(
 					'a',
-					{ href: "http://504rules.github.io/#" + wN, title: text },
+					{ href: "/games/504/rules/#" + wN, title: text },
 					_react2.default.createElement(
 						'span',
 						{ className: 'short' },

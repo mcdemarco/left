@@ -10,7 +10,7 @@ date: 2016-01-26 11:15:00
 
 The [504 Almanac](/504almanac/) is my experiment in navigating publicly-available information about these worlds, most of which is buried on websites where navigation is difficult or obscure. The almanac provides a big, easy-to-use, (relatively) mobile-friendly navigation UI, as well as keyboard and URL navigation. (For example, the almanac for world 123 can be reached at [mcdemarco.net/504almanac/#123](/504almanac/#123).)  To randomize with the keyboard, press `r`.
 
-All links are to off-site information:  individual pages for rating each world at [the official 504 website](http://504-2f.de), rules for each world at the unofficial (but adequately blessed) [rules site](http://504rules.github.io/), a forum search for the world (or partial world description, e.g., 12x) at [BoardGameGeek](https://boardgamegeek.com/boardgame/175878/504), and also a tag search for the world there.
+All links are to off-site information:  individual pages for rating each world at [the official 504 website](http://504-2f.de), rules for each world at the unofficial (but adequately blessed) [rules site](http://504rules.github.io/) (or possibly my fork of it), a forum search for the world (or partial world description, e.g., 12x) at [BoardGameGeek](https://boardgamegeek.com/boardgame/175878/504), and also a tag search for the world there.
 
 In version 2.0, the Almanac incorporates some (static, local, aggregated) information about ratings and tags to randomize to particularly good worlds, bad worlds, discussed worlds, and as-yet unexplored worlds.  These are accessed with the button row above the world name; the center button is still a simple randomizer.
 
@@ -22,4 +22,6 @@ I wrote a bit more about the almanac project [in the blog](/blog/2016/02/07/504-
 
 [504rules.github.io](http://504rules.github.io) is the unofficial rules site for 504.  It boils the Book of Worlds down into two sheets of virtual paper that, for an experienced player, can replace the rulebook.  I've done some work on it, especially on adding a full rules mode that will tell an inexperienced player everything they need to know.
 
-My development version is available [here](/tools/504/rules/).  To switch back and forth between the full and abbreviated rules click the document icon in the upper right.  There's a bit more about it [in the blog](/blog/2016/07/15/10-hours/).  To change the player count, click it.
+My development version is available [here](/games/504/rules/).  To switch back and forth between the full and abbreviated rules click the document icon in the upper right.  To change the player count, click it.
+
+There's a bit more about it [in the blog](/blog/2016/07/15/10-hours/).  

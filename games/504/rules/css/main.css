@@ -2,6 +2,10 @@
 	font-size: 12px;
 }
 
+.col-md-10 *, .col-xs-10 * {
+    font-size: 14px;
+}
+
 .row.top > div {
 	display:flex;
 	margin:0 auto;
@@ -255,6 +259,12 @@ table th {
 	border-radius: 15px;
 }
 
+.note.callout {
+    padding: 4px 6px;
+    background-color: #f9f9ed;
+    border: 1px dotted #dcdccf;
+}
+
 .note p {
 	margin: 0;
 	border-bottom:none;
@@ -404,7 +414,9 @@ table th {
 	.section .col-md-10 {
 		border: 1px solid black;
 		margin-left: -15px;
+		margin-right: 30px;
 		padding-left: 30px;
+		padding-right: 30px;
 		padding-top:0;
 		padding-bottom:0;
 	}

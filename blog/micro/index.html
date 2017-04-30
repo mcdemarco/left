@@ -1,10 +1,10 @@
 ---
 layout: layout
-title: "Recent Blog Posts"
+title: "Recent Microblog Posts"
 menu: blog
 ---
 
-  {% for post in site.posts limit: 5 %}
+  {% for post in site.tags.micro limit: 20 %}
 
 <article class="h-entry">
   <h2>

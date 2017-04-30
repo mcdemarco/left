@@ -4,15 +4,12 @@ CACHE MANIFEST
 # whenever you make any changes be sure to also update the comment below by changing the date and
 # incrementing the version number
 
-# 2016-07-02:v2.0
+# 2017-01-14:v2.1
 
 CACHE:
-index.html
 css/bootstrap-theme.css
-css/bootstrap-theme.css.map
 css/bootstrap-theme.min.css
 css/bootstrap.css
-css/bootstrap.css.map
 css/bootstrap.min.css
 css/main.css
 fonts/glyphicons-halflings-regular.eot
@@ -20,16 +17,19 @@ fonts/glyphicons-halflings-regular.svg
 fonts/glyphicons-halflings-regular.ttf
 fonts/glyphicons-halflings-regular.woff
 fonts/glyphicons-halflings-regular.woff2
-img/apple-touch-icon-180x180.png
 img/city-icon.png
 img/desert-icon.png
 img/example-2-i.png
 img/example-2-ii.png
+img/example-6-ii.png
 img/exploring-example.png
 img/factory-bigicon.png
 img/forest-icon.png
 img/grain-icon.png
 img/grass-icon.png
+img/map1-2p.png
+img/map1-3p.png
+img/map1-4p.png
 img/map1.png
 img/map2.png
 img/map3.png
@@ -39,6 +39,15 @@ img/meeple.png
 img/meeple_not.png
 img/mountain-icon.png
 img/water-adjacent-icon.png
+img/modules/icon-mod1.png
+img/modules/icon-mod2.png
+img/modules/icon-mod3.png
+img/modules/icon-mod4.png
+img/modules/icon-mod5.png
+img/modules/icon-mod6.png
+img/modules/icon-mod7.png
+img/modules/icon-mod8.png
+img/modules/icon-mod9.png
 img/privileges/card-l1-1.png
 img/privileges/card-l1-10.png
 img/privileges/card-l1-11.png
@@ -72,16 +81,6 @@ img/privileges/card-l3-6.png
 img/privileges/card-l3-7.png
 img/privileges/card-l3-8.png
 img/privileges/card-l3-9.png
-img/modules/icon-mod1.png
-img/modules/icon-mod2.png
-img/modules/icon-mod3.png
-img/modules/icon-mod4.png
-img/modules/icon-mod5.png
-img/modules/icon-mod6.png
-img/modules/icon-mod7.png
-img/modules/icon-mod8.png
-img/modules/icon-mod9.png
-js/bootstrap.js
 js/bootstrap.min.js
 js/jquery-1.11.3.min.js
 js/mustache.min.js
