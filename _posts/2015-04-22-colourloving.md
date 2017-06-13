@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Colourloving Bookmarklets and Widgets"
-tags: longpost sharedware tools
+tags: longpost sharedware tools bookmarklets
 created: 2015-04-22 12:40:00
 class: release
 ---

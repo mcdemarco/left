@@ -12,16 +12,46 @@ Use and distribute freely. CC0. Public domain. No rights reserved. Have fun.
 -->
 
 <script type="text/javascript">
-var boardsBase = ["Oracle", "Farm", "Oasis", "Tower",
-	"Tavern", "Barn", "Harbor", "Paddock"];
-var cardsKB = ["Fishermen", "Miners", "Merchants", "Workers", "Discoverers",
-	"Knights", "Hermits", "Lords", "Citizens", "Farmers"];
-var boardsNomads = ["Quarry", "Caravan", "Village", "Garden"];
-var cardsKBN = ["Families", "Shepherds", "Ambassadors"];
-var boardsCrossroads = ["Lighthouse", "Forester's Lodge", "Barracks", "Crossroads"];
-var taskCards = ["Home country" ,"Fortress" ,"Road" ,"Place of refuge" ,"Advance" ,"Compass point"];
-var boardsMarshlands = ["Canoe", "Fountain", "Temple", "Refuge"];
-var cardsKBM = ["Geologists", "Messengers", "Noblewomen", "Vassals", "Captains", "Scouts"];
+/* moved all information about the game here; no longer hidden in the code */
+var names = ["base","nomads","crossroads","marshlands","harvest"];
+var miniNames = ["capitol","caves","island"];
+var contents = {
+	boards: {
+		base: ["Oracle", "Farm", "Oasis", "Tower", "Tavern", "Barn", "Harbor", "Paddock"],
+		nomads: ["Quarry", "Caravan", "Village", "Garden"],
+		crossroads: ["Lighthouse", "Barracks", "Monastery", "City Hall"],
+		marshlands: ["Canoe", "Fountain", "Temple", "Refuge"],
+		harvest: ["Bazaar", "Mountain Sta.", "Cathedral", "University"]
+	},
+	goals: {
+		base: ["Fishermen", "Miners", "Merchants", "Workers", "Discoverers", "Knights", "Hermits", "Lords", "Citizens", "Farmers"],
+		nomads: ["Families", "Shepherds", "Ambassadors"],
+		marshlands: ["Geologists", "Messengers", "Noblewomen", "Vassals", "Captains", "Scouts"],
+		harvest: ["Rangers", "Mayors", "Chainers", "Travellers", "Homesteaders", "Rovers"]
+	},
+	tasks: {
+		crossroads: ["Home country", "Fortress", "Road", "Place of refuge", "Advance", "Compass point"]
+	}
+};
+//Has two castles means they need placement and is also part of the Capitol rule.
+var extraRules = {
+	hasCastles: {
+		base: true,
+		crossroads: true
+	},
+	hasTwoCastles: {
+		Oracle: true,
+		Harbor: true
+	},
+  cavesRule: {
+		Tavern: true
+	},
+  islandRule: {
+		Harbor: true,
+		Lighthouse: true
+	}
+};
+/* end game info */
 
 shuffle = function(o){ //v1.0
 	for(var j, x, i = o.length; i; j = parseInt(Math.random() * i), x = o[--i], o[i] = o[j], o[j] = x);
@@ -54,34 +84,31 @@ clearAll = function() {
 make_setup = function() {
 	clearAll();
 	boards = [];
-	cards = cardsKB;
-	tasks = taskCards;
-	base = document.getElementById("base").checked;
-	nomads = document.getElementById("nomads").checked;
-	crossroads = document.getElementById("crossroads").checked;
-	marshlands = document.getElementById("marshlands").checked;
-	capitol = document.getElementById("capitol").checked;
-	capitolRules = document.getElementById("capitolRules").checked;
-	caves = document.getElementById("caves").checked;
-	cavesRules = document.getElementById("cavesRules").checked;
-	island = document.getElementById("island").checked;
-	islandRules = document.getElementById("islandRules").checked;
+	goals = contents.goals.base;
+	tasks = contents.tasks.crossroads;
+	expansions = [];
+	minis = {};
+	for (var n = 0; n < names.length; n++) {
+		if (document.getElementById(names[n]).checked)
+			expansions.push(names[n]);
+	}
+	//degenerate case
+	if (expansions.length == 0)
+		expansions.push("base");
+
+	for (var m = 0; m < miniNames.length; m++) {
+		if (document.getElementById(miniNames[m]).checked)
+			minis[miniNames[m]] = document.getElementById(miniNames[m] + "Rules").checked ? "rules" : "odds";
+	}
+
 	castleBoards = 0;
-	if (base) {
-		boards = boards.concat(boardsBase);
-		castleBoards += 4;
-	}
-	if (nomads) {
-		boards = boards.concat(boardsNomads);
-		cards = cards.concat(cardsKBN);
-	}
-	if (crossroads) {
-		boards = boards.concat(boardsCrossroads);
-		castleBoards += 4;
-	}
-	if (marshlands) {
-		boards = boards.concat(boardsMarshlands);
-		cards = cards.concat(cardsKBM);
+
+	for (n = 0; n < expansions.length; n++) {
+		boards = boards.concat(contents.boards[expansions[n]]);
+		if (extraRules.hasCastles[expansions[n]])
+			castleBoards += 4;
+		if (contents.goals[expansions[n]])
+			goals = goals.concat(contents.goals.marshlands);
 	}
 
 	if (boards.length > 0)
@@ -92,44 +119,46 @@ make_setup = function() {
 	crossroadBoardsPicked = 0;
 	are_caves = false;
 	capitolsOut = 0;
-	if (caves && document.getElementById("cavesOdds").checked)
+	if (minis["caves"] && minis.caves == "odds")
 		are_caves = oddity(document.getElementById("cavesOddsOdds").value);
-	if (island && document.getElementById("islandOdds").checked && oddity(document.getElementById("islandOddsOdds").value))
+	if (minis["island"] && minis.island == "odds" && oddity(document.getElementById("islandOddsOdds").value))
 		document.getElementById("i0").value = "Island";
 
 	for (var i = 0; i < 4; ++i) {
 		var b = document.getElementById("b" + i);
 		b.value = shuffled_boards[i];
-		if (boardsCrossroads.indexOf(b.value) > -1) {
+		if (contents.boards.crossroads.indexOf(b.value) > -1) {
 			crossroadBoardsPicked++;
 			b.className = 'crossroads';
-		} else if (boardsNomads.indexOf(b.value) > -1) {
+		} else if (contents.boards.nomads.indexOf(b.value) > -1) {
 			b.className = 'nomads';
-		} else if (boardsMarshlands.indexOf(b.value) > -1) {
+		} else if (contents.boards.marshlands.indexOf(b.value) > -1) {
 			b.className = 'marshlands';
+		} else if (contents.boards.harvest.indexOf(b.value) > -1) {
+			b.className = 'harvest';
 		} else {
 			b.className = 'base';
 		}
 
 		var b_has_capitol = false;
-		if (capitol) {
-			if (capitolRules && (b.value == "Oracle" || b.value == "Harbor")) {
+		if (minis["capitol"]) {
+			if (minis.capitol == "rules" && extraRules.hasTwoCastles[shuffled_boards[i]]) {
 				b_has_capitol = true;
-			} else if (document.getElementById("capitolOdds").checked && capitolsOut < 2 && castleBoards > 0 && b.className != 'nomads' && b.className != 'marshlands') {
+			} else if (document.getElementById("capitolOdds").checked && capitolsOut < 2 && castleBoards > 0 && extraRules.hasCastles[b.className]) {
 				b_has_capitol = oddity(document.getElementById("capitolOddsOdds").value / 2);
 			}
 		}
 
-		if (caves && cavesRules && (b.value == "Tavern"))
+		if (minis["caves"] && minis.caves == "rules" && extraRules.cavesRule[b.value])
 			are_caves = true;
-		if (island && islandRules && (b.value == "Harbor" || b.value == "Lighthouse"))
+		if (minis["island"] && minis.island == "rules" && extraRules.islandRule[b.value])
 			document.getElementById("i0").value = "Island";
 		
 		if (Math.random() < 0.5) {
 			b.value += " (↷)";
 		}
 		if (b_has_capitol) {
-			if (shuffled_boards[i] == "Oracle" || shuffled_boards[i] == "Harbor") {
+			if (extraRules.hasTwoCastles[shuffled_boards[i]]) {
 				if (Math.random() < 0.5) {
 					b.value += " (Capitol N)";
 				} else {
@@ -149,10 +178,10 @@ make_setup = function() {
 		}
 	}
 
-	shuffled_cards = shuffle(cards);
+	shuffled_goals = shuffle(goals);
 	for (var i = 0; i < 3; ++i) {
 		var c = document.getElementById("c" + i);
-		c.value = shuffled_cards[i];
+		c.value = shuffled_goals[i];
 	}
 	if (crossroadBoardsPicked > 0) {
 		shuffled_tasks = shuffle(tasks);
@@ -178,6 +207,7 @@ a:link, a:visited {color: #333;}
 .nomads {background-color: #33B5E5;}
 .crossroads {background-color: #5DE534;}
 .marshlands {background-color: #E88A65;}
+.harvest {background-color: #CAE533;}
 	 
 button {
 -webkit-touch-callout: none;
@@ -218,9 +248,11 @@ user-select: none;}
 	EXPANSIONS: <br/>
 	<input type="checkbox" id="base" checked="checked" title="Uncheck to omit Base boards (but not Base goals)." /> <a href="http://boardgamegeek.com/boardgameexpansion/117793" class="base">Base</a><br />
 	<input type="checkbox" id="nomads" /> <a href="http://boardgamegeek.com/boardgameexpansion/117793" class="nomads">Nomads</a><br />
-	<input type="checkbox" id="crossroads" /> <a href="http://boardgamegeek.com/boardgame/137396" class="crossroads">Crossroads</a><br />
+	<input type="checkbox" id="crossroads" /> <a href="http://boardgamegeek.com/boardgame/137396" class="crossroads" title="Boards: Lighthouse/Forester, Barracks/Crossroads, Monastery/Wagon, City Hall/Fort">Crossroads</a><br />
 	<input type="checkbox" id="marshlands" /> <a href="http://boardgamegeek.com/boardgameexpansion/179622/kingdom-builder-marshlands" class="marshlands">Marshlands</a><br />
-	<input type="checkbox" id="capitol" /> <a href="http://boardgamegeek.com/boardgameexpansion/109141">Capitol</a> <input type="radio" name="capitolRulesVsOdds" id="capitolRules" checked=checked> <a href="http://boardgamegeek.com/article/12458223#12458223">usage rule</a> <input type="radio" name="capitolRulesVsOdds" id="capitolOdds"> odds: <input type="text" id="capitolOddsOdds" size="3" value="50"/>%<br />
+	<input type="checkbox" id="harvest" /> <a href="https://boardgamegeek.com/boardgameexpansion/195267/kingdom-builder-harvest" class="harvest">Harvest</a><br />
+	<span style="white-space:nowrap;">
+		<input type="checkbox" id="capitol" /> <a href="http://boardgamegeek.com/boardgameexpansion/109141">Capitol</a> <input type="radio" name="capitolRulesVsOdds" id="capitolRules" checked=checked> <a href="http://boardgamegeek.com/article/12458223#12458223">usage rule</a> <input type="radio" name="capitolRulesVsOdds" id="capitolOdds"> odds: <input type="text" id="capitolOddsOdds" size="3" value="50"/>%</span><br />
 	<input type="checkbox" id="caves" /> <a href="http://boardgamegeek.com/boardgameexpansion/132377/kingdom-builder-caves">Caves</a> <input type="radio" name="cavesRulesVsOdds" id="cavesRules" checked=checked> <a href="http://boardgamegeek.com/article/10331765#10331765">usage rule</a> <input type="radio" name="cavesRulesVsOdds" id="cavesOdds"> odds: <input type="text" id="cavesOddsOdds" size="3" value="50"/>%  &ocir; <a href="http://boardgamegeek.com/article/10331765#10331765">placement</a><br/>
 	<input type="checkbox" id="island" /> <a href="http://boardgamegeek.com/boardgameexpansion/156102/kingdom-builder-island">Island</a>  <input type="radio" name="islandRulesVsOdds" id="islandRules" checked=checked> <a href="https://www.kickstarter.com/projects/1016374822/kingdom-builder-big-box-kickstarter-edition/comments?cursor=5943130#comment-5943129">usage rule</a>  <input type="radio" name="islandRulesVsOdds" id="islandOdds"> odds: <input type="text" id="islandOddsOdds" size="3" value="50"/>%<br/>
 	<br />
