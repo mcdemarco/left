@@ -11,4 +11,6 @@ I've also worked on some tools for the game 504: an [almanac](/games/504/almanac
 
 I've implemented [a few solitaire games](/games/decktet/) for the Decket, an alternative card system by P.D. Magnus.
 
-At the last minute before traipsing off to dance camp this year I rethemed the game [10 Days in Beautiful Africa](https://boardgamegeek.com/boardgame/7865/10-days-africa) into [10 Hours in Beautiful Pinewoods](/games/10hours/).
+At the last minute before traipsing off to dance camp last year I rethemed the game [10 Days in Beautiful Africa](https://boardgamegeek.com/boardgame/7865/10-days-africa) into [10 Hours in Beautiful Pinewoods](/games/10hours/).
+
+Much earlier than the last minute before dance camp this year, I made a tool, [CardPen](http://cardpen.mcdemarco.net/) for printing card (and other) games, and printed up two [of them](http://cardpen.mcdemarco.net/doc/examples.html).

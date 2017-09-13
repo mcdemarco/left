@@ -466,3 +466,7 @@ h3 + h4 {
     margin-top:0;
     padding-top:0;
 }
+
+img[alt='small-graph'] {
+    width:200px;
+}

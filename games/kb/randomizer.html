@@ -89,8 +89,9 @@ make_setup = function() {
 	expansions = [];
 	minis = {};
 	for (var n = 0; n < names.length; n++) {
-		if (document.getElementById(names[n]).checked)
+		if (document.getElementById(names[n]).checked) {
 			expansions.push(names[n]);
+		}
 	}
 	//degenerate case
 	if (expansions.length == 0)
@@ -107,8 +108,8 @@ make_setup = function() {
 		boards = boards.concat(contents.boards[expansions[n]]);
 		if (extraRules.hasCastles[expansions[n]])
 			castleBoards += 4;
-		if (contents.goals[expansions[n]])
-			goals = goals.concat(contents.goals.marshlands);
+		if (contents.goals[expansions[n]] && expansions[n] != "base")
+			goals = goals.concat(contents.goals[expansions[n]]);
 	}
 
 	if (boards.length > 0)
@@ -127,17 +128,13 @@ make_setup = function() {
 	for (var i = 0; i < 4; ++i) {
 		var b = document.getElementById("b" + i);
 		b.value = shuffled_boards[i];
-		if (contents.boards.crossroads.indexOf(b.value) > -1) {
+		if (contents.boards.crossroads.indexOf(b.value) > -1) 
 			crossroadBoardsPicked++;
-			b.className = 'crossroads';
-		} else if (contents.boards.nomads.indexOf(b.value) > -1) {
-			b.className = 'nomads';
-		} else if (contents.boards.marshlands.indexOf(b.value) > -1) {
-			b.className = 'marshlands';
-		} else if (contents.boards.harvest.indexOf(b.value) > -1) {
-			b.className = 'harvest';
-		} else {
-			b.className = 'base';
+		for (n = 0; n < expansions.length; n++) {
+			if (contents.boards[expansions[n]].indexOf(b.value) > -1) {
+				b.className = expansions[n];
+				break;
+			}
 		}
 
 		var b_has_capitol = false;

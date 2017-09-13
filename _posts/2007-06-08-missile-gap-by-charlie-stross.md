@@ -3,6 +3,7 @@ layout: post
 title: Missile Gap by Charlie Stross
 tags:
 - Charlie Stross
+- BDO
 created: 1181319052
 ---
 I've been meaning to blog [Missile Gap](http://subterraneanpress.com/index.php/magazine/spring2007/fiction-missile-gap-by-charles-stross), a novella by Charlie Stross available online at Subterranean Press, since I read it a couple of weeks ago at the start of my current [Big Dumb Object](http://en.wikipedia.org/wiki/Big_Dumb_Object)/[megastructure](http://en.wikipedia.org/wiki/Megastructure) phase.  I spotted "Missile Gap" making the rounds at [del.icio.us](http://del.icio.us/tag/scifi) and was reminded to link it for its [Alderson disk](http://en.wikipedia.org/wiki/Alderson_disk), if nothing else.<!--break-->  Here's part of the novella's blurb:

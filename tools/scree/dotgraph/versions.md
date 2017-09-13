@@ -4,11 +4,15 @@ title: DotGraph Versions
 menu: tools
 date: 2016-12-19 11:00:00
 ---
-The current version of DotGraph is 2.0.0, which includes support for Twine 1, offline use, omitting special passages, and renumbering nodes.  Previous versions are archived here.
+The current version of DotGraph is 2.0.2, which supports omitting passages with specified tags.  Previous versions are archived here.
 
 #### Previous Versions
 
-* [Version 1.1.5](/tools/scree/dotgraph/1.1.5/format.js):, Included a save option for the SVG and some bugfixes.
+* Version 2.0.1: Optionally parsed `<<display>>` links.  No release (use 2.0.2).
+
+* [Version 2.0.0](/tools/scree/dotgraph/2.0.0/format.js): Included support for Twine 1, offline use, omitting special passages, and renumbering nodes.
+
+* [Version 1.1.5](/tools/scree/dotgraph/1.1.5/format.js): Included a save option for the SVG and some bugfixes.
 
 * [Version 1.1.4](/tools/scree/dotgraph/1.1.4/format.js): Included various graph configuration options and editing of the dotgraph source.
 
