@@ -5,7 +5,7 @@ categories: writing
 menu: tools
 date: 2016-10-20 18:00:00
 ---
-This is an archived previous version of Scree.  See [the main Scree page](/tools/scree/) for the current version.
+This is an archive of version 1.0 of Scree.  See [the main Scree page](/tools/scree/) for the current version.
 
 I wrote version 1.0 of Scree, my gamebook template for [Scrivener](http://www.literatureandlatte.com/scrivener.php), for NaNoWriMo 2016.  By default, when compiled in Scrivener (File > Compile), the template will generate a plain text file in "twee" format, a flat-file Markdown-like format for gamebooks that is also used by the graphical gamebook editor [Twine](http://twinery.org).  The "twee" file can be compiled into an HTML gamebook using [Twee2](http://twee2.danq.me) (a command-line Ruby gem).
 

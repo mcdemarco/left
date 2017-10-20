@@ -10,11 +10,26 @@
   </title>
 
   <meta name="author" content="{{ site.name }}" />
-  <meta name="description" content="{{ site.description }}" />
   <meta name="viewport" content="width=device-width" />
 
   {% if page.description %}
   <meta name="description" content="{{page.description}}" />
+  <meta name="og:description" content="{{page.description}}" />
+  {% elsif page.excerpt %}
+  <meta name="description" content="{{page.excerpt | strip_html}}" />
+  <meta name="og:description" content="{{page.excerpt | strip_html}}" />
+  <meta name="twitter:description" content="{{page.excerpt | strip_html}}" />
+  {% else %}
+  <meta name="description" content="{{ site.description }}" />
+  <meta name="og:description" content="{{ site.description }}" />
+  {% endif %}
+
+  {% if page.image %}
+  <meta name="og:image" content="{{page.image}}" />
+  <meta name="twitter:image" content="{{page.image}}" />
+  {% else %}
+  <meta name="og:image" content="/css/ant-bedelev-cropped-2.png" />
+  <meta name="twitter:image" content="/css/ant-bedelev-cropped-2.png" />
   {% endif %}
 
   {% if page.keywords %}
@@ -70,7 +85,7 @@
 	{% if page.menu == 'bio' %}
 	<ul>
 	  <li><a href="/bio/biblio.html">bibliography</a></li>
-	  <li><a href="/bio/pr/">interviews</a></li>
+	  <li><a href="/fiction/">fiction</a></li>
 	</ul>
 	{% endif %}
 	</li>
@@ -150,12 +165,12 @@
     <section class="meta">
     </section>     
     <section class="meta">
-      <a href="https://github.com/{{ site.github }}" title="GitHub"><img src="/images/github.png" /></a>
       <a href="http://pinterest.com/mcdemarco/" title="Pinterest"><img src="/images/pinterest.png" /></a>
+      <a href="https://twitter.com/{{ site.twitter }}" title="Twitter"><img src="/images/twitter.png" /></a>
     </section>
     <section class="meta">
-      <a href="https://alpha.app.net/mcdemarco/" title="app.net"><img src="/images/appnet.png" /></a>
-      <a href="https://twitter.com/{{ site.twitter }}" title="Twitter"><img src="/images/twitter.png" /></a>
+      <a href="https://github.com/{{ site.github }}" title="GitHub"><img src="/images/github.png" /></a>
+      <a href="https://bitbucket.org/mcdemarco/" title="BitBucket"><img src="/images/bitbucket.png" /></a>
     </section>
     <section class="meta">
       <a href="http://boardgamegeek.com/user/fiddly_bits" title="BoardGameGeek"><img src="/images/meeple.png" /></a>

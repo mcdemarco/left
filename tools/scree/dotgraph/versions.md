@@ -4,9 +4,11 @@ title: DotGraph Versions
 menu: tools
 date: 2016-12-19 11:00:00
 ---
-The current version of DotGraph is 2.0.2, which supports omitting passages with specified tags.  Previous versions are archived here.
+The current version of [DotGraph](/tools/scree/dotgraph/) is 2.0.3, which counts and styles unreachable passages.
 
 #### Previous Versions
+
+* [Version 2.0.2](/tools/scree/dotgraph/2.0.2/format.js): Included support for omitting passages by tag.
 
 * Version 2.0.1: Optionally parsed `<<display>>` links.  No release (use 2.0.2).
 

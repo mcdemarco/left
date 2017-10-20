@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Fighting Fantasy Flowcharts
-tags: gamebooks hyperfiction
+tags: gamebooks hyperfiction choicemaps
 created: 1258347534
 checked: 2016-10-18
 ---

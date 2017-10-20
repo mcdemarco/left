@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>TEST
+</title>
+<meta charset="utf-8">
+<style>
+body
+{
+	font: 10pt Cousine, monospace;
+	margin: 2em;
+}
+
+h1
+{
+	font-size: 14pt;
+	text-align: center;
+	margin-bottom: 2em;
+}
+
+tw-storydata
+{
+	display: block !important;
+}
+
+tw-passagedata
+{
+	display: block !important;
+	line-height: 200%;
+	margin-bottom: 2em;
+	white-space: pre-wrap;
+}
+
+tw-passagedata + tw-passagedata
+{
+	border-top: 1pt dashed black;
+	padding-top: 2em;
+}
+
+tw-passagedata:before
+{
+	content: attr(name);
+	display: block;
+	font-weight: bold;
+}
+</style>
+</head>
+
+<body>
+
+<h1>TEST
+</h1>
+<tw-storydata name="TEST" startnode="1" creator="Twee2" creator-version="0.5.0" ifid="ea5d952c-759d-4fb0-8644-cd6e93fb3a49" format="PaperThin" options=""><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css"></style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Start" tags="" position="10,110">The internal title of the starting scene should be Start.  It's written in plain text, with only markdown-style formatting allowed.
+
+This scene ends with some choices, to which we navigate using internal names for the linked scenes:
+
+* Go to [[Scene 2]].
+* Go to [[The End]].</tw-passagedata><tw-passagedata pid="2" name="Scene 2" tags="" position="110,210">This scene offers readers some more choices.  They can [[go back to a previous scene using an inline, descriptive link-&gt;Start]], a short inline link like [[Start]], or with links at the end like they saw before.
+
+* Go back to [[Start]].
+* Go on to [[Scene 3]].
+* [[You can also go to the next section using a descriptive title for the reader.-&gt;Scene 3]]
+* [[Scene 2a&lt;-You can format the longer link in either direction.]]
+* Go to [[The End]].</tw-passagedata><tw-passagedata pid="3" name="Scene 2a" tags="" position="20,120">A digression.
+
+* Go back to [[Scene 2]].</tw-passagedata><tw-passagedata pid="4" name="Scene 3" tags="" position="30,110">Feel free to structure your story in Scrivener as you wish.  You can put all your scenes at the top level, or divide them into sections and even subsections.  All text sections will be complied into story nodes.  Any folder names and notes will be ignored.
+
+* Read about [[story formats|Scene 4]].
+* Go to [[The End]].</tw-passagedata><tw-passagedata pid="5" name="Scene 4" tags="" position="40,220">Twine's story formats control the final appearance of your story, as well as any gamebook scripting (e.g., variables to track your character's hit points or inventory, etc.), even down to the details of italics and indentation.  
+
+Most story formats use Markdown formatting, e.g., single asterisks to indicate *italics*, double asterisks for **boldface**, and double tildes for ~~strikethrough~~.
+
+Some story formats, such as SugarCube, use their own formatting language.  SugarCube formatting is based on TiddlyWiki markup, and uses double slashes for //italics//, double apostrophes for ''boldface'', and double underscores for __underlining__.
+
+* Go on to [[The End]].</tw-passagedata><tw-passagedata pid="6" name="The End" tags="" position="340,340">The End is nigh!
+
+''The end.''</tw-passagedata></tw-storydata>
+
+
+</body>
+</html>

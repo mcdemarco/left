@@ -5,7 +5,7 @@
   <meta http-equiv="Content-Style-Type" content="text/css">
   <title></title>
   <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="1265.21">
+  <meta name="CocoaVersion" content="1504.83">
   <style type="text/css">
     p.p1 {margin: 8.0px 0.0px 0.0px 0.0px; text-align: justify; font: 15.8px Baskerville}
     p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: justify; font: 12.0px Helvetica; min-height: 14.0px}
@@ -77,7 +77,7 @@
 <ul class="ul1">
   <li class="li4">The title of the story must be in a specific format set up for you in the “Front Matter” folder (between the “Draft” and “Research” folders). It defaults to the project title, but you can replace the Scrivener title placeholder with a different title if you desire.</li>
   <li class="li4">Scrivener remembers your compile settings, so you only need to go to File &gt; Compile… and click the “Compile” button.<span class="Apple-converted-space">  </span>If you change any compile settings, Scree may no longer work.</li>
-  <li class="li4">There are two compile options, Twee2 and Twee.<span class="Apple-converted-space">  </span>Unless you plan to use Twine 2, they make little difference; see Import/Export below for more details. <span class="Apple-converted-space"> </span></li>
+  <li class="li4">There are two compile options, Twee and Twee2.<span class="Apple-converted-space">  </span>Unless you plan to use Twine 2 or tags, they make little difference.<span class="Apple-converted-space">  </span>See Import/Export below for more details. <span class="Apple-converted-space"> </span></li>
   <li class="li4">Note that on Windows, Scrivener will only remember your currently selected compile format for the duration of your Scrivener session, so you may need to select a Twee format again when you start a new Scree project or reopen an existing Scree project.</li>
   <li class="li4">On MacOS, the default Format As: Scree option is the same as the Twee2 option.</li>
   <li class="li4">If you have rich text bold or italics within your story, they will be lost unless you convert them to Markdown before compiling.<span class="Apple-converted-space">  </span>You can do the conversion by selecting all your draft text and using the Format &gt; Convert &gt; Bold and Italics to MultiMarkdown Syntax menu item.</li>
@@ -126,9 +126,9 @@
   <li class="li4">You can also import an existing Twine 2 story file by decompiling it with Twee2 (<span class="s3">twee decompile mytwine2story.html mytwine2story.txt</span>), then importing the text with Scrivener's splitter (split on "::"; this will duplicate scene titles), or manually replace "::" with "##" and import with Scrivener's Multimarkdown importer as above.<span class="Apple-converted-space">  </span>This process will preserve Twine's layout position codes, which is useful if you want to go back and forth between Twine 2 and Scrivener.</li>
 </ul>
 <ul class="ul1">
-  <li class="li4">If you import a twee2 file that has position codes, the position codes will appear in text document titles.<span class="Apple-converted-space">  </span>These are harmless, but note that they are not part of the link text.<span class="Apple-converted-space">  </span>You should use the Twee compile option instead of the Twee2 one if you want to preserve any existing position codes on export from Scrivener.</li>
-  <li class="li4">As mentioned earlier, you can import your story into Twine 2 (after processing it with Twee2).<span class="Apple-converted-space">  </span>Scree's Twee2 compile option adds (somewhat random) position codes to facilitate import into Twine 2.<span class="Apple-converted-space">  </span>You can then rearrange the nodes within Twine 2 as desired.<span class="Apple-converted-space"> </span></li>
-  <li class="li4">It is possible to go back and forth between Scrivener and Twine 2 in this way, but note that any hierarchical structure to the Drafts folder and any corkboard entries will not be preserved.</li>
+  <li class="li4">If you import a twee2 file that has position codes, the position codes will appear in text document titles.<span class="Apple-converted-space">  </span>These are harmless, but note that they are not part of the link text.<span class="Apple-converted-space">  </span>You should use the Twee compile option instead of the Twee2 one if you want to preserve any existing position codes on export from Scrivener, and your label and status will not be converted to tags.</li>
+  <li class="li4">As mentioned earlier, you can import your story into Twine 2 (after processing it with Twee2).<span class="Apple-converted-space">  </span>Scree's Twee2 compile option adds (somewhat random) position codes to facilitate import into Twine 2 (and also passes Label and Status to Scrivener as tags).<span class="Apple-converted-space">  </span>You can rearrange the nodes within Twine 2 as desired.</li>
+  <li class="li4">It is possible to go back and forth between Scrivener and Twine 2 in this way, but note that any hierarchical structure to the Drafts folder, labels, tags, and corkboard entries will not be preserved.</li>
 </ul>
 <p class="p2"><br></p>
 <p class="p3">Scripting and Styling</p>
@@ -142,7 +142,7 @@
 </ul>
 <p class="p2"><br></p>
 <p class="p3">Help</p>
-<p class="p4">This template is by M. C. DeMarco, <a href="http://mcdemarco.net">http://mcdemarco.net</a>, and is released as-is.<span class="Apple-converted-space">  </span>Version: 1.0.1, 26 Oct 2016.</p>
+<p class="p4">This template is by M. C. DeMarco, <a href="http://mcdemarco.net">http://mcdemarco.net</a>, and is released as-is.<span class="Apple-converted-space">  </span>Version: 1.0.2, 7 Oct 2017.</p>
 <p class="p4">Twee2 is by Dan Q, <a href="https://danq.me">https://danq.me</a>, and is released under GPL 2.0.</p>
 <p class="p4">Twine2 is by Chris Klimas and many others and is released under GPL 3.0.</p>
 </body>

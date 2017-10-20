@@ -17,13 +17,13 @@ So I tried this solution on my hanging plot threads:  does My Hero get hopelessl
 
 The biggest pitfall of interactive fiction is figuring out what exactly you're talking about when you say *interactive fiction*.  Is it a literary form?  Is it a game?  Both?  Either?  So let me pause to define terms, with the help of [the SF encyclopedia](http://www.sf-encyclopedia.com/entry/gamebook):
 
-* **Hyperfiction** is fiction with hyperlinks, traditionally at the end of a scene or page but sometimes inline instead.  Usually the story is told in the second person and the reader determines the plot through your quantized choices.  The canonical example is the Choose Your Own Adventure series of children's books.  Hyperfiction is also known as *hypertext fiction*, *hypertexts*, *branching-path books*, *interactive novels*, *wovels*, etc.
-* **Gamebooks** combine hyperfiction with RPG-style game rules (implemented in dead-tree books by the reader rolling dice, etc., or on computers by the computer rather than the reader).  The term was apparently coined by Steve Jackson for the canonical example:  the Fighting Fantasy series of books.  Gamebooks are also known as *adventure gamebooks*, *multiple-choice games*, *multiple-choice gamebooks*, *MCGs*, *storygames*, etc.  Gamebooks using an existing RPG system are also known as *role-playing solitaire adventures*.  Collaborative gamebooks are also known as *addventure*.
-* **Interactive fiction** is fiction in which the reader directs the story using somewhat natural language.  They traditionally involve collecting items and puzzle solving.  The canonical example is the Zork series of video games.  Interactive fiction is abbreviated *IF* or *int-fiction* and is also known as *text adventures* or *adventure games*.
+* **Hyperfiction** is fiction with hyperlinks, traditionally at the end of a scene or page but sometimes inline instead.  Usually the story is told in the second person and the reader determines the plot through your quantized choices.  The canonical example is the Choose Your Own Adventure series of children's books.  Hyperfiction is also known as *hypertext fiction*, *hypertext IF*, *hypertexts*, *branching-path books*, *interactive novels*, *wovels*, *CYOA*, *cybertext*, *choice-based games*, etc.  Sometimes *hypertext* is distinguished from *CYOA* based on whether the links appear inline or at the end of a scene.
+* **Gamebooks** combine hyperfiction with RPG-style game rules (implemented in dead-tree books by the reader rolling dice, etc., or on computers by the computer rather than the reader).  The term was apparently coined by Steve Jackson for the canonical example of the genre:  the Fighting Fantasy series of books.  Gamebooks are also known as *adventure gamebooks*, *multiple-choice games*, *multiple-choice gamebooks*, *MCGs*, *storygames*, etc.  Gamebooks using an existing RPG system are also known as *role-playing solitaire adventures*.  Collaborative gamebooks are also known as *addventure*.
+* **Interactive fiction** is fiction in which the reader directs the story using (somewhat) natural language.  They traditionally involve collecting items and puzzle solving.  The canonical example is the Zork series of video games.  Interactive fiction is abbreviated *IF* or *int-fiction* and is also known as *text adventures*, *adventure games*, *parser games*, or *parser(-based) IF*.
 
 ### Hyperfiction Software
 
-I got interested in the Twine/Twee ecosystem for writing gamebooks [a while back](http://jekyll.mcdemarco.net/blog/2009/07/13/twine-and-twee/), and I started a few stories with it.  Some were just hyperfiction of the choose-your-own-adventure type, but my longest was a story about writing which took advantage of some basic gamebook scripting facilities available in Twine/Twee.  Even so, it was only a few thousand words intended as a demo.  (I've never attempted any true interactive fiction.)
+I got interested in the Twine/Twee ecosystem for writing gamebooks [a while back](/blog/2009/07/13/twine-and-twee/), and I started a few stories with it.  Some were just hyperfiction of the choose-your-own-adventure type, but my longest was a story about writing which took advantage of some basic gamebook scripting facilities available in Twine/Twee.  Even so, it was only a few thousand words intended as a demo.  (I've never attempted any true interactive fiction.)
 
 There is no easy way to write a long work of hyperfiction; if you like using a GUI (I don't and [I'm not alone](https://twinery.org/forum/discussion/7474/using-external-ide)), you could use Twine.  I used to write in Twee (the plain-text format underlying Twine) instead, but Twee files are flat, making it hard to visualize your plot.
 
@@ -59,3 +59,7 @@ And, if you just want to skip to the multiple endings, there's the [YOU CHOSE WR
 ### Update
 
 Somehow I left the gamebook creation tool [Undum](http://undum.com) off the list.
+
+### Update #2
+
+The thesaurus has been updated with the addition of *cybertext* (although the original intent of the term seems to have been more general), *choice-based games*, *CYOA*, and several *parser* terms.

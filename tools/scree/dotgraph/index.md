@@ -13,7 +13,7 @@ DotGraph works with Twine 1, [Twine 2](https://twinery.org/2/), Twee, or [Twee2]
 
 ### Versions
 
-The current version of DotGraph is 2.0.2, which supports omitting passages with specified tags.  Previous versions are archived [here](versions.html).
+The current version of DotGraph is 2.0.3, which counts and styles unreachable passages.  Previous versions are archived [here](/tools/scree/dotgraph/versions.html).
 
 Each version of DotGraph comes in four forms, Twine 1 or Twine 2, and offline or online.  (Twine 2 is not backwards compatible with Twine 1, so their story formats always differ.)
 
@@ -72,7 +72,7 @@ DotGraph's Twine 2 icon (which appears in the proofing format list after you ins
 
 Below is the graph of a longer, incomplete story with renumbered passages, end tags, and coloring by passage length.  
 
-![large example](example.svg)
+![large example](/tools/scree/dotgraph/example.svg)
 
 
 ### Sausage
@@ -85,4 +85,4 @@ DotGraph does not support Internet Explorer 8, but any newer browser should work
 
 I made DotGraph because my Scrivener template for Twine 2 stories, [Scree](/tools/scree), doesn't give you a graphical layout of your story, and neither Scree/Scrivener nor Twine 2 support auto-layout of your story nodes into a graph, but Graphviz does.  (Composing a story entirely in Twine gives you a manual layout of the story.)
 
-I use coloring and/or clustering on the tags created from my Scrivener labels, which are one-per-passage anyway.  You can get your Scrivener labels into your twee tags (using [Scree](/tools/scree/)) by adding ` [<$label>]` to the beginning of the title suffix for each text document level under Compile > All Options > Formatting > Section Layout button.  See the placeholder list under Help for other variables you might want to put there, but beware of anything with spaces in it, like the default "No Label" and "No Status" label and status, respectively.  (You can edit those in Scrivener if necessary, even to the empty string.)
+I use coloring and/or clustering on the tags created from my Scrivener labels, which are one-per-passage anyway.  The latest version of  [Scree](/tools/scree/) automatically converts your Scrivener labels and statuses into Twine tags when you use the Twee2 compile option.  (It adds ` [<$label> <$status>]` to the beginning of the title suffix for each text document level under Compile > All Options > Formatting > Section Layout button.  See the placeholder list under Help for other variables you might want to put there, but beware of anything with spaces in it, like the default "No Label" and "No Status" label and status, respectively.  You can edit those in Scrivener if necessary, even to the empty string.)

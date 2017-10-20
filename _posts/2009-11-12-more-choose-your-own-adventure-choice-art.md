@@ -1,7 +1,7 @@
 ---
 layout: post
 title: More Choose Your Own Adventure Choice Art
-tags: hyperfiction
+tags: hyperfiction choicemaps
 created: 1258008011
 checked: 2016-10-18
 ---

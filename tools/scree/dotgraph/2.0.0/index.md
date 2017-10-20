@@ -52,7 +52,7 @@ Here's a bigger rendition of the proofing format's icon, which is a simplified v
 
 Below is the graph of a longer, incomplete story with renumbered passages, end tags, and coloring by passage length.  
 
-![large example](example.svg)
+![large example](/tools/scree/dotgraph/example.svg)
 
 ### Sausage
 

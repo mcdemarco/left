@@ -1,7 +1,7 @@
 ---
 layout: post
 title: More Hyperfiction Maps
-tags: hyperfiction
+tags: hyperfiction choicemaps
 created: 1250007371
 checked: 2016-10-18
 ---
