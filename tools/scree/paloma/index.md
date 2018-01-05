@@ -4,7 +4,7 @@ title: Paloma
 menu: tools
 date: 2016-11-10 11:18:00
 ---
-I've been using [Twine](http://twinery.org) 2, which does not have the Jonah story format from Twine 1.  I liked Jonah, so I created Paloma, which, like Jonah, displays a running log of all passages.  However, Paloma is based on Snowman, so, unlike Jonah, it uses Markdown formatting and native (Javascript) scripting.
+I've been using [Twine](http://twinery.org) 2, which does not have the Jonah story format from Twine 1.  I liked Jonah, so I created Paloma, which, like Jonah, displays a running log of all passages (sometimes called *stretchtext*).  However, Paloma is based on Snowman, so, unlike Jonah, it uses Markdown formatting and native (Javascript) scripting.
 
 In Paloma, all story links from previous passages are disabled, and previously selected links are highlighted.  Clicking a passage link always adds an entry to the reader's browser history.  The reader can back up through this history, but cannot go forward again (except by clicking story links again).
 

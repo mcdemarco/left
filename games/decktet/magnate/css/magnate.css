@@ -1,0 +1,155 @@
+﻿/* Styles for Magnate Roller by M. C. DeMarco.
+   Background pattern from subtlepatterns.com */
+
+/* basics */
+
+* {
+    box-sizing:border-box;
+}
+
+/* layout */
+
+html, body {
+    box-sizing:border-box;
+    margin:0;
+    height:100%;
+    width:100%;
+}
+
+body {
+    height: 100vh;
+}
+
+/* font and color */
+
+@font-face {
+    font-family: "Fortune Letters";
+    src: url(../css/fortune-letters.ttf) format("truetype");
+}
+
+body {
+    background-image: url('../css/skulls.png');
+    font-family: 'Segoe UI', 'Century Gothic', 'Lucida Grande', Tahoma, 'Gill Sans', sans-serif;
+    color: #300;
+}
+
+div.wrapper, div.rules {
+    background-color: rgba(218,142,142,0.75);
+    padding: 3%;
+    margin: 1% 10%;
+    height:auto;
+    border-radius:10px;
+}
+div.wrapper {
+    font-size: large;
+    text-align:center;
+}
+
+h1, h2, h3, h4, h5, h6, strong, label {
+    font-family: 'Fortune Letters', Futura, Geneva, sans-serif;
+}
+
+h1, h2, h3 {
+    text-align:center;
+}
+
+h2, h3 {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+button {
+    font-family: 'Fortune Letters', Futura, Geneva, sans-serif;
+    font-size: small;
+    padding: 3px 2px;
+    font-weight:bold;
+}
+
+button.mainButton {
+    margin: 5px;
+    padding: 4px 6px;
+    font-size: medium;
+    border-radius: 6px;
+    background-color: white;
+    font-weight:normal;
+}
+
+span.bigger {
+    font-size: x-large;
+    font-weight:bold;
+}
+
+span.smaller {
+    font-size: 18px;
+    color: #534646;
+}
+
+span.bad, span.smaller.bad {
+    color: #9F0915;
+}
+
+span.bigger, span.smaller {
+    background-color: rgba(248,225,226,0.75); /*#F8E1E2*/
+    border-radius: 3px;
+}
+
+span.bigger {
+    margin: 4px;
+    padding: 4px 8px;
+    border: 2px solid #300;
+}
+
+span.smaller {
+    margin: 4px;
+    padding: 4px 8px;
+    border: 1px solid #534646;
+}
+
+span.smaller.bad {
+    border: 1px solid #9F0915;
+}
+
+a, a:visited, a:hover {
+    color: #6C3031;
+}
+
+div.footer {
+    text-align:center;
+}
+
+img {
+    height:30px;
+    vertical-align:bottom;
+    background-color: white;
+    border: 2px solid white;
+    border-radius: 50%;
+}
+
+div.footer cite {
+    display:block;
+    font-size:smaller;
+}
+
+ul, ol {
+    line-height:1.5;
+}
+
+p.detail {
+    font-size: smaller;
+    line-height:1;
+}
+
+/* mobile */
+
+body {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+p, input, textarea {
+ -webkit-user-select: text;
+ -moz-user-select: text;
+ -ms-user-select: text;
+ user-select: text;
+}

@@ -14,3 +14,5 @@ I've implemented [a few solitaire games](/games/decktet/) for the Decket, an alt
 At the last minute before traipsing off to dance camp last year I rethemed the game [10 Days in Beautiful Africa](https://boardgamegeek.com/boardgame/7865/10-days-africa) into [10 Hours in Beautiful Pinewoods](/games/10hours/).
 
 Much earlier than the last minute before dance camp this year, I made a tool, [CardPen](http://cardpen.mcdemarco.net/) for printing card (and other) games, and printed up two [of them](http://cardpen.mcdemarco.net/doc/examples.html).
+
+I made another small use of the BoardGameGeek API besides the game list option in CardPen:  a [geeklist sorter](/games/bgg/).

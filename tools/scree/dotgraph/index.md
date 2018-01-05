@@ -5,17 +5,17 @@ menu: tools
 date: 2016-11-06 14:45:00
 ---
 
-DotGraph is a proofing format that uses a [JavaScript implementation](https://github.com/mdaines/viz.js/) of [Graphviz](http://www.graphviz.org) to automatically lay out a [Twine](https://twinery.org/) story as a directed graph.
+DotGraph is a proofing format that uses a [JavaScript implementation](https://github.com/mdaines/viz.js/) of [Graphviz](http://www.graphviz.org) to automatically lay out a [Twine](https://twinery.org/) story as a layered graph.  (For more about this and other styles of story graphs, see [A History of Choice Mapping](/blog/2017/10/27/history-of-choice-mapping/)).
 
 ![small-graph](icon.svg)
 
-DotGraph works with Twine 1, [Twine 2](https://twinery.org/2/), Twee, or [Twee2](https://dan-q.github.io/twee2/).  It can color nodes according to their length or their tags, mark interesting nodes (missing nodes, end nodes, and checkpoints), omit node names, cluster by tags, skip special and/or specially tagged passages, skip display links, and rotate or shrink the graph.  It also shows you some basic story statistics.
+DotGraph works with Twine 1, [Twine 2](https://twinery.org/2/), Twee, [Twee2](https://dan-q.github.io/twee2/), and [TweeGo](http://www.motoslave.net/tweego/).  It can color nodes according to their length or their tags, mark interesting nodes (missing nodes, end nodes, and checkpoints), omit node names, cluster by tags, skip special and/or specially tagged passages, skip display links, and rotate or shrink the graph.  It also shows you some basic story statistics.
 
 ### Versions
 
-The current version of DotGraph is 2.0.3, which counts and styles unreachable passages.  Previous versions are archived [here](/tools/scree/dotgraph/versions.html).
+The current version of DotGraph is 2.1.0,  which adds a text tracing option and support for configuration using the StorySettings passage.  Previous versions are archived [here](/tools/scree/dotgraph/versions.html).
 
-Each version of DotGraph comes in four forms, Twine 1 or Twine 2, and offline or online.  (Twine 2 is not backwards compatible with Twine 1, so their story formats always differ.)
+Each version of DotGraph comes in four forms, Twine 1 or Twine 2, and offline or online.  (Twine 2 is not fully backwards compatible with Twine 1; in particular their story formats always differ.)
 
 The offline versions package the entire Graphviz renderer in the head of the DotGraph output file, making it large but freestanding.  The online versions fetch the Graphviz renderer from this website whenever you open them, meaning that an internet connection is required when using them, but the file may be also be cached, making your output file load faster if you run DotGraph frequently.  In some cases you can only use the offline version; see the installation and sausage sections for more details.
 
@@ -60,7 +60,21 @@ As a story format, DotGraph outputs an HTML file that contains the DotGraph cont
 (The dot source is not pictured in the screenshot.)
 
 As you change the settings (for tag color, graph direction, etc.), the graph and source code will be re-rendered live.  You can save the image (SVG) and/or the source file.
-You can also edit the dot source manually and re-render the altered graph.  
+You can also edit the dot source manually and re-render the altered graph.
+
+Instead of adjusting settings in the UI, you can pass in your desired settings (including some settings not available in the UI) using the StorySettings special passage.  They should be in the following (JSON) format:
+
+    dotgraph:{"color":"length","scale":true,"ends":true,"trace":"Mars"}  
+
+You only need pass in your desired changes; here's the full set of settings for reference (except the tag palette has been shortened for clarity):
+
+    dotgraph:{"checkpoint":true,"checkpointTag":"checkpoint","cluster":false,
+		"color":"length","countWords":true,"display":true,"ends":true,"endTag":"End",
+		"lastTag":false,"omitSpecialPassages":true,"omitTags":[],"renumber":false,
+		"rotation":"TB","scale":true,"showNodeNames":false,"trace":"",
+		"palette":["#FEAF16","#2ED9FF","#DEA0FD","#FE00FA","#F7E1A0","#16FF32"]}
+
+Though the configuration is displayed here on multiple lines, you should put it all on one line in your StorySettings file.
 
 ### Examples
 

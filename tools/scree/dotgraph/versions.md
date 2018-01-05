@@ -4,17 +4,25 @@ title: DotGraph Versions
 menu: tools
 date: 2016-12-19 11:00:00
 ---
-The current version of [DotGraph](/tools/scree/dotgraph/) is 2.0.3, which counts and styles unreachable passages.
+The current version of [DotGraph](/tools/scree/dotgraph/) is 2.1.0, which adds a text tracing option and support for configuration using the StorySettings passage.
 
 #### Previous Versions
 
-* [Version 2.0.2](/tools/scree/dotgraph/2.0.2/format.js): Included support for omitting passages by tag.
+* [Version 2.0.6](/tools/scree/dotgraph/2.0.6/): Included display macro support for Harlowe and fixed a leaf counting issue.
+
+* [Version 2.0.5](/tools/scree/dotgraph/2.0.5/): Included an option to use last tag for tag colors/clusters, plus fixed a start node issue.
+
+* [Version 2.0.4](/tools/scree/dotgraph/2.0.4/): A minor bugfix release involving tags.
+
+* [Version 2.0.3](/tools/scree/dotgraph/2.0.3/): Counted and styled unreachable passages.  (This may slow DotGraph down for especially large stories.)
+
+* [Version 2.0.2](/tools/scree/dotgraph/2.0.2/): Included support for omitting passages by tag.
 
 * Version 2.0.1: Optionally parsed `<<display>>` links.  No release (use 2.0.2).
 
-* [Version 2.0.0](/tools/scree/dotgraph/2.0.0/format.js): Included support for Twine 1, offline use, omitting special passages, and renumbering nodes.
+* [Version 2.0.0](/tools/scree/dotgraph/2.0.0/): Included support for Twine 1, offline use, omitting special passages, and renumbering nodes.
 
-* [Version 1.1.5](/tools/scree/dotgraph/1.1.5/format.js): Included a save option for the SVG and some bugfixes.
+* [Version 1.1.5](/tools/scree/dotgraph/1.1.5/): Included a save option for the SVG and some bugfixes.
 
 * [Version 1.1.4](/tools/scree/dotgraph/1.1.4/format.js): Included various graph configuration options and editing of the dotgraph source.
 

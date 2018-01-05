@@ -29,7 +29,7 @@ You can click on a Repeater script itself, but then you still have to press the 
 
 	#!/bin/bash
 	DIR_PLAY=1 DIR_QUIT=1 /Applications/Repeater.app/Contents/MacOS/Repeater ~/path-to/Compile.record
-	# my twee stuff would come next, or you can stop here
+	# my twee stuff would come next (or in a separate entr script), or you can stop here
 
 So that's it.  To make a bash script itself clickable, give it the extension `.command`; *e.g.,* make a text file `Compile.command` with the contents shown above, then change its permissions as explained [here](https://stackoverflow.com/a/29710607/4965965).
 
