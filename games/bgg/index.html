@@ -5,182 +5,43 @@
 <!--
 BoardGameGeek geeklist sorter by fiddly_bits.
 -->
-
-<style>
-body {
-				font-family: verdana, "lucida grande", arial, sans-serif;
-				padding:3%;
-}
-p.info {font-size:smaller;
-}
-p.info,
-cite#footer {
-				font-style:italic;
-				color: gray;
-}
-#geeklist div.entry {
-				background-color: #F5F5FF;
-				border: solid 1px #8888FF;
-				margin:0.5em;
-}
-#geeklist div.entry h2,
-#geeklist div.entry h3 {
-				background-color: #D1DAEF;
-				margin:0; 
-				padding:0.5em;
-}
-#geeklist div.entry h2 a,
-#geeklist div.entry h3 a {
-				text-decoration:none;
-}
-#geeklist div.entry div.entrycontents {
-				padding: 0.5em;
-				display: flex;
-				flex-basis: 100%;
-				justify-content: space-between;
-}
-#geeklist div.entry div.entrycontents img {
-				align-self: flex-start;
-}
-
-</style>
-
-<script type="text/javascript">
-//var geeklistId = 234925;
-var geeklistURL = "https://boardgamegeek.com/xmlapi/geeklist/";
-//The api doesn't always respond with the goods.
-var waitMessage = "Your request for this geeklist has been accepted and will be processed.";
-//Requires a proxy because the BGG API is broken in yet another way.
-//wore this one out: 
-var corsProxy = "https://cors-anywhere.herokuapp.com/";
-//var corsProxy = "https://galvanize-cors-proxy.herokuapp.com/";
-//Local xsl.
-var stylesheetURL = "sort.xsl";
-var stylesheet;
-
-function requestStylesheet(stylesheetURL) {
-	//Fetch stylesheet.
-	var sReq = new XMLHttpRequest();
-	sReq.addEventListener("load", sReqListener);
-	sReq.open("GET", stylesheetURL);
-	sReq.send();
-}
-
-function sReqListener () {
-	stylesheet = this.responseXML;
-  console.log("Stylesheet ready.");
-}
-
-function requestGeeklist(geeklistId) {
-	var oReq = new XMLHttpRequest();
-	oReq.addEventListener("load", reqListener);
-	oReq.open("GET", corsProxy + geeklistURL + geeklistId);
-	oReq.send();
-}
-
-function reqListener() {
-	//Often the response is "wait a minute", but the stylesheet will display that.
-	var geeklist = this.responseXML;
-	var fragment = transform(geeklist,stylesheet);
-	document.getElementById("geeklist").appendChild(fragment);
-}
-
-function transform(geeklist,stylesheet) {
-	var xmlDom;
-	var sortBy = document.getElementById("sortBy").value;
-	var ascending = document.getElementById("ascending").checked;
-	var images = document.getElementById("images").checked;
-	if (typeof XSLTProcessor == "undefined") {
-		try {
-			xmlDom = geeklist.transformNode(stylesheet);
-		} catch(e) {
-			xmlDom = "An error occurred (" + e.description + ")."
-		}
-	} else { //webkit
-		var xsltProcessor = new XSLTProcessor();
-		xsltProcessor.setParameter(null, "sortby", sortBy);
-		xsltProcessor.setParameter(null, "ascending", ascending);
-		xsltProcessor.setParameter(null, "images", images);
-		xsltProcessor.importStylesheet(stylesheet);
-		xmlDom = xsltProcessor.transformToFragment(geeklist, document);
-	}
-	return xmlDom;
-}
-
-function getGeekli() {
-	var geeklistId = parseID(document.getElementById("geeklistIdINPUT").value);
-	if (geeklistId == 0)
-		alert("Bad geeklist id or URL!")
-	else {
-		document.getElementById("geeklist").innerHTML = "";
-		requestGeeklist(geeklistId);
-	}
-}
-
-function parseID(protoId) {
-	if ((protoId.split("geeklist/")).length > 1)
-		protoId = protoId.split("geeklist/")[1].split("/")[0];
-
-	if (parseInt(protoId,10) > 0)
-		return parseInt(protoId,10);
-	else 
-		return 0;
-}
-
-function setFromQuery() {
-	if (window.location.search && parseInt(window.location.search.split("?")[1],10) > 0) {
-		document.getElementById("geeklistIdINPUT").value = parseInt(window.location.search.split("?")[1],10);
-	  //also autoload.
-	  getGeekli();
-	}
-}
-
-/* onload */
-function loady() {
-	//Don't need to wait for load for the stylesheet, but for the others.
-	requestStylesheet(stylesheetURL);
-	document.getElementsByTagName("form")[0].addEventListener("submit", function(e) {
-		e.preventDefault();
-		getGeekli();
-		return false;
-	});
-	setFromQuery();
-	document.getElementById("urlHint").innerHTML = [location.protocol, '//', location.host, location.pathname, '?234925'].join('');
-}
-
-window.onload = loady;
-
-</script>
-<style>
-
-</style>
+<link href="sort.css" rel="stylesheet" />
+<script type="text/javascript" src="sort.js"></script>
 </head>
 <body>
   <h1>Geeklist Sorter</h1>
 
 	<form>
-					<p>Sort geeklist (ID or URL) <input id="geeklistIdINPUT" value="" /> 
-									in order by <select id="sortBy">
-													<option value="alpha">Alphabetical</option>
-													<option value="date" selected>Date Added</option>
-													<option value="thumbs">Thumbs</option>
-													<option value="type">Type</option>
-													<option value="user">User</option>
-									</select>
+					<p class="unwrap">
+						<span>Sort geeklist <input type="text" placeholder="ID or URL" id="geeklistIdINPUT" value="" /></span>
+						<span>in order by 
+							<select id="sortBy">
+								<option value="alpha">Alphabetical</option>
+								<option value="date" selected>Date Added</option>
+								<option value="thumbs">Thumbs</option>
+								<option value="type">Type</option>
+								<option value="user">User</option>
+							</select>
+						</span>
+						<span>
 									<input type="checkbox" id="ascending" /> ascending
+						</span>
+						<span>
 									<input type="checkbox" id="images" checked /> include images
-									<input type="submit" value="Sort" />
+						</span>
+						<span>
+									<input type="checkbox" id="comments" /> include comment info
+						</span>
+						<input type="submit" value="Sort" />
 					</p>
 	</form>
 
-	<p class="info">This sorter does not sort by rank or rating because the API does not return that information with the geeklist.
-					Also, images may or may not load.<br/>
+	<p class="info">This sorter does not sort by rank or rating because the API does not return that information with the geeklist.<br/>
 					You can pass the geeklist ID in with the URL, e.g., <a href="./?234925" id="urlHint"></a>
 	</p>
 
 	<div id="main_content">
 					<div id="geeklist">
-
 					</div>
 	</div>
 	<hr />
