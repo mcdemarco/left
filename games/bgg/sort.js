@@ -3,10 +3,9 @@
 //
 
 (function () {
-	//var geeklistId = 234925;
 	var geeklistURL = "https://boardgamegeek.com/xmlapi/geeklist/";
 	var geeklistStatus = {};
-	var minutes = 10; //Don't repeat successful requests within 10 min.
+	var minutes = 5; //Don't repeat successful requests within this number of minutes.
 	//The api doesn't always respond with the goods.
 	var waitMessage = "Your request for this geeklist has been accepted and will be processed.";
 	//Requires a proxy because the BGG API is broken in yet another way.
@@ -81,13 +80,22 @@
 	
 	function getGeekli() {
 		var geeklistId = parseID(document.getElementById("geeklistIdINPUT").value);
-		if (geeklistId == 0)
+		if (geeklistId == -1)
+			return;
+		else if (geeklistId == 0)
 			alert("Bad geeklist id or URL!");
 		else {
+
+			//Force comments if necessary.
+			if (document.getElementById("sortBy").value == "comments")
+				document.getElementById("comments").checked = true;
+
 			var comments = document.getElementById("comments").checked;
+			//Clear old list.
 			document.getElementById("geeklist").innerHTML = "";
+
 			//Decide whether to make a new request.  
-			//Need a new one for a new ID (duh), added comments, or time lapses (in min).
+			//Need a new one for a new ID (duh), added comments, or expiration (in min).
 			if (geeklistStatus.id && 
 					geeklistStatus.id == geeklistId &&
 					(geeklistStatus.comments || !comments) &&
@@ -102,9 +110,10 @@
 	}
 	
 	function parseID(protoId) {
+		if (protoId === "")
+			return -1;
 		if ((protoId.split("geeklist/")).length > 1)
 			protoId = protoId.split("geeklist/")[1].split("/")[0];
-		
 		if (parseInt(protoId,10) > 0)
 			return parseInt(protoId,10);
 		else 
@@ -123,12 +132,15 @@
 	function loady() {
 		//Don't need to wait for load for the stylesheet, but for the others.
 		requestStylesheet(stylesheetURL);
+		setFromQuery();
 		document.getElementsByTagName("form")[0].addEventListener("submit", function(e) {
 			e.preventDefault();
 			getGeekli();
 			return false;
 		});
-		setFromQuery();
+		document.getElementsByTagName("form")[0].addEventListener("change", function(e) {
+			getGeekli();
+		});
 		document.getElementById("urlHint").innerHTML = [location.protocol, '//', location.host, location.pathname, '?234925'].join('');
 	}
 	

@@ -11,6 +11,11 @@
 			<p class="message"><xsl:value-of select="//message" /></p>
 			<p>(This probably means you should wait a minute and click Sort again.)</p>
 		</xsl:when>
+		<xsl:when test="//error">
+			<!-- show any messages -->
+			<p class="message"><xsl:value-of select="//error/@message" /></p>
+			<p>(This probably means your geeklist ID was bad.)</p>
+		</xsl:when>
 		<xsl:otherwise>
 			<div id="header" class="entry">
 				<h2><a href="https://boardgamegeek.com/geeklist/{//geeklist/@id}/"><xsl:value-of select="//geeklist/title" /></a></h2>
@@ -22,10 +27,12 @@
 							<br/>Edited: <xsl:value-of select="substring(//geeklist/editdate,1,22)" />
 						</xsl:if>
 						<xsl:if test="$comments='true' and //geeklist/comment">
-							<br/>Latest comment: <xsl:value-of select="substring((//geeklist/comment)[last()]/@postdate,1,22)"/>
+							<br/>Latest comment: <xsl:value-of select="substring((//geeklist/comment)[last()]/@postdate,1,22)"/> 
+							<xsl:text> by </xsl:text>
+							<xsl:value-of select="(//geeklist/comment)[last()]/@username"/>
 						</xsl:if>
 					</cite>
-					<div>
+					<div class="right">
 						<cite>Created by <xsl:value-of select="//username" /></cite><br/>
 						<xsl:call-template name="pluralizer">
 							<xsl:with-param name="theCount" select="//thumbs"/>
@@ -51,6 +58,18 @@
 				<xsl:when test="$sortby = 'alpha'">
 					<xsl:apply-templates select="//geeklist/item" mode="entry">
 						<xsl:sort select = "@objectname" data-type="string" order="descending" />
+						<xsl:with-param name="geeklistId" select="//geeklist/@id" />
+					</xsl:apply-templates>
+				</xsl:when>
+				<xsl:when test="$sortby = 'comments' and $ascending = 'true'">
+					<xsl:apply-templates select="//geeklist/item" mode="entry">
+						<xsl:sort select = "count(comment)" data-type="number" order="ascending" />
+						<xsl:with-param name="geeklistId" select="//geeklist/@id" />
+					</xsl:apply-templates>
+				</xsl:when>
+				<xsl:when test="$sortby = 'comments'">
+					<xsl:apply-templates select="//geeklist/item" mode="entry">
+						<xsl:sort select = "count(comment)" data-type="number" order="descending" />
 						<xsl:with-param name="geeklistId" select="//geeklist/@id" />
 					</xsl:apply-templates>
 				</xsl:when>
@@ -128,7 +147,7 @@
 						     onerror="this.src='https://cf.geekdo-images.com/images/pic{@imageid}_t.png'" />
 					</xsl:if>
 				</div>
-				<div>
+				<div class="right">
 					Posted: <xsl:value-of select="substring(@postdate,1,22)" /><br />
 					<xsl:if test = "@postdate != @editdate">
 						Edited: <xsl:value-of select="substring(@editdate,1,22)" /><br />
@@ -148,6 +167,8 @@
 						</xsl:call-template>
 						<xsl:if test="$comments='true' and comment">
 							<br/>Latest comment: <xsl:value-of select="substring((comment)[last()]/@postdate,1,22)"/>
+							<xsl:text> by </xsl:text>
+							<xsl:value-of select="(comment)[last()]/@username"/>
 						</xsl:if>
 					</xsl:if>
 				</div>

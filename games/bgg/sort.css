@@ -18,6 +18,8 @@ p.unwrap span {
 }
 p.message {
 	color: tomato;
+	padding: 0.5em 1em;
+	border-left: 3px double tomato;
 }
 
 #geeklist div.entry {
@@ -31,6 +33,16 @@ p.message {
 	margin:0; 
 	padding:0.5em;
 }
+
+#geeklist div#header.entry {
+    border: solid 1px #888888;
+    background-color: #F5F5F5;
+}
+#geeklist div#header.entry h2 {
+    background-color: #D5D5D5;
+}
+
+
 #geeklist div.entry h2 a,
 #geeklist div.entry h3 a {
 	text-decoration:none;
@@ -43,4 +55,12 @@ p.message {
 }
 #geeklist div.entry div.entrycontents img {
 	align-self: flex-start;
+}
+
+input[type=text] {
+    width: 5em;
+}
+
+div.right {
+    text-align:right;
 }

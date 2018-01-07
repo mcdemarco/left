@@ -17,6 +17,7 @@ BoardGameGeek geeklist sorter by fiddly_bits.
 						<span>in order by 
 							<select id="sortBy">
 								<option value="alpha">Alphabetical</option>
+								<option value="comments">Comments</option>
 								<option value="date" selected>Date Added</option>
 								<option value="thumbs">Thumbs</option>
 								<option value="type">Type</option>
@@ -27,10 +28,10 @@ BoardGameGeek geeklist sorter by fiddly_bits.
 									<input type="checkbox" id="ascending" /> ascending
 						</span>
 						<span>
-									<input type="checkbox" id="images" checked /> include images
+									<input type="checkbox" id="images" title="show images" checked /> images
 						</span>
 						<span>
-									<input type="checkbox" id="comments" /> include comment info
+									<input type="checkbox" id="comments" title="include comment info" /> comment info
 						</span>
 						<input type="submit" value="Sort" />
 					</p>
