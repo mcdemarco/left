@@ -78,6 +78,24 @@
 		return xmlDom;
 	}
 	
+	function adjustAscending() {
+		//Switch the checkbox value on certain order selections.
+		switch(document.getElementById("sortBy").value) {
+			case "alpha":
+			case "manual":
+			case "type":
+			case "user":
+				document.getElementById("ascending").checked = true;
+				break;
+			case "comments":
+			case "thumbs":
+				document.getElementById("ascending").checked = false;
+				break;
+			default:
+				break;
+		}
+	}
+	
 	function getGeekli() {
 		var geeklistId = parseID(document.getElementById("geeklistIdINPUT").value);
 		if (geeklistId == -1)
@@ -133,6 +151,7 @@
 		//Don't need to wait for load for the stylesheet, but for the others.
 		requestStylesheet(stylesheetURL);
 		setFromQuery();
+		document.getElementById("sortBy").addEventListener("change", adjustAscending);
 		document.getElementsByTagName("form")[0].addEventListener("submit", function(e) {
 			e.preventDefault();
 			getGeekli();

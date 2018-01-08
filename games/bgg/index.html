@@ -19,6 +19,7 @@ BoardGameGeek geeklist sorter by fiddly_bits.
 								<option value="alpha">Alphabetical</option>
 								<option value="comments">Comments</option>
 								<option value="date" selected>Date Added</option>
+								<option value="manual">Manual</option>
 								<option value="thumbs">Thumbs</option>
 								<option value="type">Type</option>
 								<option value="user">User</option>
@@ -37,7 +38,7 @@ BoardGameGeek geeklist sorter by fiddly_bits.
 					</p>
 	</form>
 
-	<p class="info">This sorter does not sort by rank or rating because the API does not return that information with the geeklist.<br/>
+	<p class="info">Rank and rating are not included because the API does not return that information with the geeklist, even when the list is sorted by rank or rating at BGG.  But if the list was manually sorted by the creator, you can see or reverse that sorting with "Manual".<br/>
 					You can pass the geeklist ID in with the URL, e.g., <a href="./?234925" id="urlHint"></a>
 	</p>
 

@@ -85,6 +85,17 @@
 						<xsl:with-param name="geeklistId" select="//geeklist/@id" />
 					</xsl:apply-templates>
 				</xsl:when>
+				<xsl:when test="$sortby = 'manual' and $ascending = 'true'">
+					<xsl:apply-templates select="//geeklist/item" mode="entry">
+						<xsl:with-param name="geeklistId" select="//geeklist/@id" />
+					</xsl:apply-templates>
+				</xsl:when>
+				<xsl:when test="$sortby = 'manual'">
+					<xsl:apply-templates select="//geeklist/item" mode="entry">
+						<xsl:sort select="position()" data-type="number" order="descending" />
+						<xsl:with-param name="geeklistId" select="//geeklist/@id" />
+					</xsl:apply-templates>
+				</xsl:when>
 				<xsl:when test="$sortby = 'thumbs' and $ascending = 'true'">
 					<xsl:apply-templates select="//geeklist/item" mode="entry">
 						<xsl:sort select = "@thumbs" data-type="number" order="ascending" />
@@ -122,7 +133,7 @@
 					</xsl:apply-templates>
 				</xsl:when>
 				<xsl:otherwise>
-					<!-- default -->
+					<!-- default, like manual ascending -->
 					<xsl:apply-templates select="//geeklist/item" mode="entry">
 						<xsl:with-param name="geeklistId" select="//geeklist/@id" />
 					</xsl:apply-templates>
