@@ -13,6 +13,10 @@ cite#footer {
 	font-style:italic;
 	color: gray;
 }
+cite#footer {
+    text-align:right;
+    display:block;
+}
 p.unwrap span {
 	white-space: nowrap;
 }

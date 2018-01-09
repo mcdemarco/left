@@ -19,6 +19,7 @@ BoardGameGeek geeklist sorter by fiddly_bits.
 								<option value="alpha">Alphabetical</option>
 								<option value="comments">Comments</option>
 								<option value="date" selected>Date Added</option>
+								<option value="editdate">Date Edited</option>
 								<option value="manual">Manual</option>
 								<option value="thumbs">Thumbs</option>
 								<option value="type">Type</option>
@@ -38,20 +39,21 @@ BoardGameGeek geeklist sorter by fiddly_bits.
 					</p>
 	</form>
 
-	<p class="info">Rank and rating are not included because the API does not return that information with the geeklist, even when the list is sorted by rank or rating at BGG.  But if the list was manually sorted by the creator, you can see or reverse that sorting with "Manual".<br/>
-					You can pass the geeklist ID in with the URL, e.g., <a href="./?234925" id="urlHint"></a>
-	</p>
-
 	<div id="main_content">
 					<div id="geeklist">
 					</div>
 	</div>
+
+	<p class="info">Rank and rating are not included because the API does not return that information with the geeklist, even when the list is sorted by rank or rating at BGG.  But if the list was manually sorted by the creator, you can see or reverse that sorting with "Manual".<br/>
+					You can pass the geeklist ID in with the URL, e.g., <a href="./?234925" id="urlHint"></a>
+	</p>
+
 	<hr />
 
 	<cite id="footer">
 		By mcd (<a href="http://boardgamegeek.com/user/fiddly_bits">fiddly_bits</a>), inspired by
 	  <a href="https://boardgamegeek.com/thread/554406/geeklists-allow-users-change-sort-method">the lack of geeklist sorting</a> at BGG.<br/>
-		View the source of this page to see how it's done.
+		View the source of this page to see how it's done (mostly with xslt).
 	</cite>
   </div>
 </body>

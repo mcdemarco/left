@@ -45,11 +45,13 @@
 			geeklistStatus.xml = geeklistXML;
 			geeklistStatus.id = parseInt(geeklistXML.firstChild.getAttribute("id"),10);
 			geeklistStatus.comments = document.getElementById("comments").checked;
+			setURL(geeklistStatus.id);
 		}
 		transformAndWrite(geeklistXML);
 	}
 
 	function transformAndWrite(geeklistXML) {
+		clearGeeklist();
 		var fragment = transform(geeklistXML,stylesheet);
 		document.getElementById("geeklist").appendChild(fragment);
 	}
@@ -95,6 +97,10 @@
 				break;
 		}
 	}
+
+	function clearGeeklist() {
+		document.getElementById("geeklist").innerHTML = "";
+	}
 	
 	function getGeekli() {
 		var geeklistId = parseID(document.getElementById("geeklistIdINPUT").value);
@@ -110,7 +116,7 @@
 
 			var comments = document.getElementById("comments").checked;
 			//Clear old list.
-			document.getElementById("geeklist").innerHTML = "";
+			clearGeeklist();
 
 			//Decide whether to make a new request.  
 			//Need a new one for a new ID (duh), added comments, or expiration (in min).
@@ -160,7 +166,14 @@
 		document.getElementsByTagName("form")[0].addEventListener("change", function(e) {
 			getGeekli();
 		});
-		document.getElementById("urlHint").innerHTML = [location.protocol, '//', location.host, location.pathname, '?234925'].join('');
+		setURL();
+	}
+
+	function setURL(toId) {
+		if (!toId)
+			toId = 234925;
+		document.getElementById("urlHint").innerHTML = [location.protocol, '//', location.host, location.pathname, '?', toId].join('');
+		document.getElementById("urlHint").href = "./?" + toId;
 	}
 	
 	window.onload = loady;

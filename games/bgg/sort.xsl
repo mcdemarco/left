@@ -4,6 +4,9 @@
 	<xsl:param name="ascending">false</xsl:param>
 	<xsl:param name="images">true</xsl:param>
 	<xsl:param name="comments">false</xsl:param>
+
+	<xsl:variable name="monthString" select="'JanFebMarAprMayJunJulAugSepOctNovDec'"/>
+
 <xsl:template match="/">
 	<xsl:choose>
 		<xsl:when test="//message">
@@ -12,7 +15,7 @@
 			<p>(This probably means you should wait a minute and click Sort again.)</p>
 		</xsl:when>
 		<xsl:when test="//error">
-			<!-- show any messages -->
+			<!-- show any errors -->
 			<p class="message"><xsl:value-of select="//error/@message" /></p>
 			<p>(This probably means your geeklist ID was bad.)</p>
 		</xsl:when>
@@ -85,6 +88,24 @@
 						<xsl:with-param name="geeklistId" select="//geeklist/@id" />
 					</xsl:apply-templates>
 				</xsl:when>
+				<xsl:when test="$sortby = 'editdate' and $ascending = 'true'">
+					<xsl:apply-templates select="//geeklist/item" mode="entry">
+						<xsl:sort select = "substring(substring-after(substring-after(substring-after(@editdate, ', '), ' '), ' '), 1, 4)" order="ascending"/>
+						<xsl:sort select = "string-length(substring-before($monthString, substring-before(substring-after(substring-after(@editdate, ', '), ' '), ' ')))" data-type="number" order="ascending"/>
+						<xsl:sort select = "substring-before(substring-after(@editdate, ', '), ' ')" data-type="number" order="ascending"/>
+						<xsl:sort select = "substring-before(substring-after(substring-after(substring-after(substring-after(@editdate, ', '), ' '), ' '), ' '), ' ')" data-type="string" order="ascending"/>
+						<xsl:with-param name="geeklistId" select="//geeklist/@id" />
+					</xsl:apply-templates>
+				</xsl:when>
+				<xsl:when test="$sortby = 'editdate'">
+					<xsl:apply-templates select="//geeklist/item" mode="entry">
+						<xsl:sort select = "substring(substring-after(substring-after(substring-after(@editdate, ', '), ' '), ' '), 1, 4)" order="descending"/>
+						<xsl:sort select = "string-length(substring-before($monthString, substring-before(substring-after(substring-after(@editdate, ', '), ' '), ' ')))" data-type="number" order="descending"/>
+						<xsl:sort select = "substring-before(substring-after(@editdate, ', '), ' ')" data-type="number" order="descending"/>
+						<xsl:sort select = "substring-before(substring-after(substring-after(substring-after(substring-after(@editdate, ', '), ' '), ' '), ' '), ' ')" data-type="string" order="descending"/> 
+						<xsl:with-param name="geeklistId" select="//geeklist/@id" />
+					</xsl:apply-templates>
+				</xsl:when>
 				<xsl:when test="$sortby = 'manual' and $ascending = 'true'">
 					<xsl:apply-templates select="//geeklist/item" mode="entry">
 						<xsl:with-param name="geeklistId" select="//geeklist/@id" />
@@ -149,7 +170,7 @@
 			<h3>
 				<a href="https://boardgamegeek.com/geeklist/{$geeklistId}/item/{@id}#item{@id}">
 					<xsl:value-of select="@objectname" />
-				</a>			
+				</a>
 			</h3>
 			<div class="entrycontents">
 				<div>
@@ -193,5 +214,7 @@
 		<xsl:value-of select="$theCount"/><xsl:text> </xsl:text>
 		<xsl:value-of select="$theWord"/><xsl:if test="not($theCount = 1)">s</xsl:if>
 	</xsl:template>
+
+
 
 </xsl:stylesheet>
