@@ -6,6 +6,13 @@
 	<xsl:param name="comments">false</xsl:param>
 
 	<xsl:variable name="monthString" select="'JanFebMarAprMayJunJulAugSepOctNovDec'"/>
+	<xsl:variable name="sortorder">
+		<xsl:choose>
+			<xsl:when test="$ascending='true'">ascending</xsl:when>
+			<xsl:otherwise>descending</xsl:otherwise>
+		</xsl:choose>
+	</xsl:variable>
+				
 
 <xsl:template match="/">
 	<xsl:choose>
@@ -21,7 +28,15 @@
 		</xsl:when>
 		<xsl:otherwise>
 			<div id="header" class="entry">
-				<h2><a href="https://boardgamegeek.com/geeklist/{//geeklist/@id}/"><xsl:value-of select="//geeklist/title" /></a></h2>
+				<h2>
+					<a href="https://boardgamegeek.com/geeklist/{//geeklist/@id}/"><xsl:value-of select="//geeklist/title" /></a>
+					<div style="display:inline-block;">
+						<xsl:call-template name="pluralizer">
+							<xsl:with-param name="theCount" select="count(//item)"/>
+							<xsl:with-param name="theWord" select="'item'"/>
+						</xsl:call-template>
+					</div>
+				</h2>
 				<div class="entrycontents">
 					<cite>
 						Posted: 
@@ -37,6 +52,7 @@
 					</cite>
 					<div class="right">
 						<cite>Created by <xsl:value-of select="//username" /></cite><br/>
+					
 						<xsl:call-template name="pluralizer">
 							<xsl:with-param name="theCount" select="//thumbs"/>
 							<xsl:with-param name="theWord" select="'thumb'"/>
@@ -52,104 +68,54 @@
 				</div>
 			</div>
 			<xsl:choose>
-				<xsl:when test="$sortby = 'alpha' and $ascending = 'true'">
-					<xsl:apply-templates select="//geeklist/item" mode="entry">
-						<xsl:sort select = "@objectname" data-type="string" order="ascending" />
-						<xsl:with-param name="geeklistId" select="//geeklist/@id" />
-					</xsl:apply-templates>
-				</xsl:when>
 				<xsl:when test="$sortby = 'alpha'">
 					<xsl:apply-templates select="//geeklist/item" mode="entry">
-						<xsl:sort select = "@objectname" data-type="string" order="descending" />
-						<xsl:with-param name="geeklistId" select="//geeklist/@id" />
-					</xsl:apply-templates>
-				</xsl:when>
-				<xsl:when test="$sortby = 'comments' and $ascending = 'true'">
-					<xsl:apply-templates select="//geeklist/item" mode="entry">
-						<xsl:sort select = "count(comment)" data-type="number" order="ascending" />
+						<xsl:sort select = "@objectname" data-type="text" order="{$sortorder}" />
 						<xsl:with-param name="geeklistId" select="//geeklist/@id" />
 					</xsl:apply-templates>
 				</xsl:when>
 				<xsl:when test="$sortby = 'comments'">
 					<xsl:apply-templates select="//geeklist/item" mode="entry">
-						<xsl:sort select = "count(comment)" data-type="number" order="descending" />
-						<xsl:with-param name="geeklistId" select="//geeklist/@id" />
-					</xsl:apply-templates>
-				</xsl:when>
-				<xsl:when test="$sortby = 'date' and $ascending = 'true'">
-					<xsl:apply-templates select="//geeklist/item" mode="entry">
-						<xsl:sort select = "@id" data-type="number" order="ascending" />
+						<xsl:sort select = "count(comment)" data-type="number" order="{$sortorder}" />
 						<xsl:with-param name="geeklistId" select="//geeklist/@id" />
 					</xsl:apply-templates>
 				</xsl:when>
 				<xsl:when test="$sortby = 'date'">
 					<xsl:apply-templates select="//geeklist/item" mode="entry">
-						<xsl:sort select = "@id" data-type="number" order="descending" />
-						<xsl:with-param name="geeklistId" select="//geeklist/@id" />
-					</xsl:apply-templates>
-				</xsl:when>
-				<xsl:when test="$sortby = 'editdate' and $ascending = 'true'">
-					<xsl:apply-templates select="//geeklist/item" mode="entry">
-						<xsl:sort select = "substring(substring-after(substring-after(substring-after(@editdate, ', '), ' '), ' '), 1, 4)" order="ascending"/>
-						<xsl:sort select = "string-length(substring-before($monthString, substring-before(substring-after(substring-after(@editdate, ', '), ' '), ' ')))" data-type="number" order="ascending"/>
-						<xsl:sort select = "substring-before(substring-after(@editdate, ', '), ' ')" data-type="number" order="ascending"/>
-						<xsl:sort select = "substring-before(substring-after(substring-after(substring-after(substring-after(@editdate, ', '), ' '), ' '), ' '), ' ')" data-type="string" order="ascending"/>
+						<xsl:sort select = "@id" data-type="number" order="{$sortorder}" />
 						<xsl:with-param name="geeklistId" select="//geeklist/@id" />
 					</xsl:apply-templates>
 				</xsl:when>
 				<xsl:when test="$sortby = 'editdate'">
 					<xsl:apply-templates select="//geeklist/item" mode="entry">
-						<xsl:sort select = "substring(substring-after(substring-after(substring-after(@editdate, ', '), ' '), ' '), 1, 4)" order="descending"/>
-						<xsl:sort select = "string-length(substring-before($monthString, substring-before(substring-after(substring-after(@editdate, ', '), ' '), ' ')))" data-type="number" order="descending"/>
-						<xsl:sort select = "substring-before(substring-after(@editdate, ', '), ' ')" data-type="number" order="descending"/>
-						<xsl:sort select = "substring-before(substring-after(substring-after(substring-after(substring-after(@editdate, ', '), ' '), ' '), ' '), ' ')" data-type="string" order="descending"/> 
-						<xsl:with-param name="geeklistId" select="//geeklist/@id" />
-					</xsl:apply-templates>
-				</xsl:when>
-				<xsl:when test="$sortby = 'manual' and $ascending = 'true'">
-					<xsl:apply-templates select="//geeklist/item" mode="entry">
+						<xsl:sort select = "substring(substring-after(substring-after(substring-after(@editdate, ', '), ' '), ' '), 1, 4)" order="{$sortorder}"/>
+						<xsl:sort select = "string-length(substring-before($monthString, substring-before(substring-after(substring-after(@editdate, ', '), ' '), ' ')))" data-type="number" order="{$sortorder}"/>
+						<xsl:sort select = "substring-before(substring-after(@editdate, ', '), ' ')" data-type="number" order="{$sortorder}"/>
+						<xsl:sort select = "substring-before(substring-after(substring-after(substring-after(substring-after(@editdate, ', '), ' '), ' '), ' '), ' ')" data-type="text" order="{$sortorder}"/>
 						<xsl:with-param name="geeklistId" select="//geeklist/@id" />
 					</xsl:apply-templates>
 				</xsl:when>
 				<xsl:when test="$sortby = 'manual'">
 					<xsl:apply-templates select="//geeklist/item" mode="entry">
-						<xsl:sort select="position()" data-type="number" order="descending" />
-						<xsl:with-param name="geeklistId" select="//geeklist/@id" />
-					</xsl:apply-templates>
-				</xsl:when>
-				<xsl:when test="$sortby = 'thumbs' and $ascending = 'true'">
-					<xsl:apply-templates select="//geeklist/item" mode="entry">
-						<xsl:sort select = "@thumbs" data-type="number" order="ascending" />
+						<xsl:sort select="position()" data-type="number" order="{$sortorder}" />
 						<xsl:with-param name="geeklistId" select="//geeklist/@id" />
 					</xsl:apply-templates>
 				</xsl:when>
 				<xsl:when test="$sortby = 'thumbs'">
 					<xsl:apply-templates select="//geeklist/item" mode="entry">
-						<xsl:sort select = "@thumbs" data-type="number" order="descending" />
-						<xsl:with-param name="geeklistId" select="//geeklist/@id" />
-					</xsl:apply-templates>
-				</xsl:when>
-				<xsl:when test="$sortby = 'type' and $ascending = 'true'">
-					<xsl:apply-templates select="//geeklist/item" mode="entry">
-						<xsl:sort select = "@subtype" data-type="string" order="ascending" />
+						<xsl:sort select = "@thumbs" data-type="number" order="{$sortorder}" />
 						<xsl:with-param name="geeklistId" select="//geeklist/@id" />
 					</xsl:apply-templates>
 				</xsl:when>
 				<xsl:when test="$sortby = 'type'">
 					<xsl:apply-templates select="//geeklist/item" mode="entry">
-						<xsl:sort select = "@subtype" data-type="string" order="descending" />
-						<xsl:with-param name="geeklistId" select="//geeklist/@id" />
-					</xsl:apply-templates>
-				</xsl:when>
-				<xsl:when test="$sortby = 'user' and $ascending = 'true'">
-					<xsl:apply-templates select="//geeklist/item" mode="entry">
-						<xsl:sort select = "@username" data-type="string" order="ascending" />
+						<xsl:sort select = "@subtype" data-type="text" order="{$sortorder}" />
 						<xsl:with-param name="geeklistId" select="//geeklist/@id" />
 					</xsl:apply-templates>
 				</xsl:when>
 				<xsl:when test="$sortby = 'user'">
 					<xsl:apply-templates select="//geeklist/item" mode="entry">
-						<xsl:sort select = "@username" data-type="string" order="descending" />
+						<xsl:sort select = "@username" data-type="text" order="{$sortorder}" />
 						<xsl:with-param name="geeklistId" select="//geeklist/@id" />
 					</xsl:apply-templates>
 				</xsl:when>

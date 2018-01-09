@@ -44,6 +44,13 @@ p.message {
 }
 #geeklist div#header.entry h2 {
     background-color: #D5D5D5;
+    display: flex;
+    flex-basis: 100%;
+    justify-content: space-between;
+}
+#geeklist div#header.entry h2 div {
+    color: #888888;
+    font-size: smaller;
 }
 
 

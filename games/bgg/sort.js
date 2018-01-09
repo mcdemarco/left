@@ -9,7 +9,7 @@
 	//The api doesn't always respond with the goods.
 	var waitMessage = "Your request for this geeklist has been accepted and will be processed.";
 	//Requires a proxy because the BGG API is broken in yet another way.
-	//wore this one out once, but it's back: 
+	//wore this one out a few times, but it comes back: 
 	var corsProxy = "https://cors-anywhere.herokuapp.com/";
 	//var corsProxy = "https://galvanize-cors-proxy.herokuapp.com/";
 	//Local xsl.
@@ -52,7 +52,12 @@
 
 	function transformAndWrite(geeklistXML) {
 		clearGeeklist();
-		var fragment = transform(geeklistXML,stylesheet);
+		var fragment;
+		try {
+			fragment = transform(geeklistXML,stylesheet);
+		} catch(e) {
+			fragment = "<p class='message'>An error occurred: " + e.name + ", " + e.message + "</p><p>(This may be due to bad data from BGG or browser-specific issues.)</p>";
+		}
 		document.getElementById("geeklist").appendChild(fragment);
 	}
 
