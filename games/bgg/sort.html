@@ -1,0 +1,60 @@
+<html>
+<head>
+<title>Geeklist Sorter</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<!--
+BoardGameGeek geeklist sorter by fiddly_bits.
+-->
+<link href="sort.css" rel="stylesheet" />
+<script type="text/javascript" src="sort.js"></script>
+</head>
+<body>
+  <h1>Geeklist Sorter</h1>
+
+	<form>
+					<p class="unwrap">
+						<span>Sort geeklist <input type="text" placeholder="ID or URL" id="geeklistIdINPUT" value="" /></span>
+						<span>in order by 
+							<select id="sortBy">
+								<option value="alpha">Alphabetical</option>
+								<option value="comments">Comments</option>
+								<option value="date" selected>Date Added</option>
+								<option value="editdate">Date Edited</option>
+								<option value="manual">Manual</option>
+								<option value="thumbs">Thumbs</option>
+								<option value="type">Type</option>
+								<option value="user">User</option>
+							</select>
+						</span>
+						<span>
+									<input type="checkbox" id="ascending" /> ascending
+						</span>
+						<span>
+									<input type="checkbox" id="images" title="show images" checked /> images
+						</span>
+						<span>
+									<input type="checkbox" id="comments" title="include comment info" /> comment info
+						</span>
+						<input type="submit" value="Sort" />
+					</p>
+	</form>
+
+	<p class="info">You can pass the geeklist ID in with the URL, e.g., <a href="./?234925" id="urlHint"></a>.</p>
+
+	<div id="main_content">
+					<div id="geeklist">
+					</div>
+	</div>
+
+	<p class="info">Rank and rating are not included because the API does not return that information with the geeklist, even when the list is sorted by rank or rating at BGG.  But if the list was manually sorted by the creator, you can see or reverse that sorting with "Manual".</p>
+
+	<hr />
+
+	<cite id="footer">
+		By mcd (<a href="http://boardgamegeek.com/user/fiddly_bits">fiddly_bits</a>), inspired by
+	  <a href="https://boardgamegeek.com/thread/554406/geeklists-allow-users-change-sort-method">the lack of geeklist sorting</a> at BGG.<br/>
+		View the source of this page to see how it's done (mostly with xslt).
+	</cite>
+  </div>
+</body>
+</html>

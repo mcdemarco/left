@@ -1,0 +1,52 @@
+<html>
+<head>
+<title>BGG Family Lists</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<!--
+Based on a BoardGameGeek geeklist sorter by fiddly_bits.
+-->
+<link href="family.css" rel="stylesheet" />
+<script type="text/javascript" src="family.js"></script>
+</head>
+<body>
+  <h1>Family Sorter</h1>
+
+	<form>
+					<p class="unwrap">
+						<span>Sort family <input type="text" placeholder="ID or URL" id="familyIdINPUT" value="" /></span>
+						<span>in order by 
+							<select id="sortBy">
+								<option value="alpha">Alphabetical</option>
+								<option value="date" selected>Date Created</option>
+								<option value="manual">Default</option>
+								<option value="type">Type</option>
+							</select>
+						</span>
+						<span>
+									<input type="checkbox" id="ascending" /> ascending
+						</span>
+						<span>
+									<input type="checkbox" id="images" title="show image" checked /> image
+						</span>
+						<input type="submit" value="Sort" />
+					</p>
+	</form>
+
+	<p class="info">You can pass the family ID in with the URL, e.g., <a href="./?4024" id="urlHint"></a>.</p>
+
+	<div id="main_content">
+					<div id="family">
+					</div>
+	</div>
+
+	<p class="info">Rank and rating are not included because the API does not return that information with the family.</p>
+
+	<hr />
+
+	<cite id="footer">
+		By mcd (<a href="http://boardgamegeek.com/user/fiddly_bits">fiddly_bits</a>), based on her <a href="sort.html">geeklist sorter</a>.<br/>
+		View the source of this page to see how it's done (mostly with xslt).
+	</cite>
+  </div>
+</body>
+</html>
