@@ -72,8 +72,25 @@
 					</xsl:if>
 				</xsl:when>
 				<xsl:when test="$sortby = 'rank2'">
-					<xsl:apply-templates select="//items/item" mode="entry">
+					<xsl:if test="$sortorder = 'descending'">
+						<!-- report the nulls first -->
+						<xsl:apply-templates select="//items/item[statistics/ratings/ranks[not(rank[@type='family'])]]" mode="entry" />
+						<xsl:apply-templates select="//items/item[statistics/ratings/ranks/rank[@type='family' and @value='Not Ranked']]" mode="entry" />
+					</xsl:if>
+
+					<xsl:apply-templates select="//items/item[statistics/ratings/ranks/rank[@type='family' and not(@value='Not Ranked')]]" mode="entry">
 						<xsl:sort select = "statistics/ratings/ranks/rank[@type='family']/@value" data-type="number" order="{$sortorder}" />
+					</xsl:apply-templates>
+
+					<xsl:if test="$sortorder = 'ascending'">
+						<!-- report the nulls last -->
+						<xsl:apply-templates select="//items/item[statistics/ratings/ranks/rank[@type='family' and @value='Not Ranked']]" mode="entry" />
+						<xsl:apply-templates select="//items/item[statistics/ratings/ranks[not(rank[@type='family'])]]" mode="entry" />
+					</xsl:if>
+				</xsl:when>
+				<xsl:when test="$sortby = 'rating'">
+					<xsl:apply-templates select="//items/item" mode="entry">
+						<xsl:sort select = "statistics/ratings/average/@value" data-type="number" order="{$sortorder}" />
 					</xsl:apply-templates>
 				</xsl:when>
 				<xsl:when test="$sortby = 'ratings'">
@@ -122,6 +139,28 @@
 					</div>
 				</xsl:if>
 				<div class="right">
+					<xsl:if test="$stats='true'">
+						<xsl:value-of select="substring(statistics/ratings/average/@value,1,4)"/>
+						<xsl:text> (</xsl:text>
+						<xsl:call-template name="pluralizer">
+								<xsl:with-param name="theCount" select="statistics/ratings/usersrated/@value"/>
+								<xsl:with-param name="theWord" select="'user'"/>
+						</xsl:call-template>
+						<xsl:text>)</xsl:text>
+						<br/>
+					
+						<xsl:for-each select="statistics/ratings/ranks/rank">
+							<xsl:value-of select="@friendlyname"/>: <xsl:value-of select="@value"/><br/>
+						</xsl:for-each>
+
+						<xsl:call-template name="pluralizer">
+							<xsl:with-param name="theCount" select="statistics/ratings/numcomments/@value"/>
+							<xsl:with-param name="theWord" select="'comment'"/>
+						</xsl:call-template>
+						<br/>
+						<hr/>
+					</xsl:if>
+
 					<xsl:choose>
 						<xsl:when test="minplayers/@value &lt; maxplayers/@value">
 							<xsl:value-of select="minplayers/@value"/>
@@ -143,24 +182,6 @@
 					<xsl:for-each select="link[@type='boardgamefamily']">
 						Family: <a href="https://boardgamegeek.com/{@type}/{@id}/"><xsl:value-of select="@value"/></a><br/>
 					</xsl:for-each>
-					<xsl:if test="$stats='true'">
-						<xsl:value-of select="substring(statistics/ratings/average/@value,1,4)"/>
-						<xsl:text> (</xsl:text>
-						<xsl:call-template name="pluralizer">
-								<xsl:with-param name="theCount" select="statistics/ratings/usersrated/@value"/>
-								<xsl:with-param name="theWord" select="'user'"/>
-						</xsl:call-template>
-						<xsl:text>)</xsl:text>
-						<br/>
-						<xsl:call-template name="pluralizer">
-							<xsl:with-param name="theCount" select="statistics/ratings/numcomments/@value"/>
-							<xsl:with-param name="theWord" select="'comment'"/>
-						</xsl:call-template>
-						<br/>
-						<xsl:for-each select="statistics/ratings/ranks/rank">
-							<xsl:value-of select="@friendlyname"/>: <xsl:value-of select="@value"/><br/>
-						</xsl:for-each>
-					</xsl:if>
 				</div>
 			</div>
 		</div>
