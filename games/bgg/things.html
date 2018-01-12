@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>BGG Thing Sorter</title>
+<meta charset="utf-8" /> 
+<!--
+Based on a BoardGameGeek geeklist sorter by fiddly_bits.
+-->
+<link href="things.css" rel="stylesheet" />
+<script type="text/javascript" src="things.js"></script>
+</head>
+<body>
+  <h1>Thing Sorter</h1>
+
+	<form>
+					<p class="unwrap">
+						<span>Sort things <input type="text" placeholder="ID list" id="thingIdsINPUT" value="" /></span>
+						<span>in order by 
+							<select id="sortBy">
+								<option value="alpha">Alphabetical</option>
+								<option value="comments">Comments</option>
+								<option value="date" selected>Date Created</option>
+								<option value="manual">Manual</option>
+								<option value="rank">Rank</option>
+								<option value="rank2">Other Rank</option>
+								<option value="rating">Average Rating</option>
+								<option value="ratings">Number of Ratings</option>
+								<option value="type">type</option>
+								<option value="year">Year Published</option>
+							</select>
+						</span>
+						<span>
+									<input type="checkbox" id="ascending" /> ascending
+						</span>
+						<span>
+									<input type="checkbox" id="images" title="show image" checked /> image
+						</span>
+						<span>
+									<input type="checkbox" id="descriptions" title="include descriptions" /> description
+						</span>
+						<span>
+									<input type="checkbox" id="stats" title="include statistics" /> stats
+						</span>
+						<input type="submit" value="Sort" />
+					</p>
+	</form>
+
+	<p class="info">You can pass the thing IDs in with the URL, e.g., <a href="" id="urlHint"></a>.</p>
+
+	<div id="main_content">
+					<div id="things">
+					</div>
+	</div>
+
+	<p class="info">Thing info here...</p>
+
+	<hr />
+
+	<cite id="footer">
+		By mcd (<a href="http://boardgamegeek.com/user/fiddly_bits">fiddly_bits</a>), based on her <a href="sort.html">geeklist sorter</a>.<br/>
+		View the source of this page to see how it's done (mostly with xslt).
+	</cite>
+  </div>
+</body>
+</html>
