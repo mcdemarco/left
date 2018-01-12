@@ -30,28 +30,37 @@
 	
 	function requestThing(thingId,stats) {
 		var oReq = new XMLHttpRequest();
-		oReq.addEventListener("load", reqListener);
+		oReq.addEventListener("readystatechange", reqListener);
 		oReq.open("GET", corsProxy + thingURL + thingId + (stats ? "&stats=1" : ""));
 		oReq.send();
 	}
 	
 	function reqListener() {
-		var thingXML = this.responseXML;
-		//Often the response is "wait a minute"; 
-		//the stylesheet will display that, but we still want to know.
-		if (thingXML.firstChild.nodeName == "items") {
-			//This is worth saving.
-			thingStatus.date = new Date();
-			thingStatus.xml = thingXML;
-			thingStatus.id = [].slice.call(thingXML.firstChild.children).map(function(elt) {return elt.getAttribute("id");}).join(",");
-			thingStatus.stats = document.getElementById("stats").checked;
-			setURL(thingStatus.id);
+		if (this.readyState == XMLHttpRequest.DONE) {
+			if (this.status == 200) {
+				var thingXML = this.responseXML;
+				//Often the response is "wait a minute"; 
+				//the stylesheet will display that, but we still want to know.
+				if (thingXML.firstChild.nodeName == "items") {
+					//This is worth saving.
+					thingStatus.date = new Date();
+					thingStatus.xml = thingXML;
+					thingStatus.id = [].slice.call(thingXML.firstChild.children).map(function(elt) {return elt.getAttribute("id");}).join(",");
+					thingStatus.stats = document.getElementById("stats").checked;
+					setURL(thingStatus.id);
+				}
+				transformAndWrite(thingXML);
+			} else {debugger;
+				//An error occurred.
+				writeThing("<p class='message'>An error occurred.</p>");
+			} 
+		}	else {
+			writeThing("<p>Loading...</p>");
 		}
-		transformAndWrite(thingXML);
 	}
 
 	function transformAndWrite(thingXML) {
-		clearThing();
+		writeThing("");
 		var fragment;
 		try {
 			fragment = transform(thingXML,stylesheet);
@@ -92,11 +101,11 @@
 		switch(document.getElementById("sortBy").value) {
 			case "alpha":
 			case "manual":
+			case "rank":
+			case "rank2":
 				document.getElementById("ascending").checked = true;
 				break;
 			case "comments":
-			case "rank":
-			case "rank2":
 			case "rating":
 			case "ratings":
 				document.getElementById("ascending").checked = false;
@@ -106,10 +115,6 @@
 		}
 	}
 
-	function clearThing() {
-		document.getElementById("things").innerHTML = "";
-	}
-	
 	function getThingi() {
 		var thingId = document.getElementById("thingIdsINPUT").value;
 
@@ -124,7 +129,7 @@
 		var stats = document.getElementById("stats").checked;
 
 		//Clear old list.
-		clearThing();
+		writeThing("");
 
 		//Decide whether to make a new request.  
 		//Need a new one for a new ID (duh) or expiration (in min).
@@ -167,9 +172,13 @@
 
 	function setURL(toIds) {
 		if (!toIds)
-			toIds = "16391,46614,7553,235697,15209,226080,1047,226081,226586"; 
+			toIds = "16391,46614,7553,235697,15209,581,226080,1047,226081,171,226586,12608"; 
 		document.getElementById("urlHint").innerHTML = [location.protocol, '//', location.host, location.pathname, '?', toIds].join('');
 		document.getElementById("urlHint").href = "./things.html?" + toIds;
+	}
+
+	function writeThing(thingString) {
+		document.getElementById("things").innerHTML = thingString;
 	}
 	
 	window.onload = loady;
