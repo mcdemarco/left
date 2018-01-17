@@ -35,8 +35,8 @@
 					</div>
 				</h2>
 				<div class="entrycontents">
-					<cite>
-						<xsl:value-of select="//items/item/description"></xsl:value-of>
+					<cite class="description">
+						<xsl:value-of select="//items/item/description" disable-output-escaping="yes" />
 					</cite>
 					<div class="right">
 						<xsl:if test="$images='true'">

@@ -1,2 +1,7 @@
 AddType image/svg+xml svg
 ErrorDocument 404 /404.html
+
+#rewrite the root of the bgg sorter directory only if an actual query string was passed in.
+RewriteEngine On
+RewriteCond %{QUERY_STRING} ^(.+)$
+RewriteRule ^games/bgg/(index.html)?$ /games/bgg/geeklist.html?%1 [R=302,L]

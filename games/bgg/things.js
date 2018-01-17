@@ -9,9 +9,10 @@
 	//The api doesn't always respond with the goods.
 	var waitMessage = "Your request for this thing has been accepted and will be processed.";
 	//Requires a proxy because the BGG API is broken in yet another way.
-	//wore this one out a few times, but it comes back: 
-	//var corsProxy = "https://cors-anywhere.herokuapp.com/";
-	var corsProxy = "https://galvanize-cors-proxy.herokuapp.com/";
+	var base = location.protocol + "//" + location.host + "/games/bgg/";
+	var baseFile = base + "things.html";
+	var corsProxy = base + "proxy.php?csurl=";
+	var defaultIds = "16391,46614,7553,235697,15209,581,226080,1047,226081,171,226586,12608";
 	//Local xsl.
 	var stylesheetURL = "things.xsl";
 	var stylesheet;
@@ -31,7 +32,7 @@
 	function requestThing(thingId,stats) {
 		var oReq = new XMLHttpRequest();
 		oReq.addEventListener("readystatechange", reqListener);
-		oReq.open("GET", corsProxy + thingURL + thingId + (stats ? "&stats=1" : ""));
+		oReq.open("GET", corsProxy + encodeURIComponent(thingURL + thingId + (stats ? "&stats=1" : "")));
 		oReq.send();
 	}
 	
@@ -50,9 +51,9 @@
 					setURL(thingStatus.id);
 				}
 				transformAndWrite(thingXML);
-			} else {debugger;
+			} else {
 				//An error occurred.
-				writeThing("<p class='message'>An error occurred.</p>");
+				writeThing("<p class='message'>An error occurred" + (this.status ? ": " + this.status + (this.statusText ? " (" + this.statusText + ")" : "") : "") + ".</p>");
 			} 
 		}	else {
 			writeThing("<p>Loading...</p>");
@@ -172,9 +173,9 @@
 
 	function setURL(toIds) {
 		if (!toIds)
-			toIds = "16391,46614,7553,235697,15209,581,226080,1047,226081,171,226586,12608"; 
-		document.getElementById("urlHint").innerHTML = [location.protocol, '//', location.host, location.pathname, '?', toIds].join('');
-		document.getElementById("urlHint").href = "./things.html?" + toIds;
+			toIds = defaultIds;
+		document.getElementById("urlHint").innerHTML = baseFile + "?" + toIds;
+		document.getElementById("urlHint").href = baseFile + "?" + toIds;
 	}
 
 	function writeThing(thingString) {

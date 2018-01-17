@@ -26,72 +26,58 @@ p.message {
 	border-left: 3px double tomato;
 }
 
-#things div.entry {
+#geeklist div.entry {
 	background-color: #F5F5FF;
 	border: solid 1px #8888FF;
 	margin:0.5em;
 }
-#things div.entry h2,
-#things div.entry h3 {
+#geeklist div.entry h2,
+#geeklist div.entry h3 {
 	background-color: #D1DAEF;
 	margin:0; 
 	padding:0.5em;
 }
 
-#things div#header.entry {
+#geeklist div#header.entry {
     border: solid 1px #888888;
     background-color: #F5F5F5;
 }
-#things div#header.entry h2 {
+#geeklist div#header.entry h2 {
     background-color: #D5D5D5;
     display: flex;
     flex-basis: 100%;
     justify-content: space-between;
 }
-#things div#header.entry h2 div {
+#geeklist div#header.entry h2 div {
     color: #888888;
     font-size: smaller;
 }
-#things div.entry h3 {
-    display: flex;
-    flex-basis: 100%;
-    justify-content: space-between;
-}
-#things div.entry h3 div {
-    color: #8888FF;
-}
 
 
-#things div.entry h2 a,
-#things div.entry h3 a {
+#geeklist div.entry h2 a,
+#geeklist div.entry h3 a {
 	text-decoration:none;
 }
-#things div.entry div.entrycontents {
+#geeklist div.entry div.entrycontents {
 	padding: 0.5em;
 	display: flex;
 	flex-basis: 100%;
 	justify-content: space-between;
 }
-#things div.entry div.entrycontents img {
+#geeklist div.entry div.entrycontents img {
 	align-self: flex-start;
 }
 
 input[type=text] {
-    width: 30em;
+    width: 5em;
 }
 
 div.right {
     text-align:right;
-    min-width:20%;
 }
-div.description {
-    white-space: pre-wrap;
-    font-size: smaller;
-    padding: 1em;
-}
-a#urlHint {
+a#thingURL {
     display:inline-block;
-    max-width:99%;
+    width:99%;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;

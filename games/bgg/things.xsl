@@ -17,8 +17,8 @@
 	<xsl:choose>
 		<xsl:when test="//div[@class='messagebox error']">
 			<!-- show any errors -->
-			<p class="message"><xsl:value-of select="//error/@message" /></p>
-			<p>(This probably means one or more of your ID were bad.)</p>
+			<p class="message"><xsl:value-of select="//div" /></p>
+			<p>(This probably means one or more of your IDs were bad.)</p>
 		</xsl:when>
 		<xsl:when test="//message">
 			<!-- show any messages -->
@@ -175,12 +175,19 @@
 							</xsl:call-template>
 						</xsl:otherwise>
 					</xsl:choose><br/>
-					<xsl:value-of select="playingtime/@value"/><xsl:text> minutes</xsl:text><br/>
+					<xsl:if test="playingtime/@value &gt; 0">
+						<xsl:value-of select="playingtime/@value"/><xsl:text> minutes</xsl:text><br/>
+					</xsl:if>
 					<xsl:for-each select="link[@type='boardgamecategory']">
 						<a href="https://boardgamegeek.com/{@type}/{@id}/"><xsl:value-of select="@value"/></a><br/>
 					</xsl:for-each>
 					<xsl:for-each select="link[@type='boardgamefamily']">
-						Family: <a href="https://boardgamegeek.com/{@type}/{@id}/"><xsl:value-of select="@value"/></a><br/>
+						<xsl:if test="position() &lt; 5">
+							<a href="./family.html?{@id}">Family:</a>
+							<xsl:text> </xsl:text>
+							<a href="https://boardgamegeek.com/{@type}/{@id}/"><xsl:value-of select="@value"/></a>
+							<br/>
+						</xsl:if>
 					</xsl:for-each>
 				</div>
 			</div>

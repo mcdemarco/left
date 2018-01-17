@@ -75,3 +75,14 @@ input[type=text] {
 div.right {
     text-align:right;
 }
+cite.description {
+    white-space: pre-wrap;
+    font-size: smaller;
+}
+a#thingURL {
+    display:inline-block;
+    width:99%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

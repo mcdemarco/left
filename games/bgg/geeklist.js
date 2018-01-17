@@ -1,20 +1,23 @@
 //
-//fetch a family with a cors proxy; sort and display it with xslt (so oldskool!) 
+//fetch a geeklist with a cors proxy; sort and display it with xslt (so oldskool!) 
 //
 
 (function () {
-	var familyURL = "https://boardgamegeek.com/xmlapi2/family?id=";
-	var familyStatus = {};
+	var geeklistURL = "https://boardgamegeek.com/xmlapi/geeklist/";
+	var geeklistStatus = {};
 	var minutes = 5; //Don't repeat successful requests within this number of minutes.
 	//The api doesn't always respond with the goods.
-	var waitMessage = "Your request for this family has been accepted and will be processed.";
+	var waitMessage = "Your request for this geeklist has been accepted and will be processed.";
 	//Requires a proxy because the BGG API is broken in yet another way.
+	//wore the first one out a few times, so added a spare and then my own.
+	//var corsProxy = "https://cors-anywhere.herokuapp.com/";
+	//var corsProxy = "https://galvanize-cors-proxy.herokuapp.com/";
 	var base = location.protocol + "//" + location.host + "/games/bgg/";
-	var baseFile = base + "family.html";
+	var baseFile = base + "geeklist.html";
 	var corsProxy = base + "proxy.php?csurl=";
-	var defaultId = 4024; //chess
+	var defaultId = 234925;
 	//Local xsl.
-	var stylesheetURL = "family.xsl";
+	var stylesheetURL = "geeklist.xsl";
 	var stylesheet;
 
 	function requestStylesheet(stylesheetURL) {
@@ -29,47 +32,49 @@
 		stylesheet = this.responseXML;
 	}
 	
-	function requestFamily(familyId) {
+	function requestGeeklist(geeklistId,comments) {
 		var oReq = new XMLHttpRequest();
 		oReq.addEventListener("load", reqListener);
-		oReq.open("GET", corsProxy + familyURL + familyId);
+		oReq.open("GET", corsProxy + geeklistURL + geeklistId + (comments ? "?comments=1" : ""));
 		oReq.send();
 	}
 	
 	function reqListener() {
-		var familyXML = this.responseXML;
+		var geeklistXML = this.responseXML;
 		//Often the response is "wait a minute"; 
 		//the stylesheet will display that, but we still want to know.
-		if (familyXML.firstChild.nodeName == "items") {
+		if (geeklistXML.firstChild.nodeName == "geeklist") {
 			//This is worth saving.
-			familyStatus.date = new Date();
-			familyStatus.xml = familyXML;
-			familyStatus.id = parseInt(familyXML.firstChild.firstChild.getAttribute("id"),10);
-			familyStatus.ids = [].slice.call(familyXML.firstChild.firstChild.getElementsByTagName("link")).map(function(elt) {return elt.getAttribute("id");}).join(",");
-			setURL(familyStatus.id,familyStatus.ids);
+			geeklistStatus.date = new Date();
+			geeklistStatus.xml = geeklistXML;
+			geeklistStatus.id = parseInt(geeklistXML.firstChild.getAttribute("id"),10);
+			geeklistStatus.ids = [].slice.call(geeklistXML.firstChild.getElementsByTagName("item")).map(function(elt) {return elt.getAttribute("objectid");}).join(",");
+			geeklistStatus.comments = document.getElementById("comments").checked;
+			setURL(geeklistStatus.id,geeklistStatus.ids);
 		}
-		transformAndWrite(familyXML);
+		transformAndWrite(geeklistXML);
 	}
 
-	function transformAndWrite(familyXML) {
-		clearFamily();
+	function transformAndWrite(geeklistXML) {
+		clearGeeklist();
 		var fragment;
 		try {
-			fragment = transform(familyXML,stylesheet);
+			fragment = transform(geeklistXML,stylesheet);
 		} catch(e) {
 			fragment = "<p class='message'>An error occurred: " + e.name + ", " + e.message + "</p><p>(This may be due to bad data from BGG or browser-specific issues.)</p>";
 		}
-		document.getElementById("family").appendChild(fragment);
+		document.getElementById("geeklist").appendChild(fragment);
 	}
 
-	function transform(family,stylesheet) {
+	function transform(geeklist,stylesheet) {
 		var xmlDom;
 		var sortBy = document.getElementById("sortBy").value;
 		var ascending = document.getElementById("ascending").checked;
 		var images = document.getElementById("images").checked;
+		var comments = document.getElementById("comments").checked;
 		if (typeof XSLTProcessor == "undefined") {
 			try {
-				xmlDom = family.transformNode(stylesheet);
+				xmlDom = geeklist.transformNode(stylesheet);
 			} catch(e) {
 				xmlDom = "An error occurred (" + e.description + ").";
 			}
@@ -78,8 +83,9 @@
 			xsltProcessor.setParameter(null, "sortby", sortBy);
 			xsltProcessor.setParameter(null, "ascending", ascending);
 			xsltProcessor.setParameter(null, "images", images);
+			xsltProcessor.setParameter(null, "comments", comments);
 			xsltProcessor.importStylesheet(stylesheet);
-			xmlDom = xsltProcessor.transformToFragment(family, document);
+			xmlDom = xsltProcessor.transformToFragment(geeklist, document);
 		}
 		return xmlDom;
 	}
@@ -102,30 +108,37 @@
 		}
 	}
 
-	function clearFamily() {
-		document.getElementById("family").innerHTML = "";
+	function clearGeeklist() {
+		document.getElementById("geeklist").innerHTML = "";
 	}
 	
-	function getFamili() {
-		var familyId = parseID(document.getElementById("familyIdINPUT").value);
-		if (familyId == -1)
+	function getGeekli() {
+		var geeklistId = parseID(document.getElementById("geeklistIdINPUT").value);
+		if (geeklistId == -1)
 			return;
-		else if (familyId == 0)
-			alert("Bad family id or URL!");
+		else if (geeklistId == 0)
+			alert("Bad geeklist id or URL!");
 		else {
+
+			//Force comments if necessary.
+			if (document.getElementById("sortBy").value == "comments")
+				document.getElementById("comments").checked = true;
+
+			var comments = document.getElementById("comments").checked;
 			//Clear old list.
-			clearFamily();
+			clearGeeklist();
 
 			//Decide whether to make a new request.  
-			//Need a new one for a new ID (duh) or expiration (in min).
-			if (familyStatus.id && 
-					familyStatus.id == familyId &&
-					new Date() - familyStatus.date < 60000 * minutes) {
+			//Need a new one for a new ID (duh), added comments, or expiration (in min).
+			if (geeklistStatus.id && 
+					geeklistStatus.id == geeklistId &&
+					(geeklistStatus.comments || !comments) &&
+					new Date() - geeklistStatus.date < 60000 * minutes) {
 				//Re-transform the old data.
-				transformAndWrite(familyStatus.xml);
+				transformAndWrite(geeklistStatus.xml);
 			} else {
 				//Fetch new data.
-				requestFamily(familyId);
+				requestGeeklist(geeklistId,comments);
 			}
 		}
 	}
@@ -133,8 +146,8 @@
 	function parseID(protoId) {
 		if (protoId === "")
 			return -1;
-		if ((protoId.split("family/")).length > 1)
-			protoId = protoId.split("family/")[1].split("/")[0];
+		if ((protoId.split("geeklist/")).length > 1)
+			protoId = protoId.split("geeklist/")[1].split("/")[0];
 		if (parseInt(protoId,10) > 0)
 			return parseInt(protoId,10);
 		else 
@@ -143,9 +156,9 @@
 	
 	function setFromQuery() {
 		if (window.location.search && parseInt(window.location.search.split("?")[1],10) > 0) {
-			document.getElementById("familyIdINPUT").value = parseInt(window.location.search.split("?")[1],10);
+			document.getElementById("geeklistIdINPUT").value = parseInt(window.location.search.split("?")[1],10);
 			//also autoload.
-			getFamili();
+			getGeekli();
 		}
 	}
 	
@@ -157,11 +170,11 @@
 		document.getElementById("sortBy").addEventListener("change", adjustAscending);
 		document.getElementsByTagName("form")[0].addEventListener("submit", function(e) {
 			e.preventDefault();
-			getFamili();
+			getGeekli();
 			return false;
 		});
 		document.getElementsByTagName("form")[0].addEventListener("change", function(e) {
-			getFamili();
+			getGeekli();
 		});
 		setURL();
 	}
