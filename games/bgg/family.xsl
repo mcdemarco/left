@@ -83,7 +83,7 @@
 
 	<xsl:template mode="entry" match="link">
 		<xsl:param name="familyId"/>
-		<div class="entry">
+		<div class="entry" data-thingid="{@id}">
 			<h3>
 				<a href="https://boardgamegeek.com/thing/{@id}">
 					<xsl:value-of select="@value" />

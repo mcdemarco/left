@@ -132,7 +132,7 @@
 
 	<xsl:template mode="entry" match="item">
 		<xsl:param name="geeklistId"/>
-		<div class="entry">
+		<div class="entry" data-thingid="{@objectid}">
 			<h3>
 				<a href="https://boardgamegeek.com/geeklist/{$geeklistId}/item/{@id}#item{@id}">
 					<xsl:value-of select="@objectname" />

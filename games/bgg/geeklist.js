@@ -48,9 +48,8 @@
 			geeklistStatus.date = new Date();
 			geeklistStatus.xml = geeklistXML;
 			geeklistStatus.id = parseInt(geeklistXML.firstChild.getAttribute("id"),10);
-			geeklistStatus.ids = [].slice.call(geeklistXML.firstChild.getElementsByTagName("item")).map(function(elt) {return elt.getAttribute("objectid");}).join(",");
 			geeklistStatus.comments = document.getElementById("comments").checked;
-			setURL(geeklistStatus.id,geeklistStatus.ids);
+			setURL(geeklistStatus.id);
 		}
 		transformAndWrite(geeklistXML);
 	}
@@ -64,6 +63,19 @@
 			fragment = "<p class='message'>An error occurred: " + e.name + ", " + e.message + "</p><p>(This may be due to bad data from BGG or browser-specific issues.)</p>";
 		}
 		document.getElementById("geeklist").appendChild(fragment);
+		setThings();
+	}
+
+	function setThings() {
+		var entries = document.getElementsByClassName("entry");
+		var elen = Math.min(entries.length,100) + 1;
+		var entryIds = [];
+		for (var e = 0; e < elen; e++) {
+			var ide = entries[e].getAttribute("data-thingid");
+			if (ide)
+				entryIds.push(ide);
+		}
+		setURL(0,entryIds.join(","));
 	}
 
 	function transform(geeklist,stylesheet) {
@@ -180,10 +192,13 @@
 	}
 
 	function setURL(toId,toIdList) {
-		if (!toId)
+		//You can pass in any number of arguments.
+		if (typeof toId == "undefined")
 			toId = defaultId;
-		document.getElementById("urlHint").innerHTML = baseFile + '?' + toId;
-		document.getElementById("urlHint").href = baseFile + '?' + toId;
+		if (toId) {
+			document.getElementById("urlHint").innerHTML = baseFile + '?' + toId;
+			document.getElementById("urlHint").href = baseFile + '?' + toId;
+		}
 		if (toIdList) {
 			document.getElementById("thingURL").innerHTML = base + 'things.html?' + toIdList;
 			document.getElementById("thingURL").href = base + 'things.html?' + toIdList;

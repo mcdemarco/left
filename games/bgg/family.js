@@ -45,8 +45,7 @@
 			familyStatus.date = new Date();
 			familyStatus.xml = familyXML;
 			familyStatus.id = parseInt(familyXML.firstChild.firstChild.getAttribute("id"),10);
-			familyStatus.ids = [].slice.call(familyXML.firstChild.firstChild.getElementsByTagName("link")).map(function(elt) {return elt.getAttribute("id");}).join(",");
-			setURL(familyStatus.id,familyStatus.ids);
+			setURL(familyStatus.id);
 		}
 		transformAndWrite(familyXML);
 	}
@@ -60,6 +59,19 @@
 			fragment = "<p class='message'>An error occurred: " + e.name + ", " + e.message + "</p><p>(This may be due to bad data from BGG or browser-specific issues.)</p>";
 		}
 		document.getElementById("family").appendChild(fragment);
+		setThings();
+	}
+
+	function setThings() {
+		var entries = document.getElementsByClassName("entry");
+		var elen = Math.min(entries.length,100) + 1;
+		var entryIds = [];
+		for (var e = 0; e < elen; e++) {
+			var ide = entries[e].getAttribute("data-thingid");
+			if (ide)
+				entryIds.push(ide);
+		}
+		setURL(0,entryIds.join(","));
 	}
 
 	function transform(family,stylesheet) {
@@ -167,10 +179,13 @@
 	}
 
 	function setURL(toId,toIdList) {
-		if (!toId)
+		//You can pass in any number of arguments.
+		if (typeof toId == "undefined")
 			toId = defaultId;
-		document.getElementById("urlHint").innerHTML = baseFile + '?' + toId;
-		document.getElementById("urlHint").href = baseFile + '?' + toId;
+		if (toId) {
+			document.getElementById("urlHint").innerHTML = baseFile + '?' + toId;
+			document.getElementById("urlHint").href = baseFile + '?' + toId;
+		}
 		if (toIdList) {
 			document.getElementById("thingURL").innerHTML = base + 'things.html?' + toIdList;
 			document.getElementById("thingURL").href = base + 'things.html?' + toIdList;

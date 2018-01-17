@@ -162,6 +162,7 @@
 					</xsl:if>
 
 					<xsl:choose>
+						<xsl:when test="not(minplayers)"></xsl:when>
 						<xsl:when test="minplayers/@value &lt; maxplayers/@value">
 							<xsl:value-of select="minplayers/@value"/>
 							<xsl:text>–</xsl:text>
