@@ -58,6 +58,32 @@
 						<xsl:sort select="position()" data-type="number" order="{$sortorder}" />
 					</xsl:apply-templates>
 				</xsl:when>
+				<xsl:when test="$sortby = 'minplayers'">
+					<xsl:if test="$sortorder = 'ascending'">
+						<!-- report the nulls first -->
+						<xsl:apply-templates select="//items/item[not(minplayers)]" mode="entry" />
+					</xsl:if>
+					<xsl:apply-templates select="//items/item[minplayers]" mode="entry">
+						<xsl:sort select = "minplayers/@value" data-type="number" order="{$sortorder}" />
+					</xsl:apply-templates>
+					<xsl:if test="$sortorder = 'descending'">
+						<!-- report the nulls last -->
+						<xsl:apply-templates select="//items/item[not(minplayers)]" mode="entry" />
+					</xsl:if>
+				</xsl:when>
+				<xsl:when test="$sortby = 'maxplayers'">
+					<xsl:if test="$sortorder = 'ascending'">
+						<!-- report the nulls first -->
+						<xsl:apply-templates select="//items/item[not(maxplayers)]" mode="entry" />
+					</xsl:if>
+					<xsl:apply-templates select="//items/item[maxplayers]" mode="entry">
+						<xsl:sort select = "maxplayers/@value" data-type="number" order="{$sortorder}" />
+					</xsl:apply-templates>
+					<xsl:if test="$sortorder = 'descending'">
+						<!-- report the nulls last -->
+						<xsl:apply-templates select="//items/item[not(maxplayers)]" mode="entry" />
+					</xsl:if>
+				</xsl:when>
 				<xsl:when test="$sortby = 'rank'">
 					<xsl:if test="$sortorder = 'descending'">
 						<!-- report the nulls first -->
