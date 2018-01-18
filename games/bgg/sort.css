@@ -124,3 +124,8 @@ a#thingURL {
     overflow: hidden;
     text-overflow: ellipsis;
 }
+
+.things p.loading {
+    color: #8888FF;
+    font-style:italic;
+}

@@ -56,7 +56,7 @@
 				writeThing("<p class='message'>An error occurred" + (this.status ? ": " + this.status + (this.statusText ? " (" + this.statusText + ")" : "") : "") + ".</p>");
 			} 
 		}	else {
-			writeThing("<p>Loading...</p>");
+			writeThing("<p class='loading'>Loading...</p>");
 		}
 	}
 
@@ -102,6 +102,7 @@
 		switch(document.getElementById("sortBy").value) {
 			case "alpha":
 			case "manual":
+			case "playtime":
 			case "rank":
 			case "rank2":
 				document.getElementById("ascending").checked = true;

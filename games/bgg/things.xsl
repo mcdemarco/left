@@ -84,6 +84,11 @@
 						<xsl:apply-templates select="//items/item[not(maxplayers)]" mode="entry" />
 					</xsl:if>
 				</xsl:when>
+				<xsl:when test="$sortby = 'playtime'">
+					<xsl:apply-templates select="//items/item" mode="entry">
+						<xsl:sort select = "playingtime/@value" data-type="number" order="{$sortorder}" />
+					</xsl:apply-templates>
+				</xsl:when>
 				<xsl:when test="$sortby = 'rank'">
 					<xsl:if test="$sortorder = 'descending'">
 						<!-- report the nulls first -->
