@@ -129,3 +129,7 @@ a#thingURL {
     color: #8888FF;
     font-style:italic;
 }
+
+.collection input[type=text] {
+    width: 10em;
+}

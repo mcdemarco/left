@@ -1,0 +1,59 @@
+<html>
+<head>
+<title>BGG Collections</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<!--
+Based on a BoardGameGeek geeklist sorter by fiddly_bits.
+-->
+<link href="sort.css" rel="stylesheet" />
+<script type="text/javascript" src="collection.js"></script>
+</head>
+<body class="collection">
+  <h1>Collection Sorter</h1>
+
+	<form>
+					<p class="unwrap">
+						<span>Sort collection for user <input type="text" placeholder="ID or URL" id="userINPUT" value="" /></span>
+						<span>in order by 
+							<select id="sortBy">
+								<option value="alpha">Alphabetical</option>
+								<option value="date" selected>Date Added</option>
+								<option value="manual">Default</option>
+								<option value="type">Type</option>
+								<option value="year">Year Published</option>
+							</select>
+						</span>
+						<span>
+									<input type="checkbox" id="ascending" /> ascending
+						</span>
+						<span>
+									<input type="checkbox" id="images" title="show image" checked /> image
+						</span>
+						<span>
+									<input type="checkbox" id="comment" title="include comments" /> comments
+						</span>
+						<span>
+									<input type="checkbox" id="stats" title="include statistics" /> stats
+						</span>
+						<input type="submit" value="Sort" />
+					</p>
+	</form>
+
+	<p class="info">You can pass the username in with the URL, e.g., <a href="./?fiddly_bits" id="urlHint"></a>.</p>
+	<p class="info" id="thingURLWrapper" style="display:none;">You can pass the first 100 of these games to the thing sorter with the URL <a id="thingURL" href="#"></a></p>
+
+	<div id="main_content">
+					<div id="collection">
+					</div>
+	</div>
+
+	<p class="info"></p>
+
+	<hr />
+
+	<cite id="footer">
+		By mcd (<a href="http://boardgamegeek.com/user/fiddly_bits">fiddly_bits</a>) | <a href="./">about</a>
+	</cite>
+  </div>
+</body>
+</html>
