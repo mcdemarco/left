@@ -1,5 +1,7 @@
 /* styles for sorter and sortee, in old-skool BGG blue */
 
+/* shared css */ 
+
 body {
 	font-family: verdana, "lucida grande", arial, sans-serif;
 	padding:3%;
@@ -26,52 +28,99 @@ p.message {
 	border-left: 3px double tomato;
 }
 
-#geeklist div.entry {
+div.entry {
 	background-color: #F5F5FF;
 	border: solid 1px #8888FF;
 	margin:0.5em;
 }
-#geeklist div.entry h2,
-#geeklist div.entry h3 {
+div.entry h2,
+div.entry h3 {
 	background-color: #D1DAEF;
 	margin:0; 
 	padding:0.5em;
 }
 
-#geeklist div#header.entry {
+div#header.entry {
     border: solid 1px #888888;
     background-color: #F5F5F5;
 }
-#geeklist div#header.entry h2 {
+div#header.entry h2 {
     background-color: #D5D5D5;
     display: flex;
     flex-basis: 100%;
     justify-content: space-between;
 }
-#geeklist div#header.entry h2 div {
+div#header.entry h2 div {
     color: #888888;
     font-size: smaller;
 }
 
 
-#geeklist div.entry h2 a,
-#geeklist div.entry h3 a {
+div.entry h2 a,
+div.entry h3 a {
 	text-decoration:none;
 }
-#geeklist div.entry div.entrycontents {
+div.entry div.entrycontents {
 	padding: 0.5em;
 	display: flex;
 	flex-basis: 100%;
 	justify-content: space-between;
 }
-#geeklist div.entry div.entrycontents img {
+div.entry div.entrycontents img {
 	align-self: flex-start;
+}
+
+div.right {
+    text-align:right;
 }
 
 input[type=text] {
     width: 5em;
 }
 
-div.right {
-    text-align:right;
+/* .family and .geeklist */
+
+.family cite.description {
+    white-space: pre-wrap;
+    font-size: smaller;
+}
+
+a#thingURL {
+    display:inline-block;
+    width:99%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* .things */
+
+.things div#header.entry h2 div {
+    color: #888888;
+    font-size: smaller;
+}
+.things div.entry h3 {
+    display: flex;
+    flex-basis: 100%;
+    justify-content: space-between;
+}
+.things div.entry h3 div {
+    color: #8888FF;
+}
+
+
+.things input[type=text] {
+    width: 30em;
+}
+
+.things div.right {
+    min-width:20%;
+}
+
+.things a#urlHint {
+    display:inline-block;
+    max-width:99%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
