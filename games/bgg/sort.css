@@ -95,15 +95,18 @@ a#thingURL {
 
 /* .things */
 
+.collection div#header.entry h2 div,
 .things div#header.entry h2 div {
     color: #888888;
     font-size: smaller;
 }
+.collection div.entry h3,
 .things div.entry h3 {
     display: flex;
     flex-basis: 100%;
     justify-content: space-between;
 }
+.collection div.entry h3 div,
 .things div.entry h3 div {
     color: #8888FF;
 }

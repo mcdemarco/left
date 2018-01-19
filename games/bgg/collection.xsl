@@ -143,14 +143,14 @@
 						<a href="{image}"><img alt="" src="{thumbnail}"/></a>
 					</xsl:if>
 				</div>
-				<xsl:if test="$comment = 'true' and comment">
+				<xsl:if test="$comment = 'true'">
 					<div class="description">
 						<xsl:value-of select="comment" disable-output-escaping="yes" />
 					</div>
 				</xsl:if>
 				<div class="right">
-					<xsl:if test="$stats='true'">
-						<xsl:value-of select="substring(stats/rating/average/@value,1,4)"/>
+					<xsl:if test="$stats = 'true'">
+						<xsl:value-of select="stats/rating/average/@value"/>
 						<xsl:text> (</xsl:text>
 						<xsl:call-template name="pluralizer">
 								<xsl:with-param name="theCount" select="stats/rating/usersrated/@value"/>
@@ -164,7 +164,7 @@
 						</xsl:for-each>
 
 						<xsl:choose>
-							<xsl:when test="stats/@minplayers)"></xsl:when>
+							<xsl:when test="not(stats/@minplayers)"></xsl:when>
 							<xsl:when test="stats/@minplayers &lt; stats/@maxplayers">
 								<xsl:value-of select="stats/@minplayers"/>
 								<xsl:text>–</xsl:text>

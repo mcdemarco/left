@@ -7,7 +7,7 @@
 	var collectionStatus = {};
 	var minutes = 5; //Don't repeat successful requests within this number of minutes.
 	//The api doesn't always respond with the goods.
-	var waitMessage = "Your request for this collection has been accepted and will be processed.";
+	var waitMessage = "Your request for this collection has been accepted and will be processed. Please try again later for access.";
 	//Requires a proxy because the BGG API is broken in yet another way.
 	var base = location.protocol + "//" + location.host + "/games/bgg/";
 	var baseFile = base + "collection.html";
@@ -38,7 +38,7 @@
 	
 	function reqListener() {
 		if (this.readyState == XMLHttpRequest.DONE) {
-			if (this.status == 200) {
+			if (this.status == 200 || this.status == 202) {
 				var collectionXML = this.responseXML;
 				//Often the response is "wait a minute"; 
 				//the stylesheet will display that, but we still want to know.
@@ -67,9 +67,13 @@
 		try {
 			fragment = transform(collectionXML,stylesheet);
 		} catch(e) {
-			fragment = "<p class='message'>An error occurred: " + e.name + ", " + e.message + "</p><p>(This may be due to bad data from BGG or browser-specific issues.)</p>";
+			document.getElementById("collection").innerHTML = "<p class='message'>An error occurred: " + e.name + ", " + e.message + "</p><p>(This may be due to bad data from BGG or browser-specific issues.)</p>";
+			return;
 		}
-		document.getElementById("collection").appendChild(fragment);
+		if (!fragment) {
+			document.getElementById("collection").innerHTML = "<p class='message'>An error occurred.</p><p>(This may be due to bad data from BGG or browser-specific issues.)</p>";
+		} else
+			document.getElementById("collection").appendChild(fragment);
 	}
 
 	function transform(collection,stylesheet) {
@@ -90,7 +94,7 @@
 			xsltProcessor.setParameter(null, "sortby", sortBy);
 			xsltProcessor.setParameter(null, "ascending", ascending);
 			xsltProcessor.setParameter(null, "images", images);
-			xsltProcessor.setParameter(null, "descriptions", descriptions);
+			xsltProcessor.setParameter(null, "comment", comment);
 			xsltProcessor.setParameter(null, "stats", stats);
 			xsltProcessor.importStylesheet(stylesheet);
 			xmlDom = xsltProcessor.transformToFragment(collection, document);
@@ -120,7 +124,13 @@
 
 	function getCollectioni() {
 		var collectionId = document.getElementById("userINPUT").value;
-
+		var parsedBySlash = collectionId.split('/'); 
+		if (parsedBySlash.length > 0)
+			collectionId = parsedBySlash[parsedBySlash.length - 1];
+		if (!collectionId) {
+			alert("Bad username or URL!");
+			return;
+		}
 		//Force stats if necessary.
 		if (document.getElementById("sortBy").value == "rank" ||
 				document.getElementById("sortBy").value == "rank2" ||
