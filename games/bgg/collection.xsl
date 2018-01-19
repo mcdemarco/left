@@ -68,6 +68,11 @@
 						<xsl:sort select = "stats/@playingtime" data-type="number" order="{$sortorder}" />
 					</xsl:apply-templates>
 				</xsl:when>
+				<xsl:when test="$sortby = 'plays'">
+					<xsl:apply-templates select="//items/item" mode="entry">
+						<xsl:sort select = "numplays" data-type="number" order="{$sortorder}" />
+					</xsl:apply-templates>
+				</xsl:when>
 				<xsl:when test="$sortby = 'rank'">
 					<xsl:if test="$sortorder = 'descending'">
 						<!-- report the nulls first -->
@@ -81,7 +86,7 @@
 						<xsl:apply-templates select="//items/item[stats/rating/ranks/rank[@name='boardgame' and @value='Not Ranked']]" mode="entry" />
 					</xsl:if>
 				</xsl:when>
-				<xsl:when test="$sortby = 'rank2'">
+				<xsl:when test="$sortby = 'frank'">
 					<xsl:if test="$sortorder = 'descending'">
 						<!-- report the nulls first -->
 						<xsl:apply-templates select="//items/item[stats/rating/ranks[not(rank[@type='family'])]]" mode="entry" />
@@ -143,11 +148,26 @@
 						<a href="{image}"><img alt="" src="{thumbnail}"/></a>
 					</xsl:if>
 				</div>
-				<xsl:if test="$comment = 'true'">
-					<div class="description">
-						<xsl:value-of select="comment" disable-output-escaping="yes" />
+				<div class="status">
+					<!-- own="1" prevowned="0" fortrade="0" want="0" wanttoplay="0" wanttobuy="0" wishlist="0" preordered="0" -->
+					<xsl:if test="status/@preordered = 1"><span>preordered</span></xsl:if>
+					<xsl:if test="status/@own = 1"><span>owned</span></xsl:if>
+					<xsl:if test="status/@prevowned = 1"><span>previously owned</span></xsl:if>
+					<xsl:if test="status/@fortrade = 1"><span>for trade</span></xsl:if>
+					<xsl:if test="status/@want = 1"><span>want in trade</span></xsl:if>
+					<xsl:if test="status/@wanttoplay = 1"><span>want to play</span></xsl:if>
+					<xsl:if test="status/@wanttobuy = 1"><span>want to buy</span></xsl:if>
+					<xsl:if test="status/@wishlist = 1"><span>wishlist (<xsl:value-of select="status/@wishlistpriority"/>)</span></xsl:if>
+					<div>
+						Plays: <xsl:value-of select="numplays"/>
 					</div>
-				</xsl:if>
+					<xsl:if test="$comment = 'true' and comment">
+						<hr/>
+						<div class="description">
+							<xsl:value-of select="comment" disable-output-escaping="yes" />
+						</div>
+					</xsl:if>
+				</div>
 				<div class="right">
 					<xsl:if test="$stats = 'true'">
 						<xsl:value-of select="stats/rating/average/@value"/>
@@ -182,8 +202,6 @@
 						<xsl:if test="stats/@playingtime &gt; 0">
 							<xsl:value-of select="stats/@playingtime"/><xsl:text> minutes</xsl:text><br/>
 						</xsl:if>
-						<hr/>
-						<!-- status stuff here -->
 					</xsl:if>
 				</div>
 			</div>
@@ -193,8 +211,10 @@
 	<xsl:template name="pluralizer">
 		<xsl:param name="theCount"/>
 		<xsl:param name="theWord"/>
-		<xsl:value-of select="$theCount"/><xsl:text> </xsl:text>
-		<xsl:value-of select="$theWord"/><xsl:if test="not($theCount = 1)">s</xsl:if>
+		<span class="pluralized">
+			<xsl:value-of select="$theCount"/><xsl:text> </xsl:text>
+			<xsl:value-of select="$theWord"/><xsl:if test="not($theCount = 1)">s</xsl:if>
+		</span>
 	</xsl:template>
 
 </xsl:stylesheet>

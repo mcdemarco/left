@@ -104,7 +104,7 @@
 			case "manual":
 			case "playtime":
 			case "rank":
-			case "rank2":
+			case "frank":
 				document.getElementById("ascending").checked = true;
 				break;
 			case "comments":
@@ -122,7 +122,7 @@
 
 		//Force stats if necessary.
 		if (document.getElementById("sortBy").value == "rank" ||
-				document.getElementById("sortBy").value == "rank2" ||
+				document.getElementById("sortBy").value == "frank" ||
 				document.getElementById("sortBy").value == "rating" ||
 				document.getElementById("sortBy").value == "ratings" ||
 				document.getElementById("sortBy").value == "comments")

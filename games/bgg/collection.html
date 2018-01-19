@@ -12,38 +12,64 @@ Based on a BoardGameGeek geeklist sorter by fiddly_bits.
   <h1>Collection Sorter</h1>
 
 	<form>
-					<p class="unwrap">
-						<span>Sort collection for user <input type="text" placeholder="ID or URL" id="userINPUT" value="" /></span>
-						<span>in order by 
-							<select id="sortBy">
-								<option value="alpha">Alphabetical</option>
-								<option value="date" selected>Date Added</option>
-								<option value="manual">Default</option>
-								<option value="minplayers">Minimun # of Players</option>
-								<option value="maxplayers">Maximum # of Players</option>
-								<option value="playtime">Playing Time</option>
-								<option value="rank">Rank</option>
-								<option value="rank2">Other Rank</option>
-								<option value="rating">Average Rating</option>
-								<option value="ratings">Number of Ratings</option>
-								<option value="type">Type</option>
-								<option value="year">Year Published</option>
-							</select>
-						</span>
-						<span>
-									<input type="checkbox" id="ascending" /> ascending
-						</span>
-						<span>
-									<input type="checkbox" id="images" title="show image" checked /> image
-						</span>
-						<span>
-									<input type="checkbox" id="comment" title="include comments" /> comments
-						</span>
-						<span>
-									<input type="checkbox" id="stats" title="include statistics" /> stats
-						</span>
-						<input type="submit" value="Sort" />
-					</p>
+		<p class="unwrap">
+			<span>Sort collection for user <input type="text" placeholder="ID or URL" id="userINPUT" value="" /></span>
+			<span>in order by 
+				<select id="sortBy">
+						<option value="alpha">Alphabetical</option>
+						<option value="date" selected>Date Added</option>
+						<option value="manual">Default</option>
+						<option value="minplayers">Minimun # of Players</option>
+						<option value="maxplayers">Maximum # of Players</option>
+						<option value="playtime">Playing Time</option>
+						<option value="plays">My Plays</option>
+						<option value="rank">Rank</option>
+						<option value="frank">Family Rank</option>
+						<option value="rating">Average Rating</option>
+						<option value="myrating">My Rating</option>
+						<option value="ratings">Number of Ratings</option>
+						<option value="type">Type</option>
+						<option value="year">Year Published</option>
+				</select>
+			</span>
+			<span>
+				<span>
+					<input type="checkbox" id="ascending" /> ascending
+				</span>
+				<span>
+					<input type="checkbox" id="images" title="show image" checked /> image
+				</span>
+				<span>
+					<input type="checkbox" id="comment" title="show my comments" checked /> comment
+				</span>
+				<span>
+					<input type="checkbox" id="stats" title="include statistics" /> stats
+				</span>
+			</span>
+			<span>
+				<span>
+					<input type="radio" name="restrict" id="own" value="own" title="owned games only" checked /> own
+				</span>
+				<span>
+					<input type="radio" name="restrict" id="wishlist" value="wishlist" title="wishlist games only" /> wishlist
+				</span>
+				<span>
+					<input type="radio" name="restrict" id="wanttoplay" value="wanttoplay" title="games marked want-to-play only" /> want to play
+				</span>
+				<span>
+					<input type="radio" name="restrict" id="played" value="played" title="played games only" /> played
+				</span>
+				<span>
+					<input type="radio" name="restrict" id="rated" value="rated" title="games rated (by user) only" /> rated
+				</span>
+				<span>
+					<input type="radio" name="restrict" id="all" value="all" title="all games" /> all games
+				</span>
+			</span>
+			<span>
+				<input type="submit" value="Sort" />
+			</span>
+		</p>
 	</form>
 
 	<p class="info">You can pass the username in with the URL, e.g., <a href="./?fiddly_bits" id="urlHint"></a>.</p>

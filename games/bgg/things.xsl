@@ -102,7 +102,7 @@
 						<xsl:apply-templates select="//items/item[statistics/ratings/ranks/rank[@name='boardgame' and @value='Not Ranked']]" mode="entry" />
 					</xsl:if>
 				</xsl:when>
-				<xsl:when test="$sortby = 'rank2'">
+				<xsl:when test="$sortby = 'frank'">
 					<xsl:if test="$sortorder = 'descending'">
 						<!-- report the nulls first -->
 						<xsl:apply-templates select="//items/item[statistics/ratings/ranks[not(rank[@type='family'])]]" mode="entry" />

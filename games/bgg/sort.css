@@ -93,7 +93,7 @@ a#thingURL {
     text-overflow: ellipsis;
 }
 
-/* .things */
+/* .things and collections */
 
 .collection div#header.entry h2 div,
 .things div#header.entry h2 div {
@@ -135,4 +135,28 @@ a#thingURL {
 
 .collection input[type=text] {
     width: 10em;
+}
+.collection div.status {
+    padding: 0 0 0 1em;
+}
+.collection div.status span {
+    padding-right:1em;
+    font-style:italic;
+}
+
+.collection p.unwrap {
+    display:flex;
+    flex-direction:row;
+    align-items:left;
+    justify-content: space-between;
+    flex-wrap:wrap;
+}
+
+.collection div.description {
+    white-space: pre-wrap;
+    font-size: smaller;
+}
+
+.collection span.pluralized {
+    white-space:nowrap;
 }

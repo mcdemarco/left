@@ -29,10 +29,10 @@
 		stylesheet = this.responseXML;
 	}
 	
-	function requestCollection(collectionId,stats) {
+	function requestCollection(collectionId,stats,restriction) {
 		var oReq = new XMLHttpRequest();
 		oReq.addEventListener("readystatechange", reqListener);
-		oReq.open("GET", corsProxy + encodeURIComponent(collectionURL + collectionId + (stats ? "&stats=1" : "")));
+		oReq.open("GET", corsProxy + encodeURIComponent(collectionURL + collectionId + (stats ? "&stats=1" : "") + (restriction && restriction != "all" ? "&" + restriction + "=1" : "")));
 		oReq.send();
 	}
 	
@@ -49,6 +49,7 @@
 					//This one isn't anywhere in the response.
 					collectionStatus.id = document.getElementById("userINPUT").value;
 					collectionStatus.stats = document.getElementById("stats").checked;
+					collectionStatus.restriction = document.querySelector('input[name="restrict"]:checked').value;
 					setURL(collectionStatus.id);
 				}
 				transformAndWrite(collectionXML);
@@ -109,10 +110,11 @@
 			case "manual":
 			case "playtime":
 			case "rank":
-			case "rank2":
+			case "frank":
 				document.getElementById("ascending").checked = true;
 				break;
-			case "comments":
+			case "plays":
+			case "myrating":
 			case "rating":
 			case "ratings":
 				document.getElementById("ascending").checked = false;
@@ -133,28 +135,29 @@
 		}
 		//Force stats if necessary.
 		if (document.getElementById("sortBy").value == "rank" ||
-				document.getElementById("sortBy").value == "rank2" ||
+				document.getElementById("sortBy").value == "frank" ||
 				document.getElementById("sortBy").value == "rating" ||
-				document.getElementById("sortBy").value == "ratings" ||
-				document.getElementById("sortBy").value == "comments")
+				document.getElementById("sortBy").value == "ratings")
 			document.getElementById("stats").checked = true;
 
 		var stats = document.getElementById("stats").checked;
+		var restriction = document.querySelector('input[name="restrict"]:checked').value;
 
 		//Clear old list.
 		writeCollection("");
 
 		//Decide whether to make a new request.  
-		//Need a new one for a new ID (duh) or expiration (in min).
+		//Need a new one for a new ID (duh), restriction, or expiration (in min).
 		if (collectionStatus.id && 
 				collectionStatus.id == collectionId &&
 				(collectionStatus.stats || !stats) &&
+				(collectionStatus.restriction == restriction) &&
 				new Date() - collectionStatus.date < 60000 * minutes) {
 			//Re-transform the old data.
 			transformAndWrite(collectionStatus.xml);
 		} else {
 			//Fetch new data.
-			requestCollection(collectionId,stats);
+			requestCollection(collectionId,stats,restriction);
 		}
 	}
 
