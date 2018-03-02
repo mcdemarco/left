@@ -73,8 +73,24 @@
 		}
 		if (!fragment) {
 			document.getElementById("collection").innerHTML = "<p class='message'>An error occurred.</p><p>(This may be due to bad data from BGG or browser-specific issues.)</p>";
-		} else
+		} else {
 			document.getElementById("collection").appendChild(fragment);
+			setThings();
+		}
+	}
+
+	function setThings() {
+		var entries = document.getElementsByClassName("entry");
+		var elen = Math.min(entries.length,100) + 1;
+		var entryIds = [];
+		for (var e = 0; e < elen; e++) {
+			var ide;
+			if (entries[e]) 
+				ide = entries[e].getAttribute("data-thingid");
+			if (ide)
+				entryIds.push(ide);
+		}
+		setURL(0,entryIds.join(","));
 	}
 
 	function transform(collection,stylesheet) {
@@ -136,6 +152,10 @@
 		//Force stats if necessary.
 		if (document.getElementById("sortBy").value == "rank" ||
 				document.getElementById("sortBy").value == "frank" ||
+				document.getElementById("sortBy").value == "minplayers" ||
+				document.getElementById("sortBy").value == "maxplayers" ||
+				document.getElementById("sortBy").value == "playtime" ||
+				document.getElementById("sortBy").value == "myrating" ||
 				document.getElementById("sortBy").value == "rating" ||
 				document.getElementById("sortBy").value == "ratings")
 			document.getElementById("stats").checked = true;

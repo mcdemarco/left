@@ -51,15 +51,18 @@
 				&nbsp; &nbsp; &nbsp;
 				<input type="checkbox" id="megaCheckbox" v-model="mega">
 				<label for="megaCheckbox">Mega Magnate</label>
+				&nbsp; &nbsp; &nbsp;
+				<input type="checkbox" id="threeCheckbox" v-model="three">
+				<label for="threeCheckbox">3 players</label>
 			</p>
 
 			<div v-if="setup">
 							<h3>Setup</h3>
-							<p>{{ mega ? "Mega" : ""}} Magnate requires {{ mega ? "two decktets" : "a Decktet" }}, about {{ mega ? 20 : 12 }} suit tokens per Decktet suit, and either this Roller or at least one d10 and one d6.</p>
+							<p>{{ mega ? "Mega" : ""}} Magnate requires {{ mega ? "two decktets" : "a Decktet" }}, about {{ mega || three ? 20 : 12 }} suit tokens per Decktet suit, and either this Roller or two d10 and {{ mega ? "two" : "one" }} d6.</p>
 				
-							<p><strong>Districts</strong>: Set up the Excuse and all Pawns in a line (three players: in a Y shape centered around the Excuse) between the players.  {{ mega ? "Remove the second Excuse." : "" }} These are the districts.  The goal of the game is to control the most districts (as in Schotten Totten/Battle Line) by adding the most property value to them: <em>i.e.,</em> having a higher total rank on your side.</p>
+							<p><strong>Districts</strong>: Set up the Excuse and {{ three ? "six Pawns (from a double Decktet, or include two Crowns)" : "all four Pawns" }} in a {{ three ? "Y shape" : "line" }} centered around the Excuse between the players.  {{ mega ? "Remove the second Excuse." : "" }} These are the districts.  The goal of the game is to control the most districts (as in Schotten Totten/Battle Line) by adding the most property value to them: <em>i.e.,</em> having a higher total rank on your side of the Pawn/Excuse than your opponent has on the other.</p>
 				
-							<p><strong>Crowns</strong>: Deal out the Crowns evenly among the players.  Each player also takes one suit token matching each of his Crowns.</p>
+							<p><strong>Crowns</strong>: Deal out the Crowns evenly among the players, who should set them aside on their own sides of the table.  Each player also takes one suit token matching each of his Crowns.</p>
 
 							<p><strong>Courts</strong> are optional and may be removed from the deck.  There is also <a href="https://boardgamegeek.com/thread/920202/trading-court-variant">a variant</a> in which Courts are used as trading posts.</p>
 
@@ -71,13 +74,6 @@
 
 			</div>
 
-				
-
-				<p></p>
-
-				<!-- h4>Resources</h4>
-
-				<p>For the record, if you were not using the roller, you would roll 2d10 for resources.  If a 1 appeared, you would roll {{mega ? 1 : 2 }}d6 to determine the taxed suit(s).  If the greater d10 roll is a 10, all players collect their Crown resources; otherwise players collect on properties matching the greater d10 in rank.</p> -->
 				</div>
 
 				<div id="turnOrder">
@@ -86,28 +82,30 @@
 					<li><strong>Roll</strong> for resources!  Resolve taxation before distributing new resources.
 						<button type="button" v-on:click="detail.roll = !detail.roll">{{detail.roll ? "-" : "+"}}</button>
 						<p class="detail" v-if="detail.roll">Your Crowns, developed, and deeded properties can all generate resources.  Crowns generate one matching resource token each.  Fully-developed properties generate a resource per suit if fully developed; deeded or partly developed properties generate one resource of your choice.  Note that every player is affected (as in Catan), and only the property rolled generates resources.  (Courts cannot be rolled.)</p>
+
+						<p class="detail" v-if="detail.roll">If you are not using the roller, roll 2d10 for resources.  <strong>{{doubleTaxation ? "Double ": ""}}Taxation: </strong> If a 1 appears, roll {{mega || doubleTaxation ? 2 : 1}}d6 to determine the taxed suit{{mega || doubleTaxation ? "s" : "" }}; all players discard all but one of their resources in {{mega || doubleTaxation ? "those suits" : "that suit"}}.</p>
+						<p class="detail" v-if="detail.roll">Next, all players collect resources on the greater of the two d10s.  If the greater value is a 10, all players collect their Crown resources; otherwise players collect one resource per suit on each of their own properties of the rolled rank.  (In case of snake eyes, each player collects one matching resource per Ace).  If a matching property is deeded instead of owned outright, players collect one resource of their choice out of the two suits on the deeded card.</p>
 					</li>
 					<li>In any order, as many times as you want (except for playing only {{mega ? "two cards" : "one card"}} per turn):
 						<ul>
 							<li><strong>Develop</strong> (add resource tokens to) any deed, possibly completing it.
 								<button type="button" v-on:click="detail.develop = !detail.develop">{{detail.develop ? "-" : "+"}}</button>
-								<p class="detail" v-if="detail.develop">You may store partial payment in resources, tax-free, on a deeded property.  When you complete a deed, remove the paid resources and turn the property sideways.</p>
-								<p class="detail" v-if="detail.develop">Deeded properties cost their face value in resource tokens, but these tokens must all match the suit(s) on the card, with at least one resource token in each suit.  Pricing exceptions:	an <strong>Ace</strong> costs three resources of the matching suit, and score one point per matching suit in that district.  (The original rule was: Aces cost one resource and scored simply as rank 1.)  A <strong>Court</strong> costs 10 resources, does not generate resources like other properties, but counts as rank 10 for controlling districts.</p>
+								<p class="detail" v-if="detail.develop">You may store partial payment in resources, tax-free, on a deeded property.  When you complete a deed (by accumulating the same total number and required types of resources as if purchased outright), discard the paid resources and turn the property sideways.</p>
 							</li>
 							<li><strong>Trade</strong> three of the same resource to the bank for a single resource of your choice.</li>
 							<li>Play {{mega ? "a total of two cards" : "a single card"}}.  The possible card plays are:
 								<ol>
 									<li><strong>Buy a deed</strong> and place it vertically in a matching district.
 										<button type="button" v-on:click="detail.deed = !detail.deed">{{detail.deed ? "-" : "+"}}</button>
-										<p class="detail" v-if="detail.deed">Deeds to properties can be bought at the cost of one of each suit pictured on the card.  The resources go to the bank, not on the card, and do not count towards the final cost of the property.  You cannot place another deed or property in the same district until this deed has been fully developed.</p>
+										<p class="detail" v-if="detail.deed">Deeds to properties can be bought at the cost of one of each suit pictured on the card (even for Aces).  The resources go to the bank, not on the card, and do not count towards the final cost of the property.  You cannot place another deed or property in the same district until this deed has been fully developed.</p>
 									</li>
 									<li><strong>Buy a property</strong> outright, and place it horizontally in a matching district.
 										<button type="button" v-on:click="detail.buy = !detail.buy">{{detail.buy ? "-" : "+"}}</button>
-										<p class="detail" v-if="detail.buy">Properties cost their face value in resource tokens, but these tokens must all match the suit(s) on the card, with at least one resource token in each suit.  Pricing exceptions:	an <strong>Ace</strong> costs three resources of the matching suit, and score one point per matching suit in that district.  (The original rule was: Aces cost one resource and scored simply as rank 1.)  A <strong>Court</strong> costs 10 resources, does not generate resources like other properties, but counts as rank 10 for controlling districts.</p>
+										<p class="detail" v-if="detail.buy">Properties cost their face value in resource tokens, but these tokens must all match the suit(s) on the card, with at least one resource token in each suit.  Pricing exceptions:	 A <strong>Court</strong> costs 10 resources, does not generate resources like other properties, but counts as rank 10 for controlling districts.  An <strong>Ace</strong> costs three resources of the matching suit, and scores one point per matching suit in that district.  (The original rule was that an Ace cost one resource and scored simply as rank 1.)</p>
 									</li>
-									<li><strong>Sell</strong> a property.  Place the sold property in the discard pile.
+									<li><strong>Sell a property</strong>.  Place the sold property in the discard pile.
 										<button type="button" v-on:click="detail.sell = !detail.sell">{{detail.sell ? "-" : "+"}}</button>
-										<p class="detail" v-if="detail.sell">Properties in your hand may be sold for one resource token per suit on the card, except an <strong>Ace</strong> is sold for two of the same resource.</p>
+										<p class="detail" v-if="detail.sell">Properties in your hand may be sold for one resource token per suit on the card, except an <strong>Ace</strong> is sold for two resources matching the suit of the card.</p>
 									</li>
 								</ol>
 							</li>
@@ -117,7 +115,7 @@
 				</ol>
 
 				<h3>Game End</h3>
-				<p>Reshuffle the discards once; the second time the draw pile runs out, players get one more turn each.
+				<p>Reshuffle the discards once; the {{ three ? "third" : "second" }} time the draw pile runs out, players get one more turn each.
 					<button type="button" v-on:click="detail.end = !detail.end">{{detail.end ? "-" : "+"}}</button>
 				</p>
 				<p class="detail" v-if="detail.end">At the end of the game, players discard their hands of {{mega ? 4 : 2 }} cards each, and any incomplete deeds and the resources on them.</p>
@@ -128,7 +126,7 @@
 			<h2>Credits</h2>
 			<cite>The <a href="http://www.decktet.com">Decktet</a> is the creation of P.D. Magnus.</cite>
 			<cite>Magnate is a two-player Decktet game by Cristyn Magnus; full rules are available at <a href="http://decktet.wikidot.com/game:magnate">the Decktet wiki</a>.</cite>
-			<cite>The Mega Magnate/double taxation variant is by Greg James and is described at <a href="https://boardgamegeek.com/thread/800571/mega-magnate-double-deck-variant">BoardGameGeek</a>.</cite>
+			<cite>The <a href="https://boardgamegeek.com/thread/800571/mega-magnate-double-deck-variant">Mega Magnate/double taxation</a> variant is by Greg James; the <a href="https://boardgamegeek.com/article/6355851">three player</a> variant is by Jason Wallace.</cite>
 			<cite>This roller and the rules cheatsheet are by M. C. DeMarco; you may be interested in my other <a href="http://mcdemarco.net/games/decktet/">Decktet games</a>.</cite>
 			<cite>The suit images shown here are from cards released under a Creative Commons License by P.D. Magnus.</cite>
 			<cite>The background texture is "Skulls" by Adam, from <a href="http://subtlepatterns.com/skulls/">Subtle Patterns</a>.</cite>
@@ -152,6 +150,7 @@
 				taxation: '',
 				doubleTaxation: false,
 				mega: false,
+				three: false,
 				setup: false,
 				detail: {buy: false, deed: false, develop: false, end: false, roll: false, sell: false},
 				suits: ['moons','suns','waves','leaves','wyrms','knots']

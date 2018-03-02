@@ -103,6 +103,11 @@
 						<xsl:apply-templates select="//items/item[stats/rating/ranks[not(rank[@type='family'])]]" mode="entry" />
 					</xsl:if>
 				</xsl:when>
+				<xsl:when test="$sortby = 'myrating'">
+					<xsl:apply-templates select="//items/item" mode="entry">
+						<xsl:sort select = "stats/rating/@value" data-type="number" order="{$sortorder}" />
+					</xsl:apply-templates>
+				</xsl:when>
 				<xsl:when test="$sortby = 'rating'">
 					<xsl:apply-templates select="//items/item" mode="entry">
 						<xsl:sort select = "stats/rating/average/@value" data-type="number" order="{$sortorder}" />
@@ -161,6 +166,11 @@
 					<div>
 						Plays: <xsl:value-of select="numplays"/>
 					</div>
+					<xsl:if test="$stats">
+						<div>
+							Rating: <xsl:value-of select="stats/rating/@value"/>
+						</div>
+					</xsl:if>
 					<xsl:if test="$comment = 'true' and comment">
 						<hr/>
 						<div class="description">

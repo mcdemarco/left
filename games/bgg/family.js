@@ -1,3 +1,4 @@
+
 //
 //fetch a family with a cors proxy; sort and display it with xslt (so oldskool!) 
 //
@@ -67,7 +68,9 @@
 		var elen = Math.min(entries.length,100) + 1;
 		var entryIds = [];
 		for (var e = 0; e < elen; e++) {
-			var ide = entries[e].getAttribute("data-thingid");
+			var ide;
+			if (entries[e]) 
+				ide = entries[e].getAttribute("data-thingid");
 			if (ide)
 				entryIds.push(ide);
 		}
