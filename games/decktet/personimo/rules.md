@@ -93,7 +93,7 @@ Once the urban renewal frenzy has come to an end and the new districts are compl
 
 ![all chipped](/games/decktet/personimo/personimo7-filledChippedColored.png)
 
-Each region of orthogonally connected blocks of the same style (suit) is a neighborhood.  There may be more than one neighborhood per suit.  Even a single block (half a card) counts as a neighborhood and may score.  Unlike Kingdomino (see credits), a neighborhood may be connected through the headquarters if it shares that suit with it.  The headquarters counts as one block per suit, not two.
+Each region of orthogonally connected blocks of the same style (suit) is a neighborhood.  There may be more than one neighborhood per suit.  Even a single block (half a card) counts as a neighborhood and may score.  Unlike Kingdomino (see credits), a neighborhood may be connected through the headquarters if it shares that suit with it.  The headquarters counts as a single block for each of its suits, not two.
 
 If a neighborhood contains no personalities or attractions (cards of rank 8, 9, and 10), it scores zero.  (Remove the suit tokens from non-scoring neighborhoods for clarity.)  Multi-suited attractions and personalities score points for the neighborhood matching the posher, bottom suit of the card, **not** for both neighborhoods.  If a personality is also an attraction (the Diplomat, the Merchant, the Bard, and the Huntress), it counts twice, but still only for the posher suit.
 
@@ -113,7 +113,7 @@ The architect with the highest score wins.  The tiebreakers are: the largest nei
 
 *Recognition*: When sorting the market, move personalities to the posh end as usual, but then sort them by their scoring suit rather than by rank order.  Use the non-scoring suit to resolve ties.
 
-*Inception*: In addition to *Recognition*, sort the non-scoring half of the market by the bottom suit, then the top suit.  (This is easier to do with Giovanni Anelli's suit-colored cards.)
+*Inception*: As in *Recognition*, sort the scoring cards (including attractions) by the bottom suit, then the top suit, and, separately, also sort the non-scoring half of the market the same way.  (This is easier to do with Giovanni Anelli's suit-colored cards.)
 
 *Courting Danger*: Shuffle the set aside Pawns and Courts into the base deck.  The usual suit-matching and ambiguity rules for cards drawn from the deck apply to Pawns and Courts when drawn this way; also they should cover exactly two squares and those squares may be assigned only one, distinct, suit each.
 

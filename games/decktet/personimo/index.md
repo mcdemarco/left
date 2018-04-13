@@ -17,7 +17,7 @@ There is no online implementation as of yet; you'll need cards and tokens and al
 
 ## Rules
 
-You can read the current rules [here](/games/decktet/personimo/personimo.html); in short, you play Decktet cards like dominoes across pairs of squares on a grid and score for single-suited orthogonal regions *if* they include a scoring card.  There are two more catches:  you compete for cards in a market according to their value, and only one suit is assigned to each end of the card, unlike in traditional Decktet tableau games.  (If that's too confusing, there's a variant, Jacynimo, that counts suits the traditional way instead.)
+You can read the current rules [here](/games/decktet/personimo/rules.html); in short, you play Decktet cards like dominoes across pairs of squares on a grid and score for single-suited orthogonal regions *if* they include a scoring card.  There are two more catches:  you compete for cards in a market according to their value, and only one suit is assigned to each end of the card, unlike in traditional Decktet tableau games.  (If that's too confusing, there's a variant, Jacynimo, that counts suits the traditional way instead.)
 
 ## Credits
 
