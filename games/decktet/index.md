@@ -7,7 +7,24 @@ date: 2016-07-17 14:29:00
 ---
 [The Decktet](http://www.decktet.com) is an alternative deck of cards created by P.D. Magnus and released under a CC license.
 
-## Games
+## My Games
+
+I've half-designed a few games for the Decktet based on other games, mostly as an intellectual exercise.  They have not yet been fully playtested.
+
+### Buttle
+
+[Buttle](/games/decktet/buttle/) is a two-player game based on the traditional(ish) card game Cuttle, inspired by a previous reimplementation of it for the Decktet by Oshojabe at Reddit.
+
+### The Badger on the Borderland
+
+[The Badger on the Borderland](/games/decktet/bb/) is based on [The Fox in the Forest](https://boardgamegeek.com/boardgame/221965/fox-forest), a two-player trick taking game which you can also [play with traditional playing cards](https://boardgamegeek.com/filepage/153033/fox-forest-summary-sheet).
+
+### Personimo
+
+I'm also working on a game of my own for the Decktet.  [Personimo](/games/decktet/personimo/) is a badgerized version of the popular board game [Kingdomino](https://boardgamegeek.com/boardgame/204583/kingdomino).  There is no implementation so far, only rules.
+
+
+## Online Games
 
 I've implemented or updated a few solitaire games for the Decktet:
 
@@ -18,9 +35,6 @@ I've implemented or updated a few solitaire games for the Decktet:
 
 I only dimly recall my reasons for updating Adaman; I think they were mainly stylistic.  Myrmex I wanted to be able play without breaking out my double Decktet deck.  Cascades was a little experiment with a lightweight JavaScript framework called [mithril](http://mithril.js.org).  Aucteraden was easy to play but hard to score.
 
-### Personimo
-
-I'm also working on a game of my own for the Decktet.  [Personimo](/games/decktet/personimo/) is a badgerized version of the popular board game [Kingdomino](https://boardgamegeek.com/boardgame/204583/kingdomino).  There is no implementation so far, only rules.
 
 ## Tools
 

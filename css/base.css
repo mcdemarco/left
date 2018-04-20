@@ -476,3 +476,21 @@ h3 + h4 {
 img[alt='small-graph'] {
     width:200px;
 }
+
+table.bordered {
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+
+table.bordered tr th,
+table.bordered tr td {
+    text-align:center;
+    padding: 2px;
+    width:10%;
+}
+
+table.bordered tr:not(:last-child) th,
+table.bordered tr:not(:last-child) td {
+    border-bottom: 1px solid gray;
+}
+

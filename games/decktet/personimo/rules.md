@@ -16,15 +16,15 @@ A tile placement game for the Decktet.  1--6 players.
 
 One unique architect token per player, or two each for a two-player game.
 
-The Pawns and Courts from the extended Decktet.  (You can also substitute Pawns for Courts if necessary.)
+The Pawns and Courts from the extended Decktet.  (You can substitute Pawns for Courts if necessary.)
 
-For 4--6 players, a double Decktet.
+For 4--6 players, a double Decktet.  (A double Decktet is also preferable for three players.)
 
-Suit tokens (12--15 per suit, 24--30 for a double Decktet) for marking which style (suit) is assigned to which block (square) of a player's district; if you don't have suit tokens you can use scrap paper for the grid and mark it up.  (Suit tokens are not needed if you have Giovanni Anelli's [suit-colored version of the Decktet](https://boardgamegeek.com/image/2651023/decktet), nor are the rules regarding ambiguous placements.)
+Suit tokens (12--15 per suit, 24--30 for a double Decktet) for marking which style (suit) is assigned to which block (square) of a player's district; if you don't have suit tokens, you can use scrap paper for the grid and mark it up.  (Suit tokens are not needed if you have Giovanni Anelli's [suit-colored version of the Decktet](https://boardgamegeek.com/image/2651023/decktet), nor are the rules regarding ambiguous placements.)
 
 ### Optional
 
-One 5x5 grid of 2 1/2" squares per player.  (A [printable grid](/games/decktet/personimo/personimo-grid.pdf) is available.)
+One 5x5 grid of 2 1/2" squares per player.  Some printable grids are available: [8.5 x 11](/games/decktet/personimo/personimo-grid.pdf), [11 x 17](/games/decktet/personimo/personimo-grid_11x17.pdf), [A4](/games/decktet/personimo/personimo-grid_A4.pdf), and [A3](/games/decktet/personimo/personimo-grid_A3.pdf).
 
 ![grid](/games/decktet/personimo/personimo0-5x5grid.png)
 
@@ -32,30 +32,30 @@ Non-suited tokens may be used for scoring.  You'll need up to 23 of them, or 46 
 
 ## Overview
 
-During each season (turn) the rival architects (players) commission pairs of blocks (cards) in one or two styles (suits), to be built into stylistically integrated neighborhoods, embellished with personalities (personalities) and attractions (cards of rank 8 or higher).  But each architect's district is only 5 blocks square, and market fluctuations in the availability of labor and building materials affect what they can build during any particular season.
+During each season (turn) the rival architects (players) commission pairs of blocks (cards) in one or two styles (suits), to be built into stylistically integrated neighborhoods, embellished with personalities (personalities) and attractions (cards of rank 8 or higher).
 
-If a neighborhood does not include a personality or an attraction by the time the district is complete, it will not score any points for the district.
+But each architect's district is only 5 blocks square, and market fluctuations in the availability of labor and building materials affect what they can achieve during any particular season.  And the final judging will be harsh:  any neighborhood that does not include at least one personality or attraction by the time the district is complete will not score any points for the district.
 
 ## Setup
 
-For more than three players, use a double Decktet.
+For two players, you can use a single deck.  See the variants for how to use a single deck with three players, if necessary.  Otherwise, use a double Decktet.
 
-1. Shuffle the Pawn and Court non-personalities (the Borderland, the Harvest, the Island, the Rite, and the Window) separately, and deal one to each player.
+1. Shuffle the Pawn and Court locations  (the Borderland, the Harvest, the Island, the Rite, and the Window) and deal one to each player.
 2. Set aside the remaining Pawns, Courts, and Excuse(s).
-3. Set aside all but 12 cards per player from the base deck.  (That is: use 24 cards for two players, 36 for three, 48 for four, 60 for five, and 72 for six players.)  For one player, see the solitaire rules below.
-4. Randomly assign an order to the player tokens.  (For two players, randomly assign an order to one token each, then invert it, i.e., so the order is either ABBA or BAAB.) 
+3. For 2, 3, or 4 players, set aside from the deck(s) all 2s, and all events but the Market (the 6 of Leaves and Knots).  For 5 players, set those cards aside from only one of the two decks.  For six players, use the full double base deck.  (You should have 24 cards for two players, 48 for three or four, 60 for five, and 72 for six players.)  Shuffle the chosen deck.
+4. Randomly assign an order to the player tokens.  (For two players, randomly assign an order to one token each, then invert it, i.e., so the order is either ABBA or BAAB.)
 
-Players place their starting Pawn or Court on a single square of their district.  (Ignore the slight overlap onto nearby squares.)  This square is the player's headquarters and has the three suits indicated on the card.  If using suit tokens, place three matching suit tokens on the headquarters.
+Players place their starting Pawn or Court on a single square of their district.  Ignore the slight overlap onto nearby squares.  This square is the player's headquarters and has the three suits indicated on the card.  (If using suit tokens, place the three matching suit tokens on each headquarters.)
 
 ![starting placement](/games/decktet/personimo/personimo1-headquarters.png)
 
 ### The Market
 
-From the deck, deal out a line of one card per player (2 per player for two players), then sort the line in ascending order by rank.  (Aces are low and Crowns high.)  Resolve ties using the natural suit order as listed on the reference card (Moons, Suns, Waves, Leaves, Wyrms, Knots); e.g., put the Desert before the Origin.  Then, one at a time, remove any personalities from the market and place them at the end, so that they retain their order.  (You may also do this by sorting and ordering them separately if you prefer.)  The final market should be a line of the required number of cards, without gaps.
+From the deck, deal out a line of cards:  4 cards for two, three or four players, 5 for five, and 6 for six.  Next, sort the line in ascending order by rank.  (Aces are low and Crowns high.)  Resolve ties using the natural suit order as listed on the reference card (Moons, Suns, Waves, Leaves, Wyrms, Knots); e.g., put the Castle before the Cave.  Then, one at a time, remove any personalities from the row and place them at the end, so that they retain their order.  (You may also do this by sorting and ordering them separately if you prefer.)  The final market should be a line of the required number of cards, without gaps.
 
 Optionally, you can put a scoring marker onto each personality and attraction in the market in order to make their value clearer for new players.  Use two tokens if a card is both a personality and an attraction (the Diplomat, the Merchant, the Bard, and the Huntress).
 
-Following the randomly assigned token order, each player places their architect token on their choice of card in the market---one token per card, until all cards are claimed.
+Following the randomly assigned token order, each player places their architect token on their choice of card in the market---one token per card, until all cards are claimed.  (In a three-player game, the fourth, unchosen card is always discarded.)
 
 ## Game Play
 
@@ -113,13 +113,7 @@ The architect with the highest score wins.  The tiebreakers are: the largest nei
 
 *Recognition*: When sorting the market, move personalities to the posh end as usual, but then sort them by their scoring suit rather than by rank order.  Use the non-scoring suit to resolve ties.
 
-*Inception*: As in *Recognition*, sort the scoring cards (including attractions) by the bottom suit, then the top suit, and, separately, also sort the non-scoring half of the market the same way.  (This is easier to do with Giovanni Anelli's suit-colored cards.)
-
-*Courting Danger*: Shuffle the set aside Pawns and Courts into the base deck.  The usual suit-matching and ambiguity rules for cards drawn from the deck apply to Pawns and Courts when drawn this way; also they should cover exactly two squares and those squares may be assigned only one, distinct, suit each.
-
-*Don Giovanni*: When *Courting Danger* with Giovanni Anelli's [suit-colored version of the Decktet](https://boardgamegeek.com/image/2651023/decktet), drawn Pawns and Courts are played across two squares with the suits of the colored ends counting in one square each and the suit of the colored middle counting for both squares.
-
-*Excuses Wild*: Shuffle in the Excuse(s) and play an Excuse as a 2-square wild card.  It only counts towards one neighborhood, so assign it a single suit when scoring.  Place it between 7s and 8s in the market.
+*Inception*: As in *Recognition*, sort the scoring cards (now including attractions) by the bottom suit, then the top suit, and, separately, also sort the non-scoring portion of the market the same way.  (This is a bit easier to do with Giovanni Anelli's suit-colored cards.)
 
 *Personality Paralysis*: For each multi-suited personality and attraction, allow the player to choose which suit scores during the scoring phase.  Double-scoring cards (for both personality and attraction) still only score for a single suit as chosen by the player; the double score may not be split between the suits.
 
@@ -129,21 +123,40 @@ The architect with the highest score wins.  The tiebreakers are: the largest nei
 
 *The Soothsayer*: Deal and sort the next market before choosing cards from the current market.
 
-*Three's a Crowd*: Deal a four-card market for three players and discard the unpicked card after every round.  (Requires a double deck.)
+*There are Four Lights*: Deal a five-card market for four players and carry the unpicked card forward into the new market (dealing only four new cards in subsequent rounds).   This can be done with other player counts as well.
 
-*Four's a Crowd*: Deal a five-card market for four players and carry the unpicked card forward into the new market (dealing only four new cards in subsequent rounds).  This can be done with other player counts as well.
+*Five's a Crowd*: Deal a six-card market for five players as you would a four-card market for three players.  This can be done with other player counts as well.
+
+*The Kickoff*: Allow events (the Harvest, the Rite) to be start cards.
 
 *The Head Start*: Use personalities (the Consul, the Light Keeper, and The Watchman) for the start cards.  Score them for their bottommost suit (always Knots).
 
 *The Race*: Player order for the first round is determined from the start cards rather than randomly, in the following order: The Harvest (first), the Rite, the Island, the Borderland, the Window (last).  For *the Head Start* variant, the player order is: the Consul (first), the Light Keeper, The Watchman (last).
-
-*The Rebalancing*: When removing cards from the deck (especially a double deck), don't do it at random.  Remove extra Crowns and/or non-scoring Knots, Wyrms, Leaves, etc., in reverse suit order.  Do not remove the Huntress (the Crown of Moons), because it is the only scoring card for Moons.  (You may remove it when playing the *Personality Paralysis* variant.)  For example, to create a 48-card deck out of a double deck, use the entire first deck, plus the eleven personalities and the Crown of Knots from the second deck.
 
 *The Reveal*: When removing cards from the deck at the beginning of the game, set them out where players can see them.
 
 *It's Drafty in Here*: For three or four players, use two architect tokens per player and a double-sized market (6 or 8 cards at a time), as you would for two players.
 
 *Between Two Districts* (2--6 players):  Each architect is assigned two districts, one to their right and one to their left, both shared with neighboring architects.  On alternate turns, all players build to their right-hand district, then to the left-hand district.  Score each district normally.  An architect's final score is the lower of the two scores for their districts.  For two players, each architect manages two unshared districts with two different architect tokens as in a normal four-player game, but his final score is the lower of the two scores for his districts.
+
+### The Deck
+
+*Three's Company*: To use a single Decktet for three players, you simply use the entire base deck.  There is no fourth choice to discard from the market as in the standard rules.
+
+*Uneventful*: The standard deck: remove all Events except for the Market, the 2s, and the extended deck.
+
+*Unknotted*: When removing cards from the deck, don't remove events as in the *Uneventful* rules above.  Instead, remove non-scoring Knots, Wyrms, Leaves, etc., in reverse suit order.  You may want to *Detraction* up to 9 or 10 (Crowns only) as well.
+
+*Knot Eventful*: With a double deck, configure one deck as in *Uneventful* and the other as in *Unknotted*, then shuffle them together.
+
+*The Unbalancing*: Remove base cards from the deck at random to get to the needed number of cards.  You may not want to remove the Huntress (the Crown of Moons), because it is the only scoring card for Moons.  (You may remove it when playing the *Personality Paralysis* variant.)
+
+*Courting Danger*: Shuffle the set aside Pawns and Courts into the deck.  The usual suit-matching and ambiguity rules for cards drawn from the deck apply to Pawns and Courts when drawn this way; also they should cover exactly two squares and those squares may be assigned only one, distinct, suit each.
+
+*Don Giovanni*: When *Courting Danger* with Giovanni Anelli's [suit-colored version of the Decktet](https://boardgamegeek.com/image/2651023/decktet), drawn Pawns and Courts are played across two squares with the suits of the colored ends counting in one square each and the suit of the colored middle counting for both squares.
+
+*Excuses Wild*: Shuffle in the Excuse(s) and play an Excuse as a 2-square wild card.  It only counts towards one neighborhood, so assign it a single suit when scoring.  Place it between 7s and 8s in the market.
+
 
 ### Bonus Points
 
@@ -192,19 +205,25 @@ Many Personimo variants may be used in Jacynimo as well.
 
 ## Solitaire
 
-*The Waning*:  This solitaire variant requires one deck and, optionally, three player markers.
+Select a headquarters and set up as usual, but do not discard any cards from the base deck of 36 cards.  
 
-Select a headquarters and set up as usual, but do not discard any cards from the base deck of 36 cards.
+*Thorny Crown*:  You will play twelve rounds of three cards each.  During each round, you select only one card and discard the remaining two.  Your first choice is free, but on subsequent rounds your choice of cards is additionally restricted thus:
 
-You will play twelve rounds of three cards each.  During each round, you select only one card and discard the remaining two.
-
-For the first three rounds, you may only pick each position once; that is, if you pick the first card in the first round, then you may only pick the second or third in the next round, and have a forced choice in the third round.  You can use the player markers to track which cards you chose, or just leave the old markets in position to make it clear what your remaining options are.
-
-Repeat this process for rounds 4 through 7:  in round 4 you have a free choice of all three, but only of two in round 5 and no choice in round 6.  Do the same for rounds 7 through 9 and 10 through 12, respectively.
+* If you took the first card of the old market, you may take any card of the new.
+* If you took the second card of the old market, you may not take the third card of the new.
+* If you took the third card of the old market, you must take the first card of the new.
 
 Score your neighborhoods as usual.  A score of 50 or more gets you declared Architect of the Year, while a score of less than 35 may result in an unfortunate tar-and-feathering incident.
 
-*Thorny Crowns*:  With a double Decktet or by shuffling discards, you can play a solitaire game with a 4-card market that better represents a multi-architect market.  You still select one card per round and discard the rest, but your next market selection is restricted by your previous selection differently:
+*The Waning*:   You still play twelve rounds, but for each set of three rounds, you may only pick each position once; that is, if you pick the first card in the first round, then you may only pick the second or third in the next round, and have a forced choice in the third round.  You can use three player markers to track which cards you chose, or just leave the old markets in position to make it clear what your remaining options are.
+
+Repeat this process for rounds 4 through 7:  in round 4 you have a free choice of all three, but only of two in round 5 and no choice in round 6.  Do the same for rounds 7 through 9 and 10 through 12, respectively.
+
+Score as usual.
+
+*7x7x3*:  With a double Decktet, you can build a larger, 7x7 district with either of solitaire variants above.  A winning scores is 120 or more.
+
+*Thorny Crowns*:  With a double Decktet (at least 48 cards) or by shuffling discards, you can play a solitaire game with a 4-card market that better represents a multi-architect market, thus:
 
 * If you took the first card of the old market, you may take any card of the new.
 * If you took the second card of the old market, you may not take the fourth card of the new.
@@ -212,6 +231,7 @@ Score your neighborhoods as usual.  A score of 50 or more gets you declared Arch
 * If you took the fourth card of the old market, you must take the first card of the new.
 
 Score as usual.
+
 
 ## Credits
 
