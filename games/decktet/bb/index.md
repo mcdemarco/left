@@ -34,8 +34,8 @@ The list of odd-ranked card effects is the same as in The Fox in the Forest:
 * **Aces**: Lead the next trick if you lose this one.
 * **Threes**: Exchange the decree card with a card from your hand.
 * **Fives**: Draw one card, then put one card on the bottom of the deck.
-* **Sevens**: 1 point.
-* **Nines**: Trumps the other trumps, but not another 9.
+* **Sevens**: 1 point for the winner of the trick.
+* **Nines**: If it's the only 9, it becomes the 9 of the trump suit.
 * **Crowns**: Opponent must follow the Crown's suit with an Ace of that suit or with their highest card with that suit.
 
 Note that the Pawns rank as 10, between 9 and Crown (11).
