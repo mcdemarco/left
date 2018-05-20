@@ -1,0 +1,29 @@
+---
+layout: page
+title: scap2tw
+menu: tools
+---
+
+<p><a href="/tools/scree/dotscap/">DotScap</a> is a proofing format that lays out a Twine story as a <a href="https://www.literatureandlatte.com/scapple/overview">Scapple</a> mind map.  
+	However, to go in the other direction---from a Scapple file to a Twine story---requires more than just a story format.  
+	This page will do the conversion for you, entirely in your browser.  (When you "upload" your file, nothing is sent to the server.)
+</p>
+
+<p>What do you end up with?  
+	Well, a very simple story file with passages in the same positions they were in in Scapple, with the names and links they had there.
+	A somewhat random passage may be chosen to be your start passage.
+</p>
+
+<h3>Upload a Scapple File</h3>
+
+<p><label for="title">Title: </label> <input type="text" id="title" value=""/></p>
+
+<p><input type="file" id="scappleFile" onchange="handleFile();"></p>
+
+<div id="testdiv"></div>
+
+<h3>Sausage</h3>
+
+<p>Scapple's underlying file format is XML; this page uses XSLT to transform it into the pseudo-HTML used by Twine.</p>
+
+<script src="/tools/scree/dotscap/scap2tw/scap2tw.js"></script>
