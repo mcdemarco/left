@@ -2,6 +2,7 @@
 layout: page
 title: DotGraph
 menu: tools
+image: "/files/choicemaps/dotgraph-partial.png"
 date: 2016-11-06 14:45:00
 ---
 

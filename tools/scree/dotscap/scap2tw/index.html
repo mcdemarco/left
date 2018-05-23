@@ -1,29 +1,49 @@
 ---
 layout: page
-title: scap2tw
+title: Scapple to Twine
 menu: tools
 ---
 
 <p><a href="/tools/scree/dotscap/">DotScap</a> is a proofing format that lays out a Twine story as a <a href="https://www.literatureandlatte.com/scapple/overview">Scapple</a> mind map.  
-	However, to go in the other direction---from a Scapple file to a Twine story---requires more than just a story format.  
-	This page will do the conversion for you, entirely in your browser.  (When you "upload" your file, nothing is sent to the server.)
+	However, to go in the other direction&mdash;from a Scapple file to a Twine story&mdash;requires more than just a story format.  
+	This page will do the conversion for you, entirely in your browser.  (When you "upload" your file, nothing is sent to the webserver.)
 </p>
 
-<p>What do you end up with?  
-	Well, a very simple story file with passages in the same positions they were in in Scapple, with the names and links they had there.
-	A somewhat random passage may be chosen to be your start passage.
+<p><b>scap2tw</b> creates a very simple story file with passages having the names and links they had in Scapple, 
+	and in the same positions they were in in Scapple (except in the Twee case), 
+	A somewhat random passage may be chosen to be your start passage.  
+	Your title will be taken from the filename unless you enter one manually.
 </p>
 
 <h3>Upload a Scapple File</h3>
 
-<p><label for="title">Title: </label> <input type="text" id="title" value=""/></p>
+<p>
+	<div onclick="requestStylesheet();">
+		<label for="format">Format: </label>
+		<input type="radio" id="tweeRadio" name="formatRadio" value="twee" checked/>&nbsp;<label for="tweeRadio">Twee</label>
+		<input type="radio" id="twee2Radio" name="formatRadio" value="twee2"/>&nbsp;<label for="twee2Radio">Twee2</label> <!-- 
+		<input type="radio" id="tw" name="formatRadio" value="tw" checked/>&nbsp;<label for="tw">raw storydata</label>
+		<input type="radio" id="harlowe" name="formatRadio" value="harlowe"/>&nbsp;<label for="harlowe">Harlowe 2.1.0</label>
+		<input type="radio" id="snowman" name="formatRadio" value="snowman"/>&nbsp;<label for="snowman">Snowman 1.3.0</label> -->
+	</div>
+</p>
 
 <p><input type="file" id="scappleFile" onchange="handleFile();"></p>
 
-<div id="testdiv"></div>
+<label for="title">Title: </label><input type="text" id="title" value=""/><br/>
+
+<h3>Preview</h3>
+
+Your file should download automatically with the following contents: 
+
+<textarea id="resultsArea" style="width:90%;height:10em;"></textarea>
+
+<div id="tempDiv" style="display:none;"></div>
 
 <h3>Sausage</h3>
 
-<p>Scapple's underlying file format is XML; this page uses XSLT to transform it into the pseudo-HTML used by Twine.</p>
+<p>Scapple's underlying file format is XML; this page uses XSLT to transform it into the pseudo-HTML used by Twine, or into Twine's older plain-text Twee format.</p>
 
+
+<script src="/tools/scree/dotscap/scap2tw/FileSaver.js"></script>
 <script src="/tools/scree/dotscap/scap2tw/scap2tw.js"></script>

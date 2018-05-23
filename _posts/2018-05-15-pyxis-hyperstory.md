@@ -1,0 +1,27 @@
+---
+layout: post
+title: "The Pyxis Memo: A Hyperstory"
+tags: hyperfiction gamebooks writing reviews
+created: 2018-05-15 23:55:00-04:00
+---
+I joined a few interactive fiction discords recently, and in the most promising one I scrolled back to a discussion of a blog post about yet another inapt term for interactive fiction: [storygames](https://medium.com/@aareed/what-i-mean-by-storygame-2f16988f0253).  *If only*, I thought, *there were a good name for this genre.*  I thought about it for a minute and *hyperstory* occurred to me.  It was a tougher nut to google than I expected because there's [a band of the same name](https://www.last.fm/music/Hyperstory/+wiki).
+
+<a href="https://www.amazon.com/hyperstory/dp/B002PZPP08/ref=as_li_ss_il?ie=UTF8&linkCode=li2&tag=mcdema-20&linkId=a2e6b609d44bc3fcd153df8682e1dd03" target="_blank"><img border="0" src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B002PZPP08&Format=_SL160_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=mcdema-20" ></a><img src="https://ir-na.amazon-adsystem.com/e/ir?t=mcdema-20&l=li2&o=1&a=B002PZPP08" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+
+But several pages in, I found a kindred soul, Lyle Skains, who also calls them hyperstories.  He's an academic who [studies digital fiction](http://lyleskains.blogspot.com/2017/02/can-digital-fiction-and-commercial.html), but has also written [two of his own](http://lyleskains.com/Fiction.html#DigitalFiction).  I read and enjoyed both, although they're a bit hypertexty for my tastes.  (I suppose I was hoping *hyperstory* would have more plot than *hypertext*; nevertheless I've updated [my blog post on the state of hyperfiction](/blog/2016/10/19/state-of-hyperfiction/) to include it in my glossary of gamebook synonyms.)
+
+"The Futographer", the first story, has a bit more of a (Twilight Zone-style) plot to it; I can't say much about it without spoiling that, other than I liked it very much, but it's still hypertextual enough that I'm not sure whether I read the whole thing.
+
+<a href="https://www.amazon.com/Futographer-hyperstory-Lyle-Skains-ebook/dp/B01NBIVDS2/ref=as_li_ss_il?ie=UTF8&qid=1526418075&sr=8-1&keywords=the+futographer&linkCode=li2&tag=mcdema-20&linkId=62cccbfa35f5cf42997fbf68465d6f3d" target="_blank"><img border="0" src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B01NBIVDS2&Format=_SL160_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=mcdema-20" ></a><img src="https://ir-na.amazon-adsystem.com/e/ir?t=mcdema-20&l=li2&o=1&a=B01NBIVDS2" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+
+"The Pyxis Memo: On Resurrecting the Free Web" is more plotless exploration of a hypertextual space, and, while spoilers are still spoilers, it *feels* less violated by spoiling.  So consider this your spoiler warning; to avoid spoilers stop reading here.
+
+<a href="https://www.amazon.com/Pyxis-Memo-Resurrecting-Free-Web-ebook/dp/B078JM2Z8L/ref=as_li_ss_il?ie=UTF8&qid=1526418129&sr=8-1&keywords=the+pyxis+memo&linkCode=li2&tag=mcdema-20&linkId=aff729afc6c116dca73b9ec0033edca5" target="_blank"><img border="0" src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B078JM2Z8L&Format=_SL160_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=mcdema-20" ></a><img src="https://ir-na.amazon-adsystem.com/e/ir?t=mcdema-20&l=li2&o=1&a=B078JM2Z8L" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+
+So, "The Pyxis Memo" tells the tale of the last great shitposters through a postulated partial archive of the Internet of their day.  The interim government of a post-collapse United States is debating restoring the equally-collapsed Internet.  This frame story is quite negative about the Internet, while the archives through which the reader wanders are more ambiguous:  Did a highly-contagious Bolivian coronavirus outbreak actually reach the US?  Did the CDC report it in their usual technobabbly way, or did they cover it up?  Or is the entire story fake news?
+
+The implication is that the Trump administration nuked several allegedly-infected cities (because why else would they nuke American cities?).  Did they fall for the hoax or is the nuking itself just more fake news?  Can we trust this "archive" assembled by the interim government, or are they just stacking the deck against the Internet with a fake story of shitposter-induced Armageddon?
+
+To be honest, I'm not sure I was supposed to get the extra meta level of fake news out of the story, but I happened to find the shitposters the fakest part of the story---not that they wouldn't try such a trick, but that it would somehow cause the collapse of the US without the actual 90% fatality rate of the alleged epidemic.  Much of the ambiguity of the story comes from hiding facts well-known to the survivors, like whether 90% of the population actually died immediately of a fast-moving coronavirus, or suffered more slowly from societal collapse (whether I find that collapse feasible or not).
+
+The conversion to an ebook was mostly successful, but there are some CDC case studies in the story that suffer from a lack of formatting.  Since they're significant to the truth or fakeness of the epidemic, the formatting issues are particularly unfortunate, although not actually unnavigable.

@@ -4,15 +4,20 @@
 
 //(function () {
 	//Local xsl.
-	var stylesheetURL = "scap2tw.xsl";
 	var stylesheet;
+	var formatChosen;
 	var scappleXML;
+	var title = "Untitled";
+
 
 	function handleFile() {
 		var scappleFile = event.target.files[0];
-
-		if (!document.getElementById("title").value)
-			document.getElementById("title").value = scappleFile.name.split(".")[0];
+		if (document.getElementById("title").value) 
+			title = document.getElementById("title").value;
+		else {
+			title = scappleFile.name.split(".")[0];
+			document.getElementById("title").value = title;
+		}
 
 		var reader = new FileReader();
 		reader.onload = handleXML;
@@ -21,6 +26,7 @@
 
 	function handleXML(e) {
 		var scappleTXT = e.target.result;
+		var parseXml;
 
 		if (window.DOMParser) {
 			parseXml = function(xmlStr) {
@@ -35,29 +41,81 @@
 			};
 		}
 
-		var scappleXML = parseXml(scappleTXT);
-		var scappleFrag = transform(scappleXML,stylesheet);
-		if (scappleFrag)
-			document.getElementById("testdiv").appendChild(scappleFrag);
-		else
-			document.getElementById("testdiv").innerHTML = "An error occurred.";
+		scappleXML = parseXml(scappleTXT);
+		convertStory();
 	}
 
-	function requestStylesheet(stylesheetURL) {
+	function convertStory() {
+		//Is sometimes run separately from file upload.
+		var scappleFrag = transform(scappleXML,stylesheet);
+		var tempDiv = document.getElementById("tempDiv");
+		if (scappleFrag) {
+			tempDiv.innerHTML = "";
+			tempDiv.appendChild(scappleFrag);
+		} else
+			tempDiv.innerHTML = "An error occurred.";
+
+		var scappleString =  tempDiv.innerText;
+		document.getElementById("resultsArea").value = scappleString;
+
+		var blob;
+
+		//Prompt the saving.
+		if (formatChosen == "twee" || formatChosen == "twee2") {
+			//as text
+			blob = new Blob([scappleString], {type: "text/plain;charset=utf-8"});
+		} else {
+			//as html
+		}
+
+		saveAs(blob, title + "." + getExtension());
+	}
+
+	function getStylesheetURL() {
+		switch(formatChosen) {
+			case "twee":
+			case "twee2":
+			return "scap2twee.xsl";
+
+			case "harlowe":
+			case "snowman":
+			case "tw":
+			default:
+			return "scap2tw.xsl";
+		}
+	}
+
+	function getExtension() {
+		switch(formatChosen) {
+			case "twee":
+			return "tw";
+
+			case "twee2":
+			return "tw2";
+
+			default:
+			return "html";
+		}
+	}
+
+	function requestStylesheet() {
 		//Fetch stylesheet.
+		formatChosen = document.querySelector("input[name=formatRadio]:checked").value;
+
 		var sReq = new XMLHttpRequest();
 		sReq.addEventListener("load", sReqListener);
-		sReq.open("GET", stylesheetURL);
+		sReq.open("GET", getStylesheetURL());
 		sReq.send();
 	}
 
 	function sReqListener() {
 		stylesheet = this.responseXML;
+		if (stylesheet && scappleXML)
+			convertStory();
 	}
 
 	function transform(scappleXML,stylesheet) {
 		var xmlDom;
-		var title = document.getElementById("title").value;
 		
 		if (typeof XSLTProcessor == "undefined") {
 			try {
@@ -68,13 +126,13 @@
 		} else { //webkit
 			var xsltProcessor = new XSLTProcessor();
 			xsltProcessor.setParameter(null, "title", title);
+			xsltProcessor.setParameter(null, "format", formatChosen);
 			xsltProcessor.importStylesheet(stylesheet);
 			xmlDom = xsltProcessor.transformToFragment(scappleXML, document);
 		}
 		return xmlDom;
 	}
 
-requestStylesheet(stylesheetURL);
-
+	requestStylesheet();
 
 //})();

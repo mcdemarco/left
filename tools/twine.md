@@ -32,6 +32,8 @@ Most of my Twine toolchain involves getting longer stories in and out of Scriven
 
 * [DotGraph](/tools/scree/dotgraph/) is a Twine 2 proofing format that shows your story as a graph, with several options for color-coding, clustering, and labeling nodes.  It detects unreachable nodes and terminal leaves.  And it's just fun to look at your story that way.  It can also be used with Twine 1.
 
+* [DotScap](/tools/scree/dotscap/) is a DotGraph-like Twine 2 proofing format that shows your story as a Scapple mind-map.graph, with a subset of DotGraph's rendering options.  It can also be used with Twine 1.
+
 * [PrePub](/tools/scree/prepub/) is a one-time-use story format for exporting a Twine 1 or 2 story into a MultiMarkdown format used for generating eBooks.  What PrePub creates is an HTML file that in turn creates the plain text MultiMarkdown file in a format that Pandoc can use to create a hyperlinked book.
 
 * [entwee](/tools/entwee/) is my one-time-use story format for exporting a Twine 2 story into the old twee format, based on Michael McCollum's similar story format.  This is a task that can also be accomplished with twees, but the story format only requires interacting with the Twine GUI, not the command-line.  On the down side, like PrePub, it creates is an HTML file that in turn creates the plain text twee file, which may or may not save automatically depending on your browser.

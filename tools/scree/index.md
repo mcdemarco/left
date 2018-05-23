@@ -13,7 +13,7 @@ Note that you should write purely in plain text or Markdown (including leaving b
 
 For more information about Scree, see the instructions linked below, or read them in the template itself.
 
-You may also be interested in visualizing your story with [DotGraph](/tools/scree/dotgraph/) or post-processing it with [PrePub](/tools/scree/prepub/).
+You may also be interested in visualizing your story with [DotGraph](/tools/scree/dotgraph/) or [DotScap](/tools/scree/dotscap/), or post-processing it with [PrePub](/tools/scree/prepub/).
 
 ### Versions
 

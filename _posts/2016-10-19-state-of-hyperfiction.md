@@ -17,9 +17,9 @@ So I tried this solution on my hanging plot threads:  does My Hero get hopelessl
 
 The biggest pitfall of interactive fiction is figuring out what exactly you're talking about when you say *interactive fiction*.  Is it a literary form?  Is it a game?  Both?  Either?  So let me pause to define terms, with the help of [the SF encyclopedia](http://www.sf-encyclopedia.com/entry/gamebook):
 
-* **Hyperfiction** is fiction with hyperlinks, traditionally at the end of a scene or page but sometimes inline instead.  Usually the story is told in the second person and the reader determines the plot through your quantized choices.  The canonical example is the Choose Your Own Adventure series of children's books.  Hyperfiction is also known as *hypertext fiction*, *hypertext IF*, *hypertexts*, *branching-path books*, *interactive novels*, *wovels*, *CYOA*, *cybertext*, *choice-based games*, etc.  Sometimes *hypertext* is distinguished from *CYOA* based on whether the links appear inline or at the end of a scene.
-* **Gamebooks** combine hyperfiction with RPG-style game rules (implemented in dead-tree books by the reader rolling dice, etc., or on computers by the computer rather than the reader).  The term was apparently coined by Steve Jackson for the canonical example of the genre:  the Fighting Fantasy series of books.  Gamebooks are also known as *adventure gamebooks*, *multiple-choice games*, *multiple-choice gamebooks*, *MCGs*, *storygames*, etc.  Gamebooks using an existing RPG system are also known as *role-playing solitaire adventures*.  Collaborative gamebooks are also known as *addventure*.
-* **Interactive fiction** is fiction in which the reader directs the story using (somewhat) natural language.  They traditionally involve collecting items and puzzle solving.  The canonical example is the Zork series of video games.  Interactive fiction is abbreviated *IF* or *int-fiction* and is also known as *text adventures*, *adventure games*, *parser games*, or *parser(-based) IF*.
+* **Hyperfiction** is fiction with hyperlinks, traditionally at the end of a scene or page but sometimes inline instead.  Usually the story is told in the second person and the reader determines the plot through your quantized choices.  The canonical example is the Choose Your Own Adventure series of children's books.  Hyperfiction is also known as *hypertext fiction*, *hypertext IF*, *hypertexts*, *hyperstories*, *branching-path books*, *interactive novels*, *wovels*, *CYOA*, *cybertext*, *choice-based games*, etc.  Sometimes *hypertext* is distinguished from *CYOA* based on whether the links appear inline or at the end of a scene.
+* **Gamebooks** combine hyperfiction with RPG-style game rules (implemented in dead-tree books by the reader rolling dice, etc., or on computers by the computer rather than the reader).  The term was apparently coined by Steve Jackson for the canonical example of the genre:  the Fighting Fantasy series of books.  Gamebooks are also known as *adventure gamebooks*, *multiple-choice games*, *multiple-choice gamebooks*, *MCGs*, *storygames*, etc.  Gamebooks using an existing RPG system are also known as *role-playing solitaire adventures*.  Collaborative gamebooks are also known as *addventure*.  *Gamebooks* are sometimes considered to include *CYOA* books.
+* **Interactive fiction** is fiction in which the reader directs the story using (somewhat) natural language.  They traditionally involve free exploration of a map, collecting items, and puzzle solving.  The canonical example is the Zork series of video games.  Interactive fiction is abbreviated *IF* or *int-fiction* and is also known as *text adventures*, *adventure games*, *parser games*, or *parser(-based) IF*.  *Narrative games* is a more general term that may include the previous categories as well.
 
 ### Hyperfiction Software
 
@@ -27,15 +27,16 @@ I got interested in the Twine/Twee ecosystem for writing gamebooks [a while back
 
 There is no easy way to write a long work of hyperfiction; if you like using a GUI (I don't and [I'm not alone](https://twinery.org/forum/discussion/7474/using-external-ide)), you could use Twine.  I used to write in Twee (the plain-text format underlying Twine) instead, but Twee files are flat, making it hard to visualize your plot.
 
-I knew Twine had been updated to [Twine 2](https://twinery.org), but I never did much with Twine beyond building the Mac version when it was having Python issues on my Mac.  I always used Twee because I'm just a plain-text kind of a gal.  In [the Twine forum](https://twinery.org/forum/), I learned that Twee has also been updated to [Twee2](http://twee2.danq.me), so I plan to stick with Twee.  But I was curious about developments in a field littered with abandoned software projects and lost websites.
+I knew Twine had been updated to [Twine 2](https://twinery.org), but I never did much with Twine beyond building the Mac version when it was having Python issues on my Mac.  I always used Twee because I'm just a plain-text kind of a gal.  In [the old Twine forum](https://twinery.org/forum/), I learned that Twee has also been updated to [Twee2](http://twee2.danq.me), so I plan to stick with Twee.  But I was curious about developments in a field littered with abandoned software projects and lost websites.
 
 This is what I found, in almost-alphabetical order.  Unless otherwise mentioned, the programs are mostly open source and free as in beer, and mostly output HTML that can be read/played in any browser, except for the cloud services which generally host the story for you.
 
-* [inklewriter](http://www.inklestudios.com/inklewriter/): create pure hyperfiction in the cloud using an underlying json format; includes hosting of stories; scripting can be done with a separate toolset, [ink and inky](http://www.inklestudios.com/ink/)
+* [inklewriter](http://www.inklestudios.com/inklewriter/): create pure hyperfiction in the cloud using an underlying json format; includes hosting of stories; scripting can be done with a separate toolset, [ink and inky](http://www.inklestudios.com/ink/), which will survive the inklewriter [shutdown](https://www.inklestudios.com/inklewriter/shutdown/) scheduled for August 2018
 * [ChoiceScript](https://www.choiceofgames.com/make-your-own-games/choicescript-intro/): create gamebook-style hypertexts with simple scripting in the browser; has an underlying hierarchical plain-text format; includes hosting/sale of stories
 * [ChooseYourStory.com](http://chooseyourstory.com): create hypertext stories with scripting in the cloud; still working flakily, but has no export format; includes hosting of stories
+* [Raconteur](http://sequitur.github.io/raconteur/)/[Undum](https://github.com/idmillington/undum): a modern JavaScript tool that, despite inspiration from Twine and Inform 7, seems most similar to ChoiceScript
 * [Squiffy](http://textadventures.co.uk/squiffy): create hyperfiction with simple scripting using cross-platform apps or in the browser; both gamebook scripting and text adventures can be created with a separate tool, [Quest](http://textadventures.co.uk/quest)
-* [Twine](https://twinery.org): create gamebook-style hypertext with a graphical UI using cross-platform apps or in the browser; has an underlying flat-text markdown-like format; various output styles and scripting languages are available
+* [Twine](https://twinery.org): create gamebook-style hypertext with a graphical UI using cross-platform apps or in the browser; has an underlying flat-text markdown-like format; various output styles and scripting languages are available; help in [the new forum](https://twinery.org/questions/)
 * [Storyspace](http://www.eastgate.com/storyspace/index.html): commercial, MacOS-only program for writing large hypertexts
 * [The GameBook Authoring Tool](http://www.crumblyheadgames.co.uk): commercial, Windows-only program for writing hypertexts and gamebooks; there's a demo available
 
@@ -44,6 +45,8 @@ True interactive fiction lets the user express their actions in natural language
 There are a few truly old-school options for making printed gamebooks, too, like [this LaTeX package](https://www.ctan.org/pkg/gamebook?lang=en).  Some eBooks out there, like [this Romeo and Juliet remix, iBooks version](https://itunes.apple.com/us/book/id1050853447), use fairly primitive technology, but in general the market seems to be going with apps rather than wrestling gamebooks into ePub format.
 
 ### Reading Hyperfiction
+
+Dead-tree gamebooks, including CYOA, are thorougly catalogued at [Demian's Gamebook Web Page](https://gamebooks.org).  Many such books are available from Amazon, but, there being no accepted term for the genre, there is no reliable way to search for them.
 
 You can read "storygames" at [ChooseYourStory.com](http://chooseyourstory.com/Stories/).
 
@@ -58,8 +61,12 @@ And, if you just want to skip to the multiple endings, there's the [YOU CHOSE WR
 
 ### Update
 
-Somehow I left the gamebook creation tool [Undum](http://undum.com) off the list.
+Somehow I left the gamebook creation tool [Undum](https://github.com/idmillington/undum) off the list.
 
 ### Update #2
 
 The thesaurus has been updated with the addition of *cybertext* (although the original intent of the term seems to have been more general), *choice-based games*, *CYOA*, and several *parser* terms.
+
+### Update #3
+
+The thesaurus has been updated with the addition of *hyperstory*, some *gamebook* clarification, and *narrative games*.  The approaching demise of inklewriter has been noted; links to the Twine Q&A forum and Undum have been updated for bit-death, and gamebooks.org and Raconteur are now linked.
