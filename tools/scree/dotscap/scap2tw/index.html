@@ -11,7 +11,7 @@ menu: tools
 
 <p><b>scap2tw</b> creates a very simple story file with passages having the names and links they had in Scapple, 
 	and in the same positions they were in in Scapple (except in the Twee1 case). 
-	A somewhat random passage may be chosen to be your start passage.  
+	A somewhat random passage may be chosen to be your start passage (except in the Twine 1 case, where it may be omitted).  
 	Your title will be taken from the filename unless you enter one manually.
 </p>
 
@@ -20,12 +20,13 @@ menu: tools
 <h3>Upload a Scapple File</h3>
 
 <p>
-		<label for="format">Format: </label>
+		<label for="format">Format: </label><br/>
 		<input type="radio" id="tweeRadio" name="formatRadio" onchange="requestStylesheet();" value="twee"/>&nbsp;<label for="tweeRadio">Twee</label>
-		<input type="radio" id="twee2Radio" name="formatRadio" onchange="requestStylesheet();" value="twee2"/>&nbsp;<label for="twee2Radio">Twee2</label>
+		<input type="radio" id="twee2Radio" name="formatRadio" onchange="requestStylesheet();" value="twee2"/>&nbsp;<label for="twee2Radio">Twee2</label><br/>
 		<!-- input type="radio" id="harlowe" name="formatRadio" onchange="requestStylesheet();" value="harlowe"/>&nbsp;<label for="harlowe">Harlowe 2.1.0</label -->
-		<input type="radio" id="snowman" name="formatRadio" onchange="requestStylesheet();" value="snowman" checked />&nbsp;<label for="snowman">Snowman 1.3.0</label>
-		<input type="radio" id="tw" name="formatRadio" onchange="requestStylesheet();" value="tw"/>&nbsp;<label for="tw">no story format</label>
+		<input type="radio" id="snowman" name="formatRadio" onchange="requestStylesheet();" value="snowman" checked />&nbsp;<label for="snowman">Snowman 1.3.0 (Twine 2)</label>
+		<input type="radio" id="tw" name="formatRadio" onchange="requestStylesheet();" value="tw"/>&nbsp;<label for="tw">no story format (Twine 2)</label><br/>
+		<input type="radio" id="sugarcane" name="formatRadio" onchange="requestStylesheet();" value="sugarcane"/>&nbsp;<label for="sugarcane">Sugarcane (Twine 1)</label>
 </p>
 
 <p><input type="file" id="scappleFile" onchange="handleFile();"></p>

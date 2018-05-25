@@ -72,6 +72,10 @@
 			//as html
 			var serializer = new XMLSerializer();
 			scappleString = serializer.serializeToString(scappleFrag);
+			if (formatChosen == "sugarcane") {
+				var scappleStringSplit = scappleString.split('="REMOVEMEBECAUSEXSLT"');
+				scappleString = scappleStringSplit.join("");
+			}
 			mimeType = "text/html";
 		}
 		document.getElementById("resultsArea").value = scappleString;
@@ -85,15 +89,16 @@
 			case "twee2":
 			return "scap2twee.xsl";
 
-			case "harlowe":
+			//case "harlowe":
 			//return "scap2harlowe.xsl";
 
 			case "tw":
 			return "scap2tw.xsl";
 
-			case "snowman":
-			return "scap2snowman.xsl";
+			case "sugarcane":
+			return "scap2sugarcane.xsl";
 
+			case "snowman":
 			default:
 			return "scap2snowman.xsl";
 		}
