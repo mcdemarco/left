@@ -45,29 +45,37 @@
 		convertStory();
 	}
 
+	function cleanup() {
+		document.getElementById("resultsArea").value = "";
+		document.getElementById("tempDiv").innerHTML = "";
+	}
+
 	function convertStory() {
 		//Is sometimes run separately from file upload.
 		var scappleFrag = transform(scappleXML,stylesheet);
-		var tempDiv = document.getElementById("tempDiv");
-		if (scappleFrag) {
-			tempDiv.innerHTML = "";
-			tempDiv.appendChild(scappleFrag);
-		} else
-			tempDiv.innerHTML = "An error occurred.";
+		if (!scappleFrag) {
+			document.getElementById("resultsArea").value = "An error occurred.";
+			return;
+		}
 
-		var scappleString =  tempDiv.innerText;
-		document.getElementById("resultsArea").value = scappleString;
-
-		var blob;
+		var scappleString, mimeType, blob;
 
 		//Prompt the saving.
 		if (formatChosen == "twee" || formatChosen == "twee2") {
 			//as text
-			blob = new Blob([scappleString], {type: "text/plain;charset=utf-8"});
+			var tempDiv = document.getElementById("tempDiv");
+			tempDiv.innerHTML = "";
+			tempDiv.appendChild(scappleFrag);
+			scappleString = tempDiv.innerText;
+			mimeType = "text/plain";
 		} else {
 			//as html
+			var serializer = new XMLSerializer();
+			scappleString = serializer.serializeToString(scappleFrag);
+			mimeType = "text/html";
 		}
-
+		document.getElementById("resultsArea").value = scappleString;
+		blob = new Blob([scappleString], {type: mimeType + ";charset=utf-8"});
 		saveAs(blob, title + "." + getExtension());
 	}
 
@@ -78,10 +86,16 @@
 			return "scap2twee.xsl";
 
 			case "harlowe":
-			case "snowman":
+			//return "scap2harlowe.xsl";
+
 			case "tw":
-			default:
 			return "scap2tw.xsl";
+
+			case "snowman":
+			return "scap2snowman.xsl";
+
+			default:
+			return "scap2snowman.xsl";
 		}
 	}
 
@@ -112,6 +126,8 @@
 		stylesheet = this.responseXML;
 		if (stylesheet && scappleXML)
 			convertStory();
+		else 
+			cleanup();
 	}
 
 	function transform(scappleXML,stylesheet) {
@@ -128,7 +144,10 @@
 			xsltProcessor.setParameter(null, "title", title);
 			xsltProcessor.setParameter(null, "format", formatChosen);
 			xsltProcessor.importStylesheet(stylesheet);
-			xmlDom = xsltProcessor.transformToFragment(scappleXML, document);
+			if (formatChosen == "twee" || formatChosen == "twee2")
+				xmlDom = xsltProcessor.transformToFragment(scappleXML, document);
+			else
+				xmlDom = xsltProcessor.transformToDocument(scappleXML, document);
 		}
 		return xmlDom;
 	}

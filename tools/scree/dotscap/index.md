@@ -12,6 +12,8 @@ DotScap is a proofing format that lays out a [Twine](https://twinery.org/) story
 
 DotScap works with Twine 1, [Twine 2](https://twinery.org/2/), Twee, [Twee2](https://dan-q.github.io/twee2/), and [TweeGo](http://www.motoslave.net/tweego/).  It can omit node names, skip special and/or specially tagged passages, and skip display links.  It also shows you some basic story statistics.
 
+To go the other way (from Scapple into Twine), try [scap2tw](/tools/scree/dotscap/scap2tw/).
+
 ### Versions
 
 The current version of DotScap is 1.0.1.  It adds some coloring and node marking a la [DotGraph](/tools/scree/dotgraph/).

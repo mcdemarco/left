@@ -10,22 +10,22 @@ menu: tools
 </p>
 
 <p><b>scap2tw</b> creates a very simple story file with passages having the names and links they had in Scapple, 
-	and in the same positions they were in in Scapple (except in the Twee case), 
+	and in the same positions they were in in Scapple (except in the Twee1 case). 
 	A somewhat random passage may be chosen to be your start passage.  
 	Your title will be taken from the filename unless you enter one manually.
 </p>
 
+<p>You should be able to change the story format from Snowman or no format to Harlowe or another format using Twine 2.  (If you need Twine 1 support, let me know.)</p>
+
 <h3>Upload a Scapple File</h3>
 
 <p>
-	<div onclick="requestStylesheet();">
 		<label for="format">Format: </label>
-		<input type="radio" id="tweeRadio" name="formatRadio" value="twee" checked/>&nbsp;<label for="tweeRadio">Twee</label>
-		<input type="radio" id="twee2Radio" name="formatRadio" value="twee2"/>&nbsp;<label for="twee2Radio">Twee2</label> <!-- 
-		<input type="radio" id="tw" name="formatRadio" value="tw" checked/>&nbsp;<label for="tw">raw storydata</label>
-		<input type="radio" id="harlowe" name="formatRadio" value="harlowe"/>&nbsp;<label for="harlowe">Harlowe 2.1.0</label>
-		<input type="radio" id="snowman" name="formatRadio" value="snowman"/>&nbsp;<label for="snowman">Snowman 1.3.0</label> -->
-	</div>
+		<input type="radio" id="tweeRadio" name="formatRadio" onchange="requestStylesheet();" value="twee"/>&nbsp;<label for="tweeRadio">Twee</label>
+		<input type="radio" id="twee2Radio" name="formatRadio" onchange="requestStylesheet();" value="twee2"/>&nbsp;<label for="twee2Radio">Twee2</label>
+		<!-- input type="radio" id="harlowe" name="formatRadio" onchange="requestStylesheet();" value="harlowe"/>&nbsp;<label for="harlowe">Harlowe 2.1.0</label -->
+		<input type="radio" id="snowman" name="formatRadio" onchange="requestStylesheet();" value="snowman" checked />&nbsp;<label for="snowman">Snowman 1.3.0</label>
+		<input type="radio" id="tw" name="formatRadio" onchange="requestStylesheet();" value="tw"/>&nbsp;<label for="tw">no story format</label>
 </p>
 
 <p><input type="file" id="scappleFile" onchange="handleFile();"></p>
@@ -42,7 +42,7 @@ Your file should download automatically with the following contents:
 
 <h3>Sausage</h3>
 
-<p>Scapple's underlying file format is XML; this page uses XSLT to transform it into the pseudo-HTML used by Twine, or into Twine's older plain-text Twee format.</p>
+<p>Scapple's underlying file format is XML; this page uses XSLT to transform it into the HTML used by Twine stories, or into Twine's older plain-text Twee format.</p>
 
 
 <script src="/tools/scree/dotscap/scap2tw/FileSaver.js"></script>

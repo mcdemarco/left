@@ -2,15 +2,24 @@
 	<xsl:output method="html" encoding="utf-8" />
 	<xsl:param name="title">Untitled</xsl:param>
 
-	<xsl:template match="/">
-		<tw-storydata name="{$title}" startnode="{//ScappleDocument/Notes/Note[1]/@ID}" 
-			      format="Harlowe" format-version="2.1.0" ifid="">
-			<xsl:apply-templates select="//ScappleDocument/Notes/Note" />
-		</tw-storydata>
-	</xsl:template>
+	<xsl:template match="/"><html>
+<head>
+<title>
+<xsl:value-of select="$title"/>
+</title>
+</head>
+<body>
+
+<tw-storydata name="{$title}" startnode="{//ScappleDocument/Notes/Note[1]/@ID}" ifid="">  
+<xsl:apply-templates select="//ScappleDocument/Notes/Note" />
+</tw-storydata>
+
+</body>
+</html>
+</xsl:template>
 
 	<xsl:template match="Note">
-		<tw-passagedata pid="{@ID}" name="String" position="{@Position}">
+		<tw-passagedata pid="{@ID}" name="{String}" position="{@Position}" tags="">
 			<xsl:if test="PointsToNoteIDs">
 				<xsl:variable name="cleanNodeList" select="translate(translate(PointsToNoteIDs,'-',','),' ','')"/>
 				<xsl:call-template name="nodesToLinks">
