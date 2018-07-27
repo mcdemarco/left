@@ -21,10 +21,13 @@ Most of my Twine toolchain involves getting longer stories in and out of Scriven
 	* Twine 2 also introduced the notion of a **proofing format**, meant for proofreading rather than publication, and includes a proofing format, Paperthin.
   * [Twine 1.4](https://twinery.org/wiki/story_format): the original Twine 1 formats were Sugarcane, Responsive, and Jonah.  SugarCube and Snowman also have versions for use with Twine 1.
 
+* [Scrivener](https://www.literatureandlatte.com/scrivener/overview) is a writer's IDE, and [Scapple](https://www.literatureandlatte.com/scapple/overview) is a mind-mapping product; both are by Literature and Latte and are not explicitly intended to integrate with Twine.
 
 ### Screes
 
 * [Scree](/tools/scree/) is my Scrivener template for writing gamebooks for Twine; it exports into Twee format.
+
+* [scap2tw](/tools/scree/dotscap/scap2tw/) is a tool for converting a Scapple mind-map into a skeletal Twine story.  It outputs your choice of Twee, Twee2, or some compiled Twine html formats.
 
 ### Story Formats
 
@@ -32,7 +35,7 @@ Most of my Twine toolchain involves getting longer stories in and out of Scriven
 
 * [DotGraph](/tools/scree/dotgraph/) is a Twine 2 proofing format that shows your story as a graph, with several options for color-coding, clustering, and labeling nodes.  It detects unreachable nodes and terminal leaves.  And it's just fun to look at your story that way.  It can also be used with Twine 1.
 
-* [DotScap](/tools/scree/dotscap/) is a DotGraph-like Twine 2 proofing format that shows your story as a Scapple mind-map.graph, with a subset of DotGraph's rendering options.  It can also be used with Twine 1.
+* [DotScap](/tools/scree/dotscap/) is a DotGraph-like Twine 2 proofing format that shows your story as a Scapple mind-map graph, with a subset of DotGraph's rendering options.  It can also be used with Twine 1.
 
 * [PrePub](/tools/scree/prepub/) is a one-time-use story format for exporting a Twine 1 or 2 story into a MultiMarkdown format used for generating eBooks.  What PrePub creates is an HTML file that in turn creates the plain text MultiMarkdown file in a format that Pandoc can use to create a hyperlinked book.
 

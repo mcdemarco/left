@@ -8,9 +8,13 @@ menu: blog
 
 <article class="h-entry">
   <h2>
+    <a href="{{ post.url }}" class="u-url p-name">
 		{% if post.title %}
-    <a href="{{ post.url }}" class="u-url p-name">{{ post.title }}</a>
+		{{ post.title }}
+		{% else %}
+		&sect;
 		{% endif %}
+		</a>
   </h2>
 
   <section class="byline">

@@ -20,7 +20,7 @@ The Pawns and Courts from the extended Decktet.  (You can substitute Pawns for C
 
 For 4--6 players, a double Decktet.  (A double Decktet is also preferable for three players.)
 
-Suit tokens (12--15 per suit, 24--30 for a double Decktet) for marking which style (suit) is assigned to which block (square) of a player's district; if you don't have suit tokens, you can use scrap paper for the grid and mark it up.  (Suit tokens are not needed if you have Giovanni Anelli's [suit-colored version of the Decktet](https://boardgamegeek.com/image/2651023/decktet), nor are the rules regarding ambiguous placements.)
+Suit tokens (12--15 per suit, 24--30 for a double Decktet) for marking which style (suit) is assigned to which block (square) of a player's district; if you don't have suit tokens, you can use scrap paper for the grid and mark it up.  (Suit tokens are not needed if you have Giovanni Anelli's [suit-colored version of the Decktet](https://boardgamegeek.com/image/2651023/decktet).)
 
 ### Optional
 
@@ -85,7 +85,7 @@ At the end of the game, only the headquarters block may have multiple styles (su
 
 ![card with suit tokens](/games/decktet/personimo/personimo2c-2cardsChippedColored.png)
 
-Each suit of a multi-suited card is assigned to one and only one of the blocks under it.  The same suit is assigned to both blocks for a single-suited card (Aces and Crowns).  When either assignment of suits to the two blocks under a newly-played card would be legal, the placement is ambiguous and the assignment may be postponed until another card placement fixes the suit, or until scoring.
+Each suit of a multi-suited card is assigned to one and only one of the blocks under it.  The same suit is assigned to both blocks for a single-suited card (Aces and Crowns).  When either assignment of suits to the two blocks under a newly-played card would be legal, suits should be selected before the next card placement.
 
 ## Scoring
 
@@ -151,7 +151,7 @@ The architect with the highest score wins.  The tiebreakers are: the largest nei
 
 *The Unbalancing*: Remove base cards from the deck at random to get to the needed number of cards.  You may not want to remove the Huntress (the Crown of Moons), because it is the only scoring card for Moons.  (You may remove it when playing the *Personality Paralysis* variant.)
 
-*Courting Danger*: Shuffle the set aside Pawns and Courts into the deck.  The usual suit-matching and ambiguity rules for cards drawn from the deck apply to Pawns and Courts when drawn this way; also they should cover exactly two squares and those squares may be assigned only one, distinct, suit each.
+*Courting Danger*: Shuffle the set aside Pawns and Courts into the deck.  The usual suit-matching rules for cards drawn from the deck apply to Pawns and Courts when drawn this way; also they should cover exactly two squares and those squares may be assigned only one, distinct, suit each.
 
 *Don Giovanni*: When *Courting Danger* with Giovanni Anelli's [suit-colored version of the Decktet](https://boardgamegeek.com/image/2651023/decktet), drawn Pawns and Courts are played across two squares with the suits of the colored ends counting in one square each and the suit of the colored middle counting for both squares.
 
@@ -189,7 +189,7 @@ Score 5 points for having the largest neighborhood in a suit, regardless of whet
 
 *9x9*: Two players may play on a 9x9 grid instead of 5x5, using a pool of 80 cards from the double Decktet (including the remaining extended deck cards; see the *Courting Danger* variant above).
 
-*The Model*: To save table space and for added clarity, you may play only the suit tokens to your grid, discarding the actual card.  You will also need to place scoring tokens during the game to track which cards were scoring cards.  (To indicate ambiguity in this variant, place the ambiguous tokens on the grid line between the two grid squares the card was "placed" on.)
+*The Model*: To save table space and for added clarity, you may play only the suit tokens to your grid, discarding the actual card.  You will also need to place scoring tokens during the game to track which cards were scoring cards.
 
 *Urban Sprawl*: Architects are unfettered by grid restrictions; your new districts can wander out into the surrounding farmlands like dominoes spreading out from your headquarters.  But your district must remain connected, and **all** adjacent blocks must match in suit (unless they are on the same card, of course).
 
@@ -221,7 +221,9 @@ Repeat this process for rounds 4 through 7:  in round 4 you have a free choice o
 
 Score as usual.
 
-*7x7x3*:  With a double Decktet, you can build a larger, 7x7 district with either of solitaire variants above.  A winning scores is 120 or more.
+*7x7x3*:  With a double Decktet, you can build a larger, 7x7 district with either of the solitaire variants above.  A winning scores is 120 or more.
+
+*6x6x3*:  With a 48-card unknotted deck out of a double Decktet, you can also build a 6x6 district:  instead of one headquarters card on one square, you should place two starting Pawns or Crowns to cover four squares total.  (See the *Don Giovanni* or *Courting Danger* variants above for how the three suits work in this situation.)  You may use one Personality Pawn or Crown in your headquarters and count it as such.   You may *not* play any card next to your headquarters; you must match suits (though you can arrange the headquarters as you wish).  Play is otherwise as above.
 
 *Thorny Crowns*:  With a double Decktet (at least 48 cards) or by shuffling discards, you can play a solitaire game with a 4-card market that better represents a multi-architect market, thus:
 

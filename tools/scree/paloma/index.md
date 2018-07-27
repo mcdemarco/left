@@ -105,10 +105,16 @@ In that case you may need to re-unstyle all links in the previous passages (some
 
 #### JavaScript
 
+To restart the story from a link, link to a new passage (called Restart or whatever you like) with the following contents:
+
+	<script>
+	window.location.reload(false);
+	</script>
+
 To remove unfollowed choices from a list of choices, leaving only the visited choice, you can use jQuery (which is included in Paloma):
 
 	$(document).on("showpassage:after", function() {
-		$("#phistory a.visited").parent().siblings().remove();
+		$("#phistory a.visited").parent().siblings("a").remove();
 	});
 
 This goes into your Story JavaScript, and may need tweaking depending on the structure of your choices.

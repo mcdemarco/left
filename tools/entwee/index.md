@@ -11,4 +11,8 @@ Entwee is my one-time-use story format for exporting a Twine 2 story into the ol
 
 To add Entwee to Twine 2, use this URL (under Formats > Add a New Format): `https://mcdemarco.net/tools/entwee/format.js`   
 
+### Versions
 
+The current version is 1.1.0, which outputs a twee file with Unix newlines.
+
+The previous version was 1.0.1, which output Windows linefeeds.  If you have trouble with the current version, you can install the previous with the URL: `https://mcdemarco.net/tools/entwee/1.0.1/format.js`   

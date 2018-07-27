@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>
+			TEST
+		</title>
+		<meta charset="utf-8">
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/1.3.3/FileSaver.min.js"></script>
+		<script>
+/**
+ * PrePub - Twine 2 Markdown Export Story Format
+ * Based on Enscree
+ * 
+ * Copyright (c) 2017 M. C. DeMarco
+ * https://www.mcdemarco.net/tools/scree/prepub/
+ *
+ * This license applies exclusively to the PrePub story format for Twine 2. No ownership of, nor
+ * licensing restrictions on, the content within the generated story are stated or implied.
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy of this software and
+ * associated documentation files (the "Software"), to deal in the Software without restriction,
+ * including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense,
+ * and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so,
+ * subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in all copies or substantial
+ * portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT
+ * LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+ * IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+ * WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
+ * SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+ */
+		</script>
+<script>(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
+window.onload=function(){void 0===window.PrePub&&(window.PrePub={convert:function(){var e=this.export(),t=new Blob([e],{type:"text/markdown;charset=utf-8"});saveAs(t,"prepub"+Date.now()+".md")},export:function(){var e,t,r,o,n=[],a=["StoryTitle","StoryIncludes","StoryColophon","StoryAuthor","StorySubtitle","StoryMenu","StorySettings","StoryBanner","StoryCaption","StoryInit","StoryShare","PassageDone","PassageFooter","PassageHeader","PassageReady","MenuOptions","MenuShare"];document.getElementsByTagName("tw-storydata").length>0?(e=document.querySelector("tw-storydata"),t=2,r="tw-passagedata",o="name",selectorColophon="tw-passagedata[name=StoryColophon]"):(e=document.querySelector("#storeArea"),t=1,r="*[tiddler]",o="tiddler",selectorColophon="div[tiddler=StoryColophon]");var s=2==t?e.querySelector('tw-passagedata[pid="'+e.getAttribute("startnode")+'"]').getAttribute(o):"Start";e&&n.push(this.buildTitlePage(t,e,s));for(var u=document.querySelectorAll(r),i=0;i<u.length;++i){var l=u[i].getAttribute(o);if(l||(l="Untitled Passage"),!(a.indexOf(l)>-1)){var d=u[i].textContent;n.push(this.buildPassage(l,d))}}if(e.querySelector(selectorColophon)){var c=e.querySelector(selectorColophon).textContent+"\r\n\r\n[Restart]["+s+"]\r\n\r\n";n.push(this.buildPassage("Colophon",c))}return n.join("")},buildTitlePage:function(e,t,r){var o=2==e?"tw-passagedata[name=Story":"div[tiddler=Story",n=2==e?t.getAttribute("name"):t.querySelector(o+"Title]")?t.querySelector(o+"Title]").textContent:"Untitled Story",a=t.querySelector(o+"Subtitle]")?t.querySelector(o+"Subtitle]").innerHTML:"",s=t.querySelector(o+"Author]")?t.querySelector(o+"Author]").textContent:"",u=t.querySelector(o+"Colophon]")?"[Colophon]\r\n\r\n":"",i=(a?"*"+a+"* \r\n\r\n":"")+(s?"by "+s+"\r\n\r\n":"")+"["+r+"]\r\n\r\n"+u;return this.buildPassage(n,i)},buildPassage:function(e,t){var r=[];return r.push("## ",e),r.push("\r\n\r\n",this.scrub(t),"\r\n\r\n"),r.join("")},markdownLinks:function(e){return e.replace(/\[\[(.*?)\]\]/g,function(e,t){var r,o=t.indexOf("|");if(-1!=o)r=t.substr(0,o),t=t.substr(o+1);else{var n=t.indexOf("->");if(-1!=n)r=t.substr(0,n),t=t.substr(n+2);else{var a=t.indexOf("<-");-1!=a&&(r=t.substr(a+2),t=t.substr(0,a))}}return r?"["+r+"]["+t+"]":"["+t+"]"})},scrub:function(e){return e&&(e=e.replace(/^##/gm," ##"),e=e.replace(/\\</gm,"&lt;"),e=e.replace(/\\>/gm,"&gt;"),e=e.replace(/\\n\\n/gm,"\r\n\r\n"),e=this.markdownLinks(e)),e}}),window.PrePub.convert()};
+},{}]},{},[1]);
+</script>
+	</head>
+	<body>
+		<pre id="output">
+		
+		</pre>
+		<div id="storyData" style="display: none;">
+<tw-storydata name="TEST" startnode="2" creator="Twee2" creator-version="0.5.0" ifid="044752a6-8fdc-4aaa-b3c0-532e098421d1" format="/Users/mcd/Sites/mysite/tools/scree/prepub/" options=""><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css"></style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="StorySettings" tags="" position=""></tw-passagedata><tw-passagedata pid="2" name="Start" tags="" position="150,150">The internal title of the starting scene should be Start.  It's written in plain text, with only markdown-style formatting allowed.
+
+This scene ends with some choices, to which we navigate using internal names for the linked scenes:
+
+* Go to [[Scene 2]].
+* Go to [[The End]].</tw-passagedata><tw-passagedata pid="3" name="Scene 2" tags="" position="250,250">This scene offers readers some more choices.  They can [[go back to a previous scene using an inline, descriptive link-&gt;Start]], a short inline link like [[Start]], or with links at the end like they saw before.
+
+* Go back to [[Start]].
+* Go on to [[Scene 3]].
+* [[You can also go to the next section using a descriptive title for the reader.-&gt;Scene 3]]
+* [[Scene 2a&lt;-You can format the longer link in either direction.]]
+* Go to [[The End]].</tw-passagedata><tw-passagedata pid="4" name="Scene 2a" tags="" position="350,350">A digression.
+
+* Go back to [[Scene 2]].</tw-passagedata><tw-passagedata pid="5" name="Scene 3" tags="" position="450,450">Feel free to structure your story in Scrivener as you wish.  You can put all your scenes at the top level, or divide them into sections and even subsections.  All text sections will be complied into story nodes.  Any folder names and notes will be ignored.
+
+* Read about [[story formats|Scene 4]].
+* Go to [[The End]].</tw-passagedata><tw-passagedata pid="6" name="Scene 4" tags="" position="550,550">Twine's story formats control the final appearance of your story, as well as any gamebook scripting (e.g., variables to track your character's hit points or inventory, etc.), even down to the details of italics and indentation.  
+
+Most story formats use Markdown formatting, e.g., single asterisks to indicate *italics*, double asterisks for **boldface**, and double tildes for ~~strikethrough~~.
+
+Some story formats, such as SugarCube, use their own formatting language.  SugarCube formatting is based on TiddlyWiki markup, and uses double slashes for //italics//, double apostrophes for ''boldface'', and double underscores for __underlining__.
+
+* Go on to [[The End]].</tw-passagedata><tw-passagedata pid="7" name="The End" tags="End" position="650,650">The End is nigh!
+
+''The end.''</tw-passagedata></tw-storydata>
+		</div>
+	</body>
+</html>
