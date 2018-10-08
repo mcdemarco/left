@@ -141,8 +141,7 @@
 			<div class="entrycontents">
 				<div>
 					<xsl:if test="@imageid and @imageid &gt; 0 and $images = 'true'">
-						<img alt="" src="https://cf.geekdo-images.com/images/pic{@imageid}_t.jpg" 
-						     onerror="this.src='https://cf.geekdo-images.com/images/pic{@imageid}_t.png'" />
+						<img alt="" src="https://cf.geekdo-images.com/images/pic{@imageid}_t.jpg" onerror="this.src='https://cf.geekdo-images.com/images/pic{@imageid}_t.png';this.onerror='';"/>
 					</xsl:if>
 				</div>
 				<div class="right">

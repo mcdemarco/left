@@ -10,6 +10,8 @@ From there you have the option to pass your results to the thing sorter, which c
 
 The code calls the BGG API for XML data and makes it pretty using XSL---an ancient, forgotten browser technology (but it still requires a relatively recent browser because I didn't feel like supporting IE 8).  The processing mostly happens client-side, except for a local CORS proxy on my server to work around BGG's CORS misconfiguration.  Feel free to use the proxy for your own BGG projects; view the source for more details.
 
+Images are currently not returned because BGG is preventing hotlinking and/or BGG has moved the images to a random URL.
+
 ### CardPen
 
 I learned about the BGG API while making a tool, [CardPen](http://cardpen.mcdemarco.net/), for printing card (and other) games.  It can turn your BGG game collection into [a deck of cards](http://cardpen.mcdemarco.net/doc/examples.html#bgg).

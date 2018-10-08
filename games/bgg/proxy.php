@@ -29,7 +29,7 @@ define( 'CSAJAX_DEBUG', true );
  * A set of valid cross domain requests
  */
 $valid_requests = array(
-	'boardgamegeek.com'
+	'boardgamegeek.com','cf.geekdo-images.com'
 );
 
 /* * * STOP EDITING HERE UNLESS YOU KNOW WHAT YOU ARE DOING * * */

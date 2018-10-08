@@ -10,8 +10,9 @@
 	var title = "Untitled";
 
 
-	function handleFile() {
-		var scappleFile = event.target.files[0];
+	function handleFile(e) {
+		e = e || window.event;
+		var scappleFile = e.target.files[0];
 		if (document.getElementById("title").value) 
 			title = document.getElementById("title").value;
 		else {

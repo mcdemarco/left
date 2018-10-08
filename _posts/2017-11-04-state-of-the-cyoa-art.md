@@ -1,7 +1,12 @@
 ---
 layout: post
 title: "The State of the CYOA Art"
-tags: hyperfiction gamebooks writing reviews
+tags:
+- hyperfiction
+- gamebooks
+- writing
+- reviews
+- James Schannep
 created: 2017-11-04 18:50:00-04:00
 ---
 I've been reading some modern hyperfiction intended for adults on Kindle Unlimited (free trial!), partly because it's fun and full of apocalypses (and so unlike the Russian roulette of preachy, artsy, and sucky hyperfiction one gambles on when reading made-for-web stories), but mostly to see how the classic turn-to-page-*n* aesthetic mixes with the modern eBook art---that is, with the technology.

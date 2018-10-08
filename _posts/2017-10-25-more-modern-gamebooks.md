@@ -1,7 +1,10 @@
 ---
 layout: post
 title: More Modern Gamebooks
-tags: hyperfiction gamebooks
+tags:
+- hyperfiction
+- gamebooks
+- James Schannep
 created: 2017-10-25 10:25:00
 class: short
 ---
