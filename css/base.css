@@ -503,3 +503,37 @@ table.bordered tr:not(:last-child) td {
 .green {
     color: #4c6112;
 }
+
+.tag {
+    display:inline-block;
+    border: 1pt solid #227ce8;
+    border-radius: 3pt;
+    color: black;
+    background-color: #C0D2E8;
+    padding: 0pt 4pt;
+    margin-left: 2pt;
+    text-indent:0;
+}
+
+.svg {
+    display: inline-block;
+    width: 20pt;
+    height: 20pt;
+    background-size: 20pt 20pt;
+    border: 1pt solid gray;
+    border-radius: 2pt;
+    margin-right: 2pt;
+    margin-bottom: -2pt;
+}
+
+ul#story, ul#proofing {
+    list-style-type: none;
+    margin-left:0;
+    padding-left:0;
+}
+
+ul#story li, ul#proofing li {
+    margin-left:0;
+    padding-left:20pt;
+    text-indent:-20pt;
+}
