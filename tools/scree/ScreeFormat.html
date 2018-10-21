@@ -16,10 +16,10 @@
     span.s1 {font: 21.0px Baskerville}
     span.s2 {font: 12.0px Monaco}
     span.s3 {font: 12.0px Courier}
-    span.s4 {font: 12.0px Helvetica}
     ol.ol1 {list-style-type: decimal}
     ul.ul1 {list-style-type: disc}
-    ul.ul2 {list-style-type: circle}
+    ul.ul2 {list-style-type: hyphen}
+    ul.ul3 {list-style-type: circle}
   </style>
 </head>
 <body>
@@ -61,7 +61,8 @@
 <p class="p3">How To Use This Template</p>
 <ul class="ul1">
   <li class="li4">Under Draft, create a new text document for each node in your interactive story, and give each one a unique title. A few such scenes have been created for you with the placeholder titles "Scene 1", "Scene 2", etc.</li>
-  <li class="li4">Link between nodes of your story with Markdown-style links such as [[Scene 1]] or [[The longer description of scene 1 that I want my reader to see-&gt;Scene 1]].<span class="Apple-converted-space">  </span>To this end, it helps to name the scenes with the text you want to show the reader, such as [[Talk to the mysterious man]].</li>
+  <li class="li4">Link between nodes of your story with Markdown-style links such as [[Scene 1]] or [[The longer description of scene 1 that I want my reader to see-&gt;Scene 1]].<span class="Apple-converted-space">  </span>To this end, it helps to name the scenes with the text you want to show the reader, such as [[Talk to the mysterious man]]. <span class="Apple-converted-space"> </span></li>
+  <li class="li4">Alternately, you can use Scrivener's internal document links for these links, and they will be converted to Markdown links when compiling.<span class="Apple-converted-space">  </span>Internal links are handy for navigating your Scrivener project, but have a downside: you cannot rename any internal document links; they should match the literal scene name.<span class="Apple-converted-space">  </span>However, you may combine both approaches, using internal links for all simple links like [[Scene 1]], but Markdown links for renamed links like [[The longer description of scene 1 that I want my reader to see-&gt;Scene 1]].</li>
   <li class="li4">Ideally, your story sections should be written in Markdown format or plain text, with blank lines between paragraphs.<span class="Apple-converted-space">  </span>However, Scrivener can convert some rich text to plain text for you later, if you prefer to view your story as rich text within Scrivener itself.<span class="Apple-converted-space">  </span>Because Twee/Twine uses a plain text format, some rich text settings, corkboard text, and other Scrivener annotations will not be included in your final output.<span class="Apple-converted-space">  </span>(In particular, you should not use the Bold or Italics button in Scrivener 3.)</li>
   <li class="li4">You can nest text documents in folders or under each other as shown in the example scenes, but this is not necessary.<span class="Apple-converted-space">  </span>When you compile, all text scenes (documents) will be treated as regular nodes of the story, and folder information will be ignored.</li>
   <li class="li4">When you are ready, compile your story.<span class="Apple-converted-space">  </span>This will output a plain-text Twee or Twee2 file, which you (or Scrivener) can then process into an HTML story file (using Twee2 or Tweego), which you (or Scrivener) can open in any browser.<span class="Apple-converted-space">  </span>You can also import this HTML story file into the Twine visual editor (version 2), or import the plain-text Twee file into the older Twine v.1 visual editor.</li>
@@ -69,25 +70,31 @@
 <p class="p2"><br></p>
 <p class="p3">Compiling with Scrivener</p>
 <ul class="ul1">
-  <li class="li4">The title of your story should be in a specific format set up for you in the “Front Matter” folder (between the “Draft” and “Research” folders). It defaults to the project title, but you can replace the Scrivener title placeholder with a different title if you desire. <span class="Apple-converted-space">  </span>will be available for use anywhere in your story with the appropriate Scrivener placeholder variable (&lt;$author&gt;).<span class="Apple-converted-space"> </span></li>
+  <li class="li4">The title of your story should be in a specific format set up for you in the “Front Matter” folder (between the “Draft” and “Research” folders). It defaults to the project title, but you can replace the Scrivener title placeholder with a different title if you desire.<span class="Apple-converted-space">  </span>The title and some other values will be available for use anywhere in your story with the appropriate Scrivener placeholder variable (e.g., &lt;$author&gt;).<span class="Apple-converted-space"> </span></li>
   <li class="li4">Scrivener remembers your compile settings, so you only need to go to File &gt; Compile… and click the “Compile” button.<span class="Apple-converted-space">  </span>If you change any compile settings, Scree may no longer work properly.</li>
-  <li class="li4">There are two compile options, Twee and Twee2, for use with Tweego or Twee2, respectively.<span class="Apple-converted-space">  </span>See Import/Export below for more details. <span class="Apple-converted-space"> </span></li>
-  <li class="li4">After compiling, and if you are using a version of Scrivener 3 that supports it, Scree will attempt to convert your story to Twine, using Tweego for the Twee option and Twee2 for Twee2.<span class="Apple-converted-space">  </span>In the Twee2 case you may want to add your chosen story format to the appropriate settings document under Front Matter; for Tweego you will need to edit the Scrivener format to pass in a non-default format name.<span class="Apple-converted-space">  </span>(See Making Changes for details.)<span class="Apple-converted-space">  </span>Scrivener will ask which browser to open the resulting HTML file in; if possible, switch this dropdown to a different browser than Safari (due to issues opening local files in some story formats).</li>
+  <li class="li4">There are two compile options, Twee and Twee2, for use with Tweego or Twee2, respectively.<span class="Apple-converted-space">  </span>See Import/Export below for more details.</li>
+  <li class="li4">After compiling, and if you are using a version of Scrivener 3 that supports it, Scree will attempt to convert your story to Twine, using Tweego for the Twee option and Twee2 for Twee2.<span class="Apple-converted-space">  </span>In the Twee2 case you may want to add your chosen story format to the appropriate settings document under Front Matter; for Tweego you will need to edit the Scrivener format to pass in a non-default format name.<span class="Apple-converted-space">  </span>(See Making Changes for details.)<span class="Apple-converted-space">  </span>Scrivener will ask which browser to open the resulting HTML file in; if possible, switch this dropdown to a different browser than Safari (due to issues opening local files with Safari in some story formats).</li>
 </ul>
 <p class="p2"><br></p>
 <p class="p3">Compiling Outside of Scrivener</p>
-<ul class="ul1">
-  <li class="li4">After compiling your story to twee format with Scrivener, open a command prompt or terminal window and navigate to the directory containing your compiled file.<span class="Apple-converted-space">  </span>(For help with this, see <a href="http://www.wikihow.com/Change-Directories-in-Command-Prompt">http://www.wikihow.com/Change-Directories-in-Command-Prompt</a>.)</li>
-  <li class="li4">If, for example, you saved your compiled story as <span class="s3">mystory.txt</span>, then you would type the following in the command prompt or terminal to compile with Twee2: <span class="Apple-converted-space"> </span></li>
-  <li class="li5">twee2 build mystory.txt mystory.html</li>
-  <li class="li4">Twee2 and Tweego may give you a warning about a StoryIFID.<span class="Apple-converted-space">  </span>You can ignore this warning in Twee2, but in Tweego you should copy the text it gives you into the Twee Settings document in Front Matter on a new line, or in a new document.</li>
+<p class="p4">You don't have to use the Scrivener post-proccessing options (and cannot use them if you have a Scrivener from the Mac App Store).<span class="Apple-converted-space">  </span>Instead you can compile Scrivener's twee output using a command prompt or terminal window.<span class="Apple-converted-space">  </span>First, navigate to the directory containing your compiled file.<span class="Apple-converted-space">  </span>(For help with this, see <a href="http://www.wikihow.com/Change-Directories-in-Command-Prompt">http://www.wikihow.com/Change-Directories-in-Command-Prompt</a>.)</p>
+<ol class="ol1">
+  <li class="li4">If, for example, you saved your compiled story as <span class="s3">mystory.txt</span>, then you would type the following in the command prompt or terminal to compile with Twee2: <span class="Apple-converted-space"> </span>
+  <ul class="ul2">
+    <li class="li5">twee2 build mystory.txt mystory.html</li>
+  </ul></li>
+  <li class="li4">Twee2 and Tweego may give you a warning about a StoryIFID.<span class="Apple-converted-space">  </span>You can ignore this warning in Twee2, but in Tweego you should copy the text it gives you into the Twee Settings document in Front Matter on a new line.</li>
   <li class="li4">If all goes well, you can now open your html output file, <span class="s3">mystory.html</span>, in a browser, and read your story interactively.</li>
-  <li class="li4">You can change story format at the Twee2 command line.<span class="Apple-converted-space">  </span>For example, you may need the SugarCube format on twee files that include an older style of Twine scripting: <span class="Apple-converted-space"> </span></li>
-  <li class="li5">twee2 build mystory.txt mystory.html --format=SugarCube</li>
+  <li class="li4">You can change story format at the Twee2 command line.<span class="Apple-converted-space">  </span>For example, you may need the SugarCube format on twee files that include an older style of Twine scripting: <span class="Apple-converted-space"> </span>
+  <ul class="ul2">
+    <li class="li5">twee2 build mystory.txt mystory.html --format=SugarCube</li>
+  </ul></li>
   <li class="li4">You can also open your generated html file in Twine 2, at <a href="http://twinery.org/2/">http://twinery.org/2/</a>, or in a downloadable version of Twine 2 and change the story format there instead of at the command line.</li>
-  <li class="li4">See the Tweego documentation for help doing similar actions using Tweego instead:</li>
-  <li class="li4"><a href="https://www.motoslave.net/tweego/docs/">https://www.motoslave.net/tweego/docs/</a></li>
-</ul>
+  <li class="li4">See the Tweego documentation for help doing similar actions using Tweego instead:
+  <ul class="ul2">
+    <li class="li4">https://www.motoslave.net/tweego/docs/</li>
+  </ul></li>
+</ol>
 <p class="p2"><br></p>
 <p class="p3">Making Changes</p>
 <p class="p4">There are various minor changes you can make to the settings to tweak this template and Scrivener itself so that it better suits your needs, as follows:</p>
@@ -97,8 +104,8 @@
   <li class="li4">https://www.literatureandlatte.com/forum/viewtopic.php?f=21&amp;t=14412 <span class="Apple-converted-space"> </span></li>
   <li class="li4">Note that none of these changes are necessary; you can write in rich text mode and either of the Twee compile options will still output plain text.</li>
   <li class="li4">Do <b>not</b> use the “Convert Rich Text to MultiMarkdown” option, even if you see it.<span class="Apple-converted-space">  </span>If you used rich text bold or italics in a Scrivener 2 story, you should convert them to Markdown before upgrading to Scrivener 3, by selecting all your draft text and use Scrivener 2’s Format &gt; Convert &gt; Bold and Italics to MultiMarkdown Syntax menu item.</li>
-  <li class="li4"><b>Changing the Tweego location or story format:</b><span class="Apple-converted-space">  </span>In the Compile window, right-click the Twee format (or click the gear at the bottom of the format list) and select Edit Format.<span class="Apple-converted-space">  </span>Click the Processing tab in the sidebar to open the command-line settings for Tweego.<span class="Apple-converted-space">  </span>To change the location of Tweego, edit the Path setting.<span class="Apple-converted-space">  </span>Be sure to set it to the full path of tweego, including tweego itself.<span class="Apple-converted-space">  </span>To add more command-line arguments to tweego, such as the story format, make your desired changes to the Arguments field.<span class="Apple-converted-space">  </span>For example, to use Harlowe as your Twine story format, add the following to the Arguments field:</li>
-  <li class="li5"><span class="s4"></span>-f harlowe-2<span class="s4"><span class="Apple-converted-space"> </span></span></li>
+  <li class="li4"><b>Automatically creating document links:</b><span class="Apple-converted-space">  </span>In Scrivener's Preferences, under the Corrections tab, check off the Data Detection: Automatically detect document links]] checkbox to have your Twine links automatically converted to Scrivener links.<span class="Apple-converted-space">  </span>(They will be converted back during compilation.)<span class="Apple-converted-space">  </span>Note that this will not convert any pre-existing links for you, and will convert arrow links incorrectly.<span class="Apple-converted-space">  </span>To insert arrow links with this setting you can link to the Trash and then use the Edit -&gt; Remove Link menu item to unlink your link.</li>
+  <li class="li4"><b>Changing the Tweego location or story format:</b><span class="Apple-converted-space">  </span>In the Compile window, right-click the Twee format (or click the gear at the bottom of the format list) and select Edit Format.<span class="Apple-converted-space">  </span>Click the Processing tab in the sidebar to open the command-line settings for Tweego.<span class="Apple-converted-space">  </span>To change the location of Tweego, edit the Path setting.<span class="Apple-converted-space">  </span>Be sure to set it to the full path of tweego, including tweego itself.<span class="Apple-converted-space">  </span>To add more command-line arguments to tweego, such as the story format, make your desired changes to the Arguments field.<span class="Apple-converted-space">  </span>For example, to use Harlowe as your Twine story format, add the following to the Arguments field:<span class="Apple-converted-space">  </span><span class="s3">-f harlowe-2</span><span class="Apple-converted-space"> </span></li>
   <li class="li4">You could make changes for twee2 in the Twee2 format the same way, but they’re generally not necessary.</li>
   <li class="li4"><b>Character and setting sketch sheets</b> and other helpful Scrivener sections have not been included in this template, but they can be dragged into your story file from another template or project that includes them, if desired.<span class="Apple-converted-space">  </span>Be sure not to drag them into the Draft section.</li>
   <li class="li4"><b>Making your own special folders:</b> The “Research” folder is just a regular folder that has been set up in a particular way, and you are free to create other folders that work in a similar manner.
@@ -112,12 +119,12 @@
 <p class="p3">Import/Export</p>
 <ul class="ul1">
   <li class="li4">To import a Twine 2 file to Scrivener, first install the Enscree proofing format: open Twine 2, press the Formats button, choose the Add a New Format tab, and paste the following URL into the form field: <a href="https://www.mcdemarco.net/tools/scree/enscree/format.js"><span class="s3">https://www.mcdemarco.net/tools/scree/enscree/format.js</span></a><span class="s3">.</span><span class="Apple-converted-space">  </span>Go to the Proofing Formats tab in the same popup and click the star to make this your default proofing format.<span class="Apple-converted-space">  </span>Close the popup, open your story, and choose View Proofing Copy from the popup menu.<span class="Apple-converted-space">  </span>Your file may download automatically, or it may open in a new tab where you will need to save using your browser's save option.<span class="Apple-converted-space">  </span>Finally, click on the Draft header and import the saved file into Scrivener using the File &gt; Import &gt; Import and Split… menu item, choosing the option to Split and structure using Markdown headings in the text.<span class="Apple-converted-space">  </span>Note that:
-  <ul class="ul2">
+  <ul class="ul3">
     <li class="li4">All scenes will be imported at the same level. (You can rearrange them afterwards.)</li>
   </ul></li>
 </ul>
 <ul class="ul1">
-  <ul class="ul2">
+  <ul class="ul3">
     <li class="li4">Some non-story nodes may also be imported; these can be ignored or deleted manually.</li>
   </ul>
 </ul>
@@ -131,7 +138,7 @@
 <ul class="ul1">
   <li class="li4">If you import a twee2 file that has tags or position codes, they will appear in text document titles.<span class="Apple-converted-space">  </span>They are harmless, but note that they are not part of the link text.<span class="Apple-converted-space">  </span>You should use the Twee compile option instead of the Twee2 one if you want to preserve any existing<span class="Apple-converted-space">  </span>tags or position codes in the title line on export from Scrivener, and your label and status will not be converted to tags in that case.</li>
   <li class="li4">As mentioned earlier, you can import your story into Twine 2 (after processing it with Twee2).<span class="Apple-converted-space">  </span>Scree's Twee2 compile option adds (somewhat random) position codes to facilitate import into Twine 2 (and also passes Label and Status to Scrivener as tags).<span class="Apple-converted-space">  </span>You can rearrange the nodes within Twine 2 as desired.<span class="Apple-converted-space">  </span>If you use the Twee compile option, then compile with Tweego to get better automatically-generated position codes.</li>
-  <li class="li4">It is possible to go back and forth between Scrivener and Twine 2 in this way, but note that any hierarchical structure to the Drafts folder, labels, tags, and corkboard entries will not be preserved.</li>
+  <li class="li4">It is possible to go back and forth between Scrivener and Twine 2 in this way, but note that any hierarchical structure to the Drafts folder, labels, tags, corkboard entries, and internal Scrivener links will not be preserved.</li>
 </ul>
 <p class="p2"><br></p>
 <p class="p3">Scripting and Styling</p>
@@ -140,14 +147,14 @@
   <li class="li4">Likewise, the different story formats have different ways of altering the default style of the HTML output or of a particular story node which you can read about in the Twine wiki.<span class="Apple-converted-space">  </span>Twee2 also has extensive styling support that you can read about in the Twee2 documentation: <a href="http://twee2.danq.me/documentation.html">http://twee2.danq.me/documentation.html</a>.</li>
 </ul>
 <ul class="ul1">
-  <li class="li4">Twee2, Tweego, and Twine support using your own format instead of the pre-packaged ones.</li>
+  <li class="li4">Twee2, Tweego, and Twine support using your own format instead of the default ones.</li>
   <li class="li4">If you are working with an old twee/sugarcane story, the story format you probably want to go forward with is SugarCube.</li>
 </ul>
 <p class="p2"><br></p>
-<p class="p3">Help</p>
-<p class="p4">This template is by M. C. DeMarco, <a href="http://mcdemarco.net">http://mcdemarco.net</a>, and is released as-is.<span class="Apple-converted-space">  </span>Version: 3.0.3, 15 July 2018.</p>
+<p class="p3">Credits</p>
+<p class="p4">This template is by M. C. DeMarco, <a href="http://mcdemarco.net">http://mcdemarco.net</a>, and is released as-is.<span class="Apple-converted-space">  </span>Version: 3.0.3a, 26 July 2018.</p>
 <p class="p4">Twee2 is by Dan Q, <a href="https://danq.me">https://danq.me</a>, and is released under GPL 2.0.</p>
-<p class="p4">Tweego is by Thomas Michael Edwards, and is under a BSD license.</p>
+<p class="p4">Tweego is by Thomas Michael Edwards, and is available under a BSD license.</p>
 <p class="p4">Twine2 is by Chris Klimas and many others and is released under GPL 3.0.</p>
 </body>
 </html>

@@ -119,6 +119,12 @@ To remove unfollowed choices from a list of choices, leaving only the visited ch
 
 This goes into your Story JavaScript, and may need tweaking depending on the structure of your choices.
 
+You can also use jQuery within a passage, for example, to remove all the stretchtext before the currently selected passage:
+
+	<script>
+	$("#phistory").html("");
+	</script>
+
 ### Sausage
 
 The source code is [at BitBucket](https://bitbucket.org/mcdemarco/paloma).  Paloma is based on [Snowman](hhttps://github.com/klembot/snowman) by Chris Klimas.  The main changes (besides making it Jonah-like) involved the story history as explained above.  Paloma does not have Snowman's checkpoint functionality; history is node-by-node only.

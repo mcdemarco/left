@@ -8,7 +8,7 @@
 
 The internal title of the starting scene should be Start.  It's written in plain text, with only markdown-style formatting allowed.
 
-This scene ends with some choices, to which we navigate using internal names for the linked scenes:
+This scene ends with some choices, to which we navigate using Scrivener document links to the linked scenes:
 
 * Go to [Scene 2].
 * Go to [The End].
@@ -20,14 +20,23 @@ This scene offers readers some more choices.  They can [go back to a previous sc
 * Go back to [Start].
 * Go on to [Scene 3].
 * [You can also go to the next section using a descriptive title for the reader.][Scene 3]
-* [You can format the longer link in either direction.][Scene 2a]
+* [You can format the longer link in either direction.][Scene 3]
+* You can use [Scrivener Links].
 * Go to [The End].
 
-## Scene 2a
+## Scrivener Links
 
-A digression.
+Scrivener features internal document links that can link between your scenes and are clickable within Scrivener, not just in your final story.  The downside of Scrivener links is that the link text must be exactly the same as the document title (in order to convert them properly to Twine links).
+
+To create Scrivener links, highlight the link text, right-click, and choose Link to Document from the drop-down menu.  If the matching document exists, it will be linked automatically and your link text will become blue and underlined.  (The color can be changed, and will not appear in your final story.)  If the document doesn't exist, Scrivener will offer to link a different scene (don't do that!) or create it for you.  Be sure to create it somewhere within your draft, not in Research.  If you uncheck the checkbox in the popup, you can create the new scene as [a child of the current scene].
+
+You can automatically create links as well just by typing a normal link in brackets, like [The End], if you set Scrivener's Preferences to do so:  under the Corrections tab, check the *Data Detection: Automatically detect document links* checkbox.  Note that this may confuse Scrivener if you also use arrow-style links within the same scene.
 
 * Go back to [Scene 2].
+
+## a child of the current scene
+
+A freshly-created child scene demonstrating [Scrivener Links].
 
 ## Scene 3
 

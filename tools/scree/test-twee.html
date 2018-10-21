@@ -11,9 +11,9 @@
 
 <tw-story></tw-story>
 
-<tw-storydata name="TEST" startnode="2" creator="Twee2" creator-version="0.5.0" ifid="08cc062f-5ca5-4da3-a0df-5b455e2cce29" format="Harlowe" options=""><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css"></style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="StorySettings" tags="" position=""></tw-passagedata><tw-passagedata pid="2" name="Start" tags="" position="150,150">The internal title of the starting scene should be Start.  It's written in plain text, with only markdown-style formatting allowed.
+<tw-storydata name="TEST" startnode="2" creator="Twee2" creator-version="0.5.0" ifid="f0a38cd9-e478-4197-bcc4-afbda0e1b98b" format="Harlowe" options=""><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css"></style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="StorySettings" tags="" position=""></tw-passagedata><tw-passagedata pid="2" name="Start" tags="" position="150,150">The internal title of the starting scene should be Start.  It's written in plain text, with only markdown-style formatting allowed.
 
-This scene ends with some choices, to which we navigate using internal names for the linked scenes:
+This scene ends with some choices, to which we navigate using Scrivener document links to the linked scenes:
 
 * Go to [[Scene 2]].
 * Go to [[The End]].</tw-passagedata><tw-passagedata pid="3" name="Scene 2" tags="" position="250,250">This scene offers readers some more choices.  They can [[go back to a previous scene using an inline, descriptive link-&gt;Start]], a short inline link like [[Start]], or with links at the end like they saw before.
@@ -21,19 +21,24 @@ This scene ends with some choices, to which we navigate using internal names for
 * Go back to [[Start]].
 * Go on to [[Scene 3]].
 * [[You can also go to the next section using a descriptive title for the reader.-&gt;Scene 3]]
-* [[Scene 2a&lt;-You can format the longer link in either direction.]]
-* Go to [[The End]].</tw-passagedata><tw-passagedata pid="4" name="Scene 2a" tags="" position="350,350">A digression.
+* [[Scene 3&lt;-You can format the longer link in either direction.]]
+* You can use [[Scrivener Links]].
+* Go to [[The End]].</tw-passagedata><tw-passagedata pid="4" name="Scrivener Links" tags="" position="350,350">Scrivener features internal document links that can link between your scenes and are clickable within Scrivener, not just in your final story.  The downside of Scrivener links is that the link text must be exactly the same as the document title (in order to convert them properly to Twine links).
 
-* Go back to [[Scene 2]].</tw-passagedata><tw-passagedata pid="5" name="Scene 3" tags="" position="450,450">Feel free to structure your story in Scrivener as you wish.  You can put all your scenes at the top level, or divide them into sections and even subsections.  All text sections will be complied into story nodes.  Any folder names and notes will be ignored.
+To create Scrivener links, highlight the link text, right-click, and choose Link to Document from the drop-down menu.  If the matching document exists, it will be linked automatically and your link text will become blue and underlined.  (The color can be changed, and will not appear in your final story.)  If the document doesn't exist, Scrivener will offer to link a different scene (don't do that!) or create it for you.  Be sure to create it somewhere within your draft, not in Research.  If you uncheck the checkbox in the popup, you can create the new scene as [[a child of the current scene]].
+
+You can automatically create links as well just by typing a normal link in brackets, like [[The End]], if you set Scrivener's Preferences to do so:  under the Corrections tab, check the *Data Detection: Automatically detect document links* checkbox.  Note that this may confuse Scrivener if you also use arrow-style links within the same scene.
+
+* Go back to [[Scene 2]].</tw-passagedata><tw-passagedata pid="5" name="a child of the current scene" tags="" position="450,450">A freshly-created child scene demonstrating [[Scrivener Links]].</tw-passagedata><tw-passagedata pid="6" name="Scene 3" tags="" position="550,550">Feel free to structure your story in Scrivener as you wish.  You can put all your scenes at the top level, or divide them into sections and even subsections.  All text sections will be complied into story nodes.  Any folder names and notes will be ignored.
 
 * Read about [[story formats|Scene 4]].
-* Go to [[The End]].</tw-passagedata><tw-passagedata pid="6" name="Scene 4" tags="" position="550,550">Twine's story formats control the final appearance of your story, as well as any gamebook scripting (e.g., variables to track your character's hit points or inventory, etc.), even down to the details of italics and indentation.  
+* Go to [[The End]].</tw-passagedata><tw-passagedata pid="7" name="Scene 4" tags="" position="650,650">Twine's story formats control the final appearance of your story, as well as any gamebook scripting (e.g., variables to track your character's hit points or inventory, etc.), even down to the details of italics and indentation.  
 
 Most story formats use Markdown formatting, e.g., single asterisks to indicate *italics*, double asterisks for **boldface**, and double tildes for ~~strikethrough~~.
 
 Some story formats, such as SugarCube, use their own formatting language.  SugarCube formatting is based on TiddlyWiki markup, and uses double slashes for //italics//, double apostrophes for ''boldface'', and double underscores for __underlining__.
 
-* Go on to [[The End]].</tw-passagedata><tw-passagedata pid="7" name="The End" tags="End" position="650,650">The End is nigh!
+* Go on to [[The End]].</tw-passagedata><tw-passagedata pid="8" name="The End" tags="End" position="750,750">The End is nigh!
 
 ''The end.''</tw-passagedata></tw-storydata>
 

@@ -8,8 +8,8 @@
 			<Fill>1 1 1</Fill>
 		</Appearance>
 <String>Start</String>
-<ConnectedNoteIDs>3, 7</ConnectedNoteIDs>
-<PointsToNoteIDs>3, 7</PointsToNoteIDs>
+<ConnectedNoteIDs>3, 8</ConnectedNoteIDs>
+<PointsToNoteIDs>3, 8</PointsToNoteIDs>
 </Note>
 <Note Width="76" FontSize="16" ID="3" Position="250,250">
 <Appearance>
@@ -18,28 +18,28 @@
 			<Fill>1 1 1</Fill>
 		</Appearance>
 <String>Scene 2</String>
-<ConnectedNoteIDs>2, 5, 4, 7</ConnectedNoteIDs>
-<PointsToNoteIDs>2, 5, 4, 7</PointsToNoteIDs>
+<ConnectedNoteIDs>2, 6, 4, 8</ConnectedNoteIDs>
+<PointsToNoteIDs>2, 6, 4, 8</PointsToNoteIDs>
 </Note>
-<Note Width="84" FontSize="16" ID="4" Position="350,350">
+<Note Width="140" FontSize="16" ID="4" Position="350,350">
 <Appearance>
 			<Alignment>Center</Alignment>
 			<Border Weight="1" Style="Rounded">0.0 0.0 0.0</Border>
 			<Fill>1 1 1</Fill>
 		</Appearance>
-<String>Scene 2a</String>
-<ConnectedNoteIDs>3</ConnectedNoteIDs>
-<PointsToNoteIDs>3</PointsToNoteIDs>
+<String>Scrivener Links</String>
+<ConnectedNoteIDs>5, 8, 3</ConnectedNoteIDs>
+<PointsToNoteIDs>5, 8, 3</PointsToNoteIDs>
 </Note>
-<Note Width="76" FontSize="16" ID="5" Position="450,450">
+<Note Width="244" FontSize="16" ID="5" Position="450,450">
 <Appearance>
 			<Alignment>Center</Alignment>
 			<Border Weight="1" Style="Rounded">0.0 0.0 0.0</Border>
 			<Fill>1 1 1</Fill>
 		</Appearance>
-<String>Scene 3</String>
-<ConnectedNoteIDs>6, 7</ConnectedNoteIDs>
-<PointsToNoteIDs>6, 7</PointsToNoteIDs>
+<String>a child of the current scene</String>
+<ConnectedNoteIDs>4</ConnectedNoteIDs>
+<PointsToNoteIDs>4</PointsToNoteIDs>
 </Note>
 <Note Width="76" FontSize="16" ID="6" Position="550,550">
 <Appearance>
@@ -47,11 +47,21 @@
 			<Border Weight="1" Style="Rounded">0.0 0.0 0.0</Border>
 			<Fill>1 1 1</Fill>
 		</Appearance>
-<String>Scene 4</String>
-<ConnectedNoteIDs>7</ConnectedNoteIDs>
-<PointsToNoteIDs>7</PointsToNoteIDs>
+<String>Scene 3</String>
+<ConnectedNoteIDs>7, 8</ConnectedNoteIDs>
+<PointsToNoteIDs>7, 8</PointsToNoteIDs>
 </Note>
 <Note Width="76" FontSize="16" ID="7" Position="650,650">
+<Appearance>
+			<Alignment>Center</Alignment>
+			<Border Weight="1" Style="Rounded">0.0 0.0 0.0</Border>
+			<Fill>1 1 1</Fill>
+		</Appearance>
+<String>Scene 4</String>
+<ConnectedNoteIDs>8</ConnectedNoteIDs>
+<PointsToNoteIDs>8</PointsToNoteIDs>
+</Note>
+<Note Width="76" FontSize="16" ID="8" Position="750,750">
 <Appearance>
 			<Alignment>Center</Alignment>
 			<Border Weight="2" Style="Rounded">0.0 0.0 0.0</Border>

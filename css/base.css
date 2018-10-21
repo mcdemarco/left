@@ -494,3 +494,12 @@ table.bordered tr:not(:last-child) td {
     border-bottom: 1px solid gray;
 }
 
+/* inline colors */
+
+.gray {
+    color: #888;
+}
+
+.green {
+    color: #4c6112;
+}

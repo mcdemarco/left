@@ -5,7 +5,7 @@ categories: writing
 menu: tools
 date: 2016-10-20 18:00:00
 ---
-Scree is a gamebook template for [Scrivener 3](http://www.literatureandlatte.com/scrivener.php).  See the previous versions for Scrivener 1 and 2 support.
+Scree is a [Twine](/tools/twine.html) gamebook template for use in [Scrivener 3](http://www.literatureandlatte.com/scrivener.php).  See the previous versions for Scrivener 1 and 2 support.
 
 By default, when compiled in Scrivener (File > Compile), the template will generate a plain text file in "twee" format---a flat-file Markdown-like format for gamebooks---and then automatically post-process it into an HTML gamebook using [Twee2](http://twee2.danq.me) (a command-line Ruby gem) or [Tweego](https://www.motoslave.net/tweego/).  (Automatic post-processing requires the non-sandboxed, non-Mac App Store version of Scrivener 3 and one of Twee2 or Tweego; otherwise you can compile on the command line with any Twine command-line compiler.)
 
@@ -13,7 +13,7 @@ You can import the HTML file into the graphical gamebook editor [Twine](http://t
 
 In the other direction, you can import an existing Twine or twee file into Scrivener, following the directions in the template.  It will be separated into scenes for you.  (If you have an old twee story, the format you probably want to use with it is SugarCube.)
 
-Note that you should write purely in plain text, Markdown (including leaving blank lines in between paragraphs), or SugarCube's (non-Markdown) plain-text markup when using Scree; any rich text formatting will be ignored.  For more help with the Markdown-like dialects of the different story formats, or with gamebook scripting, see the story format documentation in the [Twine wiki](https://twinery.org/wiki/).
+Note that you should write purely in plain text, Markdown (including leaving blank lines in between paragraphs), or SugarCube's (non-Markdown) plain-text markup when using Scree; any rich text formatting will be ignored.  However, you can use Scrivener's internal document links to link between scenes.  For more help with the Markdown-like dialects of the different story formats, or with gamebook scripting, see the story format documentation in the [Twine wiki](https://twinery.org/wiki/).
 
 The name of the template within Scrivener is now Scree3 (under the Fiction templates); this is to allow you to run Scrivener 2 (with Scree) and Scrivener 3 (with Scree3) in parallel.  For more information about Scree, read [the instructions](ScreeFormat.html) (also included in the template).
 
@@ -21,13 +21,21 @@ You may also be interested in visualizing your story with [DotGraph](/tools/scre
 
 ### Versions
 
-The current version is 3.0.3, which supports Scrivener 3 (and requires at least version 3.0.3 of Scrivener).  At the time of writing, Scrivener 3 for Windows was not yet out and so has not been tested. 
+The current version is 3.0.3a, which is a minor update of 3.0.3 to handle internal Scrivener document links.  It requires at least version 3.0.3 of Scrivener for Mac for all features to work.  Scrivener 3 for Windows was still in beta at the time and was not tested; YMMV.
 
 [Download the Scree template](Scree.zip).
 
 #### Previous Versions
 
-The previous versions supported Scrivener 2 for Mac and Scrivener 1 and 2 for Windows.
+##### 3.x
+
+The 3.x versions work with Scrivener 3.
+
+* Version 3.0.3 was the first to support Scrivener 3 for Mac (and required at least version 3.0.3).  At the time, Scrivener 3 for Windows was not yet out.
+
+##### 1.x
+
+The 1.x versions supported Scrivener 2 for Mac and Scrivener 1 for Windows.
 
 * [Version 1.0.2](/tools/scree/1.0.2/): Included tag support (Scrivener tags and statuses are turned into Twine tags) and improved layout auto-generation for Twine 2.
 * [Version 1.0.1](/tools/scree/1.0.1/): Included some missing support files for Scrivener 1 for Windows.
