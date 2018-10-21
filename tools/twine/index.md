@@ -16,7 +16,7 @@ Most of my Twine toolchain involves getting longer stories in and out of Scriven
   * [**TweeGo**](http://www.motoslave.net/tweego/) is a Twee written in Go by the author of SugarCube.
   * [**entwine**](https://github.com/klembot/grunt-entwine-quickstart) is a process, not just a processor, that can also handle mixed input (*i.e.,* some files in Twee format and some created in Twine).
 
-* **[Story formats](/tools/twine/storyFormatIndex.html)** define how a flat Twee file (or the text you've typed into the Twine GUI) will be converted into a live HTML story.  Story format is not entirely independent of the source text, so you should choose one before you start typing---though for simple CYOA stories the story formats are largely interchangeable.
+* **[Story formats](/tools/twine/catalog/)** define how a flat Twee file or the text you've typed into the Twine GUI will be converted into a playable HTML story.  Story format is not entirely independent of the source text, so you should choose one before you start typing---though for simple CYOA stories the story formats are largely interchangeable.
   * [Twine 2](https://twinery.org/wiki/twine2:how_to_choose_a_story_format): The default story formats are Harlowe, SugarCube, and Snowman.
 	* Twine 2 also introduced the notion of a **proofing format**, meant for proofreading rather than publication, and includes a proofing format, Paperthin.
   * [Twine 1.4](https://twinery.org/wiki/story_format): the original Twine 1 formats were Sugarcane, Responsive, and Jonah.  SugarCube and Snowman also have versions for use with Twine 1.

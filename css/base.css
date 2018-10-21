@@ -494,36 +494,52 @@ table.bordered tr:not(:last-child) td {
     border-bottom: 1px solid gray;
 }
 
-/* inline colors */
+/* twine format catalog page */
 
 .gray {
     color: #888;
 }
 
 .green {
-    color: #4c6112;
+    color: #0B5632;
 }
 
 .tag {
     display:inline-block;
     border: 1pt solid #227ce8;
     border-radius: 3pt;
-    color: black;
+    color: #185AAA;
     background-color: #C0D2E8;
-    padding: 0pt 4pt;
-    margin-left: 2pt;
+    padding: 1pt 2pt 0pt 2pt;
+    margin-left: 3pt;
     text-indent:0;
+    font-size:smaller;
+    line-height: 0.9;
 }
 
-.svg {
+a.svg, a.svg:hover, a.svg:visited {
     display: inline-block;
-    width: 20pt;
-    height: 20pt;
-    background-size: 20pt 20pt;
-    border: 1pt solid gray;
+    width: 18pt;
+    height: 18pt;
+    padding: 1pt;
+    background-size: 16pt 16pt;
+    background-repeat: no-repeat;
+    background-position: center center;
+    border: 1pt solid #bcbcbc;
     border-radius: 2pt;
-    margin-right: 2pt;
+    margin-right: 4pt;
     margin-bottom: -2pt;
+}
+a[href^="https://"].svg {
+    background-image: url("/images/about.png");
+    border-color: #227ce8;
+}
+a[href^="https://"].svg:visited {
+    border-color: #185AAA;
+}
+a[href^="https://"].svg:active,
+a[href^="https://"].svg:hover {
+    border-color: #991100;
 }
 
 ul#story, ul#proofing {
@@ -533,7 +549,7 @@ ul#story, ul#proofing {
 }
 
 ul#story li, ul#proofing li {
-    margin-left:0;
-    padding-left:20pt;
-    text-indent:-20pt;
+    margin-left: 0;
+    padding-left: 24pt;
+    text-indent: -24pt;
 }
