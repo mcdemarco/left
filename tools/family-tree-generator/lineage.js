@@ -20,7 +20,7 @@ var currentYear; //determines timing of data output
 var currentYearMode = false;
 
 //For spacing issues.  Increase spaceFactor if your trees still wrap.
-var spaceFactor = 60;
+var spaceFactor = 70;
 
 var minYear;
 var timeFactor = 6;
@@ -680,6 +680,7 @@ function loadCsv() {
 	readCsv();
 	$("ul#person-1").html("");
 	$("#treeUi").html("");
+	$("#timeUi").html("");
 	for (var i = 0; i < linData.length; i++)
 		displayPerson(linData[i],true);
 
@@ -760,8 +761,8 @@ function updatePersonCSV(person) {
 $( document ).ready(function() {
 	//initialize the form
 	setSeedByDate();
-	$("select#clan1SELECT").append("<option value=''>Random Clan</option>");
-	$("select#clan2SELECT").append("<option value=''>Random Clan</option>");
+	$("select#clan1SELECT").html("<option value=''>Random Clan</option>");
+	$("select#clan2SELECT").html("<option value=''>Random Clan</option>");
 	
 	//Race switcher:
 	for (var i=0; i<raceSpace.length; i++) {

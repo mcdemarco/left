@@ -58,7 +58,7 @@ Here are various versions of the final gamebook, compiled from the Scrivener out
 * Using [Paloma](/tools/scree/paloma/), a Jonah-like format for Twine 2: [test-paloma.html](test-paloma.html)
 * Using [PrePub](/tools/scree/prepub/), an ePub format generated with [pandoc](https://pandoc.org): [ePub](test-prepub.epub), [Markdown source file](test-prepub.md)
 * Mapped with [DotScap](/tools/scree/dotscap/), a set of tools for mind-mapping your story with [Scapple](https://www.literatureandlatte.com/scapple/overview):  [Scapple file](test-dotscap.scap).  (Note that you need Scapple to view this; there's a free trial, or you can see an example on [the DotScap page](/tools/scree/dotscap/).)
-* Mapped with [DotGraph](/tools/scree/dotgraph/), a story format for graphing your story: ![test-dotgraph](test-dotgraph.svg)
+* Mapped with [DotGraph](/tools/scree/dotgraph/), a story format for [graphing your story](test-dotgraph.html): ![test-dotgraph](test-dotgraph.svg)
 
 
 ### Sausage

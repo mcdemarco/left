@@ -17,3 +17,5 @@ The [Random Family Tree Generator](/tools/family-tree-generator/lineage.html) is
 * detailed instructions for use
 
 I didn't actually need the detailed instructions, but as the thing was getting a bit complex I expanded them accordingly.  The source code is available at [github](https://github.com/mcdemarco/family-tree-generator), along with [more gory details](https://github.com/mcdemarco/family-tree-generator/blob/master/README.md).  I also shared a little sausage [in the blog](/blog/2014/01/14/family-tree-generator/).
+
+A bug involving overpopulation of the clan dropdowns on switching species has been fixed.

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Scapple to Twine to Scapple
-tags: tools writing hyperfiction gamebooks sharedware
+tags: tools writing hyperfiction gamebooks Twine sharedware
 created: 2018-05-25 13:05:00
 image: "/tools/scree/dotscap/example.png"
 class: release

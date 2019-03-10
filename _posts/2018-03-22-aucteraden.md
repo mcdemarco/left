@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Aucteraden 1.0
-tags: gaming sharedware micro
+tags: gaming decktet sharedware micro
 created: 2018-03-22 13:00:00
 class: release
 ---

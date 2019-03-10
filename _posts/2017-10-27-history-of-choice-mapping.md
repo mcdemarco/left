@@ -1,7 +1,7 @@
 ---
 layout: post
 title: A History of Choice Mapping
-tags: hyperfiction gamebooks choicemaps longposts
+tags: hyperfiction gamebooks choicemaps Twine longposts
 created: 2017-10-25 01:40:00
 image: "/files/choicemaps/dotgraph-partial.png"
 class: long

@@ -85,7 +85,7 @@
 		var entryIds = [];
 		for (var e = 0; e < elen; e++) {
 			var ide;
-			if (entries[e]) 
+			if (entries[e])
 				ide = entries[e].getAttribute("data-thingid");
 			if (ide)
 				entryIds.push(ide);

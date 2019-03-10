@@ -16,7 +16,7 @@ This game has not yet been playtested.
 
 ## Setup
 
-A Myrmex deck is recommended, but you can also take you chances with a single extended deck.
+A Myrmex deck is recommended, but you can also take your chances with a single extended deck.
 To create a Myrmex deck from a double Decktet, remove one set of Aces and Crowns, and two each of the Pawns and Courts (leaving six each).  The Excuse is not used.
 
 To begin, the dealer deals six cards to himself and five to the start player.

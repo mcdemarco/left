@@ -1,7 +1,7 @@
 ---
 layout: post
 title: DotGraph 2.0.5
-tags: tools writing hyperfiction gamebooks sharedware micro
+tags: tools writing hyperfiction gamebooks Twine sharedware micro
 created: 2017-11-07 11:45:00
 class: release
 ---

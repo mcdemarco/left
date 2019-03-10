@@ -2,6 +2,7 @@
 layout: page
 title: Paloma
 menu: tools
+image: "/tools/scree/paloma/icon.svg"
 date: 2016-11-10 11:18:00
 ---
 I've been using [Twine](http://twinery.org) 2, which does not have the Jonah story format from Twine 1.  I liked Jonah, so I created Paloma, which, like Jonah, displays a running log of all passages (sometimes called *stretchtext*).  However, Paloma is based on Snowman, so, unlike Jonah, it uses Markdown formatting and native (Javascript) scripting.
@@ -27,7 +28,7 @@ In Twine 1, open or create a story (under the File menu).  Then, in the Story me
 
 #### Styling
 
-From the Twine 2 UI story popup menu, under Edit Story Stylesheet, you can add CSS code to change the appearance of a Paloma story.  (This is also possible in other versions and approaches; check the appropriate Twine docs for details.)
+From the Twine 2 UI story popup menu, under Edit Story Stylesheet, you can add CSS code to change the appearance of a Paloma story.  (This is also possible in other versions and approaches; check the appropriate Twine docs for details.  Generally speaking, non-GUI tools mark CSS passages with a [stylesheet] tag.)
 
 To restyle or remove the title, use the selector `#ptitle`.  To restyle or remove the subtitle, use the selectors `#psub` (for both), `#psubtitle` (for the subtitle), and `#pauthor` (for the byline).  To restyle past links, use the selector `#phistory a`.  To restyle or remove the dashed line between passages, uses the selector `div.phistory` (specifically, its border-bottom).  
 
@@ -45,6 +46,8 @@ See the Examples section below for some restyling examples.
 
 Underscore and jQuery are also available for your scripts; see [the Snowman docs](https://twinery.org/wiki/snowman:underscore) for more details.
 
+As is usual in Twine, scripting can appear interspersed with your story text, or you can load general scripts under Edit Story JavaScript in the GUI, or in a separate file or a specially tagged [script] passage when using non-GUI tools.
+
 #### Markdown
 
 As mentioned above, Paloma uses Markdown for text formatting.  Markdown comes in various flavors, and Paloma can handle anything that its Markdown parser library, [Marked](https://marked.js.org/), can.  To pass [options](https://marked.js.org/#/USING_ADVANCED.md) into Marked, set them in your Story JavaScript.  For example, the following options improve list and punctuation handling, including automatically creating en- and em-dashes from double or triple hyphens, respectively:
@@ -56,10 +59,12 @@ As mentioned above, Paloma uses Markdown for text formatting.  Markdown comes in
 
 ### Versions
 
-The current Paloma version is 1.1.1, which fixes an iPhone < 6 issue involving tiny fonts on tiny screens.
+The current Paloma version is 1.1.3, which fixes an issue with passage display in Twine 1.
 
 #### Previous Versions
 
+* Version 1.1.2:  Bugfix release involving user styles and scripts in Twine 1 (not archived).
+* [Version 1.1.1](/tools/scree/paloma/1.1.1/): Bugfix release involving tiny fonts on tiny screens.
 * [Version 1.1.0](/tools/scree/paloma/1.1.0/): Support for Twine 1 and for the `StoryAuthor` and `StorySubtitle` special passages.
 * [Version 1.0.1](/tools/scree/paloma/1.0.1/): Inline title.
 * [Version 1.0.0](/tools/scree/paloma/1.0.0/): No inline title.
@@ -117,13 +122,50 @@ To remove unfollowed choices from a list of choices, leaving only the visited ch
 		$("#phistory a.visited").parent().siblings("a").remove();
 	});
 
-This goes into your Story JavaScript, and may need tweaking depending on the structure of your choices.
+This goes into your Story JavaScript or a [script]-tagged passage, and may need tweaking depending on the structure of your choices.
 
 You can also use jQuery within a passage, for example, to remove all the stretchtext before the currently selected passage:
 
 	<script>
 	$("#phistory").html("");
 	</script>
+
+#### Horizontal scroll
+
+To imitate the old Jonah variant "[Journal](https://www.glorioustrainwrecks.com/node/4997)," try the following CSS and JS.
+
+In your [stylesheet]:
+
+	body, #phistory {
+		width: auto;
+		display: flex;
+		flex-direction: row;
+		flex-shrink: 0;
+	}
+	#phistory {
+		max-width:none;
+	}
+	h1#ptitle, #psub, #passage, div.phistory {
+		flex-shrink: 0;
+		flex-grow: 1;
+		flex-basis: 30em;
+		border: 1px dotted gray;
+		border-bottom: none;
+		border-top: none;
+		border-collapse: collapse;
+		width: 30em;
+		min-width:30em;
+		padding:0 2em;
+	}
+
+In your [script]:
+
+	$(document).on("showpassage:after", function() {
+		$('html, body').animate({scrollLeft: $("#passage").offset().left}, 1000);
+	});
+
+
+
 
 ### Sausage
 

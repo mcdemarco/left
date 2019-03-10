@@ -162,6 +162,8 @@ a {
       text-align: right;
       color: #111;
       font-style: normal; }
+    .content blockquote cite em {
+      font-style: italic; }
   .content .by {
     font-family: Helvetica, sans-serif;
     color: #444;
@@ -511,11 +513,13 @@ table.bordered tr:not(:last-child) td {
     color: #185AAA;
     background-color: #C0D2E8;
     padding: 1pt 2pt 0pt 2pt;
-    margin-left: 3pt;
+    margin-left: 4pt;
     text-indent:0;
     font-size:smaller;
     line-height: 0.9;
 }
+
+a.tag {text-decoration:none;}
 
 a.svg, a.svg:hover, a.svg:visited {
     display: inline-block;
@@ -552,4 +556,13 @@ ul#story li, ul#proofing li {
     margin-left: 0;
     padding-left: 24pt;
     text-indent: -24pt;
+}
+
+#terminology + dl dt,
+#actions + dl dt {
+    font-weight: bold;
+}
+#terminology + dl dd,
+#actions + dl dd {
+    font-style: italic;
 }

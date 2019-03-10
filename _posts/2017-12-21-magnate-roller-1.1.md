@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Magnate Roller 1.1
-tags: gaming sharedware micro
+tags: gaming decktet sharedware micro
 created: 2017-12-21 22:55:00
 class: release
 ---

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: The Great Popularity
-tags: genre blogkeeping
+tags: genre GKC blogkeeping
 created: 1093467532
 class: site
 ---

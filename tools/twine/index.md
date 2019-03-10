@@ -48,50 +48,49 @@ Most of my Twine toolchain involves getting longer stories in and out of Scriven
 I [blogged](/blog/2017/10/17/choose-your-own-writing-career/) the following CSS, when I used it to make SugarCube 2 look a bit more like SugarCube 1 in [*Choose Your Own Writing Career*](/fiction/writer.html).  To use it, place it in your StoryStyles section (in a Twee file) or into the Stylesheet popup accessible from Twine 2’s story menu.  If you are also using [Bleached](http://www.motoslave.net/sugarcube/2/#downloads) (like I was), place it after all the Bleached styles.
 
 
-```
-/* makes SugarCube 2 look a little more old-school 
-   tested with SugarCube 2.20.0 - mcdemarco */
+	/* makes SugarCube 2 look a little more old-school 
+   		tested with SugarCube 2.20.0 - mcdemarco */
 
-html {
-	font-family: -apple-system, BlinkMacSystemFont,
-		Roboto, Oxygen, Ubuntu, Cantarell, “Fira Sans”,
-		“Droid Sans”, “Helvetica Neue”, Helmet,
-		Freesans, Arial, sans-serif;
-}
+	html {
+		font-family: -apple-system, BlinkMacSystemFont,
+			Roboto, Oxygen, Ubuntu, Cantarell, “Fira Sans”,
+			“Droid Sans”, “Helvetica Neue”, Helmet,
+			Freesans, Arial, sans-serif;
+	}
 
-#ui-bar-body {
-	text-align:right;
-}
+	#ui-bar-body {
+		text-align:right;
+	}
 
-#ui-bar-history [id|=history], 
-button#ui-bar-toggle,
-#menu-core,
-#menu ul,
-#menu ul li,
-#menu li:not(:first-child) {
-	border:0;
-}
+	#ui-bar-history [id|=history], 
+		button#ui-bar-toggle,
+	#menu-core,
+	#menu ul,
+	#menu ul li,
+	#menu li:not(:first-child) {
+		border:0;
+	}
 
-#ui-bar-history [id|=history], 
-button#ui-bar-toggle {
-	color: #68d;
-}
+	#ui-bar-history [id|=history], 
+	button#ui-bar-toggle {
+		color: #68d;
+	}
 
-#menu li a {
-	display:inline;
-    padding: 0;
-	padding-top: .25em;
-	text-transform: none;
-	cursor: pointer;
-	color: #68d;
-	background-color: transparent;
-	text-decoration: none;
-	border:0;
-}
-#menu li a:hover {
-	color: #8af;
-	background-color: transparent;
-	border:0;
-}
-```
+	#menu li a {
+		display:inline;
+	    padding: 0;
+		padding-top: .25em;
+		text-transform: none;
+		cursor: pointer;
+		color: #68d;
+		background-color: transparent;
+		text-decoration: none;
+		border:0;
+	}
+	#menu li a:hover {
+		color: #8af;
+		background-color: transparent;
+		border:0;
+	}
+
 

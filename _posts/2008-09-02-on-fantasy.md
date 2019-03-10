@@ -1,7 +1,7 @@
 ---
 layout: post
 title: On Fantasy
-tags: genre fantasy longpost
+tags: genre fantasy GKC longpost
 created: 1220413343
 checked: 2015-01-31
 class: long

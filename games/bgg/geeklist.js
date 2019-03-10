@@ -28,7 +28,7 @@
 		sReq.send();
 	}
 
-	function sReqListener () {
+	function sReqListener() {
 		stylesheet = this.responseXML;
 	}
 	
@@ -71,7 +71,9 @@
 		var elen = Math.min(entries.length,100) + 1;
 		var entryIds = [];
 		for (var e = 0; e < elen; e++) {
-			var ide = entries[e].getAttribute("data-thingid");
+			var ide;
+			if (entries[e])
+				ide = entries[e].getAttribute("data-thingid");
 			if (ide)
 				entryIds.push(ide);
 		}
@@ -168,7 +170,15 @@
 	
 	function setFromQuery() {
 		if (window.location.search && parseInt(window.location.search.split("?")[1],10) > 0) {
-			document.getElementById("geeklistIdINPUT").value = parseInt(window.location.search.split("?")[1],10);
+			var args = window.location.search.split("?")[1];
+			var listId = parseInt(args,10);
+			document.getElementById("geeklistIdINPUT").value = listId;
+			//check for sort field
+			if (listId) {
+				var sortByVal = args.split("&sort=")[1];
+				if (sortByVal)
+					document.getElementById("sortBy").value = sortByVal;
+			}
 			//also autoload.
 			getGeekli();
 		}

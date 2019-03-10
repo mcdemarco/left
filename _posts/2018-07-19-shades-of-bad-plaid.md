@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Shades of Bad and Plaid
-tags: hyperfiction gamebooks reviews writing
+tags: hyperfiction gamebooks Twine reviews writing
 created: 2018-07-19 12:55:00-04:00
 ---
 I've more or less finished *Fifty Shades of Plaid* (Parody Brothers, [Kindle Unlimited](https://www.amazon.com/Fifty-Shades-Grey-Parody-shades-ebook/dp/B00KFXUWTG//ref=as_li_ss_il?ie=UTF8&linkCode=li2&tag=mcdema-20&linkId=474dfb9b433e59487a744a92a5a1780f) 2014), a bottleneck-and-bottleneck Choose Your Own Adventure story that's a parody of *Fifty Shades of Grey*.  The technical term is [branch and bottleneck](https://heterogenoustasks.wordpress.com/2015/01/26/standard-patterns-in-choice-based-games/), but the branches never get much farther than a choice or two from the trunk before returning there, and at times you are even scolded for trying to make a silly choice (in a parody CYOA!), then sent back to the "correct" choice.  Despite the tendency to railroad the reader, there are plenty of endings, though many seem jarringly random in their choice of whether you will stay with the tall, rich, and mysterious Christian Plaid or move on to other men.   Still, there are some surprises you can miss if you happen to move on.

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: The State of Hyperfiction
-tags: NaNoWriMo tools writing Scrivener hyperfiction gamebooks if longpost
+tags: NaNoWriMo tools writing Scrivener hyperfiction gamebooks if Twine longpost
 created: 2016-10-19 12:30:00
 class: long
 ---
