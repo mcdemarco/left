@@ -99,18 +99,6 @@
 	</ul>
 	{% endif %}
 	</li>
-	<li><a href="/conlang/" title="The Accidental Conlanger">conlang</a>
-	{% if page.menu == 'conlang' %}
-	<ul>
-	  <li><a href="/conlang/">about</a></li>
-	  <li><a href="/conlang/toc.html">contents</a></li>
-	  <li><a href="/conlang/intro/">intro</a></li>
-	  <li><a href="/conlang/maria/">maria</a></li>
-	  <li><a href="/conlang/sapir/">sapir</a></li>
-	  <li><a href="/conlang/references.html">references</a></li>
-	</ul>
-	{% endif %}
-	</li>
 	<li><a href="/games/">games</a>
 	{% if page.menu == 'games' %}
 	<ul>
@@ -130,12 +118,23 @@
 	</ul>
 	{% endif %}
 	</li>
-	<li><a href="/stream/" title="Social media">stream</a>
+	<li><a href="/stream/" title="Salmagundi">salmi</a>
 	{% if page.menu == 'stream' %}
 	<ul>
+		<li><a href="/conlang/" title="The Accidental Conlanger">conlang</a></li>
 	  <li><a href="/stream/instagrams/">polaroids</a></li>
-	  <li><a href="/stream/recipes/">recipes</a></li>
+		<li><a href="/recipes/">recipes</a></li>
 	  <li><a href="/stream/tweets/">tweets</a></li>
+	</ul>
+	{% endif %}
+	{% if page.menu == 'conlang' %}
+	<ul>
+	  <li><a href="/conlang/">about</a></li>
+	  <li><a href="/conlang/toc.html">contents</a></li>
+	  <li><a href="/conlang/intro/">intro</a></li>
+	  <li><a href="/conlang/maria/">maria</a></li>
+	  <li><a href="/conlang/sapir/">sapir</a></li>
+	  <li><a href="/conlang/references.html">references</a></li>
 	</ul>
 	{% endif %}
 	</li>
@@ -154,7 +153,6 @@
 	{% endif %}
 	{% if page.menu == 'tools' %}
 	<ul>
-	  <li><a href="/tools/scree/">scree</a></li>
 	  <li><a href="/sffms/">sffms</a></li>
 	  <li><a href="/tools/family-tree-generator/">trees</a></li>
 	  <li><a href="/tools/twine/">twine</a></li>

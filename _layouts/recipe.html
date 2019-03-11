@@ -4,7 +4,7 @@ layout: layout
 
 <h1><a href="/recipes/">The New Kitchen Cookbook</a></h1>
 
-{{ content | replace:'images/','../images/' }}
+{{ content | replace:'.md','' | replace:'../','../../' }}
 
 <hr>
 

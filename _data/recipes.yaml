@@ -1,9 +1,8 @@
-- name: About The New Kitchen Cookbook
-  filename: about
-
 - name: Preface
   filename: preface
   files:
+  - name: About The New Kitchen Cookbook
+    filename: about
   - name: The New Kitchens
     filename: kitchens
   - name: Using the Cookbook
@@ -48,12 +47,20 @@
     filename: italianWedding
   - name: Kielbasa Soup
     filename: kielbasa
+  - name: Gazpacho
+    filename: gazpacho
 
 - name: Bread
   filename: bread
   files:
+  - name: Parker House Rolls
+    filename: parkerHouseRolls
   - name: Bread Advice
     filename: advice
+  - name: Master No-Knead Recipe
+    filename: master
+  - name: Master Healthy No-Knead Recipe
+    filename: healthy
   - name: Bread Math
     filename: math
   - name: Cornstarch Wash
@@ -70,36 +77,42 @@
     filename: naan
   - name: Baguette
     filename: baguette
-  - name: Master Healthy No-Knead Recipe
-    filename: healthy
   - name: Healthy Rye
     filename: rye
-  - name: Yes-Knead Challah
-    filename: challah
   - name: Pagnotta
     filename: pagnotta
   - name: Ciabatta
     filename: ciabatta
-  - name: Parker House Rolls
-    filename: parkerHouseRolls
-  - name: Garlic Breadsticks
-    filename: garlicBreadsticks
+  - name: Yes-Knead Challah
+    filename: challah
   - name: Spicy Cinnamon Flatbread
     filename: cinnamonFlatbread
+  - name: Olive Oil Dough
+    filename: oliveOil
+  - name: Pan Pizza
+    filename: panPizza
+  - name: Pizza Stone Pizza
+    filename: pizzaPizza
+  - name: Garlic Breadsticks
+    filename: garlicBreadsticks
   - name: Artisan Bread Index
     filename: artisanIndex
 
 - name: Quick Bread
   filename: quick-bread
   files:
-  - name: Blueberry Yogurt Pancakes
-    filename: blueberryPancakes
   - name: Non-dairy Pancakes
     filename: pancakes
   - name: Dairy Pancakes
     filename: pancakesD
+  - name: Blueberry Yogurt Pancakes
+    filename: blueberryPancakes
+  - name: Ricotta Pancakes
+    filename: ricottaPancakes
   - name: Crepes
     filename: crepes
+  - name: Dutch Puff
+    filename: dutchPuff
   - name: Non-dairy Cornbread
     filename: cornbread
   - name: Bran Muffins for Mom
@@ -152,12 +165,18 @@
     filename: vegetarianChili
   - name: Tzimmes
     filename: tzimmes
+  - name: Latkes
+    filename: latkes
+  - name: Spinach Ricotta Latkes
+    filename: spinachRicottaLatkes
   - name: Polenta
     filename: polenta
   - name: Moroccan Spice Mix
     filename: spiceMix
   - name: North African Spiced Carrot and Parsnip Salad
     filename: carrotParsnip
+  - name: Carrot and Radish Salad 
+    filename: carrotRadish
   - name: Chickpea Salad with Fennel, Tomatoes and Olives
     filename: chickpeaFennel
   - name: Mizeria (Polish Cucumber Salad)
@@ -174,20 +193,22 @@
 - name: Rice
   filename: rice
   files:
-  - name: Rice Salad
-    filename: riceSalad
-  - name: Stuffed Peppers
-    filename: stuffedPeppers
   - name: Roz bil Shaghria
     filename: roz
+  - name: Orzo
+    filename: orzo
+  - name: Rice Salad
+    filename: riceSalad
+  - name: Farro Salad
+    filename: Farro Salad
+  - name: Stuffed Peppers
+    filename: stuffedPeppers
   - name: About Risotto
     filename: aboutRisotto
   - name: Saffron Risotto
     filename: saffronRisotto
   - name: Tempeh Risotto
     filename: tempehRisotto
-  - name: Orzo
-    filename: orzo
   - name: Sushi Rice
     filename: sushi
 
@@ -198,8 +219,6 @@
     filename: orecchiette
   - name: Pesto
     filename: pesto
-  - name: Mac and Cheese
-    filename: macncheese
   - name: Puttanesca
     filename: puttanesca
   - name: Italian Chop Suey
@@ -208,6 +227,12 @@
     filename: bolognese
   - name: Meat Sauce
     filename: meatsauce
+  - name: Mac and Cheese
+    filename: macncheese
+  - name: Salmon Casserole
+    filename: salmonCasserole
+  - name: Smoked Mackerel Salad
+    filename: mackerelSalad
   - name: Soba Salad
     filename: sobaSalad
 
@@ -216,6 +241,8 @@
   files:
   - name: Meatballs
     filename: meatballs
+  - name: Lambballs
+    filename: lambballs
   - name: Fake Bolognese Sauce
     filename: bolognese
   - name: Meat Sauce
@@ -232,6 +259,10 @@
     filename: curry
   - name: Briskette
     filename: briskette
+  - name: Crockpot Briskette
+    filename: crockpotBriskette
+  - name: Baked London Broil
+    filename: bakedLondon
   - name: Molha Quase à Moda de Pico
     filename: molha
   - name: Lamb Stew
@@ -242,30 +273,42 @@
   files:
   - name: Roasted Whole Chicken
     filename: roasted
+  - name: Crockpot Roasted Chicken
+    filename: crockpotRoastedChicken
   - name: Chicken Cacciatore
     filename: cacciatore
   - name: Turkey Chicken
     filename: turkeyChicken
   - name: Turkey Chicken for a Crowd
     filename: bakedTurkeyChicken
+  - name: Coconut Chicken for a Crowd
+    filename: bakedCoconutChicken
   - name: Roasted Chicken Quarters with Butternut Squash
     filename: roastedWithSquash
   - name: Roasted Chicken Thighs with Sweet Potatoes
     filename: roastedWithSweetPotatoes
   - name: Tuscan Chicken with Olives and Capers
     filename: tuscanChicken
+  - name: Spicy Asian Chicken
+    filename: asianChicken
+  - name: Devilled Chicken Thighs
+    filename: devilledChicken
+  - name: Chicken with Collards and Rice
+    filename: chickenCollardRice
   - name: Treda
     filename: treda
   - name: Moroccan Spiced Chicken Stew
     filename: thighStew
-  - name: Spicy Asian Chicken
-    filename: asianChicken
+  - name: Crockpot Chicken with Farro
+    filename: crockpotChickenFarro
   - name: Turkey Scaloppini
     filename: scaloppini
   - name: Baked Turkey Tenders
     filename: bakedTurkeyTenders
   - name: Crockpot Bourbon Turkey Tenders
     filename: crockpotTurkey
+  - name: Turkey or Chicken a la King
+    filename: turkeyChickenKing
   - name: Turkey Meatballs
     filename: turkeyballs
   - name: Turkey Chili
@@ -314,6 +357,10 @@
     filename: sonhos
   - name: Sufganiyot (Jelly Doughnuts)
     filename: sufganiyot
+  - name: Crockpot Applesauce
+    filename: crockpotApplesauce
+  - name: Apple Crisp
+    filename: appleCrisp
   - name: Haroset
     filename: haroset
 
@@ -336,6 +383,8 @@
     filename: palmiers
   - name: Chocolate Chip Cookies
     filename: chocolateChip
+  - name: M&M Bark
+    filename: mnmBark
   - name: Hermit Cookies
     filename: hermits
   - name: Almond Butter Cutouts
@@ -364,9 +413,13 @@
     filename: Cherry
   - name: Pecan Pie
     filename: pecan
+  - name: Rough Puff
+    filename: roughPuff
   - name: Blueberry Turnovers
     filename: blueberryTurnovers
   - name: Pastéis de Nata
     filename: pasteisDeNata
+  - name: Feta Puffs
+    filename: fetaPuffs
   - name: Spanakopita
     filename: spanakopita
