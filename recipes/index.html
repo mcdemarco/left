@@ -1,24 +1,22 @@
 ---
 layout: recipe
 title: "The New Kitchen Cookbook"
-menu: stream
+menu: recipes
 date: 2014-10-07 01:25
 ---
 <ul class="listing">
   {% for foodie in site.data.recipes %}
   <li>
     {% if foodie.files != null %}
-    <a class="archive_list_article_title">{{foodie.name}}</a>
-    <ul class="tag_list recipes">
+    <a class="archive_list_article_title" name="{{foodie.filename}}" href="/recipes/{{ foodie.filename }}/">{{foodie.name}}</a>
+    <ul class="tag_list recipes" id="{{foodie.filename}}">
       {% for innerFoodie in foodie.files %}
       <li class="inline archive_list"><a class="tag_list_link" href="/recipes/{{ foodie.filename }}/{{ innerFoodie.filename }}">{{ innerFoodie.name }}</a></li>
       {% endfor %}
     </ul>
     {% else %}
-    <a class="archive_list_article_link" href="/recipes/{{ foodie.filename }}">{{foodie.name}}</a>
+    <a class="archive_list_article_link" href="/recipes/{{ foodie.filename }}" name="{{foodie.filename}}">{{foodie.name}}</a>
     {% endif %}
   </li>
   {% endfor %}
 </ul>
-
-

@@ -70,28 +70,45 @@ a {
     .sidebar .switch a {
       color: #939393; }
 
+
+.header {
+  max-width: 650px;
+  margin-left: 110px;
+  margin-right: 20px;
+  margin-bottom: 20px; }
+  .header h1 {
+    color: #bebebe;
+    font-family: "Yanone Kaffeesatz", Helvetica, sans-serif;
+    font-weight: 400; }
+  .header h1 .description {
+    color: #ebebeb;}
+  .header h1 .booktitle {
+    color: #737373;}
+  .header h1 a {
+    color: #111;
+    text-decoration: none; }
+  .header h1 {
+    font-size: 36px;
+    margin: 18px 0 5px 0; }
+
 .content {
   max-width: 650px;
   margin-left: 110px;
   margin-right: 20px;
   margin-bottom: 50px; }
   .content h1 {
-    color: #bebebe;
+    color: #111;
     font-family: "Yanone Kaffeesatz", Helvetica, sans-serif;
     font-weight: 400; }
-  .content h1 .description {
-    color: #ebebeb;}
-  .content h1 .booktitle {
-    color: #737373;}
   .content h1 a {
     color: #111;
     text-decoration: none; }
   .content h2 {
-    color: #333;
+    color: #222;
     font-family: "Yanone Kaffeesatz", Helvetica, sans-serif;
     font-weight: 400; }
   .content h2 a {
-    color: #111;
+    color: #222;
     text-decoration: none; }
   .content h3 {
     color: #333;
@@ -412,7 +429,19 @@ ul.tag_list.recipes li {
     margin: 0;
 }
 
-ul.tag_list.recipes li:before {
+li.recipe_chapter {
+    border-bottom:none!important;
+}
+
+ul.recipes {
+    list-style-type: none;
+}
+
+ul.recipes li.archive_list {
+    text-align:left;
+}
+
+ul.recipes li:before {
     font-style: normal;
     content: '\1F350';
     margin: 0 3px;

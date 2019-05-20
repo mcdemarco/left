@@ -4,8 +4,10 @@
   <meta charset="utf-8">
   <title>
     {% if page.title %}
-      {{ page.title }} &ndash;
-    {% endif %}
+    {{ page.title }} &ndash;
+		{% elsif page.collection %}
+		{{ page.collection }} &ndash;
+		{% endif %}
     {{ site.name }}
   </title>
 
@@ -19,6 +21,12 @@
   <meta name="description" content="{{page.excerpt | strip_html}}" />
   <meta name="og:description" content="{{page.excerpt | strip_html}}" />
   <meta name="twitter:description" content="{{page.excerpt | strip_html}}" />
+  {% elsif page.title %}
+  <meta name="description" content="{{page.title}}" />
+  <meta name="og:description" content="{{page.title}}" />
+  {% elsif page.collection %}
+  <meta name="description" content="{{page.collection}}" />
+  <meta name="og:description" content="{{page.collection}}" />
   {% else %}
   <meta name="description" content="{{ site.description }}" />
   <meta name="og:description" content="{{ site.description }}" />
@@ -55,14 +63,19 @@
 
 <body>
 
-<section class="content">
+<section class="header">
   <h1>{{ site.name }}:
       {% if page.supertitle %}
       <span class="booktitle">{{page.supertitle}}</span>
+      {% elsif page.collection %}
+      <span class="booktitle">The New Kitchen Cookbook</span>
       {% else %}
       <span class="description">{{site.description}}</span>
       {% endif %}
   </h1>
+</section>
+
+<section class="content">
       
   {{ content }}
 
@@ -119,15 +132,30 @@
 	{% endif %}
 	</li>
 	<li><a href="/stream/" title="Salmagundi">salmi</a>
-	{% if page.menu == 'stream' %}
+	{% if page.menu == 'recipes' or page.collection == 'recipes' %}
+	<ul>
+	  <li><a href="/recipes/appetizers/">appetizers</a></li>
+	  <li><a href="/recipes/soup/">soup</a></li>
+	  <li><a href="/recipes/bread/">bread</a></li>
+	  <li><a href="/recipes/quick-bread/">quick-bread</a></li>
+	  <li><a href="/recipes/vegetables/">veggies</a></li>
+	  <li><a href="/recipes/rice/">rice</a></li>
+	  <li><a href="/recipes/pasta/">pasta</a></li>
+	  <li><a href="/recipes/meat/">meat</a></li>
+	  <li><a href="/recipes/poultry/">poultry</a></li>
+	  <li><a href="/recipes/fish/">fish</a></li>
+	  <li><a href="/recipes/sweets/">sweets</a></li>
+	  <li><a href="/recipes/cookies/">cookies</a></li>
+	  <li><a href="/recipes/pie/">pie!</a></li>
+	</ul>
+	{% elsif page.menu == 'stream' %}
 	<ul>
 		<li><a href="/conlang/" title="The Accidental Conlanger">conlang</a></li>
 	  <li><a href="/stream/instagrams/">polaroids</a></li>
 		<li><a href="/recipes/">recipes</a></li>
 	  <li><a href="/stream/tweets/">tweets</a></li>
 	</ul>
-	{% endif %}
-	{% if page.menu == 'conlang' %}
+	{% elsif page.menu == 'conlang' %}
 	<ul>
 	  <li><a href="/conlang/">about</a></li>
 	  <li><a href="/conlang/toc.html">contents</a></li>
@@ -137,6 +165,7 @@
 	  <li><a href="/conlang/references.html">references</a></li>
 	</ul>
 	{% endif %}
+
 	</li>
 	<li><a href="/tools/" title="Writing tools">tools</a>
 	{% if page.menu == 'sffms' %}
