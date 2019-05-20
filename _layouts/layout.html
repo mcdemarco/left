@@ -67,7 +67,7 @@
   <h1>{{ site.name }}:
       {% if page.supertitle %}
       <span class="booktitle">{{page.supertitle}}</span>
-      {% elsif page.collection %}
+      {% elsif page.collection == 'recipes' or page.menu == 'recipes' %}
       <span class="booktitle">The New Kitchen Cookbook</span>
       {% else %}
       <span class="description">{{site.description}}</span>
