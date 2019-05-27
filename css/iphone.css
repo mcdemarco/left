@@ -2,19 +2,38 @@
   position: inherit;
   width: inherit;
   margin: 25px;
-  padding: 35px;
-  box-shadow: -5px -5px 7px #ccc; }
+  padding: 35px; }
+  .sidebar a.avatar {
+      float:right;
+  }
   .sidebar .meta {
-    margin-top: 15px; }
-    .sidebar .meta img {
-      display: inline-block;
-      margin-right: 15px; }
+    margin-top: 15px;
+    display: flex;
+    flex-flow: row nowrap;
+    width:100%; }
+    .sidebar .meta a {
+      display: flex;
+      flex-flow: row nowrap;
+      flex: 1;
+      align-items:center;
+      justify-content: space-between;
+      min-width:0;}
   .sidebar .name {
     color: #bebebe;
     display: block; }
   .sidebar .switch {
+    margin-top: 15px;
     color: #bebebe;
+    text-align:center;
     display: block; }
+  .sidebar ul#mainMenu li ul,
+  .sidebar ul#mainMenu li ul li,
+  .sidebar ul#mainMenu li ul li a {
+    width:auto;
+    line-height: 1.5;
+    display:inline; }
+  .sidebar ul#mainMenu li ul li a {
+    white-space:nowrap; }
 
 .header {
   margin: 0;
@@ -29,9 +48,14 @@
 .content {
   margin: 0;
   padding: 5px 25px;
-  width: inherit; }
+  width: inherit; 
+  box-shadow: 0 7px 5px -5px #ccc; }
   .content h1 {
     margin: 0 0 5px 0; }
+  .content p code {
+    word-wrap: break-word;}
+  .content pre {
+    overflow: auto;}
 
 div.polaroids {
     position:inherit;

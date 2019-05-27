@@ -16,9 +16,9 @@ a {
   .sidebar a {
     text-decoration: none; }
   .sidebar img {
-    padding: 0 3px;
+    padding: 3px;
     border: 0; }
-  .sidebar .avatar {
+  .sidebar img.avatar {
     padding: 0;
     margin-left: 2px;
     border-radius: 5px; }
@@ -38,10 +38,11 @@ a {
       letter-spacing: 1px;
       color: black; }
   .sidebar .meta {
-      padding-bottom:5px;}
+    width: 75%;
+    padding-bottom:5px;}
   .sidebar .meta a {
-    margin-left: 0px;
-    color: black; }
+      display: inline-block;
+      color: black; }
     .sidebar .meta a:hover {
       color: #227ce8; }
   .sidebar .sections {
@@ -145,7 +146,7 @@ a {
       background-color: #eeeeee;
       border: 1px solid #777777;
       border-radius: 3px;
-      padding: 2px 3px; }
+      padding: 2px 3px;}
   .content img {
     padding: 3px;
     border: 1px solid #eeeeee;
