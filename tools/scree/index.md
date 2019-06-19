@@ -2,7 +2,7 @@
 layout: page
 title: About Scree
 categories: writing
-menu: tools
+menu: if
 date: 2016-10-20 18:00:00
 ---
 Scree is a [Twine](/tools/twine.html) gamebook template for use in [Scrivener 3](http://www.literatureandlatte.com/scrivener.php).  See the previous versions for Scrivener 1 and 2 support.

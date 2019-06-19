@@ -12,7 +12,7 @@ Someone somewhere in the [news aggregator](/aggregator) linked to an old post of
 
 > You walk up to the main character of the story in question and say: "Hey! Main character! That *deus ex machina* doodad you have on your belt, does it have, like, a *battery*?"
 >
-> If he says "Why, yes, there's a tiny nuclear fuel cell in there that will power this baby for 10,000 planetary revolutions," well, then, you've got some science fiction there.<!--break--> If he says, "Of course not, it was forged in the eternal flames of Mount [insert typewriter spasm here] by the dwarves who serve the elder and/or fallen god [insert second typewriter spasm here], and holds captive his immortal soul" or some such, well, that's fantasy.  Everything else is pretty much elaboration and variation on the point.
+> If he says "Why, yes, there's a tiny nuclear fuel cell in there that will power this baby for 10,000 planetary revolutions," well, then, you've got some science fiction there.  If he says, "Of course not, it was forged in the eternal flames of Mount [insert typewriter spasm here] by the dwarves who serve the elder and/or fallen god [insert second typewriter spasm here], and holds captive his immortal soul" or some such, well, that's fantasy.  Everything else is pretty much elaboration and variation on the point.
 >
 > If the story features a nuclear fuel cell made by the dwarf servants of the dread god Typewriter Spasm, what you've got is an editor asleep at the switch.
 

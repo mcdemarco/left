@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Paloma
-menu: tools
+menu: if
 image: "/tools/scree/paloma/icon.svg"
 date: 2016-11-10 11:18:00
 ---
@@ -18,7 +18,7 @@ Paloma is available for Twine 1 as well as for Twine 2.
 To add Paloma to Twine 2, use this URL (under Formats > Add a New Format): `https://mcdemarco.net/tools/scree/paloma/format.js`    
 You may also want to click the star or radio button (depending on your version of Twine 2) next to Paloma in the Story Formats list under Formats to make Paloma your default story format.
 
-To add Paloma to Twine 1, create a new folder called `paloma` inside your targets folder, then download this file: [https://mcdemarco.net/tools/scree/paloma/header.html](https://mcdemarco.net/tools/scree/paloma/header.html) and place it inside the `paloma` folder.  (See the [Twine wiki](http://twinery.org/wiki/twine1:story_format#adding_formats) for more information about installing and using story formats in Twine 1.)
+To add Paloma to Twine 1, create a new folder called `paloma` inside your targets folder, then download [this file](https://mcdemarco.net/tools/scree/paloma/header.html): `https://mcdemarco.net/tools/scree/paloma/header.html` and place it inside the `paloma` folder.  (See the [Twine wiki](http://twinery.org/wiki/twine1:story_format#adding_formats) for more information about installing and using story formats in Twine 1.)
 
 ### Use
 
@@ -161,7 +161,8 @@ In your [stylesheet]:
 In your [script]:
 
 	$(document).on("showpassage:after", function() {
-		$('html, body').animate({scrollLeft: $("#passage").offset().left}, 1000);
+		$('html, body').animate({
+			scrollLeft: $("#passage").offset().left}, 1000);
 	});
 
 

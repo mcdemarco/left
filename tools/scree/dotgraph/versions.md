@@ -1,7 +1,7 @@
 ---
 layout: page
 title: DotGraph Versions
-menu: tools
+menu: if
 date: 2016-12-19 11:00:00
 ---
 The current version of [DotGraph](/tools/scree/dotgraph/) is 2.1.0, which adds a text tracing option and support for configuration using the StorySettings passage.

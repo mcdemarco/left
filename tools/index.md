@@ -5,11 +5,11 @@ categories: writing
 menu: tools
 date: 2014-01-04 19:28:00
 ---
-I have a few writing tools on my site, though nothing to compare to [donjon's site](http://donjon.bin.sh).
+I have a few writing tools on my site.  The latest ones are for writing hyperfiction; if you don't know what that is or what the other tools are, I have [a page about that](/tools/hyperfic/).
 
-My Scrivener template, [Scree](/tools/scree/), is for writing hyperfiction gamebooks in Scrivener, for publication using Twee/Twine.  I've made a few story formats for Twine as well: [Paloma](/tools/scree/paloma/), a Jonah replacement for Twine 2, [DotGraph](/tools/scree/dotgraph/), a proofing format for displaying your Twine story nodes as a graph, and a few conversion formats.  For more details see the [Scree](/tools/scree/) or [Twine tools](/tools/twine.html) pages.
+My Scrivener template, [Scree](/tools/scree/), is for writing hyperfiction/gamebooks in Scrivener, for publication using Twee/Twine.  I've made a few story formats for Twine as well: [Paloma](/tools/scree/paloma/), a Jonah replacement for Twine 2, [DotGraph](/tools/scree/dotgraph/), a proofing format for displaying your Twine story nodes as a graph, and a few conversion formats.  For more details see the [Scree](/tools/scree/) or [Twine tools](/tools/hyperfic/twine/) pages.
 
-The [Random Family Tree Generator](/tools/family-tree-generator/) is a product of NaNoWriMo 2013, during which I wanted to populate several dwarf clans, fast.
+The [Random Family Tree Generator](/tools/family-tree-generator/) is a product of NaNoWriMo 2013, during which I wanted to populate several dwarf clans, fast.  (It's the closest thing here to the procedurally generated greatness of [donjon's site](http://donjon.bin.sh).)
 
 My [sffms package](/sffms/) is a LaTeX document class for writing speculative fiction that I maintained for many years.
 
@@ -22,4 +22,4 @@ My app.net app [Paste](http://paste.mcdemarco.net) is a pinboard-style app that 
 
 I wrote a reading tool, a [bicolorization bookmarklet](/bicolorize/), along with some revisions to an existing bicolored Tetris game, intended for use with anaglyph glasses.  As usual, there are more details [in the blog](/blog/2014/10/26/bicolorize/).
 
-I've also made some [bookmarklets](/tools/colourlets/) for the ColourLovers website, and enough [games and gaming tools](/games/) that they deserve their own page.
+I've also made some [bookmarklets](/tools/colourlets/) for the ColourLovers website, and enough other games and gaming tools that they deserve [their own page](/games/).

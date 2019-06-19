@@ -2,7 +2,7 @@
 layout: page
 title: Scree 1.0.1
 categories: writing
-menu: tools
+menu: if
 date: 2016-10-20 18:00:00
 ---
 This is an archive of version 1.0.1 of Scree.  See [the main Scree page](/tools/scree/) for the current version.

@@ -1,0 +1,14 @@
+---
+layout: post
+title: "Armagadd-on II(a): The Empire Strikes Foot"
+tags: technology tools
+created: 2019-05-30 11:55:00
+class: medium
+---
+In a surprise move, ~~the Evil League of Evil~~ Google has announced that its planned removal of ad-blocking functionality from Chrome extensions will not affect "enterprise deployments."  The announcement is buried under a few months' worth of protests in [a long Chromium google group thread](https://groups.google.com/a/chromium.org/forum/m/#!msg/chromium-extensions/veJy9uAwS00/9iKaX5giAQAJ), but it was freshly complained about across the internet [yesterday](https://9to5google.com/2019/05/29/chrome-ad-blocking-enterprise-manifest-v3/).  Personally, I didn't even know that Chrome had "enterprise" users, though I did know about [pi-holes](https://pi-hole.net) and [Brave](https://brave.com/blog/).  And, of course, the interweb's preferred solution to the looming armagadd-on: FireFox.
+
+Until Google shot itself in the foot this way, I thought Mozilla's [attempted suicide by expired certificate](https://arstechnica.com/information-technology/2019/05/firefox-add-ons-mass-disabled-by-certificate-bug-hotfix-for-some-ready/) earlier this month was the end for FireFox.  Between the incompetence involved in letting a certificate expire *([again](https://bugzilla.mozilla.org/show_bug.cgi?id=1267318))*, the addition of insult to injury when they sent out a patch *over their ~~spyware~~ telemetry channel*, and the general head-up-buttedness of their incessant attempts to redesign a browser that only power-users use to be grandma-safe *at the expense of the power users* (which was how a doomed cert got control over *my* extensions in the first place), I was sure it was curtains for Mozilla and its little fox, too.  (I certainly wasn't going back; I switched to [Waterfox](https://www.waterfox.net/) while waiting far too long for a non-spyware version of the patch.)
+
+But now it looks like Mozilla's grandma moment has arrived.  It's not that grandma *wants* to block your ads, it's just that her geek grandchildren don't want to have to clean the malware off grandma's computer or otherwise hear her complaints about [the modern web](https://old.reddit.com/r/starterpacks/comments/bunvbb/modern_webdesign_starterpack/) as seen from her dusty old PC.  So grandma gets FireFox with adblockers.
+
+Grandma is never going to get a [pi-hole](https://blog.codinghorror.com/an-exercise-program-for-the-fat-web/), though, no matter how many geeks think an extra piece of finicky hardware is going to save the web from itself.  I don't know why people bother to preach the pi-hole when DNS ad blocking is so much more easily done in software.  I use [Steven Black's hosts file](https://github.com/StevenBlack/hosts), which covers a multitude of ads despite my being too geeky to use host file management software.  (I just update it manually when I think of it, like whenever another armagadd-on comes around.)

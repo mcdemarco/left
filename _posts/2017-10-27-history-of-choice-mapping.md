@@ -148,11 +148,22 @@ Even in 2016, automatic layout was still rare in hyperfiction software, and to m
 
 [![educational portion of sample DotGraph map](/files/choicemaps/dotgraph-partial-100.png)](/tools/scree/dotgraph/example.svg)
 
+### 2019 (Update)
+
+Joe Depeau at [Neo4J](https://neo4j.com/) was inspired by [Bandersnatch](https://www.netflix.com/gb/title/80988062) to use his company's [graph database](https://en.wikipedia.org/wiki/Graph_database) to [map out](https://neo4j.com/blog/vampire-express-graph-database-choose-your-own-adventure/) Choose Your Own Adventure #31, *Vampire Express* by Tony Koltz (1984):
+
+[![educational portion of neo4j graph](/files/choicemaps/vampire-partial-100.png)](https://s3.amazonaws.com/dev.assets.neo4j.com/wp-content/uploads/20190221085135/graph2.png)
+
+He goes on to use the database to look for easter eggs (there were none) and to find the [shortest](https://s3.amazonaws.com/dev.assets.neo4j.com/wp-content/uploads/20190221085342/shortest_paths1.png) and [longest](https://s3.amazonaws.com/dev.assets.neo4j.com/wp-content/uploads/20190221085343/longest-paths1.png) paths through the story (with Cypher queries rather than eyeballing it). He discusses some other questions you can ask in a graph database, if you start out with more data than he entered---*e.g.,* the text of the nodes.  Though he only speculates about the potential benefits to authors and was hardly going to blog about the overhead of using a boutique database system on a blog about that boutique database system, the use of a graph database represents a significant advance in the field of choice mapping.
+
+This year has yielded some meta-graphing as well, of [clusters of Twine stories](http://datalexic.com/twine-story-clustering/):
+
+[![educational portion of dendograph](/files/choicemaps/clusters-partial-100.png)](https://i1.wp.com/datalexic.com/wp-content/uploads/2019/04/clusters_structure_mini.jpg?w=450)
+
+Unfortunately there are no graphs of the stories themselves, nor of the common graph elements that produced the clusters.  Hopefully more research will follow.
+
 ### References
 
-The Wayback Machine has been enormously helpful in this project (though it helps if you remember where websites used to be), as have Google Images, the Yahoo gamebooks list, Demian's site in general, and Demian's [file list with timestamps](https://gamebooks.org/contributions/).  (See also [Demian's partial list of structure diagrams in the database](https://gamebooks.org/Files)--scroll down.)  The Encyclopedia of Science Fiction has good articles on [gamebooks](http://www.sf-encyclopedia.com/entry/gamebook) and the [CYOA series](http://www.sf-encyclopedia.com/entry/choose_your_own_adventure).
+The Wayback Machine has been enormously helpful in this project (though it helps if you remember where websites used to be), as have Google Images, the Yahoo gamebooks list, Demian's site in general, and Demian's [file list with timestamps](https://gamebooks.org/contributions/).  (See also [Demian's partial list of structure diagrams in the database](https://gamebooks.org/Files)---scroll down.)  The Encyclopedia of Science Fiction has good articles on [gamebooks](http://www.sf-encyclopedia.com/entry/gamebook) and the [CYOA series](http://www.sf-encyclopedia.com/entry/choose_your_own_adventure).
 
 James Ryan is [threatening](https://mobile.twitter.com/xfoml/status/904045363316776960) to write a paper about *Consider the Consequences!*
-
-
-

@@ -12,3 +12,7 @@ Via the [aggregator](/aggregator):  [Mashable](http://mashable.com/2007/12/28/pr
 ### Update
 
 Protagonize still exists, but its focus is now "standard stories", not [addventure](https://en.wikipedia.org/wiki/Addventure).
+
+### Update #2
+
+The mundane version of Protagonize has [shut down](http://blog.protagonize.com/2017/05/04/the-end-of-the-road/).

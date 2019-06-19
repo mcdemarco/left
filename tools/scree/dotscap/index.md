@@ -1,7 +1,7 @@
 ---
 layout: page
 title: DotScap
-menu: tools
+menu: if
 image: "/tools/scree/dotscap/example.png"
 date: 2018-05-16 23:45:00
 ---
@@ -30,7 +30,7 @@ To add DotScap to [Twine 2](https://twinery.org/2/), use this URL (under Formats
 
 #### Twine 1
 
-To add DotScap to Twine 1, create a new folder called `dotscap` inside your targets folder, then download this file: [https://mcdemarco.net/tools/scree/dotscap/header.html](https://mcdemarco.net/tools/scree/dotscap/header.html) and place it inside the `dotscap` folder.  See the [Twine wiki](http://twinery.org/wiki/twine1:story_format#adding_formats) for more information about installing and using story formats in Twine 1.
+To add DotScap to Twine 1, create a new folder called `dotscap` inside your targets folder, then download [this file](https://mcdemarco.net/tools/scree/dotscap/header.html): `https://mcdemarco.net/tools/scree/dotscap/header.html` and place it inside the `dotscap` folder.  See the [Twine wiki](http://twinery.org/wiki/twine1:story_format#adding_formats) for more information about installing and using story formats in Twine 1.
 
 ### Use
 

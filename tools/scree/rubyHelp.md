@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Help with Ruby
-menu: tools
+menu: if
 date: 2018-07-01 12:40:00
 ---
 To use [Twee2](http://twee2.danq.me) (a command-line Ruby gem for compiling gamebooks from twee source), you may need to install Ruby 2.0 on your system.

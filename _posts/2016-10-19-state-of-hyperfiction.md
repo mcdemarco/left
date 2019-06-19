@@ -23,6 +23,8 @@ The biggest pitfall of interactive fiction is figuring out what exactly you're t
 
 ### Hyperfiction Software
 
+**For a more recent list, see [this page](/tools/hyperfic/software.html).**
+
 I got interested in the Twine/Twee ecosystem for writing gamebooks [a while back](/blog/2009/07/13/twine-and-twee/), and I started a few stories with it.  Some were just hyperfiction of the choose-your-own-adventure type, but my longest was a story about writing which took advantage of some basic gamebook scripting facilities available in Twine/Twee.  Even so, it was only a few thousand words intended as a demo.  (I've never attempted any true interactive fiction.)
 
 There is no easy way to write a long work of hyperfiction; if you like using a GUI (I don't and [I'm not alone](https://twinery.org/forum/discussion/7474/using-external-ide)), you could use Twine.  I used to write in Twee (the plain-text format underlying Twine) instead, but Twee files are flat, making it hard to visualize your plot.
@@ -70,3 +72,8 @@ The thesaurus has been updated with the addition of *cybertext* (although the or
 ### Update #3
 
 The thesaurus has been updated with the addition of *hyperstory*, some *gamebook* clarification, and *narrative games*.  The approaching demise of inklewriter has been noted; links to the Twine Q&A forum and Undum have been updated for bit-death, and gamebooks.org and Raconteur are now linked.
+
+### Update #4
+
+The [thesaurus](/tools/hyperfic/) and [software list](/tools/hyperfic/software.html) have been given their own, non-blog pages.
+

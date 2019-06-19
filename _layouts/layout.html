@@ -82,18 +82,15 @@
 </section>
 
   <section class="sidebar">
-    <a href="/">
+    <a href="/" class="avatar">
       <img src="/images/avatar.jpg" height="75" width="75" class="avatar" />
     </a>
-
-    <section class="name">
-      <a href="/">
-        <span id="lname">{{ site.short_name }}</span>
-      </a>
-    </section>
+    <a class="name" href="/">
+      <span id="lname">{{ site.short_name }}</span>
+    </a>
 
     <section class="sections">
-      <ul>
+      <ul id="mainMenu">
 	<li><a href="/bio/">bio</a>
 	{% if page.menu == 'bio' %}
 	<ul>
@@ -175,13 +172,20 @@
 	  <li><a href="/sffms/examples/" >examples</a></li>
 	  <li><a href="/sffms/sffms2rtf" >sffms2rtf</a></li>
 	  <li><a href="/sffms/sffms2txt" >sffms2txt</a></li>
-	  <li><a>---</a></li>
-	  <li><a href="/tools/scree/">scree</a></li>
-	  <li><a href="/tools/family-tree-generator/">trees</a></li>
+	</ul>
+	{% endif %}
+	{% if page.menu == 'if' %}
+	<ul>
+	  <li><a href="/tools/hyperfic/">hyperfic</a></li>
+		<li><a href="/tools/scree/dotgraph/">dotgraph</a></li>
+		<li><a href="/tools/scree/paloma/">paloma</a></li>
+		<li><a href="/tools/scree/">scree</a></li>
+	  <li><a href="/tools/hyperfic/twine/">twine</a></li>
 	</ul>
 	{% endif %}
 	{% if page.menu == 'tools' %}
 	<ul>
+	  <li><a href="/tools/hyperfic/">hyperfic</a></li>
 	  <li><a href="/sffms/">sffms</a></li>
 	  <li><a href="/tools/family-tree-generator/">trees</a></li>
 	  <li><a href="/tools/twine/">twine</a></li>
@@ -192,22 +196,16 @@
     </section>
 
     <section class="meta">
-    </section>     
-    <section class="meta">
       <a href="http://pinterest.com/mcdemarco/" title="Pinterest"><img src="/images/pinterest.png" /></a>
       <a href="https://twitter.com/{{ site.twitter }}" title="Twitter"><img src="/images/twitter.png" /></a>
-    </section>
-    <section class="meta">
       <a href="https://github.com/{{ site.github }}" title="GitHub"><img src="/images/github.png" /></a>
       <a href="https://bitbucket.org/mcdemarco/" title="BitBucket"><img src="/images/bitbucket.png" /></a>
-    </section>
-    <section class="meta">
       <a href="http://boardgamegeek.com/user/fiddly_bits" title="BoardGameGeek"><img src="/images/meeple.png" /></a>
       <a href="/atom.xml" title="RSS"><img src="/images/rss.png" /></a>
     </section>
 
     <section class="switch">
-      <a onclick="document.getElementById('iPhoneStyle').disabled = true;">View full site</a>
+      <a onclick="document.getElementById('mobileStyle').disabled = true;">View full site</a>
     </section>     
 
 

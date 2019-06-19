@@ -1,7 +1,7 @@
 ---
 layout: page
 title: PrePub
-menu: tools
+menu: if
 date: 2017-10-27 11:30:00
 ---
 PrePub is a Twine proofing format for converting simple stories to a flat (pandoc extended) Markdown file, useful for conversion to ePub format with Pandoc.
@@ -13,7 +13,7 @@ PrePub is available for Twine 1 as well as for Twine 2.
 
 To add PrePub to Twine 2, use this URL (under Formats > Add a New Format): `https://mcdemarco.net/tools/scree/prepub/format.js`.
 
-To add PrePub to Twine 1, create a new folder called `prepub` inside your targets folder, then download this file: [https://mcdemarco.net/tools/scree/prepub/header.html](https://mcdemarco.net/tools/scree/prepub/header.html) and place it inside the `prepub` folder.  (See the [Twine wiki](http://twinery.org/wiki/twine1:story_format#adding_formats) for more information about installing and using story formats in Twine 1.)
+To add PrePub to Twine 1, create a new folder called `prepub` inside your targets folder, then download [this file](https://mcdemarco.net/tools/scree/prepub/header.html): `https://mcdemarco.net/tools/scree/prepub/header.html` and place it inside the `prepub` folder.  (See the [Twine wiki](http://twinery.org/wiki/twine1:story_format#adding_formats) for more information about installing and using story formats in Twine 1.)
 
 ### Use
 
