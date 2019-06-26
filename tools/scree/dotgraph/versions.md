@@ -8,6 +8,8 @@ The current version of [DotGraph](/tools/scree/dotgraph/) is 2.1.0, which adds a
 
 #### Previous Versions
 
+* [Version 2.1.0](/tools/scree/dotgraph/2.1.0/): Added a text tracing option and support for configuration using the StorySettings passage.
+
 * [Version 2.0.6](/tools/scree/dotgraph/2.0.6/): Included display macro support for Harlowe and fixed a leaf counting issue.
 
 * [Version 2.0.5](/tools/scree/dotgraph/2.0.5/): Included an option to use last tag for tag colors/clusters, plus fixed a start node issue.

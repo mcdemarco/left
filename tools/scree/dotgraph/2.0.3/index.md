@@ -1,7 +1,7 @@
 ---
 layout: page
 title: DotGraph
-menu: tools
+menu: if
 date: 2017-10-31 11:15:00
 ---
 

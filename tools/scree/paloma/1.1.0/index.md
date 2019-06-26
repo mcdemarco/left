@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Paloma
-menu: tools
+menu: if
 date: 2016-11-10 11:18:00
 ---
 I've been using [Twine](http://twinery.org) 2, which does not have the Jonah story format from Twine 1.  I liked Jonah, so I created Paloma, which, like Jonah, displays a running log of all passages (sometimes called *stretchtext*).  However, Paloma is based on Snowman, so, unlike Jonah, it uses Markdown formatting and native (Javascript) scripting.

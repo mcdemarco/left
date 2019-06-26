@@ -34,3 +34,5 @@ Later they wrote their own software, Branch Manager:
 [![educational portion of official Bandersnatch choicemap in Branch Manager](/files/choicemaps/bandersnatch-prod3-partial-100.png)](https://images.immediate.co.uk/production/volatile/sites/3/2019/01/Black-Mirror-Screen-shot-9b3c0b8.jpg)
 [![educational portion of official Bandersnatch choicemap in Branch Manager with menus](/files/choicemaps/bandersnatch-prod4-partial-100.png)](https://pbs.twimg.com/media/DyOWRa0XQAAOBj3.jpg)
 [![educational portion of official Bandersnatch choicemap in Branch Manager, big screen](/files/choicemaps/bandersnatch-prod5-partial-100.png)](https://twitter.com/XR_Stories/status/1138166243972866055)
+
+There are a few more glimpses of the software in a couple of [making](https://www.youtube.com/watch?v=zBsh7Byu044) [of](https://www.youtube.com/watch?v=VNw9DAwp2Kk) videos on YouTube.

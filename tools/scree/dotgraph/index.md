@@ -12,9 +12,15 @@ DotGraph is a proofing format that uses a [JavaScript implementation](https://gi
 
 DotGraph works with Twine 1, [Twine 2](https://twinery.org/2/), Twee, [Twee2](https://dan-q.github.io/twee2/), and [TweeGo](http://www.motoslave.net/tweego/).  It can color nodes according to their length or their tags, mark interesting nodes (missing nodes, end nodes, and checkpoints), omit node names, cluster by tags, skip special and/or specially tagged passages, skip display links, and rotate or shrink the graph.  It also shows you some basic story statistics.
 
+### DotGraph as a Service
+
+Fill in the URL of a Twine story here to have DotGraph graph it:
+
+<input type="text" id="dgaas" size="50"/>&nbsp;<a href="" onclick="this.setAttribute('href', '/tools/scree/dotgraph/dgaas.html?' + document.getElementById('dgaas').value);">Graph It!</a>
+
 ### Versions
 
-The current version of DotGraph is 2.1.0,  which adds a text tracing option and support for configuration using the StorySettings passage.  Previous versions are archived [here](/tools/scree/dotgraph/versions.html).
+The current version of DotGraph is 2.1.0, which adds a text tracing option and support for configuration using the StorySettings passage.  Previous versions are archived [here](/tools/scree/dotgraph/versions.html).
 
 Each version of DotGraph comes in four forms, Twine 1 or Twine 2, and offline or online.  (Twine 2 is not fully backwards compatible with Twine 1; in particular their story formats always differ.)
 

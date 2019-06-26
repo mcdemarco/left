@@ -1,7 +1,7 @@
 ---
 layout: page
 title: PrePub 1.0.0
-menu: tools
+menu: if
 date: 2017-10-27 11:30:00
 ---
 This is an archive of PrePub version 1.0.0, which still had some bugs involving special passages and newlines in Twine 1.

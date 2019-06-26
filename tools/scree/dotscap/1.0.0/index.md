@@ -1,7 +1,7 @@
 ---
 layout: page
 title: DotScap 1.0.0
-menu: tools
+menu: if
 image: "/tools/scree/dotscap/1.0.0/example.png"
 date: 2018-05-16 23:45:00
 ---

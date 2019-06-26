@@ -2,7 +2,7 @@
 layout: page
 title: Enscree 1.0.1
 categories: writing
-menu: tools
+menu: if
 date: 2018-07-04 17:50:00
 ---
 This is an archived version of [Enscree](/tools/scree/enscree/).

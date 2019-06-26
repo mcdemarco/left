@@ -1,7 +1,7 @@
 ---
 layout: page
 title: DotGraph
-menu: tools
+menu: if
 date: 2016-11-06 14:45:00
 ---
 My Scrivener template for Twine 2 stories, [Scree](/tools/scree), doesn't give you a graphical layout of your story.  Neither Scrivener nor Twine 2 support auto-layout of your story nodes into a graph.  (Composing a story entirely in Twine gives you a manual layout of the story.)  But something does support auto-layout of a directed graph: [Graphviz](http://www.graphviz.org).  So I made a Twine 2 proofing format that uses a [JavaScript implementation](https://github.com/mdaines/viz.js/) of Graphviz to lay out your story nodes as a graph.  The current version also can color nodes according to their length or their tags, mark interesting nodes (missing nodes, end nodes, and checkpoints), omit node names, cluster by tags, and rotate or shrink the graph.

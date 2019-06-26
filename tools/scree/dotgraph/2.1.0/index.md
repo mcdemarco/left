@@ -2,6 +2,7 @@
 layout: page
 title: DotGraph
 menu: if
+image: "/files/choicemaps/dotgraph-partial.png"
 date: 2016-11-06 14:45:00
 ---
 
@@ -9,11 +10,11 @@ DotGraph is a proofing format that uses a [JavaScript implementation](https://gi
 
 ![small-graph](icon.svg)
 
-DotGraph works with Twine 1, [Twine 2](https://twinery.org/2/), Twee, or [Twee2](https://dan-q.github.io/twee2/).  It can color nodes according to their length or their tags, mark interesting nodes (missing nodes, end nodes, and checkpoints), omit node names, cluster by tags, skip special and/or specially tagged passages, skip display links, and rotate or shrink the graph.  It also shows you some basic story statistics.
+DotGraph works with Twine 1, [Twine 2](https://twinery.org/2/), Twee, [Twee2](https://dan-q.github.io/twee2/), and [TweeGo](http://www.motoslave.net/tweego/).  It can color nodes according to their length or their tags, mark interesting nodes (missing nodes, end nodes, and checkpoints), omit node names, cluster by tags, skip special and/or specially tagged passages, skip display links, and rotate or shrink the graph.  It also shows you some basic story statistics.
 
 ### Versions
 
-This is an archived version of DotGraph 2.0.5, which added an option to use last tag for tag colors/clusters, plus fixed a start node issue.  Previous versions are archived [here](/tools/scree/dotgraph/versions.html).
+This is an archive of DotGraph 2.1.0, which added a text tracing option and support for configuration using the StorySettings passage.  Previous versions are archived [here](/tools/scree/dotgraph/versions.html).
 
 Each version of DotGraph comes in four forms, Twine 1 or Twine 2, and offline or online.  (Twine 2 is not fully backwards compatible with Twine 1; in particular their story formats always differ.)
 
@@ -29,7 +30,7 @@ To add DotGraph to the installable local versions of Twine 2, follow the install
 
 #### Twine 1
 
-To add DotGraph to Twine 1, create a new folder called `dotgraph` inside your targets folder, then download this file: [https://mcdemarco.net/tools/scree/dotgraph/header.html](https://mcdemarco.net/tools/scree/dotgraph/header.html) and place it inside the `dotgraph` folder.  For offline use, download and use [https://mcdemarco.net/tools/scree/dotgraph/offline/header.html](https://mcdemarco.net/tools/scree/dotgraph/offline/header.html) instead.
+To add DotGraph to Twine 1, create a new folder called `dotgraph` inside your targets folder, then download [this file](https://mcdemarco.net/tools/scree/dotgraph/header.html): `https://mcdemarco.net/tools/scree/dotgraph/header.html` and place it inside the `dotgraph` folder.  For offline use, download and use [this file](https://mcdemarco.net/tools/scree/dotgraph/offline/header.html) instead: `https://mcdemarco.net/tools/scree/dotgraph/offline/header.html`
 
 See the [Twine wiki](http://twinery.org/wiki/twine1:story_format#adding_formats) for more information about installing and using story formats in Twine 1.
 
@@ -60,7 +61,21 @@ As a story format, DotGraph outputs an HTML file that contains the DotGraph cont
 (The dot source is not pictured in the screenshot.)
 
 As you change the settings (for tag color, graph direction, etc.), the graph and source code will be re-rendered live.  You can save the image (SVG) and/or the source file.
-You can also edit the dot source manually and re-render the altered graph.  
+You can also edit the dot source manually and re-render the altered graph.
+
+Instead of adjusting settings in the UI, you can pass in your desired settings (including some settings not available in the UI) using the StorySettings special passage.  They should be in the following (JSON) format:
+
+    dotgraph:{"color":"length","scale":true,"ends":true,"trace":"Mars"}  
+
+You only need pass in your desired changes; here's the full set of settings for reference (except the tag palette has been shortened for clarity):
+
+    dotgraph:{"checkpoint":true,"checkpointTag":"checkpoint","cluster":false,
+		"color":"length","countWords":true,"display":true,"ends":true,"endTag":"End",
+		"lastTag":false,"omitSpecialPassages":true,"omitTags":[],"renumber":false,
+		"rotation":"TB","scale":true,"showNodeNames":false,"trace":"",
+		"palette":["#FEAF16","#2ED9FF","#DEA0FD","#FE00FA","#F7E1A0","#16FF32"]}
+
+Though the configuration is displayed here on multiple lines, you should put it all on one line in your StorySettings file.
 
 ### Examples
 
