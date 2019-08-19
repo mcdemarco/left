@@ -43,3 +43,7 @@ Chartgeek [reposted](https://www.chartgeek.com/bandersnatch-choices/) a January 
 [![educational portion of Bandersnatch choicemap by Adam Smith](/files/choicemaps/minorbandersnatch13-partial-100.png)](https://www.chartgeek.com/wp-content/uploads/2019/01/bandersnatch-complete.jpg)
 
 Other maps I've spotted out there include a simple black-and-white, single path map [by annabel (@QUERTYFINGER) on Twitter](https://twitter.com/qwertyflnger/status/1078607639632887808) (December 28th), and a boxy blue map [by myanklesaresprained on imgur](https://imgur.com/gallery/zfVZtjz) (also December 28th).
+
+### Update
+
+There is now [A Cosmic Epilogue](/blog/2019/08/19/cosmic-epilogue/).

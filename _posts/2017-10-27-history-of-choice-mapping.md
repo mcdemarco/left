@@ -28,6 +28,7 @@ This year also saw the publication of [*Lucky Les*](https://gamebooks.org/Item/1
 
 This year marks the composition of *Sugarcane Island* by [Edward Packard](http://www.edwardpackard.com/cyoa.php), and the publication of not one but two interactive novels for adults coauthored by Dennis Guerrier: *State of Emergency* and *Sleep and the City Trembles*.   John Sladek's ["Alien Territory"](https://gamebooks.org/Item/1709) was published in *New Worlds* magazine [issue #195](http://www.philsp.com/data/images/n/new_worlds_196911_n195.jpg); it was a strange interactive short story of 36 paragraphs which was itself little more than a choicemap.  "Alien Territory" is currently available in (and perhaps *on*) [*Maps: The Uncollected John Sladek*](http://ansible.uk/books/maps.html).
 
+[![educational portion of cover of John Sladek book](/files/choicemaps/sladek-partial-100.png)](https://www.amazon.com/Maps-Uncollected-John-Sladek/dp/1592242022/ref=as_li_ss_il?_encoding=UTF8&qid=&sr=&linkCode=li2&tag=mcdema-20&linkId=24f328128b5a25d7e8478b84fa62ffd9) 
 <a href="https://www.amazon.com/Maps-Uncollected-John-Sladek/dp/1592242022/ref=as_li_ss_il?_encoding=UTF8&qid=&sr=&linkCode=li2&tag=mcdema-20&linkId=24f328128b5a25d7e8478b84fa62ffd9" target="_blank"><img border="0" src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=1592242022&Format=_SL160_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=mcdema-20" ></a><img src="https://ir-na.amazon-adsystem.com/e/ir?t=mcdema-20&l=li2&o=1&a=1592242022" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
 
 ### (1970's)
@@ -148,7 +149,17 @@ Even in 2016, automatic layout was still rare in hyperfiction software, and to m
 
 [![educational portion of sample DotGraph map](/files/choicemaps/dotgraph-partial-100.png)](/tools/scree/dotgraph/example.svg)
 
-### 2019 (Update)
+### 2018--2019 (Update)
+
+Bandersnatch premiered in December, chock full of its own choicemaps, and inspired an immediate outpouring of viewer choicemaps and much subsequent analysis, including my four-part blog series about the maps.
+
+[![educational portion of Bandersnatch screenshot (Stefan)](/files/choicemaps/metabandersnatch-stefan1-100.png)](https://imgur.com/a/zhYV3o0)
+[![educational portion of Bandersnatch flowchart by truthcrab](/files/choicemaps/bandersnatch2-partial-100.png)](https://i.redd.it/po5dwadpfg921.png)
+ 
+In [A Cosmic Flowchart](/blog/2019/06/17/cosmic-flowchart/) (Part I), I covered the fictional, meta-choicemaps shown in [Bandersnatch](https://www.netflix.com/title/80988062).  In [Part II](/blog/2019/06/18/cosmic-flowchart-2/), I covered some of the earlier and more popular actual maps of the show as played (and frequently mapped) by the viewers.  In [Part III](/blog/2019/06/19/cosmic-flowchart-3/), I surveyed the later and less noted maps of the show, in roughly chronological order.  Lastly, in [A Cosmic Epilogue](/blog/2019/08/19/cosmic-epilogue/), I tacked on the map to end all maps.
+
+[![educational portion of Bandersnatch choicemap by KubriicksCube](/files/choicemaps/minorbandersnatch9-partial-100.png)](https://pbs.twimg.com/media/DvkjosSVAAABnYt.jpg)
+[![educational portion of Bandersnatch choicemap by Vladimir Panteleev](/files/choicemaps/megabandersnatch1-partial-100.png)](https://thecybershadow.net/misc/bandersnatch/graph.dot.svg)
 
 Joe Depeau at [Neo4J](https://neo4j.com/) was inspired by [Bandersnatch](https://www.netflix.com/gb/title/80988062) to use his company's [graph database](https://en.wikipedia.org/wiki/Graph_database) to [map out](https://neo4j.com/blog/vampire-express-graph-database-choose-your-own-adventure/) Choose Your Own Adventure #31, *Vampire Express* by Tony Koltz (1984):
 
@@ -158,9 +169,15 @@ He goes on to use the database to look for easter eggs (there were none) and to 
 
 This year has yielded some meta-graphing as well, of [clusters of Twine stories](http://datalexic.com/twine-story-clustering/):
 
-[![educational portion of dendograph](/files/choicemaps/clusters-partial-100.png)](https://i1.wp.com/datalexic.com/wp-content/uploads/2019/04/clusters_structure_mini.jpg?w=450)
+[![educational portion of dendograph](/files/choicemaps/clusters-partial-100.png)](https://i1.wp.com/datalexic.com/wp-content/uploads/2019/04/clusters_structure_mini.jpg)
 
 Unfortunately there are no graphs of the stories themselves, nor of the common graph elements that produced the clusters.  Hopefully more research will follow.
+
+In [his August review](https://heterogenoustasks.wordpress.com/2019/08/08/house-of-danger-cyoa-book-to-tabletop-game/) of the recent [boardgame version](https://www.boardgamegeek.com/boardgame/251420/choose-your-own-adventure-house-danger) of the CYOA classic *House of Danger*, Sam Kabo Ashwell mapped the game, marking its unique clue card sub-paths as round nodes and its optional challenges as yellow triangles:
+
+[![educational portion of House of Danger map by Sam Ashwell](/files/choicemaps/danger-partial-100.png)](https://heterogenoustasks.files.wordpress.com/2019/08/houseofdanger.png)
+
+I've run a few House of Danger games; I agree with his conclusiong that the game is a gamebook (rather than a classic CYOA) masquerading as a boardgame.  His analysis of the market for board-gamebooks implies there are many more boardgame choicemaps to come.
 
 ### References
 

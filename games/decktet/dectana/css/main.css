@@ -1,0 +1,213 @@
+﻿/* Styles for Magnate Roller by M. C. DeMarco.
+   Background pattern from subtlepatterns.com */
+
+/* basics */
+
+* {
+    box-sizing:border-box;
+}
+
+/* layout */
+
+html, body {
+    box-sizing:border-box;
+    margin:0;
+    height:100%;
+    width:100%;
+}
+
+body {
+    height: 100vh;
+}
+
+/* font and color */
+
+@font-face {
+    font-family: "Fortune Letters";
+    src: url(../css/fortune-letters.ttf) format("truetype");
+}
+
+body {
+    background-image: url('../css/skulls.png');
+    font-family: 'Segoe UI', 'Century Gothic', 'Lucida Grande', Tahoma, 'Gill Sans', sans-serif;
+    color: #1F130A;
+}
+
+div.wrapper, div.rules {
+    background-color: rgba(183,138,106,0.75); /*195,134,82,0.75);*/
+    padding: 3%;
+    margin: 1% 10%;
+    height:auto;
+    border-radius:10px;
+}
+div.wrapper {
+    font-size: large;
+    text-align:center;
+}
+div.wrapper p {
+    font-size: medium;
+}
+
+h1, h2, h3, h4, h5, h6, th, strong, label {
+    font-family: 'Fortune Letters', Futura, Geneva, sans-serif;
+}
+
+h1, h2, h3 {
+    text-align:center;
+}
+
+h1 {
+    color: #DFC7B6;
+}
+
+h2, h3 {
+    padding-top: 0;
+}
+
+button {
+    font-family: 'Fortune Letters', Futura, Geneva, sans-serif;
+    font-size: small;
+    padding: 3px 2px;
+    font-weight:bold;
+}
+
+button.mainButton {
+    margin: 5px;
+    padding: 4px 6px;
+    font-size: medium;
+    border-radius: 6px;
+    background-color: white;
+    font-weight:normal;
+}
+
+span.bigger {
+    font-size: x-large;
+    font-weight:bold;
+}
+
+span.smaller {
+    font-size: 18px;
+    color: #301E11;
+}
+
+span.bad, span.smaller.bad {
+    color: #9F0915;
+}
+
+span.bigger, span.smaller {
+    background-color: rgba(240,204,172,0.75);
+    border-radius: 3px;
+}
+
+span.bigger {
+    margin: 4px;
+    padding: 4px 8px;
+    border: 2px solid #301E11;
+}
+
+span.smaller {
+    margin: 4px;
+    padding: 4px 8px;
+    border: 1px solid #301E11;
+}
+
+span.smaller.bad {
+    border: 1px solid #9F0915;
+}
+
+a, a:visited, a:hover {
+    color: #3F1C03;
+}
+
+div.footer {
+    text-align:center;
+}
+div.footer:last-child {
+    padding-bottom:1em;
+}
+
+img, img.suited {
+    height:30px;
+}
+img.suited {
+    vertical-align:bottom;
+    background-color: white;
+    border: 1px solid white;
+    border-radius: 50%;
+}
+
+div.footer cite {
+    display:block;
+    font-size:smaller;
+}
+
+ul, ol {
+    line-height:1.5;
+}
+
+p.detail {
+    font-size: smaller;
+    line-height:1;
+}
+
+table td {
+    font-size: smaller;
+    border: 3px solid rgba(183,138,106,0.75);
+    border-radius: 5px;
+    background-color: rgba(183,138,106,0.75);
+}
+
+.suns td {
+    background-color: #FF8000;
+    border-color: #FF8000;
+}
+.leaves td { 
+    background-color: #9C6630; 
+    border-color: #9C6630; 
+}
+.waves td { 
+    background-color: #66CCFF;
+    border-color: #66CCFF;
+}
+.moons td {
+    background-color: #a0a0a0;
+    border-color: #a0a0a0;
+}
+.wyrms td {
+    background-color: lightgreen;
+    border-color: lightgreen;
+}
+.knots td {
+    background-color: #FFFF66;
+    border-color: #FFFF66;
+}
+
+td.nowrap {
+    white-space:nowrap;
+    vertical-align:middle;
+}
+
+td.backdrop {
+    width:50px;
+    padding:0 5px 0 5px;
+    background-color:#FCF7F5; 
+}
+td.backdrop img {
+    vertical-align: middle;
+}
+
+/* mobile */
+
+body {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+p, input, textarea {
+ -webkit-user-select: text;
+ -moz-user-select: text;
+ -ms-user-select: text;
+ user-select: text;
+}
+

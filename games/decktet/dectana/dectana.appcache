@@ -1,0 +1,32 @@
+CACHE MANIFEST
+# v0.0.1 # 2018-10-25
+# index.html is the file that calls this manifest.
+
+CACHE:
+css/card_to_hand.svg
+css/deck.svg
+css/deck_to_wasteland.svg
+css/draw_and_trash.svg
+css/flat_right.png
+css/flat_right_move.png
+css/flat_trash_right.png
+css/fortune-letters.ttf
+css/grow_upright.png
+css/hand_to_territory.svg
+css/knots.png
+css/leaves.png
+css/main.css
+css/moons.png
+css/move_to_wasteland.svg
+css/plus_upright_1.png
+css/push_enemy.png
+css/shrink_enemy.png
+css/skulls.png
+css/suns.png
+css/trash_card.svg
+css/upright_right.png
+css/upright_1.png
+css/waves.png
+css/wyrms.png
+js/vue.js
+

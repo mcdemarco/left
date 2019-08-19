@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html manifest="dectana.appcache">
+	<head>
+		<title>Dectana Deciphered</title>
+		<meta name="mobile-web-app-capable" content="yes"/>
+		<!-- development version, includes helpful console warnings -->
+		<meta name="apple-mobile-web-app-capable" content="yes"/>
+		<meta name="apple-mobile-web-app-title" content="Magnate Roller"/>
+		<meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui"/>
+		<link rel="stylesheet" href="css/main.css"/>
+		
+		<script src="js/vue.js"></script>
+	</head>
+	<body>
+		<h1>Dectana Deciphered</h1>
+		<div id="app">
+			<div class="wrapper">
+				<table>
+					<tr>
+						<th></th>
+						<th colspan="2">Pyramid power</th>
+						<th>Suit</th>
+						<th></th>
+						<th colspan="2">Card power</th>
+					</tr>
+					<tr v-for="(suit, index) in suits" :class="suit">
+						<td><img :src="'css/' + summaries[index].pyramid[1] + '_right.png'" /></td>
+						<td>{{summaries[index].pyramid[0]}}</td>
+						<td class="backdrop"><img :src="'css/' + summaries[index].pyramid[2]" /></td>
+						<td><img class="suited" :src="'css/' + suit + '.png'" /></td>
+						<td class="backdrop"><img :src="'css/' + summaries[index].card[2]" /></td>
+						<td>{{summaries[index].card[0]}}</td>
+						<td><img :src="'css/' + summaries[index].card[1] + '_right.png'" /></td>
+					</tr>
+				</table>
+				<p>Unless specified otherwise (<em>e.g.,</em> the upright cases), your pyramid must be pointing directly at an adjacent pyramid or space to affect it.</p>
+			</div>
+			<div class="footer">
+				<p>
+					<input type="checkbox" id="setupCheckbox" v-model="setup">
+					<label for="setupCheckbox">Show setup info</label>
+					&nbsp; &nbsp; &nbsp;
+					<input type="checkbox" id="termCheckbox" v-model="terminology">
+					<label for="termCheckbox">Explain terminology</label>
+				</p>
+			</div>
+			<div class="rules">
+				<div v-if="setup">
+					<h3>Setup</h3>
+					<p>Dectana is a game for 2&ndash;5 players; it requires a double Decktet (with or without the extended deck cards), plus one color of Looney Pyramids per player (specifically, 3 small, 3 medium and 3 large pyramids in that color; if substituting some other object for them, note that pyramids have one, two, or three pips on them, are pointy, and can be stood upright).</p>
+					<p>To begin, shuffle the double deck and lay out 9 cards in a square, 3x3 pattern, alternating orientation horizontally and vertically.  Deal three cards to each player.  Choose a start player.</p>
+					<p>Scores are determined by adding up the value of all cards occupied solely by the player; the highest score wins.  (The tiebreaker is number of pyramids on the board.)</p>
+				</div>
+				<div v-if="terminology">
+					<h3>Terms</h3>
+					<p>A <b>space</b> is any place on the board where cards and pyramids may be placed. Spaces are adjacent if they share an orthogonal side with each other. Spaces are never adjacent diagonally.</p>
+					<p>A <b>territory</b> is a space that contains at least one card. If there are multiple cards there, only the top card is considered. If the top card is removed, then the topmost remaining card is considered instead.  As a rule, you cannot do anything to a territory's card if there are any pyramids on it.</p>
+					<p>A <b>wasteland</b> space is a space that is not a territory, but is adjacent to one.</p>
+					<p>The <b>void</b> is any space beyond the wasteland, a space that is adjacent only to wasteland spaces. Pyramids and cards cannot be played here, and any pyramid in the void is immediately destroyed.</p>
+					<p>When a pyramid is <b>destroyed</b>, it is returned to the player for reuse.</p>
+					<p>A piece on the board may point in any of the four cardinal directions or point straight up. To <b>orient</b> a piece is to change its direction to any of the five legal directions.</p>
+					<p>A <b>flat</b> pyramid lies on its side. It can point in any of the four cardinal directions. It is pointing at the nearest adjacent space in that direction, whether wasteland or territory. It never points at a space two or more steps away.</p>
+					<p>An <b>upright</b> pyramid stands on its base. It is pointing at nothing in particular.</p>
+					<p><b>Crowns</b> allow you to use their suit three time.</p>
+					<p>Ranked cards are worth their rank, Aces are worth 1, and all other cards (Crowns, Pawns, and Courts) are worth zero, while Excuses are worth an even lower value of zero.</p>
+				</div>
+				<div id="details">
+					<h2>Actions</h2>
+					<ol>
+						<li>Apply one suit of a card on the board to one of your pyramids on that card.</li>
+						<li>Apply one suit of a card from your hand (and discard it) to any of your pyramids on the board.</li>
+						<li>Reorient any number of your pyramids.</li>
+						<li>If you have no pyramids on the board, place one small pyramid on any territory or wasteland space.</li>
+						<li>Discard your entire hand, then draw that many cards plus one.</li>
+					</ol>
+					<p>After your action, discard down to the hand limit (6 cards).</p>
+					<p>The game ends at <b>any</b> time after the deck has been run through (and discards shuffled), when a player discards three Aces from their hand.</p>
+				</div>
+
+			</div>
+
+			<div class="footer">
+				<h2>Credits</h2>
+				<cite>The <a href="http://www.decktet.com">Decktet</a> is the creation of P.D. Magnus.  <a href="http://www.looneylabs.com/looney-pyramids">Looney Pyramids</a> are the creation of Andrew Looney.</cite>
+				<cite><a href="https://boardgamegeek.com/boardgame/60015/dectana">Dectana</a> is a 2&ndash;5 player Decktet game by Ryan Hackel; full rules are available at <a href="http://ceruleansgames.tripod.com/dectana.htm">his site</a>.</cite>
+				<cite>Dectana is a direct descendant of John Cooper's classic Icehouse game, <a href="https://boardgamegeek.com/boardgame/10996/zarcana">Zarcana</a>,<br/> and of Zarcana's reimplementation as <a href="https://boardgamegeek.com/boardgame/9629/gnostica">Gnostica</a> by John Cooper, Jacob Davenport, Kory Heath, and Kristin Matherly.</cite>
+				<cite>This rules cheatsheet is by M. C. DeMarco; you may be interested in my other <a href="http://mcdemarco.net/games/decktet/">Decktet doohickies</a>.</cite>
+				<cite>The suit images shown here are from cards released under a Creative Commons License by P.D. Magnus.</cite>
+				<cite>The background texture is "Skulls" by Adam, from <a href="http://subtlepatterns.com/skulls/">Subtle Patterns</a>.</cite>
+			</div>
+		</div>
+
+		<script>
+
+		 var app = new Vue({
+			 el: '#app',
+			 data: {
+				 message: 'Hello Vue!',
+				 detail: {},
+				 setup: false,
+				 suits: ['suns','leaves','waves','moons','wyrms','knots'],
+				 summaries: [
+					 {
+						 pyramid: ["Create small pyramid where you have an upright pyramid","upright","plus_upright_1.png"],
+						 card: ["Create new territory in wasteland from top of deck","flat","deck_to_wasteland.svg"]
+					 },
+					 {
+						 pyramid: ["Grow upright pyramid exactly one size larger","upright","grow_upright.png"],
+						 card: ["Improve empty territory using higher value card from hand","flat","hand_to_territory.svg"]
+					 },
+					 {
+						 pyramid: ["Move a flat pyramid, up to pip count","flat","flat_right_move.png"],
+						 card: ["Move empty territory in pointed direction to nearest wasteland","flat","move_to_wasteland.svg"]
+					 },
+					 {
+						 pyramid: ["Push rival pyramids, up to pip count","flat","push_enemy.png"],
+						 card: ["Take empty territory into hand","flat","card_to_hand.svg"]
+					 },
+					 {
+						 pyramid: ["Shrink rival pyramids, up to pip count","flat","shrink_enemy.png"],
+						 card: ["Destroy top card in empty territory","flat","trash_card.svg"]
+					 },
+					 {
+						 pyramid: ["Draw cards equal to upright pyramid's pip count","upright","deck.svg"],
+						 card: ["Draw cards equal to territory value, then sacrifice pyramid and territory","flat_trash","draw_and_trash.svg"]
+					 }
+				 ],
+				 terminology: false
+			 }
+		 })
+		</script>
+	</body>
+</html>

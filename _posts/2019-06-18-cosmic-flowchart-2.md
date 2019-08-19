@@ -36,3 +36,8 @@ Later they wrote their own software, Branch Manager:
 [![educational portion of official Bandersnatch choicemap in Branch Manager, big screen](/files/choicemaps/bandersnatch-prod5-partial-100.png)](https://twitter.com/XR_Stories/status/1138166243972866055)
 
 There are a few more glimpses of the software in a couple of [making](https://www.youtube.com/watch?v=zBsh7Byu044) [of](https://www.youtube.com/watch?v=VNw9DAwp2Kk) videos on YouTube.
+
+
+### Update
+
+Besides [Part III](/blog/2019/06/19/cosmic-flowchart-3/), there is also [A Cosmic Epilogue](/blog/2019/08/19/cosmic-epilogue/).
