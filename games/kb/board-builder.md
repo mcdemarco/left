@@ -10,4 +10,6 @@ You can read more about this random Kingdom Builder-style board generator in [th
 
 (Pop out [the board image](/files/svg/kbb-hexagons.svg).)
 
-Browser restrictions prevent automatic saving of your board, but you can do it manually from a desktop PC by copying the DOM: in Chrome or Safari, right click on any hex, choose Inspect Element, scroll up to the svg element in the code, right click on that, choose Copy as HTML, paste it into a text editor, and save it with the svg extension. This will leave you with an svg image of your last map that you can open in a browser and edit. Any subsequent changes can be saved the same way. 
+Browser restrictions prevent automatic saving of your board state as SVG, but you can print it or save it as PDF in modern browsers.
+
+To save it as SVG, you'll need to copy the DOM manually from a desktop PC: in Chrome or Safari, right click on any hex, choose Inspect Element, scroll up to the svg element in the code, right click on that, choose Copy as HTML, paste it into a text editor, and save it with the svg extension. This will leave you with an svg image of your last map that you can open in a browser and edit. Any subsequent changes can be saved the same way. 

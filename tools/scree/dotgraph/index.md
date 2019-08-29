@@ -18,6 +18,8 @@ Fill in the URL of a Twine story here to have DotGraph graph it:
 
 <input type="text" id="dgaas" size="50"/>&nbsp;<a href="" onclick="this.setAttribute('href', '/tools/scree/dotgraph/dgaas.html?' + document.getElementById('dgaas').value);">Graph It!</a>
 
+(This service uses a beta version of DotGraph 2.2.0.  It can follow philome.la and some itch.io links without pressing the PLAY button or popping out of the iframe, respectively.)
+
 ### Versions
 
 The current version of DotGraph is 2.1.0, which adds a text tracing option and support for configuration using the StorySettings passage.  Previous versions are archived [here](/tools/scree/dotgraph/versions.html).
