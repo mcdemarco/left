@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Hyperfictionary
-tags: hyperfiction technology tools twine micro
+tags: hyperfiction technology tools Twine micro
 created: 2019-06-06 17:30:00
 class: short
 ---

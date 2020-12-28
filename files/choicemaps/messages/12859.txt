@@ -1,0 +1,262 @@
+From DummyAddressAndDate Thu Sep 16 11:42:17 2010
+X-Yahoo-Msgnum: 12859
+Return-Path: <angantyr@gmail.com>
+X-Sender: angantyr@gmail.com
+X-Apparently-To: gamebooks@yahoogroups.com
+X-Received: (qmail 24775 invoked by uid 102); 8 Nov 2017 22:31:47 -0000
+X-Received: from unknown (HELO mtaq4.grp.bf1.yahoo.com) (10.193.84.143)
+  by m11.grp.bf1.yahoo.com with SMTP; 8 Nov 2017 22:31:47 -0000
+X-Received: (qmail 8628 invoked from network); 8 Nov 2017 22:31:47 -0000
+X-Received: from unknown (HELO mta1004.groups.mail.bf1.yahoo.com) (98.139.245.163)
+  by mtaq4.grp.bf1.yahoo.com with SMTP; 8 Nov 2017 22:31:47 -0000
+X-Original-Return-Path: <angantyr@gmail.com>
+X-Received-SPF: pass (domain of gmail.com designates 209.85.217.180 as permitted sender)
+X-YMailISG: GGnHy4kWLDtoOH2d_.guo3voNPKk69Ivl5izFtC4e9wW2ZlP
+ O9lOaZrWU0SGjUxbmsp_Oq3X.Yd_7jGJP1rd7uvhdfCuVXv4ouOcsnJmvf0e
+ 93xtNuHScQu0GlkDor1d2oDwUdzCgm2TVFB0F2GM54bQnQT9d9FP74rOgvcH
+ St..CbcI4v1AXmHRVTTP4f3DmlZ2PpzzIP97Hxex.GvjYYRh0hsdTtzse6pf
+ .Kmanx8s3QB9rXMK0AxVNjdMAf3iOeMWz5unqyg9fJuCADjG3kwjyqUzCdxk
+ imviuWzYwEjq4CH8AMwbU7tUSCEWXkJAY6X9tm15rjI.7UR2twYa5tMr1Sp3
+ g5IR.HF3pJtKSISLk6Qhf4JgvBWs.yMTASBZXMCtV0Lls1eUME0b5NbXv9T3
+ mkfVyaijAf.DzrDbSciUxLThPfvVv9KweXMbeIcj2KYqnvYC00YL6gPW_ded
+ 4p9AvChykbDOIsVINp.45zdR4A_em4DfmbbLqYuLUucXRiOjgfnQvzT5zetG
+ o6qO9l4pFl.dAHl86joT23bMO44XRfVky3K6vn3g6MdOFrG.9RLZes8O5uVx
+ D_yGv_WrIV4xr5wLh4LplWR9ye3Nsk.HGkCeMyzr9KKvuwgbV9d2dtOQkfhJ
+ drl_C2rwgTNHZBlRj4SjjPuw6ESwlkx7K_CtKqOSi.CA66V8oUEiGAytd6l5
+ hnRaTCSsbSUCn0ze6DEKs4YlSuEoGJNLc0oYfZbvme0tSTYEfG3dbHGOMToi
+ NfWa8fQycoTNyqGfpbhpe7K9a82PMbDTNG2vSywTHIssYLfHFXCgWRESC7Fy
+ mFSPpY8YX5HzZ9pzgvcbEBz4dr.mB.n7X.EB03VtCTPctjr1eUekj4irSOWv
+ Q42POxHguk01xjs2F0AinLjF7chxUmgMlV02tntTOYx9BZKDD7S7XMGdFpLz
+ Jur4zcVtobbzKEgnQ9e3QDBKbi0Oz.X5CwyRZHl_qM3Pkkp4IBOBj2FLv7zF
+ jy5nqslGXMmzcYelq8dUlo7fbbPwFnngluFAslyMWovX83F2iMhLHzrHlN7h
+ _VHVnKXdymRf8w2.Y6hDUhdgNHTl0Wv0I7D.u4_8zFhl6qVpSk1aGBZtzZeT
+ 9AkI81CjYUQGSjHntVAPPGhx97x87j7q22ufL5mqMyp4G7_RYrJg1oN37uj.
+ UzlMfI_pjenvQsnP2CBgOo2eL0f7NOxoqxTqSIvAkNVlqjzqrZO58Mgzw3h0
+ GaVScWTJ9AoPnfd1n2ZA5Somexuqjj4taoSXRGrxMtTUiWrRkD3JxNTND.Q7
+ ogs7kZ7tp8act4Vgnc7iqkOw5J86ozPL4KQ-
+Authentication-Results: mta1004.groups.mail.bf1.yahoo.com  from=gmail.com; domainkeys=neutral (no sig);  from=gmail.com; dkim=pass (ok)
+X-Received: from 127.0.0.1  (EHLO mail-ua0-f180.google.com) (209.85.217.180)
+  by mta1004.groups.mail.bf1.yahoo.com with SMTPS; Wed, 08 Nov 2017 22:31:46 +0000
+X-Received: by mail-ua0-f180.google.com with SMTP id b11so3071390uae.12
+        for <GAMEBOOKS@yahoogroups.com>; Wed, 08 Nov 2017 14:31:46 -0800 (PST)
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:mime-version:in-reply-to:references:from:date
+         :message-id:subject:to;
+        bh=4/SWy2gbXPZU2gfqWe97RrlRJGE6BJbLhiIdoWEiWIw=;
+        b=LBR3fi3j4j38I7d8n+nW2DZZrakn10lOZC9nOrnhN3F3OYtOR7eUC0DSEdg0W6lKaR
+         XvbbWq0qU4GiF4nqooC6jtehG7fAt6HZZGjmSGS0amQLIA4xj5pqsBSDZkC8S+v0wIPT
+         0lErDlPH0Q9xt0JGZPBr64QomLIlPLx1Wzw7p9ci9EvxpIXgoy2HuFhW097tTRiji0a5
+         6ayrINb2+D6QUfLXKAhyfinG1B9VLY4mGDkJEcN1pSNwH/Yy3PG/13mm1MtFM6Jknmg2
+         ji3FOXFdRxg2EMIFmp5N1enfNGGX9dPnslcwmIQkz2+F75djs9Ywsbrdd8hYrpCqrmLe
+         XbOA==
+X-Gm-Message-State: AJaThX4+asUuuG84UZRSzkARgFwEGbE3+78UnDDD4K6qgtg0gfKbYIsa
+	azB3Qpa5IuAT46V5lj6vfwpejKfgX2igoFG2grr8Cw==
+X-Google-Smtp-Source: ABhQp+Q3+8FoYRo7LB4zY4KmNGvgQbGRWU0vR1g5FR6vR6VTp3ubHrCpbSWEJVi6KFyNTuLIK2rgdUYW9oSsvVf1oXM=
+X-Received: by 10.176.92.74 with SMTP id a10mr1779285uag.165.1510180305927;
+ Wed, 08 Nov 2017 14:31:45 -0800 (PST)
+MIME-Version: 1.0
+X-Received: by 10.31.164.200 with HTTP; Wed, 8 Nov 2017 14:31:45 -0800 (PST)
+In-Reply-To: <CAL0P696qORUWkkTnRo-eJ845XV5VQNjsXj=iYnLF4u3TVV+m9w@mail.gmail.com>
+References: <otvnvg+7v9re5@YahooGroups.com> <CAL0P696qORUWkkTnRo-eJ845XV5VQNjsXj=iYnLF4u3TVV+m9w@mail.gmail.com>
+Date: Wed, 8 Nov 2017 23:31:45 +0100
+Message-ID: <CAL0P697QGy1dM12sMKzJV3SXrTHEV8TjX4b1Hi1mFio=0P7FOQ@mail.gmail.com>
+To: GAMEBOOKS@yahoogroups.com
+Content-Type: multipart/alternative; boundary="f403043ef164ae8369055d8040ba"
+Subject: Re: [GAMEBOOKS] A History of Choice Mapping
+X-Yahoo-Group-Post: member; u=260098087; y=0CEdbyRjggHJJty7Z9jsNM3mGyy2AYESU62aAAX32A6ymA
+X-Yahoo-Profile: fire4h8
+From: Thomas Wolmer <angantyr@gmail.com>
+
+
+--f403043ef164ae8369055d8040ba
+Content-Type: text/plain; charset="UTF-8"
+
+Hm, yahoogroups ate my non-text attachments, didn't it? Well, here they are
+again:
+
+http://angantyr.no-ip.org/~angantyr/kaos/gengraph.pl
+http://angantyr.no-ip.org/~angantyr/kaos/gengraphinstructions.txt
+http://angantyr.no-ip.org/~angantyr/kaos/01gstw.svgz
+
+And I think I figured out what was wrong with that SVG file. Now at least
+Chrome opens it too.
+
+/ Thomas
+
+2017-11-08 22:51 GMT+01:00 Thomas Wolmer <angantyr@gmail.com>:
+
+> As I was involved when Project Aon started generating such choice maps
+> from the Lone Wolf and Grey Star books, I can contribute a tiny bit...
+>
+> January 22, 2001, in a discussion about all the misplaced paragraph links
+> in Grey Star the Wizard, I asked on our mailing list if no-one had
+> generated graphic representations of the books from our electronic versions
+> of the Lone Wolf books. The following day another Project Aon contributor
+> had located the Graphviz software and written the first embryo of a (Unix
+> shell) script that extracted information from the HTML pages of book and
+> fed it to the 'dot' program in the Graphviz suite. The first choice maps we
+> made were GIF files, but unfortunately I cannot find any of these early
+> files.
+>
+> Later on in 2002 I rewrote the script in Perl and I have attached a late
+> version of it (gengraph.pl) from early 2003, that still uses the HTML
+> pages and produces a GIF file as output.. I also attached the small
+> instruction I wrote.
+>
+> Later the script was updated again, to use the XML source file format that
+> Project Aon uses to generate HTML and other format, and to create the much
+> more usable SVG files instead of GIF images. I have attached an early such
+> file from November 2003, showing the choice map for Grey Star the Wizard.
+> Unfortunately it seems like today's web browsers does't like it, but I can
+> open it in an old version of Opera I have installed (though the text in the
+> nodes is too large), and even click on the nodes too see the book
+> paragraphs on the Project Aon website!
+>
+> / Thomas
+>
+> 2017-11-08 21:04 GMT+01:00 mcd@mcdemarco.net [GAMEBOOKS] <
+> GAMEBOOKS@yahoogroups.com>:
+>
+>>
+>>
+>> Someone on twitter noticed my history of choice mapping, reminding me
+>> that I meant to post about it in various places once it was done, and then
+>> got involved in other things (mostly NaNoWriMo-ing a gamebook):
+>>
+>>
+>> http://www.mcdemarco.net/blog/2017/10/27/history-of-choice-mapping/
+>>
+>>
+>> Let me know if you spot any missing prior art.
+>>
+>>
+>> Thanks,
+>>
+>> mary
+>>
+>>
+>> 
+>> ------------------------------
+>> Posted by: mcd@mcdemarco.net
+>>
+>
+>
+
+--f403043ef164ae8369055d8040ba
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">Hm, yahoogroups ate my non-text attachments, didn't it=
+? Well, here they are again:<div><br><div><a href=3D"http://angantyr.no-ip.=
+org/~angantyr/kaos/gengraph.pl">http://angantyr.no-ip.org/~angantyr/kaos/ge=
+ngraph.pl</a><br></div><div><a href=3D"http://angantyr.no-ip.org/~angantyr/=
+kaos/gengraphinstructions.txt">http://angantyr.no-ip.org/~angantyr/kaos/gen=
+graphinstructions.txt</a></div><div><a href=3D"http://angantyr.no-ip.org/~a=
+ngantyr/kaos/01gstw.svgz">http://angantyr.no-ip.org/~angantyr/kaos/01gstw.s=
+vgz</a><br><div class=3D"gmail_extra"><br></div><div class=3D"gmail_extra">=
+And I think I figured out what was wrong with that SVG file. Now at least C=
+hrome opens it too.</div><div class=3D"gmail_extra"><br></div><div class=3D=
+"gmail_extra">/ Thomas</div><div class=3D"gmail_extra"><br><div class=3D"gm=
+ail_quote">2017-11-08 22:51 GMT+01:00 Thomas Wolmer <span dir=3D"ltr"><<=
+a href=3D"mailto:angantyr@gmail.com" target=3D"_blank">angantyr@gmail.com</=
+a>></span>:<br><blockquote class=3D"gmail_quote" style=3D"margin:0px 0px=
+ 0px 0.8ex;border-left:1px solid rgb(204,204,204);padding-left:1ex"><div di=
+r=3D"ltr">As I was involved when Project Aon started generating such choice=
+ maps from the Lone Wolf and Grey Star books, I can contribute a tiny bit..=
+.<div><br></div><div>January 22, 2001, in a discussion about all the mispla=
+ced paragraph links in Grey Star the Wizard, I asked on our mailing list if=
+ no-one had generated graphic representations of the books from our electro=
+nic versions of the Lone Wolf books. The following day another Project Aon =
+contributor had located the Graphviz software and written the first embryo =
+of a (Unix shell) script that extracted information from the HTML pages of =
+book and fed it to the 'dot' program in the Graphviz suite. The fir=
+st choice maps we made were GIF files, but unfortunately I cannot find any =
+of these early files.</div><div><br></div><div>Later on in 2002 I rewrote t=
+he script in Perl and I have attached a late version of it (<a href=3D"http=
+://gengraph.pl" target=3D"_blank">gengraph.pl</a>) from early 2003, that st=
+ill uses the HTML pages and produces a GIF file as output.. I also attached=
+ the small instruction I wrote.</div><div><br></div><div>Later the script w=
+as updated again, to use the XML source file format that Project Aon uses t=
+o generate HTML and other format, and to create the much more usable SVG fi=
+les instead of GIF images. I have attached an early such file from November=
+ 2003, showing the choice map for Grey Star the Wizard. Unfortunately it se=
+ems like today's web browsers does't like it, but I can open it in =
+an old version of Opera I have installed (though the text in the nodes is t=
+oo large), and even click on the nodes too see the book paragraphs on the P=
+roject Aon website!</div><div><br></div><div>/ Thomas<span class=3D"gmail-"=
+><br><div class=3D"gmail_extra"><br><div class=3D"gmail_quote">2017-11-08 2=
+1:04 GMT+01:00 <a href=3D"mailto:mcd@mcdemarco.net" target=3D"_blank">mcd@m=
+cdemarco.net</a> [GAMEBOOKS] <span dir=3D"ltr"><<a href=3D"mailto:GAMEBO=
+OKS@yahoogroups.com" target=3D"_blank">GAMEBOOKS@yahoogroups.com</a>></s=
+pan>:<br><blockquote class=3D"gmail_quote" style=3D"margin:0px 0px 0px 0.8e=
+x;border-left:1px solid rgb(204,204,204);padding-left:1ex">
+
+
+<u></u>
+
+
+
+
+
+=
+
+
+
+
+ 
+<div style=3D"background-color:rgb(255,255,255)">
+<span style=3D"disp=
+lay:none">=C2=A0</span>
+
+
+<div id=3D"gmail-m_-5597655563468473938gmail-m_-7=
+92872850144963387ygrp-mlmsg">
+  <div id=3D"gmail-m_-5597655563468473938gmai=
+l-m_-792872850144963387ygrp-msg">
+
+
+    <div id=3D"gmail-m_-559765556346847=
+3938gmail-m_-792872850144963387ygrp-text">
+      
+      
+      <p></p><p>So=
+meone on twitter noticed my history of choice mapping, reminding me that I =
+meant to post about it in various places once it was done, and then got inv=
+olved in other things (mostly NaNoWriMo-ing a gamebook):</p><p><br></p><p><=
+a rel=3D"nofollow" href=3D"http://www.mcdemarco.net/blog/2017/10/27/history=
+-of-choice-mapping/" target=3D"_blank">http://www.mcdemarco.net/blog/<wbr>2=
+017/10/27/history-of-choice-m<wbr>apping/</a><br></p><p><br></p><p>Let me k=
+now if you spot any missing prior art.</p><p><br></p><p>Thanks,</p><p>mary<=
+/p><p><br></p><p></p>
+
+    </div>
+     
+
+    
+    <div style=3D"color:rgb(2=
+55,255,255);height:0px"></div>
+
+          
+  
+ 
+
+    
+    <div style=3D"cle=
+ar:both"> </div>
+
+    <div id=3D"gmail-m_-5597655563468473938gmail-m_-79287=
+2850144963387fromDMARC" style=3D"margin-top:10px">
+        <hr style=3D"hei=
+ght:2px;border-width:0px;color:rgb(227,227,227);background-color:rgb(227,22=
+7,227)">
+        Posted by: <a href=3D"mailto:mcd@mcdemarco.net" target=3D"=
+_blank">mcd@mcdemarco.net</a>        </div></div></div></div></blockquote><=
+/div></div></span></div></div><div id=3D"gmail-m_-5597655563468473938DAB4FA=
+D8-2DD7-40BB-A1B8-4E2AA1F9FDF2"><br></div></blockquote></div>
+</div></div><=
+/div></div>
+
+--f403043ef164ae8369055d8040ba--
+
+

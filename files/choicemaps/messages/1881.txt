@@ -1,0 +1,36 @@
+From DummyAddressAndDate Thu Sep 16 11:42:17 2010
+X-Yahoo-Msgnum: 1881
+Return-Path: <katz@netaxs.com>
+X-Sender: katz@netaxs.com
+X-Apparently-To: gamebooks@egroups.com
+Received: (EGP: mail-7_3_1); 16 Aug 2001 00:13:53 -0000
+Received: (qmail 14779 invoked from network); 16 Aug 2001 00:13:52 -0000
+Received: from unknown (10.1.10.26)
+  by l8.egroups.com with QMQP; 16 Aug 2001 00:13:52 -0000
+Received: from unknown (HELO postal.netaxs.com) (207.8.186.39)
+  by mta1 with SMTP; 16 Aug 2001 00:13:51 -0000
+Received: from unix1.netaxs.com (mail@unix1.netaxs.com [207.8.186.3])
+	by postal.netaxs.com (8.12.0.Beta7/8.12.0.Beta7) with ESMTP id f7G0FHGo021288
+	for <gamebooks@egroups.com>; Wed, 15 Aug 2001 20:15:17 -0400 (EDT)
+Received: (from katz@localhost)
+          by unix1.netaxs.com (8.8.7/8.8.4)
+	  id UAA24220; Wed, 15 Aug 2001 20:13:50 -0400 (EDT)
+Date: Wed, 15 Aug 2001 20:13:49 -0400 (EDT)
+To: gamebooks@yahoogroups.com
+Subject: Page Update - 8/15/01
+Message-ID: <Pine.SUN.3.95.1010815201230.24219A-100000@unix1.netaxs.com>
+MIME-Version: 1.0
+Content-Type: TEXT/PLAIN; charset=US-ASCII
+From: Demian Katz <katz@netaxs.com>
+
+HTML Database Changes:
+----------------------
+I've reviewed Choose Your Own Adventure books 60, 61 and 62 here:
+	http://www.netaxs.com/~katz/game/cyoalist.htm
+
+On a related note, I've added an article comparing the original and
+revised editions of Sugarcane Island in great detail here:
+	http://www.credis.net/demian/canediff.htm
+
+
+

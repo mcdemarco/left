@@ -18,11 +18,11 @@ Fill in the URL of a Twine story here to have DotGraph graph it:
 
 <input type="text" id="dgaas" size="50"/>&nbsp;<a href="" onclick="this.setAttribute('href', '/tools/scree/dotgraph/dgaas.html?' + document.getElementById('dgaas').value);">Graph It!</a>
 
-(This service uses a beta version of DotGraph 2.2.0.  It can follow philome.la and some itch.io links without pressing the PLAY button or popping out of the iframe, respectively.)
+(It can follow philome.la and some itch.io links without pressing the PLAY button or popping out of the iframe, respectively.)
 
 ### Versions
 
-The current version of DotGraph is 2.1.0, which adds a text tracing option and support for configuration using the StorySettings passage.  Previous versions are archived [here](/tools/scree/dotgraph/versions.html).
+The current version of DotGraph is 2.2.0, which adds SnowStick (a reading tracker integrated with DotGraph), support for configuration using the DotGraphSettings passage (a safer and more flexible spot than StorySettings, though the latter is still supported), viewing another story by URL (a quicker way than by loading the story and this format into Twine), and Graphviz engine options (after updating to the latest [viz.js](http://viz-js.com) to fix some special character issues).  Previous versions are archived [here](/tools/scree/dotgraph/versions.html).
 
 Each version of DotGraph comes in four forms, Twine 1 or Twine 2, and offline or online.  (Twine 2 is not fully backwards compatible with Twine 1; in particular their story formats always differ.)
 
@@ -38,7 +38,7 @@ To add DotGraph to the installable local versions of Twine 2, follow the install
 
 #### Twine 1
 
-To add DotGraph to Twine 1, create a new folder called `dotgraph` inside your targets folder, then download [this file](https://mcdemarco.net/tools/scree/dotgraph/header.html): `https://mcdemarco.net/tools/scree/dotgraph/header.html` and place it inside the `dotgraph` folder.  For offline use, download and use [this file](https://mcdemarco.net/tools/scree/dotgraph/offline/header.html) instead: `https://mcdemarco.net/tools/scree/dotgraph/offline/header.html`
+To add DotGraph to Twine 1, download the latest [release.zip](https://github.com/mcdemarco/dotgraph/releases/latest) from GitHub, unzip it, and move one of the `dotgraph-1` folders to your Twine 1 targets folder.  Alternately, create a new folder called `dotgraph` inside your targets folder, then download [this file](https://mcdemarco.net/tools/scree/dotgraph/header.html): `https://mcdemarco.net/tools/scree/dotgraph/header.html` and place it inside the `dotgraph` folder.  For offline use, download and use [this file](https://mcdemarco.net/tools/scree/dotgraph/offline/header.html) instead: `https://mcdemarco.net/tools/scree/dotgraph/offline/header.html`
 
 See the [Twine wiki](http://twinery.org/wiki/twine1:story_format#adding_formats) for more information about installing and using story formats in Twine 1.
 
@@ -57,7 +57,7 @@ In Twine 1, open or create a story (under the File menu).  Then, in the Story me
 
 #### Twees
 
-You can also use DotGraph with an external Twine renderer like Twee or [Twee2](http://twee2.danq.me); just download the appropriate file (`format.js` or `header.html`, depending on the associated Twine version) to your filesystem and follow your renderer's instructions for installing and using a new story format.
+You can also use DotGraph with an external Twine renderer like [TweeGo](http://www.motoslave.net/tweego/) or [Twee2](http://twee2.danq.me); just download the appropriate file (`format.js` or `header.html`, depending on the associated Twine version) to your filesystem and follow your renderer's instructions for installing and using a new story format.  You can also download the latest [release.zip](https://github.com/mcdemarco/dotgraph/releases/latest) from GitHub, unzip it, and move one of the dotgraph folders inside to your renderer's appropriate location.
 
 
 #### Settings
@@ -102,7 +102,7 @@ Below is the graph of a longer, incomplete story with renumbered passages, end t
 
 I described an issue with Chrome [in the old Twine forum](https://twinery.org/forum/discussion/7879/a-proofing-format-using-graphviz-and-a-chrome-issue).  This is why the offline mode is not only for running offline.
 
-The source code is available [at BitBucket](https://bitbucket.org/mcdemarco/dotgraph).
+The source code has moved from [BitBucket](https://bitbucket.org/mcdemarco/dotgraph) to [GitHub](https://github.com/mcdemarco/dotgraph).
 
 DotGraph does not support Internet Explorer 8, but any newer browser should work.
 

@@ -30,7 +30,8 @@ BoardGameGeek geeklist sorter by fiddly_bits.
 							<input type="checkbox" id="ascending" /> ascending
 						</span>
 						<span>
-							<input type="checkbox" id="images" title="show images" disabled /> <s>images</s>
+							<input type="hidden" id="images" />
+							<input type="checkbox" id="descriptions" title="include item descriptions" /> descriptions
 						</span>
 						<span>
 							<input type="checkbox" id="comments" title="include comment info" /> comment info
@@ -47,7 +48,7 @@ BoardGameGeek geeklist sorter by fiddly_bits.
 					</div>
 	</div>
 
-	<p class="info">Rank and rating are not included because the API does not return that information with the geeklist, even when the list is sorted by rank or rating at BGG.  But if the list was manually sorted by the creator, you can see or reverse that sorting with "Manual".</p>
+	<p class="info">Rank and rating are not included because the API does not return that information with the geeklist, even when the list is sorted by rank or rating at BGG.  But if the list was manually sorted by the creator, you can see or reverse that sorting with "Manual".  Images are not included due to hotlinking changes at BGG.</p>
 
 	<hr />
 

@@ -72,6 +72,12 @@ div.entry div.entrycontents img {
 
 div.right {
     text-align:right;
+    padding-left: 10px;
+    color: #282867;
+}
+
+div.nowrap {
+    white-space:nowrap;
 }
 
 input[type=text] {
@@ -133,11 +139,21 @@ a#thingURL {
     font-style:italic;
 }
 
+.things div.description {
+    font-size:smaller;
+    padding: 0 1em;
+}
+
 .collection input[type=text] {
     width: 10em;
 }
+.collection div.left,
+.collection div.right {
+    width: 33%;
+}
 .collection div.status {
     padding: 0 0 0 1em;
+    width: 34%;
 }
 .collection div.status span {
     padding-right:1em;

@@ -148,7 +148,7 @@
 				</div>
 			</h3>
 			<div class="entrycontents">
-				<div>
+				<div class="left">
 					<xsl:if test="$images = 'true'">
 						<a href="{image}"><img alt="" src="{thumbnail}"/></a>
 					</xsl:if>

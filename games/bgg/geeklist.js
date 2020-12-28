@@ -84,7 +84,8 @@
 		var xmlDom;
 		var sortBy = document.getElementById("sortBy").value;
 		var ascending = document.getElementById("ascending").checked;
-		var images = document.getElementById("images").checked;
+		var images = false; //document.getElementById("images").checked;
+		var descriptions = document.getElementById("descriptions").checked;
 		var comments = document.getElementById("comments").checked;
 		if (typeof XSLTProcessor == "undefined") {
 			try {
@@ -97,6 +98,7 @@
 			xsltProcessor.setParameter(null, "sortby", sortBy);
 			xsltProcessor.setParameter(null, "ascending", ascending);
 			xsltProcessor.setParameter(null, "images", images);
+			xsltProcessor.setParameter(null, "descriptions", descriptions);
 			xsltProcessor.setParameter(null, "comments", comments);
 			xsltProcessor.importStylesheet(stylesheet);
 			xmlDom = xsltProcessor.transformToFragment(geeklist, document);

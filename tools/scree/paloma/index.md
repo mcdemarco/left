@@ -43,6 +43,7 @@ See the Examples section below for some restyling examples.
 * Show some text based on a variable's value:  `<% if (s.gender == "male") { %>You are male.<% } %>`.
 * Show alternate texts based on a variable's value:  `<% if (s.gender == "male") { %>You are male.<% } else { %>You are female.<% } %>`.
 * Add a comment: `/* My ToDo list for this node: spellcheck! */`
+* Insert a passage into another passage: `<%= story.render("My Passage") %>`
 
 Underscore and jQuery are also available for your scripts; see [the Snowman docs](https://twinery.org/wiki/snowman:underscore) for more details.
 
@@ -108,6 +109,13 @@ In that case you may need to re-unstyle all links in the previous passages (some
 		color:inherit;
 	}
 
+To reverse the order of passages, putting the current one at the top:
+
+	body {
+		display:flex;
+		flex-direction: column-reverse;
+	}
+
 #### JavaScript
 
 To restart the story from a link, link to a new passage (called Restart or whatever you like) with the following contents:
@@ -165,9 +173,8 @@ In your [script]:
 			scrollLeft: $("#passage").offset().left}, 1000);
 	});
 
-
-
-
 ### Sausage
 
-The source code is [at BitBucket](https://bitbucket.org/mcdemarco/paloma).  Paloma is based on [Snowman](hhttps://github.com/klembot/snowman) by Chris Klimas.  The main changes (besides making it Jonah-like) involved the story history as explained above.  Paloma does not have Snowman's checkpoint functionality; history is node-by-node only.
+The source code has moved from [BitBucket](https://bitbucket.org/mcdemarco/paloma) to [GitHub](https://github.com/mcdemarco/paloma).
+
+Paloma is based on [Snowman](hhttps://github.com/klembot/snowman) by Chris Klimas.  The main changes (besides making it Jonah-like) involved the story history as explained above.  Paloma does not have Snowman's checkpoint functionality; history is node-by-node only.

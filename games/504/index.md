@@ -14,7 +14,7 @@ All links are to off-site information:  individual pages for rating each world a
 
 In version 2.0, the Almanac incorporates some (static, local, aggregated) information about ratings and tags to randomize to particularly good worlds, bad worlds, discussed worlds, and as-yet unexplored worlds.  These are accessed with the button row above the world name; the center button is still a simple randomizer.
 
-The code is available on [bitbucket](https://bitbucket.org/mcdemarco/504almanac/), under the MIT license.  The moving bits are based on the draggable balls demo for React Motion by Cheng Lou, also available under the MIT License.
+The code has moved from [bitbucket](https://bitbucket.org/mcdemarco/504almanac/) to [github](https://github.com/mcdemarco/504almanac/); it's available under the MIT license.  The moving bits are based on the draggable balls demo for React Motion by Cheng Lou, also available under the MIT License.
 
 I wrote a bit more about the almanac project [in the blog](/blog/2016/02/07/504-almanac/).
 

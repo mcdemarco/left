@@ -1,0 +1,83 @@
+From DummyAddressAndDate Thu Sep 16 11:42:17 2010
+X-Yahoo-Msgnum: 8025
+Return-Path: <amarande@lunasanguine.com>
+X-Sender: amarande@lunasanguine.com
+X-Apparently-To: gamebooks@yahoogroups.com
+Received: (qmail 27406 invoked from network); 8 Aug 2006 04:34:57 -0000
+Received: from unknown (66.218.67.36)
+  by m39.grp.scd.yahoo.com with QMQP; 8 Aug 2006 04:34:57 -0000
+Received: from unknown (HELO swarthymail-a4.dreamhost.com) (208.97.132.5)
+  by mta10.grp.scd.yahoo.com with SMTP; 8 Aug 2006 04:34:57 -0000
+Received: from [192.168.1.210] (unknown [24.151.97.198])
+	by swarthymail-a4.dreamhost.com (Postfix) with ESMTP id BD0AE129A87
+	for <gamebooks@yahoogroups.com>; Mon,  7 Aug 2006 21:34:55 -0700 (PDT)
+Message-ID: <44D814E9.9020301@lunasanguine.com>
+Date: Tue, 08 Aug 2006 00:36:57 -0400
+User-Agent: Thunderbird 1.5.0.5 (Windows/20060719)
+MIME-Version: 1.0
+To: gamebooks@yahoogroups.com
+Content-Type: text/plain; charset=ISO-8859-1; format=flowed
+Content-Transfer-Encoding: 7bit
+X-eGroups-Msg-Info: 1:0:0:0
+From: Amarande <amarande@lunasanguine.com>
+Subject: Current list of gamebook SVGs
+X-Yahoo-Group-Post: member; u=92207478; y=8JtBn3FNiK0GaNxykH5cSarjvXrfxY_IMFDfcHbdOHfC0Q
+X-Yahoo-Profile: avarvae
+
+Before I continue with making some more SVGs ... do I have it right that 
+this is the complete list of SVGs as yet made for major gamebooks and 
+available on the web so far?
+
+*/Current sources/
+*M = mr_lunchau (gamebooks group site)
+A = Amarande (aka avarvae) (gamebooks group site)
+S = Simon Osborne (Simon's page)
+P = Project Aon (Project Aon svg directory)
+
+/*Fighting Fantasy series*/
+#02 - Citadel of Chaos (M)
+#04 - Starship Traveller (A)
+#10 - House of Hell (A)
+#11 - Talisman of Death (M)
+#16 - Seas of Blood (S)
+#17 - Appointment with F.E.A.R. (S)
+#28 - Phantoms of Fear (S)
+#30 - Chasms of Malice (S)
+#32 - Slaves of the Abyss (A)
+#33 - Sky Lord (S)
+#34 - Stealer of Souls (S)
+#35 - Daggers of Darkness (A)
+#37 - Portal of Evil (S)
+#38 - Vault of the Vampire (S)
+#39 - Fangs of Fury (S)
+#47 - The Crimson Tide (A)
+#53 - Spellbreaker (A)
+#57 - Magehunter (S)
+
+/*Sorcery series*/*
+*Books #1-4 (S)
+
+/*Lone Wolf series
+*/Books #1-17 (P)
+
+/*World of Lone Wolf series*/
+Books #1-4 (P)
+
+/*Freeway Warrior series*/
+#1 - Highway Holocaust (P)
+
+/*Choose Your Own Adventure series*/
+#001 - The Cave of Time (S)
+#017 - The Race Forever (S)
+
+/*Amateur gamebooks*/
+Saga of Lone Wolf #1 - The Dark before the Dawn (A, as yet unreleased)
+Saga of Lone Wolf #2 - The Cordon of Holmgard (A, as yet unreleased)
+
+I /think /I have them all here, but before I embark on such classics as 
+perhaps The Warlock of Firetop Mountain or Deathtrap Dungeon or Caverns 
+of the Snow Witch etc., I'd like to be sure that they aren't already 
+done ...
+
+
+

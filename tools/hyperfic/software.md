@@ -91,7 +91,7 @@ The only thing riskier than writing prose at length in a browser is trusting it 
 * [SATU](http://satugam.es/) Text Game Maker: a visual choice platform with a "multi-selection" faux-parser inventory system and an "Oldskool" graphics option
 * [Storium](https://storium.com): more of a RPG/gamified system, with a multiplayer requirement for collaborative story creation---but not as obviously *something else* as others I left off the list
 * [Storyboard](https://storyboard.viget.com): a new cloud hyperfiction service [written in a weekend](https://www.viget.com/articles/building-a-choose-your-own-adventure-style-game-engine-in-48-hours/)
-* ~~[StoryNexus](http://www.storynexus.com)~~: a [mothballed](http://www.failbettergames.com/?p=1222) QBN-style site where you can still read, but can only write if you're grandfathered in
+* ~~[StoryNexus](http://www.storynexus.com)~~: a [mothballed](https://community.failbettergames.com/topic26966-removing-ability-to-create-new-worlds-jan-nd.aspx) QBN-style site where you can still read [about 160 stories](https://community.failbettergames.com/topic27866-storynexus-upcoming-changes-july-.aspx) ~~but can only write if you're grandfathered in~~
 * [Texture](https://texturewriter.com): inhabits "the possibility space between Inform and Twine"
 * [Typeform](https://www.typeform.com/templates/t/interactive-fiction/) isn't meant for interactive fiction, but has at least one Choose Your Own Adventure template
 * ~~[Versu](https://versu.com)~~: gets listed on these lists, but was always unfree as in no beer, and is also looking pretty abandoned

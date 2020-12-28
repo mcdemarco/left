@@ -20,3 +20,9 @@ The existential horror of the process and its redundancies is hidden behind link
 The data is also available in non-map formats.  The summary deserves a read; it reveals unreachable nodes, unused variable and unreachable variable states, other bugs, and what looks like an abandoned or test interface for revisiting choices.  This moves the choicemap from a superficial accounting of how the story plays out into a twilight realm of what the authors *intended* to write.  
 
 I've added links to this Bandersnatch subseries to my [History of Choice Mapping](/blog/2017/10/27/history-of-choice-mapping/), along with another timely choicemap from this year (for the board game version of *House of Danger*).  I have high hopes for more choice fiction in these "new" media (streaming TV, board games, *etc.*), and more choicemaps to come.
+
+### Update
+
+Another recently-leaked map to end all maps is [the official poster](https://www.reddit.com/r/blackmirror/comments/dcxyyl/poster_that_i_got_from_charlie_and_annabel_after/) of all the paths:
+
+[![educational portion of Bandersnatch poster](/files/choicemaps/megabandersnatch5-partial-100.png)](https://i.redd.it/48rr9i02feq31.jpg)

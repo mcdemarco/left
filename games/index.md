@@ -9,7 +9,7 @@ I've made a couple of [gaming tools](/games/kb/) for my favorite board game, Kin
 
 I've also worked on some tools for the game 504: an [almanac](/games/504/almanac/) and some improvements to the standard rules generator; see [the 504 page](/games/504/) for more details.
 
-I've implemented [a few solitaire games](/games/decktet/) for the Decket, an alternative card system by P.D. Magnus.
+I've implemented [a few solitaire games](/games/decktet/#Online.Game) for the Decket, an alternative card system by P.D. Magnus.
 
 At the last minute before traipsing off to dance camp a few years ago I rethemed the game [10 Days in Beautiful Africa](https://boardgamegeek.com/boardgame/7865/10-days-africa) into [10 Hours in Beautiful Pinewoods](/games/10hours/).
 

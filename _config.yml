@@ -12,7 +12,7 @@ redcarpet:
     - strikethrough
     - no_intra_emphasis
     - with_toc_data
-future: false
+future: true
 tag_dir: blog/tags
 collections:
   recipes:

@@ -3,6 +3,7 @@
 	<xsl:param name="sortby">date</xsl:param>
 	<xsl:param name="ascending">false</xsl:param>
 	<xsl:param name="images">true</xsl:param>
+	<xsl:param name="descriptions">true</xsl:param>
 	<xsl:param name="comments">false</xsl:param>
 
 	<xsl:variable name="monthString" select="'JanFebMarAprMayJunJulAugSepOctNovDec'"/>
@@ -143,8 +144,11 @@
 					<xsl:if test="@imageid and @imageid &gt; 0 and $images = 'true'">
 						<img alt="" src="https://cf.geekdo-images.com/images/pic{@imageid}_t.jpg" onerror="this.src='https://cf.geekdo-images.com/images/pic{@imageid}_t.png';this.onerror='';"/>
 					</xsl:if>
+					<xsl:if test="$descriptions = 'true'">
+						<xsl:value-of select="./body"/>
+					</xsl:if>
 				</div>
-				<div class="right">
+				<div class="nowrap right">
 					Posted: <xsl:value-of select="substring(@postdate,1,22)" /><br />
 					<xsl:if test = "@postdate != @editdate">
 						Edited: <xsl:value-of select="substring(@editdate,1,22)" /><br />

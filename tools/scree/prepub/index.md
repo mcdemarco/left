@@ -45,5 +45,7 @@ The Scree test story is available formatted as markdown using PrePub ([test-prep
 
 ### Sausage
 
-The source code is [at BitBucket](https://bitbucket.org/mcdemarco/prepub).  PrePub was inspired by [enscree](/tools/scree/enscree/), which was based on [entwee](/tools/entwee/), which was based on [entweedle](http://www.maximumverbosity.net/twine/Entweedle/).  I also [blogged about it](/blog/2017/10/30/prepub/).
+The source code has moved from [BitBucket](https://bitbucket.org/mcdemarco/prepub) to [GitHub](https://github.com/mcdemarco/prepub).
+
+PrePub was inspired by [enscree](/tools/scree/enscree/), which was based on [entwee](/tools/entwee/), which was based on [entweedle](http://www.maximumverbosity.net/twine/Entweedle/).  I also [blogged about it](/blog/2017/10/30/prepub/).
 

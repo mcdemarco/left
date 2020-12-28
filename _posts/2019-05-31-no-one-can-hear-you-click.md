@@ -1,7 +1,7 @@
 ---
 layout: post
 title: In Hypertext No One Can Hear You Click
-tags: hyperfiction technology twine micro
+tags: hyperfiction technology Twine
 created: 2019-05-31 11:25:00
 class: short
 ---

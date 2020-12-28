@@ -1,0 +1,82 @@
+---
+layout: page
+title: Adjusted Age Calculator
+menu: tools
+---
+
+<p>Premature babies have an adjusted age used for some milestones and other purposes, which is the amount of time since their due date.  It can be calculated from the original due date, the mother's last menstrual period, or the baby's gestational age at birth.</p>
+
+<p>There are plenty of calculators out there <a href="https://www.omnicalculator.com/health/adjusted-age">already</a>, but I wanted one that saved the dates and gave both ages in various formats.  Months are calendar months, so some ages may appear strange, as explained by <a href="https://www.calculator.net/age-calculator.html">this age calculator</a>.  Please note that babies born on or after 37 weeks are not considered premature, but this calculator will still adjust them.</p>
+
+<p>You can also use the calculator to determine due date from the last period or vice versa.</p>
+
+<style>
+ div#aac {
+	 background-color: #eee;
+	 padding: 0.5em 1.5em;
+	 border-radius: 5px;
+	 border: 1px solid gray;
+ }
+
+ #aac li {
+	 list-style-type: none;
+	 line-height: 1.4;
+	 text-indent: -2em;
+	 padding-left: 2em;
+ }
+ th {
+	 border-bottom: 2px solid gray;
+ }
+ td {
+	 padding: 3px 10px;
+ }
+ #output {
+	 display: none;
+ }
+ #aac ul {
+	 padding: 0;
+ }
+</style>
+
+<div id="aac">
+
+	<ul>
+		<li><label for="birth">Date of birth: </label> <input type="date" id="birth" name="birth" value="" /></li>
+		<li><label for="due">Due date: </label> <input type="date" id="due" name="due" value="" />
+			<span style="white-space:nowrap;"> or <label for="lmp">last period: </label> <input type="date" id="lmp" name="lmp" value="" /></span>
+			<span style="white-space:nowrap;"> or gestational age at birth: </span>
+			<span style="white-space:nowrap;">
+				<input type="number" id="weeks" name="weeks" value="" style="width: 4em;" /> <label for="weeks">weeks</label> + 
+				<input type="number" id="days" name="days" value="" style="width: 3em;"/> <label for="days">days</label>
+			</span>
+		</li>
+		<li><label for="target">Calculate age as of: </label> <input type="date" id="target" name="target" value="" /></li>
+	</ul>
+
+	<table id="output" cellspacing="4">
+		<tr>
+			<th>Age</th>
+			<th>Adjusted Age</th>
+		</tr>
+		<tr>
+			<td id="aDays"></td>
+			<td id="adjDays"></td>
+		</tr>
+		<tr>
+			<td id="aWeeks"></td>
+			<td id="adjWeeks"></td>
+		</tr>
+		<tr>
+			<td id="aMonths"></td>
+			<td id="adjMonths"></td>
+		</tr>
+		<tr>
+			<td id="aYears"></td>
+			<td id="adjYears"></td>
+		</tr>
+	</table>
+</div>
+
+<script src="moment.min.js"></script>
+<script src="aac.js"></script>
+
