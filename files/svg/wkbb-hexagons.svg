@@ -6,89 +6,138 @@
       <polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" fill="white" />
       
       <!-- Everything under a black pixel will be invisible -->
-      <path d="M86.6,55 L133,130 L40,130 z" fill="black"/>
+      <polygon points="86.6,55 133,130 40,130" fill="black"/>
+    </mask>
+    <mask id="star">
+      <!-- Everything under a white pixel will be visible -->
+      <polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" fill="white" />
+      
+      <!-- Everything under a black pixel will be invisible -->
+      <path d="M80,55 L86.6,50 L93.2,55 L93.2,145 L86.6,150 L80,145 z" fill="black"/>
+      <path d="M80,55 L86.6,50 L93.2,55 L93.2,145 L86.6,150 L80,145 z" fill="black" transform="rotate(60 86.6 100)" />
+      <path d="M80,55 L86.6,50 L93.2,55 L93.2,145 L86.6,150 L80,145 z" fill="black" transform="rotate(120 86.6 100)" />
+    </mask>
+    <mask id="squircle">
+      <!-- Everything under a white pixel will be visible -->
+      <polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" fill="white" />
+
+      <!-- Everything under a black pixel will be invisible -->
+      <circle cx="86.6" cy="100" r="40" fill="black"/>
+      <rect x="46.6" y="100" width="80" height="40" rx="5" />
+    </mask>
+    <mask id="castle">
+      <!-- Everything under a white pixel will be visible -->
+      <polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" fill="white" />
+
+      <!-- Everything under a black pixel will be invisible -->
+      <rect x="46.6" y="80" width="80" height="60" />
+      <rect x="41.6" y="60" width="20" height="30" rx="5" />
+      <rect x="76.6" y="60" width="20" height="30" rx="5" />
+      <rect x="111.6" y="60" width="20" height="30" rx="5" />
+    </mask>
+    <mask id="houses">
+      <!-- Everything under a white pixel will be visible -->
+      <polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" fill="white" />
+      
+      <!-- Everything under a black pixel will be invisible -->
+      <polygon points="86.6,50 100,65 100,85 73.3,85, 73.3,65" fill="black"/>
+      <polygon points="86.6,50 100,65 100,85 73.3,85, 73.3,65" fill="black" transform="translate(30,50)"/>
+      <polygon points="86.6,50 100,65 100,85 73.3,85, 73.3,65" fill="black" transform="translate(-30,50)"/>
+    </mask>
+    <mask id="trees">
+      <!-- Everything under a white pixel will be visible -->
+      <polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" fill="white" />
+      
+      <!-- Everything under a black pixel will be invisible -->
+      <polygon points="86.6,40 100,80 90,80 90,90 83,90 83,80 73.3,80" fill="black"/>
+      <polygon points="86.6,40 100,80 90,80 90,90 83,90 83,80 73.3,80" fill="black" transform="translate(30,50)"/>
+      <polygon points="86.6,40 100,80 90,80 90,90 83,90 83,80 73.3,80" fill="black" transform="translate(-30,50)"/>
+    </mask>
+    <mask id="noop">
+      <!-- Everything under a white pixel will be visible -->
+      <polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" fill="white" />
     </mask>
   </defs>
 
   <g transform="translate(-200,-100)">
     <g style="fill:#d2bc76;cursor:pointer;">
 
-	<polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" stroke="black" stroke-width="1" data-column="1" transform="translate(1297.6,150)" data-row-right="7" data-edge="1" data-row="-4" data-col="0" id="h:-4:0" mask="url(#triangle)"/>
-	<polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" stroke="black" stroke-width="1" data-column="1" transform="translate(1124.6,150)" data-row-right="6" data-edge="1" data-row="-4" data-col="1" id="h:-4:1"/>
-	<polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" stroke="black" stroke-width="1" data-column="1" transform="translate(951.6,150)" data-row-right="5" data-edge="1" data-row="-4" data-col="2" id="h:-4:2"/>
-	<polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" stroke="black" stroke-width="1" data-column="1" transform="translate(778.6,150)" data-row-right="4" data-edge="1" data-row="-4" data-col="3" id="h:-4:3"/>
-	<polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" stroke="black" stroke-width="1" data-column="1" transform="translate(605.6,150)" data-row-right="3" data-edge="1" data-row="-4" data-col="4" id="h:-4:4"/>
+	<polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" stroke="black" stroke-width="1" transform="translate(1297.6,150)" data-edge="1" data-row="-4" data-col="0" id="h:-4:0" mask="url(#trees)"/>
+	<polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" stroke="black" stroke-width="1" transform="translate(1124.6,150)" data-edge="1" data-row="-4" data-col="1" id="h:-4:1" mask="url(#star)"/>
+	<polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" stroke="black" stroke-width="1" transform="translate(951.6,150)" data-edge="1" data-row="-4" data-col="2" id="h:-4:2" mask="url(#squircle)"/>
+	<polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" stroke="black" stroke-width="1" transform="translate(778.6,150)" data-edge="1" data-row="-4" data-col="3" id="h:-4:3" mask="url(#castle)"/>
+	<polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" stroke="black" stroke-width="1" transform="translate(605.6,150)" data-edge="1" data-row="-4" data-col="4" id="h:-4:4" mask="url(#houses)"/>
 
-	<polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" stroke="black" stroke-width="1" data-column="2" transform="translate(1384,300)" data-row-right="7" data-edge="1" data-row="-3" data-col="-1" id="h:-3:-1"/>
-	<polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" stroke="black" stroke-width="1" data-column="2" transform="translate(1211,300)" data-row-right="6" data-edge="0" data-row="-3" data-col="0" id="h:-3:0"/>
-	<polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" stroke="black" stroke-width="1" data-column="2" transform="translate(1038,300)" data-row-right="5" data-edge="0" data-row="-3" data-col="1" id="h:-3:1"/>
-	<polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" stroke="black" stroke-width="1" data-column="2" transform="translate(865,300)" data-row-right="4" data-edge="0" data-row="-3" data-col="2" id="h:-3:2"/>
-	<polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" stroke="black" stroke-width="1" data-column="2" transform="translate(692,300)" data-row-right="3" data-edge="0" data-row="-3" data-col="3" id="h:-3:3"/>
-	<polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" stroke="black" stroke-width="1" data-column="2" transform="translate(519,300)" data-row-right="2" data-edge="1" data-row="-3" data-col="4" id="h:-3:4"/>
+	<polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" stroke="black" stroke-width="1" transform="translate(1384,300)" data-edge="1" data-row="-3" data-col="-1" id="h:-3:-1"/>
+	<polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" stroke="black" stroke-width="1" transform="translate(1211,300)" data-edge="0" data-row="-3" data-col="0" id="h:-3:0"/>
+	<polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" stroke="black" stroke-width="1" transform="translate(1038,300)" data-edge="0" data-row="-3" data-col="1" id="h:-3:1"/>
+	<polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" stroke="black" stroke-width="1" transform="translate(865,300)" data-edge="0" data-row="-3" data-col="2" id="h:-3:2"/>
+	<polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" stroke="black" stroke-width="1" transform="translate(692,300)" data-edge="0" data-row="-3" data-col="3" id="h:-3:3"/>
+	<polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" stroke="black" stroke-width="1" transform="translate(519,300)" data-edge="1" data-row="-3" data-col="4" id="h:-3:4"/>
 
-	<polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" stroke="black" stroke-width="1" data-column="3" transform="translate(1470.6,450)" data-row-right="7" data-edge="1" data-row="-2" data-col="-2" id="h:-2:-2"/>
-	<polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" stroke="black" stroke-width="1" data-column="3" transform="translate(1297.6,450)" data-row-right="6" data-edge="0" data-row="-2" data-col="-1" id="h:-2:-1"/>
-	<polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" stroke="black" stroke-width="1" data-column="3" transform="translate(1124.6,450)" data-row-right="5" data-edge="0" data-row="-2" data-col="0" id="h:-2:0"/>
-	<polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" stroke="black" stroke-width="1" data-column="3" transform="translate(951.6,450)" data-row-right="4" data-edge="0" data-row="-2" data-col="1" id="h:-2:1"/>
-	<polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" stroke="black" stroke-width="1" data-column="3" transform="translate(778.6,450)" data-row-right="3" data-edge="0" data-row="-2" data-col="2" id="h:-2:2"/>
-	<polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" stroke="black" stroke-width="1" data-column="3" transform="translate(605.6,450)" data-row-right="2" data-edge="0" data-row="-2" data-col="3" id="h:-2:3"/>
-	<polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" stroke="black" stroke-width="1" data-column="3" transform="translate(432.6,450)" data-row-right="1" data-edge="1" data-row="-2" data-col="4" id="h:-2:4"/>
+	<polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" stroke="black" stroke-width="1" transform="translate(1470.6,450)" data-edge="1" data-row="-2" data-col="-2" id="h:-2:-2"/>
+	<polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" stroke="black" stroke-width="1" transform="translate(1297.6,450)" data-edge="0" data-row="-2" data-col="-1" id="h:-2:-1"/>
+	<polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" stroke="black" stroke-width="1" transform="translate(1124.6,450)" data-edge="0" data-row="-2" data-col="0" id="h:-2:0"/>
+	<polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" stroke="black" stroke-width="1" transform="translate(951.6,450)" data-edge="0" data-row="-2" data-col="1" id="h:-2:1"/>
+	<polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" stroke="black" stroke-width="1" transform="translate(778.6,450)" data-edge="0" data-row="-2" data-col="2" id="h:-2:2"/>
+	<polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" stroke="black" stroke-width="1" transform="translate(605.6,450)" data-edge="0" data-row="-2" data-col="3" id="h:-2:3"/>
+	<polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" stroke="black" stroke-width="1" transform="translate(432.6,450)" data-edge="1" data-row="-2" data-col="4" id="h:-2:4"/>
 
-	<polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" stroke="black" stroke-width="1" data-column="4" transform="translate(1557,600)" data-row-right="7" data-edge="1" data-row="-1" data-col="-3" id="h:-1:-3"/>
-	<polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" stroke="black" stroke-width="1" data-column="4" transform="translate(1384,600)" data-row-right="6" data-edge="0" data-row="-1" data-col="-2" id="h:-1:-2"/>
-	<polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" stroke="black" stroke-width="1" data-column="4" transform="translate(1211,600)" data-row-right="5" data-edge="0" data-row="-1" data-col="-1" id="h:-1:-1"/>
-	<polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" stroke="black" stroke-width="1" data-column="4" transform="translate(1038,600)" data-row-right="4" data-edge="0" data-row="-1" data-col="0" id="h:-1:0"/>
-	<polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" stroke="black" stroke-width="1" data-column="4" transform="translate(865,600)" data-row-right="3" data-edge="0" data-row="-1" data-col="1" id="h:-1:1"/>
-	<polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" stroke="black" stroke-width="1" data-column="4" transform="translate(692,600)" data-row-right="2" data-edge="0" data-row="-1" data-col="2" id="h:-1:2"/>
-	<polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" stroke="black" stroke-width="1" data-column="4" transform="translate(519,600)" data-row-right="1" data-edge="0" data-row="-1" data-col="3" id="h:-1:3"/>
-	<polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" stroke="black" stroke-width="1" data-column="4" transform="translate(346,600)" data-row-right="0" data-edge="1" data-row="-1" data-col="4" id="h:-1:4"/>
+	<polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" stroke="black" stroke-width="1" transform="translate(1557,600)" data-edge="1" data-row="-1" data-col="-3" id="h:-1:-3"/>
+	<polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" stroke="black" stroke-width="1" transform="translate(1384,600)" data-edge="0" data-row="-1" data-col="-2" id="h:-1:-2"/>
+	<polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" stroke="black" stroke-width="1" transform="translate(1211,600)" data-edge="0" data-row="-1" data-col="-1" id="h:-1:-1"/>
+	<polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" stroke="black" stroke-width="1" transform="translate(1038,600)" data-edge="0" data-row="-1" data-col="0" id="h:-1:0"/>
+	<polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" stroke="black" stroke-width="1" transform="translate(865,600)" data-edge="0" data-row="-1" data-col="1" id="h:-1:1"/>
+	<polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" stroke="black" stroke-width="1" transform="translate(692,600)" data-edge="0" data-row="-1" data-col="2" id="h:-1:2"/>
+	<polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" stroke="black" stroke-width="1" transform="translate(519,600)" data-edge="0" data-row="-1" data-col="3" id="h:-1:3"/>
+	<polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" stroke="black" stroke-width="1" transform="translate(346,600)" data-edge="1" data-row="-1" data-col="4" id="h:-1:4"/>
 
-	<polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" stroke="black" stroke-width="1" data-column="5" transform="translate(1643.6,750)" data-row-right="7" data-edge="1" data-row="0" data-col="-4" id="h:0:-4"/>
-	<polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" stroke="black" stroke-width="1" data-column="5" transform="translate(1470.6,750)" data-row-right="6" data-edge="0" data-row="0" data-col="-3" id="h:0:-3"/>
-	<polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" stroke="black" stroke-width="1" data-column="5" transform="translate(1297.6,750)" data-row-right="5" data-edge="0" data-row="0" data-col="-2" id="h:0:-2"/>
-	<polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" stroke="black" stroke-width="1" data-column="5" transform="translate(1124.6,750)" data-row-right="4" data-edge="0" data-row="0" data-col="-1" id="h:0:-1"/>
-	<polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" stroke="black" stroke-width="1" data-column="5" transform="translate(951.6,750)" data-row-right="3" data-edge="0" data-row="0" data-col="0" id="h:0:0"/>
-	<polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" stroke="black" stroke-width="1" data-column="5" transform="translate(778.6,750)" data-row-right="2" data-edge="0" data-row="0" data-col="1" id="h:0:1"/>
-	<polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" stroke="black" stroke-width="1" data-column="5" transform="translate(605.6,750)" data-row-right="1" data-edge="0" data-row="0" data-col="2" id="h:0:2"/>
-	<polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" stroke="black" stroke-width="1" data-column="5" transform="translate(432.6,750)" data-row-right="0" data-edge="0" data-row="0" data-col="3" id="h:0:3"/>
-	<polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" stroke="black" stroke-width="1" data-column="5" transform="translate(259.6,750)" data-row-right="-1" data-edge="1" data-row="0" data-col="4" id="h:0:4"/>
+	<polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" stroke="black" stroke-width="1" transform="translate(1643.6,750)" data-edge="1" data-row="0" data-col="-4" id="h:0:-4"/>
+	<polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" stroke="black" stroke-width="1" transform="translate(1470.6,750)" data-edge="0" data-row="0" data-col="-3" id="h:0:-3"/>
+	<polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" stroke="black" stroke-width="1" transform="translate(1297.6,750)" data-edge="0" data-row="0" data-col="-2" id="h:0:-2"/>
+	<polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" stroke="black" stroke-width="1" transform="translate(1124.6,750)" data-edge="0" data-row="0" data-col="-1" id="h:0:-1"/>
+	<polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" stroke="black" stroke-width="1" transform="translate(951.6,750)" data-edge="0" data-row="0" data-col="0" id="h:0:0"/>
+	<polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" stroke="black" stroke-width="1" transform="translate(778.6,750)" data-edge="0" data-row="0" data-col="1" id="h:0:1"/>
+	<polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" stroke="black" stroke-width="1" transform="translate(605.6,750)" data-edge="0" data-row="0" data-col="2" id="h:0:2"/>
+	<polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" stroke="black" stroke-width="1" transform="translate(432.6,750)" data-edge="0" data-row="0" data-col="3" id="h:0:3"/>
+	<polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" stroke="black" stroke-width="1" transform="translate(259.6,750)" data-edge="1" data-row="0" data-col="4" id="h:0:4"/>
 
-	<polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" stroke="black" stroke-width="1" data-column="6" transform="translate(1557,900)" data-row-right="6" data-edge="1" data-row="1" data-col="-4" id="h:1:-4"/>
-	<polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" stroke="black" stroke-width="1" data-column="6" transform="translate(1384,900)" data-row-right="5" data-edge="0" data-row="1" data-col="-3" id="h:1:-3"/>
-	<polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" stroke="black" stroke-width="1" data-column="6" transform="translate(1211,900)" data-row-right="4" data-edge="0" data-row="1" data-col="-2" id="h:1:-2"/>
-	<polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" stroke="black" stroke-width="1" data-column="6" transform="translate(1038,900)" data-row-right="3" data-edge="0" data-row="1" data-col="-1" id="h:1:-1"/>
-	<polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" stroke="black" stroke-width="1" data-column="6" transform="translate(865,900)" data-row-right="2" data-edge="0" data-row="1" data-col="0" id="h:1:0"/>
-	<polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" stroke="black" stroke-width="1" data-column="6" transform="translate(692,900)" data-row-right="1" data-edge="0" data-row="1" data-col="1" id="h:1:1"/>
-	<polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" stroke="black" stroke-width="1" data-column="6" transform="translate(519,900)" data-row-right="0" data-edge="0" data-row="1" data-col="2" id="h:1:2"/>
-	<polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" stroke="black" stroke-width="1" data-column="6" transform="translate(346,900)" data-row-right="-1" data-edge="1" data-row="1" data-col="3" id="h:1:3"/>
+	<polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" stroke="black" stroke-width="1" transform="translate(1557,900)" data-edge="1" data-row="1" data-col="-4" id="h:1:-4"/>
+	<polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" stroke="black" stroke-width="1" transform="translate(1384,900)" data-edge="0" data-row="1" data-col="-3" id="h:1:-3"/>
+	<polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" stroke="black" stroke-width="1" transform="translate(1211,900)" data-edge="0" data-row="1" data-col="-2" id="h:1:-2"/>
+	<polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" stroke="black" stroke-width="1" transform="translate(1038,900)" data-edge="0" data-row="1" data-col="-1" id="h:1:-1"/>
+	<polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" stroke="black" stroke-width="1" transform="translate(865,900)" data-edge="0" data-row="1" data-col="0" id="h:1:0"/>
+	<polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" stroke="black" stroke-width="1" transform="translate(692,900)" data-edge="0" data-row="1" data-col="1" id="h:1:1"/>
+	<polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" stroke="black" stroke-width="1" transform="translate(519,900)" data-edge="0" data-row="1" data-col="2" id="h:1:2"/>
+	<polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" stroke="black" stroke-width="1" transform="translate(346,900)" data-edge="1" data-row="1" data-col="3" id="h:1:3"/>
 
-	<polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" stroke="black" stroke-width="1" data-column="7" transform="translate(1470.6,1050)" data-row-right="5" data-edge="1" data-row="2" data-col="-4" id="h:2:-4"/>
-	<polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" stroke="black" stroke-width="1" data-column="7" transform="translate(1297.6,1050)" data-row-right="4" data-edge="0" data-row="2" data-col="-3" id="h:2:-3"/>
-	<polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" stroke="black" stroke-width="1" data-column="7" transform="translate(1124.6,1050)" data-row-right="3" data-edge="0" data-row="2" data-col="-2" id="h:2:-2"/>
-	<polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" stroke="black" stroke-width="1" data-column="7" transform="translate(951.6,1050)" data-row-right="2" data-edge="0" data-row="2" data-col="-1" id="h:2:-1"/>
-	<polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" stroke="black" stroke-width="1" data-column="7" transform="translate(778.6,1050)" data-row-right="1" data-edge="0" data-row="2" data-col="0" id="h:2:0"/>
-	<polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" stroke="black" stroke-width="1" data-column="7" transform="translate(605.6,1050)" data-row-right="0" data-edge="0" data-row="2" data-col="1" id="h:2:1"/>
-	<polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" stroke="black" stroke-width="1" data-column="7" transform="translate(432.6,1050)" data-row-right="-1" data-edge="1" data-row="2" data-col="2" id="h:2:2"/>
+	<polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" stroke="black" stroke-width="1" transform="translate(1470.6,1050)" data-edge="1" data-row="2" data-col="-4" id="h:2:-4"/>
+	<polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" stroke="black" stroke-width="1" transform="translate(1297.6,1050)" data-edge="0" data-row="2" data-col="-3" id="h:2:-3"/>
+	<polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" stroke="black" stroke-width="1" transform="translate(1124.6,1050)" data-edge="0" data-row="2" data-col="-2" id="h:2:-2"/>
+	<polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" stroke="black" stroke-width="1" transform="translate(951.6,1050)" data-edge="0" data-row="2" data-col="-1" id="h:2:-1"/>
+	<polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" stroke="black" stroke-width="1" transform="translate(778.6,1050)" data-edge="0" data-row="2" data-col="0" id="h:2:0"/>
+	<polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" stroke="black" stroke-width="1" transform="translate(605.6,1050)" data-edge="0" data-row="2" data-col="1" id="h:2:1"/>
+	<polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" stroke="black" stroke-width="1" transform="translate(432.6,1050)" data-edge="1" data-row="2" data-col="2" id="h:2:2"/>
 
-	<polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" stroke="black" stroke-width="1" data-column="8" transform="translate(1384,1200)" data-row-right="4" data-edge="1" data-row="3" data-col="-4" id="h:3:-4"/>
-	<polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" stroke="black" stroke-width="1" data-column="8" transform="translate(1211,1200)" data-row-right="3" data-edge="0" data-row="3" data-col="-3" id="h:3:-3"/>
-	<polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" stroke="black" stroke-width="1" data-column="8" transform="translate(1038,1200)" data-row-right="2" data-edge="0" data-row="3" data-col="-2" id="h:3:-2"/>
-	<polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" stroke="black" stroke-width="1" data-column="8" transform="translate(865,1200)" data-row-right="1" data-edge="0" data-row="3" data-col="-1" id="h:3:-1"/>
-	<polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" stroke="black" stroke-width="1" data-column="8" transform="translate(692,1200)" data-row-right="0" data-edge="0" data-row="3" data-col="0" id="h:3:0"/>
-	<polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" stroke="black" stroke-width="1" data-column="8" transform="translate(519,1200)" data-row-right="-1" data-edge="1" data-row="3" data-col="1" id="h:3:1"/>
+	<polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" stroke="black" stroke-width="1" transform="translate(1384,1200)" data-edge="1" data-row="3" data-col="-4" id="h:3:-4"/>
+	<polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" stroke="black" stroke-width="1" transform="translate(1211,1200)" data-edge="0" data-row="3" data-col="-3" id="h:3:-3"/>
+	<polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" stroke="black" stroke-width="1" transform="translate(1038,1200)" data-edge="0" data-row="3" data-col="-2" id="h:3:-2"/>
+	<polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" stroke="black" stroke-width="1" transform="translate(865,1200)" data-edge="0" data-row="3" data-col="-1" id="h:3:-1"/>
+	<polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" stroke="black" stroke-width="1" transform="translate(692,1200)" data-edge="0" data-row="3" data-col="0" id="h:3:0"/>
+	<polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" stroke="black" stroke-width="1" transform="translate(519,1200)" data-edge="1" data-row="3" data-col="1" id="h:3:1"/>
 
-	<polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" stroke="black" stroke-width="1" data-column="9" transform="translate(1297.6,1350)" data-row-right="3" data-edge="1" data-row="4" data-col="-4" id="h:4:-4"/>
-	<polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" stroke="black" stroke-width="1" data-column="9" transform="translate(1124.6,1350)" data-row-right="2" data-edge="1" data-row="4" data-col="-3" id="h:4:-3"/>
-	<polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" stroke="black" stroke-width="1" data-column="9" transform="translate(951.6,1350)" data-row-right="1" data-edge="1" data-row="4" data-col="-2" id="h:4:-2"/>
-	<polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" stroke="black" stroke-width="1" data-column="9" transform="translate(778.6,1350)" data-row-right="0" data-edge="1" data-row="4" data-col="-1" id="h:4:-1"/>
-	<polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" stroke="black" stroke-width="1" data-column="9" transform="translate(605.6,1350)" data-row-right="-1" data-edge="1" data-row="4" data-col="0" id="h:4:0"/>
+	<polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" stroke="black" stroke-width="1" transform="translate(1297.6,1350)" data-edge="1" data-row="4" data-col="-4" id="h:4:-4"/>
+	<polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" stroke="black" stroke-width="1" transform="translate(1124.6,1350)" data-edge="1" data-row="4" data-col="-3" id="h:4:-3"/>
+	<polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" stroke="black" stroke-width="1" transform="translate(951.6,1350)" data-edge="1" data-row="4" data-col="-2" id="h:4:-2"/>
+	<polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" stroke="black" stroke-width="1" transform="translate(778.6,1350)" data-edge="1" data-row="4" data-col="-1" id="h:4:-1"/>
+	<polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" stroke="black" stroke-width="1" transform="translate(605.6,1350)" data-edge="1" data-row="4" data-col="0" id="h:4:0"/>
 
     </g>
   </g>
 
 	<script type="text/ecmascript"><![CDATA[
   		//Use the masks (true) or use flat colors (false).
-  		var useMasks = false;
+  		var useMasks = true;
   		//Allow free editing of colors (true) or limit user color changes to adjacent colors (false).
   		var freeEdit = false;
 
@@ -105,7 +154,7 @@
 		var freeColors = fullColors.slice(0);
 		freeColors.push(locationColor);
 		//Swapped out filters for masks.
-		var fullColorFilters = ["blurOnly","filterForIce","filter134d","filter134f","filter134g","T4","solidBorder","filter134w"];
+		var fullColorMasks = ["noop","star","noop","noop","noop","noop","noop","triangle"];
 
 		//Layout changes from the original Kingdom Builder board generator:
 		//rows are numbered (according to the visible layout, not actual SVG positions) -4 to 4.
@@ -115,16 +164,16 @@
 		var locationCount = 4;
 	  	var strokeWidth = 7;
 
-		function applyFilter(element,color) {
-			//Apply a filter from the array to the element.
+		function applyMask(element,color) {
+			//Apply a mask from the array to the element.
 			if (!color)
 				color = element.getAttribute("fill");
-			var filterIndex = fullColors.indexOf(color);
+			var maskIndex = fullColors.indexOf(color);
 			if (useMasks) {
-				if (filterIndex > -1)
-					element.setAttribute("filter","url(#" + fullColorFilters[filterIndex] + ")");
+				if (maskIndex > -1)
+					element.setAttribute("mask","url(#" + fullColorMasks[maskIndex] + ")");
 				else
-					element.setAttribute("filter","");
+					element.setAttribute("mask","");
 			}
 			element.setAttribute("stroke","white"); //"#d2bc76");
 			//element.setAttribute("stroke-width","20");
@@ -151,7 +200,7 @@
 			} else {
 				//When short on locations, click converts to a new location.
 				element.setAttribute("class","locationClass");
-				setFillAndFilter(element,locationColor);
+				setFillAndMask(element,locationColor);
 			}
 			element.setAttribute("stroke-width",strokeWidth);
 		}	
@@ -244,7 +293,7 @@
 			var color = element.getAttribute("fill");
 			var oldIndex = color && colorArray.indexOf(color) ? colorArray.indexOf(color) : 0;
 			var index = (oldIndex + 1) % colorArray.length;
-			setFillAndFilter(element,colorArray[index]);
+			setFillAndMask(element,colorArray[index]);
 		}
 
 		function randomFill(element,colorArray) {
@@ -252,7 +301,7 @@
 			if (!colorArray || colorArray.length == 0) 
 				colorArray = fullColors.slice(0);
 			var index = Math.floor(colorArray.length*Math.random());
-			setFillAndFilter(element,colorArray[index]);
+			setFillAndMask(element,colorArray[index]);
 		}
 
 		function seedLocations() {
@@ -282,7 +331,7 @@
 					}
 
 					//color and mark with a class
-					setFillAndFilter(element,locationColor);
+					setFillAndMask(element,locationColor);
 					element.setAttribute("class","locationClass");
 
 					//seed some terrain here
@@ -301,12 +350,12 @@
 				//first tile
 				var index = Math.floor(neighborTiles.length * Math.random());
 				var color = nearLocationColors[colorIndex % nearLocationColors.length];
-				setFillAndFilter(document.getElementById(neighborTiles[index]),color);
+				setFillAndMask(document.getElementById(neighborTiles[index]),color);
 				neighborTiles.splice(index,1);
 				//second tile
 				index = Math.floor(neighborTiles.length * Math.random());
 				color = nearLocationColors[(colorIndex + 1) % nearLocationColors.length];
-				setFillAndFilter(document.getElementById(neighborTiles[index]),color);
+				setFillAndMask(document.getElementById(neighborTiles[index]),color);
 			}
 
 			function seedLocationIce(row,col) {
@@ -338,7 +387,7 @@
 				var candidate = document.getElementById("h:" + seedRow + ":" + seedCol);
 
 				if (candidate && !candidate.getAttribute("fill")) {
-					setFillAndFilter(candidate,iceColor);
+					setFillAndMask(candidate,iceColor);
 				}
 			}
 		}
@@ -355,13 +404,13 @@
 				if (!document.getElementById("h:" + row + ":" + col) || document.getElementById("h:" + row + ":" + col).getAttribute("fill"))
 					i = i - 1;
 				else
-					setFillAndFilter(document.getElementById("h:" + row + ":" + col),fullColors[i % fullColors.length]);
+					setFillAndMask(document.getElementById("h:" + row + ":" + col),fullColors[i % fullColors.length]);
 			}
 		}
 
-		function setFillAndFilter(element,color) {
+		function setFillAndMask(element,color) {
 			element.setAttribute("fill",color);
-			applyFilter(element,color);
+			applyMask(element,color);
 		}
 
 		init();
