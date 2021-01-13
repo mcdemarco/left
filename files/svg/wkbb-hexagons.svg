@@ -11,9 +11,9 @@
       <polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" fill="white" />
       
       <!-- Everything under a black pixel will be invisible -->
-      <path d="M80,55 L86.6,50 L93.2,55 L93.2,145 L86.6,150 L80,145 z" fill="black" />
-      <path d="M80,55 L86.6,50 L93.2,55 L93.2,145 L86.6,150 L80,145 z" fill="black" transform="rotate(60 86.6 100)" />
-      <path d="M80,55 L86.6,50 L93.2,55 L93.2,145 L86.6,150 L80,145 z" fill="black" transform="rotate(120 86.6 100)" />
+      <path d="M 82 40 C 82 37 88.37 37 88 40 C 89 54 89 67 88 81 C 88 82.39 86.85 83 85 83 C 84 83 82 82.39 82 81 C 81 67 81 54 82 40 Z M 101 48 C 104 46 107 51 104 53 C 93 60 81 67 69 73 C 68 74 66 73 66 72 C 65 71 65 69 66 68 C 77.78 60 89 54 101 48 Z M 104 68 C 105 69 105 71 105 72 C 104 73 102 74 101 73 C 89 67 77.78 60 66 53 C 64.09 51 66.85 46 69 48 C 81 54 93 60 104 68 Z" fill="black"/>
+      <path d="M 82 40 C 82 37 88.37 37 88 40 C 89 54 89 67 88 81 C 88 82.39 86.85 83 85 83 C 84 83 82 82.39 82 81 C 81 67 81 54 82 40 Z M 101 48 C 104 46 107 51 104 53 C 93 60 81 67 69 73 C 68 74 66 73 66 72 C 65 71 65 69 66 68 C 77.78 60 89 54 101 48 Z M 104 68 C 105 69 105 71 105 72 C 104 73 102 74 101 73 C 89 67 77.78 60 66 53 C 64.09 51 66.85 46 69 48 C 81 54 93 60 104 68 Z" fill="black" transform="rotate(120 86.6 100)"/>
+      <path d="M 82 40 C 82 37 88.37 37 88 40 C 89 54 89 67 88 81 C 88 82.39 86.85 83 85 83 C 84 83 82 82.39 82 81 C 81 67 81 54 82 40 Z M 101 48 C 104 46 107 51 104 53 C 93 60 81 67 69 73 C 68 74 66 73 66 72 C 65 71 65 69 66 68 C 77.78 60 89 54 101 48 Z M 104 68 C 105 69 105 71 105 72 C 104 73 102 74 101 73 C 89 67 77.78 60 66 53 C 64.09 51 66.85 46 69 48 C 81 54 93 60 104 68 Z" fill="black" transform="rotate(240 86.6 100)"/>
     </mask>
     <mask id="forest">
       <!-- Everything under a white pixel will be visible -->
@@ -27,20 +27,27 @@
     <mask id="grassland">
       <polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" fill="white" />
       
-      <path stroke="black" stroke-width="6" d="M 65.621 63.8 C 63.117 72.48 66.873 77.439 70.629 84.879" />
-      <path stroke="black" stroke-width="6" d="M 79.392 53.881 C 79.392 53.881 78.14 72.48 83.148 82.399" />
-      <path stroke="black" stroke-width="6" d="M 95.667 68.76 C 95.667 68.76 95.667 82.399 91.911 84.879" />
-      <path stroke="black" stroke-width="6" d="M 108.094 102.148 C 108.094 115.809 117.766 117.175 117.766 130.836" />
-      <path stroke="black" stroke-width="6" d="M 123.293 106.246 C 123.293 106.246 131.582 111.711 128.82 126.739" />
-      <path stroke="black" stroke-width="6" d="M 141.255 110.345 C 141.255 110.345 139.874 125.372 139.874 126.739" />
-      <path stroke="black" stroke-width="6" d="M 36.827 105.957 C 36.827 114.637 41.835 118.357 44.338 127.036" />
-      <path stroke="black" stroke-width="6" d="M 50.598 99.758 C 49.346 108.437 51.85 115.877 54.354 123.316" />
-      <path stroke="black" stroke-width="6" d="M 61.865 110.917 C 61.865 110.917 65.621 119.597 65.621 124.556" />
+      <path stroke="black" stroke-width="6" d="M 65 63.8 C 63 72.48 66 77 70 84" />
+      <path stroke="black" stroke-width="6" d="M 79 53 C 79 53 78.14 72.48 83 82" />
+      <path stroke="black" stroke-width="6" d="M 95 68.76 C 95 68.76 95 82 91 84" />
+      <path stroke="black" stroke-width="6" d="M 108 102 C 108 115 117 117 117 130" />
+      <path stroke="black" stroke-width="6" d="M 123 106 C 123 106 131 111 128.82 126" />
+      <path stroke="black" stroke-width="6" d="M 141 110 C 141 110 139 125 139 126" />
+      <path stroke="black" stroke-width="6" d="M 36 105 C 36 114 41 118 44 127" />
+      <path stroke="black" stroke-width="6" d="M 50 99 C 49 108 51.85 115 54 123" />
+      <path stroke="black" stroke-width="6" d="M 61 110 C 61 110 65 119 65 124" />
     </mask>
     <mask id="flower">
       <polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" fill="white" />
       
-      <path fill="black" fill-opacity="0.25" d="M 146.326 97.807 C 145.184 91.108 140.804 86.852 133.174 85.04 C 123.648 82.871 111.826 85.589 97.72 93.193 C 115.44 83.585 124.113 73.358 123.736 62.498 C 123.736 55.799 120.586 51.186 114.298 48.646 C 107.245 45.75 100.769 47.383 94.858 53.534 C 88.382 60.233 85.132 71.188 85.132 86.399 C 85.132 66.849 80.074 54.535 69.971 49.457 C 63.495 46.012 57.484 46.561 51.962 51.09 C 45.862 55.978 44.62 62.498 48.247 70.64 C 51.874 78.794 59.969 86.303 72.556 93.181 C 55.011 83.585 41.382 81.595 31.655 87.21 C 25.368 90.833 22.795 95.899 23.937 102.42 C 24.891 109.119 29.183 113.471 36.801 115.461 C 46.326 117.81 58.249 115.103 72.544 107.308 C 54.81 117.082 46.138 127.406 46.527 138.265 C 46.904 144.964 50.343 149.578 56.818 152.117 C 64.06 154.835 68.332 154.618 74.495 148.494 C 80.388 142.637 85.169 120.968 85.169 114.346 L 85.469 118.167 C 88.424 135.696 100.424 148.024 108.168 151.047 C 114.586 153.553 118.252 153.006 122.82 147.957 C 128.681 141.477 124.878 132.209 118.013 123.34 C 113.445 117.535 106.668 112.194 97.707 107.308 C 115.24 116.904 128.882 118.895 138.596 113.279 C 145.084 109.668 147.657 104.507 146.326 97.807 Z M 90.704 105.544 C 89.085 107.081 87.228 107.856 85.132 107.856 C 83.036 107.856 81.229 107.081 79.697 105.544 C 78.166 104.006 77.413 102.242 77.413 100.251 C 77.413 98.259 78.179 96.543 79.697 95.089 C 81.229 93.634 83.036 92.92 85.132 92.92 C 87.228 92.92 89.085 93.646 90.704 95.089 C 92.323 96.543 93.139 98.259 93.139 100.251 C 93.139 102.242 92.323 104.006 90.704 105.544 Z" />
+      <path fill="black" fill-opacity="0.25" d="M 146 97 C 145 91 140 86 133 85.04 C 123 82 111 85 97.72 93 C 115.44 83 124 73 123 62 C 123 55 120 51 114 48 C 107 45.75 100 47 94 53 C 88 60 85 71 85 86 C 85 66 80 54 69 49 C 63 46 57 46 51 51.09 C 45 55 44.62 62 48 70.64 C 51 78 59 86 72 93 C 55 83 41 81 31 87.21 C 25 90 22 95 23 102.42 C 24 109 29 113 36 115 C 46 117.81 58 115 72 107 C 54.81 117 46 127 46 138 C 46 144 50 149 56 152 C 64.06 154 68 154 74 148 C 80 142 85 120 85 114 L 85 118 C 88 135 100 148 108 151 C 114 153 118 153 122.82 147 C 128 141 124 132 118 123.34 C 113 117 106 112 97 107 C 115.24 116 128 118 138 113 C 145 109 147 104 146 97 Z M 90 105 C 89 107 87 107 85 107 C 83 107 81 107 79 105 C 78 104 77 102 77 100 C 77 98 78 96 79 95 C 81 93 83 92.92 85 92.92 C 87 92.92 89 93 90 95 C 92 96 93 98 93 100 C 93 102 92 104 90 105 Z" />
+    </mask>
+    <mask id="fellfield">
+      <polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" fill="white" />
+
+      <path fill="black" d="M 56 75 C 59 71 61 68 66 66 C 71 64 78 65 82 68 C 84 69 86 72 87 74 C 88 76 87 77 85 77 C 83 74 80 71 76 69 C 71 67 64 68 60 72 C 59 74 57 75 55 77 C 55 78 54 77 54 77 C 55 76 55 76 56 75 Z M 82 68 C 85 64 90 60 96 57 C 100 56 105 57 109 59 C 113 61 114 65 116 68 C 115 69 114 71 113 69 C 111 67 109 63 104 61 C 99 59 94 60 90 63 C 87 65 85 67 83 69 C 80 71 81 68 82 68 Z" fill-opacity="0.26"/>
+      <path fill="black" d="M 56 75 C 59 71 61 68 66 66 C 71 64 78 65 82 68 C 84 69 86 72 87 74 C 88 76 87 77 85 77 C 83 74 80 71 76 69 C 71 67 64 68 60 72 C 59 74 57 75 55 77 C 55 78 54 77 54 77 C 55 76 55 76 56 75 Z M 82 68 C 85 64 90 60 96 57 C 100 56 105 57 109 59 C 113 61 114 65 116 68 C 115 69 114 71 113 69 C 111 67 109 63 104 61 C 99 59 94 60 90 63 C 87 65 85 67 83 69 C 80 71 81 68 82 68 Z" fill-opacity="0.25" transform="translate(30,60)"/>
+      <path fill="black" d="M 56 75 C 59 71 61 68 66 66 C 71 64 78 65 82 68 C 84 69 86 72 87 74 C 88 76 87 77 85 77 C 83 74 80 71 76 69 C 71 67 64 68 60 72 C 59 74 57 75 55 77 C 55 78 54 77 54 77 C 55 76 55 76 56 75 Z M 82 68 C 85 64 90 60 96 57 C 100 56 105 57 109 59 C 113 61 114 65 116 68 C 115 69 114 71 113 69 C 111 67 109 63 104 61 C 99 59 94 60 90 63 C 87 65 85 67 83 69 C 80 71 81 68 82 68 Z" fill-opacity="0.27" transform="translate(-30,40)"/>
     </mask>
 
     <mask id="ice">
@@ -48,22 +55,9 @@
       <polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" fill="white"/>
 
       <!-- Everything under a black pixel will be invisible -->
-      <path d="M 86.6 170 L 86.6 190 L 163 145 L 163 125 Q 100 100, 50 150 86.6 170" fill="black"/>
-<!--      <path d="M 86.6 170 L 86.6 190 L 163 145 L 163 125 z" fill="black" transform="rotate(60 86.6 100)" />
-      <path d="M 86.6 170 L 86.6 190 L 163 145 L 163 125 z" fill="black" transform="rotate(120 86.6 100)" />
-      <path d="M 86.6 170 L 86.6 190 L 163 145 L 163 125 z" fill="black" transform="rotate(180 86.6 100)" />
-      <path d="M 86.6 170 L 86.6 190 L 163 145 L 163 125 z" fill="black" transform="rotate(240 86.6 100)" />
-      <path d="M 86.6 170 L 86.6 190 L 163 145 L 163 125 z" fill="black" transform="rotate(300 86.6 100)" /> -->
-      
-<!-- 
-      <polygon points="86.6,45 133,140 40,140" fill="white" />
-      <polygon points="86.6,45 133,140 40,140" fill="white" transform="rotate(33 86.6 100)"/>
-      <polygon points="86.6,45 133,140 40,140" fill="white" transform="rotate(43 86.6 100)"/>
-      <polygon points="86.6,45 133,140 40,140" fill="white" transform="rotate(83 86.6 100)"/>
-      <polygon points="86.6,45 133,140 40,140" fill="white" transform="rotate(105 86.6 100)"/>
-      <polygon points="86.6,45 133,140 40,140" fill="white" transform="rotate(119 86.6 100)"/>
-      <polygon points="86.6,45 133,140 40,140" fill="white" transform="rotate(138 86.6 100)"/>
- -->
+      <path d="M 86.6 170 L 163 125 Q 100 100, 50 150 86.6 170" fill="black" />
+      <path d="M 86.6 170 L 86.6 190 L 163 145 L 163 125 L 86.6 170" fill="black" fill-opacity="0.5"/>
+      <path d="M 86.6 170 L 86.6 190 L 50 170 L 50 150 Z" fill="black" fill-opacity="0.75"/>
     </mask>
 
     <mask id="mountain">
@@ -71,7 +65,8 @@
       <polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" fill="white" />
       
       <!-- Everything under a black pixel will be invisible -->
-      <polygon points="86.6,55 133,130 40,130" fill="black"/>
+      <polygon points="86.6,55 133,130 40,130" fill="black" fill-opacity="0.5"/>
+      <polygon points="86.6,55 109,92 95,85 70,100 62,95" fill="black"/>
     </mask>
 
     <mask id="tunnel">
@@ -98,9 +93,13 @@
       <polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" fill="white" />
       
       <!-- Everything under a black pixel will be invisible -->
-      <polygon points="86.6,50 100,65 100,85 73.3,85, 73.3,65" fill="black" fill-opacity="0.65"/>
-      <polygon points="86.6,50 100,65 100,85 73.3,85, 73.3,65" fill="black" fill-opacity="0.70" transform="translate(30,50)"/>
-      <polygon points="86.6,50 100,65 100,85 73.3,85, 73.3,65" fill="black" fill-opacity="0.75" transform="translate(-30,50)"/>
+      <polygon points="86.6,45 105,70 68.3,70" fill="black" fill-opacity="0.65"/>
+      <rect x="71.6" y="70" width="30" height="20" fill="black" fill-opacity="0.35"/>
+      <polygon points="86.6,45 105,70 68.3,70" fill="black" fill-opacity="0.65" transform="translate(30,50)"/>
+      <rect x="71.6" y="70" width="30" height="20" fill="black" fill-opacity="0.35" transform="translate(30,50)"/>
+      <polygon points="86.6,45 105,70 68.3,70" fill="black" fill-opacity="0.65" transform="translate(-30,50)"/>
+      <rect x="71.6" y="70" width="30" height="20" fill="black" fill-opacity="0.35" transform="translate(-30,50)"/>
+      <!--  polygon points="86.6,50 100,65 100,85 73.3,85, 73.3,65" fill="black" fill-opacity="0.70" -->
     </mask>
 
     <mask id="noop">
@@ -204,7 +203,7 @@
 		var freeColors = fullColors.slice(0);
 		freeColors.push(locationColor);
 		//Swapped out filters for masks.
-		var fullColorMasks = ["tundra","snowscape","forest","grassland","flower","noop","ice","mountain"];
+		var fullColorMasks = ["tundra","snowscape","forest","grassland","flower","fellfield","ice","mountain"];
 		var locationMasks = ['tunnel','castle','village','village'];
 		//Location masks are named after the location: castle, village, tunnel.
 
