@@ -1,29 +1,87 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" id="hexagons" version="1.1" height="8.825in" width="10.475in" viewBox="60 0 1687 1560">
-
   <defs>
-    <mask id="triangle">
+    <mask id="tundra">
+      <!-- Everything under a white pixel will be visible -->
+      <polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" fill="white" />
+
+      <path fill="black" d="M 93 57 C 90 59 91 69 94 62 C 96 60 96 57 93 57 Z M 86 60 C 79 61 92 70 87 62 L 87 61 Z M 36 75 C 34 80 42 83 44 85 C 47 81 39 78 36 75 Z M 56 77 C 53 78 52 86 55 83 C 57 81 60 77 56 77 Z M 138 77 C 134 80 135 90 139 83 C 140 81 141 78 138 77 Z M 47 78 C 46 81 48 84 50 83 C 51 81 51 78 48 78 Z M 100 73 C 97 73 97 76 99 78 C 102 85 103 75 100 73 Z M 131 80 C 123 81 136 91 132 83 C 132 82 131 81 131 80 Z M 107 76 L 106 77 L 106 78 C 101 86 114 77 107 76 Z M 153 103 C 150 106 142 109 145 113 C 147 111 155 108 153 103 Z M 51 99 C 48 100 49 103 50 105 C 54 112 55 102 51 99 Z M 133 105 C 129 105 132 109 134 111 C 137 114 136 106 133 105 Z M 81 104 C 77 107 88 118 85 109 C 84 107 83 105 81 104 Z M 141 106 C 138 106 138 109 139 111 C 141 112 143 109 142 106 Z M 91 106 C 87 108 88 118 91 111 C 92 110 95 106 91 106 Z M 58 102 C 58 103 57 104 57 105 C 53 113 66 103 58 102 Z M 57 129 C 55 134 63 137 65 140 C 68 135 60 132 57 129 Z M 77 131 C 74 132 73 138 75 136 C 78 135 78 134 77 131 Z M 69 132 C 69 132 69 132 68 133 C 67 135 70 140 71 138 C 71 136 72 132 70 132 C 70 132 70 132 69 132 Z M 114 122 C 112 123 111 125 110 127 C 107 136 118 125 114 122 Z M 104 124 C 100 124 103 128 104 129 C 107 136 108 126 104 124 Z M 33 116 C 27 117 34 121 35 123 C 39 126 35 117 33 116 Z M 38 118 C 38 119 37 120 38 121 C 38 130 44 118 38 118 Z"/>
+    </mask>
+    <mask id="snowscape">
+      <!-- Everything under a white pixel will be visible -->
+      <polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" fill="white" />
+      
+      <!-- Everything under a black pixel will be invisible -->
+      <path d="M80,55 L86.6,50 L93.2,55 L93.2,145 L86.6,150 L80,145 z" fill="black" />
+      <path d="M80,55 L86.6,50 L93.2,55 L93.2,145 L86.6,150 L80,145 z" fill="black" transform="rotate(60 86.6 100)" />
+      <path d="M80,55 L86.6,50 L93.2,55 L93.2,145 L86.6,150 L80,145 z" fill="black" transform="rotate(120 86.6 100)" />
+    </mask>
+    <mask id="forest">
+      <!-- Everything under a white pixel will be visible -->
+      <polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" fill="white" />
+      
+      <!-- Everything under a black pixel will be invisible -->
+      <polygon points="86.6,40 100,80 90,80 90,90 83,90 83,80 73.3,80" fill="black" fill-opacity="0.16"/>
+      <polygon points="86.6,40 100,80 90,80 90,90 83,90 83,80 73.3,80" fill="black" fill-opacity="0.14" transform="translate(30,50)"/>
+      <polygon points="86.6,40 100,80 90,80 90,90 83,90 83,80 73.3,80" fill="black" fill-opacity="0.15" transform="translate(-30,50)"/>
+    </mask>
+    <mask id="grassland">
+      <polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" fill="white" />
+      
+      <path stroke="black" stroke-width="6" d="M 65.621 63.8 C 63.117 72.48 66.873 77.439 70.629 84.879" />
+      <path stroke="black" stroke-width="6" d="M 79.392 53.881 C 79.392 53.881 78.14 72.48 83.148 82.399" />
+      <path stroke="black" stroke-width="6" d="M 95.667 68.76 C 95.667 68.76 95.667 82.399 91.911 84.879" />
+      <path stroke="black" stroke-width="6" d="M 108.094 102.148 C 108.094 115.809 117.766 117.175 117.766 130.836" />
+      <path stroke="black" stroke-width="6" d="M 123.293 106.246 C 123.293 106.246 131.582 111.711 128.82 126.739" />
+      <path stroke="black" stroke-width="6" d="M 141.255 110.345 C 141.255 110.345 139.874 125.372 139.874 126.739" />
+      <path stroke="black" stroke-width="6" d="M 36.827 105.957 C 36.827 114.637 41.835 118.357 44.338 127.036" />
+      <path stroke="black" stroke-width="6" d="M 50.598 99.758 C 49.346 108.437 51.85 115.877 54.354 123.316" />
+      <path stroke="black" stroke-width="6" d="M 61.865 110.917 C 61.865 110.917 65.621 119.597 65.621 124.556" />
+    </mask>
+    <mask id="flower">
+      <polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" fill="white" />
+      
+      <path fill="black" fill-opacity="0.25" d="M 146.326 97.807 C 145.184 91.108 140.804 86.852 133.174 85.04 C 123.648 82.871 111.826 85.589 97.72 93.193 C 115.44 83.585 124.113 73.358 123.736 62.498 C 123.736 55.799 120.586 51.186 114.298 48.646 C 107.245 45.75 100.769 47.383 94.858 53.534 C 88.382 60.233 85.132 71.188 85.132 86.399 C 85.132 66.849 80.074 54.535 69.971 49.457 C 63.495 46.012 57.484 46.561 51.962 51.09 C 45.862 55.978 44.62 62.498 48.247 70.64 C 51.874 78.794 59.969 86.303 72.556 93.181 C 55.011 83.585 41.382 81.595 31.655 87.21 C 25.368 90.833 22.795 95.899 23.937 102.42 C 24.891 109.119 29.183 113.471 36.801 115.461 C 46.326 117.81 58.249 115.103 72.544 107.308 C 54.81 117.082 46.138 127.406 46.527 138.265 C 46.904 144.964 50.343 149.578 56.818 152.117 C 64.06 154.835 68.332 154.618 74.495 148.494 C 80.388 142.637 85.169 120.968 85.169 114.346 L 85.469 118.167 C 88.424 135.696 100.424 148.024 108.168 151.047 C 114.586 153.553 118.252 153.006 122.82 147.957 C 128.681 141.477 124.878 132.209 118.013 123.34 C 113.445 117.535 106.668 112.194 97.707 107.308 C 115.24 116.904 128.882 118.895 138.596 113.279 C 145.084 109.668 147.657 104.507 146.326 97.807 Z M 90.704 105.544 C 89.085 107.081 87.228 107.856 85.132 107.856 C 83.036 107.856 81.229 107.081 79.697 105.544 C 78.166 104.006 77.413 102.242 77.413 100.251 C 77.413 98.259 78.179 96.543 79.697 95.089 C 81.229 93.634 83.036 92.92 85.132 92.92 C 87.228 92.92 89.085 93.646 90.704 95.089 C 92.323 96.543 93.139 98.259 93.139 100.251 C 93.139 102.242 92.323 104.006 90.704 105.544 Z" />
+    </mask>
+
+    <mask id="ice">
+      <!-- Everything under a white pixel will be visible -->
+      <polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" fill="white"/>
+
+      <!-- Everything under a black pixel will be invisible -->
+      <path d="M 86.6 170 L 86.6 190 L 163 145 L 163 125 Q 100 100, 50 150 86.6 170" fill="black"/>
+<!--      <path d="M 86.6 170 L 86.6 190 L 163 145 L 163 125 z" fill="black" transform="rotate(60 86.6 100)" />
+      <path d="M 86.6 170 L 86.6 190 L 163 145 L 163 125 z" fill="black" transform="rotate(120 86.6 100)" />
+      <path d="M 86.6 170 L 86.6 190 L 163 145 L 163 125 z" fill="black" transform="rotate(180 86.6 100)" />
+      <path d="M 86.6 170 L 86.6 190 L 163 145 L 163 125 z" fill="black" transform="rotate(240 86.6 100)" />
+      <path d="M 86.6 170 L 86.6 190 L 163 145 L 163 125 z" fill="black" transform="rotate(300 86.6 100)" /> -->
+      
+<!-- 
+      <polygon points="86.6,45 133,140 40,140" fill="white" />
+      <polygon points="86.6,45 133,140 40,140" fill="white" transform="rotate(33 86.6 100)"/>
+      <polygon points="86.6,45 133,140 40,140" fill="white" transform="rotate(43 86.6 100)"/>
+      <polygon points="86.6,45 133,140 40,140" fill="white" transform="rotate(83 86.6 100)"/>
+      <polygon points="86.6,45 133,140 40,140" fill="white" transform="rotate(105 86.6 100)"/>
+      <polygon points="86.6,45 133,140 40,140" fill="white" transform="rotate(119 86.6 100)"/>
+      <polygon points="86.6,45 133,140 40,140" fill="white" transform="rotate(138 86.6 100)"/>
+ -->
+    </mask>
+
+    <mask id="mountain">
       <!-- Everything under a white pixel will be visible -->
       <polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" fill="white" />
       
       <!-- Everything under a black pixel will be invisible -->
       <polygon points="86.6,55 133,130 40,130" fill="black"/>
     </mask>
-    <mask id="star">
-      <!-- Everything under a white pixel will be visible -->
-      <polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" fill="white" />
-      
-      <!-- Everything under a black pixel will be invisible -->
-      <path d="M80,55 L86.6,50 L93.2,55 L93.2,145 L86.6,150 L80,145 z" fill="black"/>
-      <path d="M80,55 L86.6,50 L93.2,55 L93.2,145 L86.6,150 L80,145 z" fill="black" transform="rotate(60 86.6 100)" />
-      <path d="M80,55 L86.6,50 L93.2,55 L93.2,145 L86.6,150 L80,145 z" fill="black" transform="rotate(120 86.6 100)" />
-    </mask>
-    <mask id="squircle">
+
+    <mask id="tunnel">
       <!-- Everything under a white pixel will be visible -->
       <polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" fill="white" />
 
       <!-- Everything under a black pixel will be invisible -->
-      <circle cx="86.6" cy="100" r="40" fill="black"/>
-      <rect x="46.6" y="100" width="80" height="40" rx="5" />
+      <path d="M 46.6 130 L 126.6 130 L 126.6 90 Q 86.6 30 46.6 90 L 46.6 90 Z" fill="black" fill-opacity="0.25"/>
+  <!--    <circle cx="86.6" cy="100" r="40" fill="black" fill-opacity="0.25"/>
+      <rect x="46.6" y="100" width="80" height="40" rx="5" fill="black" fill-opacity="0.25"/> -->
     </mask>
     <mask id="castle">
       <!-- Everything under a white pixel will be visible -->
@@ -35,24 +93,16 @@
       <rect x="76.6" y="60" width="20" height="30" rx="5" />
       <rect x="111.6" y="60" width="20" height="30" rx="5" />
     </mask>
-    <mask id="houses">
+    <mask id="village">
       <!-- Everything under a white pixel will be visible -->
       <polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" fill="white" />
       
       <!-- Everything under a black pixel will be invisible -->
-      <polygon points="86.6,50 100,65 100,85 73.3,85, 73.3,65" fill="black"/>
-      <polygon points="86.6,50 100,65 100,85 73.3,85, 73.3,65" fill="black" transform="translate(30,50)"/>
-      <polygon points="86.6,50 100,65 100,85 73.3,85, 73.3,65" fill="black" transform="translate(-30,50)"/>
+      <polygon points="86.6,50 100,65 100,85 73.3,85, 73.3,65" fill="black" fill-opacity="0.65"/>
+      <polygon points="86.6,50 100,65 100,85 73.3,85, 73.3,65" fill="black" fill-opacity="0.70" transform="translate(30,50)"/>
+      <polygon points="86.6,50 100,65 100,85 73.3,85, 73.3,65" fill="black" fill-opacity="0.75" transform="translate(-30,50)"/>
     </mask>
-    <mask id="trees">
-      <!-- Everything under a white pixel will be visible -->
-      <polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" fill="white" />
-      
-      <!-- Everything under a black pixel will be invisible -->
-      <polygon points="86.6,40 100,80 90,80 90,90 83,90 83,80 73.3,80" fill="black"/>
-      <polygon points="86.6,40 100,80 90,80 90,90 83,90 83,80 73.3,80" fill="black" transform="translate(30,50)"/>
-      <polygon points="86.6,40 100,80 90,80 90,90 83,90 83,80 73.3,80" fill="black" transform="translate(-30,50)"/>
-    </mask>
+
     <mask id="noop">
       <!-- Everything under a white pixel will be visible -->
       <polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" fill="white" />
@@ -146,7 +196,7 @@
 		var mountainColor = "#31425C";
 		var iceColor = "#225796";
 		var terrainColors = ["#C0912F","#C7E0EB","#1C3D28","#A1AD40","#94516E","#5F608E"];
-		                  //tundra  snowscape  forest  grassland  flower   fellfield 
+		                      //tundra  snowscape  forest  grassland  flower   fellfield 
 		var nearLocationColors = terrainColors.slice(0);
 		nearLocationColors.push(iceColor);
 		var fullColors = nearLocationColors.slice(0);
@@ -154,7 +204,9 @@
 		var freeColors = fullColors.slice(0);
 		freeColors.push(locationColor);
 		//Swapped out filters for masks.
-		var fullColorMasks = ["noop","star","noop","noop","noop","noop","noop","triangle"];
+		var fullColorMasks = ["tundra","snowscape","forest","grassland","flower","noop","ice","mountain"];
+		var locationMasks = ['tunnel','castle','village','village'];
+		//Location masks are named after the location: castle, village, tunnel.
 
 		//Layout changes from the original Kingdom Builder board generator:
 		//rows are numbered (according to the visible layout, not actual SVG positions) -4 to 4.
@@ -164,17 +216,30 @@
 		var locationCount = 4;
 	  	var strokeWidth = 7;
 
-		function applyMask(element,color) {
+		function applyMask(element,color,locIndex) {
 			//Apply a mask from the array to the element.
 			if (!color)
 				color = element.getAttribute("fill");
-			var maskIndex = fullColors.indexOf(color);
+
 			if (useMasks) {
-				if (maskIndex > -1)
-					element.setAttribute("mask","url(#" + fullColorMasks[maskIndex] + ")");
+
+				var maskIndex = fullColors.indexOf(color);
+				var mask;
+
+				//If it's a location, we need more information.
+				if (color == locationColor) {
+					mask = locationMasks[locIndex];		   
+				} else if (maskIndex > -1 ) {
+					mask = fullColorMasks[maskIndex];
+				}
+
+				if (mask)
+					element.setAttribute("mask","url(#" + mask + ")");
 				else
 					element.setAttribute("mask","");
+
 			}
+
 			element.setAttribute("stroke","white"); //"#d2bc76");
 			//element.setAttribute("stroke-width","20");
 		}
@@ -311,7 +376,6 @@
 			var omitNegSextant = Math.floor(Math.random()*3);
 			var omitPosSextant = Math.floor(Math.random()*3) + 3;
 			var j = 0;
-			var locArr = ['Tunnel','Castle','Village','Village'];
 			var element, row, col;
 
 			for (i = 0; i < 6; i++) {
@@ -331,7 +395,7 @@
 					}
 
 					//color and mark with a class
-					setFillAndMask(element,locationColor);
+					setFillAndMask(element,locationColor,j);
 					element.setAttribute("class","locationClass");
 
 					//seed some terrain here
@@ -408,9 +472,9 @@
 			}
 		}
 
-		function setFillAndMask(element,color) {
+		function setFillAndMask(element,color,index) {
 			element.setAttribute("fill",color);
-			applyMask(element,color);
+			applyMask(element,color,index);
 		}
 
 		init();
