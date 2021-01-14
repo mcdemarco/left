@@ -55,8 +55,8 @@
       <polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" fill="white"/>
 
       <!-- Everything under a black pixel will be invisible -->
-      <path d="M 86.6 170 L 163 125 Q 100 100, 50 150 86.6 170" fill="black" />
-      <path d="M 86.6 170 L 86.6 190 L 163 145 L 163 125 L 86.6 170" fill="black" fill-opacity="0.5"/>
+      <path d="M 86.6 170 L 163 125 Q 100 100 50 150 L 86.6 170" fill="black" />
+      <path d="M 86.6 170 L 86.6 190 L 163 145 L 163 125 Z" fill="black" fill-opacity="0.5"/>
       <path d="M 86.6 170 L 86.6 190 L 50 170 L 50 150 Z" fill="black" fill-opacity="0.75"/>
     </mask>
 
@@ -111,11 +111,11 @@
   <g transform="translate(-200,-100)">
     <g style="fill:#d2bc76;cursor:pointer;">
 
-	<polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" stroke="black" stroke-width="1" transform="translate(1297.6,150)" data-edge="1" data-row="-4" data-col="0" id="h:-4:0" mask="url(#trees)"/>
-	<polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" stroke="black" stroke-width="1" transform="translate(1124.6,150)" data-edge="1" data-row="-4" data-col="1" id="h:-4:1" mask="url(#star)"/>
-	<polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" stroke="black" stroke-width="1" transform="translate(951.6,150)" data-edge="1" data-row="-4" data-col="2" id="h:-4:2" mask="url(#squircle)"/>
-	<polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" stroke="black" stroke-width="1" transform="translate(778.6,150)" data-edge="1" data-row="-4" data-col="3" id="h:-4:3" mask="url(#castle)"/>
-	<polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" stroke="black" stroke-width="1" transform="translate(605.6,150)" data-edge="1" data-row="-4" data-col="4" id="h:-4:4" mask="url(#houses)"/>
+	<polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" stroke="black" stroke-width="1" transform="translate(1297.6,150)" data-edge="1" data-row="-4" data-col="0" id="h:-4:0"/>
+	<polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" stroke="black" stroke-width="1" transform="translate(1124.6,150)" data-edge="1" data-row="-4" data-col="1" id="h:-4:1"/>
+	<polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" stroke="black" stroke-width="1" transform="translate(951.6,150)" data-edge="1" data-row="-4" data-col="2" id="h:-4:2"/>
+	<polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" stroke="black" stroke-width="1" transform="translate(778.6,150)" data-edge="1" data-row="-4" data-col="3" id="h:-4:3"/>
+	<polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" stroke="black" stroke-width="1" transform="translate(605.6,150)" data-edge="1" data-row="-4" data-col="4" id="h:-4:4"/>
 
 	<polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" stroke="black" stroke-width="1" transform="translate(1384,300)" data-edge="1" data-row="-3" data-col="-1" id="h:-3:-1"/>
 	<polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" stroke="black" stroke-width="1" transform="translate(1211,300)" data-edge="0" data-row="-3" data-col="0" id="h:-3:0"/>
@@ -257,8 +257,8 @@
 
 			//element.setAttribute("stroke-width",4); //handy for debugging
 
-			if (document.getElementsByClassName("locationClass").length < locationCount) {
-				//All three locations exist, so populate tile with (local) terrain.
+			if (document.getElementsByClassName("locationClass").length >= locationCount) {
+				//All locations exist, so populate tile with (local) terrain.
 				element.setAttribute("class","");
 				controlledFill(element,0,true);
 			} else {
