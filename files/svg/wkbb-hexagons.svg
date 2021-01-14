@@ -1,4 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" id="hexagons" version="1.1" height="8.825in" width="10.475in" viewBox="60 0 1687 1560">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" id="hexagons" version="1.1" height="7.5in" width="10in" viewBox="60 0 2000 1700">
+  <!-- Winter Kingdom board builder by M.C.DeMarco 
+       change settings using variables at the beginning of the script below.
+  -->
   <defs>
     <mask id="tundra">
       <!-- Everything under a white pixel will be visible -->
@@ -88,7 +91,7 @@
       <rect x="76.6" y="60" width="20" height="30" rx="5" />
       <rect x="111.6" y="60" width="20" height="30" rx="5" />
     </mask>
-    <mask id="village">
+    <mask id="village1">
       <!-- Everything under a white pixel will be visible -->
       <polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" fill="white" />
       
@@ -99,6 +102,19 @@
       <rect x="71.6" y="70" width="30" height="20" fill="black" fill-opacity="0.35" transform="translate(30,50)"/>
       <polygon points="86.6,45 105,70 68.3,70" fill="black" fill-opacity="0.65" transform="translate(-30,50)"/>
       <rect x="71.6" y="70" width="30" height="20" fill="black" fill-opacity="0.35" transform="translate(-30,50)"/>
+      <!--  polygon points="86.6,50 100,65 100,85 73.3,85, 73.3,65" fill="black" fill-opacity="0.70" -->
+    </mask>
+    <mask id="village2">
+      <!-- Everything under a white pixel will be visible -->
+      <polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" fill="white" />
+      
+      <!-- Everything under a black pixel will be invisible -->
+      <polygon points="86.6,45 105,70 68.3,70" fill="black" fill-opacity="0.65" transform="translate(0,60)"/>
+      <rect x="71.6" y="70" width="30" height="20" fill="black" fill-opacity="0.35" transform="translate(0,60)"/>
+      <polygon points="86.6,45 105,70 68.3,70" fill="black" fill-opacity="0.65" transform="translate(30,10)"/>
+      <rect x="71.6" y="70" width="30" height="20" fill="black" fill-opacity="0.35" transform="translate(30,10)"/>
+      <polygon points="86.6,45 105,70 68.3,70" fill="black" fill-opacity="0.65" transform="translate(-30,10)"/>
+      <rect x="71.6" y="70" width="30" height="20" fill="black" fill-opacity="0.35" transform="translate(-30,10)"/>
       <!--  polygon points="86.6,50 100,65 100,85 73.3,85, 73.3,65" fill="black" fill-opacity="0.70" -->
     </mask>
 
@@ -185,13 +201,13 @@
   </g>
 
 	<script type="text/ecmascript"><![CDATA[
-  		//Use the masks (true) or use flat colors (false).
-  		var useMasks = true;
-  		//Allow free editing of colors (true) or limit user color changes to adjacent colors (false).
-  		var freeEdit = false;
+		//Use the masks (true) or use flat colors (false).
+		var useMasks = true;
+		//Allow free editing of colors (true) or limit user color changes to adjacent colors (false).
+		var freeEdit = false;
 
-  		//Define the colors.
-  		var locationColor = "#111111"; //"#DEDACA";
+		//Define the colors.
+		var locationColor = "#111111"; //"#DEDACA";
 		var mountainColor = "#31425C";
 		var iceColor = "#225796";
 		var terrainColors = ["#C0912F","#C7E0EB","#1C3D28","#A1AD40","#94516E","#5F608E"];
@@ -204,16 +220,14 @@
 		freeColors.push(locationColor);
 		//Swapped out filters for masks.
 		var fullColorMasks = ["tundra","snowscape","forest","grassland","flower","fellfield","ice","mountain"];
-		var locationMasks = ['tunnel','castle','village','village'];
+		var locationMasks = ['tunnel','castle','village1','village2'];
 		//Location masks are named after the location: castle, village, tunnel.
 
 		//Layout changes from the original Kingdom Builder board generator:
 		//rows are numbered (according to the visible layout, not actual SVG positions) -4 to 4.
 		//"col"s are numbered -4 to 4 along the right-to-left diagonal.
 
-		//More locations than before.
-		var locationCount = 4;
-	  	var strokeWidth = 7;
+		var strokeWidth = 7;
 
 		function applyMask(element,color,locIndex) {
 			//Apply a mask from the array to the element.
@@ -227,7 +241,7 @@
 
 				//If it's a location, we need more information.
 				if (color == locationColor) {
-					mask = locationMasks[locIndex];		   
+					mask = locationMasks[locIndex];		 
 				} else if (maskIndex > -1 ) {
 					mask = fullColorMasks[maskIndex];
 				}
@@ -257,14 +271,15 @@
 
 			//element.setAttribute("stroke-width",4); //handy for debugging
 
-			if (document.getElementsByClassName("locationClass").length >= locationCount) {
+			var nextLocation = missingLocation();
+			if (!nextLocation) {
 				//All locations exist, so populate tile with (local) terrain.
 				element.setAttribute("class","");
 				controlledFill(element,0,true);
 			} else {
 				//When short on locations, click converts to a new location.
-				element.setAttribute("class","locationClass");
-				setFillAndMask(element,locationColor);
+				var index = locationMasks.indexOf(nextLocation);
+				setLocation(element,index);
 			}
 			element.setAttribute("stroke-width",strokeWidth);
 		}	
@@ -287,6 +302,17 @@
 				randomFill(element,tempFillColors);
 			}
 		}	
+
+		function missingLocation() {
+			//There are more locations than in KB.  Return first missing location (name) or empty string.
+			var locationCount = locationMasks.length;
+			for (var l = 0; l < locationCount; l++) {
+				var locationName = locationMasks[l];
+				if (document.getElementsByClassName(locationName).length === 0)
+					return locationName;
+			}
+			return "";
+		}
 
 		function init() {
 			initFill();
@@ -394,8 +420,7 @@
 					}
 
 					//color and mark with a class
-					setFillAndMask(element,locationColor,j);
-					element.setAttribute("class","locationClass");
+					setLocation(element,j);
 
 					//seed some terrain here
 					seedLocationTerrain(element,2*j);
@@ -474,6 +499,13 @@
 		function setFillAndMask(element,color,index) {
 			element.setAttribute("fill",color);
 			applyMask(element,color,index);
+		}
+
+		function setLocation(element,locIndex) {
+			//the index is always passed in.
+			setFillAndMask(element,locationColor,locIndex);
+			element.setAttribute("class",locationMasks[locIndex]);
+			applyMask(element,locationColor,locIndex);
 		}
 
 		init();
