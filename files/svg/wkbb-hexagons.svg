@@ -303,15 +303,36 @@
 			}
 		}	
 
-		function missingLocation() {
-			//There are more locations than in KB.  Return first missing location (name) or empty string.
-			var locationCount = locationMasks.length;
-			for (var l = 0; l < locationCount; l++) {
-				var locationName = locationMasks[l];
-				if (document.getElementsByClassName(locationName).length === 0)
-					return locationName;
+		function getLocalTiles(element,center) {
+			//Return verified neighbors of a tile, as an array of ids.
+			var row = parseInt(element.getAttribute("data-row"));
+			var col = parseInt(element.getAttribute("data-col"));
+			var tempArray = [];
+			var returnArray = [];
+			tempArray[0] = "h:" + (row-1) + ":" + col;
+			tempArray[1] = "h:" + (row-1) + ":" + (col+1);
+			tempArray[2] = "h:" + row + ":" + (col+1);
+			tempArray[3] = "h:" + row + ":" + (col-1);
+			tempArray[4] = "h:" + (row+1) + ":" + (col-1);
+			tempArray[5] = "h:" + (row+1) + ":" + col;
+			if (center)
+				tempArray[6] = "h:" + row + ":" + col;
+			for (k = 0; k < 6; k++) {
+				if (document.getElementById(tempArray[k]))
+					returnArray.push(tempArray[k]);
 			}
-			return "";
+			return returnArray.slice(0);
+		}
+
+		function hasNeighbor(element,ofColor) {
+			//Check for a particular neighbor (by color).
+			var neighbors = getLocalTiles(element);
+			for (var n=0; n < neighbors.length; n++) {
+				var neighbor = document.getElementById(neighbors[n]);
+				if (neighbor.getAttribute("fill") == ofColor)
+					return true;
+			}
+			return false;
 		}
 
 		function init() {
@@ -355,25 +376,15 @@
 			}
 		}
 
-		function getLocalTiles(element,center) {
-			//Return verified neighbors of a tile, as an array of ids.
-			var row = parseInt(element.getAttribute("data-row"));
-			var col = parseInt(element.getAttribute("data-col"));
-			var tempArray = [];
-			var returnArray = [];
-			tempArray[0] = "h:" + (row-1) + ":" + col;
-			tempArray[1] = "h:" + (row-1) + ":" + (col+1);
-			tempArray[2] = "h:" + row + ":" + (col+1);
-			tempArray[3] = "h:" + row + ":" + (col-1);
-			tempArray[4] = "h:" + (row+1) + ":" + (col-1);
-			tempArray[5] = "h:" + (row+1) + ":" + col;
-			if (center)
-				tempArray[6] = "h:" + row + ":" + col;
-			for (k = 0; k < 6; k++) {
-				if (document.getElementById(tempArray[k]))
-					returnArray.push(tempArray[k]);
+		function missingLocation() {
+			//There are more locations than in KB.  Return first missing location (name) or empty string.
+			var locationCount = locationMasks.length;
+			for (var l = 0; l < locationCount; l++) {
+				var locationName = locationMasks[l];
+				if (document.getElementsByClassName(locationName).length === 0)
+					return locationName;
 			}
-			return returnArray.slice(0);
+			return "";
 		}
 
 		function nextFill(element,colorArray) {
@@ -406,18 +417,9 @@
 			for (i = 0; i < 6; i++) {
 				if (i != omitNegSextant && i != omitPosSextant) {
 
-					while (!element || element.getAttribute("edge") == 1) {
-
-						col = Math.floor(Math.random()*4);
-						if (i % 2 == 0)
-							col = -col;
-
-						row = Math.floor(Math.random()*4); //use "horizontal" row numbers
-						if (i < 3)
-							row = -row;
-
-						element = document.getElementById("h:" + col + ":" + row);
-					}
+					while (!element || element.getAttribute("data-edge") == 1 || element.getAttribute("fill") == locationColor || hasNeighbor(element,locationColor)) {
+						element = getCandidateLocation(i);
+				  	}
 
 					//color and mark with a class
 					setLocation(element,j);
@@ -429,6 +431,19 @@
 					element = undefined;
 					j += 1;
 				}
+			}
+
+			function getCandidateLocation(i) {
+
+				col = Math.floor(Math.random()*4);
+				if (i % 2 == 0)
+					col = -col;
+
+				row = Math.floor(Math.random()*4); //use "horizontal" row numbers
+				if (i < 3)
+					row = -row;
+
+				return document.getElementById("h:" + col + ":" + row) || getCandidateLocation();
 			}
 
 			function seedLocationTerrain(element,colorIndex) {
