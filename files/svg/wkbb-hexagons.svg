@@ -288,9 +288,9 @@
 			//Color or recolor (toggle) a tile based on neighboring colors if enough neighbors are colored (limit).
 			var edge = element.getAttribute("data-edge");
 			var tempIds = getLocalTiles(element);
-			var tempFillColors = new Array ();
+			var tempFillColors = [];
 
-			for (var i = 0; i< tempIds.length; i++) {
+			for (var i = 0; i < tempIds.length; i++) {
 				if ( ((tempColor = document.getElementById(tempIds[i]).getAttribute("fill")) != null)
 					&& tempColor != locationColor
 					&& tempFillColors.indexOf(tempColor) < 0 )
@@ -301,7 +301,62 @@
 					tempFillColors.splice(currentColorIndex,1);
 				randomFill(element,tempFillColors);
 			}
-		}	
+		}
+
+		function filler(arr,mode) {
+			//Fill one blank hex per element; returns an array of the new elements.
+			var newArr = [];
+
+			for (var a=0; a < arr.length; a++) {
+				var element = arr[a];
+				var color = element.getAttribute("fill");
+				if (mode > 0) {
+					if (mode == 1 && terrainColors.indexOf(color) < 0) {
+						//: only fill terrain
+						continue;
+					} else if (mode == 2 && color != iceColor && color != mountainColor) {
+						//: only fill skis 
+						continue;
+					}
+				}
+				var candidate = getEmptyNeighbor(element);
+				if (candidate) {
+					setFillAndMask(candidate,color);
+					newArr.push(candidate);
+				}
+			}
+			return arr.concat(newArr);
+		}
+
+		function fillTerrain() {
+			//initially we select the first six terrain elements to fill from.
+			var arr = [];
+			var allElements = document.getElementsByTagName("polygon");
+			for (var i = 0; i < allElements.length; i++) {
+				var element = allElements[i];
+				var color = element.getAttribute("fill");
+				if (color && fullColors.indexOf(color) > -1) {
+					arr.push(element);
+				}
+			}
+
+			for (var r=0; r<3; r++) {
+				//Fill region up to 8 hexes (ideally would be up to 9).
+				arr = filler(arr,r % 2);
+			}
+			//Check for small terrains and reseed.
+			// Fill the rest with alternative terrains.
+		}
+
+		function getEmptyNeighbor(element) {
+			//Returns a random unfilled neighbor.
+			var candidates = shuffle(getLocalTiles(element));
+			for (var c=0; c<candidates.length; c++) {
+				var candidate = document.getElementById(candidates[c]);
+				if (!candidate.getAttribute("fill"))
+					return candidate;
+			}
+		}
 
 		function getLocalTiles(element,center) {
 			//Return verified neighbors of a tile, as an array of ids.
@@ -344,24 +399,12 @@
 			//Initialize the board with locations and seed terrain, then fill in the rest.
 
 			//If the board isn't blank (saved user output), don't initialize.
-			if (document.getElementById("h:0:0").getAttribute("fill")) return;
+			if (document.getElementById("h:0:0").getAttribute("fill"))
+				return;
 
-			seedLocations();
-			seedTerrain(9);
-			fillTerrain(7);
+			seed();
+			fillTerrain();
 
-			function fillTerrain(tries) {
-				for (j = 0; j < tries; j++) {
-					var allElements = document.getElementsByTagName("polygon");
-					for (var i = 0; i < allElements.length; i++) {
-						var element = allElements[i];
-						if (!element.getAttribute("fill") || element.getAttribute("fill") == "null") {
-							controlledFill(element,3-0.5*j);
-							//console.log("found an unfilled tile on try " + j);
-						}
-					}
-				}
-			}
 			//Init the viewbox.
 			//shape = document.getElementsByTagName("svg")[0];
 			//shape.setAttribute("viewBox", "0 0 250 550"); 
@@ -377,7 +420,8 @@
 		}
 
 		function missingLocation() {
-			//There are more locations than in KB.  Return first missing location (name) or empty string.
+			//There are more locations than in KB. 
+			//Return first missing location (name) or empty string.
 			var locationCount = locationMasks.length;
 			for (var l = 0; l < locationCount; l++) {
 				var locationName = locationMasks[l];
@@ -405,36 +449,79 @@
 			setFillAndMask(element,colorArray[index]);
 		}
 
-		function seedLocations() {
+		function randomSki(locType) {
+			//Fill in ice or mountain.
+			var rand = Math.floor(Math.random()*4);
+			var icy = (locType != "tunnel");
+ 
+			switch(rand) {
+					case 0:
+					icy = true;
+					break;
+
+					case 3:
+					icy = false;
+					break;
+
+					default:
+					break;
+			}
+			return icy ? iceColor : mountainColor; 
+		}
+
+		function reseedTerrain(seeds) {
+			//Extra seeding for the terrain, on top of what was added with seed/fill().
+			
+			for (i = 0; i < seeds; i++) {
+				var row, col;
+
+				row = Math.floor(Math.random()*10) - 4;
+				col = Math.floor(Math.random()*10) - 4;
+
+				if (!document.getElementById("h:" + row + ":" + col) || document.getElementById("h:" + row + ":" + col).getAttribute("fill"))
+					i = i - 1;
+				else
+					setFillAndMask(document.getElementById("h:" + row + ":" + col),fullColors[i % fullColors.length]);
+			}
+		}
+
+		function seed() {
 			//Place one location each away from the edges and at least n=2? hexes apart.
-			//TODO: Verify on real boards.
+			//Simultaneously seed terrains (instead of using seedTerrain()).
 			//TODO: Relax these restrictions in free edit mode.
 			var omitNegSextant = Math.floor(Math.random()*3);
 			var omitPosSextant = Math.floor(Math.random()*3) + 3;
 			var j = 0;
 			var element, row, col;
+			var seedTerrains = shuffle(terrainColors);
 
 			for (i = 0; i < 6; i++) {
 				if (i != omitNegSextant && i != omitPosSextant) {
 
-					while (!element || element.getAttribute("data-edge") == 1 || element.getAttribute("fill") == locationColor || hasNeighbor(element,locationColor)) {
-						element = getCandidateLocation(i);
-				  	}
+					while (!element || element.getAttribute("data-edge") == 1 || element.getAttribute("fill") || hasNeighbor(element,locationColor)) {
+						element = getCandidateHex(i);
+					}
 
 					//color and mark with a class
 					setLocation(element,j);
 
-					//seed some terrain here
-					seedLocationTerrain(element,2*j);
-					seedLocationIce(row,col);
+					//seedLocationTerrain(element,2*j);
+					//seed some non-regular terrain here
+					seedLocationSki(element,j);
 
 					element = undefined;
 					j += 1;
 				}
+
+				//Seed regular terrains.
+				while (!element || element.getAttribute("fill")) {
+					element = getCandidateHex(i);
+				}
+				setFillAndMask(element,seedTerrains[i]);
+				element = undefined;
 			}
 
-			function getCandidateLocation(i) {
-
+			function getCandidateHex(i) {
 				col = Math.floor(Math.random()*4);
 				if (i % 2 == 0)
 					col = -col;
@@ -443,7 +530,7 @@
 				if (i < 3)
 					row = -row;
 
-				return document.getElementById("h:" + col + ":" + row) || getCandidateLocation();
+				return document.getElementById("h:" + col + ":" + row) || getCandidateHex();
 			}
 
 			function seedLocationTerrain(element,colorIndex) {
@@ -461,53 +548,15 @@
 				setFillAndMask(document.getElementById(neighborTiles[index]),color);
 			}
 
-			function seedLocationIce(row,col) {
+			function seedLocationSki(element,index) {
 				//Locations tend to be separated by water (ice)
-				var seedCol, seedRow = Math.floor(Math.random()) + 7;
-
-				switch (Math.floor(Math.random()*3)) {
-					case 0:
-						//use both seeds
-						break;
-					case 1:
-						//use random seedRow
-						seedRow = row + (Math.floor(Math.random()*3) - 1);
-						break;
-					case 2:
-						//use random seedCol
-						seedCol = col + (Math.floor(Math.random()*3) - 1);
-						break;
-					case 3:
-						//use random only
-						seedRow = row + (Math.floor(Math.random()*3) - 1);
-						seedCol = col + (Math.floor(Math.random()*3) - 1);
-						break;
-					case 4:
-						//do nothing
-						return;
-				}
-
-				var candidate = document.getElementById("h:" + seedRow + ":" + seedCol);
+				var type = locationMasks[index];
+				var color = randomSki(type);
+				var candidate = getEmptyNeighbor(element);
 
 				if (candidate && !candidate.getAttribute("fill")) {
-					setFillAndMask(candidate,iceColor);
+					setFillAndMask(candidate,color); 
 				}
-			}
-		}
-
-		function seedTerrain(seeds) {
-			//Extra seeding for the terrain, on top of what was added with seedLocations().
-			
-			for (i = 0; i < seeds; i++) {
-				var row, col;
-
-				row = Math.floor(Math.random()*10) - 4;
-				col = Math.floor(Math.random()*10) - 4;
-
-				if (!document.getElementById("h:" + row + ":" + col) || document.getElementById("h:" + row + ":" + col).getAttribute("fill"))
-					i = i - 1;
-				else
-					setFillAndMask(document.getElementById("h:" + row + ":" + col),fullColors[i % fullColors.length]);
 			}
 		}
 
@@ -521,6 +570,22 @@
 			setFillAndMask(element,locationColor,locIndex);
 			element.setAttribute("class",locationMasks[locIndex]);
 			applyMask(element,locationColor,locIndex);
+		}
+
+		function shuffle(arry) {
+			// return a new shuffled array
+			var arr = arry.slice(0);
+			for (var i = 0; i < arr.length; i++) {
+				// move elt from i to n
+				var n = 0;
+				while (n == 0 || n == i) {
+					n = Math.floor(Math.random() * (arr.length - 1)) + 1;
+				}
+				var temp = arr[i];
+				arr[i] = arr[n];
+				arr[n] = temp;
+			}
+			return arr;
 		}
 
 		init();
