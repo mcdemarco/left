@@ -212,6 +212,7 @@
 		var iceColor = "#225796";
 		var terrainColors = ["#C0912F","#C7E0EB","#1C3D28","#A1AD40","#94516E","#5F608E"];
 		                      //tundra  snowscape  forest  grassland  flower   fellfield 
+		var terrainColorCounts = [1,1,1,1,1,1];
 		var nearLocationColors = terrainColors.slice(0);
 		nearLocationColors.push(iceColor);
 		var fullColors = nearLocationColors.slice(0);
@@ -220,8 +221,9 @@
 		freeColors.push(locationColor);
 		//Swapped out filters for masks.
 		var fullColorMasks = ["tundra","snowscape","forest","grassland","flower","fellfield","ice","mountain"];
-		var locationMasks = ['tunnel','castle','village1','village2'];
+
 		//Location masks are named after the location: castle, village, tunnel.
+		var locationMasks = ['tunnel','castle','village1','village2'];
 
 		//Layout changes from the original Kingdom Builder board generator:
 		//rows are numbered (according to the visible layout, not actual SVG positions) -4 to 4.
@@ -313,9 +315,11 @@
 				if (mode > 0) {
 					if (mode == 1 && terrainColors.indexOf(color) < 0) {
 						//: only fill terrain
+						newArr.push(element);
 						continue;
 					} else if (mode == 2 && color != iceColor && color != mountainColor) {
-						//: only fill skis 
+						//: only fill skis
+						newArr.push(element); 
 						continue;
 					}
 				}
@@ -323,13 +327,21 @@
 				if (candidate) {
 					setFillAndMask(candidate,color);
 					newArr.push(candidate);
+					var idx = terrainColors.indexOf(color);
+					if (idx > -1)
+						terrainColorCounts[idx]++;
+					//also keep the current element
+					newArr.push(element);
+				} else {
+					//we omit the current element
 				}
 			}
-			return arr.concat(newArr);
+			return newArr;
 		}
 
 		function fillTerrain() {
-			//initially we select the first six terrain elements to fill from.
+			//Step 0: find the initial hexes set up by the seeder
+			//(one per normal terrain type, plus some alternate types).
 			var arr = [];
 			var allElements = document.getElementsByTagName("polygon");
 			for (var i = 0; i < allElements.length; i++) {
@@ -340,12 +352,33 @@
 				}
 			}
 
+			//Step 1: fill out from the first six hexes.
+			//(Because of the filling method we will not necessarily hit 8 hex regions even if nearby hexes are blank.)
+			//Also fill in some alternate terrain types while we're at it for more natural layouts.
 			for (var r=0; r<3; r++) {
 				//Fill region up to 8 hexes (ideally would be up to 9).
 				arr = filler(arr,r % 2);
 			}
-			//Check for small terrains and reseed.
-			// Fill the rest with alternative terrains.
+
+			//Step 2: refill underfilled regions for reasons explained in step 1.
+			var t;
+			for (t=0; t<terrainColors.length; t++) {
+				var startCount = terrainColorCounts[t]
+				for (var tc = startCount; tc < 7; tc++) {
+					arr = refillTerrain(terrainColors[t],arr);
+				}
+			}
+			//Step 3: check for small terrains, remove if tiny, and seed a new or second region.
+			var reseedColors = [];
+			for (t=0; t<terrainColors.length; t++) {
+				if (terrainColorCounts[t] < 3)
+					removeTerrain(t);
+				
+				if (terrainColorCounts[t] < 7) 
+					rereseedTerrain(t);
+			}
+			
+			//Step 4: fill any remaining blank hexes with alternate terrains.
 		}
 
 		function getEmptyNeighbor(element) {
@@ -467,6 +500,52 @@
 					break;
 			}
 			return icy ? iceColor : mountainColor; 
+		}
+
+		function refillTerrain(color,arr) {
+			//Add an element of color, either in the existing chunk or starting a new one, and update the tracking array.
+			var newArr = arr.slice(0);
+
+			for (var a=0; a < arr.length; a++) {
+				var element = arr[a];
+				if (element.getAttribute("fill") != color)
+					continue;
+				var candidate = getEmptyNeighbor(element);
+				if (candidate) {
+					setFillAndMask(candidate,color);
+					newArr.push(candidate);
+					var idx = terrainColors.indexOf(color);
+					terrainColorCounts[idx]++;
+					//also keep the current element
+					newArr.push(element);
+					return newArr;
+				} else {
+					//we remove the current element
+					for (var n = 0; n < newArr.length; n++) { 
+						if (newArr[n] == element) { 
+							newArr.splice(n, 1); 
+						}
+					}
+				}
+			}
+			return newArr;
+		}
+
+		function removeTerrain(idx) {
+			var allElements = document.getElementsByTagName("polygon");
+			for (var i = 0; i < allElements.length; i++) {
+				var element = allElements[i];
+				var color = element.getAttribute("fill");
+				if (color && fullColors.indexOf(color) === idx) {
+					element.setAttribute("fill","");
+					element.setAttribute("mask","");
+					terrainColorCounts[idx]--;
+				}
+			}
+			console.log("removed color ", terrainColors[idx]);
+		}
+
+		function rereseedTerrain(idx) {
 		}
 
 		function reseedTerrain(seeds) {
