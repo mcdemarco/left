@@ -125,7 +125,7 @@
   </defs>
 
   <g transform="translate(-200,-100)">
-    <g style="fill:#d2bc76;cursor:pointer;">
+    <g id="group" style="fill:#d2bc76;cursor:pointer;">
 
 	<polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" stroke="black" stroke-width="1" transform="translate(1297.6,150)" data-edge="1" data-row="-4" data-col="0" id="h:-4:0"/>
 	<polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" stroke="black" stroke-width="1" transform="translate(1124.6,150)" data-edge="1" data-row="-4" data-col="1" id="h:-4:1"/>
@@ -210,8 +210,8 @@
 		var locationColor = "#111111"; //"#DEDACA";
 		var mountainColor = "#31425C";
 		var iceColor = "#225796";
-		var terrainColors = ["#C0912F","#C7E0EB","#1C3D28","#A1AD40","#94516E","#5F608E"];
-		                      //tundra  snowscape  forest  grassland  flower   fellfield 
+		var terrainColors = ["#C0912F","#C7E0EB",  "#1C3D28","#A1AD40",  "#94516E","#5F608E"];
+		var terrainNames =  ["tundra", "snowscape","forest", "grassland","flower", "fellfield"];
 		var terrainColorCounts = [1,1,1,1,1,1];
 		var nearLocationColors = terrainColors.slice(0);
 		nearLocationColors.push(iceColor);
@@ -231,8 +231,9 @@
 
 		var strokeWidth = 7;
 
-		function applyMask(element,color,locIndex) {
+		function applyMask(elementId,color,locIndex) {
 			//Apply a mask from the array to the element.
+			var element = document.getElementById(elementId);
 			if (!color)
 				color = element.getAttribute("fill");
 
@@ -252,7 +253,6 @@
 					element.setAttribute("mask","url(#" + mask + ")");
 				else
 					element.setAttribute("mask","");
-
 			}
 
 			element.setAttribute("stroke","white"); //"#d2bc76");
@@ -277,19 +277,26 @@
 			if (!nextLocation) {
 				//All locations exist, so populate tile with (local) terrain.
 				element.setAttribute("class","");
-				controlledFill(element,0,true);
+				controlledFill(element.id,0,true);
 			} else {
 				//When short on locations, click converts to a new location.
 				var index = locationMasks.indexOf(nextLocation);
 				setLocation(element,index);
 			}
 			element.setAttribute("stroke-width",strokeWidth);
-		}	
+		}
 
-		function controlledFill(element, limit, toggle) {
+		function clear(element) {
+			//Unset terrain attributes.
+			element.setAttribute("fill","");
+			element.setAttribute("mask","");
+		}
+
+		function controlledFill(elementId, limit, toggle) {
 			//Color or recolor (toggle) a tile based on neighboring colors if enough neighbors are colored (limit).
+			var element = document.getElementById(elementId);
 			var edge = element.getAttribute("data-edge");
-			var tempIds = getLocalTiles(element);
+			var tempIds = getLocalTiles(elementId);
 			var tempFillColors = [];
 
 			for (var i = 0; i < tempIds.length; i++) {
@@ -307,6 +314,12 @@
 
 		function filler(arr,mode) {
 			//Fill one blank hex per element; returns an array of the new elements.
+			//Modes: 
+			//-1: regular terrain limited to 7
+			//0: any terrain
+			//1: regular terrain only
+			//2: ski terrain only
+
 			var newArr = [];
 
 			for (var a=0; a < arr.length; a++) {
@@ -323,13 +336,15 @@
 						continue;
 					}
 				}
-				var candidate = getEmptyNeighbor(element);
+				var candidate = getEmptyNeighbor(element.id);
 				if (candidate) {
-					setFillAndMask(candidate,color);
-					newArr.push(candidate);
 					var idx = terrainColors.indexOf(color);
-					if (idx > -1)
-						terrainColorCounts[idx]++;
+					if (mode > -1 || terrainColorCounts[idx] < 7) {
+						setFillAndMask(candidate,color);
+						newArr.push(candidate);
+						if (idx > -1)
+							terrainColorCounts[idx]++;
+					}
 					//also keep the current element
 					newArr.push(element);
 				} else {
@@ -340,10 +355,11 @@
 		}
 
 		function fillTerrain() {
+console.log("step 0");
 			//Step 0: find the initial hexes set up by the seeder
 			//(one per normal terrain type, plus some alternate types).
 			var arr = [];
-			var allElements = document.getElementsByTagName("polygon");
+			var allElements = getAllHexes();
 			for (var i = 0; i < allElements.length; i++) {
 				var element = allElements[i];
 				var color = element.getAttribute("fill");
@@ -351,7 +367,7 @@
 					arr.push(element);
 				}
 			}
-
+console.log("step 1");
 			//Step 1: fill out from the first six hexes.
 			//(Because of the filling method we will not necessarily hit 8 hex regions even if nearby hexes are blank.)
 			//Also fill in some alternate terrain types while we're at it for more natural layouts.
@@ -359,7 +375,7 @@
 				//Fill region up to 8 hexes (ideally would be up to 9).
 				arr = filler(arr,r % 2);
 			}
-
+console.log("step 2");
 			//Step 2: refill underfilled regions for reasons explained in step 1.
 			var t;
 			for (t=0; t<terrainColors.length; t++) {
@@ -368,22 +384,49 @@
 					arr = refillTerrain(terrainColors[t],arr);
 				}
 			}
-			//Step 3: check for small terrains, remove if tiny, and seed a new or second region.
-			var reseedColors = [];
+console.log("step 3a");
+			//Step 3: check for small terrains, remove if tiny, and seed a new region.
 			for (t=0; t<terrainColors.length; t++) {
-				if (terrainColorCounts[t] < 3)
+				if (terrainColorCounts[t] < 3) {
 					removeTerrain(t);
-				
-				if (terrainColorCounts[t] < 7) 
-					rereseedTerrain(t);
+					reseedTerrain(t);
+				}
 			}
-			
-			//Step 4: fill any remaining blank hexes with alternate terrains.
+console.log("step 3b");
+			for (t=0; t<terrainColors.length; t++) {
+				//Seed a second region.
+				if (terrainColorCounts[t] < 6) 
+					reseedTerrain(t);
+			}
+console.log("step 4");			
+			//Step 4: fill any remaining blank hexes with neighboring or random alternate terrains.
+			var candidates = getEmptyHexes();
+			for (var c=0; c<candidates.length; c++) {
+				skifill(candidates[c]);
+			}
 		}
 
-		function getEmptyNeighbor(element) {
-			//Returns a random unfilled neighbor.
-			var candidates = shuffle(getLocalTiles(element));
+		function getAllHexes() {
+			var hexArr = document.querySelectorAll("#group polygon");
+			return hexArr;
+		}
+
+		function getEmptyHexes() {
+			//Returns all empty hexes, as an array of elements.
+			var harr = [];
+			var allElements = getAllHexes();
+			for (var i = 0; i < allElements.length; i++) {
+				var helement = allElements[i];
+				var color = helement.getAttribute("fill");
+				if (!color)
+					harr.push(helement.id);
+			}
+			return harr;
+		}
+
+		function getEmptyNeighbor(elementId) {
+			//Returns random unfilled neighbor.
+			var candidates = shuffle(getLocalTiles(elementId));
 			for (var c=0; c<candidates.length; c++) {
 				var candidate = document.getElementById(candidates[c]);
 				if (!candidate.getAttribute("fill"))
@@ -391,8 +434,40 @@
 			}
 		}
 
-		function getLocalTiles(element,center) {
+		function getEmptyNeighborCount(element) {
+			//Returns number of unfilled neighbors.
+			var neighbors = getLocalTiles(element.id);
+			var count = 0;
+			for (var n=0; n<neighbors.length; n++) {
+				var neighbor = document.getElementById(neighbors[n]);
+				if (!neighbor.getAttribute("fill"))
+					count++;
+			}
+			return count;
+		}
+
+		function getEmptyRegion() {
+			//Returns a representative element from the largest unfilled region (3+ blank hexes).
+			var candidates = shuffle(getEmptyHexes());
+			var highCount = 1;
+			var highCandidate = null;
+
+			for (var c=0; c<candidates.length; c++) {
+				var candidateId = candidates[c];
+				var candidate = document.getElementById(candidateId);
+				var count = getEmptyNeighborCount(candidate);
+				if (count > highCount) {
+					highCount = count;
+					highCandidate = candidateId;
+				}
+			}
+
+			return highCandidate;
+		}
+
+		function getLocalTiles(elementId,includeCenter) {
 			//Return verified neighbors of a tile, as an array of ids.
+			var element = document.getElementById(elementId);
 			var row = parseInt(element.getAttribute("data-row"));
 			var col = parseInt(element.getAttribute("data-col"));
 			var tempArray = [];
@@ -403,18 +478,32 @@
 			tempArray[3] = "h:" + row + ":" + (col-1);
 			tempArray[4] = "h:" + (row+1) + ":" + (col-1);
 			tempArray[5] = "h:" + (row+1) + ":" + col;
-			if (center)
-				tempArray[6] = "h:" + row + ":" + col;
-			for (k = 0; k < 6; k++) {
+			if (includeCenter)
+				tempArray[6] = elementId; //"h:" + row + ":" + col;
+			for (k = 0; k < tempArray.length; k++) {
 				if (document.getElementById(tempArray[k]))
 					returnArray.push(tempArray[k]);
 			}
 			return returnArray.slice(0);
 		}
 
-		function hasNeighbor(element,ofColor) {
+		function getSkiNeighborColor(elementId) {
+			//Returns random ski neighbor's color or a random color.
+			var element = document.getElementById(elementId);
+			var candidates = shuffle(getLocalTiles(elementId));
+			for (var c=0; c<candidates.length; c++) {
+				var candidate = document.getElementById(candidates[c]);
+				var candidateColor = candidate.getAttribute("fill");
+				if (candidateColor == mountainColor || candidateColor == iceColor)
+					return candidateColor;
+			}
+			//If we get here, we found no appropriate neighbors.
+			return randomSki();
+		}
+
+		function hasNeighbor(elementId,ofColor) {
 			//Check for a particular neighbor (by color).
-			var neighbors = getLocalTiles(element);
+			var neighbors = getLocalTiles(elementId);
 			for (var n=0; n < neighbors.length; n++) {
 				var neighbor = document.getElementById(neighbors[n]);
 				if (neighbor.getAttribute("fill") == ofColor)
@@ -424,7 +513,10 @@
 		}
 
 		function init() {
+			console.clear();
+			console.log("Initial fill");
 			initFill();
+			console.log("Activate hexes");
 			initPolygons();
 		}
 
@@ -435,7 +527,9 @@
 			if (document.getElementById("h:0:0").getAttribute("fill"))
 				return;
 
+			console.log("Initial seed");
 			seed();
+			console.log("Fill terrain");
 			fillTerrain();
 
 			//Init the viewbox.
@@ -444,7 +538,7 @@
 		}
 
 		function initPolygons() {
-			var allElements = document.getElementsByTagName("polygon");
+			var allElements = getAllHexes();
 			for (var i = 0; i < allElements.length; i++) {
 				var element = allElements[i];
 				element.addEventListener("click",changeFill);
@@ -485,9 +579,12 @@
 		function randomSki(locType) {
 			//Fill in ice or mountain.
 			var rand = Math.floor(Math.random()*4);
-			var icy = (locType != "tunnel");
- 
-			switch(rand) {
+			var icy;
+			if (!locType)
+				icy = (rand <= 1);
+			else {
+				icy = (locType != "tunnel");				
+				switch(rand) {
 					case 0:
 					icy = true;
 					break;
@@ -498,6 +595,7 @@
 
 					default:
 					break;
+				}
 			}
 			return icy ? iceColor : mountainColor; 
 		}
@@ -510,7 +608,7 @@
 				var element = arr[a];
 				if (element.getAttribute("fill") != color)
 					continue;
-				var candidate = getEmptyNeighbor(element);
+				var candidate = getEmptyNeighbor(element.id);
 				if (candidate) {
 					setFillAndMask(candidate,color);
 					newArr.push(candidate);
@@ -532,35 +630,50 @@
 		}
 
 		function removeTerrain(idx) {
-			var allElements = document.getElementsByTagName("polygon");
+			var allElements = getAllHexes();
 			for (var i = 0; i < allElements.length; i++) {
 				var element = allElements[i];
 				var color = element.getAttribute("fill");
 				if (color && fullColors.indexOf(color) === idx) {
-					element.setAttribute("fill","");
-					element.setAttribute("mask","");
+					clear(element); 
 					terrainColorCounts[idx]--;
 				}
 			}
-			console.log("removed color ", terrainColors[idx]);
+			//console.log("removed color " + terrainNames[idx]);
 		}
 
-		function rereseedTerrain(idx) {
-		}
+		function reseedTerrain(idx, rere) {
+			//Second seed and fill for a terrain.
+			console.log("reseeding terrain " + terrainNames[idx]);
 
-		function reseedTerrain(seeds) {
-			//Extra seeding for the terrain, on top of what was added with seed/fill().
-			
-			for (i = 0; i < seeds; i++) {
-				var row, col;
-
-				row = Math.floor(Math.random()*10) - 4;
-				col = Math.floor(Math.random()*10) - 4;
-
-				if (!document.getElementById("h:" + row + ":" + col) || document.getElementById("h:" + row + ":" + col).getAttribute("fill"))
-					i = i - 1;
-				else
-					setFillAndMask(document.getElementById("h:" + row + ":" + col),fullColors[i % fullColors.length]);
+			var newseed = document.getElementById(getEmptyRegion());
+			var color = terrainColors[idx];
+			if (newseed) {
+				//console.log("reseed from " + newseed.id);
+				//need to reseed the terrain.
+				setFillAndMask(newseed,color);
+				var arr = [newseed];
+				for (var n=0; n<3; n++) {
+					arr = filler(arr,-1);
+				}
+				//Need to check whether we need a second region.
+				if (terrainColorCounts[idx] < 5) {
+					if (rere) {
+						//console.log("Could not create enough " + terrainNames[idx] + " terrain.");
+						return;
+					} else {
+						//console.log("Need more " + terrainNames[idx]);
+						reseedTerrain(idx, true);
+					}
+				}
+			} else {
+				//console.log("new empty hex region not found for " + terrainNames[idx]);
+				//Should be a rare error. Report.
+				if (terrainColorCounts[idx] < 5) {
+					//console.log("Could not create enough " + terrainNames[idx] + " terrain.");
+				} else {
+					//console.log("incomplete reseed of " + terrainNames[idx] + " terrain.");
+				}
 			}
 		}
 
@@ -577,14 +690,13 @@
 			for (i = 0; i < 6; i++) {
 				if (i != omitNegSextant && i != omitPosSextant) {
 
-					while (!element || element.getAttribute("data-edge") == 1 || element.getAttribute("fill") || hasNeighbor(element,locationColor)) {
-						element = getCandidateHex(i);
+					while (!element || element.getAttribute("data-edge") == 1 || element.getAttribute("fill") || hasNeighbor(element.id,locationColor)) {
+						element = document.getElementById(getCandidateHexId(i));
 					}
 
 					//color and mark with a class
 					setLocation(element,j);
 
-					//seedLocationTerrain(element,2*j);
 					//seed some non-regular terrain here
 					seedLocationSki(element,j);
 
@@ -594,44 +706,34 @@
 
 				//Seed regular terrains.
 				while (!element || element.getAttribute("fill")) {
-					element = getCandidateHex(i);
+					element =  document.getElementById(getCandidateHexId(i));
 				}
 				setFillAndMask(element,seedTerrains[i]);
 				element = undefined;
 			}
 
-			function getCandidateHex(i) {
-				col = Math.floor(Math.random()*4);
+			function getCandidateHexId(i) {
+				var col = Math.floor(Math.random()*4);
 				if (i % 2 == 0)
 					col = -col;
 
-				row = Math.floor(Math.random()*4); //use "horizontal" row numbers
+				var row = Math.floor(Math.random()*4); //use "horizontal" row numbers
 				if (i < 3)
 					row = -row;
 
-				return document.getElementById("h:" + col + ":" + row) || getCandidateHex();
-			}
+				var id = "h:" + col + ":" + row;
 
-			function seedLocationTerrain(element,colorIndex) {
-				//Add two different terrain elements placed randomly next to the location, cycling through terrain array.
-				var neighborTiles = getLocalTiles(element);
-
-				//first tile
-				var index = Math.floor(neighborTiles.length * Math.random());
-				var color = nearLocationColors[colorIndex % nearLocationColors.length];
-				setFillAndMask(document.getElementById(neighborTiles[index]),color);
-				neighborTiles.splice(index,1);
-				//second tile
-				index = Math.floor(neighborTiles.length * Math.random());
-				color = nearLocationColors[(colorIndex + 1) % nearLocationColors.length];
-				setFillAndMask(document.getElementById(neighborTiles[index]),color);
+				if (document.getElementById(id))
+					return id;
+				else
+					return getCandidateHexId();
 			}
 
 			function seedLocationSki(element,index) {
 				//Locations tend to be separated by water (ice)
 				var type = locationMasks[index];
 				var color = randomSki(type);
-				var candidate = getEmptyNeighbor(element);
+				var candidate = getEmptyNeighbor(element.id);
 
 				if (candidate && !candidate.getAttribute("fill")) {
 					setFillAndMask(candidate,color); 
@@ -641,14 +743,14 @@
 
 		function setFillAndMask(element,color,index) {
 			element.setAttribute("fill",color);
-			applyMask(element,color,index);
+			applyMask(element.id,color,index);
 		}
 
 		function setLocation(element,locIndex) {
 			//the index is always passed in.
 			setFillAndMask(element,locationColor,locIndex);
 			element.setAttribute("class",locationMasks[locIndex]);
-			applyMask(element,locationColor,locIndex);
+			applyMask(element.id,locationColor,locIndex);
 		}
 
 		function shuffle(arry) {
@@ -665,6 +767,12 @@
 				arr[n] = temp;
 			}
 			return arr;
+		}
+
+		function skifill(elementId) {
+			var color = getSkiNeighborColor(elementId);
+			var element = document.getElementById(elementId);
+			setFillAndMask(element,color);
 		}
 
 		init();
