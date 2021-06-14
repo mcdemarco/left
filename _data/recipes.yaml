@@ -13,14 +13,24 @@
   files:
   - name: Freak Out for Frico!
     filename: frico
+  - name: Fried Cheese
+    filename: friedCheese
   - name: Devilled Eggs with Capers
     filename: devilled
   - name: Roasted Chickpeas
     filename: chickpeas
+  - name: Sri Lankan Roasted Curry Powder
+    filename: roastedCurryPowder
+  - name: Essence of Emeril
+    filename: emeril
   - name: Pão de Queijo (Brazilian Cheese Bread)
     filename: paoDeQueijo
+  - name: No-Knead Pão de Queijo (Brazilian Cheese Bread)
+    filename: easyPaoDeQueijo
   - name: Tuscan Bean Dip
     filename: tuscanBean
+  - name: Fenugreek Tea
+    filename: fenugreekTea
   - name: Hot Toddy
     filename: toddy
   - name: Pitúies
@@ -55,6 +65,8 @@
     filename: gazpacho
   - name: Cold Zucchini Soup
     filename: coldZucchini
+  - name: Spicy Pumpkin Carrot Soup
+    filename: spicyPumpkin
 
 - name: Bread
   filename: bread
@@ -95,12 +107,20 @@
     filename: cinnamonFlatbread
   - name: Olive Oil Dough
     filename: oliveOil
+  - name: Pizza Sauce
+    filename: pizzaSauce
   - name: Pan Pizza
     filename: panPizza
   - name: Pizza Stone Pizza
     filename: pizzaPizza
+  - name: Emeril Pizza
+    filename: emerilPizza
   - name: Garlic Breadsticks
     filename: garlicBreadsticks
+  - name: Fry Dough
+    filename: fryDough
+  - name: French Toast
+    filename: frenchToast
   - name: Artisan Bread Index
     filename: artisanIndex
 
@@ -119,8 +139,8 @@
     filename: crepes
   - name: Dutch Puff
     filename: dutchPuff
-  - name: Almond Flour Muffins
-    filename: almondFlourMuffins
+  - name: Popovers
+    filename: popovers
   - name: Bran Muffins for Mom
     filename: branMuffins
   - name: Non-dairy Cornbread
@@ -139,6 +159,12 @@
     filename: carrotCorn
   - name: Savory Zucchini Muffins
     filename: zucchini
+  - name: Almond Flour Muffins
+    filename: almondFlourMuffins
+  - name: Savory Almond Flour Muffins
+    filename: savoryAFMuffins
+  - name: Pão de Queijo
+    filename: paoDeQueijo
   - name: Guinness Beer Biscuits
     filename: guinnessBiscuits
   - name: Coconut Oil Biscuits
@@ -159,22 +185,16 @@
     filename: fiddleheads
   - name: Spinach
     filename: spinach
-  - name: Roasted Cauliflower
-    filename: cauliflower
-  - name: Winter Squash
-    filename: squash
-  - name: Roasted Potatoes
-    filename: roastedPotatoes
   - name: Roasted Green Beans
     filename: roastedHaricots
-  - name: Roasted Broccoli
-    filename: roastedBroccoli
   - name: Roasted Okra
     filename: roastedOkra
+  - name: Roasted Broccoli
+    filename: roastedBroccoli
+  - name: Roasted Cauliflower
+    filename: cauliflower
   - name: Vegetarian Chili
     filename: vegetarianChili
-  - name: Tzimmes
-    filename: tzimmes
   - name: Latkes
     filename: latkes
   - name: Spinach Ricotta Latkes
@@ -183,10 +203,6 @@
     filename: polenta
   - name: Moroccan Spice Mix
     filename: spiceMix
-  - name: North African Spiced Carrot and Parsnip Salad
-    filename: carrotParsnip
-  - name: Carrot and Radish Salad 
-    filename: carrotRadish
   - name: Chickpea Salad with Fennel, Tomatoes and Olives
     filename: chickpeaFennel
   - name: Mizeria (Polish Cucumber Salad)
@@ -200,9 +216,29 @@
   - name: Breakfast Lentils
     filename: breakfastLentils
 
+- name: Roots and Squash
+  filename: roots
+  files:
+  - name: Roasted Potatoes
+    filename: roastedPotatoes
+  - name: Roasted Sweet Potatoes
+    filename: roastedSweetPotatoes
+  - name: Roasted Rutabaga
+    filename: roastedRutabaga
+  - name: Winter Squash
+    filename: squash
+  - name: Tzimmes
+    filename: tzimmes
+  - name: North African Spiced Carrot and Parsnip Salad
+    filename: carrotParsnip
+  - name: Carrot and Radish Salad
+    filename: carrotRadish
+
 - name: Rice
   filename: rice
   files:
+  - name: Brazilian Rice
+    filename: brazilianRice
   - name: Roz bil Shaghria
     filename: roz
   - name: Orzo
@@ -233,6 +269,8 @@
     filename: alfredo
   - name: Pesto
     filename: pesto
+  - name: Arugula Pesto
+    filename: arugulaPesto
   - name: Puttanesca
     filename: puttanesca
   - name: Italian Chop Suey
@@ -255,6 +293,8 @@
   files:
   - name: Meatballs
     filename: meatballs
+  - name: More Meatballs
+    filename: moreMeatballs
   - name: Lambballs
     filename: lambballs
   - name: Fake Bolognese Sauce
@@ -263,6 +303,10 @@
     filename: meatsauce
   - name: Meatloaf for Passover
     filename: meatloaf
+  - name: Cottage Pie
+    filename: cottagePie
+  - name: Pepper Steak
+    filename: pepperSteak
   - name: Beef and Bean Chili
     filename: chili
   - name: Cincinnati Chili
@@ -271,6 +315,8 @@
     filename: texasChili
   - name: Beef Curry
     filename: curry
+  - name: Sri Lankan Beef Curry
+    filename: roastedCurry
   - name: Briskette
     filename: briskette
   - name: Crockpot Briskette
@@ -285,10 +331,12 @@
 - name: Poultry
   filename: poultry
   files:
-  - name: Roasted Whole Chicken
+  - name: Roasted Whole Bird
     filename: roasted
   - name: Crockpot Roasted Chicken
     filename: crockpotRoastedChicken
+  - name: Crockpot Chicken Legs
+    filename: crockpotChickenLegs
   - name: Chicken Cacciatore
     filename: cacciatore
   - name: Turkey Chicken
@@ -305,8 +353,12 @@
     filename: tuscanChicken
   - name: Spicy Asian Chicken
     filename: asianChicken
+  - name: Baked Chicken and Rice
+    filename: bakedChickenRice
   - name: Chicken with Collards and Rice
     filename: chickenCollardRice
+  - name: Sri Lankan Coconut Chicken Curry
+    filename: chickenCurry
   - name: Treda
     filename: treda
   - name: Moroccan Spiced Chicken Stew
@@ -329,6 +381,8 @@
     filename: turkeyChili
   - name: Italian Wedding Soup
     filename: italianWedding
+  - name: Cranberry Sauce
+    filename: cranberrySauce
 
 - name: Fish
   filename: fish
@@ -339,14 +393,18 @@
     filename: pankoSalmon
   - name: Spicy Salmon
     filename: spicySalmon
-  - name: Salmon Steaks
+  - name: Pesto Salmon
+    filename: pestoSalmon
+  - name: Soy Sauce Salmon Steaks
     filename: salmonSteaks
-  - name: Broiled Salmon
+  - name: Maple Broiled Salmon
     filename: broiledSalmon
   - name: Baked Trout
     filename: trout
   - name: Baked Mackerel
     filename: mackerel
+  - name: Stuffed Whiting
+    filename: stuffedWhiting
   - name: Fried Smelt
     filename: friedSmelt
   - name: Bacalhau com Broa
@@ -429,17 +487,31 @@
     filename: pear
   - name: Blueberry Pie
     filename: blueberry
+  - name: Strawberry Rhubarb Pie
+    filename: strawberryRhubarb
   - name: Cherry Pie
     filename: cherry
   - name: Pecan Pie
     filename: pecan
+  - name: Pumpkin Pie
+    filename: pumpkin
+  - name: Blitz Puff
+    filename: blitzPuff
   - name: Rough Puff
     filename: roughPuff
   - name: Blueberry Turnovers
     filename: blueberryTurnovers
+  - name: Date Turnovers
+    filename: dateTurnovers
   - name: Pastéis de Nata
     filename: pasteisDeNata
   - name: Feta Puffs
     filename: fetaPuffs
   - name: Spanakopita
     filename: spanakopita
+
+- name: Non-Food
+  filename: non-food
+  files:
+  - name: Flaxseed Hair Gel
+    filename: flaxseedHairGel

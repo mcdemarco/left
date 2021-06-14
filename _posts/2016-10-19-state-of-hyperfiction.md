@@ -15,6 +15,8 @@ So I tried this solution on my hanging plot threads:  does My Hero get hopelessl
 
 ### Choose Your Own Thesaurus
 
+**For a more recent list, see [the Hyperfictionary](/tools/hyperfic/).**
+
 The biggest pitfall of interactive fiction is figuring out what exactly you're talking about when you say *interactive fiction*.  Is it a literary form?  Is it a game?  Both?  Either?  So let me pause to define terms, with the help of [the SF encyclopedia](http://www.sf-encyclopedia.com/entry/gamebook):
 
 * **Hyperfiction** is fiction with hyperlinks, traditionally at the end of a scene or page but sometimes inline instead.  Usually the story is told in the second person and the reader determines the plot through your quantized choices.  The canonical example is the Choose Your Own Adventure series of children's books.  Hyperfiction is also known as *hypertext fiction*, *hypertext IF*, *hypertexts*, *hyperstories*, *branching-path books*, *interactive novels*, *wovels*, *CYOA*, *cybertext*, *choice-based games*, etc.  Sometimes *hypertext* is distinguished from *CYOA* based on whether the links appear inline or at the end of a scene.

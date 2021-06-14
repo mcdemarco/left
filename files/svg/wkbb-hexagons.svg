@@ -1,6 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" id="hexagons" version="1.1" height="7.5in" width="10in" viewBox="60 0 2000 1700">
   <!-- Winter Kingdom board builder by M.C.DeMarco 
        change settings using variables at the beginning of the script below.
+       Here are some nice SVG tutorials I didn't use:  https://www.petercollingridge.co.uk/tutorials/svg/interactive/
   -->
   <defs>
     <mask id="tundra">
