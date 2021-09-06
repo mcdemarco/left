@@ -7,7 +7,7 @@ class: short
 ---
 Another year, another novel:
 
-![NaNoWriMo 2006 winner](http://www.mcdemarco.net/files/pictures/nano_2006_winner_large.gif)
+![NaNoWriMo 2006 winner](/files/pictures/nano_2006_winner_large.gif)
 
 Those who don't quite grok the National Novel Writing Month concept tend to ask what I'm doing with my novel now that it's done---submitting it, or entering it in a contest, or getting back some unspecified *results* from NaNoWriMo.  It's surprising difficult to convey the notion that the outcome of writing 50,000 words in one month is no more or less than...50,000 words.<!--break-->
 

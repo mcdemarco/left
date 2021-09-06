@@ -5,10 +5,11 @@ categories: writing
 menu: bio
 date: 2018-02-10 18:32:00
 ---
-Though most of my filk was written under a pseudonym for legal reasons, I have a few less fraught works, more of which will appear here soon.
+Though most of my filk was written under a pseudonym for legal reasons, I have a few less fraught works.
 
 * [This Train](ThisTrain.html)
 * [Eth and Ash and Thorn](EthAndAshAndThorn.html)
+* [Banned from DisCon](bannedFromDisCon.html)
 
 ## Inspiration
 

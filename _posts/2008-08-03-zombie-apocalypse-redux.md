@@ -5,7 +5,7 @@ tags: horror zombies longpost
 created: 1217737279
 class: long
 ---
-Some thoughts on zombies and genre continue here from [Zombies Ain't So Bad](http://www.mcdemarco.net/node/447).  When last we left our shambling friends, they were a species of smallpox in the larger subgenre of [apocalyptic fiction](http://www.theonion.com/content/news/al_gore_places_infant_son_in).<!--break-->
+Some thoughts on zombies and genre continue here from [Zombies Ain't So Bad](/node/447).  When last we left our shambling friends, they were a species of smallpox in the larger subgenre of [apocalyptic fiction](http://www.theonion.com/content/news/al_gore_places_infant_son_in).<!--break-->
 
 This is not yet much of an explanation; if the mysterious appeal of zombie fiction is the mysterious appeal of Armageddon, then what *is* the appeal of the apocalypse?
 

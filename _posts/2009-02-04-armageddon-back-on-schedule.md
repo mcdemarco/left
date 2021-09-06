@@ -4,7 +4,7 @@ title: Armageddon Back on Schedule
 tags: physics
 created: 1233723746
 ---
-[Fox News reports](http://www.foxnews.com/story/0,2933,483477,00.html) that the Large Hadron Collider may suck us into that [planet-eating black hole](http://www.mcdemarco.net/node/480) after all:
+[Fox News reports](http://www.foxnews.com/story/0,2933,483477,00.html) that the Large Hadron Collider may suck us into that [planet-eating black hole](/node/480) after all:
 
 > "We conclude that ... the growth of black holes to catastrophic size does not seem possible. Nonetheless, it remains true that the expected decay times are much longer (and possibly >> 1 second) than is typically predicted by other models,"<!--break--> the three state in a brief paper posted at the scientific discussion Web site ArXiv.org.
 

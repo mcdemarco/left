@@ -10,4 +10,4 @@ created: 1186454292
 
 According to the Western Union chart, the number 30 stands for "No more - the end."
 
-If the relevance of thirty is still unclear, it's part of [standard manuscript format](http://www.mcdemarco.net/sffms/info/ManuscriptFormat.html), usually as #####.  Thirty appears in [sffms](http://www.mcdemarco.net/sffms/) as the command to change ##### to a string of your choice, e.g.,  \thirty{--30--}.
+If the relevance of thirty is still unclear, it's part of [standard manuscript format](/sffms/info/ManuscriptFormat.html), usually as #####.  Thirty appears in [sffms](/sffms/) as the command to change ##### to a string of your choice, e.g.,  \thirty{--30--}.

@@ -1,0 +1,790 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" id="hexagons" version="1.1" height="7.5in" width="10in" viewBox="0 0 1700 1500">
+  <!-- Winter Kingdom board builder by M.C.DeMarco 
+       change settings using variables at the beginning of the script below.
+       Here are some nice SVG tutorials I didn't use:  https://www.petercollingridge.co.uk/tutorials/svg/interactive/
+  -->
+  <defs>
+    <mask id="tundra">
+      <!-- Everything under a white pixel will be visible -->
+      <polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" fill="white"/>
+
+      <path fill="black" d="M 93 57 C 90 59 91 69 94 62 C 96 60 96 57 93 57 Z M 86 60 C 79 61 92 70 87 62 L 87 61 Z M 36 75 C 34 80 42 83 44 85 C 47 81 39 78 36 75 Z M 56 77 C 53 78 52 86 55 83 C 57 81 60 77 56 77 Z M 138 77 C 134 80 135 90 139 83 C 140 81 141 78 138 77 Z M 47 78 C 46 81 48 84 50 83 C 51 81 51 78 48 78 Z M 100 73 C 97 73 97 76 99 78 C 102 85 103 75 100 73 Z M 131 80 C 123 81 136 91 132 83 C 132 82 131 81 131 80 Z M 107 76 L 106 77 L 106 78 C 101 86 114 77 107 76 Z M 153 103 C 150 106 142 109 145 113 C 147 111 155 108 153 103 Z M 51 99 C 48 100 49 103 50 105 C 54 112 55 102 51 99 Z M 133 105 C 129 105 132 109 134 111 C 137 114 136 106 133 105 Z M 81 104 C 77 107 88 118 85 109 C 84 107 83 105 81 104 Z M 141 106 C 138 106 138 109 139 111 C 141 112 143 109 142 106 Z M 91 106 C 87 108 88 118 91 111 C 92 110 95 106 91 106 Z M 58 102 C 58 103 57 104 57 105 C 53 113 66 103 58 102 Z M 57 129 C 55 134 63 137 65 140 C 68 135 60 132 57 129 Z M 77 131 C 74 132 73 138 75 136 C 78 135 78 134 77 131 Z M 69 132 C 69 132 69 132 68 133 C 67 135 70 140 71 138 C 71 136 72 132 70 132 C 70 132 70 132 69 132 Z M 114 122 C 112 123 111 125 110 127 C 107 136 118 125 114 122 Z M 104 124 C 100 124 103 128 104 129 C 107 136 108 126 104 124 Z M 33 116 C 27 117 34 121 35 123 C 39 126 35 117 33 116 Z M 38 118 C 38 119 37 120 38 121 C 38 130 44 118 38 118 Z"/>
+    </mask>
+    <mask id="snowscape">
+      <!-- Everything under a white pixel will be visible -->
+      <polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" fill="white"/>
+      
+      <!-- Everything under a black pixel will be invisible -->
+      <path d="M 82 40 C 82 37 88.37 37 88 40 C 89 54 89 67 88 81 C 88 82.39 86.85 83 85 83 C 84 83 82 82.39 82 81 C 81 67 81 54 82 40 Z M 101 48 C 104 46 107 51 104 53 C 93 60 81 67 69 73 C 68 74 66 73 66 72 C 65 71 65 69 66 68 C 77.78 60 89 54 101 48 Z M 104 68 C 105 69 105 71 105 72 C 104 73 102 74 101 73 C 89 67 77.78 60 66 53 C 64.09 51 66.85 46 69 48 C 81 54 93 60 104 68 Z" fill="black"/>
+      <path d="M 82 40 C 82 37 88.37 37 88 40 C 89 54 89 67 88 81 C 88 82.39 86.85 83 85 83 C 84 83 82 82.39 82 81 C 81 67 81 54 82 40 Z M 101 48 C 104 46 107 51 104 53 C 93 60 81 67 69 73 C 68 74 66 73 66 72 C 65 71 65 69 66 68 C 77.78 60 89 54 101 48 Z M 104 68 C 105 69 105 71 105 72 C 104 73 102 74 101 73 C 89 67 77.78 60 66 53 C 64.09 51 66.85 46 69 48 C 81 54 93 60 104 68 Z" fill="black" transform="rotate(120 86.6 100)"/>
+      <path d="M 82 40 C 82 37 88.37 37 88 40 C 89 54 89 67 88 81 C 88 82.39 86.85 83 85 83 C 84 83 82 82.39 82 81 C 81 67 81 54 82 40 Z M 101 48 C 104 46 107 51 104 53 C 93 60 81 67 69 73 C 68 74 66 73 66 72 C 65 71 65 69 66 68 C 77.78 60 89 54 101 48 Z M 104 68 C 105 69 105 71 105 72 C 104 73 102 74 101 73 C 89 67 77.78 60 66 53 C 64.09 51 66.85 46 69 48 C 81 54 93 60 104 68 Z" fill="black" transform="rotate(240 86.6 100)"/>
+    </mask>
+    <mask id="forest">
+      <!-- Everything under a white pixel will be visible -->
+      <polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" fill="white"/>
+      
+      <!-- Everything under a black pixel will be invisible -->
+      <polygon points="86.6,40 100,80 90,80 90,90 83,90 83,80 73.3,80" fill="black" fill-opacity="0.16"/>
+      <polygon points="86.6,40 100,80 90,80 90,90 83,90 83,80 73.3,80" fill="black" fill-opacity="0.14" transform="translate(30,50)"/>
+      <polygon points="86.6,40 100,80 90,80 90,90 83,90 83,80 73.3,80" fill="black" fill-opacity="0.15" transform="translate(-30,50)"/>
+    </mask>
+    <mask id="grassland">
+      <polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" fill="white"/>
+      
+      <path stroke="black" stroke-width="6" d="M 65 63.8 C 63 72.48 66 77 70 84"/>
+      <path stroke="black" stroke-width="6" d="M 79 53 C 79 53 78.14 72.48 83 82"/>
+      <path stroke="black" stroke-width="6" d="M 95 68.76 C 95 68.76 95 82 91 84"/>
+      <path stroke="black" stroke-width="6" d="M 108 102 C 108 115 117 117 117 130"/>
+      <path stroke="black" stroke-width="6" d="M 123 106 C 123 106 131 111 128.82 126"/>
+      <path stroke="black" stroke-width="6" d="M 141 110 C 141 110 139 125 139 126"/>
+      <path stroke="black" stroke-width="6" d="M 36 105 C 36 114 41 118 44 127"/>
+      <path stroke="black" stroke-width="6" d="M 50 99 C 49 108 51.85 115 54 123"/>
+      <path stroke="black" stroke-width="6" d="M 61 110 C 61 110 65 119 65 124"/>
+    </mask>
+    <mask id="flower">
+      <polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" fill="white"/>
+      
+      <path fill="black" fill-opacity="0.25" d="M 146 97 C 145 91 140 86 133 85.04 C 123 82 111 85 97.72 93 C 115.44 83 124 73 123 62 C 123 55 120 51 114 48 C 107 45.75 100 47 94 53 C 88 60 85 71 85 86 C 85 66 80 54 69 49 C 63 46 57 46 51 51.09 C 45 55 44.62 62 48 70.64 C 51 78 59 86 72 93 C 55 83 41 81 31 87.21 C 25 90 22 95 23 102.42 C 24 109 29 113 36 115 C 46 117.81 58 115 72 107 C 54.81 117 46 127 46 138 C 46 144 50 149 56 152 C 64.06 154 68 154 74 148 C 80 142 85 120 85 114 L 85 118 C 88 135 100 148 108 151 C 114 153 118 153 122.82 147 C 128 141 124 132 118 123.34 C 113 117 106 112 97 107 C 115.24 116 128 118 138 113 C 145 109 147 104 146 97 Z M 90 105 C 89 107 87 107 85 107 C 83 107 81 107 79 105 C 78 104 77 102 77 100 C 77 98 78 96 79 95 C 81 93 83 92.92 85 92.92 C 87 92.92 89 93 90 95 C 92 96 93 98 93 100 C 93 102 92 104 90 105 Z"/>
+    </mask>
+    <mask id="fellfield">
+      <polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" fill="white"/>
+
+      <path fill="black" d="M 56 75 C 59 71 61 68 66 66 C 71 64 78 65 82 68 C 84 69 86 72 87 74 C 88 76 87 77 85 77 C 83 74 80 71 76 69 C 71 67 64 68 60 72 C 59 74 57 75 55 77 C 55 78 54 77 54 77 C 55 76 55 76 56 75 Z M 82 68 C 85 64 90 60 96 57 C 100 56 105 57 109 59 C 113 61 114 65 116 68 C 115 69 114 71 113 69 C 111 67 109 63 104 61 C 99 59 94 60 90 63 C 87 65 85 67 83 69 C 80 71 81 68 82 68 Z" fill-opacity="0.26"/>
+      <path fill="black" d="M 56 75 C 59 71 61 68 66 66 C 71 64 78 65 82 68 C 84 69 86 72 87 74 C 88 76 87 77 85 77 C 83 74 80 71 76 69 C 71 67 64 68 60 72 C 59 74 57 75 55 77 C 55 78 54 77 54 77 C 55 76 55 76 56 75 Z M 82 68 C 85 64 90 60 96 57 C 100 56 105 57 109 59 C 113 61 114 65 116 68 C 115 69 114 71 113 69 C 111 67 109 63 104 61 C 99 59 94 60 90 63 C 87 65 85 67 83 69 C 80 71 81 68 82 68 Z" fill-opacity="0.25" transform="translate(30,60)"/>
+      <path fill="black" d="M 56 75 C 59 71 61 68 66 66 C 71 64 78 65 82 68 C 84 69 86 72 87 74 C 88 76 87 77 85 77 C 83 74 80 71 76 69 C 71 67 64 68 60 72 C 59 74 57 75 55 77 C 55 78 54 77 54 77 C 55 76 55 76 56 75 Z M 82 68 C 85 64 90 60 96 57 C 100 56 105 57 109 59 C 113 61 114 65 116 68 C 115 69 114 71 113 69 C 111 67 109 63 104 61 C 99 59 94 60 90 63 C 87 65 85 67 83 69 C 80 71 81 68 82 68 Z" fill-opacity="0.27" transform="translate(-30,40)"/>
+    </mask>
+
+    <mask id="ice">
+      <!-- Everything under a white pixel will be visible -->
+      <polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" fill="white"/>
+
+      <!-- Everything under a black pixel will be invisible -->
+      <path d="M 86.6 170 L 163 125 Q 100 100 50 150 L 86.6 170" fill="black"/>
+      <path d="M 86.6 170 L 86.6 190 L 163 145 L 163 125 Z" fill="black" fill-opacity="0.5"/>
+      <path d="M 86.6 170 L 86.6 190 L 50 170 L 50 150 Z" fill="black" fill-opacity="0.75"/>
+    </mask>
+
+    <mask id="mountain">
+      <!-- Everything under a white pixel will be visible -->
+      <polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" fill="white"/>
+      
+      <!-- Everything under a black pixel will be invisible -->
+      <polygon points="86.6,55 133,130 40,130" fill="black" fill-opacity="0.5"/>
+      <polygon points="86.6,55 109,92 95,85 70,100 62,95" fill="black"/>
+    </mask>
+
+    <mask id="tunnel">
+      <!-- Everything under a white pixel will be visible -->
+      <polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" fill="white"/>
+
+      <!-- Everything under a black pixel will be invisible -->
+      <path d="M 46.6 130 L 126.6 130 L 126.6 90 Q 86.6 30 46.6 90 L 46.6 90 Z" fill="black" fill-opacity="0.25"/>
+  <!--    <circle cx="86.6" cy="100" r="40" fill="black" fill-opacity="0.25"/>
+      <rect x="46.6" y="100" width="80" height="40" rx="5" fill="black" fill-opacity="0.25"/> -->
+    </mask>
+    <mask id="castle">
+      <!-- Everything under a white pixel will be visible -->
+      <polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" fill="white"/>
+
+      <!-- Everything under a black pixel will be invisible -->
+      <rect x="46.6" y="80" width="80" height="60"/>
+      <rect x="41.6" y="60" width="20" height="30" rx="5"/>
+      <rect x="76.6" y="60" width="20" height="30" rx="5"/>
+      <rect x="111.6" y="60" width="20" height="30" rx="5"/>
+    </mask>
+    <mask id="village1">
+      <!-- Everything under a white pixel will be visible -->
+      <polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" fill="white"/>
+      
+      <!-- Everything under a black pixel will be invisible -->
+      <polygon points="86.6,45 105,70 68.3,70" fill="black" fill-opacity="0.65"/>
+      <rect x="71.6" y="70" width="30" height="20" fill="black" fill-opacity="0.35"/>
+      <polygon points="86.6,45 105,70 68.3,70" fill="black" fill-opacity="0.65" transform="translate(30,50)"/>
+      <rect x="71.6" y="70" width="30" height="20" fill="black" fill-opacity="0.35" transform="translate(30,50)"/>
+      <polygon points="86.6,45 105,70 68.3,70" fill="black" fill-opacity="0.65" transform="translate(-30,50)"/>
+      <rect x="71.6" y="70" width="30" height="20" fill="black" fill-opacity="0.35" transform="translate(-30,50)"/>
+      <!--  polygon points="86.6,50 100,65 100,85 73.3,85, 73.3,65" fill="black" fill-opacity="0.70" -->
+    </mask>
+    <mask id="village2">
+      <!-- Everything under a white pixel will be visible -->
+      <polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" fill="white"/>
+      
+      <!-- Everything under a black pixel will be invisible -->
+      <polygon points="86.6,45 105,70 68.3,70" fill="black" fill-opacity="0.65" transform="translate(0,60)"/>
+      <rect x="71.6" y="70" width="30" height="20" fill="black" fill-opacity="0.35" transform="translate(0,60)"/>
+      <polygon points="86.6,45 105,70 68.3,70" fill="black" fill-opacity="0.65" transform="translate(30,10)"/>
+      <rect x="71.6" y="70" width="30" height="20" fill="black" fill-opacity="0.35" transform="translate(30,10)"/>
+      <polygon points="86.6,45 105,70 68.3,70" fill="black" fill-opacity="0.65" transform="translate(-30,10)"/>
+      <rect x="71.6" y="70" width="30" height="20" fill="black" fill-opacity="0.35" transform="translate(-30,10)"/>
+      <!--  polygon points="86.6,50 100,65 100,85 73.3,85, 73.3,65" fill="black" fill-opacity="0.70" -->
+    </mask>
+
+    <mask id="noop">
+      <!-- Everything under a white pixel will be visible -->
+      <polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" fill="white"/>
+    </mask>
+  </defs>
+
+  <g transform="translate(-200,-100)">
+    <g id="group" style="fill:#d2bc76;cursor:pointer;">
+
+	<polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" stroke="white" stroke-width="7" transform="translate(1297.6,150)" data-edge="1" data-row="-4" data-col="0" id="h:-4:0" fill="#C0912F" mask="url(#tundra)"/>
+	<polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" stroke="white" stroke-width="7" transform="translate(1124.6,150)" data-edge="1" data-row="-4" data-col="1" id="h:-4:1" fill="#1C3D28" mask="url(#forest)"/>
+	<polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" stroke="white" stroke-width="7" transform="translate(951.6,150)" data-edge="1" data-row="-4" data-col="2" id="h:-4:2" fill="#1C3D28" mask="url(#forest)"/>
+	<polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" stroke="white" stroke-width="7" transform="translate(778.6,150)" data-edge="1" data-row="-4" data-col="3" id="h:-4:3" fill="#1C3D28" mask="url(#forest)"/>
+	<polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" stroke="white" stroke-width="7" transform="translate(605.6,150)" data-edge="1" data-row="-4" data-col="4" id="h:-4:4" fill="#225796" mask="url(#ice)"/>
+
+	<polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" stroke="white" stroke-width="7" transform="translate(1384,300)" data-edge="1" data-row="-3" data-col="-1" id="h:-3:-1" fill="#C0912F" mask="url(#tundra)"/>
+	<polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" stroke="white" stroke-width="7" transform="translate(1211,300)" data-edge="0" data-row="-3" data-col="0" id="h:-3:0" fill="#C0912F" mask="url(#tundra)"/>
+	<polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" stroke="white" stroke-width="7" transform="translate(1038,300)" data-edge="0" data-row="-3" data-col="1" id="h:-3:1" fill="#C0912F" mask="url(#tundra)"/>
+	<polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" stroke="white" stroke-width="7" transform="translate(865,300)" data-edge="0" data-row="-3" data-col="2" id="h:-3:2" fill="#1C3D28" mask="url(#forest)"/>
+	<polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" stroke="white" stroke-width="7" transform="translate(692,300)" data-edge="0" data-row="-3" data-col="3" id="h:-3:3" fill="#1C3D28" mask="url(#forest)"/>
+	<polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" stroke="white" stroke-width="7" transform="translate(519,300)" data-edge="1" data-row="-3" data-col="4" id="h:-3:4" fill="#1C3D28" mask="url(#forest)"/>
+
+	<polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" stroke="white" stroke-width="7" transform="translate(1470.6,450)" data-edge="1" data-row="-2" data-col="-2" id="h:-2:-2" fill="#5F608E" mask="url(#fellfield)"/>
+	<polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" stroke="white" stroke-width="7" transform="translate(1297.6,450)" data-edge="0" data-row="-2" data-col="-1" id="h:-2:-1" fill="#C0912F" mask="url(#tundra)"/>
+	<polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" stroke="white" stroke-width="7" transform="translate(1124.6,450)" data-edge="0" data-row="-2" data-col="0" id="h:-2:0" fill="#C0912F" mask="url(#tundra)"/>
+	<polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" stroke="white" stroke-width="7" transform="translate(951.6,450)" data-edge="0" data-row="-2" data-col="1" id="h:-2:1" fill="#1C3D28" mask="url(#forest)"/>
+	<polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" stroke="white" stroke-width="7" transform="translate(778.6,450)" data-edge="0" data-row="-2" data-col="2" id="h:-2:2" fill="#1C3D28" mask="url(#forest)"/>
+	<polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" stroke="white" stroke-width="7" transform="translate(605.6,450)" data-edge="0" data-row="-2" data-col="3" id="h:-2:3" fill="#1C3D28" mask="url(#forest)"/>
+	<polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" stroke="white" stroke-width="7" transform="translate(432.6,450)" data-edge="1" data-row="-2" data-col="4" id="h:-2:4" fill="#1C3D28" mask="url(#forest)"/>
+
+	<polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" stroke="white" stroke-width="7" transform="translate(1557,600)" data-edge="1" data-row="-1" data-col="-3" id="h:-1:-3" fill="#5F608E" mask="url(#fellfield)"/>
+	<polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" stroke="white" stroke-width="7" transform="translate(1384,600)" data-edge="0" data-row="-1" data-col="-2" id="h:-1:-2" fill="#5F608E" mask="url(#fellfield)"/>
+	<polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" stroke="white" stroke-width="7" transform="translate(1211,600)" data-edge="0" data-row="-1" data-col="-1" id="h:-1:-1" fill="#C0912F" mask="url(#tundra)"/>
+	<polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" stroke="white" stroke-width="7" transform="translate(1038,600)" data-edge="0" data-row="-1" data-col="0" id="h:-1:0" fill="#1C3D28" mask="url(#forest)"/>
+	<polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" stroke="white" stroke-width="7" transform="translate(865,600)" data-edge="0" data-row="-1" data-col="1" id="h:-1:1" fill="#1C3D28" mask="url(#forest)"/>
+	<polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" stroke="white" stroke-width="7" transform="translate(692,600)" data-edge="0" data-row="-1" data-col="2" id="h:-1:2" fill="#111111" mask="url(#village2)" class="village2"/>
+	<polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" stroke="white" stroke-width="7" transform="translate(519,600)" data-edge="0" data-row="-1" data-col="3" id="h:-1:3" fill="#1C3D28" mask="url(#forest)"/>
+	<polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" stroke="white" stroke-width="7" transform="translate(346,600)" data-edge="1" data-row="-1" data-col="4" id="h:-1:4" fill="#1C3D28" mask="url(#forest)"/>
+
+	<polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" stroke="white" stroke-width="7" transform="translate(1643.6,750)" data-edge="1" data-row="0" data-col="-4" id="h:0:-4" fill="#5F608E" mask="url(#fellfield)"/>
+	<polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" stroke="white" stroke-width="7" transform="translate(1470.6,750)" data-edge="0" data-row="0" data-col="-3" id="h:0:-3" fill="#111111" mask="url(#castle)" class="castle"/>
+	<polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" stroke="white" stroke-width="7" transform="translate(1297.6,750)" data-edge="0" data-row="0" data-col="-2" id="h:0:-2" fill="#225796" mask="url(#ice)"/>
+	<polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" stroke="white" stroke-width="7" transform="translate(1124.6,750)" data-edge="0" data-row="0" data-col="-1" id="h:0:-1" fill="#94516E" mask="url(#flower)"/>
+	<polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" stroke="white" stroke-width="7" transform="translate(951.6,750)" data-edge="0" data-row="0" data-col="0" id="h:0:0" fill="#94516E" mask="url(#flower)"/>
+	<polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" stroke="white" stroke-width="7" transform="translate(778.6,750)" data-edge="0" data-row="0" data-col="1" id="h:0:1" fill="#1C3D28" mask="url(#forest)"/>
+	<polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" stroke="white" stroke-width="7" transform="translate(605.6,750)" data-edge="0" data-row="0" data-col="2" id="h:0:2" fill="#225796" mask="url(#ice)"/>
+	<polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" stroke="white" stroke-width="7" transform="translate(432.6,750)" data-edge="0" data-row="0" data-col="3" id="h:0:3" fill="#225796" mask="url(#ice)"/>
+	<polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" stroke="white" stroke-width="7" transform="translate(259.6,750)" data-edge="1" data-row="0" data-col="4" id="h:0:4" fill="#1C3D28" mask="url(#forest)"/>
+
+	<polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" stroke="white" stroke-width="7" transform="translate(1557,900)" data-edge="1" data-row="1" data-col="-4" id="h:1:-4" fill="#5F608E" mask="url(#fellfield)"/>
+	<polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" stroke="white" stroke-width="7" transform="translate(1384,900)" data-edge="0" data-row="1" data-col="-3" id="h:1:-3" fill="#225796" mask="url(#ice)"/>
+	<polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" stroke="white" stroke-width="7" transform="translate(1211,900)" data-edge="0" data-row="1" data-col="-2" id="h:1:-2" fill="#225796" mask="url(#ice)"/>
+	<polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" stroke="white" stroke-width="7" transform="translate(1038,900)" data-edge="0" data-row="1" data-col="-1" id="h:1:-1" fill="#94516E" mask="url(#flower)"/>
+	<polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" stroke="white" stroke-width="7" transform="translate(865,900)" data-edge="0" data-row="1" data-col="0" id="h:1:0" fill="#111111" mask="url(#tunnel)" class="tunnel"/>
+	<polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" stroke="white" stroke-width="7" transform="translate(692,900)" data-edge="0" data-row="1" data-col="1" id="h:1:1" fill="#31425C" mask="url(#mountain)"/>
+	<polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" stroke="white" stroke-width="7" transform="translate(519,900)" data-edge="0" data-row="1" data-col="2" id="h:1:2" fill="#225796" mask="url(#ice)"/>
+	<polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" stroke="white" stroke-width="7" transform="translate(346,900)" data-edge="1" data-row="1" data-col="3" id="h:1:3" fill="#1C3D28" mask="url(#forest)"/>
+
+	<polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" stroke="white" stroke-width="7" transform="translate(1470.6,1050)" data-edge="1" data-row="2" data-col="-4" id="h:2:-4" fill="#5F608E" mask="url(#fellfield)"/>
+	<polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" stroke="white" stroke-width="7" transform="translate(1297.6,1050)" data-edge="0" data-row="2" data-col="-3" id="h:2:-3" fill="#225796" mask="url(#ice)"/>
+	<polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" stroke="white" stroke-width="7" transform="translate(1124.6,1050)" data-edge="0" data-row="2" data-col="-2" id="h:2:-2" fill="#C7E0EB" mask="url(#snowscape)"/>
+	<polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" stroke="white" stroke-width="7" transform="translate(951.6,1050)" data-edge="0" data-row="2" data-col="-1" id="h:2:-1" fill="#94516E" mask="url(#flower)"/>
+	<polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" stroke="white" stroke-width="7" transform="translate(778.6,1050)" data-edge="0" data-row="2" data-col="0" id="h:2:0" fill="#225796" mask="url(#ice)"/>
+	<polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" stroke="white" stroke-width="7" transform="translate(605.6,1050)" data-edge="0" data-row="2" data-col="1" id="h:2:1" fill="#111111" mask="url(#village1)" class="village1"/>
+	<polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" stroke="white" stroke-width="7" transform="translate(432.6,1050)" data-edge="1" data-row="2" data-col="2" id="h:2:2" fill="#225796" mask="url(#ice)"/>
+
+	<polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" stroke="white" stroke-width="7" transform="translate(1384,1200)" data-edge="1" data-row="3" data-col="-4" id="h:3:-4" fill="#C7E0EB" mask="url(#snowscape)"/>
+	<polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" stroke="white" stroke-width="7" transform="translate(1211,1200)" data-edge="0" data-row="3" data-col="-3" id="h:3:-3" fill="#C7E0EB" mask="url(#snowscape)"/>
+	<polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" stroke="white" stroke-width="7" transform="translate(1038,1200)" data-edge="0" data-row="3" data-col="-2" id="h:3:-2" fill="#C7E0EB" mask="url(#snowscape)"/>
+	<polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" stroke="white" stroke-width="7" transform="translate(865,1200)" data-edge="0" data-row="3" data-col="-1" id="h:3:-1" fill="#225796" mask="url(#ice)"/>
+	<polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" stroke="white" stroke-width="7" transform="translate(692,1200)" data-edge="0" data-row="3" data-col="0" id="h:3:0" fill="#225796" mask="url(#ice)"/>
+	<polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" stroke="white" stroke-width="7" transform="translate(519,1200)" data-edge="1" data-row="3" data-col="1" id="h:3:1" fill="#225796" mask="url(#ice)"/>
+
+	<polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" stroke="white" stroke-width="7" transform="translate(1297.6,1350)" data-edge="1" data-row="4" data-col="-4" id="h:4:-4" fill="#C7E0EB" mask="url(#snowscape)"/>
+	<polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" stroke="white" stroke-width="7" transform="translate(1124.6,1350)" data-edge="1" data-row="4" data-col="-3" id="h:4:-3" fill="#C7E0EB" mask="url(#snowscape)"/>
+	<polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" stroke="white" stroke-width="7" transform="translate(951.6,1350)" data-edge="1" data-row="4" data-col="-2" id="h:4:-2" fill="#C7E0EB" mask="url(#snowscape)"/>
+	<polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" stroke="white" stroke-width="7" transform="translate(778.6,1350)" data-edge="1" data-row="4" data-col="-1" id="h:4:-1" fill="#225796" mask="url(#ice)"/>
+	<polygon points="86.6,200 173,150 173,50 86.6,0 0,50 0,150 86.6,200" stroke="white" stroke-width="7" transform="translate(605.6,1350)" data-edge="1" data-row="4" data-col="0" id="h:4:0" fill="#225796" mask="url(#ice)"/>
+
+    </g>
+  </g>
+
+	<script type="text/ecmascript"><![CDATA[
+		//Use the masks (true) or use flat colors (false).
+		var useMasks = true;
+		//Allow free editing of colors (true) or limit user color changes to adjacent colors (false).
+		var freeEdit = false;
+
+		//Define the colors.
+		var locationColor = "#111111"; //"#DEDACA";
+		var mountainColor = "#31425C";
+		var iceColor = "#225796";
+		var terrainColors = ["#C0912F","#C7E0EB",  "#1C3D28","#A1AD40",  "#94516E","#5F608E"];
+		var terrainNames =  ["tundra", "snowscape","forest", "grassland","flower", "fellfield"];
+		var terrainColorCounts = [1,1,1,1,1,1];
+		var nearLocationColors = terrainColors.slice(0);
+		nearLocationColors.push(iceColor);
+		var fullColors = nearLocationColors.slice(0);
+		fullColors.push(mountainColor);
+		var freeColors = fullColors.slice(0);
+		freeColors.push(locationColor);
+		//Swapped out filters for masks.
+		var fullColorMasks = ["tundra","snowscape","forest","grassland","flower","fellfield","ice","mountain"];
+
+		//Location masks are named after the location: castle, village, tunnel.
+		var locationMasks = ['tunnel','castle','village1','village2'];
+
+		//Layout changes from the original Kingdom Builder board generator:
+		//rows are numbered (according to the visible layout, not actual SVG positions) -4 to 4.
+		//"col"s are numbered -4 to 4 along the right-to-left diagonal.
+
+		var strokeWidth = 7;
+
+		function applyMask(elementId,color,locIndex) {
+			//Apply a mask from the array to the element.
+			var element = document.getElementById(elementId);
+			if (!color)
+				color = element.getAttribute("fill");
+
+			if (useMasks) {
+
+				var maskIndex = fullColors.indexOf(color);
+				var mask;
+
+				//If it's a location, we need more information.
+				if (color == locationColor) {
+					mask = locationMasks[locIndex];	 
+				} else if (maskIndex > -1 ) {
+					mask = fullColorMasks[maskIndex];
+				}
+
+				if (mask)
+					element.setAttribute("mask","url(#" + mask + ")");
+				else
+					element.setAttribute("mask","");
+			}
+
+			element.setAttribute("stroke","white");
+		}
+
+		function changeFill(evt) {
+			//Click to change the terrain type of a tile, with special behavior on locations.
+			var element = evt.target;
+			var elementId = element.id;
+
+			if (freeEdit) {
+				//If free editing is allowed, use a random color and return.
+				//randomFill(element.id,freeColors);
+				//That was annoying, so cycle through the list.
+				nextFill(elementId,freeColors);
+				return;
+			}
+
+			var nextLocation = missingLocation();
+			if (!nextLocation) {
+				//All locations exist, so populate tile with (local) terrain.
+				element.setAttribute("class","");
+				controlledFill(elementId,0,true);
+			} else {
+				//When short on locations, click converts to a new location.
+				var index = locationMasks.indexOf(nextLocation);
+				setLocation(elementId,index);
+			}
+			element.setAttribute("stroke-width",strokeWidth);
+		}
+
+		function clearHex(elementId) {
+			var element = document.getElementById(elementId);
+			element.setAttribute("fill","");
+			element.setAttribute("mask","");
+			//Don't need to remove the class because no locations are passed in.
+		}
+
+		function controlledFill(elementId, limit, toggle) {
+			//Color or recolor (toggle) a tile based on neighboring colors if enough neighbors are colored (limit).
+			var element = document.getElementById(elementId);
+			var edge = element.getAttribute("data-edge");
+			var tempIds = getLocalTiles(elementId);
+			var tempFillColors = [];
+
+			for (var i = 0; i < tempIds.length; i++) {
+				var tempColor = document.getElementById(tempIds[i]).getAttribute("fill");
+				if ( tempColor && tempColor != locationColor && tempFillColors.indexOf(tempColor) < 0 )
+					tempFillColors.push(tempColor);
+			}
+			if (!limit || tempFillColors.length >= limit) {
+				if (toggle && (currentColor = element.getAttribute("fill")) && ((currentColorIndex = tempFillColors.indexOf(currentColor)) > -1))
+					tempFillColors.splice(currentColorIndex,1);
+				randomFill(elementId,tempFillColors);
+			}
+		}
+
+		function filler(arr,mode) {
+			//Fill one blank hex per element; returns an array of the new elements.
+			//Modes: 
+			//-1: regular terrain limited to 7
+			//0: any terrain
+			//1: regular terrain only
+			//2: ski terrain only
+
+			var newArr = [];
+
+			for (var a=0; a < arr.length; a++) {
+				var elementId = arr[a];
+				var element = document.getElementById(elementId);
+				var color = element.getAttribute("fill");
+				if (mode > 0) {
+					if (mode == 1 && terrainColors.indexOf(color) < 0) {
+						//: only fill terrain
+						newArr.push(elementId);
+						continue;
+					} else if (mode == 2 && color != iceColor && color != mountainColor) {
+						//: only fill skis
+						newArr.push(elementId);
+						continue;
+					}
+				}
+				var candidateId = getEmptyNeighbor(elementId);
+				if (candidateId) {
+					var idx = terrainColors.indexOf(color);
+					if (mode > -1 || terrainColorCounts[idx] < 7) {
+						setFillAndMask(candidateId,color);
+						newArr.push(candidateId);
+						if (idx > -1)
+							terrainColorCounts[idx]++;
+					}
+					//also keep the current element
+					newArr.push(elementId);
+				} else {
+					//we omit the current element
+				}
+			}
+			return newArr;
+		}
+
+		function fillTerrain() {
+			console.log("step 0");
+			//Step 0: find the initial hexes set up by the seeder
+			//(one per normal terrain type, plus some alternate types).
+			var arr = [];
+			var allElements = getAllHexColors();
+			allElements.forEach(function(eltObj){
+				if (eltObj.color && fullColors.indexOf(eltObj.color) > -1) {
+					arr.push(eltObj.id);
+				}
+			});
+			console.log("step 1");
+			//Step 1: fill out from the first six hexes.
+			//(Because of the filling method we will not necessarily hit 8 hex regions even if nearby hexes are blank.)
+			//Also fill in some alternate terrain types while we're at it for more natural layouts.
+			for (var r=0; r<3; r++) {
+				//Fill region up to 8 hexes (ideally would be up to 9).
+				arr = filler(arr,r % 2);
+			}
+			console.log("step 2");
+			//Step 2: refill underfilled regions for reasons explained in step 1.
+			var t;
+			for (t=0; t<terrainColors.length; t++) {
+				var startCount = terrainColorCounts[t]
+				for (var tc = startCount; tc < 7; tc++) {
+					arr = refillTerrain(terrainColors[t],arr);
+				}
+			}
+			console.log("step 3a");
+			//Step 3: check for small terrains, remove if tiny, and seed a new region.
+			for (t=0; t<terrainColors.length; t++) {
+				if (terrainColorCounts[t] < 3) {
+					removeTerrain(t);
+					reseedTerrain(t);
+				}
+			}
+			console.log("step 3b");
+			for (t=0; t<terrainColors.length; t++) {
+				//Seed a second region.
+				if (terrainColorCounts[t] < 6) 
+					reseedTerrain(t);
+			}
+			console.log("step 4");			
+			//Step 4: fill any remaining blank hexes with neighboring or random alternate terrains.
+			var candidates = getEmptyHexes();
+			for (var c=0; c<candidates.length; c++) {
+				skifill(candidates[c]);
+			}
+		}
+
+		function getAllHexColors() {
+			var hexArr = [];
+			var allElements = document.querySelectorAll("#group polygon");
+			allElements.forEach(function(element){
+				hexArr.push({
+					id:element.id, 
+					color:element.getAttribute("fill")
+				});
+			});
+			return hexArr;
+		}
+
+		function getEmptyHexes() {
+			//Returns all empty hexes, as an array of elements.
+			var arr = [];
+			var allElements = getAllHexColors();
+
+			allElements.forEach(function(eltObj){
+				if (!eltObj.color) {
+					arr.push(eltObj.id);
+				}
+			});
+			return arr;
+		}
+
+		function getEmptyNeighbor(elementId) {
+			//Returns random unfilled neighbor.
+			var candidates = shuffle(getLocalTiles(elementId));
+			for (var c=0; c<candidates.length; c++) {
+				var candidate = document.getElementById(candidates[c]);
+				if (candidate && !candidate.getAttribute("fill"))
+					return candidate.id;
+			}
+		}
+
+		function getEmptyNeighborCount(elementId) {
+			//Returns number of unfilled neighbors.
+			var neighbors = getLocalTiles(elementId);
+			var count = 0;
+			for (var n=0; n<neighbors.length; n++) {
+				var neighbor = document.getElementById(neighbors[n]);
+				if (!neighbor.getAttribute("fill"))
+					count++;
+			}
+			return count;
+		}
+
+		function getEmptyRegion() {
+			//Returns a representative element from the largest unfilled region (3+ blank hexes).
+			var candidates = shuffle(getEmptyHexes());
+
+			var highCount = 1;
+			var highCandidate = null;
+
+			for (var c=0; c<candidates.length; c++) {
+				var candidateId = candidates[c];
+				var count = getEmptyNeighborCount(candidateId);
+				if (count > highCount) {
+					highCount = count;
+					highCandidate = candidateId;
+				}
+			}
+
+			return highCandidate;
+		}
+
+		function getLocalTiles(elementId,includeCenter) {
+			//Return verified neighbors of a tile, as an array of ids.
+			var element = document.getElementById(elementId);
+			var row = parseInt(element.getAttribute("data-row"));
+			var col = parseInt(element.getAttribute("data-col"));
+			var tempArray = [];
+			var returnArray = [];
+			tempArray[0] = "h:" + (row-1) + ":" + col;
+			tempArray[1] = "h:" + (row-1) + ":" + (col+1);
+			tempArray[2] = "h:" + row + ":" + (col+1);
+			tempArray[3] = "h:" + row + ":" + (col-1);
+			tempArray[4] = "h:" + (row+1) + ":" + (col-1);
+			tempArray[5] = "h:" + (row+1) + ":" + col;
+			if (includeCenter)
+				tempArray[6] = elementId; //"h:" + row + ":" + col;
+			for (k = 0; k < tempArray.length; k++) {
+				if (document.getElementById(tempArray[k]))
+					returnArray.push(tempArray[k]);
+			}
+			return returnArray.slice(0);
+		}
+
+		function getSkiNeighborColor(elementId) {
+			//Returns random ski neighbor's color or a random color.
+			var element = document.getElementById(elementId);
+			var candidates = shuffle(getLocalTiles(elementId));
+			for (var c=0; c<candidates.length; c++) {
+				var candidate = document.getElementById(candidates[c]);
+				var candidateColor = candidate.getAttribute("fill");
+				if (candidateColor == mountainColor || candidateColor == iceColor)
+					return candidateColor;
+			}
+			//If we get here, we found no appropriate neighbors.
+			return randomSki();
+		}
+
+		function hasNeighbor(elementId,ofColor) {
+			//Check for a particular neighbor (by color).
+			var neighbors = getLocalTiles(elementId);
+			for (var n=0; n < neighbors.length; n++) {
+				var neighbor = document.getElementById(neighbors[n]);
+				if (neighbor.getAttribute("fill") == ofColor)
+					return true;
+			}
+			return false;
+		}
+
+		function init() {
+			console.clear();
+			console.log("Initial fill");
+			initFill();
+			console.log("Activate hexes");
+			initPolygons();
+		}
+
+		function initFill() {
+			//Initialize the board with locations and seed terrain, then fill in the rest.
+
+			//If the board isn't blank (saved user output), don't initialize.
+			if (document.getElementById("h:0:0").getAttribute("fill"))
+				return;
+
+			console.log("Initial seed");
+			seed();
+			console.log("Fill terrain");
+			fillTerrain();
+
+			//Init the viewbox.
+			//shape = document.getElementsByTagName("svg")[0];
+			//shape.setAttribute("viewBox", "0 0 250 550"); 
+		}
+
+		function initPolygons() {
+			var allElements = document.querySelectorAll("#group polygon");
+			allElements.forEach(function(element){
+				element.addEventListener("click",changeFill);
+				element.setAttribute("stroke-width",strokeWidth);
+			})
+		}
+
+		function missingLocation() {
+			//There are more locations than in KB. 
+			//Return first missing location (name) or empty string.
+			var locationCount = locationMasks.length;
+			for (var l = 0; l < locationCount; l++) {
+				var locationName = locationMasks[l];
+				if (document.getElementsByClassName(locationName).length === 0)
+					return locationName;
+			}
+			return "";
+		}
+
+		function nextFill(elementId,colorArray) {
+			//Fill in a tile with the next color from a provided color list (colorArray) or from the full color list.
+			var element = document.getElementById(elementId);
+			if (!colorArray || colorArray.length == 0) 
+				colorArray = fullColors.slice(0);
+			var color = element.getAttribute("fill");
+			var oldIndex = color && colorArray.indexOf(color) ? colorArray.indexOf(color) : 0;
+			var index = (oldIndex + 1) % colorArray.length;
+			setFillAndMask(elementId,colorArray[index]);
+		}
+
+		function randomFill(elementId,colorArray) {
+			//Fill in a tile at random from a provided color list (colorArray) or from the full color list.
+			//Not currently called for the full color list.
+			if (!colorArray || colorArray.length == 0) 
+				colorArray = fullColors.slice(0);
+			var index = Math.floor(colorArray.length*Math.random());
+			setFillAndMask(elementId,colorArray[index]);
+		}
+
+		function randomSki(locType) {
+			//Fill in ice or mountain.
+			var rand = Math.floor(Math.random()*4);
+			var icy;
+			if (!locType)
+				icy = (rand <= 1);
+			else {
+				icy = (locType != "tunnel");				
+				switch(rand) {
+					case 0:
+					icy = true;
+					break;
+
+					case 3:
+					icy = false;
+					break;
+
+					default:
+					break;
+				}
+			}
+			return icy ? iceColor : mountainColor; 
+		}
+
+		function refillTerrain(color,arr) {
+			//Add an element of color, either in the existing chunk or starting a new one, and update the tracking array.
+			var newArr = arr.slice(0);
+
+			for (var a=0; a < arr.length; a++) {
+				var elementId = arr[a];
+				var element = document.getElementById(elementId);
+				if (element.getAttribute("fill") != color)
+					continue;
+				var candidateId = getEmptyNeighbor(elementId);
+				if (candidateId) {
+					setFillAndMask(candidateId,color);
+					newArr.push(candidateId);
+					var idx = terrainColors.indexOf(color);
+					terrainColorCounts[idx]++;
+					//also keep the current element
+					newArr.push(elementId);
+					return newArr;
+				} else {
+					//we remove the current element
+					for (var n = 0; n < newArr.length; n++) { 
+						if (newArr[n] == elementId) { 
+							newArr.splice(n, 1); 
+						}
+					}
+				}
+			}
+			return newArr;
+		}
+
+		function removeTerrain(idx) {
+			var allElements = getAllHexColors();
+			allElements.forEach(function(eltObj){
+				if (eltObj.color && fullColors.indexOf(eltObj.color) === idx) {
+					clearHex(eltObj.id);
+					terrainColorCounts[idx]--;
+				}
+			});
+			//console.log("removed color " + terrainNames[idx]);
+		}
+
+		function reseedTerrain(idx, rere) {
+			//Second seed and fill for a terrain.
+			console.log("reseeding terrain " + terrainNames[idx]);
+
+			var newseedId = getEmptyRegion();
+			var color = terrainColors[idx];
+			if (newseedId) {
+				//console.log("reseed from " + newseedId);
+				//need to reseed the terrain.
+				setFillAndMask(newseedId,color);
+				var arr = [newseedId];
+				for (var n=0; n<3; n++) {
+					arr = filler(arr,-1);
+				}
+				//Need to check whether we need a second region.
+				if (terrainColorCounts[idx] < 5) {
+					if (rere) {
+						console.log("Could not create enough " + terrainNames[idx] + " terrain.");
+						return;
+					} else {
+						//console.log("Need more " + terrainNames[idx]);
+						reseedTerrain(idx, true);
+					}
+				}
+			} else {
+				console.log("new empty hex region not found for " + terrainNames[idx]);
+				//Should be a rare error. Report.
+				if (terrainColorCounts[idx] < 5) {
+					console.log("Could not create enough " + terrainNames[idx] + " terrain.");
+				} else {
+					console.log("Incomplete reseed of " + terrainNames[idx] + " terrain.");
+				}
+			}
+		}
+
+		function seed() {
+			//Place one location each away from the edges and at least n=2? hexes apart.
+			//Simultaneously seed terrains (instead of using seedTerrain()).
+			//TODO: Relax these restrictions in free edit mode.
+			var omitNegSextant = Math.floor(Math.random()*3);
+			var omitPosSextant = Math.floor(Math.random()*3) + 3;
+			var j = 0;
+			var elementId, row, col;
+			var seedTerrains = shuffle(terrainColors);
+
+			for (i = 0; i < 6; i++) {
+				if (i != omitNegSextant && i != omitPosSextant) {
+
+					elementId = getCandidateHexId(i,locationColor,true);
+
+					//color and mark with a class
+					setLocation(elementId,j);
+
+					//seed some non-regular terrain here
+					seedLocationSki(elementId,j);
+
+					j += 1;
+				}
+
+				//Seed regular terrains.
+				elementId = getCandidateHexId(i);
+				setFillAndMask(elementId,seedTerrains[i]);
+			}
+
+			function getCandidateHexId(i,excludedNeighborColor,noEdges) {
+				var max = noEdges ? 4 : 5;
+				var col = Math.floor(Math.random()*max);
+				if (i % 2 == 0)
+					col = -col;
+
+				var row = Math.floor(Math.random()*max); //use "horizontal" row numbers
+				if (i < 3)
+					row = -row;
+
+				var id = "h:" + col + ":" + row;
+
+				var element = document.getElementById(id); 
+				if (element && !element.getAttribute("fill") && (!noEdges || element.getAttribute("data-edge") == 0) && (!excludedNeighborColor || !hasNeighbor(id,excludedNeighborColor)))
+					return id;
+				else {
+					console.log("search looped on " + (excludedNeighborColor ? "location" : "terrain") + " " + i + " with id " + id);
+					return getCandidateHexId(i,excludedNeighborColor,noEdges);
+				}
+			}
+
+			function seedLocationSki(elementId,index) {
+				//Locations tend to be separated by water (ice)
+				var type = locationMasks[index];
+				var color = randomSki(type);
+				var candidateId = getEmptyNeighbor(elementId);
+				var candidate = document.getElementById(candidateId);
+				if (candidate && !candidate.getAttribute("fill")) {
+					setFillAndMask(candidate.id,color); 
+				}
+			}
+		}
+
+		function setFillAndMask(elementId,color,locIndex) {
+			var element = document.getElementById(elementId);
+			element.setAttribute("fill",color);
+			applyMask(elementId,color,locIndex);
+		}
+
+		function setLocation(elementId,locIndex) {
+			//the index is always passed in.
+			var element = document.getElementById(elementId);
+			setFillAndMask(elementId,locationColor,locIndex);
+			element.setAttribute("class",locationMasks[locIndex]);
+			applyMask(elementId,locationColor,locIndex);
+		}
+
+		function shuffle(arry) {
+			// return the shuffled array (mike bostock's version)
+			var m = arry.length, temp, i;
+			
+			// While there remain elements to shuffle…
+			while (m) {
+				
+				// Pick a remaining element…
+				i = Math.floor(Math.random() * m--);
+				
+				// And swap it with the current element.
+				temp = arry[m];
+				arry[m] = arry[i];
+				arry[i] = temp;
+			}
+			
+			return arry;
+		}
+
+		function skifill(elementId) {
+			var color = getSkiNeighborColor(elementId);
+			setFillAndMask(elementId,color);
+		}
+
+		init();
+
+	]]></script>
+
+
+</svg>

@@ -16,7 +16,7 @@ DotGraph works with Twine 1, [Twine 2](https://twinery.org/2/), Twee, [Twee2](ht
 
 Fill in the URL of a Twine story here to have DotGraph graph it:
 
-<input type="text" id="dgaas" size="50"/>&nbsp;<a href="" onclick="this.setAttribute('href', '/tools/scree/dotgraph/dgaas.html?' + document.getElementById('dgaas').value);">Graph It!</a>
+<input type="text" id="dgaas" size="50"/>&nbsp;<button type="button" onclick="document.location.href='/tools/scree/dotgraph/dgaas.html?' + document.getElementById('dgaas').value;">Graph It!</button>
 
 (It can follow philome.la and some itch.io links without pressing the PLAY button or popping out of the iframe, respectively.)
 

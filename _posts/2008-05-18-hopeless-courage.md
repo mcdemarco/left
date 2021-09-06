@@ -13,7 +13,7 @@ I won't give a reference for who typed up this scene for me; judging from the ty
 
 > The theme of hopeless courage is one of the most memorable aspects of J.R.R. Tolkien's classic *The Lord of the Rings*. The characters in this story are courageous, even jovially so, but they tend ultimately to expect the worst. In this respect they share much in common with the heroes of Norse mythology, in which hope is foolish since evil is expected to triumph in the end (at Ragnarok). Despite what so many scholars are telling us these days, Tolkien's protagonists are not exactly the stuff of Christianity, where hope is a virtue since good can be counted on to prevail. Though Tolkien was himself a devout Catholic, he devoted a great deal of his life to studying the Scandinavian epics and pagan folklore. He loved and emulated the theme of courage for its own sake, against all the odds, and his story evokes the Norse world-view at a most fundamental level. The notion that "hope springs eternal" is completely foreign to the people of Middle-earth. 
 
-While Loren Rosson classes Sam's [previous quote](http://www.mcdemarco.net/node/420) with the many other instances of Nordic hopeless courage, he finds today's quote unusually Christian in its optimism:
+While Loren Rosson classes Sam's [previous quote](/node/420) with the many other instances of Nordic hopeless courage, he finds today's quote unusually Christian in its optimism:
 
 > One can only speculate why Tolkien allowed his true colors to show at these moments in the story after giving the theme of hope a thoroughly pagan treatment elsewhere. Maybe the sudden realization that one's "dead" friend isn't dead after all is enough to stand a world-view on its head.
 

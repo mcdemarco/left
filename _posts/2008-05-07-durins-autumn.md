@@ -5,7 +5,7 @@ tags: JRRT calendars dwarves longpost
 created: 1210218731
 class: long
 ---
-Durin's Days are coming soon, many thanks to Alan Eliasen and [Frink](http://futureboy.us/frinkdocs/).  This entry is just a note on the interpretation of "autumn" in [the definition of Durin's Day](http://www.mcdemarco.net/node/411) and of the dwarves' New Year in general.  To recap, in *The Hobbit*, the dwarves' New Year's Day is said to fall on the last new moon of autumn, where autumn is unfortunately not defined.<!--break-->
+Durin's Days are coming soon, many thanks to Alan Eliasen and [Frink](http://futureboy.us/frinkdocs/).  This entry is just a note on the interpretation of "autumn" in [the definition of Durin's Day](/node/411) and of the dwarves' New Year in general.  To recap, in *The Hobbit*, the dwarves' New Year's Day is said to fall on the last new moon of autumn, where autumn is unfortunately not defined.<!--break-->
 
 As I see it, we have several choices for defining *autumn*, listed for clarity in reverse order of their start dates:
 
