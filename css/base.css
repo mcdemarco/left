@@ -157,12 +157,18 @@ a {
   .content pre code {
     display: inline-block;
     font-size: 12px;
-    color: #4a4a4a;
-    margin-left: 2em;
-    padding-bottom: 5px;}
+    background-color:#eee;
+    margin-left: 20px;
+    padding: 3px;
+    overflow-x: auto;
+    max-width: 624px;
+    scrollbar-width: none;}
+    .content pre code::-webkit-scrollbar {
+      display: none;}
   .content img {
     padding: 3px;
     border: 1px solid #eeeeee;
+    border-radius: 3px;
     max-width: 100%; }
     .content img + cite {
       display:inline-block;
