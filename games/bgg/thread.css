@@ -1,0 +1,253 @@
+/* styles for formatter and formattee */
+
+/* https://github.com/hankchizljaw/modern-css-reset */
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+   scroll-behavior: auto;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+
+/* set */
+
+/* shared css */
+
+body {
+	padding: 3%;
+	background-color: #fffffa;
+	color: #2e1503;
+	font-family: "Avenir Next", Lato, Cera, "Open Sans", "Segoe UI", Raleway, Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif;
+	font-size: 16px;
+	line-height: 1.2;
+}
+
+h2, h3, form {
+    margin: 1em 0;
+}
+
+/* ui css */ 
+
+p.info {
+	font-size: smaller;
+	padding-top: 1em;
+}
+p.info,
+cite#footer {
+	font-style: italic;
+	color: #522b12;
+}
+cite#footer {
+    text-align: right;
+    display: block;
+}
+p.unwrap span {
+	white-space: nowrap;
+}
+p.message {
+	color: #a6210e;
+	padding: 0.5em 1em;
+	border-left: 3px double #a6210e;
+}
+
+div.nowrap {
+    white-space: nowrap;
+}
+
+input[type=submit] {
+    margin-left: 2em;
+}
+
+a.styled-link {
+  transition: color .4s;
+  color: #265C83;
+}
+a.styled-link:visited {
+  color: #265C83;
+}
+a.styled-link:hover   { 
+  color: #7FDBFF;
+}
+
+/* content css */
+
+h1 a,
+summary a,
+h1 a:visited,
+summary a:visited {
+    color: #2e1503;
+    text-decoration: none;
+}
+h1 a:hover,
+summary a:hover {
+    color: #3f210e;
+}
+
+summary {
+    font-size: larger;
+    font-weight: bold;
+    padding: 0.5em 0.25em;
+}
+
+summary:hover {
+    background: #ca9f84;
+}
+
+summary,
+summary:focus {
+    outline: none;
+}
+
+details[open] summary {
+    background: none;
+    outline: none;
+}
+
+summary::-webkit-details-marker {
+    color: #ca9f84;
+}
+
+summary:hover::-webkit-details-marker {
+    color: #fffff0;
+}
+
+details[open] summary::-webkit-details-marker {
+    color: #ca9f84;
+}
+
+summary a * {
+  pointer-events: none;
+}
+
+span#artcount,
+span.date {
+    float: right;
+    color: #774f36;
+}
+
+span.author {
+    font-style: italic;
+    color: #522b12;
+}
+span.author::before {
+    content: ' by ';
+}
+
+span.datelinkicon {
+    padding: 0 0.3em;
+}
+
+span#artcount,
+span.author,
+span.date {
+    font-size: smaller;
+}
+
+div#thread {
+    margin: auto;
+    max-width: 60em;
+}
+
+.description {
+    margin-bottom: 0.5em;
+    padding: 0.5em 0;
+    border-bottom: 1px solid #774f36;
+}
+
+/* bgg classes within content */
+
+div.quote {
+    margin-left: 3%;
+    padding-left: 1em;
+    border-left: 1px solid #522b12;
+}
+
+pre {
+    /* not really a pre, often a bad ul */
+    display: inline-block;
+    margin: 0;
+}
+
+/* print */
+
+@media print {
+    body {
+	color: black;
+	background-color: white;
+    }
+
+    .formatter,
+    summary::-webkit-details-marker,
+    .datelinkicon {
+	display: none;
+    }
+}

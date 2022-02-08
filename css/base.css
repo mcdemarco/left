@@ -7,7 +7,7 @@ body {
 a {
   color: #227ce8; }
 
-.recipes a[href*='//']:after {
+.recipes .content a[href*='//']:after {
   /*color: #3222E8; */
   content: url(/css/Icon_External_Link.png);
   margin: 0 0 0 2px;

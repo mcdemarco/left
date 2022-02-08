@@ -12,6 +12,10 @@ The code calls the BGG API for XML data and makes it pretty using XSL---an ancie
 
 Images are currently not returned in some cases where they once were because of a change to the BGG site:  the image ID returned in the old XML API is no longer sufficient to hotlink a BGG image because the images have moved to semi-random URLs.  The thing sorter retrieves images.
 
+### FAQs and Threads
+
+Most BGG Game FAQs are where they belong, [in the wiki](https://boardgamegeek.com/wiki/page/List_of_game_FAQs#), sadly inaccessible to the API, but some are buried in the forums.  The latter unfortunates can be retrieved with the API and pretty-printed using my [thread formatter](/games/bgg/thread.html), as long as they're not too weird.  For "too weird", see [Gloomhaven](/games/bgg/thread.html?1897763/1).  (I handled some weirdness, but it has unhandled BB spoiler tags passed in raw by the API, and possibly more surprises.)
+
 ### CardPen
 
 I learned about the BGG API while making a tool, [CardPen](http://cardpen.mcdemarco.net/), for printing card (and other) games.  It can turn your BGG game collection into [a deck of cards](http://cardpen.mcdemarco.net/doc/examples.html#bgg), among other things.

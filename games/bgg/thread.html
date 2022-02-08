@@ -1,0 +1,38 @@
+<html>
+<head>
+	<title>BGG Thread Formatter</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<!--
+	Based on a BoardGameGeek geeklist sorter by fiddly_bits.
+	-->
+	<link href="thread.css" rel="stylesheet" />
+	<script type="text/javascript" src="thread.js"></script>
+</head>
+<body>
+	<form class="formatter">
+		<h1>Thread Formatter</h1>
+		<p class="unwrap">
+			<span>Format first <input id="count" name="count" size="2" max="3" value=""/> articles of thread <input type="text" placeholder="ID or URL" id="threadIdINPUT" size="20" value="" />. </span>
+			<input type="submit" value="Format" /><br />
+			<span>
+				<input type="checkbox" id="subject" checked /> <label for="subject">include subject lines (which tend to be repetitive)</label>
+			</span>
+		</p>
+		<p class="info">
+			You can pass the thread ID and article count in with the URL, e.g., <a href="./?2525866#3" class="styled-link" id="urlHint"></a>.
+			<br/>
+			You can also <a  class="styled-link" onclick="(document.querySelectorAll('.formatter')).forEach(function(elt){elt.remove();});">hide this form</a>.  (It will be hidden automatically if you print.)
+		</p>
+		<hr />
+	</form>
+
+	<div id="thread">
+	</div>
+
+	<cite id="footer" class="formatter">
+		<hr />
+		By mcd (<a href="http://boardgamegeek.com/user/fiddly_bits">fiddly_bits</a>) | <a href="./">about</a>
+	</cite>
+
+</body>
+</html>
