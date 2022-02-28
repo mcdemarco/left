@@ -43,7 +43,7 @@
 
 	<xsl:template match="article">
 		<details open="open" class="single-article">
-			<summary class="subheader">
+			<summary class="subheader" tabindex="-1">
 				<xsl:choose>
 					<xsl:when test="$subject = 'true'">
 						<xsl:value-of select="subject" />

@@ -12,10 +12,15 @@
 	<form class="formatter">
 		<h1>Thread Formatter</h1>
 		<p class="unwrap">
-			<span>Format first <input id="count" name="count" size="2" max="3" value=""/> articles of thread <input type="text" placeholder="ID or URL" id="threadIdINPUT" size="20" value="" />. </span>
-			<input type="submit" value="Format" /><br />
-			<span>
+			<span>Format first <input id="count" name="count" size="2" max="3" value=""/> article(s) of thread <input type="text" placeholder="ID or URL" id="threadIdINPUT" size="20" value="" />. </span>
+			<input type="submit" value="Format" />
+			<br />
+			<span class="indent">
 				<input type="checkbox" id="subject" checked /> <label for="subject">include subject lines (which tend to be repetitive)</label>
+			</span>
+			<br/>
+			<span class="indent">
+				<input type="checkbox" id="spoilers" checked /> <label for="spoilers">hide spoilers</label>
 			</span>
 		</p>
 		<p class="info">

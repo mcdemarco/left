@@ -1,0 +1,56 @@
+==================================================================
+https://keybase.io/mcdemarco
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://mcdemarco.net
+  * I am mcdemarco (https://keybase.io/mcdemarco) on keybase.
+  * I have a public key ASD8_r10FpFW39KvheEW4qLpMxSglK8KxIGwQr4oYkrqmgo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "0120fcfebd74169156dfd2af85e116e2a2e93314a094af0ac481b042be28624aea9a0a",
+      "host": "keybase.io",
+      "kid": "0120fcfebd74169156dfd2af85e116e2a2e93314a094af0ac481b042be28624aea9a0a",
+      "uid": "25f00a6b3a297e4956d2d8389d3f6519",
+      "username": "mcdemarco"
+    },
+    "merkle_root": {
+      "ctime": 1645115451,
+      "hash": "c3d040bf800ca198430b4cfea8d46782b8fcee0def0bfbafbb3f2678a174796220e22e5d83f2889c7ea1e0e9e0c4c4e58a750aa508e00437806e5ffed01a060b",
+      "hash_meta": "b86df58507761eeafdddc99f8a1b305700447a3fd1e00d9cd9ca944024a965ae",
+      "seqno": 21896299
+    },
+    "service": {
+      "entropy": "+sAuWRz26QaCeBJRvlxZpgDu",
+      "hostname": "mcdemarco.net",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "5.9.0"
+  },
+  "ctime": 1645115512,
+  "expire_in": 504576000,
+  "prev": "1b619c6a64c3e3139381133e6f525b30df6d06871f4ca0ffd94b3dfc8b7ec802",
+  "seqno": 8,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEg/P69dBaRVt/Sr4XhFuKi6TMUoJSvCsSBsEK+KGJK6poKp3BheWxvYWTESpcCCMQgG2GcamTD4xOTgRM+b1JbMN9tBocfTKD/2Us9/It+yALEIGqvUZsBBA6OTq06sJUDeGsXCmznGu0gJJfkpE3zX3RiAgHCo3NpZ8RAywkWVwp1plUCNDqMGNgQQEumIN8OS8KGXFjbi5ar/fj2Dz0BGdvme50IqxXenbGdEAbGqVGuGV3oE8YPMlXDCKhzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEILS3rjrxl1XTZYygO8HYca+6UfXeo/K3M00V6ul7qTV3o3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/mcdemarco
+
+==================================================================

@@ -7,7 +7,7 @@
 	var threadStatus = {};
 	var minutes = 5; //Don't repeat successful requests within this number of minutes.
 	//The api doesn't always respond with the goods.
-	var waitMessage = "Your request for this thread has been accepted and will be processed.";
+	var waitMessage = "Your request for this thread has been accepted and will be processed.  Please wait a moment and hit Format again.";
 	//Requires a proxy because the BGG API is broken in yet another way.
 	var base = location.protocol + "//" + location.host + "/games/bgg/";
 	var baseFile = base + "thread.html";
@@ -46,7 +46,6 @@
 			threadStatus.date = new Date();
 			threadStatus.xml = threadXML;
 			threadStatus.id = parseInt(threadXML.firstChild.getAttribute("id"),10);
-			setURL(threadStatus.id);
 		}
 		transformAndWrite(threadXML);
 	}
@@ -57,15 +56,27 @@
 		try {
 			fragment = transform(threadXML,stylesheet);
 		} catch(e) {
-			fragment = "<p class='message'>An error occurred: " + e.name + ", " + e.message + "</p><p>(This may be due to bad data from BGG or browser-specific issues.)</p>";
+			fragment = (new DomParser).parseFromString("<p class='message'>An error occurred: " + e.name + ", " + e.message + "</p><p>(This may be due to bad data from BGG or browser-specific issues.)</p>");
 		}
+
 		document.getElementById("thread").appendChild(fragment);
+		setURL();
 	}
 
 	function transform(thread,stylesheet) {
 		var xmlDom;
 		var count = parseInt(document.getElementById("count").value,10);
 		var subject = document.getElementById("subject").checked;
+		var spoilers = document.getElementById("spoilers").checked;
+
+		//spoiler BBcode is passed through the BGG API raw, unlike the other BBcode which is transformed to html.
+		//that makes this process fragile, but still important to many games
+		if (spoilers && thread) {
+			var textThread = (new XMLSerializer()).serializeToString(thread);
+			var textThreadS = textThread.replace(/\[o\]/g, "&lt;div class=\"spoiler\"&gt;").replace(/\[\/o\]/g, "&lt;/div&gt;");
+			thread = (new DOMParser()).parseFromString(textThreadS, "text/xml");
+		}
+
 		if (typeof XSLTProcessor == "undefined") {
 			try {
 				xmlDom = thread.transformNode(stylesheet);
@@ -131,11 +142,11 @@
 			//also autoload.
 			getThread();
 		} else
-			setURL();
+			setURL(defaultId, defaultCount);
 	}
 	
 	/* onload */
-	function loady() {
+	function loader() {
 		//Don't need to wait for load for the stylesheet, but for the others.
 		requestStylesheet(stylesheetURL);
 		setFromQuery();
@@ -151,16 +162,16 @@
 
 	function setURL(toId, count) {
 		if (typeof toId === "undefined")
-			toId = defaultId;
+			toId = parseID(document.getElementById("threadIdINPUT").value)
 		if (typeof count === "undefined")
-			count = document.getElementById("count").value || defaultCount;
-		if (toId) {
+			count = document.getElementById("count").value || 1;
+		if (toId > 0) {
       var yurl = baseFile + '?' + toId + "/" + count;
 			document.getElementById("urlHint").innerHTML = yurl;
 			document.getElementById("urlHint").href = yurl;
 		}
 	}
 	
-	window.onload = loady;
+	window.onload = loader;
 
 })();
