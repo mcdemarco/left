@@ -100,6 +100,8 @@ h2, h3, form {
 p.info {
   font-size: smaller;
   padding-top: 1em;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
 }
 p.info,
 cite#footer {
@@ -110,10 +112,8 @@ cite#footer {
   text-align: right;
   display: block;
 }
-p.unwrap span {
-  white-space: nowrap;
-}
-p.unwrap span.indent {
+
+p span.indent {
   padding-left: 1.5em;
 }
 
@@ -121,10 +121,6 @@ p.message {
   color: #a6210e;
   padding: 0.5em 1em;
   border-left: 3px double #a6210e;
-}
-
-div.nowrap {
-  white-space: nowrap;
 }
 
 input[type=submit] {
@@ -225,6 +221,8 @@ div#thread {
   margin-bottom: 0.5em;
   padding: 0.5em 0;
   border-bottom: 1px solid #774f36;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
 }
 
 /* failed experiment in styling BR
@@ -272,9 +270,11 @@ pre {
 }
 
 .spoiler:hover,
-.spoiler:focus {
+.spoiler:focus,
+.spoiler:focus-within {
   background: #d0cfae;
   color: black;
+  outline: none;
 }
 
 /* print */

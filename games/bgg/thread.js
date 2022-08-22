@@ -73,7 +73,7 @@
 		//that makes this process fragile, but still important to many games
 		if (spoilers && thread) {
 			var textThread = (new XMLSerializer()).serializeToString(thread);
-			var textThreadS = textThread.replace(/\[o\]/g, "&lt;div class=\"spoiler\"&gt;").replace(/\[\/o\]/g, "&lt;/div&gt;");
+			var textThreadS = textThread.replace(/\[o\]/g, "&lt;div class=\"spoiler\" tabindex=\"0\" ontouchstart=\"\" &gt;").replace(/\[\/o\]/g, "&lt;/div&gt;");
 			thread = (new DOMParser()).parseFromString(textThreadS, "text/xml");
 		}
 

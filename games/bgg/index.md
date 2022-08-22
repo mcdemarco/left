@@ -17,13 +17,14 @@ Images are currently not returned in some cases where they once were because of 
 
 ### FAQs and Threads
 
-Most BGG Game FAQs are where they belong, [in the wiki](https://boardgamegeek.com/wiki/page/List_of_game_FAQs#), or elsewhere sadly inaccessible to the API, but some are buried in the forums.  The latter unfortunates can be retrieved with the API and pretty-printed using my [thread formatter](/games/bgg/thread.html), as long as they're not too weird or malformed.  I did it all for [the Winter Kingdom FAQ](/games/bgg/thread.html?2525866/3) (three posts out of many), but other notable examples include [Twilight Imperium: Fourth Edition – Prophecy of Kings](/games/bgg/thread.html?1470601/1) (short), [Brass: Birmingham](/games/bgg/thread.html?2545744/1) (short and plain), and [Wingspan](/games/bgg/thread.html?2468030/1) (extremely linky).
+Most BGG Game FAQs are where they belong, [in the wiki](https://boardgamegeek.com/wiki/page/List_of_game_FAQs#), or elsewhere sadly inaccessible to the API, but some are buried in the forums.  The latter unfortunates can be retrieved with the API and pretty-printed using my [thread formatter](/games/bgg/thread.html), as long as they're not too weird or malformed.  There are options to hide the subject lines (which tend to be repetitive) and to hide spoilers (which the API fails to do, just passing raw BBcode spoiler tags instead).
+
+I did it all for [the Winter Kingdom FAQ](/games/bgg/thread.html?2525866/3) (three posts out of many), but other notable examples include [Twilight Imperium: Fourth Edition – Prophecy of Kings](/games/bgg/thread.html?1470601/1) (short), [Brass: Birmingham](/games/bgg/thread.html?2545744/1) (short and plain), and [Wingspan](/games/bgg/thread.html?2468030/1) (extremely linky).
 
 Often the Forums handle bad code that the API mishandles, or display styles that the API drops.  For example, [the Terraforming Mars FAQ](/games/bgg/thread.html?1705209/1) has a bad bold tag that emboldens the entire end of the FAQ in the API data, yet the API omits the large font on the ersatz headers.  The API also doesn't parse the BBcode for users into links, as in the signature to [the Gaia Project Official Federation FAQ](/games/bgg/thread.html?2120375/1).
 
-In some cases I've tweaked the output to make it look more like it did in the forums, *e.g.*, [Gloomhaven](/games/bgg/thread.html?1897763/1)'s weird lists  and [Pandemic Legacy: Season 1](/games/bgg/thread.html?1470601/1)'s extensive, nested spoiler tags.  There may be unforseen consequences to these fixes.  Some things I tried to fix but failed, like [Sagrada](/games/bgg/thread.html?2464353/1)'s final wall of text.
-
+In some cases I've tweaked the output to make it look more like it did in the forums, *e.g.*, [Gloomhaven](/games/bgg/thread.html?1897763/1)'s weird lists  and [Pandemic Legacy: Season 1](/games/bgg/thread.html?1470601/1)'s extensive, nested spoiler tags.  There may be unforseen consequences to these fixes.  Some things I tried to fix but failed, like [Sagrada](/games/bgg/thread.html?2464353/1)'s final wall of text, and clicking to reveal spoilers on some touch devices.  (This could be fixed using JavaScript, but I was interested in a pure CSS approach.)
 
 ### CardPen
 
-I learned about the BGG API while making a tool, [CardPen](http://cardpen.mcdemarco.net/), for printing card (and other) games.  It can turn your BGG game collection into [a deck of cards](http://cardpen.mcdemarco.net/doc/examples.html#bgg), among other things.
+I first learned about the BGG API while making a tool, [CardPen](http://cardpen.mcdemarco.net/), for printing card (and other) games.  It can turn your BGG game collection into [a deck of cards](http://cardpen.mcdemarco.net/doc/examples.html#bgg), among other things.
