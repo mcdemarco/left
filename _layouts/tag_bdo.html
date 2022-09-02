@@ -1,0 +1,46 @@
+---
+layout: layout
+menu: stream
+---
+<h2 class="post_title">{{page.title}}</h2>
+
+  {{ content }}
+
+  {% for post in site.posts reversed %}
+  {% for tag in post.tags %}
+  {% if tag == "BDO" %}
+
+<hr/>
+
+<article class="h-entry">
+
+  <h2>
+    <a href="{{ post.url }}" class="u-url p-name">
+			{% if post.title %}
+			{{post.title | remove: "BDO of the Day: " }}
+			{% else %}
+			&para;
+			{% endif %}
+		</a>
+  </h2>
+
+  <section class="byline">
+    <time class="dt-published">{{ post.date | date: "%B %e, %Y" }}</time>
+  </section>
+
+	<section class="e-content">
+		{{ post.content }}
+	</section>
+
+</article>
+
+  {% endif %}
+  {% endfor %}
+  {% endfor %}
+
+  <section class="meta">
+    <section class="copy byline" style="line-height: 1.7em;">
+      <img src="/images/avatar-color-cropped.png" style="height:50px; width:50px;"/>
+      <span><span class="fixentity">&copy;</span> {{ site.time | date: "%Y" }} <a class="p-author h-card" href="http://mcdemarco.net/" rel="author">M. C. DeMarco</a></span>
+    </section>
+  </section>

@@ -1,0 +1,21 @@
+---
+layout: post
+title: "BDO of the Day: Heaven's River"
+tags: BDO
+created: 2022-08-31 09:00:00-04:00
+---
+Today's Big Dumb Object (BDO) is a spoiler for Bobiverse volume 4, _Heaven's River_ (2020).  In lieu of spoiler space, I will instead start by describing the Bobivese.  It's a series available from Kindle Unlimited about an uploaded human named Bob and his many clones.  Volume 1 begins with only one Bob, pre-upload, enjoying a windfall from selling his software company for the big bucks.  He spends some of his cash on a cryogenic freezing insurance program and before you can say "Bob's your uncle", Bob is waking up dead and uploaded by a dystopian future society.
+
+The author, Dennis E. Taylor, has [been criticized](http://dennisetaylor.org/#comment-887) for the nature of the future fundamentalist society in which Bob wakes.  I am sympathetic to such critiques; I find _The Handmaid's Tale_ too paranoid to take seriously, but because I picked up the Bobiverse off a list of humorous sci-fi books, I took FAITH as an entertaining parody rather than a paranoiac prediction.  Also, FAITH is clearly a part of the general *stupid humans* tendency towards power politics in the face of looming armageddons, a tendency the Bobs didn't initially share.  By volume 4, the Bob clones are experiencing a lot of "drift", and the novel is about half intra-Bob politics and half BDO.
+
+<a href="https://www.amazon.com/Heavens-River-Dennis-Taylor/dp/1680682261?_encoding=UTF8&qid=1661951081&sr=1-1&linkCode=li1&tag=mcdema-20&linkId=e2d3b77a0db832405bcf8c79551b6d5c&language=en_US&ref_=as_li_ss_il" target="_blank"><img border="0" src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=1680682261&Format=_SL110_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=mcdema-20&language=en_US" ></a><img src="https://ir-na.amazon-adsystem.com/e/ir?t=mcdema-20&language=en_US&l=li1&o=1&a=1680682261" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+
+The BDO in question is a [topopolis](/blog/2017/09/17/topopolis/) with a tube radius of 56 miles, wrapped around its sun three times in the traditional toroidal knot for a length of "literally a billion miles."  The length is broken up into "almost two million" sealable segments 560 miles long; the total area is "more than three hundred billion square miles," or about 1750 Earths.
+
+The topopolis rotates around its inner axis in the usual way to generate gravity, with the standard non-rotating outer shell to fend off meteor strikes.  While there are airlocks and transfer methods to get humanoids from outside the outer shell to inside the topopolis proper, at the time the Bobs approach the topopolis they are mostly unused except by automated maintenance systems.  The structure has no windows; instead there is artificial lighting and some vaguely described holographic technology creating the illusion of a normal sky.
+
+The most notable feature of the topopolis is not one, but four river systems flowing the whole way around the knot.  The Bobs eventually discover that two of the rivers flow in one direction and the other two in the other direction, though they do mix and mingle inside the segments.  There is some passing mention of different weather systems and ecologies in the different segments, but the reader never sees any directly, and the entire habitat appears to be intended to reproduce that of a recently war-torn, dead planet in the same system that is clearly the origin of the otter-like sentient species now inhabiting the BDO.
+
+Topopolises are high-maintenance, so there's no real notion that the structure has been abandoned.  Yet the inhabitants the Bobs meet have been cut off from all significant technology, including the built-in transit system.  They are clearly in the process of forgetting they're on a humanoid-made structure, if not actually devolving to their pre-intelligent state.  They make vague references to the Administrator and the Crew, but most inhabitants encounter only the local police forces.  Though the Bobs are on an unrelated mission, they do eventually meet both the Crew and the Resistance, and even contact the Administrator.
+
+**P.S.** I was inspired by today's BDO to collect all my BDO posts in [one convenient spot](/bdo/).
