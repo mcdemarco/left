@@ -4,7 +4,9 @@ title: DotGraph Versions
 menu: if
 date: 2016-12-19 11:00:00
 ---
-The current version of [DotGraph](/tools/scree/dotgraph/) is 2.1.0, which adds a text tracing option and support for configuration using the StorySettings passage.
+The current version of [DotGraph](/tools/scree/dotgraph/) is 2.2.0, which adds SnowStick (a reading tracker integrated with DotGraph), support for configuration using the DotGraphSettings passage (a safer and more flexible spot than StorySettings, though the latter is still supported), viewing another story by URL (a quicker way than by loading the story and this format into Twine), and Graphviz engine options (after updating to the latest [viz.js](http://viz-js.com) to fix some special character issues).
+
+It is available at GitHub.  Previous versions are archived here.
 
 #### Previous Versions
 

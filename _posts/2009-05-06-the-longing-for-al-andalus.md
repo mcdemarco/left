@@ -3,9 +3,10 @@ layout: post
 title: The Longing for al-Andalus
 tags: authors reviews shortpost
 created: 1241668642
+checked: 2022-09-28
 class: short
 ---
-I don't usually write reviews, but somehow I've fallen 700 posts behind reading [the  aggregator](/aggregator) and rather than try to catch up enough to reblog something I'll just mention the last book I read:  *The Lions of Al-Rassan*.  There's quite a bit of information about it at [Guy Gavriel Kay's website](http://www.brightweavings.com/books/lions.htm), but perhaps [Wikipedia](http://en.wikipedia.org/wiki/The_Lions_of_Al-Rassan) sums it up best:
+I don't usually write reviews, but somehow I've fallen 700 posts behind reading [the  aggregator](/aggregator) and rather than try to catch up enough to reblog something I'll just mention the last book I read:  *The Lions of Al-Rassan*.  There's quite a bit of information about it at [Guy Gavriel Kay's website](http://brightweavings.com/books/books/the-lions-of-al-rassan/), but perhaps [Wikipedia](http://en.wikipedia.org/wiki/The_Lions_of_Al-Rassan) sums it up best:
 
 > It is set in a peninsula of the same world in which *The Sarantine Mosaic* and *The Last Light of the Sun* are set, and is based upon Moorish Spain. The novel concentrates on the relationships between the three peoples: the Kindath (based on the Jews), the Asharites (based on the Muslims), and the Jaddites (based on the Christians). <!--break--> (The actual religions of the Kindath, Asharites, and Jaddites, as described in the novel, bear no relation to Judaism, Islam, and Christianity.)
 >

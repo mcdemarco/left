@@ -3,8 +3,9 @@ layout: post
 title: More Microfiction
 tags: markets streams
 created: 1250220713
+checked: 2022-09-28
 ---
-Via twitter, of course ([@eastgate](http://twitter.com/eastgate/statuses/3284731624)):  Dene Grigar's 24-hour [microfiction project](http://web.me.com/dgrigar/24-Hr._Micro-Elit_Project/Home.html) begins next Friday at midnight.
+Via twitter, of course ([@eastgate](http://twitter.com/eastgate/statuses/3284731624)):  Dene Grigar's 24-hour [microfiction project](http://web.archive.org/web/20110228025134/http://web.me.com/dgrigar/24-Hr._Micro-Elit_Project/Home.html) begins next Friday at midnight.
 
 > Inspired by Richard Brautigan’s pithy “The Scarlatti Tilt”, a story of only 34 words published in 1971, my work centers around  a collection of 24 stories about life in an American city in the 21st C.  Each story involves 140 characters or less delivered––that is, “tweeted”––on Twitter over a 24 hr. period.  
 

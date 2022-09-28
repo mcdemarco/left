@@ -4,6 +4,7 @@ title: "BDO of the Day: Banks Orbital"
 tags: BDO
 image: "/files/bdo/orbital3.jpg"
 created: 2018-02-02 01:00:00-04:00
+checked: 2022-09-27
 ---
 Today's Big Dumb Object (BDO) is a Banks Orbital, Orbital Ring, or simply [Orbital](https://en.wikipedia.org/wiki/Orbital_%28The_Culture%29), the little brother of Larry Niven's more famous Ringworld.  Introduced in 1987 by Iain M. Banks in *Consider Phlebas*, Orbitals solve the ringworld's daylight and orbital stability problems by being the perfect size.
 
@@ -16,5 +17,5 @@ There is only one diameter of Orbital for any pair of gravity and day length req
 ![Banks Orbital by Giuseppe Gerbino (CC BY-SA 3.0)](/files/bdo/orbital3.jpg)
 <cite>Model of a Banks Orbital by [Giuseppe Gerbino](https://commons.wikimedia.org/wiki/File:Culture%27s_orbital3.jpg)</cite>
 
-Though Orbitals are big, they're not dumb in the ancient abandoned BDO sense; they are an ongoing project of a living civilization.  For more about the Culture and how they build their Orbitals, see Banks' essay "[A Few Notes on The Culture](https://nuwen.net/culture.html)."
+Though Orbitals are big, they're not dumb in the ancient abandoned BDO sense; they are an ongoing project of a living civilization.  For more about the Culture and how they build their Orbitals, see Banks' essay "[A Few Notes on The Culture](http://cultureandempire.com/html/culture.html)."
 

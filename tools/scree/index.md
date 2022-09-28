@@ -45,8 +45,8 @@ The 1.x versions supported Scrivener 2 for Mac and Scrivener 1 for Windows.
 
 The template comes pre-populated with a few scenes.  Here is how they look after compiling in Scrivener, but before compiling with Twee2 or Tweego:
 
-* [Twee2 output](test-twee2.tw) from Scrivener using (default) compile option Twee2
-* [Twee output](test-twee.tw) using the Twee compile option
+* [Twee2 output](test-twee2.txt) from Scrivener using (default) compile option Twee2
+* [Twee output](test-twee.txt) using the Twee compile option
 
 Here are various versions of the final gamebook, compiled from the Scrivener output above using the Twine 2 story formats supported by Twee2 plus some of my own formats:
 

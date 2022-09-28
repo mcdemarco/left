@@ -3,6 +3,7 @@ layout: post
 title: In Hypertext No One Can Hear You Click
 tags: hyperfiction technology Twine
 created: 2019-05-31 11:25:00
+checked: 2022-09-27
 class: short
 ---
 I was googling around for a [classic blog post](https://heterogenoustasks.wordpress.com/2015/01/26/standard-patterns-in-choice-based-games/) about [hyperfiction structure](http://www.eastgate.com/patterns/Print.html), and instead stumbled upon a six-year-old Wired story, [Why No One Clicked On The Great Hypertext Story](https://www.wired.com/2013/04/hypertext/).  It was appropriately pessimistic about the future of hyperfiction, but strangely wrong about the causes:
@@ -19,6 +20,6 @@ It reminds me of fanfiction.  For reasons either legal or practical, most people
 
 ### Update
 
-The failure of [StoryNexus](http://www.failbettergames.com/?p=1222) is a good example of the *writing is easy, discovery is hard* problem.
+The failure of [StoryNexus](https://www.failbettergames.com/news/failbetter-games-what-are-we-for) is a good example of the *writing is easy, discovery is hard* problem.
 
 ![placekitten](http://placekitten.com/670/400)

@@ -10,7 +10,7 @@ Twine 1 stories and offline use are also supported.
 
 ### Versions
 
-This is an archived version of DotGraph 2.0.0, which included support for Twine 1, offline use, omitting special passages, and renumbering nodes.  The full version list is [here](/tools/scree/dotgraph/versions).
+This is an archived version of DotGraph 2.0.0, which included support for Twine 1, offline use, omitting special passages, and renumbering nodes.  The full version list is [here](/tools/scree/dotgraph/versions.html).
 
 ### Installation
 
