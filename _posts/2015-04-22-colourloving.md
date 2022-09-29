@@ -5,7 +5,7 @@ tags: longpost sharedware tools bookmarklets
 created: 2015-04-22 12:40:00
 class: release
 ---
-For my simple CMS, [SCMS](/blog/2015/03/26/scms/), I've been doing some work on automatic styling from a palette.  I needed some palettes to work from, so I started out making them at [Coolors](http://app.coolors.co/).  Unfortunately, Coolors doesn't have an API or a social layer like the late, lamented Adobe Kuler did, so there's no way to fetch its randomly generated or its human-saved palettes and use them.
+For my simple CMS, [SCMS](/blog/2015/03/26/scms/), I've been doing some work on automatic styling from a palette.  I needed some palettes to work from, so I started out making them at [Coolors](https://coolors.co/).  Unfortunately, Coolors doesn't have an API or a social layer like the late, lamented Adobe Kuler did, so there's no way to fetch its randomly generated or its human-saved palettes and use them.
 
 [COLOURlovers](http://www.colourlovers.com), on the other hand, has an API.  The site itself is sadly mired in non-responsive HTML that is practically unusable on a phone, with some lovely tools that are even more unusable on any sort of touchscreen, so I ignored the website entirely for quite a while and just pulled in some palettes by using PHP to access the API.  But at some point in my meanderings, I wanted to add the Coolors palette I'd been using as a default theme to [my COLOURlovers account](http://www.colourlovers.com/lover/mcdemarco), so I could pull it out in the same format I was using for random theming.  Then I started looking at and creating palettes and patterns far beyond the needs of SCMS development.
 
