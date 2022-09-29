@@ -7,6 +7,7 @@ date: 2008-10-03 00:05
 prev: index
 up: index
 next: connavar
+checked: 2015-01-31
 ---
 There are certainly situations in which no naming language is necessary:  mainstream fiction set in the present, nebulously near-future science fiction, and perhaps even urban fantasy.
 
@@ -36,5 +37,3 @@ If you're not sure English would become unrecognizable in 10,000 years, then tak
 ### Alien Names
 
 When faced with some far-future John and Mary, one might be tempted to provide the author with the Federation Standard alibi---that he has translated appropriately futuristic names into pronounceable modern ones for reader convenience.  This alibi does not extend to alien names.  You should not, under any circumstances, call your aliens Priscilla or Alex or Jean-Luc.  This is an area in which a naming language is expected.
-
-<!-- links checked 31-I-2015 -->

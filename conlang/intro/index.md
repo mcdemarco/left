@@ -7,6 +7,7 @@ date: 2008-10-01 23:01
 prev: ../index
 up: ../index
 next: star
+checked: 2015-01-31
 ---
 It's easy to find conlanging advice for the intentional conlanger who's intrigued by agglutinating languages or the ergative case.  These resources are good for a month or two of [cat vacuuming](http://groups.google.com/group/rec.arts.sf.composition/msg/cf8078551f065a12), but are too deep and narrow in scope for the accidental conlanger.  Most conlanging sites won't tell you when to cheat or how to cut corners.  On the other hand, conlanging advice [addressed to writers](http://hollylisle.com/holly-lisles-create-a-language-clinic/) is often lacking in linguistic sophistication and in pointers to the wider world of constructed languages.
 
@@ -20,4 +21,3 @@ This page was brought to you by the letter [&#564;](http://en.wikipedia.org/wiki
 * [Someone has a curiosity for you: The Illusion of a Language](someone.html)
 * [The fra'as guarded the farmlings with their krytoses: Calling It Bread](bread.html)
 
-<!-- links checked 31-I-2015 -->
