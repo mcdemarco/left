@@ -3,6 +3,7 @@ layout: post
 title: The Wheel, Reinvented
 tags: hyperfiction gamebooks choicemaps micro
 created: 2017-11-09 01:10:00
+checked: 2022-09-28
 class: short
 ---
 Many thanks to Thomas Wolmer for corrections to my [history of choice mapping post](/blog/2017/10/27/history-of-choice-mapping/) that push the first choicemap online back by about six months or so (to January 2001).  If you don't want to reread the whole thing, here is just the update:

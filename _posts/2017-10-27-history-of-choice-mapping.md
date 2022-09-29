@@ -35,7 +35,7 @@ This year marks the composition of *Sugarcane Island* by [Edward Packard](http:/
 
 In 1972, the [first volume](https://www.amazon.com/exec/obidos/ASIN/0552560022) of the first gamebook series, Tracker Books, was published by Transworld Publishers.
 
-In 1976, *Sugarcane Island* was finally published, by Vermont Crossroads Press.  The first RPG-style gamebook, [*Buffalo Castle*](http://www.flyingbuffalo.com/bcintro.htm), was also published that year.
+In 1976, *Sugarcane Island* was finally published, by Vermont Crossroads Press.  The first RPG-style gamebook, [*Buffalo Castle*](http://web.archive.org/web/20190215205723/http://www.flyingbuffalo.com/bcintro.htm), was also published that year.
 
 Several more of Packard's works followed before Bantam rebranded the series "Choose Your Own Adventure" and published the first volume of that series, Packard's *The Cave of Time*, in 1979.
 
