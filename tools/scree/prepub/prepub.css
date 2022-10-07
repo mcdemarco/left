@@ -1,0 +1,37 @@
+/* This defines styles and classes used in the book (pandoc defaults, feel free to edit) */
+body { margin: 5%; text-align: justify; font-size: medium; }
+code { font-family: monospace; }
+h1 { text-align: left; }
+h2 { text-align: left; } /* passage titles are h2's */
+h3 { text-align: center; } /* paragraph numbers and dividers are h3's; you can change their size here if you don't have other h3's */
+h3.dividerCharacter { font-size: larger; } /* paragraph divider characters in particular */
+h3.dividerImage img { width: 66%; } /* paragraph divider images in particular */
+h4 { text-align: left; }
+h5 { text-align: left; }
+h6 { text-align: left; }
+h1.title { }
+h2.author { }
+h3.date { }
+ol.toc { padding: 0; margin-left: 1em; }
+ol.toc li { list-style-type: none; margin: 0; padding: 0; }
+a.footnoteRef { vertical-align: super; }
+em, em em em, em em em em em { font-style: italic;}
+em em, em em em em { font-style: normal; }
+
+/* These are hidden (but retained) in some of the passage numbering options to allow navigation. */
+.prepub_hidden h2, h2.prepub_hidden { position: absolute; visibility: hidden; }
+
+/* General breaking fixes */
+h1, h2, h3 { page-break-after: avoid; break-after: avoid-page; }
+
+ul { page-break-inside: avoid; break-inside: avoid-page; }
+
+p { widows: 2; orphans: 2; }
+
+/* This is an attempt to make 2-page layouts work better, but they still look funny.  
+   Remove for continuous paragraphs if necessary.  */
+.level2 { break-before: left; }
+
+.level2, header { padding-bottom: 3em; } 
+
+body { padding-bottom: 80%; }

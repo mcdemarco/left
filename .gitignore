@@ -18,13 +18,7 @@ games/decktet/myrmex
 recipes/images
 
 tools/hyperfic/twine/catalog/catalog.json
-
-tools/scree/dotgraph/*/*
-tools/scree/paloma/*/*
-tools/scree/prepub/*/*
-tools/scree/prepub/*.css
-tools/scree/prepub/*.html
-tools/scree/prepub/*.yaml
-tools/scree/**/format.js
-tools/scree/**/header.html
+tools/scree/dotgraph/beta/
+tools/scree/dotgraph/**/offline/*
+tools/scree/paloma/beta/
 tools/viz

@@ -8,14 +8,13 @@
 		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/1.3.3/FileSaver.min.js"></script>
 		<script>
 /**
- * PrePub - Twine 2 Markdown Export Story Format
- * Based on Enscree
+ * PrePub 1.1.1 - Twine Markdown Export Story Format
  * 
- * Copyright (c) 2017 M. C. DeMarco
+ * Copyright (c) 2017 - 2021 M. C. DeMarco
  * https://www.mcdemarco.net/tools/scree/prepub/
  *
- * This license applies exclusively to the PrePub story format for Twine 2. No ownership of, nor
- * licensing restrictions on, the content within the generated story are stated or implied.
+ * This (MIT) license applies exclusively to the PrePub story format for Twine 2. No ownership of, 
+ * nor licensing restrictions on, the content within the generated story are stated or implied.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy of this software and
  * associated documentation files (the "Software"), to deal in the Software without restriction,
@@ -33,12 +32,100 @@
  * SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 		</script>
-<script>(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
-window.onload=function(){void 0===window.PrePub&&(window.PrePub={convert:function(){var e=this.export(),t=new Blob([e],{type:"text/markdown;charset=utf-8"});saveAs(t,"prepub"+Date.now()+".md")},export:function(){var e,t,r,o,n=[],a=["StoryTitle","StoryIncludes","StoryColophon","StoryAuthor","StorySubtitle","StoryMenu","StorySettings","StoryBanner","StoryCaption","StoryInit","StoryShare","PassageDone","PassageFooter","PassageHeader","PassageReady","MenuOptions","MenuShare"];document.getElementsByTagName("tw-storydata").length>0?(e=document.querySelector("tw-storydata"),t=2,r="tw-passagedata",o="name",selectorColophon="tw-passagedata[name=StoryColophon]"):(e=document.querySelector("#storeArea"),t=1,r="*[tiddler]",o="tiddler",selectorColophon="div[tiddler=StoryColophon]");var s=2==t?e.querySelector('tw-passagedata[pid="'+e.getAttribute("startnode")+'"]').getAttribute(o):"Start";e&&n.push(this.buildTitlePage(t,e,s));for(var u=document.querySelectorAll(r),i=0;i<u.length;++i){var l=u[i].getAttribute(o);if(l||(l="Untitled Passage"),!(a.indexOf(l)>-1)){var d=u[i].textContent;n.push(this.buildPassage(l,d))}}if(e.querySelector(selectorColophon)){var c=e.querySelector(selectorColophon).textContent+"\r\n\r\n[Restart]["+s+"]\r\n\r\n";n.push(this.buildPassage("Colophon",c))}return n.join("")},buildTitlePage:function(e,t,r){var o=2==e?"tw-passagedata[name=Story":"div[tiddler=Story",n=2==e?t.getAttribute("name"):t.querySelector(o+"Title]")?t.querySelector(o+"Title]").textContent:"Untitled Story",a=t.querySelector(o+"Subtitle]")?t.querySelector(o+"Subtitle]").innerHTML:"",s=t.querySelector(o+"Author]")?t.querySelector(o+"Author]").textContent:"",u=t.querySelector(o+"Colophon]")?"[Colophon]\r\n\r\n":"",i=(a?"*"+a+"* \r\n\r\n":"")+(s?"by "+s+"\r\n\r\n":"")+"["+r+"]\r\n\r\n"+u;return this.buildPassage(n,i)},buildPassage:function(e,t){var r=[];return r.push("## ",e),r.push("\r\n\r\n",this.scrub(t),"\r\n\r\n"),r.join("")},markdownLinks:function(e){return e.replace(/\[\[(.*?)\]\]/g,function(e,t){var r,o=t.indexOf("|");if(-1!=o)r=t.substr(0,o),t=t.substr(o+1);else{var n=t.indexOf("->");if(-1!=n)r=t.substr(0,n),t=t.substr(n+2);else{var a=t.indexOf("<-");-1!=a&&(r=t.substr(a+2),t=t.substr(0,a))}}return r?"["+r+"]["+t+"]":"["+t+"]"})},scrub:function(e){return e&&(e=e.replace(/^##/gm," ##"),e=e.replace(/\\</gm,"&lt;"),e=e.replace(/\\>/gm,"&gt;"),e=e.replace(/\\n\\n/gm,"\r\n\r\n"),e=this.markdownLinks(e)),e}}),window.PrePub.convert()};
+<script>(function(){function r(e,n,t){function o(i,f){if(!n[i]){if(!e[i]){var c="function"==typeof require&&require;if(!f&&c)return c(i,!0);if(u)return u(i,!0);var a=new Error("Cannot find module '"+i+"'");throw a.code="MODULE_NOT_FOUND",a}var p=n[i]={exports:{}};e[i][0].call(p.exports,function(r){var n=e[i][1][r];return o(n||r)},p,p.exports,r,e,n,t)}return n[i].exports}for(var u="function"==typeof require&&require,i=0;i<t.length;i++)o(t[i]);return o}return r})()({1:[function(require,module,exports){
+window.onload=function(){void 0===window.PrePub&&(window.PrePub={load:function(){window.location.search&&window.location.search.split("?")[1].length>0?this.useSettings(window.location.search.split("?")[1].split("&")):this.disenable()},disenable:function(){var e=!document.getElementById("tw2md").checked;document.querySelectorAll("[name=source]").forEach(function(t){t.disabled=e})},useSettings:function(e){var t;for(l=0;l<e.length;l++)if((t=e[l].split("=")).length>0)switch(t[0]){case"numbering":t.length>1&&(document.querySelector("#"+t[1]).checked=!0);break;case"symbolInput":t.length>1&&(document.querySelector("#symbolInput").value=decodeURIComponent(t[1]));break;case"shuffle":document.querySelector("#shuffle").checked=!0;break;case"source":t.length>1&&(document.querySelector("#tw2md").checked=!0,document.querySelector("#"+t[1]).checked=!0)}this.convert()},convert:function(){var e=this.export(),t=new Blob([e],{type:"text/markdown;charset=utf-8"});saveAs(t,"prepub"+Date.now()+".md")},export:function(){var e,t,r,n,o,a,l=[],u=["StoryTitle","StoryIncludes","StoryColophon","StoryData","StoryAuthor","StorySubtitle","StoryMenu","StorySettings","StoryBanner","StoryCaption","StoryInit","StoryShare","PassageDone","PassageFooter","PassageHeader","PassageReady","MenuOptions","MenuShare","DotGraphSettings"];document.getElementsByTagName("tw-storydata").length>0?(t=2,r="tw-passagedata",n="name",o="pid",a=(e=document.querySelector("tw-storydata")).getAttribute("startnode"),selectorColophon="tw-passagedata[name=StoryColophon]"):(e=document.querySelector("#storeArea"),t=1,r="*[tiddler]",n="tiddler",selectorColophon="div[tiddler=StoryColophon]");var c=2==t?e.querySelector('tw-passagedata[pid="'+a+'"]').getAttribute(n):"Start";e&&l.push(this.buildTitlePage(t,e,c));for(var s=document.querySelectorAll(r),i=0,d=[],p=0;p<s.length;++p){var h=s[p].getAttribute(n)?s[p].getAttribute(n):"Untitled Passage";if(!(u.indexOf(h)>-1)){(1==t&&"Start"==h||2==t&&s[p].getAttribute(o)==a)&&(i=d.length);var m=s[p].textContent;d.push({name:h,content:m})}}var g,y,S,b=d.splice(i,1);if(document.getElementById("shuffle").checked)for(y=d.length-1;y>0;y--)g=Math.floor(Math.random()*(y+1)),S=d[y],d[y]=d[g],d[g]=S;d=b.concat(d);for(var w=document.querySelector("input[name=numbering]:checked").value,f=0;f<d.length;f++)l.push(this.buildPassage(d[f],w,f+1));if(e.querySelector(selectorColophon)){var v=e.querySelector(selectorColophon).textContent+"\n\n[Restart]["+c+"]\n\n";l.push(this.buildPassage({name:"Colophon",content:v},w,"Colophon"))}return l.join("")},buildTitlePage:function(e,t,r){var n=2==e?"tw-passagedata[name=Story":"div[tiddler=Story",o=2==e?t.getAttribute("name"):t.querySelector(n+"Title]")?t.querySelector(n+"Title]").textContent:"Untitled Story",a=t.querySelector(n+"Subtitle]")?t.querySelector(n+"Subtitle]").innerHTML:"",l=t.querySelector(n+"Author]")?t.querySelector(n+"Author]").textContent:"";return this.buildYaml(o,a,l)+this.scrub("")+"\n\n"},buildPassage:function(e,t,r){var n=[];return n.push("## ",e.name),"names"!=t&&n.push(" {.prepub_hidden}"),"numbers"==t?n.push("\n### ",r):"symbol"==t?n.push("\n### ",document.querySelector("#symbolInput").value," {.dividerCharacter}"):"image"==t&&n.push("\n### ","![divider image]("+document.querySelector("#symbolInput").value+") {.dividerImage}"),n.push("\n\n",this.scrub(e.content),"\n\n"),n.join("")},buildYaml:function(e,t,r){var n=[];return n.push("---","\n"),n.push("title: ",e,"\n"),t&&n.push("subtitle: ",t,"\n"),r&&n.push("author: ",r,"\n"),n.push("---\n\n"),n.join("")},markdownLinks:function(e){return e.replace(/\[\[(.*?)\]\]/g,function(e,t){var r,n=t.indexOf("|");if(-1!=n)r=t.substr(0,n),t=t.substr(n+1);else{var o=t.indexOf("->");if(-1!=o)r=t.substr(0,o),t=t.substr(o+2);else{var a=t.indexOf("<-");-1!=a&&(r=t.substr(a+2),t=t.substr(0,a))}}return r?"["+r+"]["+t+"]":"["+t+"]"})},scrub:function(e){var t;e&&(document.getElementById("tw2md").checked&&(t=document.querySelector("input[name=source]:checked")?document.querySelector("input[name=source]:checked").value:"harlowe"),e=(e=(e=e.replace(/\\</gm,"&lt;")).replace(/\\>/gm,"&gt;")).replace(/\\n\\n/gm,"\n\n"),e=this.markdownLinks(e),t&&(e=this.detwiddle(e,t)));return e},detwiddle:function(e,t){return e="chapbook"!=t?(e=(e=e.replace(/\/\//gm,"*")).replace(/''/gm,"**")).replace(/\^\^/gm,"^"):e.replace(/~~([^~]+?)~~/gm,'<span class="smallcaps">$1</span>'),"harlowe"==t&&(e=e.replace(/^(\s)*(#{1,6})([^#].*)$/gm,"\n$2 $3\n\n")),"sugarcube"!=t&&"twine1"!=t||(e=(e=(e=(e=(e=(e=(e=(e=(e=(e=(e=e.replace(/~~([^~]+?)~~/gm,"~$1~")).replace(/==/gm,"~~")).replace(/__([^_]+?)__/gm,'<span class="underline">$1</span>')).replace(/^# (\w)/gm,"1. $1")).replace(/^!!!!!!(\w)/gm,"###### $1")).replace(/^!!!!!(\w)/gm,"##### $1")).replace(/^!!!!(\w)/gm,"#### $1")).replace(/^!!!(\w)/gm,"### $1")).replace(/^!!(\w)/gm,"## $1")).replace(/^!(\w)/gm,"# $1")).replace(/\/%(.*?)%\//gm,"\x3c!--- $1 --\x3e"),"sugarcube"==t&&(e=e.replace(/\/\*(.*?)\*\//gm,"\x3c!--- $1 --\x3e")),e=e.replace(/({{{)|(}}})/gm,"```"),"sugarcube"==t&&(e=e.replace(/\"\"\"/gm,"`"))),e}}),window.PrePub.load()};
+
 },{}]},{},[1]);
 </script>
+		<style>
+		 .info, caption {font-style:italic;}
+		 .info {color: #a5a5a5;}
+		 .indent {padding-left: 1.5em;}
+		 p, table {padding-left: 3em;}
+		 table {caption-side:top; color:#333;}
+		 th, td {border: 1px solid #dedede; padding: 3px; text-align:center; font-weight:normal;}
+		 td {font-size: x-large;}
+		</style>
+
 	</head>
 	<body>
+		<h1>PrePub Conversion of {{STORY_NAME}}</h1>
+
+		<p>Certain options may require the PrePub stylesheet.  You can also change centering, size, and capitalization of the headers there.</p>
+
+		<h3>Headers</h3>
+
+		<p>
+			<input type="radio" id="nothing" name="numbering" value="nothing" />
+			<label for="nothing">None </label>
+			&nbsp;
+			<span class="info"> There will be no header at all on passages.</span>
+			<br/>
+			<input type="radio" id="names" name="numbering" value="names" checked />
+			<label for="names">Passage names</label>
+			&nbsp;
+			<span class="info"> Passage names will not be altered (<em>e.g.</em>, to upper case).</span>  
+			<br/>
+			<input type="radio" id="numbers" name="numbering" value="numbers" />
+			<label for="numbers">Paragraph numbers </label>
+			&nbsp;
+			<span class="info"> Paragraph numbers are arbitrary (though sequential) and are not inserted into links.</span>  
+			<br/>
+			<input type="radio" id="symbol" name="numbering" value="symbol" />
+			<label for="symbol">A character divider </label>
+			&nbsp;
+			<span class="info"> Use a numeric entity reference (<i>e.g.,</i> &amp;#167;), not a named reference (&amp;sect;).</span>
+			<br/>
+			<input type="radio" id="image" name="numbering" value="image" />
+			<label for="image">An image divider </label>
+			&nbsp;
+			<span class="info"> Provide a path relative to the directory you will be running pandoc in.</span>
+			<br/>
+			<label for="symbolInput" class="indent">Divider entity or path: </label> 
+			<input type="text" id="symbolInput" name="symbolInput" placeholder="&amp;#167;" value="" />
+
+			<table>
+				<caption>Sample character entities; see <a href="https://dev.w3.org/html5/html-author/charref" target="_blank">this page</a> for more.</caption>
+				<tr><th>&amp;#42;</th><th>&amp;#167;</th><th>&amp;#182;</th><th>&amp;#183;</th><th>&amp;#8224;</th><th>&amp;#8225;</th><th>&amp;#8226;</th><th>&amp;#8727;</th><th>&amp;#8982;</th><th>&amp;#10535;</th><th>&amp;#10803;</th></tr>
+				<tr><td>&#42;</td><td>&#167;</td><td>&#182;</td><td>&#183;</td><td>&#8224;</td><td>&#8225;</td><td>&#8226;</td><td>&#8727;</td><td>&#8982;</td><td>&#10535;</td><td>&#10803;</td></tr>
+			</table>
+		</p>
+
+
+		<h3>Other Options</h3>
+		<p>
+			<input type="checkbox" id="shuffle" name="shuffle" value="1" />
+			<label for="shuffle">Shuffle passages </label>
+			&nbsp;
+			<span class="info"> The start passage will remain at the beginning.</span>
+		</p>
+		<p>
+			<input type="checkbox" id="tw2md" name="tw2md" onclick="PrePub.disenable();" />
+			<label for="tw2md">Convert wiki-style markup to markdown from: </label>
+			&nbsp;
+			<input type="radio" name="source" id="harlowe" value="harlowe" checked/>
+			<label for="harlowe">Harlowe </label>
+			&nbsp;
+			<input type="radio" name="source" id="sugarcube" value="sugarcube" />
+			<label for="sugarcube">Sugarcube </label>
+			&nbsp;
+			<input type="radio" name="source" id="twine1" value="twine1" />
+			<label for="twine1">Twine 1 </label>
+			&nbsp;
+			<input type="radio" name="source" id="chapbook" value="chapbook" />
+			<label for="chapbook">Chapbook </label>
+			<br/>
+			<span class="info indent">This should only be necessary if you didn't use a purely Markdown-based story format like Snowman.  (Chapbook uses some minor non-Markdown markup.)</span>
+			<br/>
+			<span class="info indent">It does not convert macros or other scripting.</span>
+		</p>
+
+		<h3>Download</h3>
+		<p>
+			<button type="button" onclick="PrePub.convert();">Download</button>
+		</p>
+		<p>See the PrePub README or <a href="http://mcdemarco.net/tools/scree/prepub/" target="_blank">web page</a> for help converting the downloaded file to ePub using Pandoc and PrePub's stylesheet.</p>
+
 		<pre id="output">
 		
 		</pre>
