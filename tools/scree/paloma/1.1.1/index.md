@@ -167,4 +167,4 @@ In your [script]:
 
 ### Sausage
 
-The source code is [at BitBucket](https://bitbucket.org/mcdemarco/paloma).  Paloma is based on [Snowman](hhttps://github.com/klembot/snowman) by Chris Klimas.  The main changes (besides making it Jonah-like) involved the story history as explained above.  Paloma does not have Snowman's checkpoint functionality; history is node-by-node only.
+The source code is [at BitBucket](https://bitbucket.org/mcdemarco/paloma).  Paloma is based on [Snowman](https://github.com/klembot/snowman) by Chris Klimas.  The main changes (besides making it Jonah-like) involved the story history as explained above.  Paloma does not have Snowman's checkpoint functionality; history is node-by-node only.
