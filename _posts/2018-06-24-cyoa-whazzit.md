@@ -3,10 +3,11 @@ layout: post
 title: Choose Your Own Whazzit?
 tags: hyperfiction gamebooks writing
 created: 2018-06-24 15:55:00-04:00
+checked: 2022-10-11
 ---
 In a [recent post](/blog/2018/05/25/scapple2twine2scapple/), I mentioned hyperfiction Discord servers.  Sadly for me, they, like Discord itself, are very game-focused.  I had a passing thought about making one that was more focused on the sorts of hyperfiction that can occur in paper books made from dead trees, regardless of whether any trees were killed in the process.
 
-As usual, my first thought was how to [title](https://boardgamegeek.com/article/29360641#29360641) it.  One nice but taken term for CYOA is "decision fiction"; this one has been taken by a new, as-yet-unlaunched IF platform that so far is just a [Twitter feed](https://twitter.com/decisionfiction), and, oddly, an [upcoming free online conference](https://www.interactivefictionwriters.com).
+As usual, my first thought was how to [title](https://boardgamegeek.com/article/29360641#29360641) it.  One nice but taken term for CYOA is "decision fiction"; this one has been taken by a new, as-yet-unlaunched IF platform that so far is just a [Twitter feed](https://twitter.com/decisionfiction), and, oddly, an upcoming free online conference <!--https://www.interactivefictionwriters.com)-->.
 
 For one brief shining moment the obvious title seemed to be *CYOA*.  Unfortunately, sometime since the original publication of the acronomynous books (but possibly before [my hyperfiction thesaurus](/blog/2016/10/19/state-of-hyperfiction/)), a [new, incomprehensible genre](https://www.reddit.com/r/makeyourchoice/) has grown up that, while intentionally using the acronym for *Choose Your Own Adventure* books, has absolutely nothing to do with them.
 

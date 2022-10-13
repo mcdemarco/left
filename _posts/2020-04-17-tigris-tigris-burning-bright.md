@@ -3,9 +3,10 @@ layout: post
 title: Tigris, Tigris Burning Bright
 tags: data longpost how-to
 created: 2020-04-17 10:00:00-04:00
+checked: 2022-10-11
 image: "/files/plagueblog/cities-count1.png"
 ---
-Yesterday was [Day 76](https://plagueblog.blogspot.com/2020/04/day-76-covid-in-covid-out.html) of COVID-19 in Boston on my [PlagueBlog](http://plagueblog.blogspot.com/), and I managed to graph the Commonwealth's new town-by-town coronavirus case rate data using [R](https://www.r-project.org) and the [tigris](https://github.com/walkerke/tigris) package.  I used a [tutorial](https://walkerke.github.io/2017/06/comparing-metros/) by tigris author Kyle Walker that explains how to do something more complicated with both census data and census maps.  Besides being overkill for this project, it was a little out of date and threw at least one [error](https://github.com/tidyverse/ggplot2/issues/2651), so the following is a shorter tutorial on mixing up your own (or your state's) city data with a tigris (census) map.
+Yesterday was [Day 76](https://plagueblog.blogspot.com/2020/04/day-76-covid-in-covid-out.html) of COVID-19 in Boston on my [PlagueBlog](http://plagueblog.blogspot.com/), and I managed to graph the Commonwealth's new town-by-town coronavirus case rate data using [R](https://www.r-project.org) and the [tigris](https://github.com/walkerke/tigris) package.  I used a [tutorial](http://web.archive.org/web/20190201133529/https://walkerke.github.io/2017/06/comparing-metros/) by tigris author Kyle Walker that explains how to do something more complicated with both census data and census maps.  Besides being overkill for this project, it was a little out of date and threw at least one [error](https://github.com/tidyverse/ggplot2/issues/2651), so the following is a shorter tutorial on mixing up your own (or your state's) city data with a tigris (census) map.
 
 I already had a process to import <tt>docx</tt> files from [mass.gov](https://www.mass.gov/info-details/covid-19-cases-quarantine-and-monitoring#covid-19-cases-in-massachusetts-) into R using [docxtractr](https://cran.r-project.org/web/packages/docxtractr/index.html).
 

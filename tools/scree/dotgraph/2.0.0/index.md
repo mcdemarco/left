@@ -23,7 +23,7 @@ To add DotGraph to the installable local versions of Twine 2, follow the install
 
 #### Twine 1
 
-To add DotGraph to Twine 1, create a new folder called `dotgraph` inside your targets folder, then download this file: [https://mcdemarco.net/tools/scree/dotgraph/2.0.0/header.html](https://mcdemarco.net/tools/scree/dotgraph/2.0.0/header.html) and place it inside the `dotgraph` folder.  For offline use, download and use [https://mcdemarco.net/tools/scree/dotgraph/2.0.0/offline/header.html](https://mcdemarco.net/tools/scree/dotgraph/offline/2.0.0/header.html) instead.
+To add DotGraph to Twine 1, create a new folder called `dotgraph` inside your targets folder, then download this file: [https://mcdemarco.net/tools/scree/dotgraph/2.0.0/header.html](https://mcdemarco.net/tools/scree/dotgraph/2.0.0/header.html) and place it inside the `dotgraph` folder.  For offline use, download and use [https://mcdemarco.net/tools/scree/dotgraph/2.0.0/offline/header.html](https://mcdemarco.net/tools/scree/dotgraph/2.0.0/offline/header.html) instead.
 
 See the [Twine wiki](http://twinery.org/wiki/twine1:story_format#adding_formats) for more information about installing and using story formats in Twine 1.
 
