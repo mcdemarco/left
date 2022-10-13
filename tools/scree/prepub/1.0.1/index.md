@@ -39,7 +39,7 @@ Next, you will probably want to convert the file to epub using [pandoc](http://p
 
 ### Versions
 
-The current version is 1.0.1, which adds more special passage support and fixes some bugs involving newlines in Twine 1 (and incidentally works around [this Twine bug](https://bitbucket.org/klembot/twinejs/issues/421/install-story-format-fails-with-certain)).
+The current version is 1.0.1, which adds more special passage support and fixes some bugs involving newlines in Twine 1 (and incidentally works around [this Twine bug](https://github.com/klembot/twinejs/issues/421).)).
 
 [Version 1.0.0](/tools/scree/prepub/1.0.0/): still had a bug with newlines in Twine 1
 
@@ -49,7 +49,7 @@ The Scree test story is available formatted as markdown using PrePub ([test-prep
 
 ### Sausage
 
-The source code has moved from [BitBucket](https://bitbucket.org/mcdemarco/prepub) to [GitHub](https://github.com/mcdemarco/prepub).
+The source code has moved from BitBucket to [GitHub](https://github.com/mcdemarco/prepub).
 
 PrePub was inspired by [enscree](/tools/scree/enscree/), which was based on [entwee](/tools/entwee/), which was based on [entweedle](http://www.maximumverbosity.net/twine/Entweedle/).  I also [blogged about it](/blog/2017/10/30/prepub/).
 

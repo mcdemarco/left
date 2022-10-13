@@ -29,7 +29,7 @@ In Twine 1, open or create a story (under the File menu).  Then, in the Story me
 
 To restyle or remove the title, use the selector `#ptitle`.    To restyle or remove the subtitle, use the selectors `#psub` (for both), `#psubtitle` (for the subtitle), and `#pauthor` (for the byline).
 
-Styling is otherwise as in Snowman; see [the Snowman docs](https://bitbucket.org/klembot/snowman-2/) for more details on making specific HTML elements and assigning them classes or ids.
+Styling is otherwise as in Snowman; see [the Snowman docs](https://github.com/videlais/snowman) for more details on making specific HTML elements and assigning them classes or ids.
 
 #### Snowman-style Scripting
 
@@ -39,7 +39,7 @@ Styling is otherwise as in Snowman; see [the Snowman docs](https://bitbucket.org
 * Show alternate texts based on a variable's value:  `<% if (s.gender == "male") { %>You are male.<% } else { %>You are female.<% } %>`.
 * Add a comment: `/* My ToDo list for this node: spellcheck! */`
 
-Underscore and jQuery are also available for your scripts; see [the Snowman docs](https://bitbucket.org/klembot/snowman-2/) for more details.
+Underscore and jQuery are also available for your scripts; see [the Snowman docs](https://github.com/videlais/snowman) for more details.
 
 
 ### Versions
@@ -57,4 +57,4 @@ The Scree test story is available formatted with Paloma:  [test-paloma.html](/to
 
 ### Sausage
 
-The source code is [at BitBucket](https://bitbucket.org/mcdemarco/paloma).  Paloma is based on [Snowman](https://bitbucket.org/klembot/snowman-2) by Chris Klimas.  The main changes (besides making it Jonah-like) involved the story history as explained above.  Paloma does not have Snowman's checkpoint functionality; history is node-by-node only.
+The source code was at BitBucket at the time but is now [at GitHub](https://github.com/mcdemarco/paloma).  Paloma is based on [Snowman](https://github.com/videlais/snowman) by Chris Klimas.  The main changes (besides making it Jonah-like) involved the story history as explained above.  Paloma does not have Snowman's checkpoint functionality; history is node-by-node only.

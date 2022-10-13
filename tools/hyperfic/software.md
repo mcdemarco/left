@@ -12,7 +12,7 @@ There is no easy way to write a long work of [hyperfiction](/tools/hyperfic/); i
 
 ## The Software
 
-Unless otherwise mentioned, the programs are mostly open source and free as in beer, and mostly output HTML that can be read/played in any browser, except for the cloud services which generally host the story for you.  Some defunct software is provided for completeness and/or amusement.  For a similar list, see [the Interactive Fiction Wiki](http://www.ifwiki.org/index.php/Engine_List).  See [the cloud](./#The.Cloud) for hyperfiction-as-a-service options.
+Unless otherwise mentioned, the programs are mostly open source and free as in beer, and mostly output HTML that can be read/played in any browser, except for the cloud services which generally host the story for you.  Some defunct software is provided for completeness and/or amusement.  For a similar list, see [the Interactive Fiction Wiki](http://www.ifwiki.org/index.php/Engine_List).  See [the cloud](#The.Cloud) below for hyperfiction-as-a-service options.
 
 ### The Big Players
 
@@ -114,7 +114,7 @@ The only thing riskier than writing prose at length in a browser is trusting it 
 * [Borogove](https://borogove.io): a free hosting service for interactive fiction that accepts HTML as well as various IF languages (the choiciest of which is Ink)
 * [ChooseYourStory.com](http://chooseyourstory.com): create hypertext stories with scripting in the cloud; still working flakily, but has no export format; includes hosting of stories
 * [Create Your Own Story](http://editthis.info/create_your_own_story/): create CYOA stories in a wiki that isn't TiddlyWiki
-* ~~[CYOCYOA!](http://www.cyocyoa.com/)~~: Create Your Own Choose-Your-Own-Adventures! is recently down, but has risen from the dead before
+* [CYOCYOA!](http://www.cyocyoa.com/): Create Your Own Choose-Your-Own-Adventures! is back from the dead again
 * [Episode](https://www.episodeinteractive.com) - Choose Your Story: the [world's biggest interactive fiction platform](https://www.gamasutra.com/view/news/293928/How_Episode_became_the_worlds_biggest_interactive_fiction_platform.php) is a mobile app where you can read and write avatar-illustrated, mostly teen-angsty, CYOA stories.
 * [Extend-A-Story](https://www.sir-toby.com/extend-a-story/): a long-running communal effort
 * [Fighting Fantasy](https://fightingfantasy.net/play/book_creator_account.cgi): create (and play) gamebooks using an HTML-like language

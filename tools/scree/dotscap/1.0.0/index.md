@@ -61,7 +61,7 @@ Here's a [Scapple file](/tools/scree/test-dotscap.scap) generated from the [Scre
 
 ### Sausage
 
-The source code is available [at BitBucket](https://bitbucket.org/mcdemarco/dotscap).
+The source code was available at BitBucket at the time but is now [at GitHub](https://github.com/mcdemarco/dotscap).
 
 DotScap was inspired by a discussion on the [Twine discord server](https://discord.gg/n5dJvPp).
 

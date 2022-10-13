@@ -15,7 +15,7 @@ PrePub is available for Twine 1 as well as for Twine 2.
 
 ### Installation
 
-To add PrePub to Twine 2, use this URL (under Formats > Add a New Format): `https://mcdemarco.net/tools/scree/prepub/format.js`.  (Installation may fail due to [this Twine bug](https://bitbucket.org/klembot/twinejs/issues/421/install-story-format-fails-with-certain).)
+To add PrePub to Twine 2, use this URL (under Formats > Add a New Format): `https://mcdemarco.net/tools/scree/prepub/format.js`.  (Installation may fail in old versions of Twine due to [this bug](https://github.com/klembot/twinejs/issues/421).)
 
 To add PrePub to Twine 1, create a new folder called `prepub` inside your targets folder, then download this file: [https://mcdemarco.net/tools/scree/prepub/header.html](https://mcdemarco.net/tools/scree/prepub/header.html) and place it inside the `prepub` folder.  (See the [Twine wiki](http://twinery.org/wiki/twine1:story_format#adding_formats) for more information about installing and using story formats in Twine 1.)
 
@@ -43,5 +43,5 @@ The Scree test story is available formatted as markdown using PrePub ([test-prep
 
 ### Sausage
 
-The source code is [at BitBucket](https://bitbucket.org/mcdemarco/prepub).  PrePub was inspired by [enscree](/tools/scree/enscree/), which was based on [entwee](/tools/entwee/), which was based on [entweedle](http://www.maximumverbosity.net/twine/Entweedle/).
+The source code was at BitBucket at the time but is now [at GitHub](https://github.com/mcdemarco/prepub).  PrePub was inspired by [enscree](/tools/scree/enscree/), which was based on [entwee](/tools/entwee/), which was based on [entweedle](http://www.maximumverbosity.net/twine/Entweedle/).
 

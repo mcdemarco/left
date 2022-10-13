@@ -175,6 +175,6 @@ In your [script]:
 
 ### Sausage
 
-The source code has moved from [BitBucket](https://bitbucket.org/mcdemarco/paloma) to [GitHub](https://github.com/mcdemarco/paloma).
+The source code has moved from BitBucket to [GitHub](https://github.com/mcdemarco/paloma).
 
 Paloma is based on [Snowman](https://github.com/klembot/snowman) by Chris Klimas.  The main changes (besides making it Jonah-like) involved the story history as explained above.  Paloma does not have Snowman's checkpoint functionality; history is node-by-node only.

@@ -102,7 +102,7 @@ Below is the graph of a longer, incomplete story with renumbered passages, end t
 
 I described an issue with Chrome [in the old Twine forum](https://twinery.org/forum/discussion/7879/a-proofing-format-using-graphviz-and-a-chrome-issue).  This is why the offline mode is not only for running offline.
 
-The source code has moved from [BitBucket](https://bitbucket.org/mcdemarco/dotgraph) to [GitHub](https://github.com/mcdemarco/dotgraph).
+The source code has moved from BitBucket to [GitHub](https://github.com/mcdemarco/dotgraph).
 
 DotGraph does not support Internet Explorer 8, but any newer browser should work.
 
