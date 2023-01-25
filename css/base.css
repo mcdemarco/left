@@ -214,6 +214,10 @@ a {
   .content .byline a {
     color: #777;
     text-decoration:none;}
+  .content .amazon {
+    margin-bottom: 15px;
+    font-size: smaller;
+  }
   .content .aside {
     background-color: #eeeeee;
     padding: 14px;

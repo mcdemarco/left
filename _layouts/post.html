@@ -18,6 +18,9 @@ menu: blog
 	  {% endif %}
   </section>
 
+	{% capture amazon %}{{ content | has_amazon }}{% endcapture %}
+	{% if amazon == 'true' %}<section class="amazon"><em>This post includes Amazon affiliate links to the book(s) pictured.</em></section>{% endif %}
+
 	<section class="e-content">
 		{{ content }}
 	</section>
