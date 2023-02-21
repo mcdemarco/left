@@ -1,4 +1,3 @@
-
 //
 //fetch a family with a cors proxy; sort and display it with xslt (so oldskool!) 
 //
@@ -13,7 +12,7 @@
 	var base = location.protocol + "//" + location.host + "/games/bgg/";
 	var baseFile = base + "family.html";
 	var corsProxy = base + "proxy.php?csurl=";
-	var defaultId = 4024; //chess
+	var defaultId = 20; //pyramids
 	//Local xsl.
 	var stylesheetURL = "family.xsl";
 	var stylesheet;
@@ -65,16 +64,16 @@
 
 	function setThings() {
 		var entries = document.getElementsByClassName("entry");
-		var elen = Math.min(entries.length,100) + 1;
+		var elen = entries.length;
 		var entryIds = [];
 		for (var e = 0; e < elen; e++) {
 			var ide;
-			if (entries[e]) 
+			if (entries[e])
 				ide = entries[e].getAttribute("data-thingid");
 			if (ide)
 				entryIds.push(ide);
 		}
-		setURL(0,entryIds.join(","));
+		setURL(0,entryIds);
 	}
 
 	function transform(family,stylesheet) {
@@ -181,7 +180,10 @@
 		setURL();
 	}
 
-	function setURL(toId,toIdList) {
+	function setURL(toId,entryIds) {
+		var toIdList;
+		if (entryIds && entryIds.length)
+			toIdList = entryIds.slice(0,100).join(",");
 		//You can pass in any number of arguments.
 		if (typeof toId == "undefined")
 			toId = defaultId;
@@ -193,9 +195,24 @@
 			document.getElementById("thingURL").innerHTML = base + 'things.html?' + toIdList;
 			document.getElementById("thingURL").href = base + 'things.html?' + toIdList;
 			document.getElementById("thingURLWrapper").style.display = "block";
+			document.querySelectorAll(".extraThings").forEach(el => el.remove());
 		} else {
 			document.getElementById("thingURLWrapper").style.display = "none";
 		}
+
+		while (entryIds && entryIds.length > 100) {
+			entryIds = entryIds.slice(100);
+			toIdList = entryIds.slice(0,100);
+			var toIdLength = toIdList.length;
+			toIdList = toIdList.join(",");
+			const txt = document.createTextNode(" ");
+			document.getElementById("thingURLWrapper").appendChild(txt);
+			const a = document.createElement('a');
+			document.getElementById("thingURLWrapper").appendChild(a);
+			a.textContent = " Next " + toIdLength + " items";
+			a.href = base + 'things.html?' + toIdList;
+			a.className = "extraThings";
+		} 
 	}
 	
 	window.onload = loady;
