@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Winter Kingdom Builder Math"
-tags: data mapping gaming longpost sharedware
+tags: data mapping gaming math longpost sharedware
 created: 2021-07-19 18:05:00
 class: long
 ---

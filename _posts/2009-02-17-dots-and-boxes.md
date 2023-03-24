@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Dots and Boxes
-tags: local gaming
+tags: local gaming math
 created: 1234932705
 checked: 2022-09-27
 ---

@@ -1,9 +1,10 @@
 ---
 layout: post
 title: On the Kalends of January
-tags: calendars longpost
+tags: calendars math longpost
 created: 1199214635
 class: long
+checked: 2023-03-24
 ---
 Someone on a mailing list asked why New Year's Day is the first of January instead of some more significant date, like a religious holiday or the solstice.  Since I've done a fair share of calendar research for my writing and had a little more to do as homework for a class, I decided to answer the question at some length, and also blog it (below the cut).<!--break-->
 
@@ -21,7 +22,8 @@ However, even when properly fixed, the Julian calendar drifts a day every 128 ye
 
 Unperturbed, the vernal equinox crept on.  Twelve centuries later, when Pope Gregory decided to catch it before it escaped March entirely, he dropped only ten days from the calendar to return it to the now almost universally accepted Alexandrian date of March 21st---even though the Julian calendar had drifted almost thirteen days between 45 BCE and 1582.
 
-The missing three days don't quite take us back to March 25th because of, again, the drift, which can still cause the time of the equinox to vary by over two full days (and four calendar dates), and is corrected only every hundred years when we drop a Julian leap day for Pope Gregory.  You can see a neat picture of the annual quarter-day drift with Julian leap day correction, the remaining fractional drift with Gregorian non-leap day correction, and what hitting the 400-year rule in 2000 did to the pattern, [here [Wikipedia]](http://en.wikipedia.org/wiki/Gregorian_calendar#Calendar_seasonal_error).
+The missing three days don't quite take us back to March 25th because of, again, the drift, which can still cause the time of the equinox to vary by over two full days (and four calendar dates), and is corrected only every hundred years when we drop a Julian leap day for Pope Gregory.  You can see a neat picture of the annual quarter-day drift with Julian leap day correction, the remaining fractional drift with Gregorian non-leap day correction, and what hitting the 400-year rule in 2000 did to the pattern, [here [Wikipedia]](https://en.wikipedia.org/wiki/Solar_Hijri_calendar#Accuracy).
+<!-- was: http://en.wikipedia.org/wiki/Gregorian_calendar#Calendar_seasonal_error -->
 
 See how wiggly that winter solstice is?  The pontiffs and the Pontiffs all proved themselves completely unqualified to hit a moving feast like that one.  Now the Persian calendar starts on the actual day of the vernal equinox, as observed from Tehran, and has real solar (zodiacal) months.  Even when fixed (mathematically, as opposed to observed), the seasonal error is never more than about half a day in either direction, as you can see [here [Wikipedia again]](http://en.wikipedia.org/wiki/Iranian_calendar#Seasonal_error).
 
