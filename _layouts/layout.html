@@ -6,7 +6,8 @@
     {% if page.title %}
     {{ page.title }} &ndash;
 		{% elsif page.collection %}
-		{{ page.collection }} &ndash;
+		{% assign my_page_title = content | split: "<h1>" | last |  split: "</h1>" | first %}
+		{{ my_page_title }} &ndash;
 		{% endif %}
     {{ site.name }}
   </title>
@@ -25,8 +26,8 @@
   <meta name="description" content="{{page.title}}" />
   <meta name="og:description" content="{{page.title}}" />
   {% elsif page.collection %}
-  <meta name="description" content="{{page.collection}}" />
-  <meta name="og:description" content="{{page.collection}}" />
+  <meta name="description" content="{{page.collection | capitalize}}: {{my_page_title}}" />
+  <meta name="og:description" content="{{page.collection | capitalize}}: {{my_page_title}}" />
   {% else %}
   <meta name="description" content="{{ site.description }}" />
   <meta name="og:description" content="{{ site.description }}" />
