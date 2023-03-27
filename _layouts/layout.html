@@ -36,6 +36,9 @@
   {% if page.image %}
   <meta name="og:image" content="{{page.image}}" />
   <meta name="twitter:image" content="{{page.image}}" />
+  {% elsif page.collection == 'recipes' or page.menu == 'recipes' %}
+  <meta name="og:image" content="/recipes/images/duck.png" />
+  <meta name="twitter:image" content="/recipes/images/duck.png" />
   {% else %}
   <meta name="og:image" content="/css/ant-bedelev-cropped-2.png" />
   <meta name="twitter:image" content="/css/ant-bedelev-cropped-2.png" />
