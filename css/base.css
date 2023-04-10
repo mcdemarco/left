@@ -493,7 +493,6 @@ section#recipeTOC {
     font-weight:bold;
 }
 
-
 section#recipeTOC ul {
     margin:0;
     padding:0;
@@ -548,6 +547,38 @@ table.bordered tr:not(:last-child) th,
 table.bordered tr:not(:last-child) td {
     border-bottom: 1px solid gray;
 }
+
+@media screen and (min-width: 1000px) {
+   .recipe .content {
+	display: flex;
+	flex-direction: column;
+	max-width: 840px;
+	width: 840px;
+    }
+    .recipe .content main {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+    }
+    .recipe .content subsection {
+	flex-direction: row;
+	width: 840px;
+	flex-shrink: 0;
+    }
+    .recipe .content subsection:nth-of-type(2) {
+	flex-shrink: 1;
+	width: 33%;
+    }
+    .recipe .content subsection:nth-of-type(3) {
+	flex-shrink: 1;
+	width: 63%;
+	padding-left: 3%;
+    }
+    .recipe .content subsection p {
+	max-width: 650px;
+    }
+}
+
 
 /* twine format catalog page */
 

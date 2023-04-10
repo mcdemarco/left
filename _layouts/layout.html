@@ -65,7 +65,7 @@
 
 </head>
 
-<body{% if page.collection == 'recipes' or page.menu == 'recipes' %} class="recipes" {% endif %}>
+<body{% if page.collection == 'recipes' %} class="recipes recipe" {% elsif page.menu == 'recipes' %} class="recipes" {% endif %}>
 
 <section class="header">
   <h1>{{ site.name }}:
