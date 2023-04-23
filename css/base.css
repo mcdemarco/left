@@ -577,6 +577,28 @@ table.bordered tr:not(:last-child) td {
     .recipe .content subsection p {
 	max-width: 650px;
     }
+
+}
+
+@media screen and (min-width: 1024px) {
+    .recipes .content {
+	display: flex;
+	flex-direction: column;
+    }
+    .recipes .content main {
+	display: flex;
+	flex-direction: row;
+    }
+    .recipes .content subsection {
+	flex-direction: row;
+    }
+    .recipes .content subsection:first-of-type {
+	flex-shrink: 0;
+    }
+    .recipes .content subsection.foodGPT {
+	flex-shrink: 1;
+	min-width: 670px;
+    }
 }
 
 
