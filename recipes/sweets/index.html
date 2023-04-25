@@ -6,7 +6,9 @@ date: 2019-05-19 23:05
 ---
   {% for foodie in site.data.recipes %}
     {% if foodie.filename == "sweets" %}
-    <h1>{{foodie.name}}</h1>
+<h1>{{foodie.name}}</h1>
+<main>
+	<subsection>
 		<ul class="listing">
 			<li class="recipe_chapter">
 				<ul class="recipes" id="{{foodie.filename}}">
@@ -16,5 +18,10 @@ date: 2019-05-19 23:05
 				</ul>
 			</li>
 		</ul>
+	</subsection>
+	<subsection class="foodGPT">
+		<img src="/recipes/images/{{foodie.filename}}GPT.png" alt="AI generated food illustration"/>
+	</subsection>
+</main>
     {% endif %}
   {% endfor %}

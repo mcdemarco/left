@@ -580,6 +580,10 @@ table.bordered tr:not(:last-child) td {
 
 }
 
+img.foodGPT_small {
+    display: none;
+}
+
 @media screen and (min-width: 1024px) {
     .recipes .content {
 	display: flex;
@@ -599,6 +603,18 @@ table.bordered tr:not(:last-child) td {
 	flex-shrink: 1;
 	min-width: 670px;
     }
+
+    img.foodGPT_small {
+	display: block;
+	height: 100px;
+	position: absolute;
+	left: 800px;
+    }
+
+    li.recipeListSectionLI {
+	min-height: 100px;
+    }
+
 }
 
 

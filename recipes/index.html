@@ -8,8 +8,11 @@ date: 2014-10-07 01:25
 
 <ul class="listing">
   {% for foodie in site.data.recipes %}
-  <li>
+  <li {% if foodie.filename != "preface" %} class="recipeListSectionLI" {% endif %} >
     {% if foodie.files != null %}
+		{% if foodie.filename != "preface" and foodie.filename != "non-food" %}
+		<img class="foodGPT_small" src="/recipes/images/{{ foodie.filename }}GPT.png" alt="AI generated food illustration" />
+		{% endif %}
     <a class="archive_list_article_title" name="{{foodie.filename}}" href="/recipes/{{ foodie.filename }}/">{{foodie.name}}</a>
     <ul class="tag_list recipes" id="{{foodie.filename}}">
       {% for innerFoodie in foodie.files %}
