@@ -7,6 +7,8 @@
     {{ page.title }} &ndash;
 		{% elsif page.collection %}
 		{% assign my_page_title = content | split: "<h1>" | last |  split: "</h1>" | first %}
+		{% assign my_foodies = page.url | split: "/" %}
+		{% assign my_foodie = my_foodies[2] %}
 		{{ my_page_title }} &ndash;
 		{% endif %}
     {{ site.name }}
@@ -36,6 +38,9 @@
   {% if page.image %}
   <meta name="og:image" content="{{page.image}}" />
   <meta name="twitter:image" content="{{page.image}}" />
+  {% elsif page.collection == 'recipes' and my_foodie != "preface" and my_foodie != "non-food" %}
+  <meta name="og:image" content="/recipes/images/{{my_foodie}}GPT.png" />
+  <meta name="twitter:image" content="/recipes/images/{{my_foodie}}GPT.png" />
   {% elsif page.collection == 'recipes' or page.menu == 'recipes' %}
   <meta name="og:image" content="/recipes/images/duck.png" />
   <meta name="twitter:image" content="/recipes/images/duck.png" />
