@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Instant Indexed
-tags: ai tools jekyll recipes blogkeeping micro
+tags: tools jekyll recipes blogkeeping micro
 created: 2023-08-24 15:45:00
 class: site
 ---
