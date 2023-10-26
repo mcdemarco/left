@@ -574,6 +574,13 @@ table.bordered tr:not(:last-child) td {
 	width: 63%;
 	padding-left: 3%;
     }
+    /* handle case where the page is a long list, not a single recipe */
+    .recipe .content subsection:first-child:nth-last-child(n + 5),
+    .recipe .content subsection:first-child:nth-last-child(n + 5) ~ subsection {
+	flex-shrink: 0!important;
+	width: 840px!important;
+	padding-left: revert-layer!important;
+    }
     .recipe .content subsection p {
 	max-width: 650px;
     }
