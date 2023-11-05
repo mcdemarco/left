@@ -1,0 +1,34 @@
+---
+layout: recipeIndex
+title: "The New Kitchen Cookbook: Alphabetical Recipe Index"
+menu: recipes
+date: 2023-11-04 20:45
+---
+<h1>Alphabetical Recipe Index</h1>
+
+<!-- have to process the liquid object in a very hacky way because Liquid -->
+
+{% assign namelist = '' %}
+
+{% for foodie in site.data.recipes %}
+{% if foodie.filename != "preface" and foodie.filename != "non-food" %}
+{% for innerFoodie in foodie.files %}
+{% assign namelist = namelist | append: innerFoodie.name | append: ";" | append: foodie.name | append: ";" | append: foodie.filename | append: "/" | append: innerFoodie.filename | append: ":" %}
+{% endfor %}
+{% endif %}
+{% endfor %}
+
+{% assign namelist = namelist | split: ":" | sort %}
+
+<ul class="listing">
+	<li class="recipe_chapter">
+		<ul class="recipes">
+			{% for name in namelist %}
+			{% assign nameArray = name | split: ";" %}
+			{% if nameArray.size > 1 %}
+			<li class="archive_list"><a href="/recipes/{{nameArray[2]}}">{{ nameArray[0] }}</a> &nbsp; <em>({{ nameArray[1] }})</em></li>
+			{% endif %}
+			{% endfor %}
+		</ul>
+  </li>
+</ul>

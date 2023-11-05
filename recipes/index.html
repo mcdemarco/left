@@ -8,7 +8,7 @@ date: 2014-10-07 01:25
 
 <ul class="listing">
   {% for foodie in site.data.recipes %}
-  <li {% if foodie.filename != "preface" %} class="recipeListSectionLI" {% endif %} >
+  <li {% if foodie.filename != "preface" and foodie.filename != "non-food" %} class="recipeListSectionLI" {% endif %} >
     {% if foodie.files != null %}
 		{% if foodie.filename != "preface" and foodie.filename != "non-food" %}
 		<img class="foodGPT_small" src="/recipes/images/{{ foodie.filename }}GPT.png" alt="AI generated food illustration" />
@@ -24,4 +24,10 @@ date: 2014-10-07 01:25
     {% endif %}
   </li>
   {% endfor %}
+  <li>
+    <a class="archive_list_article_link" href="/recipes/indices" name="indices">Indices</a>
+		<ul class="tag_list recipes" id="indices">
+			<li class="inline archive_list"><a class="tag_list_link" href="/recipes/indices/ipIndex.html">Instant Pot Recipes</a></li>
+		</ul>
+  </li>
 </ul>

@@ -1,0 +1,28 @@
+---
+layout: recipeIndex
+title: "The New Kitchen Cookbook: Quick Meals"
+menu: recipes
+date: 2023-11-04 21:45
+---
+<h1>Recipes for Quick Meals and Mains</h1>
+
+<ul class="listing">
+  {% for foodie in site.data.recipes %}
+	{% if foodie.filename != "preface" and foodie.filename != "non-food" %}
+  <li>
+    {% if foodie.files != null %}
+    <a class="archive_list_article_title" name="{{foodie.filename}}" href="/recipes/{{ foodie.filename }}/">{{foodie.name}}</a>
+    <ul class="tag_list recipes" id="{{foodie.filename}}">
+      {% for innerFoodie in foodie.files %}
+			  {% if innerFoodie.quick != null %}
+        <li class="inline archive_list"><a class="tag_list_link" href="/recipes/{{ foodie.filename }}/{{ innerFoodie.filename }}">{{ innerFoodie.name }}</a></li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+    {% else %}
+    <a class="archive_list_article_link" href="/recipes/{{ foodie.filename }}" name="{{foodie.filename}}">{{foodie.name}}</a>
+    {% endif %}
+  </li>
+  {% endif %}
+  {% endfor %}
+</ul>
