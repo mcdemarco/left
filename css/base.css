@@ -632,15 +632,15 @@ img.foodGPT_small {
 }
 
 .green {
-    color: #0B5632;
+    color: #0a7943; /*#0B5632;*/
 }
 
 .tag {
     display:inline-block;
-    border: 1pt solid #227ce8;
+    border: 1pt solid #333;
     border-radius: 3pt;
-    color: #185AAA;
-    background-color: #C0D2E8;
+    color: #555;
+    background-color: #ddd;
     padding: 1pt 2pt 0pt 2pt;
     margin-left: 4pt;
     text-indent:0;
@@ -648,7 +648,11 @@ img.foodGPT_small {
     line-height: 0.9;
 }
 
-a.tag {text-decoration:none;}
+a.tag {text-decoration:none;
+    border: 1pt solid #227ce8;
+    color: #06428c; /* #185AAA; */
+    background-color: #C0D2E8;
+}
 
 a.svg, a.svg:hover, a.svg:visited {
     display: inline-block;
