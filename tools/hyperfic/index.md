@@ -17,7 +17,7 @@ The biggest pitfall of interactive fiction is figuring out what to call it, beca
   * The term was apparently coined by Steve Jackson for the canonical example of the genre:  the Fighting Fantasy series of books.
   * Gamebooks are also known as *adventure gamebooks*, *multiple-choice games*, *multiple-choice gamebooks*, *MCGs*, *storygames*, etc.  Gamebooks using an existing RPG system are also known as *role-playing solitaire adventures*.  Collaborative gamebooks are also known as *addventure*.  **QBN**, or *quality-based narrative*, is a style that links your stats to your access to parts of the narrative, usually invisibly unlike in traditional gamebooks, and also usually in an exploratory way as in parser fiction.
   * *Gamebooks* are sometimes considered to include *CYOA* books. 
-* **Interactive fiction** is fiction in which the reader directs the story using (somewhat) natural language.  They traditionally involve free exploration of a map, collecting items, and puzzle solving.
+* **Interactive fiction** is fiction in which the reader directs the story using (somewhat) natural language.  It traditionally involves free exploration of a map, collecting items, and puzzle solving.
   * The canonical example is the Zork series of video games.
   * Interactive fiction is abbreviated *IF* or *int-fiction* and is also known as *text adventures*, *adventure games*, *parser games*, or *parser(-based) IF*.
   * *Narrative games* is a more general term that may include the previous categories as well.

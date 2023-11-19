@@ -31,7 +31,6 @@ Presented in alphabetical order rather than order of importance:
 It's too early to say whether these will become big players or bit players.
 
 * [egamebook](https://github.com/filiph/egamebook): a sophisticated RPG engine in gamebook format
-* [Elm Story](https://elmstorygames.itch.io/elm-story/devlog/247809/introducing-elm-story-a-free-no-code-pro-tool-designed-to-help-authors-game-designers-and-students-develop-and-publish-interactive-narrative-experiences): an even GUI-er approach to choice fiction than Twine, with ambitions of becoming a cloud service when it grows up
 * [Jumbo Grove](https://steveasleep.com/jumbogrove/): "Undum done right", for definitions of "right" that include a JSON-heavy markup and scripting language
 * [Salet](https://salet.oreolek.me/en/start): another Undum do-over, using CoffeeScript to support QBN
 * [Toothrot](https://github.com/toothrot-if): a similarly Ink-y choice engine
@@ -41,9 +40,10 @@ It's too early to say whether these will become big players or bit players.
 
 Some engines produce print and/or ePUB gamebooks.  These programs can usually output to HTML as well (ePUB is mostly a web page without the pesky JavaScript), but tend to neglect scripting in favor of more print-focused features like shuffling gamebook sections.
 
-* [LibroGameCreator](https://librogamecreator.wordpress.com/libro-game-creator/): a Java engine from Italy with an exceptional number of features and export formats, including a [Graphviz view](http://www.matteoporopat.com/librogame/libro-game-creator-3/#attachment_14214), ePUB, RTF (for PDF), ChoiceScript, and Squiffy; there's also an browser-based editor available, [Lgcjs](https://librogamesland.github.io/lgcjs/release/), if you're feeling lucky
+* [LibroGameCreator](https://librogamecreator.wordpress.com/libro-game-creator/): a Java engine from Italy with an exceptional number of features and export formats, including a [Graphviz view](http://www.matteoporopat.com/librogame/libro-game-creator-3/#attachment_14214), ePUB, RTF (for PDF), ChoiceScript, and Squiffy; there's also a browser-based editor available, [Lgcjs](https://librogamesland.github.io/lgcjs/release/), if you're feeling lucky
 * [The GameBook Authoring Tool](http://www.crumblyheadgames.co.uk): commercial, Windows-only program for writing hypertexts and gamebooks; there's a demo available
-* [Gordian Book](https://gordianbook.art): an online converter from (script-free) Twine to PDF gamebooks
+* [Gordian Book](https://gordianbook.art): an online converter from (script-free) Twine to PDF gamebooks, which supports some of the standard story formats and [Writing Fantasy](https://sophiehoulden.com/twine/writingfantasy_guide.html)
+* [TwineBook](https://twinebook.danq.dev/) by DanQ (of Twee2 fame) is a similar online Twine to PDF converter, but more [opinionated](https://danq.me/2021/04/05/twinebook/)
 * [PrePub](http://mcdemarco.net/tools/scree/prepub/): a Twine proofing format for converting script-free stories to pandoc-extended markdown (for ePUB) 
 * [gamebookformat](https://github.com/lifelike/gamebookformat): yet another text format with supporting tools to create traditional gamebooks in print or electronic form
 * [pangamebook](https://github.com/lifelike/pangamebook): the pandoc filter successor to [gamebookformat](https://github.com/lifelike/gamebookformat)
@@ -52,8 +52,9 @@ Some engines produce print and/or ePUB gamebooks.  These programs can usually ou
 * [Ficdown](https://ficdown.com): a well-documented extended Markdown language that exports to HTML or ePUB, notable in that it seems to be able to convert its internal conditionals and state scripting to ePUB.  (The source code has moved [here](https://code.sitosis.com/rudism/ficdown), so don't worry about any archiving notices you may run into at github.)
 * [Magebook](https://librogamesland.github.io/magebook/#/): an online editor by the author of Lgcjs that exports to LibroGameCreator and other formats, with future plans to output an app
 * [Readteractive](https://github.com/Carleslc/Readteractive): a highly opinionated, allegedly Markdown-based system with multiple output formats but not much recent activity
+* The [FF Construction Kit](https://adamdawes.com/windows/win_ffconstructionkit.html) is a Windows-only free GUI for making Fighting Fantasy-style gamebooks in PDF or HTML format
 * [gamebook](https://ctan.org/pkg/gamebook?lang=en): a LaTeX package for making printed gamebooks
-* NLBB (Non-Linear Book Builder, ~~https://nlbproject.com/soft.html~~) was a Java project from Russia, not unlike LibroGameCreator in style and scope
+* [NLBB](https://nlbproject.com/soft.html) (Non-Linear Book Builder) is a Java project from Russia, not unlike LibroGameCreator in style and scope
 
 For easier post-processing of ePUBs, you may want to spring for [Vellum](https://vellum.pub).  Their [blog](https://blog.vellum.pub) is also a good self-publishing resource.
 
@@ -66,8 +67,9 @@ It's not hard to write a gamebook engine, and lots of people do it without getti
 * [Blink!](https://bloomengine.com/blink/): experience a relic of the JavaScript past, if you want to try emailing the author for the code
 * [CYOAwesome](https://github.com/McFunkypants/CYOAwesome): an HTML5 engine with a refreshingly lightweight syntax
 * [Dendry](https://github.com/dendry/dendry): a QBN project from 2015 that never quite got off the ground
-* [Elm Narrative Engine](https://package.elm-lang.org/packages/jschomay/elm-narrative-engine/3.0.1/): a flexible, if bracket-heavy, story engine written in Elm
 * [The Edventure Builder](https://edventurebuilder.com): an educational software product for making CYOA stories and other games for mobile devices
+* [Elm Narrative Engine](https://package.elm-lang.org/packages/jschomay/elm-narrative-engine/3.0.1/): a flexible, if bracket-heavy, story engine written in Elm
+* ~~[Elm Story](https://web.archive.org/web/20230130070924/https://elmstorygames.itch.io/elm-story/devlog/247809/introducing-elm-story-a-free-no-code-pro-tool-designed-to-help-authors-game-designers-and-students-develop-and-publish-interactive-narrative-experiences)~~: a GUI-er approach to choice fiction than Twine, had ambitions of becoming a cloud service when it grew up, but disappeared instead
 * [Fractive](https://github.com/invicticide/fractive): an allegedly Markdown-based system with Twine-like output, briefly popular (as these things go) but apparently abandoned
 * [Gamebook Engine](https://rovang.org/if/): a JavaScript engine based on jQuery
 * [Gamebook.io](https://gamebook.io): commercial vaporware of some seven years' standing
