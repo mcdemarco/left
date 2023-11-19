@@ -13,7 +13,9 @@ date: 2019-05-19 23:05
 					<li class="recipe_chapter">
 						<ul class="recipes" id="{{foodie.filename}}">
 							{% for innerFoodie in foodie.files %}
+							{% if innerFoodie.redirect == null %}
 							<li class="archive_list"><a href="/recipes/{{ foodie.filename }}/{{ innerFoodie.filename }}">{{ innerFoodie.name }}</a></li>
+							{% endif %}
 							{% endfor %}
 						</ul>
 					</li>

@@ -13,7 +13,9 @@ date: 2023-11-04 20:45
 {% for foodie in site.data.recipes %}
 {% if foodie.filename != "preface" and foodie.filename != "non-food" %}
 {% for innerFoodie in foodie.files %}
+{% if innerFoodie.redirect == null %}
 {% assign namelist = namelist | append: innerFoodie.name | append: ";" | append: foodie.name | append: ";" | append: foodie.filename | append: "/" | append: innerFoodie.filename | append: ":" %}
+{% endif %}
 {% endfor %}
 {% endif %}
 {% endfor %}
