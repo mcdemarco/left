@@ -4,8 +4,9 @@ title: Preface
 menu: recipes
 date: 2019-05-19 23:05
 ---
+{% assign recdir = page.path | split: "/" %}
   {% for foodie in site.data.recipes %}
-    {% if foodie.filename == "preface" %}
+    {% if foodie.filename == recdir[1] %}
     <h1>{{foodie.name}}</h1>
 		<ul class="listing">
 			<li class="recipe_chapter">

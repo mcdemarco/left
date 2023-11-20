@@ -4,8 +4,9 @@ title: Roots and Squash
 menu: recipes
 date: 2021-05-26 11:05
 ---
+{% assign recdir = page.path | split: "/" %}
   {% for foodie in site.data.recipes %}
-    {% if foodie.filename == "roots" %}
+    {% if foodie.filename == recdir[1] %}
 <h1>{{foodie.name}}</h1>
 <main>
 	<subsection>
