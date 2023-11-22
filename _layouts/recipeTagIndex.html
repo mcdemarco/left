@@ -5,8 +5,14 @@ menu: recipes
 {% assign tagfile = page.path | split: "/" %}
 {% assign tagfilename = tagfile[2] | split: "." %}
 {% for taggy in site.data.tags %}
-  {% if taggy.filename == tagfilename[0] %}
-<h1 style="text-transform: capitalize;">{{taggy.tagname}} Recipes</h1>
+{% if taggy.filename == tagfilename[0] %}
+<h1 style="text-transform: capitalize;">
+	{% if page.title %} 
+	{{page.title}} 
+	{% else %} 
+	{{taggy.tagname}} Recipes
+	{% endif %}
+</h1>
 
 <ul class="listing">
   {% for foodie in site.data.recipes %}
