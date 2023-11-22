@@ -1,0 +1,45 @@
+---
+layout: layout
+menu: recipes
+---
+{% assign tagfile = page.path | split: "/" %}
+{% assign tagfilename = tagfile[2] | split: "." %}
+{% for taggy in site.data.tags %}
+  {% if taggy.filename == tagfilename[0] %}
+<h1 style="text-transform: capitalize;">{{taggy.tagname}} Recipes</h1>
+
+<ul class="listing">
+  {% for foodie in site.data.recipes %}
+	  {% if foodie.filename != "preface" and foodie.filename != "non-food" %}
+		<li>
+			{% if foodie.files != null %}
+			<a class="archive_list_article_title" name="{{foodie.filename}}" href="/recipes/{{ foodie.filename }}/">{{foodie.name}}</a>
+			<ul class="tag_list recipes" id="{{foodie.filename}}">
+      {% for innerFoodie in foodie.files %}
+			  {% if innerFoodie.redirect == null %}
+			    {% assign foodiepath = foodie.filename | append: "/" | append: innerFoodie.filename | append: ".md" %}
+
+				  {% if taggy.paths contains foodiepath %}
+				<li class="inline archive_list"><a class="tag_list_link" href="/recipes/{{ foodie.filename }}/{{ innerFoodie.filename }}">{{ innerFoodie.name }}</a></li>
+       	  {% endif %}
+				{% endif %}
+		  {% endfor %}
+			</ul>
+      {% else %}
+			<a class="archive_list_article_link" href="/recipes/{{ foodie.filename }}" name="{{foodie.filename}}">{{foodie.name}}</a>
+			{% endif %}
+		</li>
+		{% endif %}
+	{% endfor %}
+	</ul>
+
+
+  {% endif %}
+{% endfor %}
+
+<hr>
+
+<section id="recipeTOC">
+{% capture toc %}{% include contents.md %}{% endcapture %}
+{{ toc | markdownify }}
+</section>

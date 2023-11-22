@@ -1,0 +1,35 @@
+---
+layout: layout
+menu: recipes
+---
+{% assign recdir = page.path | split: "/" %}
+{% for foodie in site.data.recipes %}
+{% if foodie.filename == recdir[1] %}
+<h1>{{foodie.name}}</h1>
+<main>
+	<subsection>
+		<ul class="listing">
+			<li class="recipe_chapter">
+				<ul class="recipes" id="{{foodie.filename}}">
+					{% for innerFoodie in foodie.files %}
+					{% if innerFoodie.redirect == null %}
+					<li class="archive_list"><a href="/recipes/{{ foodie.filename }}/{{ innerFoodie.filename }}">{{ innerFoodie.name }}</a></li>
+					{% endif %}
+					{% endfor %}
+				</ul>
+			</li>
+		</ul>
+	</subsection>
+	<subsection class="foodGPT">
+		<img class="foodGPT" src="/recipes/images/{{foodie.filename}}GPT.png" alt="AI generated food illustration"/>
+	</subsection>
+</main>
+{% endif %}
+{% endfor %}
+
+<hr>
+
+<section id="recipeTOC">
+{% capture toc %}{% include contents.md %}{% endcapture %}
+{{ toc | markdownify }}
+</section>
