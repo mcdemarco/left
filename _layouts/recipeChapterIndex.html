@@ -12,7 +12,7 @@ menu: recipes
 			<li class="recipe_chapter">
 				<ul class="recipes" id="{{foodie.filename}}">
 					{% for innerFoodie in foodie.files %}
-					{% if innerFoodie.redirect == null %}
+					{% if innerFoodie.redirect == null and innerFoodie.hidden == null %}
 					<li class="archive_list"><a href="/recipes/{{ foodie.filename }}/{{ innerFoodie.filename }}">{{ innerFoodie.name }}</a></li>
 					{% endif %}
 					{% endfor %}
@@ -21,7 +21,9 @@ menu: recipes
 		</ul>
 	</subsection>
 	<subsection class="foodGPT">
+		{% if foodie.filename != "preface" and foodie.filename != "non-food" %}
 		<img class="foodGPT" src="/recipes/images/{{foodie.filename}}GPT.png" alt="AI generated food illustration"/>
+    {% endif %}
 	</subsection>
 </main>
 {% endif %}

@@ -6,13 +6,11 @@ menu: recipes
 {% assign tagfilename = tagfile[2] | split: "." %}
 {% for taggy in site.data.tags %}
 {% if taggy.filename == tagfilename[0] %}
-<h1 style="text-transform: capitalize;">
-	{% if page.title %} 
-	{{page.title}} 
-	{% else %} 
-	{{taggy.tagname}} Recipes
-	{% endif %}
-</h1>
+{% if page.title %} 
+  <h1>{{page.title}}</h1>
+  {% else %} 
+  <h1 style="text-transform: capitalize;">{{taggy.tagname}} Recipes</h1>
+{% endif %}
 
 <ul class="listing">
   {% for foodie in site.data.recipes %}
@@ -21,10 +19,9 @@ menu: recipes
 			{% if foodie.files != null %}
 			<a class="archive_list_article_title" name="{{foodie.filename}}" href="/recipes/{{ foodie.filename }}/">{{foodie.name}}</a>
 			<ul class="tag_list recipes" id="{{foodie.filename}}">
-      {% for innerFoodie in foodie.files %}
-			  {% if innerFoodie.redirect == null %}
+		  {% for innerFoodie in foodie.files %}
+			  {% if innerFoodie.redirect == null and innerFoodie.hidden == null %}
 			    {% assign foodiepath = foodie.filename | append: "/" | append: innerFoodie.filename | append: ".md" %}
-
 				  {% if taggy.paths contains foodiepath %}
 				<li class="inline archive_list"><a class="tag_list_link" href="/recipes/{{ foodie.filename }}/{{ innerFoodie.filename }}">{{ innerFoodie.name }}</a></li>
        	  {% endif %}
@@ -38,7 +35,6 @@ menu: recipes
 		{% endif %}
 	{% endfor %}
 	</ul>
-
 
   {% endif %}
 {% endfor %}

@@ -16,7 +16,7 @@ date: 2014-10-07 01:25
     <a class="archive_list_article_title" name="{{foodie.filename}}" href="/recipes/{{ foodie.filename }}/">{{foodie.name}}</a>
     <ul class="tag_list recipes" id="{{foodie.filename}}">
       {% for innerFoodie in foodie.files %}
-			{% if innerFoodie.redirect == null %}
+			{% if innerFoodie.redirect == null and innerFoodie.hidden == null %}
       <li class="inline archive_list"><a class="tag_list_link" href="/recipes/{{ foodie.filename }}/{{ innerFoodie.filename }}">{{ innerFoodie.name }}</a></li>
 			{% endif %}
       {% endfor %}
