@@ -103,6 +103,7 @@ You can also use the wrong tool entirely, like
 [Twitter](https://twitter.com/leonscoolgame), 
 [Slack or Discord](https://github.com/JiFish/Storyteller), 
 [Alexa](https://www.amazon.com/Marillow-Game-Creator/dp/B071F3BHBT),
+[ChatGPT](https://github.com/LouisShark/chatgpt_system_prompt/blob/main/prompts/gpts/Fantasy%20Book%20Weaver.md),
 [Buncee](https://blog.buncee.com/buncee-your-adventures-using-buncee-to-write-choose-your-own-adventure-style-stories/),
 [App Lab](https://studio.code.org/projects/applab/frbqBGEPr75-xGXAjwzcmQ),
 [Roblox](http://web.archive.org/web/20190417214018/https://education.roblox.com/resources/story-game-creator-challenge),
