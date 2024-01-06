@@ -484,6 +484,11 @@ ul.recipes li:before {
     margin: 0 3px;
 }
 
+ul.recipes li.new:after {
+    font-style: normal;
+    content: '\1F195';
+    margin: 0 0 0 5px;
+}
 span.archive_tag {
     float: none !important;
     font-style:italic;
