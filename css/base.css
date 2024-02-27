@@ -19,6 +19,7 @@ a {
   content: '#';
   opacity: 0.5;
   color: unset;
+  font-family: Chalkboard, Skia, "Lucida Grande", Tahoma, monospace;
 }
 
 .recipe main a[href*='indices/'] {

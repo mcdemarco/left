@@ -16,3 +16,5 @@ At the last minute before traipsing off to dance camp a few years ago I rethemed
 Much earlier than the last minute before dance camp a couple of years ago, I made a tool, [CardPen](http://cardpen.mcdemarco.net/) for printing card (and other) games, and printed up a few [of them](http://cardpen.mcdemarco.net/doc/examples.html).
 
 I made some other uses of the BoardGameGeek API besides the game list option in CardPen:  some [sorting utilities](/games/bgg/), including a [geeklist sorter](/games/bgg/geeklist.html), a [family sorter](/games/bgg/family.html), and a [general thing sorter](/games/bgg/things.html), as well as a [thread formatter](/games/bgg/thread.html).
+
+I've invented, documented, or randomized several pyramid games: [Deck Town](/games/decktet/decktown/), [Dectana Deciphered](/games/decktet/dectana/), and the [Zoning Out Randomizer](https://mcdemarco.github.io/321/zoningoutrandomizer.html), respectively.
