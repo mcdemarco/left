@@ -446,6 +446,12 @@ div.polaroids {
 
 /* end polaroid section */
 
+dt {
+    font-weight: bold;
+    padding-top: 3px;
+    padding-bottom: 2px;
+}
+
 dl.biblio dd {
     padding: 4px;
 }

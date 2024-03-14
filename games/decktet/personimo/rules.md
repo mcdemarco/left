@@ -6,8 +6,6 @@ menu: games
 date: 2018-04-11 11:39:00
 ---
 
-# Personimo
-
 A tile placement game for the Decktet.  1--6 players.
 
 *Urban renewal has come to Jacynth.  Once the dust has cleared from the demolition of her seedier areas, you and your architectural rivals compete to build the poshest new district of the sprawling city.  But style isn't everything; equally important is building major attractions and enticing the city's famous personalities to settle in your growing neighborhoods, while bad luck or poor planning may leave some blocks unimproved and uninhabited.*
