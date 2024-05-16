@@ -36,6 +36,12 @@ Darcana is an unpublished work in progress along the lines of Dectana, but with 
 
 [Deck Town](/games/decktet/decktown/) is based on [Zark City](https://boardgamegeek.com/boardgame/35003/zark-city), a [Zarcana](https://boardgamegeek.com/boardgame/10996/zarcana) for the rest of us by Andrew Looney.  I devised it in order to work my way up to actually playing [Dectana](https://boardgamegeek.com/boardgame/60015/dectana) (after having merely [deciphered](/games/decktet/dectana/) it).
 
+### Jacynth City
+
+[Jacynth City](/games/decktet/jacity/) is also based on [Zark City](https://boardgamegeek.com/boardgame/35003/zark-city), a [Zarcana](https://boardgamegeek.com/boardgame/10996/zarcana) for the rest of us by Andrew Looney, as well as the Decktet classic 
+[Jacynth](https://boardgamegeek.com/boardgame/39290/jacynth) by P.D. Magnus,
+I devised it after a discussion on my [geeklist of Zarcana-type games](https://boardgamegeek.com/geeklist/333402/arcana).
+
 ### Somids
 
 [Somids](https://boardgamegeek.com/thread/3264456/somids) is a variant of Nomids designed for my pyramid-hungry toddler who refuses to shed.

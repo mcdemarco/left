@@ -66,8 +66,8 @@ function init() {
 		
 	var link = document.createElement("a");
 	link.innerHTML = item.name;
-	if (item.docs || item.repo)
-		link.setAttribute("href",item.docs ? item.docs : item.repo);
+	if (item.archive || item.docs || item.repo)
+		link.setAttribute("href",item.archive ? item.archive : (item.docs ? item.docs : item.repo));
 	stuff.appendChild(link);
 
 	if (item.author) {

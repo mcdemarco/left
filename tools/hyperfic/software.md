@@ -131,6 +131,7 @@ The only thing riskier than writing prose at length in a browser is trusting it 
 * ~~[StoryNexus](http://www.storynexus.com)~~: a [mothballed](https://community.failbettergames.com/t/removing-ability-to-create-new-worlds-jan-2nd/18887) QBN-style site where you can still read [about 160 stories](https://community.failbettergames.com/t/storynexus-upcoming-changes-july-2020/19539) ~~but can only write if you're grandfathered in~~
 * [Texture](https://texturewriter.com): inhabits "the possibility space between Inform and Twine"
 * [Typeform](https://www.typeform.com/templates/t/interactive-fiction/) isn't meant for interactive fiction, but has at least one Choose Your Own Adventure template
+* [Unfold Studio](https://unfold.studio): an Ink hosting site run by the University of Chicago
 * ~~[Versu](https://versu.com)~~: gets listed on these lists, but was always unfree as in no beer, and is also looking pretty abandoned
 * [Writing.com](https://www.writing.com/main/list_items.php/item_type/interactives): follows a common formula for collaborative "interactive stor[ies]"
 
