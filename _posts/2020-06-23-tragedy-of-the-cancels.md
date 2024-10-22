@@ -1,7 +1,12 @@
 ---
 layout: post
 title: The Tragedy of the Cancels
-tags: longposts reading reviews science
+tags: 
+- longposts
+- reading
+- reviews
+- science
+- Scott Alexander
 created: 2020-06-23 18:45:00-04:00
 ---
 I was an occasional reader of Slate Star Codex, the pseudonymous blog and community of Scott Alexander which he took down yesterday because a *New York Times* reporter [intends to doxx him](https://slatestarcodex.com/2020/06/22/nyt-is-threatening-my-safety-by-revealing-my-real-name-so-i-am-deleting-the-blog/) as part of an (allegedly) otherwise positive story about his (now removed) [coronavirus posts](https://web.archive.org/web/20200618084202/https://slatestarcodex.com/tag/coronavirus/) [archive.org].  I spotted the story this morning on [Hacker News](https://news.ycombinator.com/item?id=23610416), but there's a more focussed discussion in the [Slate Star Codex subreddit](https://www.reddit.com/r/slatestarcodex/comments/he95ak/blog_deleted_due_to_nyt_threatening_doxxing_of/) which includes Scott Alexander himself.

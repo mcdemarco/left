@@ -1,7 +1,11 @@
 ---
 layout: post
 title: Old, Grey, Dumb and Evil
-tags: reading reviews science
+tags:
+- reading
+- reviews
+- science
+- Scott Alexander
 created: 2021-02-17 07:00:00-04:00
 ---
 The Slate Star Codex story (previously covered in [The Tragedy of the Cancels](/blog/2020/06/23/tragedy-of-the-cancels/) and [Scooped](/blog/2020/07/10/scooped/)) has a few new chapters.  After turning his life upside-down to prepare for his eventual doxxing by the "dumb and evil" Old Grey Lady, Scott Alexander [brought up a new blog](https://astralcodexten.substack.com/p/still-alive) at Substack, this time called [Astral Codex Ten](https://astralcodexten.substack.com) (and this time a true anagram of his pseudonym instead of just a near-anagram).

@@ -3,7 +3,7 @@ layout: post
 title: A Pyramid Page
 tags: gaming sharedware micro
 created: 2024-03-14 13:00:00
-class: release
+class: short
 ---
 Happy Pi Day!
 

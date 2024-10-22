@@ -22,7 +22,7 @@ I've compiled some pyramid geeklists for reference:
 * [Pyramid Arcade Games](https://boardgamegeek.com/geeklist/333293/pyramid-arcade-games), games in the Pyramid Arcade, the Quartet, or the Sandships mailing.
 * [Pyramid Arcade Extra Games](https://boardgamegeek.com/geeklist/333336/pyramid-arcade-extra-games), the 22 extra games not included in the box, plus the 6 fan favorites not included in the 22 extras.
 * [The Arcana](https://boardgamegeek.com/geeklist/333402/arcana), my history and taxonomy of Zarcana-like games.
-* [Am I a Starship Captain?](https://boardgamegeek.com/geeklist/333078/am-i-starship-captain), my Starship Captain list, such as it is
+* [Am I a Starship Captain?](https://boardgamegeek.com/geeklist/333078/am-i-starship-captain), my Starship Captain list, such as it is.
 
 ## My Games
 
@@ -30,11 +30,16 @@ I've half-designed a few pyramid games based on other games, mostly as an intell
 
 ### Darcana
 
-Darcana is an unpublished work in progress along the lines of Dectana, but with more Gnostica and less Zark City.
+[Darcana](/games/decktet/darcana/) is a reimplementation of Dectana with more Gnostica, less Zarcana, and a solo/automata mode.
+It's still under development, as they say at [the pyramid games wiki](https://looneypyramids.wiki/wiki/Games_Under_Development).
 
 ### Deck Town
 
 [Deck Town](/games/decktet/decktown/) is based on [Zark City](https://boardgamegeek.com/boardgame/35003/zark-city), a [Zarcana](https://boardgamegeek.com/boardgame/10996/zarcana) for the rest of us by Andrew Looney.  I devised it in order to work my way up to actually playing [Dectana](https://boardgamegeek.com/boardgame/60015/dectana) (after having merely [deciphered](/games/decktet/dectana/) it).
+
+### Hexcana
+
+Hexcana is [Zarcana](https://www.looneylabs.com/content/zarcana) played on a hex grid.  All rules are the same, except that there are six orthogonal directions, and the opening layout should consist of seven cards in a hex formation.  Ideally you would use hexagonal tarot cards for the purpose, but round ones are more readily available.  See [the blog](/blog/2024/10/21/pyramid-games/) for more details.
 
 ### Jacynth City
 

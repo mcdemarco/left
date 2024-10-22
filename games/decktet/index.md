@@ -44,9 +44,20 @@ I've half-designed a few games for the Decktet based on other games, mostly as a
 
 [The Badger on the Borderland](/games/decktet/bb/) is based on [The Fox in the Forest](https://boardgamegeek.com/boardgame/221965/fox-forest), a two-player trick taking game which you can also [play with traditional playing cards](https://boardgamegeek.com/filepage/153033/fox-forest-summary-sheet).
 
+### Darcana
+
+[Darcana](/games/decktet/darcana/) is a reimplementation of Dectana with more Gnostica, less Zarcana, and a solo/automata mode.
+It's still under development, though it's been zombie-playtested more than anything else on this list.
+
 ### Deck Town
 
 [Deck Town](/games/decktet/decktown/) is based on [Zark City](https://boardgamegeek.com/boardgame/35003/zark-city), a [Zarcana](https://boardgamegeek.com/boardgame/10996/zarcana) for the rest of us by Andrew Looney.  I devised it in order to work my way up to actually playing [Dectana](https://boardgamegeek.com/boardgame/60015/dectana) (after having merely [deciphered](/games/decktet/dectana/) it).
+
+### Jacynth City
+
+[Jacynth City](/games/decktet/jacity/) is also based on [Zark City](https://boardgamegeek.com/boardgame/35003/zark-city), a [Zarcana](https://boardgamegeek.com/boardgame/10996/zarcana) for the rest of us by Andrew Looney, as well on as the Decktet classic 
+[Jacynth](https://boardgamegeek.com/boardgame/39290/jacynth) by P.D. Magnus,
+I devised it after a discussion on my [geeklist of Zarcana-type games](https://boardgamegeek.com/geeklist/333402/arcana).
 
 ### Personimo
 
