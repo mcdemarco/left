@@ -10,6 +10,8 @@ Jacinyth City is a 1--3 player game based on P.D. Magnus' [Jacynth](https://boar
 
 ## Setup
 
+Each player receives a supply of nine Looney pyramids (three of each size) in a unique player color.
+
 Use a full (extended) Decktet, except for the Excuse.  Set up one of the three starting configurations for Jacynth (the Razeway, Towers, or the Old City).
 
 Deal three cards to each player.  If any player receives all extended deck cards, deal out one more card each.  Repeat until every player has at least one base card.  
@@ -43,10 +45,10 @@ District
 : a set of cards that share the same suit and are orthogonally adjacent to one another.  A district may consist of a single card.  A number card will be in two districts.
 
 Suit match
-: cards in the Dectet can have multiple suits; two cards show a suit match when at least one suit is shared between them
+: cards in the Decktet can have multiple suits; two cards show a suit match when at least one suit is shared between them
 
 Suit order
-: the natural suit order of the Dectet is according to their order of appearance from top to bottom on the cards:  Moons, Suns, Waves, Leaves, Wyrms, Knots.
+: the natural suit order of the Decktet is according to their order of appearance from top to bottom on the cards:  Moons, Suns, Waves, Leaves, Wyrms, Knots.
 
 
 ## Rules
@@ -115,4 +117,4 @@ M.C.DeMarco, March 25--April 9, 2024
 creator of [The Decktet](http://www.decktet.com), an alternative deck of cards released under a CC license.  
 Looney Pyramids (a.k.a. Icehouse pieces) are the creations of Andrew Looney and John Cooper. 
 [Zark City](https://boardgamegeek.com/boardgame/35003/zark-city) was devised by Andrew Looney, based on 
-[Zarcana](https://boardgamegeek.com/boardgame/10996/zarcana) and [Gnostica](https://boardgamegeek.com/boardgame/9629/gnostica) by John Cooper.
+[Zarcana](https://boardgamegeek.com/boardgame/10996/zarcana) and [Gnostica](https://boardgamegeek.com/boardgame/9629/gnostica) by John Cooper *et al.*

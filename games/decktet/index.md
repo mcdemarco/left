@@ -16,8 +16,9 @@ I've implemented or updated a few solitaire games for the Decktet:
 * [Cascades](http://mcdemarco.net/games/decktet/cascades/), a solitaire card game for the Decktet by Joe Conard.
 * [Myrmex](http://mcdemarco.github.io/myrmex/), my implementation of Greg James' Decktet version of the classic solitaire game Spider; all of his variants are supported.
 * [Aucteraden](/games/decktet/aucteraden/), a Decktet solitaire game by Jack Neal, includes a scoresheet, rules, and the game, including some variants invented, accidentally and otherwise, at BoardGameGeek.  (The scoresheet doesn't work in some older browsers, but the [game itself](/games/decktet/aucteraden/aucteraden.html) does.)
+* [6x10](/games/decktet/6x10/) includes and embiggens 3x10, a Decktet solitaire game by Russ.  Various other variants are included, but none of them are quite as challenging as the original non-Decktet game 5x15.
 
-I only dimly recall my reasons for updating Adaman; I think they were mainly stylistic.  Myrmex I wanted to be able play without breaking out my double Decktet deck.  Cascades was a little experiment with a lightweight JavaScript framework called [mithril](http://mithril.js.org).  Aucteraden was easy to play but hard to score.
+I only dimly recall my reasons for updating Adaman; I think they were mainly stylistic.  Myrmex I wanted to be able play without breaking out my double Decktet deck.  Cascades was a little experiment with a lightweight JavaScript framework called [mithril](http://mithril.js.org).  Aucteraden was easy to play but hard to score.  3x10 was too easy to win, but so far I've failed to find a satisfying variant.
 
 
 ## Rules and Tools
@@ -35,6 +36,11 @@ I've put together some rules summaries, scoresheets, and/or rollers for existing
 ## My Games
 
 I've half-designed a few games for the Decktet based on other games, mostly as an intellectual exercise.  They have not yet been fully playtested.
+
+### 6x10
+
+My [6x10](/games/decktet/6x10/) is an embiggened variant of [Russ's 3x10](https://boardgamegeek.com/blog/1565/blogpost/109343/game-prototype-3x10-equal-decktet-version-of-5x15), a Gaps-like solitaire game inspired by 
+Friedemann Friese's game [5x15](https://boardgamegeek.com/boardgame/309341/5x15).
 
 ### Buttle
 
