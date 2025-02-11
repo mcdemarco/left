@@ -1,12 +1,12 @@
 ---
 layout: page
-title: "Jacinyth City"
+title: "Jacynth City"
 categories: games
 menu: games
 date: 2024-03-25 18:45:00
 ---
 
-Jacinyth City is a 1--3 player game based on P.D. Magnus' [Jacynth](https://boardgamegeek.com/boardgame/39290/jacynth) and Andrew Looney's [Zark City](https://boardgamegeek.com/boardgame/35003/zark-city) (a simpler [Zarcana](https://boardgamegeek.com/boardgame/10996/zarcana)-style game for a traditional deck of cards).  I devised it after a discussion on my [geeklist of Zarcana-type games](https://boardgamegeek.com/geeklist/333402/arcana).  I've also made a more Zark City-like Decktet game, [Deck Town](/games/decktet/decktown/), [deciphered](/games/decktet/dectana/) [Dectana](https://boardgamegeek.com/boardgame/60015/dectana), and am playtesting yet another Zarcana-type game for the Decktet.
+Jacynth City is a 1--3 player game based on P.D. Magnus' [Jacynth](https://boardgamegeek.com/boardgame/39290/jacynth) and Andrew Looney's [Zark City](https://boardgamegeek.com/boardgame/35003/zark-city) (a simpler [Zarcana](https://boardgamegeek.com/boardgame/10996/zarcana)-style game for a traditional deck of cards).  I devised it after a discussion on my [geeklist of Zarcana-type games](https://boardgamegeek.com/geeklist/333402/arcana).  I've also made a more Zark City-like Decktet game, [Deck Town](/games/decktet/decktown/), [deciphered](/games/decktet/dectana/) [Dectana](https://boardgamegeek.com/boardgame/60015/dectana), and am playtesting yet another Zarcana-type game for the Decktet.
 
 ## Setup
 

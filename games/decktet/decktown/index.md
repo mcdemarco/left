@@ -48,13 +48,13 @@ Block
 : a set of three or more orthogonally-adjacent cards
 
 Suit match
-: cards in the Dectet can have multiple suits; two cards show a suit match when at least one suit is shared between them
+: cards in the Decktet can have multiple suits; two cards show a suit match when at least one suit is shared between them
 
 Suit order
-: the natural suit order of the Dectet is according to their order of appearance from top to bottom on the cards:  Moons, Suns, Waves, Leaves, Wyrms, Knots.
+: the natural suit order of the Decktet is according to their order of appearance from top to bottom on the cards:  Moons, Suns, Waves, Leaves, Wyrms, Knots.
 
 Straight flush
-: a straight flush in the Dectet all share a single suit (their other suits may differ) and form a numerical run.  For this game, a straight flush must have at least **four** cards, but they need not be laid out in run order in the block.
+: a straight flush in the Decktet all share a single suit (their other suits may differ) and form a numerical run.  For this game, a straight flush must have at least **four** cards, but they need not be laid out in run order in the block.
 
 Three of a kind
 : three cards that all share the same numerical value but do not share any suits (no repeats), in a block
