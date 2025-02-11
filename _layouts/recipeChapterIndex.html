@@ -13,7 +13,7 @@ menu: recipes
 				<ul class="recipes" id="{{foodie.filename}}">
 					{% for innerFoodie in foodie.files %}
 					{% if innerFoodie.redirect == null and innerFoodie.hidden == null %}
-					{% if innerFoodie.new > 2022 %}
+					{% if innerFoodie.new > 2023 %}
 					<li class="archive_list new"><a href="/recipes/{{ foodie.filename }}/{{ innerFoodie.filename }}">{{ innerFoodie.name }}</a></li>
 					{% else %}
 					<li class="archive_list"><a href="/recipes/{{ foodie.filename }}/{{ innerFoodie.filename }}">{{ innerFoodie.name }}</a></li>
