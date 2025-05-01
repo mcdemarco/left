@@ -1,0 +1,40 @@
+/* some basics extracted from mcd.css for plain pages */
+
+body {
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+  margin: 0;
+  -webkit-font-smoothing: antialiased; }
+
+a {
+  color: #227ce8; }
+
+h1, h2, h3, h4 {
+    color: #111;
+    font-family: "Yanone Kaffeesatz", Helvetica, sans-serif; /* need to load this font */
+    font-weight: 400; }
+
+h1 {
+    font-size: 36px;
+    margin: 18px 0 5px 0; }
+h2 {
+    font-size: 30px;
+    margin-bottom: 15px; }
+h3 {
+    color: #777;
+    font-size: 25px;
+    padding-bottom: 5px;
+    margin-bottom: 10px; }
+ h4 {
+    color: #333;}
+
+ h1 a, h2 a, h3 a, h4 a {
+    color: #111;
+    text-decoration: none; }
+
+ hr {
+    border: 0;
+    height: 6px;
+    background-image: url("/images/hr.png");
+    background-repeat: repeat-x;
+    margin: 2em 3em; }
+

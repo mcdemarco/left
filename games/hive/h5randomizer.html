@@ -1,0 +1,225 @@
+<html>
+  <head>
+    <title>Hive in Five Randomizer</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="//fonts.googleapis.com/css?family=Yanone+Kaffeesatz" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="/css/plain.css" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    
+<!--
+Hive in Five randomizer page.
+Written in 2025 by m.c.de marco.  Further credits are displayed on the page.
+The author is not particularly attached to this code, so do with it as you like.
+-->
+
+
+    <style>
+      body {padding:5%;}
+      
+      
+      button {
+	  -webkit-touch-callout: none;
+	  -webkit-user-select: none;
+	  -khtml-user-select: none;
+	  -moz-user-select: none;
+	  -ms-user-select: none;
+	  user-select: none;}
+      
+      #wrapper,
+      #links {color: #14498A;
+		padding-left:5%;}
+
+      p#links span,
+      label {display:inline-block;
+	     padding: 0.2em 0.5em;}
+      p#links span:first-child {padding-left: 0}
+      p#links {margin-top: -0.5em;}
+      
+      div {line-height:1.5;}
+
+      div#expansionList {padding: 0 0 1em 0;}
+      span.nobreak {white-space:nowrap;}
+      
+      #puzzle {font-size: larger;}
+      
+      cite {display:block;
+	    text-align:right;
+	    padding-top:1em;}
+      
+    </style>
+  </head>
+
+<body>
+  <h1>Hive in Five Randomizer</h1>
+
+  <p id="blurb">Hive in Five is an award-winning solo/puzzle mode for the award-winning abstract strategy game Hive.   
+    The goal is to surround the black queen in exactly 5 moves (or multiples thereof), moving each type of piece only once.
+    Use the white pieces to keep track of your moves.</p>
+
+  <div>
+    <p id="info">A randomized puzzle:</p>
+    <p id="wrapper"><span id="output"></span><span id="puzzle"></span></p>
+    <p id="links"><span id="link"></span> &bullet; <span id="permalink"></span></p>
+  </div>
+  
+  <div id="expansionList">
+    Include expansions:
+    <span class="nobreak">
+	<label><input type="checkbox" id="Mosquito" name="M"/> Mosquito</label>
+	<label><input type="checkbox" id="Ladybug" name="L"/> Ladybug</label>
+	<label><input type="checkbox" id="Pillbug" name="P"/> Pillbug</label>
+    </span>
+  </div>
+
+  <div>
+    <button onclick="randomize()" type="button">Randomize</button>
+  </div>
+  
+  <cite>
+    <a href="http://boardgamegeek.com/boardgame/107529">Hive</a> and expansions by John Yianni<br/>
+    <a href="https://www.tarpeygames.com/hive-in-five">Hive in Five</a> by Jeremy Tarpey<br/>
+    <a href="https://entomology.gitlab.io">Position Editor</a> by The_Entomologist<br/>
+    <a href="/games/hive/">Hive Tools</a> by m. c. de marco
+  </cite>
+  
+
+<script type="text/javascript">
+
+/* hive in 5 game info */
+const bugs = ["Queen","Ant","Beetle","Grasshopper","Spider"];
+const expansionBugs = ["Mosquito","Ladybug","Pillbug"];
+const eBugs = expansionBugs.map(bug => bug.charAt(0));
+const duplibugs = bugs.slice(1);
+const baseGame = bugs.concat(duplibugs);
+
+/* hive viewer info */
+const baseUrl = "https://entomology.gitlab.io/hive.html?board=";
+const baseBoard = "wQ+0-4wA1+1-4wB1+2-4wG1+3-4wS1+4-4";
+const settings = "&color=1&mode=edit";
+const coordinates = ["+0+0","+1+0","+2+0","+3+0","+2+1","+1+2","+0+3","+0+2","+0+1","+1-1","+3+1","-1+3"];
+
+
+/* code */
+
+check = function() {
+  //Check the location for a passed-in puzzle and other settings
+  if (window.location.search) {
+    const searchParams = new URLSearchParams(window.location.search);
+    if (searchParams.has("expansions")) {
+      const expansionIds = searchParams.get("expansions").split("");
+      checkExpansions(expansionIds);
+    }
+    if (searchParams.has("puzzle")) {
+      //Display a "result" and reset the checkboxes.
+      document.querySelector("#info").innerHTML = "A saved puzzle:";
+
+      const bugIds = searchParams.get("puzzle").split("");
+      
+      const expansionIds = bugIds.filter(item => eBugs.includes(item));
+      checkExpansions(expansionIds);
+
+      writeDetails(bugIds);
+
+    } else {
+      //If there are expansion settings but not a puzzle, randomize:
+      randomize();
+    }
+  } else {
+    //If not found, randomize:
+    randomize();
+  }
+}
+
+checkExpansions = function(expansionIds) {
+  //Uncheck all checkboxes.
+  document.querySelectorAll("div#expansionList input").forEach(elt => elt.checked = false);
+  //Set the selected checkboxes.  Note hacky use of name attribute.
+  expansionIds.map(initial => document.querySelector('input[name="' + initial + '"]').checked = true);
+}
+
+generateLink = function(realBugIds) {
+  //Generates the link to entomology
+  let bugIds = massage(realBugIds);
+  let fullUrl = baseUrl;
+
+  baseLoc = 5;
+  expansionBugs.forEach(bug => {
+    if (document.getElementById(bug).checked) {
+      fullUrl += "w" + bug.charAt(0) + "+" + baseLoc + "-4";
+      baseLoc++;
+    }
+  });
+
+  fullUrl += baseBoard + bugIds.map((id,idx) => "b" + id + coordinates[idx]).join("") + settings;
+  return '<a target="_blank" href="' + fullUrl + '">Open in Position Editor</a>';
+}
+
+generatePermalink = function(bugIds) {
+  let fullUrl = "/games/hive/h5randomizer.html?puzzle=" + bugIds.join("");
+  return '<a href="' + fullUrl + '">Share this puzzle</a>';
+
+}
+
+massage = function(realBugs) {
+  //Massages the bug list to numbered bugs for entomology
+  let bugs = realBugs.slice();
+  const duplibugIds = duplibugs.map(bug => bug.charAt(0));
+
+  duplibugIds.forEach(bug => {
+    const firstIdx = bugs.indexOf(bug);
+    const lastIdx = bugs.lastIndexOf(bug);
+    bugs[firstIdx] += 1; 
+    bugs[lastIdx] += 2; 
+  });
+
+  return bugs;
+}
+
+shuffle = function(array) {
+  //Fisher-Yates boilerplates.
+  let currentIndex = array.length;
+  while (currentIndex != 0) {
+    let randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex--;
+
+    [array[currentIndex], array[randomIndex]] = [
+      array[randomIndex], array[currentIndex]];
+  }
+}
+
+randomize = function() {
+  //Pick bugs.
+  let bugs = baseGame.slice();
+  expansionBugs.forEach(bug => {
+    if (document.getElementById(bug).checked) {
+      bugs.push(bug);
+    }
+  });
+
+  //Shufflebug.
+  shuffle(bugs);
+
+  //Abbreviate bugs.
+  const bugIds = bugs.map(bug => bug.charAt(0));
+
+  //Display results
+  document.querySelector("#info").innerHTML = "A randomized puzzle:";
+  document.getElementById("output").innerHTML = bugs.join(", ") + "&nbsp;&nbsp;&bullet;&nbsp; ";
+  writeDetails(bugIds);
+}
+
+writeDetails = function(bugIds) {
+
+  document.getElementById("puzzle").innerHTML = bugIds.join("");
+  document.getElementById("link").innerHTML = generateLink(bugIds);
+  document.getElementById("permalink").innerHTML = generatePermalink(bugIds);
+
+};
+
+check();
+
+</script>
+
+</body>
+</html>
