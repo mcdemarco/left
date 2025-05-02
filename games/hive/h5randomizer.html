@@ -95,12 +95,21 @@ const baseGame = bugs.concat(duplibugs);
 
 /* hive viewer info */
 const baseUrl = "https://entomology.gitlab.io/hive.html?board=";
-const baseBoard = "wQ+0-4wA1+1-4wB1+2-4wG1+3-4wS1+4-4";
+const boardBugs = bugs.map(bug => bug.charAt(0));
+const boardinates = ["l-4","m-4","n-4","o-4","p-4","q-4","r-4","s-4"];
 const settings = "&color=1&mode=edit";
-const coordinates = ["+0+0","+1+0","+2+0","+3+0","+2+1","+1+2","+0+3","+0+2","+0+1","+1-1","+3+1","-1+3"];
-
+const coordinateObj = {
+  triangle: ["k0","l0","m0","n0","m1","l2","k3","k2","k1","l-1","n1","j3"],
+  rings: ["n0","o0","o1","n2","m2","m1","l1","l0","k0","j1","j2","k2"],
+  ess: ["l1","k1","m1","k0","m2","l-1","l3","m-1","k3","n-1","j3","i3"]
+}
+let layout = "triangle";
 
 /* code */
+
+init = function() {
+  check();
+}
 
 check = function() {
   //Check the location for a passed-in puzzle and other settings
@@ -109,6 +118,9 @@ check = function() {
     if (searchParams.has("expansions")) {
       const expansionIds = searchParams.get("expansions").split("");
       checkExpansions(expansionIds);
+    }
+    if (searchParams.has("layout")) {
+      layout = searchParams.get("layout");
     }
     if (searchParams.has("puzzle")) {
       //Display a "result" and reset the checkboxes.
@@ -138,20 +150,27 @@ checkExpansions = function(expansionIds) {
   expansionIds.map(initial => document.querySelector('input[name="' + initial + '"]').checked = true);
 }
 
+convertCoordinates = function(coordinates) {
+  //Convert coordinates from my version to the entomologist's.
+  //Does not handle double letter columns.
+  converted = coordinates.map(coord => 
+    (coord.charCodeAt(0) >= 109 ? "+" : "") + (coord.charCodeAt(0) - 109) + "" + (parseInt(coord.substring(1)) >= 0 ? "+" : "") + coord.substring(1)
+  );
+  return converted;
+}
+
 generateLink = function(realBugIds) {
   //Generates the link to entomology
-  let bugIds = massage(realBugIds);
   let fullUrl = baseUrl;
+  let whiteBugs = boardBugs.slice();
 
-  baseLoc = 5;
   expansionBugs.forEach(bug => {
     if (document.getElementById(bug).checked) {
-      fullUrl += "w" + bug.charAt(0) + "+" + baseLoc + "-4";
-      baseLoc++;
+      whiteBugs.push(bug.charAt(0));
     }
   });
 
-  fullUrl += baseBoard + bugIds.map((id,idx) => "b" + id + coordinates[idx]).join("") + settings;
+  fullUrl += linkify(whiteBugs,boardinates,"w") + linkify(realBugIds,coordinateObj[layout],"b") + settings;
   return '<a target="_blank" href="' + fullUrl + '">Open in Position Editor</a>';
 }
 
@@ -161,7 +180,15 @@ generatePermalink = function(bugIds) {
 
 }
 
-massage = function(realBugs) {
+linkify = function(realBugIds,coordinates,color) {
+  //Formats bugs and coordinates for entomology.
+  let bugIds = massage(realBugIds, color == "b");
+  const convertedCoordinates = convertCoordinates(coordinates);
+  return bugIds.map((id,idx) => color + id + convertedCoordinates[idx]).join("")
+
+}
+
+massage = function(realBugs,dups) {
   //Massages the bug list to numbered bugs for entomology
   let bugs = realBugs.slice();
   const duplibugIds = duplibugs.map(bug => bug.charAt(0));
@@ -169,8 +196,9 @@ massage = function(realBugs) {
   duplibugIds.forEach(bug => {
     const firstIdx = bugs.indexOf(bug);
     const lastIdx = bugs.lastIndexOf(bug);
-    bugs[firstIdx] += 1; 
-    bugs[lastIdx] += 2; 
+    bugs[firstIdx] += 1;
+    if (dups)
+      bugs[lastIdx] += 2; 
   });
 
   return bugs;
@@ -217,7 +245,7 @@ writeDetails = function(bugIds) {
 
 };
 
-check();
+init();
 
 </script>
 
