@@ -38,7 +38,7 @@ The author is not particularly attached to this code, so do with it as you like.
       
       div {line-height:1.5;}
 
-      div#expansionList {padding: 0 0 1em 0;}
+      div#settings {padding: 0 0 1em 0;}
       span.nobreak {white-space:nowrap;}
       
       #puzzle {font-size: larger;}
@@ -53,23 +53,33 @@ The author is not particularly attached to this code, so do with it as you like.
 <body>
   <h1>Hive in Five Randomizer</h1>
 
-  <p id="blurb">Hive in Five is an award-winning solo/puzzle mode for the award-winning abstract strategy game Hive.   
-    The goal is to surround the black queen in exactly 5 moves (or multiples thereof), moving each type of piece only once.
-    Use the white pieces to keep track of your moves.</p>
+  <p id="blurb">Hive in Five is a solo/puzzle mode for the abstract strategy game Hive.   
+    The goal is to surround the black queen in exactly 5 moves (or multiples thereof), moving each type of black piece only once.
+    (Use the white pieces to keep track of your moves.)</p>
 
   <div>
     <p id="info">A randomized puzzle:</p>
     <p id="wrapper"><span id="output"></span><span id="puzzle"></span></p>
-    <p id="links"><span id="link"></span> &bullet; <span id="permalink"></span></p>
+    <p id="links"><span id="link"></span> &bullet; <span id="permalink"></span> &bullet; <span id="settingslink"></span></p>
   </div>
   
-  <div id="expansionList">
-    Include expansions:
-    <span class="nobreak">
+  <div id="settings">
+    <div id="expansionList">
+      Include expansions:
+      <span class="nobreak">
 	<label><input type="checkbox" id="Mosquito" name="M"/> Mosquito</label>
 	<label><input type="checkbox" id="Ladybug" name="L"/> Ladybug</label>
 	<label><input type="checkbox" id="Pillbug" name="P"/> Pillbug</label>
-    </span>
+      </span>
+    </div>
+    <div id="layoutList">
+      Change layout:
+      <span class="nobreak">
+	<label><input type="radio" name="layout" id="triangle" value="triangle" checked="checked"/> triangle (default)</label>
+	<label><input type="radio" name="layout" id="beetle" value="beetle"/> beetle</label>
+	<label><input type="radio" name="layout" id="ess" value="ess"/> s-shape</label>
+      </span>
+    </div>
   </div>
 
   <div>
@@ -77,10 +87,11 @@ The author is not particularly attached to this code, so do with it as you like.
   </div>
   
   <cite>
+    <a href="/games/hive/hiveIn5.html">About this randomizer</a><br/>
     <a href="http://boardgamegeek.com/boardgame/107529">Hive</a> and expansions by John Yianni<br/>
     <a href="https://www.tarpeygames.com/hive-in-five">Hive in Five</a> by Jeremy Tarpey<br/>
     <a href="https://entomology.gitlab.io">Position Editor</a> by The_Entomologist<br/>
-    <a href="/games/hive/">Hive Tools</a> by m. c. de marco
+    <a href="/games/hive/">More Hive tools</a> by m. c. de marco
   </cite>
   
 
@@ -88,7 +99,7 @@ The author is not particularly attached to this code, so do with it as you like.
 
 /* hive in 5 game info */
 const bugs = ["Queen","Ant","Beetle","Grasshopper","Spider"];
-const expansionBugs = ["Mosquito","Ladybug","Pillbug"];
+const expansionBugs = ["Pillbug","Ladybug","Mosquito"];
 const eBugs = expansionBugs.map(bug => bug.charAt(0));
 const duplibugs = bugs.slice(1);
 const baseGame = bugs.concat(duplibugs);
@@ -100,15 +111,22 @@ const boardinates = ["l-4","m-4","n-4","o-4","p-4","q-4","r-4","s-4"];
 const settings = "&color=1&mode=edit";
 const coordinateObj = {
   triangle: ["k0","l0","m0","n0","m1","l2","k3","k2","k1","l-1","n1","j3"],
-  rings: ["n0","o0","o1","n2","m2","m1","l1","l0","k0","j1","j2","k2"],
+  beetle: ["n0","o0","o1","n2","m2","m1","l1","l0","k0","k2","j2","j1"],
   ess: ["l1","k1","m1","k0","m2","l-1","l3","m-1","k3","n-1","j3","i3"]
 }
-let layout = "triangle";
 
 /* code */
 
 init = function() {
   check();
+
+  if (document.getElementById("puzzle").innerHTML == "")
+    randomize();
+
+  document.querySelector("#settings").addEventListener("click",(e) => {
+    if (e.target.matches("input"))
+      rewriteDetails();
+  })
 }
 
 check = function() {
@@ -120,26 +138,21 @@ check = function() {
       checkExpansions(expansionIds);
     }
     if (searchParams.has("layout")) {
-      layout = searchParams.get("layout");
+      checkLayouts(searchParams.get("layout"));
     }
     if (searchParams.has("puzzle")) {
-      //Display a "result" and reset the checkboxes.
+      //Display a "result" and reset the expansion checkboxes.
       document.querySelector("#info").innerHTML = "A saved puzzle:";
 
       const bugIds = searchParams.get("puzzle").split("");
       
+      //Expansions are implicit and so not passed in with a puzzle.
       const expansionIds = bugIds.filter(item => eBugs.includes(item));
       checkExpansions(expansionIds);
 
       writeDetails(bugIds);
 
-    } else {
-      //If there are expansion settings but not a puzzle, randomize:
-      randomize();
     }
-  } else {
-    //If not found, randomize:
-    randomize();
   }
 }
 
@@ -148,6 +161,12 @@ checkExpansions = function(expansionIds) {
   document.querySelectorAll("div#expansionList input").forEach(elt => elt.checked = false);
   //Set the selected checkboxes.  Note hacky use of name attribute.
   expansionIds.map(initial => document.querySelector('input[name="' + initial + '"]').checked = true);
+}
+
+checkLayouts = function(layout) {
+  //Set radio button to layout value.
+  if (!layout) layout = "triangle";
+  document.querySelectorAll("div#layoutList input").forEach(elt => elt.checked = (elt.value == layout));
 }
 
 convertCoordinates = function(coordinates) {
@@ -170,22 +189,50 @@ generateLink = function(realBugIds) {
     }
   });
 
+  const layout = document.querySelector("div#layoutList input:checked").value;
+
   fullUrl += linkify(whiteBugs,boardinates,"w") + linkify(realBugIds,coordinateObj[layout],"b") + settings;
-  return '<a target="_blank" href="' + fullUrl + '">Open in Position Editor</a>';
+  return '<a target="_blank" href="' + fullUrl + '">Play in Position Editor</a>';
 }
 
 generatePermalink = function(bugIds) {
+  //Generates the puzzle permalink
   let fullUrl = "/games/hive/h5randomizer.html?puzzle=" + bugIds.join("");
-  return '<a href="' + fullUrl + '">Share this puzzle</a>';
 
+  const layout = document.querySelector("div#layoutList input:checked").value;
+  if (layout != "triangle")
+    fullUrl += "&layout=" + layout;
+
+  return '<a href="' + fullUrl + '">Share this puzzle</a>';
+}
+
+generateSettingsLink = function() {
+  //Generates the settings permalink
+  const baseUrl = "/games/hive/h5randomizer.html";
+  let searchUrl = "";
+
+  let expansions = "";
+  expansionBugs.forEach(bug => {
+    if (document.getElementById(bug).checked)
+      expansions += bug.charAt(0);
+  });
+
+  if (expansions)
+    searchUrl += "expansions=" + expansions;
+
+  let layout = document.querySelector("div#layoutList input:checked").value;
+  if (layout != "triangle")
+    searchUrl += (searchUrl ? "&" : "") + "layout=" + layout;
+
+  const fullUrl = baseUrl + (searchUrl ? "?" + searchUrl : "");
+  return '<a href="' + fullUrl + '">Save current settings</a>';
 }
 
 linkify = function(realBugIds,coordinates,color) {
   //Formats bugs and coordinates for entomology.
   let bugIds = massage(realBugIds, color == "b");
   const convertedCoordinates = convertCoordinates(coordinates);
-  return bugIds.map((id,idx) => color + id + convertedCoordinates[idx]).join("")
-
+  return bugIds.map((id,idx) => color + id + convertedCoordinates[idx]).join("");
 }
 
 massage = function(realBugs,dups) {
@@ -237,11 +284,19 @@ randomize = function() {
   writeDetails(bugIds);
 }
 
+rewriteDetails = function() {
+  //Get bugIds from puzzle and write details (mainly to pick up changed layouts).
+  const puzz = document.getElementById("puzzle").innerHTML;
+  if (puzz)
+    writeDetails(puzz.split(""));
+}
+
 writeDetails = function(bugIds) {
 
   document.getElementById("puzzle").innerHTML = bugIds.join("");
   document.getElementById("link").innerHTML = generateLink(bugIds);
   document.getElementById("permalink").innerHTML = generatePermalink(bugIds);
+  document.getElementById("settingslink").innerHTML = generateSettingsLink();
 
 };
 

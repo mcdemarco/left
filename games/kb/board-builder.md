@@ -1,6 +1,8 @@
 ---
 layout: page
 title: "Kingdom Board Builder"
+categories: games
+menu: games
 tags: mapping gaming
 created: 2014-12-10 21:24:00
 ---

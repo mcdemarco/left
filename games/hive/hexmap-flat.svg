@@ -1,0 +1,488 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-626.2177826491071 -626.2177826491071 1252.4355652982142 1252.4355652982142" width="626" height="626">
+  <g fill="#e6e6fa" stroke="black" class="diagram-visible rotate-pointy">
+    <g class="grid">
+      <g transform="translate(-450,-260)">
+        <g class="r-axis-same">
+          <polygon points="100,0 50,-87 -50,-87 -100,-0 -50,87 50,87"/>
+          <g>
+            <g>
+              <text dx="-25" dy="20" style="font-size:50;font-style:italic;" fill="#000000">j</text>
+            </g>
+            <g>
+              <text dx="0" dy="20" style="font-size:50;font-style:normal;" fill="#00aa00" stroke="#00aa00">0</text>
+            </g>
+          </g>
+        </g>
+      </g>
+      <g transform="translate(-450,-87)">
+        <g class="">
+          <polygon points="100,0 50,-87 -50,-87 -100,-0 -50,87 50,87"/>
+          <g>
+            <g>
+              <text dx="-25" dy="20" style="font-size:50;font-style:italic;" fill="#000000">j</text>
+            </g>
+            <g>
+              <text dx="-5" dy="20" style="font-size:50;font-style:normal;" fill="#000000">+1</text>
+            </g>
+          </g>
+        </g>
+      </g>
+      <g transform="translate(-450,87)">
+        <g class="s-axis-same">
+          <polygon points="100,0 50,-87 -50,-87 -100,-0 -50,87 50,87"/>
+          <g>
+            <g>
+              <text dx="-25" dy="20" style="font-size:50;font-style:italic;" fill="#000000">j</text>
+            </g>
+            <g>
+              <text dx="-5" dy="20" style="font-size:50;font-style:normal;" fill="#000000">+2</text>
+            </g>
+          </g>
+        </g>
+      </g>
+      <g transform="translate(-450,260)">
+        <g class="">
+          <polygon points="100,0 50,-87 -50,-87 -100,-0 -50,87 50,87"/>
+          <g>
+            <g>
+              <text dx="-25" dy="20" style="font-size:50;font-style:italic;" fill="#000000">j</text>
+            </g>
+            <g>
+              <text dx="-5" dy="20" style="font-size:50;font-style:normal;" fill="#000000">+3</text>
+            </g>
+          </g>
+        </g>
+      </g>
+      <g transform="translate(-300,-346)">
+        <g class="">
+          <polygon points="100,0 50,-87 -50,-87 -100,-0 -50,87 50,87"/>
+          <g>
+            <g>
+              <text dx="-25" dy="20" style="font-size:50;font-style:italic;" fill="#000000">k</text>
+            </g>
+            <g>
+              <text dx="-5" dy="20" style="font-size:50;font-style:normal;" fill="#000000">-1</text>
+            </g>
+          </g>
+        </g>
+      </g>
+      <g transform="translate(-300,-173)">
+        <g class="r-axis-same">
+          <polygon points="100,0 50,-87 -50,-87 -100,-0 -50,87 50,87"/>
+          <g>
+            <g>
+              <text dx="-25" dy="20" style="font-size:50;font-style:italic;" fill="#000000">k</text>
+            </g>
+            <g>
+              <text dx="0" dy="20" style="font-size:50;font-style:normal;" fill="#00aa00" stroke="#00aa00">0</text>
+            </g>
+          </g>
+        </g>
+      </g>
+      <g transform="translate(-300,0)">
+        <g class="s-axis-same">
+          <polygon points="100,0 50,-87 -50,-87 -100,-0 -50,87 50,87"/>
+          <g>
+            <g>
+              <text dx="-25" dy="20" style="font-size:50;font-style:italic;" fill="#000000">k</text>
+            </g>
+            <g>
+              <text dx="-5" dy="20" style="font-size:50;font-style:normal;" fill="#000000">+1</text>
+            </g>
+          </g>
+        </g>
+      </g>
+      <g transform="translate(-300,173)">
+        <g class="">
+          <polygon points="100,0 50,-87 -50,-87 -100,-0 -50,87 50,87"/>
+          <g>
+            <g>
+              <text dx="-25" dy="20" style="font-size:50;font-style:italic;" fill="#000000">k</text>
+            </g>
+            <g>
+              <text dx="-5" dy="20" style="font-size:50;font-style:normal;" fill="#000000">+2</text>
+            </g>
+          </g>
+        </g>
+      </g>
+      <g transform="translate(-300,346)">
+        <g class="">
+          <polygon points="100,0 50,-87 -50,-87 -100,-0 -50,87 50,87"/>
+          <g>
+            <g>
+              <text dx="-25" dy="20" style="font-size:50;font-style:italic;" fill="#000000">k</text>
+            </g>
+            <g>
+              <text dx="-5" dy="20" style="font-size:50;font-style:normal;" fill="#000000">+3</text>
+            </g>
+          </g>
+        </g>
+      </g>
+      <g transform="translate(-150,-433)">
+        <g class="q-axis-same">
+          <polygon points="100,0 50,-87 -50,-87 -100,-0 -50,87 50,87"/>
+          <g>
+            <g>
+              <text dx="-25" dy="20" style="font-size:50;font-style:italic;" fill="#000000">l</text>
+            </g>
+            <g>
+              <text dx="-5" dy="20" style="font-size:50;font-style:normal;" fill="#000000">-2</text>
+            </g>
+          </g>
+        </g>
+      </g>
+      <g transform="translate(-150,-260)">
+        <g class="q-axis-same">
+          <polygon points="100,0 50,-87 -50,-87 -100,-0 -50,87 50,87"/>
+          <g>
+            <g>
+              <text dx="-25" dy="20" style="font-size:50;font-style:italic;" fill="#000000">l</text>
+            </g>
+            <g>
+              <text dx="-5" dy="20" style="font-size:50;font-style:normal;" fill="#000000">-1</text>
+            </g>
+          </g>
+        </g>
+      </g>
+      <g transform="translate(-150,-87)">
+        <g class="highlight q-axis-same r-axis-same s-axis-same">
+          <polygon points="100,0 50,-87 -50,-87 -100,-0 -50,87 50,87"/>
+          <g>
+            <g>
+              <text dx="-25" dy="20" style="font-size:50;font-style:italic;" fill="#000000">l</text>
+            </g>
+            <g>
+              <text dx="0" dy="20" style="font-size:50;font-style:normal;" fill="#00aa00" stroke="#00aa00">0</text>
+            </g>
+          </g>
+        </g>
+      </g>
+      <g transform="translate(-150,87)">
+        <g class="q-axis-same">
+          <polygon points="100,0 50,-87 -50,-87 -100,-0 -50,87 50,87"/>
+          <g>
+            <g>
+              <text dx="-25" dy="20" style="font-size:50;font-style:italic;" fill="#000000">l</text>
+            </g>
+            <g>
+              <text dx="-5" dy="20" style="font-size:50;font-style:normal;" fill="#000000">+1</text>
+            </g>
+          </g>
+        </g>
+      </g>
+      <g transform="translate(-150,260)">
+        <g class="q-axis-same">
+          <polygon points="100,0 50,-87 -50,-87 -100,-0 -50,87 50,87"/>
+          <g>
+            <g>
+              <text dx="-25" dy="20" style="font-size:50;font-style:italic;" fill="#000000">l</text>
+            </g>
+            <g>
+              <text dx="-5" dy="20" style="font-size:50;font-style:normal;" fill="#000000">+2</text>
+            </g>
+          </g>
+        </g>
+      </g>
+      <g transform="translate(-150,433)">
+        <g class="q-axis-same">
+          <polygon points="100,0 50,-87 -50,-87 -100,-0 -50,87 50,87"/>
+          <g>
+            <g>
+              <text dx="-25" dy="20" style="font-size:50;font-style:italic;" fill="#000000">l</text>
+            </g>
+            <g>
+              <text dx="-5" dy="20" style="font-size:50;font-style:normal;" fill="#000000">+3</text>
+            </g>
+          </g>
+        </g>
+      </g>
+      <g transform="translate(0,-520)">
+        <g class="">
+          <polygon points="100,0 50,-87 -50,-87 -100,-0 -50,87 50,87"/>
+          <g>
+            <g>
+              <text dx="-35" dy="20" style="font-size:50;font-style:italic;" fill="#aa0000"  stroke="#aa0000">m</text>
+            </g>
+            <g>
+              <text dx="5" dy="20" style="font-size:50;font-style:normal;" fill="#000000">-3</text>
+            </g>
+          </g>
+        </g>
+      </g>
+      <g transform="translate(0,-346)">
+        <g class="">
+          <polygon points="100,0 50,-87 -50,-87 -100,-0 -50,87 50,87"/>
+          <g>
+            <g>
+              <text dx="-35" dy="20" style="font-size:50;font-style:italic;" fill="#aa0000"  stroke="#aa0000">m</text>
+            </g>
+            <g>
+              <text dx="5" dy="20" style="font-size:50;font-style:normal;" fill="#000000">-2</text>
+            </g>
+          </g>
+        </g>
+      </g>
+      <g transform="translate(0,-173)">
+        <g class="s-axis-same">
+          <polygon points="100,0 50,-87 -50,-87 -100,-0 -50,87 50,87"/>
+          <g>
+            <g>
+              <text dx="-35" dy="20" style="font-size:50;font-style:italic;" fill="#aa0000"  stroke="#aa0000">m</text>
+            </g>
+            <g>
+              <text dx="5" dy="20" style="font-size:50;font-style:normal;" fill="#000000">-1</text>
+            </g>
+          </g>
+        </g>
+      </g>
+      <g transform="translate(0,0)">
+        <g class="origin r-axis-same">
+          <polygon points="100,0 50,-87 -50,-87 -100,-0 -50,87 50,87" fill="#fbf8f0" />
+          <g>
+            <g>
+              <text dx="-35" dy="20" style="font-size:50;font-style:italic;" fill="#aa0000" stroke="#aa0000">m</text>
+            </g>
+            <g>
+              <text dx="5" dy="20" style="font-size:50;font-style:normal;" fill="#00aa00" stroke="#00aa00">0</text>
+            </g>
+          </g>
+        </g>
+      </g>
+      <g transform="translate(0,173)">
+        <g class="">
+          <polygon points="100,0 50,-87 -50,-87 -100,-0 -50,87 50,87"/>
+          <g>
+            <g>
+              <text dx="-35" dy="20" style="font-size:50;font-style:italic;" fill="#aa0000"  stroke="#aa0000">m</text>
+            </g>
+            <g>
+              <text dx="5" dy="20" style="font-size:50;font-style:normal;" fill="#000000">+1</text>
+            </g>
+          </g>
+        </g>
+      </g>
+      <g transform="translate(0,346)">
+        <g class="">
+          <polygon points="100,0 50,-87 -50,-87 -100,-0 -50,87 50,87"/>
+          <g>
+            <g>
+              <text dx="-35" dy="20" style="font-size:50;font-style:italic;" fill="#aa0000"  stroke="#aa0000">m</text>
+            </g>
+            <g>
+              <text dx="5" dy="20" style="font-size:50;font-style:normal;" fill="#000000">+2</text>
+            </g>
+          </g>
+        </g>
+      </g>
+      <g transform="translate(0,520)">
+        <g class="">
+          <polygon points="100,0 50,-87 -50,-87 -100,-0 -50,87 50,87"/>
+          <g>
+            <g>
+              <text dx="-35" dy="20" style="font-size:50;font-style:italic;" fill="#aa0000"  stroke="#aa0000">m</text>
+            </g>
+            <g>
+              <text dx="5" dy="20" style="font-size:50;font-style:normal;" fill="#000000">+3</text>
+            </g>
+          </g>
+        </g>
+      </g>
+      <g transform="translate(150,-433)">
+        <g class="">
+          <polygon points="100,0 50,-87 -50,-87 -100,-0 -50,87 50,87"/>
+          <g>
+            <g>
+              <text dx="-30" dy="20" style="font-size:50;font-style:italic;" fill="#000000">n</text>
+            </g>
+            <g>
+              <text dx="0" dy="20" style="font-size:50;font-style:normal;" fill="#000000">-3</text>
+            </g>
+          </g>
+        </g>
+      </g>
+      <g transform="translate(150,-260)">
+        <g class="s-axis-same">
+          <polygon points="100,0 50,-87 -50,-87 -100,-0 -50,87 50,87"/>
+          <g>
+            <g>
+              <text dx="-30" dy="20" style="font-size:50;font-style:italic;" fill="#000000">n</text>
+            </g>
+            <g>
+              <text dx="0" dy="20" style="font-size:50;font-style:normal;" fill="#000000">-2</text>
+            </g>
+          </g>
+        </g>
+      </g>
+      <g transform="translate(150,-87)">
+        <g class="">
+          <polygon points="100,0 50,-87 -50,-87 -100,-0 -50,87 50,87"/>
+          <g>
+            <g>
+              <text dx="-30" dy="20" style="font-size:50;font-style:italic;" fill="#000000">n</text>
+            </g>
+            <g>
+              <text dx="0" dy="20" style="font-size:50;font-style:normal;" fill="#000000">-1</text>
+            </g>
+          </g>
+        </g>
+      </g>
+      <g transform="translate(150,87)">
+        <g class="r-axis-same">
+          <polygon points="100,0 50,-87 -50,-87 -100,-0 -50,87 50,87" fill="#555"/>
+          <g>
+            <g>
+              <text dx="-25" dy="20" style="font-size:50;font-style:italic;" fill="#ffffff" stroke="#ffffff">n</text>
+            </g>
+            <g>
+              <text dx="5" dy="20" style="font-size:50;font-style:normal;" fill="#00aa00" stroke="#00aa00">0</text>
+            </g>
+          </g>
+        </g>
+      </g>
+      <g transform="translate(150,260)">
+        <g class="">
+          <polygon points="100,0 50,-87 -50,-87 -100,-0 -50,87 50,87"/>
+          <g>
+            <g>
+              <text dx="-30" dy="20" style="font-size:50;font-style:italic;" fill="#000000">n</text>
+            </g>
+            <g>
+              <text dx="0" dy="20" style="font-size:50;font-style:normal;" fill="#000000">+1</text>
+            </g>
+          </g>
+        </g>
+      </g>
+      <g transform="translate(150,433)">
+        <g class="">
+          <polygon points="100,0 50,-87 -50,-87 -100,-0 -50,87 50,87"/>
+          <g>
+            <g>
+              <text dx="-30" dy="20" style="font-size:50;font-style:italic;" fill="#000000">n</text>
+            </g>
+            <g>
+              <text dx="0" dy="20" style="font-size:50;font-style:normal;" fill="#000000">+2</text>
+            </g>
+          </g>
+        </g>
+      </g>
+      <g transform="translate(300,-346)">
+        <g class="s-axis-same">
+          <polygon points="100,0 50,-87 -50,-87 -100,-0 -50,87 50,87"/>
+          <g>
+            <g>
+              <text dx="-30" dy="20" style="font-size:50;font-style:italic;" fill="#000000">o</text>
+            </g>
+            <g>
+              <text dx="0" dy="20" style="font-size:50;font-style:normal;" fill="#000000">-3</text>
+            </g>
+          </g>
+        </g>
+      </g>
+      <g transform="translate(300,-173)">
+        <g class="">
+          <polygon points="100,0 50,-87 -50,-87 -100,-0 -50,87 50,87"/>
+          <g>
+            <g>
+              <text dx="-30" dy="20" style="font-size:50;font-style:italic;" fill="#000000">o</text>
+            </g>
+            <g>
+              <text dx="0" dy="20" style="font-size:50;font-style:normal;" fill="#000000">-2</text>
+            </g>
+          </g>
+        </g>
+      </g>
+      <g transform="translate(300,0)">
+        <g class="">
+          <polygon points="100,0 50,-87 -50,-87 -100,-0 -50,87 50,87"/>
+          <g>
+            <g>
+              <text dx="-30" dy="20" style="font-size:50;font-style:italic;" fill="#000000">o</text>
+            </g>
+            <g>
+              <text dx="0" dy="20" style="font-size:50;font-style:normal;" fill="#000000">-1</text>
+            </g>
+          </g>
+        </g>
+      </g>
+      <g transform="translate(300,173)">
+        <g class="r-axis-same">
+          <polygon points="100,0 50,-87 -50,-87 -100,-0 -50,87 50,87"/>
+          <g>
+            <g>
+              <text dx="-30" dy="20" style="font-size:50;font-style:italic;" fill="#000000">o</text>
+            </g>
+            <g>
+              <text dx="0" dy="20" style="font-size:50;font-style:normal;" fill="#00aa00" stroke="#00aa00">0</text>
+            </g>
+          </g>
+        </g>
+      </g>
+      <g transform="translate(300,346)">
+        <g class="">
+          <polygon points="100,0 50,-87 -50,-87 -100,-0 -50,87 50,87"/>
+          <g>
+            <g>
+              <text dx="-30" dy="20" style="font-size:50;font-style:italic;" fill="#000000">o</text>
+            </g>
+            <g>
+              <text dx="0" dy="20" style="font-size:50;font-style:normal;" fill="#000000">+1</text>
+            </g>
+          </g>
+        </g>
+      </g>
+      <g transform="translate(450,-260)">
+        <g class="">
+          <polygon points="100,0 50,-87 -50,-87 -100,-0 -50,87 50,87"/>
+          <g>
+            <g>
+              <text dx="-30" dy="20" style="font-size:50;font-style:italic;" fill="#000000">p</text>
+            </g>
+            <g>
+              <text dx="0" dy="20" style="font-size:50;font-style:normal;" fill="#000000">-3</text>
+            </g>
+          </g>
+        </g>
+      </g>
+      <g transform="translate(450,-87)">
+        <g class="">
+          <polygon points="100,0 50,-87 -50,-87 -100,-0 -50,87 50,87"/>
+          <g>
+            <g>
+              <text dx="-30" dy="20" style="font-size:50;font-style:italic;" fill="#000000">p</text>
+            </g>
+            <g>
+              <text dx="0" dy="20" style="font-size:50;font-style:normal;" fill="#000000">-2</text>
+            </g>
+          </g>
+        </g>
+      </g>
+      <g transform="translate(450,87)">
+        <g class="">
+          <polygon points="100,0 50,-87 -50,-87 -100,-0 -50,87 50,87"/>
+          <g>
+            <g>
+              <text dx="-30" dy="20" style="font-size:50;font-style:italic;" fill="#000000">p</text>
+            </g>
+            <g>
+              <text dx="0" dy="20" style="font-size:50;font-style:normal;" fill="#000000">-1</text>
+            </g>
+          </g>
+        </g>
+      </g>
+      <g transform="translate(450,260)">
+        <g class="r-axis-same">
+          <polygon points="100,0 50,-87 -50,-87 -100,-0 -50,87 50,87"/>
+         <g>
+            <g>
+              <text dx="-30" dy="20" style="font-size:50;font-style:italic;" fill="#000000">p</text>
+            </g>
+            <g>
+              <text dx="0" dy="20" style="font-size:50;font-style:normal;" fill="#00aa00" stroke="#00aa00">0</text>
+            </g>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

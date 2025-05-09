@@ -2,6 +2,8 @@
 layout: page
 title: "Winter Kingdom Board Builder"
 tags: mapping gaming
+categories: games
+menu: games
 created: 2021-01-06 15:30:00
 ---
 Kingdom Builder has been reimplemented as Winter Kingdom, so I reimplemented my [board builder](board-builder.html) as well.  You can read more about the original there.  This one is the same in that after generating a random board, it lets you edit the board by clicking on it.  Note that it has strong opinions about adjacency and the need for location tiles.  If you don't like the editing constraints, try [this version](/files/svg/wkbb-hexagons-free.svg) instead.

@@ -5,6 +5,7 @@ rdiscount:
   extensions: 
     - smart
     - generate_toc
+  toc_token: "!TOC"
 redcarpet:
   extensions:
     - fenced_code_blocks

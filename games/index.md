@@ -5,16 +5,12 @@ categories: games
 menu: games
 date: 2016-07-14 20:47:00
 ---
-I've made a couple of [gaming tools](/games/kb/) for my favorite board game, Kingdom Builder: a [board generator](/games/kb/board-builder.html) and [an updated random layout generator](/games/kb/randomizer.html).  See the first link for more details.
 
-I've also worked on some tools for the game 504: an [almanac](/games/504/almanac/) and some improvements to the standard rules generator; see [the 504 page](/games/504/) for more details.
+I play a lot of games and I write a lot of code.  The twain meet here, somewhat messily.  You can find my stuff by game ([Kingdom Builder/Winter Kingdom](/games/kb/), [504](/games/504/), [Hive](/games/hive/)) or game system ([the Decktet](/games/decktet/), [Icehouse pieces/pyramids](/games/pyramid/)), plus some more generic tools for [making card games](http://cardpen.mcdemarco.net/doc/) or [extracting information from BoardGameGeek](/games/bgg/).
 
-I've implemented [a few solitaire games](/games/decktet/#Online.Game) for the Decket, an alternative card system by P.D. Magnus.
+The most fun are the solitaire games you can play online ([a few Decktet games](/games/decktet/#Online.Game) and a way to play [Hive in Five](/games/hive/hiveIn5.html)), but I've also made a bunch of randomizers: for [Kingdom Builder](/games/kb/randomizer.html), [Hive in Five](/games/hive/h5randomizer.html), [504](/games/504/almanac/), and [Zoning Out](https://mcdemarco.github.io/321/zoningoutrandomizer.html), plus a general [Pyramid Randomizer](https://mcdemarco.github.io/321/pyramidrandomizer.html).
 
-At the last minute before traipsing off to dance camp many years ago I rethemed the game [10 Days in Beautiful Africa](https://boardgamegeek.com/boardgame/7865/10-days-africa) into [10 Hours in Beautiful Pinewoods](/games/10hours/).
+Another set of tools helps to deal with the rules of board games:  I made some improvements to the standard rules generator for [504](/games/504/#L504.Rules), implemented a rules summary and dice roller for the classic Decktet game [Magnate](/games/decktet/magnate/), and [others](/games/decktet/#Rules.and.Tools), including my own pyramid Decktet Zarcana-like game, [Darcana](/games/decktet/darcana/).
 
-Much earlier than the last minute before dance camp a few years ago, I made a tool, [CardPen](http://cardpen.mcdemarco.net/) for printing card (and other) games, and printed up a few [of them](http://cardpen.mcdemarco.net/doc/examples.html).
+Some things are not all that useful, but they can be fun, like my Kingdom Builder and Winter Kingdom [board](/games/kb/board-builder.html) [generators](/games/kb/winter-board-builder.html), the erstwhile [504 almanac](/games/504/almanac/), or my dance camp retheme of the game [10 Days in Beautiful Africa](https://boardgamegeek.com/boardgame/7865/10-days-africa) into [10 Hours in Beautiful Pinewoods](/games/10hours/).
 
-I made some other uses of the BoardGameGeek API besides the game list option in CardPen:  some [sorting utilities](/games/bgg/), including a [geeklist sorter](/games/bgg/geeklist.html), a [family sorter](/games/bgg/family.html), and a [general thing sorter](/games/bgg/things.html), as well as a [thread formatter](/games/bgg/thread.html).
-
-I've invented, documented, reimplemented, or randomized several [pyramid games](/games/pyramid/): [Deck Town](/games/decktet/decktown/), [Dectana Deciphered](/games/decktet/dectana/), [Darcana](/games/decktet/darcana/), and the [Zoning Out Randomizer](https://mcdemarco.github.io/321/zoningoutrandomizer.html), respectively, plus a general [Pyramid Randomizer](https://mcdemarco.github.io/321/pyramidrandomizer.html).

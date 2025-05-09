@@ -1,0 +1,92 @@
+[GameType "Base+MLP"]
+[Date "17-Feb-2025_17:40:43"]
+[Site "hivegame.com"]
+[White "Nicolai"]
+[Black "ringersoll"]
+[Result "BlackWins"]
+
+Standard         Long algebraic       Algebraic         Compressed algebraic notation
+                                                                        
+1. wG1           1. wG m0             1. wG m0          1. wGm0          
+2. bL wG1-       2. bL n0             2. bL n0          2. bLn0          
+3. wQ /wG1       3. wQ l1             3. wQ l1          3. wQl1         
+4. bM bL-        4. bM o0             4. bM o0          4. bMo0          
+5. wA1 \wG1      5. wA m-1            5. wA m-1         5. wAm-1         
+6. bQ bM\        6. bQ o1             6. bQ o1          6. bQo1          
+7. wA1 /bQ       7. wA m-1 n2         7. wA m n2        7. wAmn2      
+8. bA1 \bM       8. bA o-1            8. bA o-1         8. bAo-1         
+9. wA2 \wG1      9. wA @m-1           9. wA @m-1        9. wA@m-1        
+10. bA1 \wA2     10. bA o-1 m-2       10. bA o m-2      10. bAom-2    
+11. wB1 wA1\     11. wB n3            11. wB n3         11. wBn3         
+12. bP bQ/       12. bP p0            12. bP p0         12. bPp0         
+13. wB1 bQ\      13. wB n3 o2         13. wB n o2       13. wBno2      
+14. bA2 \bP      14. bA @p-1          14. bA @p-1       14. bA@p-1       
+15. wB1 bQ       15. wB o2 o1         15. wB o o1       15. wBoo1      
+16. bA2 wA1\     16. bA p-1 n3        16. bA p n3       16. bApn3     
+17. wP /wQ       17. wP k2            17. wP k2         17. wPk2         
+18. bA3 \bP      18. bA @p-1          18. bA @p-1       18. bA@p-1       
+19. wB2 \wQ      19. wB @l0           19. wB @l0        19. wB@l0        
+20. bB1 \bM      20. bB o-1           20. bB o-1        20. bBo-1        
+21. wB1 bP       21. wB o1 p0         21. wB o p0       21. wBop0      
+22. bM wB1       22. bM o0 p0         22. bM p0         22. bMp0       
+23. wB2 wG1      23. wB l0 m0         23. wB l m0       23. wBlm0     
+24. bG1 bB1\     24. bG o0            24. bG @o0        24. bG@o0       
+25. wA3 wP\      25. wA @k3           25. wA @k3        25. wA@k3        
+26. bA3 wA3-     26. bA p-1 l3        26. bA p l3       26. bApl3     
+27. wM \wQ       27. wM l0            27. wM l0         27. wMl0        
+28. bA2 -wM      28. bA n3 k0         28. bA n k0       28. bAnk0      
+29. wL wA1\      29. wL n3            29. wL n3         29. wLn3         
+30. bS1 bM-      30. bS q0            30. bS @q0        30. bS@q0         
+31. wL bQ\       31. wL n3 o2         31. wL o2         31. wLo2       
+32. bS1 wL\      32. bS q0 o3         32. bS q o3       32. bSqo3      
+33. wA1 bB1/     33. wA n2 p-2        33. wA n p-2      33. wAnp-2     
+34. bB2 bL\      34. bB @n1           34. bB @n1        34. bB@n1        
+35. wS1 wA1-     35. wS @q-2          35. wS @q-2       35. wS@q-2       
+36. bA1 wA2/     36. bA m-2 n-2       36. bA m n-2      36. bAmn-2    
+37. wS1 bM-      37. wS q-2 q0        37. wS q q0       37. wSqq0     
+38. bS2 bA3-     38. bS @m3           38. bS @m3        38. bS@m3        
+39. wS1 bS1-     39. wS q0 p3         39. wS q p3       39. wSqp3      
+40. bS2 /wA3     40. bS m3 j4         40. bS m j4       40. bSmj4      
+41. wG2 -wP      41. wG @j2           41. wG @j2        41. wG@j2        
+42. bS2 -wG2     42. bS j4 i2         42. bS j i2       42. bSji2      
+43. wG3 wG2\     43. wG @j3           43. wG @j3        43. wG@j3        
+44. bA3 wA3\     44. bA l3 k4         44. bA l k4       44. bAlk4      
+45. wG3 bA2\     45. wG j3 k1 (wP k2) 45. wG 3 k1 (wP)  45. wG3k1(wP)
+46. bB2 wB2\     46. bB n1 m1         46. bB n m1       46. bBnm1      
+47. wQ wG2\      47. wQ l1 j3 (wP k2) 47. wQ j3 (wP)    47. wQj3(wP)  
+48. bB2 wB2      48. bB m1 m0         48. bB m m0       48. bBmm0      
+49. wQ bS2\      49. wQ j3 i3         49. wQ i3         49. wQi3       
+50. bS2 wQ\      50. bS i2 i4         50. bS i i4       50. bSii4      
+51. wS1 bM-      51. wS p3 q0         51. wS p q0       51. wSpq0      
+52. bA2 wA1/     52. bA k0 q-3        52. bA 0 q-3      52. bA0q-3     
+53. wS1 bS1-     53. wS q0 p3         53. wS q p3       53. wSqp3      
+54. bG2 bS2\     54. bG @i5           54. bG @i5        54. bG@i5        
+55. wS1 bM-      55. wS p3 q0         55. wS p q0       55. wSpq0      
+56. bS1 wS1\     56. bS o3 q1         56. bS o q1       56. bSoq1      
+57. wL \wS1      57. wL o2 q-1        57. wL q-1        57. wLq-1      
+58. bQ bL\       58. bQ o1 n1         58. bQ n1         58. bQn1       
+59. wL bM\       59. wL q-1 p1        59. wL p1         59. wLp1       
+60. bG2 \wQ      60. bG i5 i2         60. bG i i2       60. bGii2      
+61. wL /bS1      61. wL q-1 p2        61. wL p2         61. wLp2       
+62. bG3 /bS2     62. bG @h6           62. bG @h6        62. bG@h6        
+63. wL bM\       63. wL p2 p1         63. wL p1         63. wLp1       
+64. bA2 \bG3     64. bA q-3 h5        64. bA q h5       64. bAqh5     
+65. wA1 bG3\     65. wA p-2 h7        65. wA p h7       65. wAph7     
+66. bB1 bL       66. bB o-1 n0        66. bB o n0       66. bBon0     
+67. wL \bG1      67. wL p1 o-1        67. wL o-1        67. wLo-1      
+68. bB1 bB2      68. bB n0 m0         68. bB n m0       68. bBnm0      
+69. wL wM\       69. wL o-1 l1        69. wL l1         69. wLl1       
+70. bB1 wM       70. bB m0 l0         70. bB m l0       70. bBml0      
+71. wL wA3/      71. wL l1 l2         71. wL l2         71. wLl2       
+72. bB1 wG3      72. bB l0 k1         72. bB l k1       72. bBlk1      
+73. wL wM\       73. wL l2 l1         73. wL l1         73. wLl1       
+74. bB2 wM       74. bB m0 l0         74. bB m l0       74. bBml0      
+75. wB2 bB2      75. wB m0 l0         75. wB m l0       75. wBml0      
+76. bB1 wG2      76. bB k1 j2         76. bB k j2       76. bBkj2      
+77. wB2 wG3      77. wB l0 k1         77. wB l k1       77. wBlk1      
+78. bB1 wQ       78. bB j2 i3         78. bB j i3       78. bBji3      
+79. wB2 wG2      79. wB k1 j2         79. wB k j2       79. wBkj2      
+80. bB1 wB2      80. bB i3 j2         80. bB i j2       80. bBij2      
+81. wA1 /bG3     81. wA h7 g7         81. wA h g7       81. wAhg7      
+82. bA3 \bA2     82. bA k4 h3         82. bA k h3       82. bAkh3      
+83. wA3 bB1\     83. wA k3 j3         83. wA k j3       83. wAkj3      

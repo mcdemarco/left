@@ -146,6 +146,9 @@ a {
   .content h4 a {
     color: #111;
     text-decoration: none; }
+  .content h5, .content h6 {
+    font-family: "Yanone Kaffeesatz", Helvetica, sans-serif;
+    font-weight: 400;}
   .content h1 {
     font-size: 36px;
     margin: 18px 0 5px 0; }
@@ -154,9 +157,18 @@ a {
     margin-bottom: 15px; }
   .content h3 {
     color: #777;
-    font-size: 25px;
+    font-size: 26px;
     padding-bottom: 5px;
     margin-bottom: 10px; }
+  .content h4 {
+    font-size: 22px;
+    margin-bottom: 9px; }
+  .content h5 {
+    font-size: 18px;
+    margin-bottom: 8px; }
+  .content h6 {
+    font-size: 16px;
+    margin-bottom: 7px; }
   .content p {
     font-size: 16px;
     margin-top: 0;
@@ -321,6 +333,30 @@ a {
     font-weight: bold; }
   .content .talk-design .color .white {
     color: #fff; }
+
+  .content #hiveTOC:before {
+      content: "Contents";
+      color: #222;
+      font-family: "Yanone Kaffeesatz", Helvetica, sans-serif;
+      font-size: 30px;
+      font-weight: 400; }
+  .content #hiveTOC ul li {
+      list-style: none;}
+  .content #hiveTOC {
+      border: 1px solid #aaa;
+      padding: 1em;
+      list-style: none;
+      display: inline-block;
+      margin-bottom: 1em;}
+  .content #hiveTOC li {
+      line-height: 1;}
+  .content #hiveTOC a {
+      text-decoration: none;}
+  .content #hiveTOC ul li ul {
+      padding-top: 0.5em;}
+  .content #hiveTOC ul li ul li ul li ul,
+  .content #hiveTOC ul li ul li ul li ul li {
+      display: none;}
 
 div.smallbook {
     display: inline-block;

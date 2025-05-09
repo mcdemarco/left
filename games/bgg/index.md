@@ -5,7 +5,9 @@ menu: games
 date: 2018-01-15 19:25:00
 ---
 
-### Tools for Sorting Games at BGG
+Please note that the BoardGameGeek API may be down or have changed since I wrote these tools.  If one breaks and you need it back please let me know by email or geekmail (`fiddly_bits`).
+
+## Tools for Sorting Games at BGG
 
 My BoardGameGeek sorters started with a [geeklist sorter](/games/bgg/geeklist.html), inspired by [the lack of geeklist sorting](https://boardgamegeek.com/thread/554406/geeklists-allow-users-change-sort-method) at BoardGameGeek.  It later expanded to a [family sorter](/games/bgg/family.html), a [collection sorter](/games/bgg/collection.html), and a [general thing sorter](/games/bgg/things.html).  The geeklist and family sorter take the corresponding ID from BGG and give you a sortable list of the stuff on that geeklist or in that family, but sort options are restricted to the information that comes back to from the BGG API.
 
@@ -15,7 +17,7 @@ The code calls the BGG API for XML data and makes it pretty using XSL---an ancie
 
 Images are currently not returned in some cases where they once were because of a change to the BGG site:  the image ID returned in the old XML API is no longer sufficient to hotlink a BGG image because the images have moved to semi-random URLs.  The thing sorter retrieves images.
 
-### FAQs and Threads
+## FAQs and Threads
 
 Most BGG Game FAQs are where they belong, [in the wiki](https://boardgamegeek.com/wiki/page/List_of_game_FAQs#), or elsewhere sadly inaccessible to the API, but some are buried in the forums.  The latter unfortunates can be retrieved with the API and pretty-printed using my [thread formatter](/games/bgg/thread.html), as long as they're not too weird or malformed.  There are options to hide the subject lines (which tend to be repetitive) and to hide spoilers (which the API fails to do, just passing raw BBcode spoiler tags instead).
 
@@ -25,6 +27,6 @@ Often the Forums handle bad code that the API mishandles, or display styles that
 
 In some cases I've tweaked the output to make it look more like it did in the forums, *e.g.*, [Gloomhaven](/games/bgg/thread.html?1897763/1)'s weird lists  and [Pandemic Legacy: Season 1](/games/bgg/thread.html?1470601/1)'s extensive, nested spoiler tags.  There may be unforseen consequences to these fixes.  Some things I tried to fix but failed, like [Sagrada](/games/bgg/thread.html?2464353/1)'s final wall of text, and clicking to reveal spoilers on some touch devices.  (This could be fixed using JavaScript, but I was interested in a pure CSS approach.)
 
-### CardPen
+## CardPen
 
 I first learned about the BGG API while making a tool, [CardPen](http://cardpen.mcdemarco.net/), for printing card (and other) games.  It can turn your BGG game collection into [a deck of cards](http://cardpen.mcdemarco.net/doc/examples.html#bgg), among other things.
