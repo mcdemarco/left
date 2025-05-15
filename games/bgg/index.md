@@ -5,7 +5,7 @@ menu: games
 date: 2018-01-15 19:25:00
 ---
 
-Please note that the BoardGameGeek API may be down or have changed since I wrote these tools.  If one breaks and you need it back please let me know by email or geekmail (`fiddly_bits`).
+Please note that the BoardGameGeek API may be down or have changed since I wrote these tools.  If one breaks and you need it back please let me know by email or geekmail (fiddly_bits).
 
 ## Tools for Sorting Games at BGG
 

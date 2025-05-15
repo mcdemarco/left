@@ -28,7 +28,7 @@ As the bugs grow outward from the starting hexes by single steps, there is no ne
 
 ## The Notation
 
-Now that we have a grid, we can use any sort of chess notation with a few tweaks for Hive.  Placement is not an option in chess, so for placement we (optionally) prepend an at-sign (**@**) between the bug and the grid coordinates.  
+Now that we have a grid, we can use any sort of chess notation with a few tweaks for Hive.  Placement is not an option in chess, so for placement we (optionally) insert an at-sign (**@**) between the bug and the grid coordinates.
 
 Using [this game](https://hivegame.com/game/8jCVuhHtPVJh) as an example, we could record the first move (a white grasshopper) as **wG @m0**, or just **wG m0** because it's unambiguous.  
 

@@ -1,7 +1,11 @@
 <html>
-<head>
-<title>Kingdom Builder Randomizer</title>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <head>
+    <title>Kingdom Builder Randomizer</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="//fonts.googleapis.com/css?family=Yanone+Kaffeesatz" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="/css/plain.css" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 
 <!--
 Kingdom Builder random setup program.
@@ -218,30 +222,30 @@ user-select: none;}
 <body style="padding:5%;">
   <h1>Kingdom Builder Random Setup</h1>
 
-  <div style="float:left;padding-bottom:1em;">
+  <div style="float:left;padding-right:3em;">
 	<p>
 	  MAP: <br />
-	  <input type="text" id="b0" size="25" readonly="readonly"></input><input type="text" id="b1" size="25" readonly="readonly"></input> <br />
-	  <input type="text" id="b2" size="25" readonly="readonly"></input><input type="text" id="b3" size="25" readonly="readonly"></input><br/>
-	  <input type="text" id="i0" size="10" readonly="readonly"></input>
+	  <input type="text" id="b0" size="25" readonly="readonly"/><input type="text" id="b1" size="25" readonly="readonly"/> <br />
+	  <input type="text" id="b2" size="25" readonly="readonly"/><input type="text" id="b3" size="25" readonly="readonly"/><br/>
+	  <input type="text" id="i0" size="10" readonly="readonly"/>
 	</p>
 	<p>
 	  GOALS: <br />
-	  <input type="text" id="c0" readonly="readonly"></input> <br />
-	  <input type="text" id="c1" readonly="readonly"></input> <br />
-	  <input type="text" id="c2" readonly="readonly"></input>
+	  <input type="text" id="c0" readonly="readonly"/> <br />
+	  <input type="text" id="c1" readonly="readonly"/> <br />
+	  <input type="text" id="c2" readonly="readonly"/>
 	</p>
 	<p>
 	  TASKS: <br />
-	  <input type="text" id="t0" readonly="readonly"></input> 
-	  <input type="text" id="t1" readonly="readonly"></input> <br />
-	  <input type="text" id="t2" readonly="readonly"></input>
-	  <input type="text" id="t3" readonly="readonly"></input> <br />
+	  <input type="text" id="t0" readonly="readonly"/> 
+	  <input type="text" id="t1" readonly="readonly"/> <br />
+	  <input type="text" id="t2" readonly="readonly"/>
+	  <input type="text" id="t3" readonly="readonly"/> <br />
 	</p>
 	<button onclick="make_setup()" type="button">Make random setup</button>
   </div>
   
-  <div style="border: 1px dotted gray;border-radius:5px;padding:1em;margin:3em;float:left;">
+  <div style="border: 1px dotted gray;border-radius:5px;padding:1em;margin-top:2em;margin-bottom:2em;float:left;">
 	EXPANSIONS: <br/>
 	<input type="checkbox" id="base" checked="checked" title="Uncheck to omit Base boards (but not Base goals)." /> <a href="http://boardgamegeek.com/boardgameexpansion/117793" class="base">Base</a><br />
 	<input type="checkbox" id="nomads" /> <a href="http://boardgamegeek.com/boardgameexpansion/117793" class="nomads">Nomads</a><br />
@@ -253,7 +257,7 @@ user-select: none;}
 	<input type="checkbox" id="caves" /> <a href="http://boardgamegeek.com/boardgameexpansion/132377/kingdom-builder-caves">Caves</a> <input type="radio" name="cavesRulesVsOdds" id="cavesRules" checked=checked> <a href="https://boardgamegeek.com/article/11970175#11970175">usage rule</a> <input type="radio" name="cavesRulesVsOdds" id="cavesOdds"> odds: <input type="text" id="cavesOddsOdds" size="3" value="50"/>%  &ocir; <a href="http://boardgamegeek.com/article/10331765#10331765">placement</a><br/>
 	<input type="checkbox" id="island" /> <a href="http://boardgamegeek.com/boardgameexpansion/156102/kingdom-builder-island">Island</a>  <input type="radio" name="islandRulesVsOdds" id="islandRules" checked=checked> <a href="https://www.kickstarter.com/projects/1016374822/kingdom-builder-big-box-kickstarter-edition/comments?cursor=5943130#comment-5943129">usage rule</a>  <input type="radio" name="islandRulesVsOdds" id="islandOdds"> odds: <input type="text" id="islandOddsOdds" size="3" value="50"/>%<br/>
 	<br />
-	PLAYERS: <input type="text" id="p" value="4" size="2"></input> <label id="pc"></label>
+	PLAYERS: <input type="text" id="p" value="4" size="2"/> <label id="pc"></label>
   </div>
 
   <div style="clear:both; text-align:right;padding-top:1em;">
@@ -261,8 +265,9 @@ user-select: none;}
 	  <a href="http://boardgamegeek.com/boardgame/107529">Kingdom Builder</a> by Donald X. Vaccarino. <br/>
 	  <a href="http://boardgamegeek.com/thread/839074/free-javascript-kingdom-builder-setup-randomizer">Original randomizer</a> by <a href="http://boardgamegeek.com/user/russ">russ</a>. 
 	  <a href="http://gstaff.org/kingdombuilder">Updated</a> by <a href="http://gstaff.org">Chris</a>.  
-	  <a href="http://mcdemarco.net/blog/2014/12/10/kingdom-builder-randomizer/">Updated</a> by <a href="http://boardgamegeek.com/user/fiddly_bits">mcd</a>.  <br/>
-	  Use and distribute freely. CC0. Public domain. No rights reserved. Have fun.
+	  <a href="/blog/2014/12/10/kingdom-builder-randomizer/">Updated</a> by <a href="http://boardgamegeek.com/user/fiddly_bits">mcd</a>.  <br/>
+	  Use and distribute freely. CC0. Public domain. No rights reserved. Have fun.<br/>
+	  More <a href="/games/">games and tools</a> by mcd.
 	</cite>
   </div>
 </body>
