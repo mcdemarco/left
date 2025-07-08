@@ -6,7 +6,7 @@ menu: games
 date: 2025-05-02 12:25:00
 ---
 
-Hive in Five is an award-winning solo mode for the award-winning abstract game Hive.  It requires only the original Hive's five distinct pieces, though you can also incorporate the expansions.  I wrote a [randomizer](/games/hive/h5randomizer.html) for it, mostly because I don't have a Hive set to play with, and it's not so easy to shuffle virtual Hive tiles.
+Hive in Five is an award-winning solo mode for the award-winning abstract game Hive.  It requires only the original Hive's five distinct pieces, though you can also incorporate the expansions.  I wrote a [randomizer](/games/hive/h5randomizer.html) for it, mostly because I didn't have a Hive set to play with, and it's not so easy to shuffle virtual Hive tiles.
 
 ### How to Play
 

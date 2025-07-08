@@ -10,25 +10,25 @@ It seems you can't swing a cat without hitting a new notation system for Hive.  
 
 [![the inevitable xkcd cartoon](https://imgs.xkcd.com/comics/standards.png)](https://xkcd.com/927)
 
-There are two major categories of notation systems for Hive, positional and grid-based, and two major goals, identifying a particular piece, and identifying a particular location.  Sometimes there is a third goal of identifying the type of move.
+There are two major categories of notation systems for Hive, relative and grid-based, and two major goals, identifying a particular piece, and identifying a particular location.  Sometimes there is a third goal of identifying the type of move.  Sometimes there is a third type of notation aimed at documenting the entire board state (position) rather than the individual moves of a game.
 
-The single universal of Hive notation may be the bug initials: **Q**ueen, **A**nt, **B**eetle, **G**rasshopper, **S**pider, **P**illbug, **L**adybug, and **M**osquito.  Most systems prefix bug initials by **w** or **b** for white and black, respectively, but a few use case, turn order, or other methods to track player color.
+The single universal of Hive notation may be the bug initials: **Q**ueen, **A**nt, **B**eetle, **G**rasshopper, **S**pider, **P**illbug, **L**adybug, and **M**osquito.  Most systems prefix bug initials by **w** or **b** for white and black, respectively, but a few use case, turn order, or other methods to track piece color.
 
-Some systems make special use of the *Starting Axis*, which is a line drawn through the first two bugs player (perpendicular to their shared side).
+Some systems make special use of the *Starting Axis*, which is a line drawn through the first two bugs played (perpendicular to their shared side).
 
 Expansion pieces aren't always mentioned but it's usually clear how you would handle them, most notably by logging the pillbug's special ability as a move of the moved piece.
 
 <div id="hiveTOC">!TOC</div>
 
-# Positional Notation
+# Relative Notation
 
-At first I thought it was the dyslexic challenge of all the slashes in the standard notation that bothered me, but lately I've come to believe that my real issue with all positional notation systems is the need to scan the board for a (usually unrelated) neighboring bug *for every single move*.  I find the overhead of bug search (compared to, say, locating a position in a virtual grid) wearying.  
+At first I thought it was the dyslexic challenge of all the slashes in the standard notation that bothered me, but lately I've come to believe that my real issue with all relative notation systems is the need to scan the board for a (usually unrelated) neighboring bug *for every single move*.  I find the overhead of bug search (compared to, say, locating a place in a virtual grid) wearying.  
 
-Another downside of most (but not all) positional systems is the additional overhead of numbering all your ants, beetles, grasshoppers, and spiders, usually by their order of entry into the game.  People *mark up their tiles* to do this.  (You might say that the computer will handle this for you in most situations, but then the computer could also handle grid-based notation for you.)
+Another downside of most (but not all) relative notational systems is the additional overhead of numbering all your ants, beetles, grasshoppers, and spiders, usually by their order of entry into the game.  People *mark up their tiles* to do this.  (You might say that the computer will handle this for you in most situations, but then the computer could also handle grid-based notation for you.)
 
-All other positional systems attempt to correct *other* perceived flaws of the standard system, so it's a good place to start.  After that, I've tried to order the systems by similarity, not date.  I also try to evaluate how the system does on some common pros and cons; I include a so-so's category because one player's pros can be another player's cons.
+All other positional systems attempt to correct *other* perceived flaws of the standard system, so that's a good place to start.  After that, I've tried to order the systems by similarity, not date.  I also try to evaluate how the system does on some common pros and cons; I include a so-so's category because one player's pros can be another player's cons.
 
-There are two subcategories of positional notation: systems that use a single reference bug to specify a position, and those that use multiple reference bugs.
+There are two subcategories of relative notation: systems that use a single reference bug to specify a location, and those that use multiple reference bugs.
 
 ## Single Bug Systems
 
@@ -39,7 +39,7 @@ The most popular notation system for Hive has its origins at [Boardspace.net](ht
 In brief, pieces are called out by player color, bug initial, and, where necessary, order of entry into the game for duplicate bugs, *e.g.*, **wQ** or **bG2**.
 Not that at Boardspace the tiles are rotated to track entry order, but at other sites or in live games they are either marked with one, two, or three dots, or left as-is.
 
-Placements are called out with a reference bug plus a position bordering that bug, indicated by slashes or dashes.  Note that in this system, the bug is assumed to be in the pointy direction, which is to say that two of the points of the hexagon are pointing toward and away from the user, or up and down on a computer screen.
+Placements are called out with a reference bug plus a location bordering that bug, indicated by slashes or dashes.  Note that in this system, the bug is assumed to be in the pointy direction, which is to say that two of the points of the hexagon are pointing toward and away from the user, or up and down on a computer screen.
 
 ```
   \wQ  wQ/
@@ -51,7 +51,7 @@ Placements are called out with a reference bug plus a position bordering that bu
 ```
 
 So  **bG2 wQ/** means the second black grasshopper to have entered the game is moved to the upper right of the white queen.
-Beetles and mosquitoes can take the central, unmarked position, so **wB1 bA3** means the first white beetle played is moved on top of the third black ant.
+Beetles and mosquitoes can take the central, unmarked location, so **wB1 bA3** means the first white beetle played is moved on top of the third black ant.
 
 #### Pros
 
@@ -69,7 +69,7 @@ Beetles and mosquitoes can take the central, unmarked position, so **wB1 bA3** m
 
 * Numbering of bugs.  (This is easy to get wrong; even BoardGameArena gets it wrong.)
 * Often the recorder must select a reference bug from several neighbors, so the same game can be logged many different ways, especially by humans. 
-* Positions are based on someone's perspective.  This can be a problem for the other player trying to record or read the same game log.  It also means that:
+* Locations are based on someone's perspective.  This can be a problem for the other player trying to record or read the same game log.  It also means that:
 * The six possible rotations of a game tend to be logged six different ways, even by a computer.
 * Reflections of a game cannot be logged in the same way as the original.
 
@@ -90,7 +90,7 @@ Discord user shinuito suggested using arrow characters instead of slashes.  This
 
 ### Point-of-Contact Notation (jclopes)
 
-The purpose of [João Lopes' positional notation](https://github.com/jclopes/hive#Notation) is to communicate with his command-line Hive implementation.  There are plenty of slashes as in the standard notaton, but they are all reversed from the standard orientation, and the hyphens are turned vertical.  In addition, to each slash an asterisk is attached to represent the reference piece, and locations on top of another bug are indicated with **=&lowast;**.
+The purpose of [João Lopes' relative notation](https://github.com/jclopes/hive#Notation) is to communicate with his command-line Hive implementation.  There are plenty of slashes as in the standard notaton, but they are all reversed from the standard orientation, and the hyphens are turned vertical.  In addition, to each slash an asterisk is attached to represent the reference piece, and locations on top of another bug are indicated with **=&lowast;**.
 
 ```
    /*wQ  *\wQ
@@ -118,14 +118,14 @@ All bugs are numbered, even the unique ones.  For example, **bG1/&lowast;wQ1** m
 
 * Even more numbering of bugs.
 * Even if the slashes are more intuitive this way, the reversal from standard notation would be confusing for experienced players.
-* Positions are based on someone's perspective, also a disadvantage of the standard notation.
+* Locations are based on someone's perspective, also a disadvantage of the standard notation.
 * The free choice of reference bug means the same game can be logged many different ways, especially by humans. 
 * All other cons of the standard notation (as regards perspective, rotations, and reflections) also apply.
 
 ### Clockwise Notation (BlueSky659)
 
 At BoardGameGeek, [Miles Brooks](https://boardgamegeek.com/thread/2322246/article/34014215#34014215) 
-suggested an orientation-based positional notation using numbers 1 through 6 to indicate the sides/adjacencies of a reference bug.   
+suggested an orientation-based relative notation using numbers 1 through 6 to indicate the sides/adjacencies of a reference bug.   
 For a similar approach, see ypaul's notation.
 
 ```
@@ -140,7 +140,7 @@ This system also includes movement types:  **+** for initial placements, **-** f
 
 #### Pros
 
-* The clock-style position numbering is a clever idea.
+* The clock-style location numbering is a clever idea.
 
 #### So-Sos
 
@@ -150,8 +150,8 @@ This system also includes movement types:  **+** for initial placements, **-** f
 
 #### Cons
 
-* Bug numbering is even more of a disadvantage when you're also numbering positions.
-* Positions are based on someone's perspective, also a disadvantage of the standard notation.
+* Bug numbering is even more of a disadvantage when you're also numbering locations.
+* Locations are based on someone's perspective, also a disadvantage of the standard notation.
 * The open choice of reference bug means the same game can be logged many different ways, especially by humans, though there's an option to determine the reference bug by choosing the one yielding the lowest-numbered side. 
 * All other cons of the standard notation (as regards perspective, rotations, and reflections) still apply.
 
@@ -159,7 +159,7 @@ This system also includes movement types:  **+** for initial placements, **-** f
 
 At BoardGameGeek, both [Miles Brooks](https://boardgamegeek.com/thread/2322246/article/34014215#34014215) 
 and [ypaul](https://boardgamegeek.com/thread/2456962/a-standardised-unique-notation-plus-placement-syst)
-suggested an orientation-based positional notation using numbers 1 through 6 to indicate the sides/adjacencies of a reference bug.   They diverged quite a bit, so I'll describe them separately.
+suggested an orientation-based relative notation using numbers 1 through 6 to indicate the sides/adjacencies of a reference bug.   They diverged quite a bit, so I'll describe them separately.
 
 In ypaul's approach, every bug must be pointed in the same (westward) or a rotated direction; he uses the rotation to track duplicate bugs, Boardspace-style.  Duplicate bugs are numbered in order of entry into the game, but the number 1 is (optionally) omitted.  
 
@@ -171,11 +171,11 @@ In ypaul's approach, every bug must be pointed in the same (westward) or a rotat
   4   3
 ```
 
-The system includes a means of ranking reference bugs, to force a unique notational choice for each move of the game.  The position of the second bug played  is forced/fixed, removing rotational symmetries.  There is also a requirement to remove reflective symmetries, though it seems easy to overlook in the heat of play.
+The system includes a means of ranking reference bugs, to force a unique notational choice for each move of the game.  The location of the second bug played  is forced/fixed, removing rotational symmetries.  There is also a requirement to remove reflective symmetries, though it seems easy to overlook in the heat of play.
 
 Eventually ypaul decided to remove most color prefixes, using them only for opponent pieces on one's own turn.  This requires tracking turns, which is somewhat complicated in Hive by forced passes.  This leads to moves of the form **A2A-2 B*Q**, which means *white ant 2 to white ant (1) at its (side) 2; black beetle on (an unambiguous) queen*.
 
-This is far from the worst positional proposal, but I fear it fails to live up to [ypaul's expectations](https://boardgamegeek.com/thread/2799564/article/39367711#39367711):
+This is far from the worst relative notation proposal, but I fear it fails to live up to [ypaul's expectations](https://boardgamegeek.com/thread/2799564/article/39367711#39367711):
 
 > I am of the opinion that the lack of a notation to uniquely identify the progression of the game is one of the biggest issues that's holding Hive back from being taken seriously. Chess players think in terms of notation, and a lot of openings are referenced just by a sequence of notation.
 > 
@@ -183,7 +183,7 @@ This is far from the worst positional proposal, but I fear it fails to live up t
 
 #### Pros
 
-* The clock-style position numbering is a clever idea.
+* The clock-style location numbering is a clever idea.
 * Independent of rotation and reflection.
 
 #### So-Sos
@@ -195,8 +195,46 @@ This is far from the worst positional proposal, but I fear it fails to live up t
 #### Cons
 
 * Forced orientation of bugs is somewhere between unfamiliar and deeply painful for players in real life.
-* Bug numbering is even more of a disadvantage when you're also numbering positions.
+* Bug numbering is even more of a disadvantage when you're also numbering locations.
 * Omitting color can be confusing.
+
+
+### BOOM Notation (niels)
+
+Niels [posted](https://niels.fr/blog/boom-hive-game-notation/) yet another clockwise notation, which he named BOOM for *bug-ordered & oriented moves*.  It's a combination of the clockwise orientation and (optionally) bug counting approaches, along with case-based color marking, with a goal of brevity compared to the standard notation.
+
+The hex orientation of the pieces is unimportant (despite the suggestion to go pointy), as is bug orientation.   The 1-face of the clock is determined from the white player's perspective, as either the top face, or the face at one o'clock:
+
+```
+     1                6    1
+ 6       2
+     wQ       or    5   wQ   2
+ 5       3
+     4                4    3
+```
+
+Counting of duplicate bugs is avoided whenever possible; unique reference bugs are preferred over duplicates.  One is even permitted to use bug markings if available.  Counting is done in rows parallel to an axis passing through the clock's flat sides **1** and **4**, from **6** towards **2** (left to right) and within each row in the direction of the clock's axis, from **4** towards **1** (bottom to top).
+
+#### Pros
+
+* The clock-style location numbering is still a clever idea.
+* Brevity.
+
+#### So-Sos
+
+* No move types are noted.
+* Unnecessarily inherently pointy.
+* No bug defacing, but bugs still sometimes need to be numbered in the notation.
+
+#### Cons
+
+* Bug numbering is even more of a disadvantage when you're also numbering locations.
+* There's no clear distinction between a bug number and a clock direction, so direction is required.
+* Using bug markings instead of counting is ambiguous unless noted somehow, and probably still confusing.
+* The somewhat open choice of reference bug means the same game can be logged in different ways.
+* Player perspective-based orientation means that rotations and reflections of a game cannot be logged in the same way as the original.
+* Using case for color can be confusing and difficult to handwrite accurately.
+
 
 ### Direction-Based Notation (psoukenik)
 
@@ -206,11 +244,13 @@ While those qualities sound good on paper, in practice they mean extra work for 
 
 The directions are *noon, afternoon, sunset, midnight, sunrise, forenoon*, abbreviated *n, a, s, m, r, f*, respectively.  The starting axis is used for determining noon (white-wards) and midnight (black-wards), then the first placement or movement off the starting axis determines the afternoon/sunset directions.
 
+```
      n                f   n                n                a   n
  f       a                             a       f
      Q        or    r   Q   a   or         Q        or    s   Q   f
  r       s                             s       r
      m                m   s                m                m   r
+```
 
 Bug initials are as usual, and the usual numbers are sometimes attached to duplicate bugs, but they are determined by distance from the top (noon) of the board (*via* "counting"), rather than by order of entry into the game.
 
@@ -238,11 +278,12 @@ The canonical notation also orders the possible reference bugs to make the loggi
 
 Rather than re-learn the directions every game, I'd recommend always making the first two moves in the same locations, and the symmetry-breaking placement on the same side of the midnight-noon axis.  (Of course, this can't be done so easily with past games.)
 
+
 ## Multiple Bug Systems
 
 ### Conga Line Notation (ringersoll)
 
-[At BoardGameGeek](https://boardgamegeek.com/thread/2322246/new-hive-movement-notation-system-part-1) Randy Ingersoll proposed obviating bug numbering and some symmetry issues by using sequences of positional references.  The system is incomplete, but is an interesting approach that inspired veme's vector-based notation and Miles Brooks' version of orientation-based notation.
+[At BoardGameGeek](https://boardgamegeek.com/thread/2322246/new-hive-movement-notation-system-part-1) Randy Ingersoll proposed obviating bug numbering and some symmetry issues by using sequences of relative references.  The system is incomplete, but is an interesting approach that inspired veme's vector-based notation and Miles Brooks' version of orientation-based notation.
 
 The conga-line intended to annotate move types, using **+** for placement, **\*** for most moves, **^** for moves on top of the hive, and **#** for a Pillbug move.
 
@@ -266,18 +307,19 @@ So far, so elegant, but unfortunately the conga line is not precise enough to sp
 
 ### Clockwise Conga Line Notation (mtorpey)
 
-Michael Young's positional Hive notation ([mtorpey at github](https://github.com/mtorpey/hive-notation/tree/master)) solves the conga-line location problem by determining direction by counting places clockwise around a bug.  He mentions some other notations, but notably not the original conga line or any of the systems spawned by that discussion.
+Michael Young's relative Hive notation ([mtorpey at github](https://github.com/mtorpey/hive-notation/tree/master)) solves the conga-line location problem by determining direction by counting places clockwise around a bug.  He mentions some other notations, but notably not the original conga line or any of the systems spawned by that discussion.
 
 The purpose of the conga line is, as usual, to eliminate bug numbering.  Brevity is also a goal of the notation, so conga lines are omitted as often as possible.
 
-Color is represented by capitalization, and there are symbols for some movement types:  **+** for placement and **x** for moves on top of the hive.  A hyphen **-** is used to separate the (optional) starting position of the active piece frem its destination.
+Color is represented by case, and there are symbols for some movement types:  **+** for placement and **x** for moves on top of the hive.  A hyphen **-** is used to separate the (optional) starting location of the active piece frem its destination.
 
 In an example from the README, **ABs1-ga3** means "white's ant (the one currently next to white's beetle, 1 place clockwise around it from black's spider) moves next to black's grasshopper, 3 places clockwise around it from black's ant".
 
-To be honest, I can't tell what the example says.  I think this system retains all the brain-turning-off qualities of the standard notation.
+To be honest, I can't tell what the example says, even when written out in English.  I think this system exceeds the standard notation in the brain-turning-off category.
 
 #### Pros
 
+* The clock-style location numbering is still a clever idea.
 * No bug numbering.
 * No fixed perspective.
 * Brevity where possible.
@@ -290,13 +332,13 @@ To be honest, I can't tell what the example says.  I think this system retains a
 
 #### Cons
 
-* The conga line plus counting positions around some pieces makes the notation hard to follow.
+* The conga line plus counting locations around some pieces makes the notation hard to follow.
 * Using case for color can be confusing and difficult to handwrite accurately.  This problem may be exacerbated in the conga-line-like situation with multiple bug initials run together.
 
 
 ### Vector-Based Notation (veme)
 
-Inspired by the conga line, user veme proposed a vector-based positional notation system [at BoardGameGeek](https://boardgamegeek.com/thread/2799564/proposal-for-a-universal-hive-notation), in which two bugs (A and B) are used to describe a third position (or for beetles, an existing position), thus:
+Inspired by the conga line, user veme proposed a vector-based relative notation system [at BoardGameGeek](https://boardgamegeek.com/thread/2799564/proposal-for-a-universal-hive-notation), in which two bugs (A and B) are used to describe a third location (or for beetles, a known location), thus:
 
 ```
         AB<
@@ -308,7 +350,7 @@ A     B     AB
 
 Numbering of duplicate bugs is required.  Player color is indicated by capitalization, *e.g.*, **a1 B1Q<** or **l mQ**.  No directions are given for the first two placements, and beetles on top of the hive get just the A reference, *e.g.*, **B1 g1**.
 
-There is a ranking system for deciding which way to log a move, the overhead of which seems reasonable once you know it, so games can be logged in a mostly unique way.  There's even an option to handle reflections.  It's quite elegant, as positional notation of defaced bugs goes.
+There is a ranking system for deciding which way to log a move, the overhead of which seems reasonable once you know it, so games can be logged in a mostly unique way.  There's even an option to handle reflections.  It's quite elegant, as relative notation of defaced bugs goes.
 
 #### Pros
 
@@ -327,12 +369,12 @@ There is a ranking system for deciding which way to log a move, the overhead of 
 
 ### SHOE (ringersoll)
 
-Randy Ingersoll also devised a partly positional notation for openings in his book, [Standard Hive Opening Encyclopedia](https://www.amazon.com/Standard-Hive-Opening-Encyclopedia-Catalog/dp/B0BZFDM8XV), or SHOE.  It's different in that it specifies formations of bugs---a sort of souped-up conga line.   However, it's not documented online and is somewhat orthogonal to the goals of recording entire games or arbitrary positions, so no further explanation will be provided here.
+Randy Ingersoll also devised a partly relative notation for openings in his book, [Standard Hive Opening Encyclopedia](https://www.amazon.com/Standard-Hive-Opening-Encyclopedia-Catalog/dp/B0BZFDM8XV), or SHOE.  It's different in that it specifies formations of bugs---a sort of souped-up conga line.   However, it's not documented online and is somewhat orthogonal to the goals of recording entire games or arbitrary positions, so no further explanation will be provided here.
 
 
 # Grid Notation
 
-Most discussions about Hive notation begin with the unsubstantiated assertion that grid-based systems are too hard for humans to use with a boardless game, and then continue on with reasons not to switch to some new positional notation system, but sometimes a new player proposes a grid notational system.  Usually the goal is to gain some of the fluency of chess players talking about their games and positions.
+Most discussions about Hive notation begin with the unsubstantiated assertion that grid-based systems are too hard for humans to use with a boardless game, and then continue on with reasons not to switch to some new relative notation system, but sometimes a new player proposes a grid notational system.  Usually the goal is to gain some of the fluency of chess players talking about their games and positions.
 
 When using grid notation, there's no need to number duplicate bugs.  Even color can be omitted if the first player is always white and/or unusual Hive moves (passing and the pillbug power) are tracked adequately.  The lack of a board has been overblown as a concern; the one-hive rule keeps the hive in a small area where it's possible to visualize a virtual grid.  Here's a completed game of 88 moves (HV-iraultza-kaur50-2024-09-08-2116 at Boardspace), depicted with and without a grid at the Position Editor:
 
@@ -341,7 +383,7 @@ When using grid notation, there's no need to number duplicate bugs.  Even color 
 
 Nowhere in the off-grid version is it unclear where the grid spaces would be located (so the lack of an underlying board is little impediment to identifying the grid).  The total number of grid locations used during the game is less than the size of a chessboard.  Even if you count every space bordering the hive, the virtual grid is still approximately equal in size (*i.e.*, cell count) to a chessboard.
 
-Grid-based notation systems lack the degree of detail usually devoted to positional systems, because it is usually pretty obvious how one would use a grid (*i.e.*, as chess players do), while it's not so obvious how to follow positional directions around the hive.  So the grid systems out there are pretty short and undeveloped compared to the positional systems above.  They tend to be alphanumeric, as in chess, and can be grouped into finite and infinite boards.
+Grid-based notation systems lack the degree of detail usually devoted to relative notation systems, because it is usually pretty obvious how one would use a grid (*i.e.*, as chess players do), while it's not so obvious how to follow relative directions around the hive.  So the grid systems out there are pretty short and undeveloped compared to the relative notation systems above.  They tend to be alphanumeric, as in chess, and can be grouped into finite and infinite boards.
 
 ## Finite Grids
 
@@ -356,7 +398,7 @@ Note that one axis is numbered, one is lettered, and one is ignored.  This is th
 On Discord, user stepanzo suggested a similar grid to the second one above, also without edge handling, just an approximate starting location that *shouldn't* fall off the edge of the grid in most cases (o12).
 
 In [these](https://boardgamegeek.com/thread/2232694/a-new-chess-like-notation-for-hive) [three](https://boardgamegeek.com/thread/2234808/hive-chess-like-notation-revised-a-simple-four-poi) [posts](https://boardgamegeek.com/thread/2253598/the-new-chess-like-hive-notation-further-simplifie) to BoardGameGeek,
-Roger Randall suggested a grid with an origin of *a1* in the lower left hand corner instead of upper left, that would be repositioned any time the bugs moved further south or west than that.  The coordinates themselves are intuitive, but the repositioning is quite inconvenient and ultimately unnecessary.
+Roger Randall suggested a grid with an origin of *a1* in the lower left hand corner instead of upper left, that would be repositioned any time the bugs moved further south or west than that.  The coordinates themselves are intuitive, but the repositioning is quite inconvenient.
 
 ```
               a8  b8  c8  d8  e8  f8  g8  h8
@@ -445,11 +487,58 @@ Standard         Long algebraic       Algebraic         Compressed algebraic not
 
 In the first move, a white grasshopper is played, which can be recorded as **wG @m0**, or just **wG m0** because it's unambiguous.  The shorter form is **wGm0**.
 
-In the first actual move of a bug (move 7), White moves his first ant to pin the black queen.  We could write this in full as **wA m-1 n+2**, but it suffices to provide just the column of the ant's previous position:  **wA m n2**.  As in chess notation, this can be further compressed to **wAmn2**.
+In the first actual move of a bug (move 7), White moves his first ant to pin the black queen.  We could write this in full as **wA m-1 n+2**, but it suffices to provide just the column of the ant's previous location:  **wA m n2**.  As in chess notation, this can be further compressed to **wAmn2**.
 
 Soon afterward (move 9), White places his second ant; because this is somewhat ambiguous, it's best to include the at sign: **wA @m-1**.
 
 Later in the game, a pillbug move (45) is recorded as **wG j3 k1 (wP)**.   We can't omit the row for the grasshopper's starting hex because there are two in the same column; however, we *can* omit the column because all three white grasshoppers are in different rows:  **wG 3 k1 (wP)**.  In this case the move can only have been performed by that particular pillbug, not by the grasshopper itself, so the entire parenthetical expression could be omitted:  **wG3k1**. 
 
 See [this page](/games/hive/algebraicNotation.html) for the rest of the game and a full writeup of my notation, *sans* extraneous commentary on other systems.
-See [this page](/games/hive/bookmarklets.md) for a bookmarklet to display algebraic coordinates on the grid in the Position Editor.
+See [this page](/games/hive/bookmarklets.html) for a bookmarklet to display algebraic coordinates on the grid in the Position Editor.
+
+
+# Positional Notation
+
+Sometimes the goal is to document a board(less) position, rather than a sequence of moves, as is done in chess with [Forsyth-Edwards Notation (FEN)](https://en.wikipedia.org/wiki/Forsyth–Edwards_Notation).  In FEN one runs through the entire grid enumerating pieces and the number of empty grid spaces in between them, with a slash between rows.
+
+There have been a couple of proposals for doing this in Hive using novel coordinate systems.  The details are buried in the Discord, so I've summarized them here.
+
+## HOP (niels)
+
+Hive Observable Position is a conga-line style positional system in which you must identify the longest chain of bugs, then document it as a list, with capitalization of bug initials to represent color, and no bug numbering.  There are special symbols for the conga line turning right (**+**) or left (**-**), and for stacked bugs (**=**).  (Stacking counts as a new line.)  The bugs in the main line are numbered, and the remaining pieces are documented as their own conga lines starting from a numbered bug and a direction off the main line of **+** (omitted for brevity) or **-**.
+
+For example,
+
+    mlL+QP+A1a1-q:6=b w
+
+There is also notation for color to play (**w** or **b**) and the piece that was last moved (**:** after the bug letter).  There is an underspecified provision for creating sub-sublines using parentheses.
+
+## CHiN (leex)
+
+Circular Hive Notation uses a hex grid based at the white queen, with polar notation.  Color and bug numbering are taken from the standard notation, and circular "rows" around the queen are numbered.  Thus the zeroth row is always **wQ**.  In the first row (circle), the first bug is picked alphabetically. 
+By the third row the empty location counts can get quite large.  The vert (**|**) has been suggested for stacked bugs.  Rows are separated by semicolons (**;**).
+
+For example,
+
+    wQ;wL,2,wP,2;7,wA1,2,bA1,bL;16,bM,bQ:bA1:w
+
+The most recent move and color to play are listed after colons at the end.  Color may be indicated by capitalization instead of **w** or **b**, and the commas are optional:
+
+    Q;L2P2;7A12a1l;16mq:a1:w
+
+## Positional Grid Notation
+
+Finite grid notation is ideal for creating a positional notation system, especially those in the form of a rhombus and/or that use two of the three possible hex coordinates.  Choose one coordinate for the rows, the other for columns, and enumerate the rows as though they were rows in FEN.  As bug numbering is generally unnecessary in grid notation, there is no need for a separator between the bug letters and the space numbers.  Notation for color, stacking, row boundaries, last move, and player to play may be borrowed from HOP, CHiN, or FEN, as desired.
+
+To convert an infinite grid notational system into a positional one, just consider the smallest parallelogram on the grid that contains all the pieces and aligns with the coordinate system, then proceed as with a finite grid.  Note that if the orientation of the parallelogram (the direction in which it leans) is not fixed by the grid coordinate system, it should be identified as part of the notation for a particular position.
+
+Here's a finished game in a FEN-style notation based on my algebraic grid notation:
+
+    7A3/6A4/5M=bGlgp=B=mS/4GL1q2s/2gG=B=bP6/1aQA:7/1as8/1g9/A10 
+	
+See [this page](/games/hive/algebraicNotation.html) for more details.
+
+
+
+
+

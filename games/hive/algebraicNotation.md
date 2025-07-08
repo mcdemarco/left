@@ -24,7 +24,7 @@ At the ends of the alphabet, column lettering starts over with **aa**, **bb**, e
 
 Coordinates are of the form **m0**, **n-1**, or **j+2**.  The latter may be written **j2** for brevity.
 
-As the bugs grow outward from the starting hexes by single steps, there is no need for an underlying board to track their positions.  If one needs reminders, a thread or two to mark the rows and a few Bananagrams or Scrabble tiles for the columns may be laid out unobtrusively, or the information scribbled on a paper tablecloth.
+As the bugs grow outward from the starting hexes by single steps, there is no need for an underlying board to track their locations.  If one needs reminders, a thread or two to mark the rows and a few Bananagrams or Scrabble tiles for the columns may be laid out unobtrusively, or the information scribbled on a paper tablecloth.
 
 ## The Notation
 
@@ -32,7 +32,7 @@ Now that we have a grid, we can use any sort of chess notation with a few tweaks
 
 Using [this game](https://hivegame.com/game/8jCVuhHtPVJh) as an example, we could record the first move (a white grasshopper) as **wG @m0**, or just **wG m0** because it's unambiguous.  
 
-In the first actual move of a bug (move 7), White moves his first ant to pin the black queen.  We could write this in full as **wA m-1 n+2**, but it suffices to provide just the column of the ant's previous position:  **wA m n2**.  As in chess notation, this can be further compressed to **wAmn2**.
+In the first actual move of a bug (move 7), White moves his first ant to pin the black queen.  We could write this in full as **wA m-1 n+2**, but it suffices to provide just the column of the ant's previous location:  **wA m n2**.  As in chess notation, this can be further compressed to **wAmn2**.
 
 Soon afterward (move 9), White places his second ant; because this is somewhat ambiguous, it's best to include the at sign: **wA @m-1**.
 
@@ -61,16 +61,26 @@ Using algebraic notation, any game that is not already in Standard Position can 
 
 However, it is simpler to avoid symmetry issues using a method like that of Pavel Soukenik's [direction-based notation for Hive](https://psoukenik.medium.com/direction-based-notation-for-hive-dd7fd234d4d):  assign the first positive row to the first placement off the starting axis.  One may even establish the positive direction first and force the symmetry-breaking piece to be placed on that side of the starting axis.
 
-### Non-games
+## Positional Notation
 
-We also use the at sign (@) to record any arbitrary position, as in a puzzle, [solo game](https://www.tarpeygames.com/hive-in-five), or example formation. In this case you may choose any coordinate in the grid for the "first" piece, and orient the grid in the most convenient way.  
+We can use the at sign (@) to record any arbitrary position, as in a puzzle, [solo game](https://www.tarpeygames.com/hive-in-five), or example formation. In this case you may choose any coordinate in the grid for the "first" piece, and orient the grid in the most convenient way.  Opening positions, however, should be recorded like games.
 
-Opening positions, however, should be recorded like games.
+For FEN-style positional notation, establish the grid using the starting axis as usual if known; otherwise, orient the position as desired.  Next, find the smallest parallelogram containing the position and also slanting in the backslash direction as the algebraic grid usually does:
 
-### An Example without Color
+```
+ ____
+ \    \ 
+  \____\ 
+ 
+```
 
-**TODO**
+Finally, enumerate the pieces and spaces as in FEN.  Bug numbering remains unnecessary, and, because grid coordinates themselves will not be used, you may use case to distinguish between white and black pieces.  Stacked pieces may be separated with an **=** sign (starting from the bottom), and rows with a slash.  Add a colon after the last bug moved.  The player to move (**w** or **b**) may be appended after a space.
 
+The final position of the game recorded above fits in a parallelogram of 9 rows and 11 columns, so the FEN-style notation would be:
+
+```
+7A3/6A4/5M=bGlgp=B=mS/4GL1q2s/2gG=B=bP6/1aQA:7/1as8/1g9/A10
+```
 
 ## The Bookmarklet
 

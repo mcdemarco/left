@@ -16,6 +16,6 @@ You can read more about my randomizer and Hive in Five [here](/games/hive/hiveIn
 
 ## Hive Notation
 
-Perhaps the most surprising thing in the modern Hive ecosystem was the opaque positional notation system universally used for recording games and discussing strategy.  (Puzzles tend to be presented pictorially instead.)  My brain shuts down whenever I see it.  This made it difficult to read about strategy and follow certain discussions.
+Perhaps the most surprising thing in the modern Hive ecosystem was the opaque notational system universally used for recording games and discussing strategy.  (Puzzles tend to be presented pictorially instead.)  At first my brain shut down whenever I saw it, which made it difficult to read about strategy and follow certain discussions.
 
 I read up on the many [proposed Hive notation systems](/games/hive/notation.html), along the way discovering that most debates about Hive notation begin and end with the unsubstantiated assertion that grid-based systems are too hard for humans to use with a boardless game.  So I came up with my own [grid-based, chess-like notational system](/games/hive/algebraicNotation.html) and added some tools for it, of course (just some [bookmarklets](/games/hive/bookmarklets.html) so far).
