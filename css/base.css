@@ -358,6 +358,16 @@ a {
   .content #hiveTOC ul li ul li ul li ul li {
       display: none;}
 
+  .content domino {
+      font-size: 30px;
+      float: right;
+      clear: both;
+      padding: 10px 0 0 5px;
+  }
+  .content domini {
+      font-size: 44px;
+  }
+
 div.smallbook {
     display: inline-block;
     padding: 10px;
