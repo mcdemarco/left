@@ -534,11 +534,7 @@ To convert an infinite grid notational system into a positional one, just consid
 
 Here's a finished game in a FEN-style notation based on my algebraic grid notation:
 
-    7A3/6A4/5M=bGlgp=B=mS/4GL1q2s/2gG=B=bP6/1aQA:7/1as8/1g9/A10 
+    7a3/6A4/5M=bGlgp=B=mS/4GL1q2s/2gG=B=bP6/1aQA:7/1as8/1g9/A10 
 	
-See [this page](/games/hive/algebraicNotation.html) for more details.
-
-
-
-
+See [this page](/games/hive/algebraicNotation.html#Positional.Notation) for more details.
 

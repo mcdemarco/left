@@ -55,17 +55,17 @@ The full game conversion, into long algebraic, algebraic, and compressed algebra
 
 ### Symmetry Issues and Standard Position
 
-Notational systems like this one that use the starting axis avoid the issue of rotations of games.  One approach to avoiding the issue of reflections of games is the use of Standard Position, a restriction on the initial locations of the queens described by Randy Ingersoll in his book [Play Hive Like a Champion](https://www.amazon.com/Play-Hive-Like-Champion-Second/dp/1494476649).
+Notational systems like this one that align on the starting axis avoid the issue of rotations of games being recorded differently.  One approach to avoiding the issue of reflections of games being recorded differently is the use of Standard Position, a restriction on the initial locations of the queens described by Randy Ingersoll in his book [Play Hive Like a Champion](https://www.amazon.com/Play-Hive-Like-Champion-Second/dp/1494476649).
 
-Using algebraic notation, any game that is not already in Standard Position can be put into Standard Position by switching signs on the rows.  One may even postpone logging until the queens have established Standard Position and then log the game that way, if it's not too confusing.
+Using algebraic notation, any game that is not already in Standard Position can be put into Standard Position by switching signs on the rows.  One may even postpone logging until the queens have established Standard Position and then log the game with the appropriate signs on the rows, if it's not too confusing.
 
-However, it is simpler to avoid symmetry issues using a method like that of Pavel Soukenik's [direction-based notation for Hive](https://psoukenik.medium.com/direction-based-notation-for-hive-dd7fd234d4d):  assign the first positive row to the first placement off the starting axis.  One may even establish the positive direction first and force the symmetry-breaking piece to be placed on that side of the starting axis.
+However, it is simpler to avoid symmetry issues using a method like that of Pavel Soukenik's [direction-based notation for Hive](https://psoukenik.medium.com/direction-based-notation-for-hive-dd7fd234d4d):  assign the first positive row to the first placement off the starting axis.  One may even establish the positive direction first and require the first symmetry-breaking piece to be placed on that side of the starting axis.
 
 ## Positional Notation
 
-We can use the at sign (@) to record any arbitrary position, as in a puzzle, [solo game](https://www.tarpeygames.com/hive-in-five), or example formation. In this case you may choose any coordinate in the grid for the "first" piece, and orient the grid in the most convenient way.  Opening positions, however, should be recorded like games.
+While we could use the at sign (@) to record any arbitrary position, as in a puzzle, [solo game](https://www.tarpeygames.com/hive-in-five), or example formation (choosing any coordinate in the grid for the "first" piece, and orienting the grid in any most convenient way), a FEN-style positional notation is briefer and more convenient.  (Opening positions are best recorded in algebraic notation, like games.)
 
-For FEN-style positional notation, establish the grid using the starting axis as usual if known; otherwise, orient the position as desired.  Next, find the smallest parallelogram containing the position and also slanting in the backslash direction as the algebraic grid usually does:
+For FEN-style positional notation, establish the grid using the starting axis as usual if known; otherwise, orient the position on a hex grid as desired.  Next, find the smallest parallelogram containing the position and also slanting in the backslash direction, as the algebraic grid usually does:
 
 ```
  ____
@@ -74,12 +74,16 @@ For FEN-style positional notation, establish the grid using the starting axis as
  
 ```
 
-Finally, enumerate the pieces and spaces as in FEN.  Bug numbering remains unnecessary, and, because grid coordinates themselves will not be used, you may use case to distinguish between white and black pieces.  Stacked pieces may be separated with an **=** sign (starting from the bottom), and rows with a slash.  Add a colon after the last bug moved.  The player to move (**w** or **b**) may be appended after a space.
+Finally, enumerate the pieces and spaces as in FEN.  Bug numbering remains unnecessary, and, because grid coordinates themselves will not be used, you may use case to distinguish between white (uppercase) and black (lowercase) pieces.  Stacked pieces may be separated with an **=** sign (starting from the bottom), and rows with a slash.  Add a colon after the last bug moved.  The player to move (**w** or **b**) may be appended after a space.
 
-The final position of the game recorded above fits in a parallelogram of 9 rows and 11 columns, so the FEN-style notation would be:
+The final position of the game recorded above fits in a parallelogram of 9 rows and 11 columns:
+
+[![final position of game, inscribed in parallelogram](2025-02-17_17_40_Nicolai_vs_ringersoll-in-para.png)](./2025-02-17_17_40_Nicolai_vs_ringersoll-in-para-full.png)
+
+The FEN-style notation for this game would be:
 
 ```
-7A3/6A4/5M=bGlgp=B=mS/4GL1q2s/2gG=B=bP6/1aQA:7/1as8/1g9/A10
+7a3/6A4/5M=bGlgp=B=mS/4GL1q2s/2gG=B=bP6/1aQA:7/1as8/1g9/A10
 ```
 
 ## The Bookmarklet
