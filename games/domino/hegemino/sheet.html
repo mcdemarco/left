@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Hegemino Scoresheet</title>
+  <style>
+   /* styles pared down from pandocs */
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 0;
+      max-width: 600px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+      caption-side: bottom;
+    }
+    table caption {
+      margin: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+      text-align: left;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    tr.red input {
+	color: red;
+    }
+
+    input {width: 5em;}
+  </style>
+
+</head>
+<body>
+
+<table>
+<thead>
+<tr>
+	<th>Largest Group</th><th>Pip squares</th><th>Wild squares</th><th>All squares</th><th>Scores</th>
+</tr>
+</thead>
+<tbody>
+<tr id="row1"> <td>One pip</td>
+	<td><input autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" class="pipScore" id="pip1" type="text"/></td>
+	<td><input autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" class="wildScore" id="wild1" type="text"/></td>
+	<td><input autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" class="allScore" id="all1" type="text"/></td>
+	<td><b id="pip1Subtotal" class="calced"></b></td>
+</tr>
+<tr id="row2">
+	<td>Two pips</td>
+	<td><input autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" class="pipScore" id="pip2" type="text"/></td>
+	<td><input autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" class="wildScore" id="wild2" type="text"/></td>
+	<td><input autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" class="allScore" id="all2" type="text"/></td>
+	<td><b id="pip2Subtotal" class="calced"></b></td>
+</tr>
+<tr id="row3">
+	<td>Three&nbsp;pips</td>
+	<td><input autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" class="pipScore" id="pip3" type="text"/></td>
+	<td><input autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" class="wildScore" id="wild3" type="text"/></td>
+	<td><input autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" class="allScore" id="all3" type="text"/></td>
+	<td><b id="pip3Subtotal" class="calced"></b></td>
+</tr>
+<tr id="row4">
+	<td>Four pips</td>
+	<td><input autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" class="pipScore" id="pip4" type="text"/></td>
+	<td><input autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" class="wildScore" id="wild4" type="text"/></td>
+	<td><input autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" class="allScore" id="all4" type="text"/></td>
+	<td><b id="pip4Subtotal" class="calced"></b></td>
+</tr>
+<tr id="row5">
+	<td>Five pips</td>
+	<td><input autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" class="pipScore" id="pip5" type="text"/></td>
+	<td><input autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" class="wildScore" id="wild5" type="text"/></td>
+	<td><input autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" class="allScore" id="all5" type="text"/></td>
+	<td><b id="pip5Subtotal" class="calced"></b></td>
+</tr>
+<tr id="row6">
+	<td>Six pips</td>
+	<td><input autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" class="pipScore" id="pip6" type="text"/></td>
+	<td><input autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" class="wildScore" id="wild6" type="text"/></td>
+	<td><input autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" class="allScore" id="all6" type="text"/></td>
+	<td><b id="pip6Subtotal" class="calced"></b></td>
+</tr>
+<tr>
+	<td colspan="4"><strong>Groups Subtotal</strong></td>
+	<td><b id="pipSubtotal" class="calced"></b></td>
+</tr>
+<tr>
+<th colspan="5"></th>
+</tr>
+<tr>
+	<td colspan="3">Bonus: Complete tableau (5pts)</td>
+	<td><input class="bonus" id="bonus1" type="checkbox" value="5"/></td>
+</tr>
+<tr>
+	<td colspan="3">Bonus: Center gap (5pts)</td>
+	<td><input class="bonus" id="bonus2" type="checkbox" value="5"/></td>
+</tr>
+<tr>
+	<td colspan="3">Bonus: Corner gap (10pts)</td>
+	<td><input class="bonus" id="bonus3" type="checkbox" value="10"/></td>
+</tr>
+<tr>
+	<td colspan="3">Other bonuses</td>
+	<td><input autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" id="otherbonus" type="text"/></td>
+</tr>
+<tr>
+	<td colspan="4"><b>Bonuses Subtotal</b></td>
+	<td><b id="bonusSubtotal" class="calced"></b></td>
+</tr>
+<tr>
+<th colspan="5"></th>
+</tr>
+<tr>
+	<td colspan="3"><b>Variant</b>: President Dorothy (changes wild scoring)</td>
+	<td><input class="variant" id="dorothy" type="checkbox" /></td>
+</tr>
+<tr>
+<th colspan="5"></th>
+</tr>
+<tr>
+	<td colspan="4"><strong>Total</strong></td>
+	<td><b id="total" class="calced"></b></td>
+</tr>
+</tbody>
+
+<caption><button type="button">Reset</button></caption>
+</table>
+
+
+
+
+<script type="text/javascript">
+(function () {
+    "use strict";
+
+    //Debouncing is to allow editing of values before auto-correction.
+    function debounce(callback, delay) {
+	var timer;
+	return function() {
+	    clearTimeout(timer)
+	    timer = setTimeout(() => {
+		callback();
+	    }, delay)
+	}
+    };
+
+    function resetter() {
+	//Clear existing scoring and errors
+	document.querySelectorAll("table input").forEach( inp => {
+	    if (inp.classList.contains("bonus"))
+		inp.checked = false;
+	    else
+		inp.value = "";
+	});
+	document.querySelectorAll(".calced").forEach( elt => {
+	    elt.innerText = "";
+	});
+	document.querySelectorAll("tr").forEach( elt => {
+	    elt.className = "";
+	});
+    };
+
+    function summer() {
+	var pipTotal = 0;
+	for (var i=1; i<=6; i++) {
+	    document.querySelector("tr#row" + i).className = "";
+	    var subtotal = 0;
+	    var rawpips = parseInt(document.querySelector('input#pip' + i).value) || 0;
+	    var rawwilds = parseInt(document.querySelector('input#wild' + i).value) || 0;
+	    var rawsquares = parseInt(document.querySelector('input#all' + i).value) || 0;
+	    if ((rawpips && rawsquares) || (rawwilds && rawsquares) || (rawpips && rawwilds)) {
+		var multiplier = i;
+		var pips, squares, wilds;
+		if (rawpips && rawwilds) {
+		    //This includes all cases of (rawpips && rawwilds && rawsquares), 
+		    //  i.e., where rawpips + rawwilds <,=,> rawsquares.
+		    //Strictly less than or greater than: 
+		    //  Assume wilds were altered by user action and recalc.
+		    //Equality case:  Recalcing is harmless.
+		    pips = rawpips;
+		    wilds = rawwilds;
+		    squares = pips + wilds;
+		    document.querySelector('input#all' + i).value = squares;
+		} else if (rawpips && rawsquares) {
+		    pips = rawpips;
+		    squares = rawsquares;
+		    wilds = squares - pips;
+		    document.querySelector('input#wild' + i).value = wilds;
+		} else if (rawwilds && rawsquares) {
+		    wilds = rawwilds;
+		    squares = rawsquares;
+		    pips = squares - wilds;
+		    document.querySelector('input#pip' + i).value = pips;
+		} else {
+		    //This used to be a case but should no longer be reachable.
+		    console.log("Something funny happened.");
+		    pips = rawpips;
+		    wilds = rawwilds;
+		    squares = rawsquares;
+		}
+		const dorothy = document.querySelector('input#dorothy').checked;
+		if (wilds > 1 && !dorothy) {
+		    multiplier = i - (wilds - 1);
+		    if (multiplier < 1)
+			multiplier = 1;
+		} else if (wilds === 0) {
+		    multiplier = 0;
+		}
+		subtotal = multiplier * squares;
+	    }
+	    pipTotal += subtotal;
+	    document.querySelector("#pip" +i + "Subtotal").innerText = subtotal;
+	}
+
+	document.querySelector("#pipSubtotal").innerText = pipTotal;
+
+	var bonusTotal = 0;
+	document.querySelectorAll('input.bonus').forEach((elt) => { 
+	    if (elt.checked)
+		bonusTotal += parseInt(elt.value) || 0;
+	});
+	bonusTotal += parseInt(document.querySelector("input#otherbonus").value) || 0;
+
+	document.querySelector("#bonusSubtotal").innerText = bonusTotal;
+
+	const total = pipTotal + bonusTotal;
+	document.querySelector("#total").innerText = total;
+    }
+
+    window.onload = (event) => {
+	document.querySelector("table").addEventListener('input', debounce(summer,1333));
+	document.querySelector("button").addEventListener('click', resetter);
+    };
+
+})();
+</script>
+</body>
+</html>
