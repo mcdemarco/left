@@ -95,6 +95,9 @@
     tr.red input {
 	color: red;
     }
+    tr.hidden {
+	display:none;
+    }
 
     input {width: 5em;}
   </style>
@@ -154,26 +157,26 @@
 	<td colspan="4"><strong>Groups Subtotal</strong></td>
 	<td><b id="pipSubtotal" class="calced"></b></td>
 </tr>
-<tr>
+<tr class="bonusRow">
 <th colspan="5"></th>
 </tr>
-<tr>
+<tr class="bonusRow">
 	<td colspan="3">Bonus: Complete tableau (5pts)</td>
 	<td><input class="bonus" id="bonus1" type="checkbox" value="5"/></td>
 </tr>
-<tr>
+<tr class="bonusRow">
 	<td colspan="3">Bonus: Center gap (5pts)</td>
 	<td><input class="bonus" id="bonus2" type="checkbox" value="5"/></td>
 </tr>
-<tr>
+<tr class="bonusRow">
 	<td colspan="3">Bonus: Corner gap (10pts)</td>
 	<td><input class="bonus" id="bonus3" type="checkbox" value="10"/></td>
 </tr>
-<tr>
+<tr class="bonusRow">
 	<td colspan="3">Other bonuses</td>
 	<td><input autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" id="otherbonus" type="text"/></td>
 </tr>
-<tr>
+<tr class="bonusRow">
 	<td colspan="4"><b>Bonuses Subtotal</b></td>
 	<td><b id="bonusSubtotal" class="calced"></b></td>
 </tr>

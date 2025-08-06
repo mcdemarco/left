@@ -108,9 +108,9 @@ Repeat turns until the boneyard is empty and the final tiles have been placed.
 
 ## Scoring
 
-Each player finds their largest orthogonally-connected region of each pip value, counting any connected wilds (but not the starting gap).  If the region contains at least one wild, it can be scored; the score is the pip count times the number of squares in the region.
+Each player finds their largest orthogonally-connected region of each pip value, counting any connected wilds (but not the starting gap).  If the region contains at least one wild, it can be scored; the score is the pip count times the number of squares in the region.  If the region does not contain a wild, the player may score the next smaller region of that pip count that does.
 
-If the region contains more than one wild, there is a penalty of -1 pip per extra wild.  It is up to the player whether they want to include a wild in a scoring region or not, *so long as omitting it does not break up the region or make it no longer the largest*.  In any case the pip count may not be reduced below 1; there are no negative scores.
+If the region contains more than one wild, there is a penalty of -1 pip per extra wild.  However, the pip count may not be reduced below 1; there are no negative scores.
 
 The scoring rule applies only to zero-pip half-dominoes; there is neither a credit nor a penalty for the hole in the tableau, and regions may not connect across the hole.
 
@@ -144,7 +144,7 @@ Use the Mega-Hegemino variant, but omit any restrictions or bonuses involving re
 
 ### Stacking
 
-Keep the extra dominoes in the game.  Twice per player, let players stack a domino on top of existing tiles.  One of the values under the domino must match the new domino (vertically), and the other need not.  Regions are calculated using only visible pips.
+Keep the extra dominoes in the game.  Twice per player, let players stack a domino on top of existing tiles.  One of the values under the domino must match the new domino (vertically), and the other need not.  (Zeroes match any pip value, as usual.)  Regions are calculated using only visible pips.
 
 Players may not stack more than twice per game (four times for mega-hegemino).
 
@@ -176,11 +176,13 @@ President Dorothy is a solo automaton based on the fan-made [Princess Dorothy 2.
 
 The setup is for a two-player game, except that the first round is not randomized; instead the setup is ABAB, where B represents the (bot) president's tokens and A the human player's tokens.
 
-Gameplay is normal for the human.
+Gameplay is normal for the human, except that there are no bonus points.
+
+For Dorothy, there is no deduction for extra wilds.  Instead, the wilds are an additional multiplier.
 
 Dorothy selects dominoes based on the following criteria:  she prefers wilds, and among wilds those with more pips (on the other half of the domino).  Failing wilds, she will take doubles, and failing doubles, she will take any tile.  She breaks ties by taking the domino earlier in the market ranking (*i.e.*, the one that puts her in a better turn order position).
 
-The bot does not place tiles in a 5x5 grid but in one long 2x12 column.  She may place at either end of the column, or insert the domino in between any two tiles.  She chooses the new position with the aim of increasing her overall score, or, failing that, of enlarging a territory.  (When scoring for Dorothy, do not make the deductions for wilds.)  In case of ties, choose the topmost of the tied positions.
+The bot does not place tiles in a 5x5 grid but in one long 2x12 column.  She may place at either end of the column, or insert the domino in between any two tiles.  Aside from opening up the new position, she may not move any of her previously placed tiles.  She chooses the new position with the aim of increasing her overall score, or, failing that, of enlarging a territory.  In case of ties, choose the topmost of the tied positions.
 
 ## Credits
 
