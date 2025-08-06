@@ -184,7 +184,11 @@
 <th colspan="5"></th>
 </tr>
 <tr>
-	<td colspan="3"><b>Variant</b>: President Dorothy (changes wild scoring)</td>
+	<td colspan="3">Variant: Friendly wilds (no deduction for extra wilds)</td>
+	<td><input class="variant" id="friendly" type="checkbox" /></td>
+</tr>
+<tr>
+	<td colspan="3">Variant: President Dorothy (a multiplier for extra wilds)</td>
 	<td><input class="variant" id="dorothy" type="checkbox" /></td>
 </tr>
 <tr>
@@ -248,7 +252,7 @@
 		    //This includes all cases of (rawpips && rawwilds && rawsquares), 
 		    //  i.e., where rawpips + rawwilds <,=,> rawsquares.
 		    //Strictly less than or greater than: 
-		    //  Assume wilds were altered by user action and recalc.
+		    //  Assume pips or wilds were altered by user action and recalc.
 		    //Equality case:  Recalcing is harmless.
 		    pips = rawpips;
 		    wilds = rawwilds;
@@ -272,7 +276,10 @@
 		    squares = rawsquares;
 		}
 		const dorothy = document.querySelector('input#dorothy').checked;
-		if (wilds > 1 && !dorothy) {
+		const friendly = document.querySelector('input#friendly').checked;
+		if (wilds > 1 && dorothy) {
+		  multiplier = multiplier * wilds;
+		} else if (wilds > 1 && !friendly) {
 		    multiplier = i - (wilds - 1);
 		    if (multiplier < 1)
 			multiplier = 1;

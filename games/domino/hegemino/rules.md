@@ -152,6 +152,10 @@ Players may not stack more than twice per game (four times for mega-hegemino).
 
 Use the Stacking variant, but multiply the value of any region which includes a stacked tile by two.
 
+### Friendly Wilds
+
+Play without the penalty for extra wilds.
+
 ### There are Four Lights
 
 Draw a five-bone market for four players and carry the unpicked domino forward into the new market (dealing only four new dominoes in subsequent rounds). This can be done with other player counts as well.
@@ -183,6 +187,14 @@ For Dorothy, there is no deduction for extra wilds.  Instead, the wilds are an a
 Dorothy selects dominoes based on the following criteria:  she prefers wilds, and among wilds those with more pips (on the other half of the domino).  Failing wilds, she will take doubles, and failing doubles, she will take any tile.  She breaks ties by taking the domino earlier in the market ranking (*i.e.*, the one that puts her in a better turn order position).
 
 The bot does not place tiles in a 5x5 grid but in one long 2x12 column.  She may place at either end of the column, or insert the domino in between any two tiles.  Aside from opening up the new position, she may not move any of her previously placed tiles.  She chooses the new position with the aim of increasing her overall score, or, failing that, of enlarging a territory.  In case of ties, choose the topmost of the tied positions.
+
+### Solo Mega-Hegemino
+
+For one player, playing for a high score.  If you only have one set of dominoes, do not remove any of them.  You will need five tokens; their color is irrelevant.  Use one token to mark the gap in the 7x7 tableau.  
+
+Deal and sort a market as usual.  When choosing a domino from the market, you may not take from a marked row.  Take the domino and mark the row it was in by putting a token to the left of it.  Draw one new tile and add it to the market in the correct sort order.  (This may or may not change which of the other dominoes are still available.)   The last domino you take will be forced, but probably not a surprise.  When all four rows are marked, set aside the tokens and the remaining three dominoes, and draw a new market.  When necessary, refill the draw pile using the set-aside dominoes.
+
+Repeat this process until you have chosen 24 dominoes, and score the tableau as usual.
 
 ## Credits
 

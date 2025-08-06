@@ -17,7 +17,7 @@ Hegemino is a tile-placement domino game for 2--4 players ages 6 and up.  It sho
 
 ## Hegemino vs. Kingdomino
 
-The rules are very like Kingdomino structurally, but with dominoes there are no crowns *per se*, no numbers on the backs, and a very different balance of territory types (pip counts).  In Hegemino the zeroes (blanks) function somewhat like crowns, and the dominoes are assigned an ordering for the game.
+The rules are very like Kingdomino structurally, but with dominoes there are no crowns *per se*, no numbers on the backs, and a very different balance of territory types (pip counts).  In Hegemino the zeroes (blanks) function somewhat like crowns, but you don't want *too* many of them.   The dominoes are assigned an ordering for the market.
 
 You can use many of the bonuses and variants from Kingdomino, such as the 5x5 bonus or the 7x7 mega-board (given sufficient dominoes).
 
