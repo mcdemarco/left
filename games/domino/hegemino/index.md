@@ -27,14 +27,8 @@ Two or three colored **pawns** or tokens of some sort per player/color, and one 
 
 ## Scoresheet
 
-I also made an online scoresheet for Hegemino, which is  [here](/games/domino/hegemino/scoresheet.html).
+I also made some online scoresheets for Hegemino, which are all linked  from the [single scoresheet](/games/domino/hegemino/scoresheet.html).
 
 ## Solo Mode
 
-I made a solo mode called President Dorothy, based on the fan-made [Princess Dorothy 2.1](https://boardgamegeek.com/thread/2495206/princess-dorothy-20-streamlined-kingdom-building-f) automaton for Kingdomino.  See the Variants section of the [rules](/games/domino/hegemino/rules.html) for more details.
-
-## Credits
-
-Devised by M. C. DeMarco, August 2025
-
-Inspired by Bruno Cathala's [Kingdomino](https://boardgamegeek.com/boardgame/204583/kingdomino) and variants thereof in the BGG forums, my Decktet reimplementation [Personimo](/games/decktet/personimo/), and the game not named [Dominion](https://boardgamegeek.com/thread/1813874/article/32798461#32798461).
+I made a solo mode called President Dorothy, based on the fan-made [Princess Dorothy 2.1](https://boardgamegeek.com/thread/2495206/princess-dorothy-20-streamlined-kingdom-building-f) automaton for Kingdomino.  See the Variants section of the [rules](/games/domino/hegemino/rules.html) for more details as well as a simpler solo mode.

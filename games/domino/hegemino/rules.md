@@ -5,10 +5,7 @@ categories: games
 menu: games
 date: 2025-08-01 12:00:00
 ---
-For the backstory of how Hegemino (pronounced *heJEmino*) came to be, see [this page](/games/domino/hegemino/).  The scorecard is [here]().
-
-the lack of detail there, I think it's fair to devise and christen my own:  Hegemino
-
+For the backstory of how Hegemino (pronounced *heJEmino*) came to be, see [this page](/games/domino/hegemino/).  The scoresheets can be found [here](/games/domino/hegemino/scoresheet.html).
 
 ## Box Cover
 
@@ -174,11 +171,15 @@ Omit the scoring rule in which the region score multiplier (pip count) cannot fa
 
 You may score all regions that contain wilds, not just the largest.
 
+### President Dorothy's Pork Barrel
+
+Apply President Dorothy the automaton's scoring to all players:  instead of a deduction for extra wilds, the number of wilds is an additional multiplier (pips &times; wild squares &times; total squares). 
+
 ### President Dorothy (Solo)
 
 President Dorothy is a solo automaton based on the fan-made [Princess Dorothy 2.1](https://boardgamegeek.com/thread/2495206/princess-dorothy-20-streamlined-kingdom-building-f) automaton for Kingdomino.  
 
-The setup is for a two-player game, except that the first round is not randomized; instead the setup is ABAB, where B represents the (bot) president's tokens and A the human player's tokens.
+The setup is for a two-player game, except that the first round is not randomized; instead the setup is BABA, where B represents the (bot) president's tokens and A the human player's tokens.
 
 Gameplay is normal for the human, except that there are no bonus points.
 
@@ -200,5 +201,5 @@ Repeat this process until you have chosen 24 dominoes, and score the tableau as 
 
 Devised by M. C. DeMarco, August 2025
 
-Inspired by Bruno Cathala's [Kingdomino](https://boardgamegeek.com/boardgame/204583/kingdomino) and variants thereof in the BGG forums, my Decktet reimplementation [Personimo](/games/decktet/personimo/), and the game not named [Dominion](https://boardgamegeek.com/thread/1813874/article/32798461#32798461).  
+Inspired by Bruno Cathala's [Kingdomino](https://boardgamegeek.com/boardgame/204583/kingdomino) (and variants thereof in the BGG forums), my Decktet reimplementation [Personimo](/games/decktet/personimo/), and the game not named [Dominion](https://boardgamegeek.com/thread/1813874/article/32798461#32798461).  
 Unicode dominoes are listed [here](https://www.alanwood.net/unicode/domino-tiles.html), for example.
