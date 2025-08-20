@@ -542,6 +542,11 @@ ul.recipes li.new:after {
     content: '\1F195';
     margin: 0 0 0 5px;
 }
+ul.recipes li.fav:after {
+    font-style: normal;
+    content: '\1F49B';
+    margin: 0 0 0 5px;
+}
 span.archive_tag {
     float: none !important;
     font-style:italic;

@@ -19,6 +19,8 @@ date: 2014-10-07 01:25
 			{% if innerFoodie.redirect == null and innerFoodie.hidden == null %}
 			{% if innerFoodie.new > 2023 %}
       <li class="inline archive_list new"><a class="tag_list_link" href="/recipes/{{ foodie.filename }}/{{ innerFoodie.filename }}">{{ innerFoodie.name }}</a></li>
+			{% elsif innerFoodie.favorite != null %}
+      <li class="inline archive_list fav"><a class="tag_list_link" href="/recipes/{{ foodie.filename }}/{{ innerFoodie.filename }}">{{ innerFoodie.name }}</a></li>
 			{% else %}
       <li class="inline archive_list"><a class="tag_list_link" href="/recipes/{{ foodie.filename }}/{{ innerFoodie.filename }}">{{ innerFoodie.name }}</a></li>
 			{% endif %}
