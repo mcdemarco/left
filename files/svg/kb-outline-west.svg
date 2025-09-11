@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" id="hexagons" version="1.1" height="8.825in" width="10.475in" viewBox="60 0 1687 1560">
+
+  <style>
+    use#segment2, use#segment3 {fill: #e3cd87;
+        color: #e3cd87; /*#d2bc76;*/
+        stroke: black;}
+    use#segment1, use#segment4 {
+        fill: #f4de98;
+        color: #f4de98;
+	stroke: black;}
+    use#segment5 {fill: #C9E5AA;
+	color: #C9E5AA;
+	stroke: black;}
+    svg polygon {all: inherit;}
+  </style>
+
+  
+<g id="segment" transform="scale(0.5)">
+  <g transform="translate(1817,-150)" id="board">
+    <g transform="rotate(90)">
+      <g class="inside">
+	<polygon points="200,86.6 150,173 50,173 0,86.6 50,0 150,0 200,86.6" fill="currentColor" stroke="black" stroke-width="1" data-column="1" transform="translate(150,86.6)" data-row-right="0" data-edge="1" class="pogo h:1:0"/>
+	<polygon points="200,86.6 150,173 50,173 0,86.6 50,0 150,0 200,86.6" fill="currentColor" stroke="black" stroke-width="1" data-column="2" transform="translate(300,0)" data-row-right="-1" data-edge="1" class="pogo h:2:-1"/>
+	<polygon points="200,86.6 150,173 50,173 0,86.6 50,0 150,0 200,86.6" fill="currentColor" stroke="black" stroke-width="1" data-column="3" transform="translate(450,86.6)" data-row-right="-1" data-edge="1" class="pogo h:3:-1"/>
+	<polygon points="200,86.6 150,173 50,173 0,86.6 50,0 150,0 200,86.6" fill="currentColor" stroke="black" stroke-width="1" data-column="4" transform="translate(600,0)" data-row-right="-2" data-edge="1" class="pogo h:4:-2"/>
+	<polygon points="200,86.6 150,173 50,173 0,86.6 50,0 150,0 200,86.6" fill="currentColor" stroke="black" stroke-width="1" data-column="5" transform="translate(750,86.6)" data-row-right="-2" data-edge="1" class="pogo h:5:-2"/>
+	<polygon points="200,86.6 150,173 50,173 0,86.6 50,0 150,0 200,86.6" fill="currentColor" stroke="black" stroke-width="1" data-column="6" transform="translate(900,0)" data-row-right="-3" data-edge="1" class="pogo h:6:-3"/>
+	<polygon points="200,86.6 150,173 50,173 0,86.6 50,0 150,0 200,86.6" fill="currentColor" stroke="black" stroke-width="1" data-column="7" transform="translate(1050,86.6)" data-row-right="-3" data-edge="1" class="pogo h:7:-3"/>
+	<polygon points="200,86.6 150,173 50,173 0,86.6 50,0 150,0 200,86.6" fill="currentColor" stroke="black" stroke-width="1" data-column="8" transform="translate(1200,0)" data-row-right="-4" data-edge="1" class="pogo h:8:-4"/>
+	<polygon points="200,86.6 150,173 50,173 0,86.6 50,0 150,0 200,86.6" fill="currentColor" stroke="black" stroke-width="1" data-column="9" transform="translate(1350,86.6)" data-row-right="-4" data-edge="1" class="pogo h:9:-4"/>
+	<polygon points="200,86.6 150,173 50,173 0,86.6 50,0 150,0 200,86.6" fill="currentColor" stroke="black" stroke-width="1" data-column="10" transform="translate(1500,0)" data-row-right="-5" data-edge="1" class="pogo h:10:-5"/>
+
+	<polygon points="200,86.6 150,173 50,173 0,86.6 50,0 150,0 200,86.6" stroke="black" stroke-width="1" data-column="1" transform="translate(150,259.6)" data-row-right="1" data-edge="1" class="pogo h:1:1"/>
+	<polygon points="200,86.6 150,173 50,173 0,86.6 50,0 150,0 200,86.6" stroke="black" stroke-width="1" data-column="2" transform="translate(300,173)" data-row-right="0" data-edge="0" class="pogo h:2:0"/>
+	<polygon points="200,86.6 150,173 50,173 0,86.6 50,0 150,0 200,86.6" stroke="black" stroke-width="1" data-column="3" transform="translate(450,259.6)" data-row-right="0" data-edge="0" class="pogo h:3:0"/>
+	<polygon points="200,86.6 150,173 50,173 0,86.6 50,0 150,0 200,86.6" stroke="black" stroke-width="1" data-column="4" transform="translate(600,173)" data-row-right="-1" data-edge="0" class="pogo h:4:-1"/>
+	<polygon points="200,86.6 150,173 50,173 0,86.6 50,0 150,0 200,86.6" stroke="black" stroke-width="1" data-column="5" transform="translate(750,259.6)" data-row-right="-1" data-edge="0" class="pogo h:5:-1"/>
+	<polygon points="200,86.6 150,173 50,173 0,86.6 50,0 150,0 200,86.6" stroke="black" stroke-width="1" data-column="6" transform="translate(900,173)" data-row-right="-2" data-edge="0" class="pogo h:6:-2"/>
+	<polygon points="200,86.6 150,173 50,173 0,86.6 50,0 150,0 200,86.6" stroke="black" stroke-width="1" data-column="7" transform="translate(1050,259.6)" data-row-right="-2" data-edge="0" class="pogo h:7:-2"/>
+	<polygon points="200,86.6 150,173 50,173 0,86.6 50,0 150,0 200,86.6" stroke="black" stroke-width="1" data-column="8" transform="translate(1200,173)" data-row-right="-3" data-edge="0" class="pogo h:8:-3"/>
+	<polygon points="200,86.6 150,173 50,173 0,86.6 50,0 150,0 200,86.6" stroke="black" stroke-width="1" data-column="9" transform="translate(1350,259.6)" data-row-right="-3" data-edge="0" class="pogo h:9:-3"/>
+	<polygon points="200,86.6 150,173 50,173 0,86.6 50,0 150,0 200,86.6" stroke="black" stroke-width="1" data-column="10" transform="translate(1500,173)" data-row-right="-4" data-edge="1" class="pogo h:10:-4"/>
+
+	<polygon points="200,86.6 150,173 50,173 0,86.6 50,0 150,0 200,86.6" stroke="black" stroke-width="1" data-column="1" transform="translate(150,432.6)" data-row-right="2" data-edge="1" class="pogo h:1:2"/>
+	<polygon points="200,86.6 150,173 50,173 0,86.6 50,0 150,0 200,86.6" stroke="black" stroke-width="1" data-column="2" transform="translate(300,346)" data-row-right="1" data-edge="0" class="pogo h:2:1"/>
+	<polygon points="200,86.6 150,173 50,173 0,86.6 50,0 150,0 200,86.6" stroke="black" stroke-width="1" data-column="3" transform="translate(450,432.6)" data-row-right="1" data-edge="0" class="pogo h:3:1"/>
+	<polygon points="200,86.6 150,173 50,173 0,86.6 50,0 150,0 200,86.6" stroke="black" stroke-width="1" data-column="4" transform="translate(600,346)" data-row-right="0" data-edge="0" class="pogo h:4:0"/>
+	<polygon points="200,86.6 150,173 50,173 0,86.6 50,0 150,0 200,86.6" stroke="black" stroke-width="1" data-column="5" transform="translate(750,432.6)" data-row-right="0" data-edge="0" class="pogo h:5:0"/>
+	<polygon points="200,86.6 150,173 50,173 0,86.6 50,0 150,0 200,86.6" stroke="black" stroke-width="1" data-column="6" transform="translate(900,346)" data-row-right="-1" data-edge="0" class="pogo h:6:-1"/>
+	<polygon points="200,86.6 150,173 50,173 0,86.6 50,0 150,0 200,86.6" stroke="black" stroke-width="1" data-column="7" transform="translate(1050,432.6)" data-row-right="-1" data-edge="0" class="pogo h:7:-1"/>
+	<polygon points="200,86.6 150,173 50,173 0,86.6 50,0 150,0 200,86.6" stroke="black" stroke-width="1" data-column="8" transform="translate(1200,346)" data-row-right="-2" data-edge="0" class="pogo h:8:-2"/>
+	<polygon points="200,86.6 150,173 50,173 0,86.6 50,0 150,0 200,86.6" stroke="black" stroke-width="1" data-column="9" transform="translate(1350,432.6)" data-row-right="-2" data-edge="1" class="pogo h:9:-2"/>
+	<polygon points="200,86.6 150,173 50,173 0,86.6 50,0 150,0 200,86.6" stroke="black" stroke-width="1" data-column="10" transform="translate(1500,346)" data-row-right="-3" data-edge="1" class="pogo h:10:-3"/>
+
+	<polygon points="200,86.6 150,173 50,173 0,86.6 50,0 150,0 200,86.6" stroke="black" stroke-width="1" data-column="1" transform="translate(150,605.6)" data-row-right="3" data-edge="1" class="pogo h:1:3"/>
+	<polygon points="200,86.6 150,173 50,173 0,86.6 50,0 150,0 200,86.6" stroke="black" stroke-width="1" data-column="2" transform="translate(300,519)" data-row-right="2" data-edge="0" class="pogo h:2:2"/>
+	<polygon points="200,86.6 150,173 50,173 0,86.6 50,0 150,0 200,86.6" stroke="black" stroke-width="1" data-column="3" transform="translate(450,605.6)" data-row-right="2" data-edge="0" class="pogo h:3:2"/>
+	<polygon points="200,86.6 150,173 50,173 0,86.6 50,0 150,0 200,86.6" stroke="black" stroke-width="1" data-column="4" transform="translate(600,519)" data-row-right="1" data-edge="0" class="pogo h:4:1"/>
+	<polygon points="200,86.6 150,173 50,173 0,86.6 50,0 150,0 200,86.6" stroke="black" stroke-width="1" data-column="5" transform="translate(750,605.6)" data-row-right="1" data-edge="0" class="pogo h:5:1"/>
+	<polygon points="200,86.6 150,173 50,173 0,86.6 50,0 150,0 200,86.6" stroke="black" stroke-width="1" data-column="6" transform="translate(900,519)" data-row-right="0" data-edge="0" class="pogo h:6:0"/>
+	<polygon points="200,86.6 150,173 50,173 0,86.6 50,0 150,0 200,86.6" stroke="black" stroke-width="1" data-column="7" transform="translate(1050,605.6)" data-row-right="0" data-edge="0" class="pogo h:7:0"/>
+	<polygon points="200,86.6 150,173 50,173 0,86.6 50,0 150,0 200,86.6" stroke="black" stroke-width="1" data-column="8" transform="translate(1200,519)" data-row-right="-1" data-edge="0" class="pogo h:8:-1"/>
+	<polygon points="200,86.6 150,173 50,173 0,86.6 50,0 150,0 200,86.6" stroke="black" stroke-width="1" data-column="9" transform="translate(1350,605.6)" data-row-right="-1" data-edge="0" class="pogo h:9:-1"/>
+	<polygon points="200,86.6 150,173 50,173 0,86.6 50,0 150,0 200,86.6" stroke="black" stroke-width="1" data-column="10" transform="translate(1500,519)" data-row-right="-2" data-edge="1" class="pogo h:10:-2"/>
+	
+	<polygon points="200,86.6 150,173 50,173 0,86.6 50,0 150,0 200,86.6" stroke="black" stroke-width="1" data-column="1" transform="translate(150,778.6)" data-row-right="4" data-edge="1" class="pogo h:1:4"/>
+	<polygon points="200,86.6 150,173 50,173 0,86.6 50,0 150,0 200,86.6" stroke="black" stroke-width="1" data-column="2" transform="translate(300,692)" data-row-right="3" data-edge="0" class="pogo h:2:3"/>
+	<polygon points="200,86.6 150,173 50,173 0,86.6 50,0 150,0 200,86.6" stroke="black" stroke-width="1" data-column="3" transform="translate(450,778.6)" data-row-right="3" data-edge="0" class="pogo h:3:3"/>
+	<polygon points="200,86.6 150,173 50,173 0,86.6 50,0 150,0 200,86.6" stroke="black" stroke-width="1" data-column="4" transform="translate(600,692)" data-row-right="2" data-edge="0" class="pogo h:4:2"/>
+	<polygon points="200,86.6 150,173 50,173 0,86.6 50,0 150,0 200,86.6" stroke="black" stroke-width="1" data-column="5" transform="translate(750,778.6)" data-row-right="2" data-edge="0" class="pogo h:5:2"/>
+	<polygon points="200,86.6 150,173 50,173 0,86.6 50,0 150,0 200,86.6" stroke="black" stroke-width="1" data-column="6" transform="translate(900,692)" data-row-right="1" data-edge="0" class="pogo h:6:1"/>
+	<polygon points="200,86.6 150,173 50,173 0,86.6 50,0 150,0 200,86.6" stroke="black" stroke-width="1" data-column="7" transform="translate(1050,778.6)" data-row-right="1" data-edge="0" class="pogo h:7:1"/>
+	<polygon points="200,86.6 150,173 50,173 0,86.6 50,0 150,0 200,86.6" stroke="black" stroke-width="1" data-column="8" transform="translate(1200,692)" data-row-right="0" data-edge="0" class="pogo h:8:0"/>
+	<polygon points="200,86.6 150,173 50,173 0,86.6 50,0 150,0 200,86.6" stroke="black" stroke-width="1" data-column="9" transform="translate(1350,778.6)" data-row-right="0" data-edge="0" class="pogo h:9:0"/>
+	<polygon points="200,86.6 150,173 50,173 0,86.6 50,0 150,0 200,86.6" stroke="black" stroke-width="1" data-column="10" transform="translate(1500,692)" data-row-right="-1" data-edge="1" class="pogo h:10:-1"/>
+
+	<polygon points="200,86.6 150,173 50,173 0,86.6 50,0 150,0 200,86.6" stroke="black" stroke-width="1" data-column="1" transform="translate(150,951.6)" data-row-right="5" data-edge="1" class="pogo h:1:5"/>
+	<polygon points="200,86.6 150,173 50,173 0,86.6 50,0 150,0 200,86.6" stroke="black" stroke-width="1" data-column="2" transform="translate(300,865)" data-row-right="4" data-edge="0" class="pogo h:2:4"/>
+	<polygon points="200,86.6 150,173 50,173 0,86.6 50,0 150,0 200,86.6" stroke="black" stroke-width="1" data-column="3" transform="translate(450,951.6)" data-row-right="4" data-edge="0" class="pogo h:3:4"/>
+	<polygon points="200,86.6 150,173 50,173 0,86.6 50,0 150,0 200,86.6" stroke="black" stroke-width="1" data-column="4" transform="translate(600,865)" data-row-right="3" data-edge="0" class="pogo h:4:3"/>
+	<polygon points="200,86.6 150,173 50,173 0,86.6 50,0 150,0 200,86.6" stroke="black" stroke-width="1" data-column="5" transform="translate(750,951.6)" data-row-right="3" data-edge="0" class="pogo h:5:3"/>
+	<polygon points="200,86.6 150,173 50,173 0,86.6 50,0 150,0 200,86.6" stroke="black" stroke-width="1" data-column="6" transform="translate(900,865)" data-row-right="2" data-edge="0" class="pogo h:6:2"/>
+	<polygon points="200,86.6 150,173 50,173 0,86.6 50,0 150,0 200,86.6" stroke="black" stroke-width="1" data-column="7" transform="translate(1050,951.6)" data-row-right="2" data-edge="0" class="pogo h:7:2"/>
+	<polygon points="200,86.6 150,173 50,173 0,86.6 50,0 150,0 200,86.6" stroke="black" stroke-width="1" data-column="8" transform="translate(1200,865)" data-row-right="1" data-edge="0" class="pogo h:8:1"/>
+	<polygon points="200,86.6 150,173 50,173 0,86.6 50,0 150,0 200,86.6" stroke="black" stroke-width="1" data-column="9" transform="translate(1350,951.6)" data-row-right="1" data-edge="0" class="pogo h:9:1"/>
+	<polygon points="200,86.6 150,173 50,173 0,86.6 50,0 150,0 200,86.6" stroke="black" stroke-width="1" data-column="10" transform="translate(1500,865)" data-row-right="0" data-edge="1" class="pogo h:10:0"/>
+
+	<polygon points="200,86.6 150,173 50,173 0,86.6 50,0 150,0 200,86.6" stroke="black" stroke-width="1" data-column="1" transform="translate(150,1124.6)" data-row-right="6" data-edge="1" class="pogo h:1:6"/>
+	<polygon points="200,86.6 150,173 50,173 0,86.6 50,0 150,0 200,86.6" stroke="black" stroke-width="1" data-column="2" transform="translate(300,1038)" data-row-right="5" data-edge="0" class="pogo h:2:5"/>
+	<polygon points="200,86.6 150,173 50,173 0,86.6 50,0 150,0 200,86.6" stroke="black" stroke-width="1" data-column="3" transform="translate(450,1124.6)" data-row-right="5" data-edge="0" class="pogo h:3:5"/>
+	<polygon points="200,86.6 150,173 50,173 0,86.6 50,0 150,0 200,86.6" stroke="black" stroke-width="1" data-column="4" transform="translate(600,1038)" data-row-right="4" data-edge="0" class="pogo h:4:4"/>
+	<polygon points="200,86.6 150,173 50,173 0,86.6 50,0 150,0 200,86.6" stroke="black" stroke-width="1" data-column="5" transform="translate(750,1124.6)" data-row-right="4" data-edge="0" class="pogo h:5:4"/>
+	<polygon points="200,86.6 150,173 50,173 0,86.6 50,0 150,0 200,86.6" stroke="black" stroke-width="1" data-column="6" transform="translate(900,1038)" data-row-right="3" data-edge="0" class="pogo h:6:3"/>
+	<polygon points="200,86.6 150,173 50,173 0,86.6 50,0 150,0 200,86.6" stroke="black" stroke-width="1" data-column="7" transform="translate(1050,1124.6)" data-row-right="3" data-edge="0" class="pogo h:7:3"/>
+	<polygon points="200,86.6 150,173 50,173 0,86.6 50,0 150,0 200,86.6" stroke="black" stroke-width="1" data-column="8" transform="translate(1200,1038)" data-row-right="2" data-edge="0" class="pogo h:8:2"/>
+	<polygon points="200,86.6 150,173 50,173 0,86.6 50,0 150,0 200,86.6" stroke="black" stroke-width="1" data-column="9" transform="translate(1350,1124.6)" data-row-right="2" data-edge="0" class="pogo h:9:2"/>
+	<polygon points="200,86.6 150,173 50,173 0,86.6 50,0 150,0 200,86.6" stroke="black" stroke-width="1" data-column="10" transform="translate(1500,1038)" data-row-right="1" data-edge="1" class="pogo h:10:1"/>
+
+	<polygon points="200,86.6 150,173 50,173 0,86.6 50,0 150,0 200,86.6" stroke="black" stroke-width="1" data-column="1" transform="translate(150,1297.6)" data-row-right="7" data-edge="1" class="pogo h:1:7"/>
+	<polygon points="200,86.6 150,173 50,173 0,86.6 50,0 150,0 200,86.6" stroke="black" stroke-width="1" data-column="2" transform="translate(300,1211)" data-row-right="6" data-edge="0" class="pogo h:2:6"/>
+	<polygon points="200,86.6 150,173 50,173 0,86.6 50,0 150,0 200,86.6" stroke="black" stroke-width="1" data-column="3" transform="translate(450,1297.6)" data-row-right="6" data-edge="0" class="pogo h:3:6"/>
+	<polygon points="200,86.6 150,173 50,173 0,86.6 50,0 150,0 200,86.6" stroke="black" stroke-width="1" data-column="4" transform="translate(600,1211)" data-row-right="5" data-edge="0" class="pogo h:4:5"/>
+	<polygon points="200,86.6 150,173 50,173 0,86.6 50,0 150,0 200,86.6" stroke="black" stroke-width="1" data-column="5" transform="translate(750,1297.6)" data-row-right="5" data-edge="0" class="pogo h:5:5"/>
+	<polygon points="200,86.6 150,173 50,173 0,86.6 50,0 150,0 200,86.6" stroke="black" stroke-width="1" data-column="6" transform="translate(900,1211)" data-row-right="4" data-edge="0" class="pogo h:6:4"/>
+	<polygon points="200,86.6 150,173 50,173 0,86.6 50,0 150,0 200,86.6" stroke="black" stroke-width="1" data-column="7" transform="translate(1050,1297.6)" data-row-right="4" data-edge="0" class="pogo h:7:4"/>
+	<polygon points="200,86.6 150,173 50,173 0,86.6 50,0 150,0 200,86.6" stroke="black" stroke-width="1" data-column="8" transform="translate(1200,1211)" data-row-right="3" data-edge="0" class="pogo h:8:3"/>
+	<polygon points="200,86.6 150,173 50,173 0,86.6 50,0 150,0 200,86.6" stroke="black" stroke-width="1" data-column="9" transform="translate(1350,1297.6)" data-row-right="3" data-edge="0" class="pogo h:9:3"/>
+	<polygon points="200,86.6 150,173 50,173 0,86.6 50,0 150,0 200,86.6" stroke="black" stroke-width="1" data-column="10" transform="translate(1500,1211)" data-row-right="2" data-edge="1" class="pogo h:10:2"/>
+
+	<polygon points="200,86.6 150,173 50,173 0,86.6 50,0 150,0 200,86.6" stroke="black" stroke-width="1" data-column="1" transform="translate(150,1470.6)" data-row-right="8" data-edge="1" class="pogo h:1:8"/>
+	<polygon points="200,86.6 150,173 50,173 0,86.6 50,0 150,0 200,86.6" stroke="black" stroke-width="1" data-column="2" transform="translate(300,1384)" data-row-right="7" data-edge="0" class="pogo h:2:7"/>
+	<polygon points="200,86.6 150,173 50,173 0,86.6 50,0 150,0 200,86.6" stroke="black" stroke-width="1" data-column="3" transform="translate(450,1470.6)" data-row-right="7" data-edge="0" class="pogo h:3:7"/>
+	<polygon points="200,86.6 150,173 50,173 0,86.6 50,0 150,0 200,86.6" stroke="black" stroke-width="1" data-column="4" transform="translate(600,1384)" data-row-right="6" data-edge="0" class="pogo h:4:6"/>
+	<polygon points="200,86.6 150,173 50,173 0,86.6 50,0 150,0 200,86.6" stroke="black" stroke-width="1" data-column="5" transform="translate(750,1470.6)" data-row-right="6" data-edge="0" class="pogo h:5:6"/>
+	<polygon points="200,86.6 150,173 50,173 0,86.6 50,0 150,0 200,86.6" stroke="black" stroke-width="1" data-column="6" transform="translate(900,1384)" data-row-right="5" data-edge="0" class="pogo h:6:5"/>
+	<polygon points="200,86.6 150,173 50,173 0,86.6 50,0 150,0 200,86.6" stroke="black" stroke-width="1" data-column="7" transform="translate(1050,1470.6)" data-row-right="5" data-edge="0" class="pogo h:7:5"/>
+	<polygon points="200,86.6 150,173 50,173 0,86.6 50,0 150,0 200,86.6" stroke="black" stroke-width="1" data-column="8" transform="translate(1200,1384)" data-row-right="4" data-edge="0" class="pogo h:8:4"/>
+	<polygon points="200,86.6 150,173 50,173 0,86.6 50,0 150,0 200,86.6" stroke="black" stroke-width="1" data-column="9" transform="translate(1350,1470.6)" data-row-right="4" data-edge="0" class="pogo h:9:4"/>
+	<polygon points="200,86.6 150,173 50,173 0,86.6 50,0 150,0 200,86.6" stroke="black" stroke-width="1" data-column="10" transform="translate(1500,1384)" data-row-right="3" data-edge="1" class="pogo h:10:3"/>
+
+	<polygon points="200,86.6 150,173 50,173 0,86.6 50,0 150,0 200,86.6" stroke="black" stroke-width="1" data-column="1" transform="translate(150,1643.6)" data-row-right="9" data-edge="1" class="pogo h:1:9"/>
+	<polygon points="200,86.6 150,173 50,173 0,86.6 50,0 150,0 200,86.6" stroke="black" stroke-width="1" data-column="2" transform="translate(300,1557)" data-row-right="8" data-edge="1" class="pogo h:2:8"/>
+	<polygon points="200,86.6 150,173 50,173 0,86.6 50,0 150,0 200,86.6" stroke="black" stroke-width="1" data-column="3" transform="translate(450,1643.6)" data-row-right="8" data-edge="1" class="pogo h:3:8"/>
+	<polygon points="200,86.6 150,173 50,173 0,86.6 50,0 150,0 200,86.6" stroke="black" stroke-width="1" data-column="4" transform="translate(600,1557)" data-row-right="7" data-edge="1" class="pogo h:4:7"/>
+	<polygon points="200,86.6 150,173 50,173 0,86.6 50,0 150,0 200,86.6" stroke="black" stroke-width="1" data-column="5" transform="translate(750,1643.6)" data-row-right="7" data-edge="1" class="pogo h:5:7"/>
+	<polygon points="200,86.6 150,173 50,173 0,86.6 50,0 150,0 200,86.6" stroke="black" stroke-width="1" data-column="6" transform="translate(900,1557)" data-row-right="6" data-edge="1" class="pogo h:6:6"/>
+	<polygon points="200,86.6 150,173 50,173 0,86.6 50,0 150,0 200,86.6" stroke="black" stroke-width="1" data-column="7" transform="translate(1050,1643.6)" data-row-right="6" data-edge="1" class="pogo h:7:6"/>
+	<polygon points="200,86.6 150,173 50,173 0,86.6 50,0 150,0 200,86.6" stroke="black" stroke-width="1" data-column="8" transform="translate(1200,1557)" data-row-right="5" data-edge="1" class="pogo h:8:5"/>
+	<polygon points="200,86.6 150,173 50,173 0,86.6 50,0 150,0 200,86.6" stroke="black" stroke-width="1" data-column="9" transform="translate(1350,1643.6)" data-row-right="5" data-edge="1" class="pogo h:9:5"/>
+	<polygon points="200,86.6 150,173 50,173 0,86.6 50,0 150,0 200,86.6" stroke="black" stroke-width="1" data-column="10" transform="translate(1500,1557)" data-row-right="4" data-edge="1" class="pogo h:10:4"/>
+      </g>
+    </g>
+  </g>
+
+  <g transform="matrix(0, 1, -1, 0, 1817, -150)">
+    <g fill="none" fill-opacity="0">
+      <polyline points="50,173 0,86.6 50,0 150,0" stroke="black" data-column="1" transform="translate(150,86.6)" data-row-right="0" data-edge="1" class="pogo h:1:0" style="stroke-width: 9px;"/>
+      <polyline points="0,86.6 50,0 150,0 200,86.6" stroke="black" data-column="2" transform="translate(300,0)" data-row-right="-1" data-edge="1" class="pogo h:2:-1" style="stroke-width: 9px;"/>
+      <polyline points="50,0 150,0" stroke="black" data-column="3" transform="translate(450,86.6)" data-row-right="-1" data-edge="1" class="pogo h:3:-1" style="stroke-width: 9px;"/>
+      <polyline points="0,86.6 50,0 150,0 200,86.6" stroke="black" data-column="4" transform="translate(600,0)" data-row-right="-2" data-edge="1" class="pogo h:4:-2" style="stroke-width: 9px;"/>
+      <polyline points="50,0 150,0" stroke="black" data-column="5" transform="translate(750,86.6)" data-row-right="-2" data-edge="1" class="pogo h:5:-2" style="stroke-width: 9px;"/>
+      <polyline points="0,86.6 50,0 150,0 200,86.6" stroke="black" data-column="6" transform="translate(900,0)" data-row-right="-3" data-edge="1" class="pogo h:6:-3" style="stroke-width: 9px;"/>
+      <polyline points="50,0 150,0" stroke="black" data-column="7" transform="translate(1050,86.6)" data-row-right="-3" data-edge="1" class="pogo h:7:-3" style="stroke-width: 9px;"/>
+      <polyline points="0,86.6 50,0 150,0 200,86.6" stroke="black" data-column="8" transform="translate(1200,0)" data-row-right="-4" data-edge="1" class="pogo h:8:-4" style="stroke-width: 9px;"/>
+      <polyline points="50,0 150,0" stroke="black" data-column="9" transform="translate(1350,86.6)" data-row-right="-4" data-edge="1" class="pogo h:9:-4" style="stroke-width: 9px;"/>
+      <polyline points="0,86.6 50,0 150,0 200,86.6 150,173" stroke="black" data-column="10" transform="translate(1500,0)" data-row-right="-5" data-edge="1" class="pogo h:10:-5" style="stroke-width: 9px;"/>
+      <polyline points="50,173 0,86.6 50,0" stroke="black" data-column="1" transform="translate(150,259.6)" data-row-right="1" data-edge="1" class="pogo h:1:1" style="stroke-width: 9px;"/>
+      <polyline points="150,0 200,86.6 150,173" stroke="black" data-column="10" transform="translate(1500,173)" data-row-right="-4" data-edge="1" class="pogo h:10:-4" style="stroke-width: 9px;"/>
+      <polyline points="50,173 0,86.6 50,0" stroke="black" data-column="1" transform="translate(150,432.6)" data-row-right="2" data-edge="1" class="pogo h:1:2" style="stroke-width: 9px;"/>
+      <polyline points="150,0 200,86.6 150,173" stroke="black" data-column="10" transform="translate(1500,346)" data-row-right="-3" data-edge="1" class="pogo h:10:-3" style="stroke-width: 9px;"/>
+      <polyline points="50,173 0,86.6 50,0" stroke="black" data-column="1" transform="translate(150,605.6)" data-row-right="3" data-edge="1" class="pogo h:1:3" style="stroke-width: 9px;"/>
+      <polyline points="150,0 200,86.6 150,173" stroke="black" data-column="10" transform="translate(1500,519)" data-row-right="-2" data-edge="1" class="pogo h:10:-2" style="stroke-width: 9px;"/>
+      <polyline points="50,173 0,86.6 50,0" stroke="black" data-column="1" transform="translate(150,778.6)" data-row-right="4" data-edge="1" class="pogo h:1:4" style="stroke-width: 9px;"/>
+      <polyline points="150,0 200,86.6 150,173" stroke="black" data-column="10" transform="translate(1500,692)" data-row-right="-1" data-edge="1" class="pogo h:10:-1" style="stroke-width: 9px;"/>
+      <polyline points="50,173 0,86.6 50,0" stroke="black" data-column="1" transform="translate(150,951.6)" data-row-right="5" data-edge="1" class="pogo h:1:5" style="stroke-width: 9px;"/>
+      <polyline points="150,0 200,86.6 150,173" stroke="black" data-column="10" transform="translate(1500,865)" data-row-right="0" data-edge="1" class="pogo h:10:0" style="stroke-width: 9px;"/>
+      <polyline points="50,173 0,86.6 50,0" stroke="black" data-column="1" transform="translate(150,1124.6)" data-row-right="6" data-edge="1" class="pogo h:1:6" style="stroke-width: 9px;"/>
+      <polyline points="150,0 200,86.6 150,173" stroke="black" data-column="10" transform="translate(1500,1038)" data-row-right="1" data-edge="1" class="pogo h:10:1" style="stroke-width: 9px;"/>
+      <polyline points="50,173 0,86.6 50,0" stroke="black" data-column="1" transform="translate(150,1297.6)" data-row-right="7" data-edge="1" class="pogo h:1:7" style="stroke-width: 9px;"/>
+      <polyline points="150,0 200,86.6 150,173" stroke="black" data-column="10" transform="translate(1500,1211)" data-row-right="2" data-edge="1" class="pogo h:10:2" style="stroke-width: 9px;"/>
+      <polyline points="50,173 0,86.6 50,0" stroke="black" data-column="1" transform="translate(150,1470.6)" data-row-right="8" data-edge="1" class="pogo h:1:8" style="stroke-width: 9px;"/>
+      <polyline points="150,0 200,86.6 150,173" stroke="black" data-column="10" transform="translate(1500,1384)" data-row-right="3" data-edge="1" class="pogo h:10:3" style="stroke-width: 9px;"/>
+      <polyline points="200,86.6 150,173 50,173 0,86.6 50,0" stroke="black" data-column="1" transform="translate(150,1643.6)" data-row-right="9" data-edge="1" class="pogo h:1:9" style="stroke-width: 9px;"/>
+      <polyline points="150,173 50,173" stroke="black" data-column="2" transform="translate(300,1557)" data-row-right="8" data-edge="1" class="pogo h:2:8" style="stroke-width: 9px;"/>
+      <polyline points="200,86.6 150,173 50,173 0,86.6" stroke="black" data-column="3" transform="translate(450,1643.6)" data-row-right="8" data-edge="1" class="pogo h:3:8" style="stroke-width: 9px;"/>
+      <polyline points="150,173 50,173" stroke="black" data-column="4" transform="translate(600,1557)" data-row-right="7" data-edge="1" class="pogo h:4:7" style="stroke-width: 9px;"/>
+      <polyline points="200,86.6 150,173 50,173 0,86.6" stroke="black" data-column="5" transform="translate(750,1643.6)" data-row-right="7" data-edge="1" class="pogo h:5:7" style="stroke-width: 9px;"/>
+      <polyline points="150,173 50,173" stroke="black" data-column="6" transform="translate(900,1557)" data-row-right="6" data-edge="1" class="pogo h:6:6" style="stroke-width: 9px;"/>
+      <polyline points="200,86.6 150,173 50,173 0,86.6" stroke="black" data-column="7" transform="translate(1050,1643.6)" data-row-right="6" data-edge="1" class="pogo h:7:6" style="stroke-width: 9px;"/>
+      <polyline points="150,173 50,173" stroke="black" data-column="8" transform="translate(1200,1557)" data-row-right="5" data-edge="1" class="pogo h:8:5" style="stroke-width: 9px;"/>
+      <polyline points="200,86.6 150,173 50,173 0,86.6" stroke="black" data-column="9" transform="translate(1350,1643.6)" data-row-right="5" data-edge="1" class="pogo h:9:5" style="stroke-width: 9px;"/>
+      <polyline points="150,0 200,86.6 150,173 50,173" stroke="black" data-column="10" transform="translate(1500,1557)" data-row-right="4" data-edge="1" class="pogo h:10:4" style="stroke-width: 9px;"/>
+    </g>
+  </g>
+</g>
+
+<use href="#segment" id="segment1"/>
+<use href="#segment" id="segment2" transform="translate(866,0)"/>
+<use href="#segment" id="segment3" transform="translate(0,750)" class="alternate"/>
+<use href="#segment" id="segment4" transform="translate(866,750)"/>
+<g transform="translate(283,888)" class="above">
+  <use href="#segment" id="segment5" transform="rotate(-60)"/>
+</g>
+</svg>

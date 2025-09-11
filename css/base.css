@@ -775,3 +775,9 @@ ul#story li, ul#proofing li {
 #actions + dl dd {
     font-style: italic;
 }
+
+/* blog adjustments */
+
+article + article {
+    border-top: 1px solid #aaa;
+}
