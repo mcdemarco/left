@@ -7,6 +7,9 @@
  * Released under CC-GNU GPL
  */
 
+/* Avoid a local error. */
+ini_set("pcre.jit", "0");
+
 /**
  * Enables or disables filtering for cross domain requests.
  * Recommended value: true
@@ -31,6 +34,20 @@ define( 'CSAJAX_DEBUG', true );
 $valid_requests = array(
 	'boardgamegeek.com','cf.geekdo-images.com','t.co','ifdb.tads.org','ifdb.org','philome.la','itch.io','borogove.io'
 );
+
+/**
+ * A set of domains that require a BGG token.
+ */
+$bgg_requests = array(
+	'boardgamegeek.com'
+);
+
+/**
+ * Fetch the token.
+ * $bearer = '';
+ */
+
+include 'vars.php';
 
 /* * * STOP EDITING HERE UNLESS YOU KNOW WHAT YOU ARE DOING * * */
 
@@ -90,6 +107,10 @@ if ( CSAJAX_FILTERS ) {
 			exit;
 		}
 	}
+	if ( in_array( $parsed['host'], $bgg_requests ) ) {
+		//It would be nice to also check it's going to the xmlapi, but I think all my bgg requests are.
+		$request_headers[] = "Authorization: Bearer $bearer";
+	}		
 }
 
 // append query string for GET requests
