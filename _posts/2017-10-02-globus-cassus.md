@@ -16,6 +16,4 @@ The cited diameter (about 50,000 miles) is not enough to produce adequate gravit
 
 While not a particularly practical way of transferring the biosphere, the Great Rains are certainly the dramatic high point of the Globus Cassus project.
 
-<a href="https://www.amazon.com/Globus-Cassus-Christian-Waldvogel-Wladvogel/dp/3037780452/ref=as_li_ss_il?s=books&ie=UTF8&qid=1506962120&sr=1-1&keywords=globus+cassus&linkCode=li1&tag=mcdema-20&linkId=19ca7768f584bac9998a6d7c38f05524" target="_blank"><img border="0" src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=3037780452&Format=_SL110_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=mcdema-20" ></a><img src="https://ir-na.amazon-adsystem.com/e/ir?t=mcdema-20&l=li1&o=1&a=3037780452" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
-
-
+<a class="amafflink" href="https://www.amazon.com/Globus-Cassus-Christian-Waldvogel-Wladvogel/dp/3037780452/ref=as_li_ss_il?s=books&ie=UTF8&qid=1506962120&sr=1-1&keywords=globus+cassus&linkCode=li1&tag=mcdema-20&linkId=19ca7768f584bac9998a6d7c38f05524" target="_blank">Globus Cassus</a>

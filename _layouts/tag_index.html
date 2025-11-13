@@ -3,6 +3,11 @@ layout: layout
 menu: blog
 ---
 <h2 class="post_title">{{page.title}}</h2>
+
+{% if page.tag == "BDO" %}
+  <p>The Big Dumb Object list collects all these posts <a href="/bdo/">on one page</a>.</p>
+{% endif %}
+
 <ul class="listing">
   {% for post in site.posts %}
   {% for tag in post.tags %}

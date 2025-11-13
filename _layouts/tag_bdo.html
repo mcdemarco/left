@@ -6,33 +6,48 @@ menu: stream
 
   {{ content }}
 
+<div class="detailcontrol">
+  <a href='javascript:[...document.querySelectorAll("details")].forEach(deet => deet.setAttribute("open",true));'>Open all</a>
+  |
+  <a href='javascript:[...document.querySelectorAll("details")].forEach(deet => deet.removeAttribute("open"));'>Close all</a>
+</div>
+
   {% for post in site.posts reversed %}
   {% for tag in post.tags %}
   {% if tag == "BDO" %}
 
-<hr/>
+<!--hr/-->
 
-<article class="h-entry">
-
-  <h2>
-    <a href="{{ post.url }}" class="u-url p-name">
+<!--article class="h-entry"-->
+  <details>
+    <summary>
+      {% if post.title %}
+      {{post.title | remove: "BDO of the Day: " }}
+      {% else %}
+      &para;
+      {% endif %}
+    </summary>
+    <h2>
+      <a href="{{ post.url }}" class="u-url p-name">
 			{% if post.title %}
-			{{post.title | remove: "BDO of the Day: " }}
+			{{post.title}}
 			{% else %}
 			&para;
 			{% endif %}
-		</a>
-  </h2>
-
+      </a>
+    </h2>
+    
   <section class="byline">
     <time class="dt-published">{{ post.date | date: "%B %e, %Y" }}</time>
   </section>
-
+ 
 	<section class="e-content">
 		{{ post.content }}
 	</section>
 
-</article>
+  </details>
+
+<!--/article-->
 
   {% endif %}
   {% endfor %}

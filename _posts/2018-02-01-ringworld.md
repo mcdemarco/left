@@ -7,7 +7,7 @@ created: 2018-02-01 11:55:00-04:00
 ---
 Today's Big Dumb Object (BDO) is a Ringworld, the familiar creation of Larry Niven in his eponymous 1970 novel that later sprouted [a series](https://en.wikipedia.org/wiki/Ringworld_series), not to mention inspiring many other big dumb rings of various sizes and kicking off a golden age of BDOs.  ([*Rendezvouz with Rama*](/blog/2017/09/13/rama) came out in 1973, and the [*Orbitsville*](/blog/2017/09/25/orbitsville/) series began in 1975.)
 
-<a href="https://www.amazon.com/Ringworld-S-F-Masterworks-Larry-Niven/dp/0575077026/ref=as_li_ss_il?_encoding=UTF8&qid=&sr=&linkCode=li2&tag=mcdema-20&linkId=c7476289d2e3ece2cefe29243c95430b" target="_blank"><img border="0" src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=0575077026&Format=_SL160_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=mcdema-20" ></a><img src="https://ir-na.amazon-adsystem.com/e/ir?t=mcdema-20&l=li2&o=1&a=0575077026" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+<a class="amafflink" href="https://www.amazon.com/Ringworld-S-F-Masterworks-Larry-Niven/dp/0575077026/ref=as_li_ss_il?_encoding=UTF8&qid=&sr=&linkCode=li2&tag=mcdema-20&linkId=c7476289d2e3ece2cefe29243c95430b" target="_blank">Ringworld</a>
 
 Niven described the Ringworld again in [his classic megastructures essay](https://en.wikipedia.org/wiki/Bigger_Than_Worlds) (Analog, March 1974, emphasis added):
 
@@ -24,7 +24,7 @@ Niven described the Ringworld again in [his classic megastructures essay](https:
 
 Niven goes on to say that the seas would be shallow qua purely cosmetic, but that doesn't seem like the proper way to make an environment to me.  He also explains how to move a Ringworld by moving its sun with "a jet of [solar] gas along the Ringworld axis of rotation".  But some things went unexplained until the sequel, *The Ringworld Engineers* (1980), like how the ringworld stays in its unstable orbit.
 
-<a href="https://www.amazon.com/Ringworld-Engineers-Larry-Niven/dp/1857231112/ref=as_li_ss_il?_encoding=UTF8&qid=&sr=&linkCode=li2&tag=mcdema-20&linkId=3dace97311451a14cdd552d283413fda" target="_blank"><img border="0" src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=1857231112&Format=_SL160_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=mcdema-20" ></a><img src="https://ir-na.amazon-adsystem.com/e/ir?t=mcdema-20&l=li2&o=1&a=1857231112" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+<a class="amafflink" href="https://www.amazon.com/Ringworld-Engineers-Larry-Niven/dp/1857231112/ref=as_li_ss_il?_encoding=UTF8&qid=&sr=&linkCode=li2&tag=mcdema-20&linkId=3dace97311451a14cdd552d283413fda" target="_blank">The Ringworld Engineers</a>
 
 For more details and pictures, see [Isaac Arthur's video about ringworlds](https://www.youtube.com/watch?v=yk-Ivm9MhYs).
 

@@ -10,3 +10,7 @@ I was inspired by [today's BGG Amazon affiliate links scandal](https://www.reddi
 I don't think I've ever made any money from my affiliate links; I just use them for easy pictures of books:
 
 <a href="https://www.amazon.com/dp/0393239861?coliid=I1PTGA274LXLXI&colid=ADQMV1WHEA57&psc=1&linkCode=li2&tag=mcdema-20&linkId=4dc80960d5f3abefba42a98cc110637b&language=en_US&ref_=as_li_ss_il" target="_blank"><img border="0" src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=0393239861&Format=_SL160_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=mcdema-20&language=en_US" ></a><img src="https://ir-na.amazon-adsystem.com/e/ir?t=mcdema-20&language=en_US&l=li2&o=1&a=0393239861" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+
+### Update (11/11/2025)
+
+...and then Amazon broke all my affiliate images.  There's some extremely complicated way to get them back, but instead I've taken half of them out (from my [BDO book reviews](/bdo/)) and will eventually figure out what to do about the other half (in my CYOA book reviews).

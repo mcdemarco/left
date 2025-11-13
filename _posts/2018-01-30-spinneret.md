@@ -7,11 +7,11 @@ created: 2018-01-30 12:25:00-04:00
 ---
 Today's Big Dumb Object (BDO) is not the Spinneret, an alien artifact accidentally discovered on a metal-poor world by humanity's first colonists (aliens, humanity has recently discovered, have taken all the good worlds already) in Timothy Zahn's eponymous 1985 novel, but (spoilers!) another object it eventually leads them to.
 
-<a href="https://www.amazon.com/Spinneret-Timothy-Zahn/dp/0671655981/ref=as_li_ss_il?ie=UTF8&linkCode=li2&tag=mcdema-20&linkId=01efc7eb25e11937bf8827793b7d592b" target="_blank"><img border="0" src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=0671655981&Format=_SL160_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=mcdema-20" ></a><img src="https://ir-na.amazon-adsystem.com/e/ir?t=mcdema-20&l=li2&o=1&a=0671655981" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
-
 The Spinneret itself is responsible for having sucked every trace of metal out of the ground of the colony world.  The colonists discover it, still working, after it sucks all their iron tools, metal shelving, and vital fertilizer ingredients away, suspiciously spitting a filament of strong, sticky unobtanium out of a nearby volcano into space soon afterwards.  You'd think that would lead the scientists immediately down the cone of the not-really-a-volcano to the machinery below, but *no*.  The volcano remains a dead-end until it's needed much later in the plot; instead the humans find the machinery behind the Spinneret by a more clever and circuitous route.
 
 The machine has much more than just a control room; an entire underground alien colony apparently once surrounded the Spinneret despite its evident ability to spin unsupervised in 2016 (novel-time).  But no Spinners remain, only their machinery and guard robots, which are somehow still operational after a hundred thousand years.
+
+<a class="amafflink" href="https://www.amazon.com/Spinneret-Timothy-Zahn/dp/0671655981/ref=as_li_ss_il?ie=UTF8&linkCode=li2&tag=mcdema-20&linkId=01efc7eb25e11937bf8827793b7d592b" target="_blank">Spinneret</a>
 
 ### Review
 
@@ -25,7 +25,7 @@ Fortunately, my suffering was eventually rewarded with an actual BDO, revealed i
 
 In the course of a rebellion motivated (for all I could tell) purely by bickering, the main characters finally take the volcanic route into the partially-explored Spinneret complex.  They find a Spinner starship still sitting on its underground pad, ready to launch out the cone.  Soon afterward, the political situation forces their leader's hand into an apparent voyage of exploration aboard that ship (though his motives turn out to be political after all), and in this way they discover a new kind of star drive and the Spinners' [Dyson sphere](/blog/2017/09/20/dyson/).
 
-!["SHield World Construction" by Adam Burn, used with permission](/files/bdo/adamburn-dyson.jpg)
+!["Shield World Construction" by Adam Burn, used with permission](/files/bdo/adamburn-dyson.jpg)
 <cite>image by [Adam Burn](https://adamburn.deviantart.com/art/SHield-World-Construction-118068881)</cite>
 
 There are quite a few interesting things about this Dyson sphere:  it's incomplete, it's damaged to boot, it's not a habitable sphere (on either side) but merely a disguise intended to make the yellow sun inside look like a red giant from a distance, and it's *heated* (by some unspecified means involving asteroid-shaped masses chained to the outside) to red giant temperature.

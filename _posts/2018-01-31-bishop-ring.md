@@ -11,4 +11,3 @@ Today's Big Dumb Object (BDO) is a [Bishop Ring](https://en.wikipedia.org/wiki/B
 As the O'Neill cylinder was supersized into the [McKendree cylinder](/blog/2017/09/14/mcKendree/) by the discovery of carbon nanotubes, the Stanford torus was supersized into the Bishop ring.  In this case, it's also large enough not to need enclosure, only walls to hold in the atmosphere.   The Bishop ring as proposed by Forrest Bishop is 1240 miles in major diameter and 310 miles wide, for a surface area of 1.2 million square miles.
 
 Bishop rings appear, of course, at [Orion's Arm](http://www.orionsarm.com/eg-article/460db7f55a8d3), and in a smaller form in the film [Elysium](https://en.wikipedia.org/wiki/Elysium_%28film%29).
-

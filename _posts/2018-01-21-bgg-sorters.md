@@ -12,7 +12,3 @@ I'd wrestled with the BGG XML API before when getting my card creation program [
 The geeklist, family, and collection sorters take the corresponding ID from BGG and give you a sortable list of the stuff on that geeklist/family/collection, but sort options are restricted to the information that comes back to from the BGG API (many for collections, few for the others).  From there you have the option to pass your results to the thing sorter, which can sort by rank, ratings, and many other factors.
 
 I should note that collection sorting is something many people already do with the API, so you may prefer a tool like [GameShelf](https://gameshelf.github.io) over my little XSL hack.
-
-
-
-
