@@ -781,3 +781,28 @@ ul#story li, ul#proofing li {
 article + article {
     border-top: 1px solid #aaa;
 }
+
+summary::marker {
+    color: #227ce8;
+}
+
+details[open] summary,
+details[open] summary::marker {
+    color: #939393;
+}
+
+a.amafflink {
+    font-style: italic;
+    text-decoration: none;
+}
+
+a.amafflink:after {
+    content: " at Amazon " url(/css/Icon_External_Link.png);
+    margin: 0 0 0 1px;
+    opacity: 0.85;
+    font-style: normal;
+}
+
+div.detailcontrol {
+    text-align:right;
+}

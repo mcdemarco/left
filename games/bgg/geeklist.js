@@ -15,7 +15,7 @@
 	var base = location.protocol + "//" + location.host + "/games/bgg/";
 	var baseFile = base + "geeklist.html";
 	var corsProxy = base + "proxy.php?csurl=";
-	var defaultId = 234925;
+	var defaultId = 351097;
 	//Local xsl.
 	var stylesheetURL = "geeklist.xsl";
 	var stylesheet;
@@ -68,7 +68,7 @@
 
 	function setThings() {
 		var entries = document.getElementsByClassName("entry");
-		var elen = Math.min(entries.length,100) + 1;
+		var elen = Math.min(entries.length,100);
 		var entryIds = [];
 		for (var e = 0; e < elen; e++) {
 			var ide;

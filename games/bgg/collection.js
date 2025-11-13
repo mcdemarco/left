@@ -1,5 +1,5 @@
 //
-//fetch a family with a cors proxy; sort and display it with xslt (so oldskool!) 
+//fetch a collection with a cors proxy; sort and display it with xslt (so oldskool!) 
 //
 
 (function () {
@@ -81,7 +81,7 @@
 
 	function setThings() {
 		var entries = document.getElementsByClassName("entry");
-		var elen = Math.min(entries.length,100) + 1;
+		var elen = Math.min(entries.length,100);
 		var entryIds = [];
 		for (var e = 0; e < elen; e++) {
 			var ide;

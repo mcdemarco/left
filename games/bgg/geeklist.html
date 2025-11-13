@@ -30,7 +30,7 @@ BoardGameGeek geeklist sorter by fiddly_bits.
 							<input type="checkbox" id="ascending" /> ascending
 						</span>
 						<span>
-							<input type="hidden" id="images" />
+							<input type="hidden" id="images" title="include images" />
 							<input type="checkbox" id="descriptions" title="include item descriptions" /> descriptions
 						</span>
 						<span>
@@ -40,15 +40,15 @@ BoardGameGeek geeklist sorter by fiddly_bits.
 					</p>
 	</form>
 
-	<p class="info">You can pass the geeklist ID in with the URL, e.g., <a href="./?234925" id="urlHint"></a>.</p>
+	<p class="info">You can pass the geeklist ID in with the URL, e.g., <a href="./?351097" id="urlHint"></a>.</p>
 	<p class="info" id="thingURLWrapper" style="display:none;">You can pass the first 100 of these games to the thing sorter with the URL <a id="thingURL" href="#"></a></p>
 
 	<div id="main_content">
-					<div id="geeklist">
-					</div>
+		<div id="geeklist">
+		</div>
 	</div>
 
-	<p class="info">Rank and rating are not included because the API does not return that information with the geeklist, even when the list is sorted by rank or rating at BGG.  But if the list was manually sorted by the creator, you can see or reverse that sorting with "Manual".  Images are not included due to hotlinking changes at BGG.</p>
+	<p class="info">Rank, rating, and images are not supported because the API does not return that information with the geeklist, even when the list is sorted by rank or rating at BGG.  But if the list was manually sorted by the creator, you can see or reverse that sorting with "Manual".</p>
 
 	<hr />
 
