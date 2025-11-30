@@ -3,13 +3,25 @@
 //
 /* jshint esversion: 6 */
 
+/*TODO:
+ *add plays
+ *fix errors from frame trimming
+ */
+
 (function () {
 
 	var defaultGeeklist = 351097;
 	var defaultFamily = 20; //pyramids
 	var base = location.protocol + "//" + location.host + "/games/bgg/";
 	var baseFile = base + "differ.html";
-	var lists = [{},{},{}];
+	var lists = [
+		{name: "1"},
+		{name: "2"},
+		{name: "1n2"},
+		{name: "1-2"},
+		{name: "2-1"},
+		{name: "1u2"},
+	];
 
 	function setThings() {
 		var entries = document.getElementsByClassName("entry");
@@ -30,14 +42,14 @@
 		var listid = e.target.getAttribute("data-listnum");
 		var newtype = document.getElementById("list" + listid + "type").value;
 		document.getElementById("frame" + listid).src = "/games/bgg/" + newtype + ".html";
-		trimFrames();
 		clearLists();
+		window.setTimeout(trimFrames, 500);
 		return;
 	}
 
 	function clearLists() {
 		document.getElementById("diff1").innerHTML = "";
-		document.getElementById("diff12").innerHTML = "";
+		document.getElementById("diff12").innerHTML = "<em>The common items will appear here.</em>";
 		document.getElementById("diff2").innerHTML = "";
 	}
 	
@@ -70,41 +82,53 @@
 			setTimeout(diffLists, 5000);
 		} else {
 			//Diff and dusted.
-			var list2 = lists[2]; 
-			var targetElt2 = document.getElementById("diff12");
-			list2.set = lists[0].set.intersection(lists[1].set);
-			list2.numeric = [...list2.set];
-			list2.raw = Array.from(lists[0].raw).filter( entry => list2.numeric.indexOf(entry.getAttribute("data-thingid")) > -1 );
-			list2.html = [];
-			
-			if (list2.raw.length === 0) {
-				targetElt2.innerHTML = "<em>No common items were found.</em>";
-			} else {
-				list2.raw.forEach(item => list2.html.push( item.querySelector("h3").innerHTML ));
-				displayHtml(list2.html, targetElt2);
-			}
+			var lintersect = lists[2];
+			var targetElt12 = document.getElementById("diff12");
+			lintersect.set = lists[0].set.intersection(lists[1].set);
+			lintersect.numeric = [...lintersect.set];
+			lintersect.raw = Array.from(lists[0].raw).filter( entry => lintersect.numeric.indexOf(entry.getAttribute("data-thingid")) > -1 );
 
-			//TODO: remove intersection from other lists.
+			if (lintersect.raw.length === 0) {
+				targetElt12.innerHTML = "<em>No common items were found.</em>";
+				return;
+			} //else...
+
+			lintersect.html = [];			
+			lintersect.raw.forEach(item => lintersect.html.push( item.querySelector("h3").innerHTML ));
+			displayHtml(lintersect.html, targetElt12);
+
+			var targetElt1 = document.getElementById("diff1");
+			lists[3].set = lists[0].set.difference(lists[1].set); //1 without 2
+			lists[3].numeric = [...lists[3].set];
+			lists[3].raw = Array.from(lists[0].raw).filter( entry => lists[3].numeric.indexOf(entry.getAttribute("data-thingid")) > -1 );
+			lists[3].html = [];			
+			lists[3].raw.forEach(item => lists[3].html.push( item.querySelector("h3").innerHTML ));
+			displayHtml(lists[3].html, targetElt1);
+
+			var targetElt2 = document.getElementById("diff2");
+			lists[4].set = lists[1].set.difference(lists[0].set); //2 without 1
+			lists[4].numeric = [...lists[4].set];
+			lists[4].raw = Array.from(lists[1].raw).filter( entry => lists[4].numeric.indexOf(entry.getAttribute("data-thingid")) > -1 );
+			lists[4].html = [];			
+			lists[4].raw.forEach(item => lists[4].html.push( item.querySelector("h3").innerHTML ));
+			displayHtml(lists[4].html, targetElt2);
+
+			lists[5].set = lists[0].set.union(lists[1].set); //union (not used yet)
+			lists[5].numeric = [...lists[5].set];
+			lists[5].raw = Array.from(lists[2].raw).concat(Array.from(lists[3].raw)).concat(Array.from(lists[4].raw));
+			lists[5].html = [];			
+			lists[5].raw.forEach(item => lists[5].html.push( item.querySelector("h3").innerHTML ));
+			//displayHtml(lists[3].html, targetElt1);
+
+			console.log(lists);
 		}
 	}
 	
 	function displayHtml(listhtml,targetElt) {
-		var tempFrag = "<ul><li>";
-		tempFrag += listhtml.join("</li><li>");
+		var tempFrag = "<ul><li class='entry'>";
+		tempFrag += listhtml.join("</li><li class='entry'>");
 		tempFrag += "</li></ul>";
 		targetElt.innerHTML = tempFrag;
-	}
-		
-	function parseID(protoId, slot) {
-		if (protoId === "")
-			return -1;
-		if ((protoId.split("/")).length > 1) {
-			protoId = protoId.split("geeklist/")[1].split("/")[0];
-		}
-		if (parseInt(protoId,10) > 0)
-			return parseInt(protoId,10);
-		else 
-			return 0;
 	}
 	
 	function setFromQuery() {
@@ -125,6 +149,7 @@
 			var fraim = document.getElementById("frame" + index);
 			fraim.contentWindow.document.body.querySelectorAll('.info').forEach(elt => elt.remove());
 			fraim.contentWindow.document.body.querySelectorAll('cite').forEach(elt => elt.remove());
+			fraim.contentWindow.document.body.querySelectorAll('hr').forEach(elt => elt.remove());
 		}
 	}
 	
@@ -145,6 +170,7 @@
 
 	function setURL(toId1,toId2,toIdList) {
 		//You can pass in any number of arguments.
+		/*
 		if (typeof toId1 == "undefined")
 			toId1 = defaultGeeklist;
 		if (typeof toId2 == "undefined")
@@ -160,6 +186,7 @@
 		} else {
 			document.getElementById("thingURLWrapper").style.display = "none";
 		}
+			*/
 	}
 	
 	window.onload = loady;

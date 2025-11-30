@@ -198,3 +198,7 @@ a#thingURL {
 #diff ul {
     list-style: none;
 }
+
+#diff li div {
+    padding-left: 0.5em;
+}
