@@ -23,20 +23,6 @@
 		{name: "1u2"},
 	];
 
-	function setThings() {
-		var entries = document.getElementsByClassName("entry");
-		var elen = Math.min(entries.length,100);
-		var entryIds = [];
-		for (var e = 0; e < elen; e++) {
-			var ide;
-			if (entries[e])
-				ide = entries[e].getAttribute("data-thingid");
-			if (ide)
-				entryIds.push(ide);
-		}
-		setURL(0,entryIds.join(","));
-	}
-	
 	function adjustListType(e) {
 		//Reload the frame on change.
 		var listid = e.target.getAttribute("data-listnum");
@@ -144,12 +130,26 @@
 		}
 	}
 
+	function setThings() {
+		var entries = document.getElementsByClassName("entry");
+		var elen = Math.min(entries.length,100);
+		var entryIds = [];
+		for (var e = 0; e < elen; e++) {
+			var ide;
+			if (entries[e])
+				ide = entries[e].getAttribute("data-thingid");
+			if (ide)
+				entryIds.push(ide);
+		}
+		setURL(0,entryIds.join(","));
+	}
+
 	function trimFrames() {
 		for (var index = 1; index <= 2; index++) {
 			var fraim = document.getElementById("frame" + index);
-			fraim.contentWindow.document.body.querySelectorAll('.info').forEach(elt => elt.remove());
+			//fraim.contentWindow.document.body.querySelectorAll('.info').forEach(elt => elt.remove());
 			fraim.contentWindow.document.body.querySelectorAll('cite').forEach(elt => elt.remove());
-			fraim.contentWindow.document.body.querySelectorAll('hr').forEach(elt => elt.remove());
+			//fraim.contentWindow.document.body.querySelectorAll('hr').forEach(elt => elt.remove());
 		}
 	}
 	
