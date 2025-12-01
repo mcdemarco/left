@@ -16,11 +16,11 @@
 	var lists = [
 		{name: "1",
 		 type: "geeklist",
-		 ids: [333956]
+		 ids: ["333956"]
 		},
 		{name: "2",
 		 type: "family",
-		 ids:  [81073]
+		 ids:  ["81073"]
 		},
 		{name: "1n2"},
 		{name: "1-2"},
@@ -51,9 +51,12 @@
 			var index = i + 1;
 			var targetElt = document.getElementById("diff" + index);
 			
-			var fraim = document.getElementById("frame" + index);
+			var fraim = document.getElementById("frame" + index).contentDocument;
 			if (list.raw === undefined || list.raw.length === 0 || force) {
-				list.raw = fraim.contentWindow.document.body.querySelectorAll('div[data-thingid]');
+				//Don't want to keep reprocessing.
+				list.type = fraim.body.querySelector("#listtype").value;
+				list.ids = fraim.body.querySelector("#parsedids").value.split(",");
+				list.raw = fraim.body.querySelectorAll('div[data-thingid]');
 				list.numeric = Array.from(list.raw).map(entry => entry.getAttribute("data-thingid")); //,10)).sort((a,b) => a - b);
 				list.set = new Set(list.numeric);
 				list.html = [];
@@ -68,11 +71,14 @@
 		}
 		
 		if (lists[0].raw.length === 0 || lists[1].raw.length === 0) {
+			
 			//Waiting loop.
 			console.log("Waiting on lists...");
 			setTimeout(diffLists, 5000);
-		} else {
-			//Diff and dusted.
+			
+		} else if (! lists[2].hasOwnProperty("set")) {
+
+			//Diff and dust.
 			var lintersect = lists[2];
 			var targetElt12 = document.getElementById("diff12");
 			lintersect.set = lists[0].set.intersection(lists[1].set);
@@ -111,7 +117,10 @@
 			lists[5].raw.forEach(item => lists[5].html.push( item.querySelector("h3").innerHTML ));
 			//displayHtml(lists[3].html, targetElt1);
 
-			console.log(lists);
+			setURL();
+
+		} else {
+			//Already diffed and dusted.
 		}
 	}
 	
@@ -151,7 +160,7 @@
 		}
 		setURL();
 		//also autoload.
-		window.setTimeout(diffLists, 1000);
+		window.setTimeout(diffLists, 5000);
 	}
 
 	function setThings() {
@@ -165,20 +174,22 @@
 			if (ide)
 				entryIds.push(ide);
 		}
-		setURL(0,entryIds.join(","));
+		setURL(entryIds.join(","));
 	}
 
 	function trimFrames() {
 		for (var index = 1; index <= 2; index++) {
-			var fraim = document.getElementById("frame" + index);
-			//fraim.contentWindow.document.body.querySelectorAll('.info').forEach(elt => elt.remove());
-			fraim.contentWindow.document.body.querySelectorAll('cite').forEach(elt => elt.remove());
-			//fraim.contentWindow.document.body.querySelectorAll('hr').forEach(elt => elt.remove());
+			var fraim = document.getElementById("frame" + index).contentDocument;
+			//fraim.body.querySelectorAll('.info').forEach(elt => elt.remove());
+			if (fraim.body.querySelectorAll('cite'))
+				fraim.body.querySelectorAll('cite').forEach(elt => elt.remove());
+			if (fraim.body.querySelectorAll('hr'))
+				fraim.body.querySelectorAll('hr').forEach(elt => elt.remove());
 		}
 	}
 	
-	function setURL() {
-		//You can pass in any number of arguments.
+	function setURL(toIdList) {
+		//TODO: things
 		
 		if (lists[0].type) {
 			var ref = baseFile + "?" + lists[0].type + (lists[0].ids.length > 0  && lists[0].ids[0] ? "=" + lists[0].ids.join(",") : "");

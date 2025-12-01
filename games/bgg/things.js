@@ -173,8 +173,11 @@
 	}
 
 	function setURL(toIds) {
-		if (!toIds)
+		if (toIds)
+			document.getElementById("parsedids").value = toIds;
+		else
 			toIds = defaultIds;
+		
 		document.getElementById("urlHint").innerHTML = baseFile + "?" + toIds;
 		document.getElementById("urlHint").href = baseFile + "?" + toIds;
 	}

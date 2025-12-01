@@ -45,10 +45,12 @@ Based on a BoardGameGeek geeklist sorter by fiddly_bits.
 									<input type="checkbox" id="stats" title="include statistics" /> stats
 						</span>
 						<input type="submit" value="Sort" />
+						<input type="hidden" id="listtype" name="listtype" value="things" />
+						<input type="hidden" id="parsedids" name="parsedids" value="" />
 					</p>
 	</form>
 
-	<p class="info">You can pass the thing IDs in with the URL, e.g., <a href="" id="urlHint"></a></p>
+	<p class="info">You can pass the thing IDs in with the URL, e.g., <a href="#" id="urlHint"></a></p>
 
 	<div id="main_content">
 					<div id="things">

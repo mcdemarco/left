@@ -210,10 +210,14 @@
 		//You can pass in any number of arguments.
 		if (typeof toUser == "undefined")
 			toUser = defaultId;
+		else if (toUser)
+			document.getElementById("parsedids").value = toUser;
+			
 		if (toUser) {
 			document.getElementById("urlHint").innerHTML = baseFile + '?' + toUser;
 			document.getElementById("urlHint").href = baseFile + '?' + toUser;
 		}
+		
 		if (toIdList) {
 			document.getElementById("thingURL").innerHTML = base + 'things.html?' + toIdList;
 			document.getElementById("thingURL").href = base + 'things.html?' + toIdList;

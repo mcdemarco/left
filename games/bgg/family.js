@@ -187,6 +187,9 @@
 		//You can pass in any number of arguments.
 		if (typeof toId == "undefined")
 			toId = defaultId;
+		else if (toId)
+			document.getElementById("parsedids").value = toId;
+			
 		if (toId) {
 			document.getElementById("urlHint").innerHTML = baseFile + '?' + toId;
 			document.getElementById("urlHint").href = baseFile + '?' + toId;
@@ -200,8 +203,11 @@
 			document.getElementById("thingURLWrapper").style.display = "none";
 		}
 
+		console.log(entryIds);
+
 		while (entryIds && entryIds.length > 20) {
 			entryIds = entryIds.slice(20);
+			console.log(entryIds);
 			toIdList = entryIds.slice(0,20);
 			var toIdLength = toIdList.length;
 			toIdList = toIdList.join(",");
