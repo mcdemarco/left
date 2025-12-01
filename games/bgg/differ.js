@@ -5,18 +5,23 @@
 
 /*TODO:
  *add plays
- *fix errors from frame trimming
+ *set urls, includung things
  */
 
 (function () {
 
-	var defaultGeeklist = 351097;
-	var defaultFamily = 20; //pyramids
-	var base = location.protocol + "//" + location.host + "/games/bgg/";
+	var path = "/games/bgg/";
+	var base = location.protocol + "//" + location.host + path;
 	var baseFile = base + "differ.html";
 	var lists = [
-		{name: "1"},
-		{name: "2"},
+		{name: "1",
+		 type: "geeklist",
+		 ids: [333956]
+		},
+		{name: "2",
+		 type: "family",
+		 ids:  [81073]
+		},
 		{name: "1n2"},
 		{name: "1-2"},
 		{name: "2-1"},
@@ -27,7 +32,7 @@
 		//Reload the frame on change.
 		var listid = e.target.getAttribute("data-listnum");
 		var newtype = document.getElementById("list" + listid + "type").value;
-		document.getElementById("frame" + listid).src = "/games/bgg/" + newtype + ".html";
+		document.getElementById("frame" + listid).src = path + newtype + ".html";
 		clearLists();
 		window.setTimeout(trimFrames, 500);
 		return;
@@ -39,7 +44,7 @@
 		document.getElementById("diff2").innerHTML = "";
 	}
 	
-	function diffLists() {
+	function diffLists(force) {
 
 		for (var i = 0; i < 2; i++) {
 			var list = lists[i];
@@ -47,7 +52,7 @@
 			var targetElt = document.getElementById("diff" + index);
 			
 			var fraim = document.getElementById("frame" + index);
-			if (list.raw === undefined || list.raw.length === 0) {
+			if (list.raw === undefined || list.raw.length === 0 || force) {
 				list.raw = fraim.contentWindow.document.body.querySelectorAll('div[data-thingid]');
 				list.numeric = Array.from(list.raw).map(entry => entry.getAttribute("data-thingid")); //,10)).sort((a,b) => a - b);
 				list.set = new Set(list.numeric);
@@ -116,23 +121,42 @@
 		tempFrag += "</li></ul>";
 		targetElt.innerHTML = tempFrag;
 	}
-	
+
+	/* onload */
+	function loady() {
+		setFromQuery();
+		document.getElementById("list1type").addEventListener("change", adjustListType);
+		document.getElementById("list2type").addEventListener("change", adjustListType);
+		document.getElementById("diffButton").addEventListener("click", diffLists);
+		document.getElementById("clearButton").addEventListener("click", clearLists);
+		window.setTimeout(trimFrames, 50);
+	}
+
 	function setFromQuery() {
 		if (window.location.search) {// && parseInt(window.location.search.split("?")[1],10) > 0) {
 			var searchParams = new URLSearchParams(window.location.search);
 			var list = 1;
 			for (var [key, value] of searchParams.entries()) {
-				document.getElementById("list" + list + "type").value = key;
-				//document.getElementById("list" + list + "id").value = parseInt(value,10);
+				if (list <= 2) {
+					document.getElementById("list" + list + "type").value = key;
+					lists[list - 1].type = key;
+					document.getElementById("frame" + list).src = path + key + ".html" + (value ? "?" + value : "");
+					if (value)
+						lists[list - 1].ids = value.split(",");
+					else
+						lists[list - 1].ids = [];
+					list++;
+				}
 			}
-			//also autoload.
-			window.setTimeout(diffLists, 1000);
 		}
+		setURL();
+		//also autoload.
+		window.setTimeout(diffLists, 1000);
 	}
 
 	function setThings() {
 		var entries = document.getElementsByClassName("entry");
-		var elen = Math.min(entries.length,100);
+		var elen = Math.min(entries.length,20);
 		var entryIds = [];
 		for (var e = 0; e < elen; e++) {
 			var ide;
@@ -153,32 +177,18 @@
 		}
 	}
 	
-	/* onload */
-	function loady() {
-		setFromQuery();
-		document.getElementById("list1type").addEventListener("change", adjustListType);
-		document.getElementById("list2type").addEventListener("change", adjustListType);
-		document.getElementsByTagName("form")[0].addEventListener("submit", function(e) {
-			e.preventDefault();
-			diffLists();
-			return false;
-		});
-		window.setTimeout(diffLists, 1000);
-		window.setTimeout(trimFrames, 50);
-		setURL();
-	}
-
-	function setURL(toId1,toId2,toIdList) {
+	function setURL() {
 		//You can pass in any number of arguments.
-		/*
-		if (typeof toId1 == "undefined")
-			toId1 = defaultGeeklist;
-		if (typeof toId2 == "undefined")
-			toId2 = defaultFamily;
-		if (toId1) {
-			document.getElementById("urlHint").innerHTML = baseFile + '?' + toId1;
-			document.getElementById("urlHint").href = baseFile + '?' + toId1;
+		
+		if (lists[0].type) {
+			var ref = baseFile + "?" + lists[0].type + (lists[0].ids.length > 0  && lists[0].ids[0] ? "=" + lists[0].ids.join(",") : "");
+			if (lists[1].type) {
+				ref += "&" + lists[1].type + (lists[1].ids.length > 0 && lists[1].ids[0] ? "=" + lists[1].ids.join(",") : "");
+			}
+			document.getElementById("urlHint").innerHTML = ref;
+			document.getElementById("urlHint").href = ref;
 		}
+		/*
 		if (toIdList) {
 			document.getElementById("thingURL").innerHTML = base + 'things.html?' + toIdList;
 			document.getElementById("thingURL").href = base + 'things.html?' + toIdList;
@@ -186,7 +196,7 @@
 		} else {
 			document.getElementById("thingURLWrapper").style.display = "none";
 		}
-			*/
+		*/
 	}
 	
 	window.onload = loady;

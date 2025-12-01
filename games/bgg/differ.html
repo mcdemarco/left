@@ -16,7 +16,8 @@ BoardGameGeek list differ by fiddly_bits.
     <p class="unwrap">
       <span>The first list is a 
 	<select id="list1type" data-listnum="1">
-	  <option value="geeklist" selected>geeklist</option>
+	  <option disabled selected>Select a type</option>
+	  <option value="geeklist">geeklist</option>
 	  <option value="family">family</option>
 	  <option value="collection">collection</option>
 	  <option value="things">list of things</option>
@@ -25,22 +26,25 @@ BoardGameGeek list differ by fiddly_bits.
       &nbsp;
       <span>The second list is a 
 	<select id="list2type" data-listnum="2">
+	  <option disabled selected>Select a type</option>
 	  <option value="geeklist">geeklist</option>
-	  <option value="family" selected>family</option>
+	  <option value="family">family</option>
 	  <option value="collection">collection</option>
 	  <option value="things">list of things</option>
 	</select>.
       </span>
       &nbsp;
-      <input type="submit" value="Diff" />
+      <button type="button" id="diffButton">Diff</button>
+      &nbsp;
+      <button type="button" id="clearButton">Clear</button>
     </p>
   </form>
   
-	<p class="info">Compare between geeklists, families, things, and/or collections.  You can pass the types and IDs in with the URL, e.g., <a href="./?geeklist=351097&family=20" id="urlHint"></a>.</p>
-	<p class="info" id="thingURLWrapper" style="display:none;">You can pass the first 100 of any column of games to the thing sorter with the URL <a id="thingURL" href="#"></a></p>
+	<p class="info">Compare between geeklists, families, things, and/or collections.  You can pass the types and (optionally) the IDs in with the URL, e.g., <a href="#" id="urlHint"></a>.</p>
+	<p class="info" id="thingURLWrapper" style="display:none;">You can pass the first 20 of any column of games to the thing sorter with the URL <a id="thingURL" href="#"></a></p>
 
 
-	<iframe id="frame1" src="/games/bgg/geeklist.html"></iframe><iframe id="frame2" src="/games/bgg/family.html"></iframe>
+	<iframe id="frame1" src=""></iframe><iframe id="frame2" src=""></iframe>
 	<hr />
 
 	<div id="main_content">

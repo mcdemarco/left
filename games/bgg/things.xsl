@@ -149,7 +149,7 @@
 </xsl:template>
 
 	<xsl:template mode="entry" match="item">
-		<div class="entry">
+		<div class="entry" data-thingid="{@id}">
 			<h3>
 				<a href="https://boardgamegeek.com/thing/{@id}">
 					<xsl:value-of select="(name[1])/@value" />

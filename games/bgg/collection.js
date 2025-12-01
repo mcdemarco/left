@@ -81,7 +81,7 @@
 
 	function setThings() {
 		var entries = document.getElementsByClassName("entry");
-		var elen = Math.min(entries.length,100);
+		var elen = Math.min(entries.length,20);//new limit
 		var entryIds = [];
 		for (var e = 0; e < elen; e++) {
 			var ide;

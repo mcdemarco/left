@@ -183,7 +183,7 @@
 	function setURL(toId,entryIds) {
 		var toIdList;
 		if (entryIds && entryIds.length)
-			toIdList = entryIds.slice(0,100).join(",");
+			toIdList = entryIds.slice(0,20).join(",");
 		//You can pass in any number of arguments.
 		if (typeof toId == "undefined")
 			toId = defaultId;
@@ -200,9 +200,9 @@
 			document.getElementById("thingURLWrapper").style.display = "none";
 		}
 
-		while (entryIds && entryIds.length > 100) {
-			entryIds = entryIds.slice(100);
-			toIdList = entryIds.slice(0,100);
+		while (entryIds && entryIds.length > 20) {
+			entryIds = entryIds.slice(20);
+			toIdList = entryIds.slice(0,20);
 			var toIdLength = toIdList.length;
 			toIdList = toIdList.join(",");
 			const txt = document.createTextNode(" ");

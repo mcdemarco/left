@@ -68,7 +68,7 @@
 
 	function setThings() {
 		var entries = document.getElementsByClassName("entry");
-		var elen = Math.min(entries.length,100);
+		var elen = Math.min(entries.length,20);
 		var entryIds = [];
 		for (var e = 0; e < elen; e++) {
 			var ide;

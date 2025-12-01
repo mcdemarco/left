@@ -1,5 +1,5 @@
 //
-//fetch a family with a cors proxy; sort and display it with xslt (so oldskool!) 
+//fetch things with a cors proxy; sort and display it with xslt (so oldskool!) 
 //
 
 (function () {
@@ -7,7 +7,7 @@
 	var thingStatus = {};
 	var minutes = 5; //Don't repeat successful requests within this number of minutes.
 	//The api doesn't always respond with the goods.
-	var waitMessage = "Your request for this thing has been accepted and will be processed.";
+	var waitMessage = "Your request for these things has been accepted and will be processed.";
 	//Requires a proxy because the BGG API is broken in yet another way.
 	var base = location.protocol + "//" + location.host + "/games/bgg/";
 	var baseFile = base + "things.html";
