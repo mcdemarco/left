@@ -29,8 +29,14 @@
 		}
 	}
 
-	function getThingi() {
-		var thingId = document.getElementById("sorteeIds").value;
+	function getSortStuff() {
+		var thingId = parseID(document.getElementById("sorteeIds").value);
+		if (thingId == -1)
+			return;
+		else if (thingId == 0)  {
+			alert("Bad ids!");
+			return;
+		}
 
 		//Force stats if necessary.
 		if (document.getElementById("sortBy").value == "rank" ||
@@ -58,32 +64,7 @@
 			requestSortStuff(thingId,stats);
 		}
 	}
-
-	function setFromQuery() {
-		if (window.location.search && window.location.search.split("?")[1].length > 0) {
-			document.getElementById("sorteeIds").value = window.location.search.split("?")[1];
-			//also autoload.
-			getThingi();
-		}
-	}
 	
-	/* onload */
-	function loady() {
-		//Don't need to wait for load for the stylesheet, but for the others.
-		requestStylesheet();
-		setFromQuery();
-		document.getElementById("sortBy").addEventListener("change", adjustAscending);
-		document.getElementsByTagName("form")[0].addEventListener("submit", function(e) {
-			e.preventDefault();
-			getThingi();
-			return false;
-		});
-		document.getElementsByTagName("form")[0].addEventListener("change", function(e) {
-			getThingi();
-		});
-		setURL();
-	}
-
 	window.onload = loady;
 
 //})();

@@ -31,12 +31,11 @@
 		}
 	}
 	
-	function getCollectioni() {
-		var collectionId = document.getElementById("sorteeIds").value;
-		var parsedBySlash = collectionId.split('/'); 
-		if (parsedBySlash.length > 0)
-			collectionId = parsedBySlash[parsedBySlash.length - 1];
-		if (!collectionId) {
+	function getSortStuff() {
+		var collectionId = parseID(document.getElementById("sorteeIds").value);
+		if (collectionId == -1)
+			return;
+		else if (collectionId == 0) {
 			alert("Bad username or URL!");
 			return;
 		}
@@ -73,31 +72,6 @@
 		}
 	}
 
-	function setFromQuery() {
-		if (window.location.search && window.location.search.split("?")[1].length > 0) {
-			document.getElementById("sorteeIds").value = window.location.search.split("?")[1];
-			//also autoload.
-			getCollectioni();
-		}
-	}
-	
-	/* onload */
-	function loady() {
-		//Don't need to wait for load for the stylesheet, but for the others.
-		requestStylesheet();
-		setFromQuery();
-		document.getElementById("sortBy").addEventListener("change", adjustAscending);
-		document.getElementsByTagName("form")[0].addEventListener("submit", function(e) {
-			e.preventDefault();
-			getCollectioni();
-			return false;
-		});
-		document.getElementsByTagName("form")[0].addEventListener("change", function(e) {
-			getCollectioni();
-		});
-		setURL();
-	}
-
-	window.onload = loady;
+  window.onload = loady;
 
 //})();

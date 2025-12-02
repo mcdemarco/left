@@ -87,6 +87,42 @@ function getBaseFile() {
 	return getBase() + sortee[sorteeKey].file;
 }
 
+/* onload */
+function loady() {
+	//Don't need to wait for load for the stylesheet, but for the others.
+	requestStylesheet();
+	setFromQuery();
+	document.getElementById("sortBy").addEventListener("change", adjustAscending);
+	document.getElementsByTagName("form")[0].addEventListener("submit", function(e) {
+		e.preventDefault();
+		getSortStuff();
+		return false;
+	});
+	document.getElementsByTagName("form")[0].addEventListener("change", function(e) {
+		getSortStuff();
+	});
+	setURL();
+}
+
+function parseID(protoId) {
+	if (protoId === "")
+		return -1;
+	if (sorteeKey === "things") {
+		//No-op.  Not clear if I'll call this at all.
+		return protoId;
+	} else if (sorteeKey === "family" || sorteeKey === "geeklist") {
+		if ((protoId.split(sorteeKey + "/")).length > 1)
+			protoId = protoId.split(sorteeKey + "/")[1].split("/")[0];
+		if (parseInt(protoId,10) > 0)
+			return parseInt(protoId,10);
+	} else if (sorteeKey === "collection") {
+		var parsedBySlash = protoId.split('/'); 
+		if (parsedBySlash.length > 0)
+			return parsedBySlash[parsedBySlash.length - 1];
+	}
+	//else
+	return 0;
+}
 
 function requestStylesheet() {
 	//Fetch stylesheet.
@@ -139,6 +175,24 @@ function requestSortStuff(sortStuffId,stats,restriction,comments) {
 		}
 */
 
+function setFromQuery() {
+	if (window.location.search && window.location.search.split("?")[1].length > 0) {
+		var args = window.location.search.split("?")[1];
+		//When ids are text or comma-separated lists don't parseInt.
+		var listId = (sorteeKey === "things" || sorteeKey === "collection") ? args : parseInt(args,10);
+		document.getElementById("sorteeIds").value = listId;
+
+		//check for sort field
+		if (args) {
+			var sortByVal = args.split("sort=")[1];
+			if (sortByVal)
+				document.getElementById("sortBy").value = sortByVal;
+		}
+		//also autoload.
+		getSortStuff();
+	}
+}
+
 	function transformAndWrite(sortStuffXML) {
 		writeSortStuff("");
 		var fragment;
@@ -189,7 +243,7 @@ function requestSortStuff(sortStuffId,stats,restriction,comments) {
 
 
 	/*
-
+		//Still using the one in the child files.
 	function getSortStuffi() {
 		var sortStuffId = document.getElementById("sorteeIds").value;
 		var parsedBySlash = sortStuffId.split('/'); 
@@ -230,31 +284,7 @@ function requestSortStuff(sortStuffId,stats,restriction,comments) {
 			requestSortStuff(sortStuffId,stats,restriction);
 		}
 	}
-
-	function setFromQuery() {
-		if (window.location.search && window.location.search.split("?")[1].length > 0) {
-			document.getElementById("sorteeIds").value = window.location.search.split("?")[1];
-			//also autoload.
-			getSortStuffi();
-		}
-	}
 	
-	// onload
-	function loady() {
-		//Don't need to wait for load for the stylesheet, but for the others.
-		requestStylesheet();
-		setFromQuery();
-		document.getElementById("sortBy").addEventListener("change", adjustAscending);
-		document.getElementsByTagName("form")[0].addEventListener("submit", function(e) {
-			e.preventDefault();
-			getSortStuffi();
-			return false;
-		});
-		document.getElementsByTagName("form")[0].addEventListener("change", function(e) {
-			getSortStuffi();
-		});
-		setURL();
-	}
 
 */
 
