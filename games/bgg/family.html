@@ -1,54 +1,55 @@
 <html>
 <head>
-<title>Sort Families</title>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-<!--
-Based on a BoardGameGeek geeklist sorter by fiddly_bits.
--->
-<link href="sort.css" rel="stylesheet" />
-<script type="text/javascript" src="family.js"></script>
+  <title>Sort Families</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <!--
+      Based on a BoardGameGeek geeklist sorter by fiddly_bits.
+    -->
+  <link href="sort.css" rel="stylesheet" />
+  <script type="text/javascript" src="sort.js"></script>
+  <script type="text/javascript" src="family.js"></script>
 </head>
 <body class="family">
   <h1>Family Sorter</h1>
 
-	<form>
-					<p class="unwrap">
-						<span>Sort family <input type="text" placeholder="ID or URL" id="familyIdINPUT" value="" /></span>
-						<span>in order by 
-							<select id="sortBy">
-								<option value="alpha">Alphabetical</option>
-								<option value="date" selected>Date Created</option>
-								<option value="manual">Default</option>
-								<option value="type">Type</option>
-							</select>
-						</span>
-						<span>
-									<input type="checkbox" id="ascending" /> ascending
-						</span>
-						<span>
-									<input type="checkbox" id="images" title="show image" checked /> image
-						</span>
-						<input type="submit" value="Sort" />
-						<input type="hidden" id="listtype" name="listtype" value="family" />
-						<input type="hidden" id="parsedids" name="parsedids" value="" />
-					</p>
-	</form>
+  <form>
+    <p class="unwrap">
+      <span>Sort family <input type="text" placeholder="ID or URL" id="sorteeIds" value="" /></span>
+      <span>in order by 
+	<select id="sortBy">
+	  <option value="alpha">Alphabetical</option>
+	  <option value="date" selected>Date Created</option>
+	  <option value="manual">Default</option>
+	  <option value="type">Type</option>
+	</select>
+      </span>
+      <span>
+	<input type="checkbox" id="ascending" /> ascending
+      </span>
+      <span>
+	<input type="checkbox" id="images" title="show image" checked /> image
+      </span>
+      <input type="submit" value="Sort" />
+      <input type="hidden" id="listtype" name="listtype" value="family" />
+      <input type="hidden" id="parsedids" name="parsedids" value="" />
+    </p>
+  </form>
 
-	<p class="info">You can pass the family ID in with the URL, e.g., <a href="./?4024" id="urlHint"></a>.</p>
-	<p class="info" id="thingURLWrapper" style="display:none;">You can pass the first 20 of these games to the thing sorter with the URL <a id="thingURL" href="#"></a><br/></p>
+  <p class="info">You can pass the family ID in with the URL, e.g., <a href="./?4024" id="urlHint"></a>.</p>
+  <p class="info" id="thingURLWrapper" style="display:none;">You can pass the first 20 of these games to the thing sorter with the URL <a id="thingURL" href="#"></a><br/></p>
 
-	<div id="main_content">
-					<div id="family">
-					</div>
-	</div>
+  <div id="main_content">
+    <div id="family">
+    </div>
+  </div>
 
-	<p class="info">Rank and rating are not included because the API does not return that information with the family.</p>
+  <p class="info">Rank and rating are not included because the API does not return that information with the family.</p>
 
-	<hr />
+  <hr />
 
-	<cite id="footer">
-		By mcd (<a href="http://boardgamegeek.com/user/fiddly_bits">fiddly_bits</a>) | <a href="./">about</a><br>
-		<img alt="Powered by BoardGameGeek logo" src="powered.png">
-	</cite>
+  <cite id="footer">
+    By mcd (<a href="http://boardgamegeek.com/user/fiddly_bits">fiddly_bits</a>) | <a href="./">about</a><br>
+    <img alt="Powered by BoardGameGeek logo" src="powered.png">
+  </cite>
 </body>
 </html>

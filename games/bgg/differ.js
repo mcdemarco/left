@@ -117,7 +117,7 @@
 			lists[5].raw.forEach(item => lists[5].html.push( item.querySelector("h3").innerHTML ));
 			//displayHtml(lists[3].html, targetElt1);
 
-			setURL();
+			setDiffURL();
 
 		} else {
 			//Already diffed and dusted.
@@ -158,23 +158,9 @@
 				}
 			}
 		}
-		setURL();
+		setDiffURL();
 		//also autoload.
 		window.setTimeout(diffLists, 5000);
-	}
-
-	function setThings() {
-		var entries = document.getElementsByClassName("entry");
-		var elen = Math.min(entries.length,20);
-		var entryIds = [];
-		for (var e = 0; e < elen; e++) {
-			var ide;
-			if (entries[e])
-				ide = entries[e].getAttribute("data-thingid");
-			if (ide)
-				entryIds.push(ide);
-		}
-		setURL(entryIds.join(","));
 	}
 
 	function trimFrames() {
@@ -188,7 +174,7 @@
 		}
 	}
 	
-	function setURL(toIdList) {
+	function setDiffURL() {
 		//TODO: things
 		
 		if (lists[0].type) {
@@ -199,15 +185,6 @@
 			document.getElementById("urlHint").innerHTML = ref;
 			document.getElementById("urlHint").href = ref;
 		}
-		/*
-		if (toIdList) {
-			document.getElementById("thingURL").innerHTML = base + 'things.html?' + toIdList;
-			document.getElementById("thingURL").href = base + 'things.html?' + toIdList;
-			document.getElementById("thingURLWrapper").style.display = "block";
-		} else {
-			document.getElementById("thingURLWrapper").style.display = "none";
-		}
-		*/
 	}
 	
 	window.onload = loady;

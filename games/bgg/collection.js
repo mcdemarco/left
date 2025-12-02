@@ -3,6 +3,8 @@
 //
 
 (function () {
+	sorteeKey = "collection";
+
 	var collectionURL = "https://boardgamegeek.com/xmlapi2/collection?username=";
 	var collectionStatus = {};
 	var minutes = 5; //Don't repeat successful requests within this number of minutes.
@@ -15,19 +17,6 @@
 	var defaultId = "fiddly_bits";
 	//Local xsl.
 	var stylesheetURL = "collection.xsl";
-	var stylesheet;
-
-	function requestStylesheet(stylesheetURL) {
-		//Fetch stylesheet.
-		var sReq = new XMLHttpRequest();
-		sReq.addEventListener("load", sReqListener);
-		sReq.open("GET", stylesheetURL);
-		sReq.send();
-	}
-
-	function sReqListener() {
-		stylesheet = this.responseXML;
-	}
 	
 	function requestCollection(collectionId,stats,restriction) {
 		var oReq = new XMLHttpRequest();
@@ -47,7 +36,7 @@
 					collectionStatus.date = new Date();
 					collectionStatus.xml = collectionXML;
 					//This one isn't anywhere in the response.
-					collectionStatus.id = document.getElementById("userINPUT").value;
+					collectionStatus.id = document.getElementById("sorteeIds").value;
 					collectionStatus.stats = document.getElementById("stats").checked;
 					collectionStatus.restriction = document.querySelector('input[name="restrict"]:checked').value;
 					setURL(collectionStatus.id);
@@ -55,68 +44,11 @@
 				transformAndWrite(collectionXML);
 			} else {
 				//An error occurred.
-				writeCollection("<p class='message'>An error occurred" + (this.status ? ": " + this.status + (this.statusText ? " (" + this.statusText + ")" : "") : "") + ".</p>");
+				writeSortStuff("<p class='message'>An error occurred" + (this.status ? ": " + this.status + (this.statusText ? " (" + this.statusText + ")" : "") : "") + ".</p>");
 			} 
 		}	else {
-			writeCollection("<p class='loading'>Loading...</p>");
+			writeSortStuff("<p class='loading'>Loading...</p>");
 		}
-	}
-
-	function transformAndWrite(collectionXML) {
-		writeCollection("");
-		var fragment;
-		try {
-			fragment = transform(collectionXML,stylesheet);
-		} catch(e) {
-			document.getElementById("collection").innerHTML = "<p class='message'>An error occurred: " + e.name + ", " + e.message + "</p><p>(This may be due to bad data from BGG or browser-specific issues.)</p>";
-			return;
-		}
-		if (!fragment) {
-			document.getElementById("collection").innerHTML = "<p class='message'>An error occurred.</p><p>(This may be due to bad data from BGG or browser-specific issues.)</p>";
-		} else {
-			document.getElementById("collection").appendChild(fragment);
-			setThings();
-		}
-	}
-
-	function setThings() {
-		var entries = document.getElementsByClassName("entry");
-		var elen = Math.min(entries.length,20);//new limit
-		var entryIds = [];
-		for (var e = 0; e < elen; e++) {
-			var ide;
-			if (entries[e])
-				ide = entries[e].getAttribute("data-thingid");
-			if (ide)
-				entryIds.push(ide);
-		}
-		setURL(0,entryIds.join(","));
-	}
-
-	function transform(collection,stylesheet) {
-		var xmlDom;
-		var sortBy = document.getElementById("sortBy").value;
-		var ascending = document.getElementById("ascending").checked;
-		var images = document.getElementById("images").checked;
-		var comment = document.getElementById("comment").checked;
-		var stats = document.getElementById("stats").checked;
-		if (typeof XSLTProcessor == "undefined") {
-			try {
-				xmlDom = collection.transformNode(stylesheet);
-			} catch(e) {
-				xmlDom = "An error occurred (" + e.description + ").";
-			}
-		} else { //webkit
-			var xsltProcessor = new XSLTProcessor();
-			xsltProcessor.setParameter(null, "sortby", sortBy);
-			xsltProcessor.setParameter(null, "ascending", ascending);
-			xsltProcessor.setParameter(null, "images", images);
-			xsltProcessor.setParameter(null, "comment", comment);
-			xsltProcessor.setParameter(null, "stats", stats);
-			xsltProcessor.importStylesheet(stylesheet);
-			xmlDom = xsltProcessor.transformToFragment(collection, document);
-		}
-		return xmlDom;
 	}
 	
 	function adjustAscending() {
@@ -141,7 +73,7 @@
 	}
 
 	function getCollectioni() {
-		var collectionId = document.getElementById("userINPUT").value;
+		var collectionId = document.getElementById("sorteeIds").value;
 		var parsedBySlash = collectionId.split('/'); 
 		if (parsedBySlash.length > 0)
 			collectionId = parsedBySlash[parsedBySlash.length - 1];
@@ -164,8 +96,9 @@
 		var restriction = document.querySelector('input[name="restrict"]:checked').value;
 
 		//Clear old list.
-		writeCollection("");
-
+		//writeSortStuff("");
+		clearList();
+		
 		//Decide whether to make a new request.  
 		//Need a new one for a new ID (duh), restriction, or expiration (in min).
 		if (collectionStatus.id && 
@@ -183,7 +116,7 @@
 
 	function setFromQuery() {
 		if (window.location.search && window.location.search.split("?")[1].length > 0) {
-			document.getElementById("userINPUT").value = window.location.search.split("?")[1];
+			document.getElementById("sorteeIds").value = window.location.search.split("?")[1];
 			//also autoload.
 			getCollectioni();
 		}
@@ -206,31 +139,6 @@
 		setURL();
 	}
 
-	function setURL(toUser,toIdList) {
-		//You can pass in any number of arguments.
-		if (typeof toUser == "undefined")
-			toUser = defaultId;
-		else if (toUser)
-			document.getElementById("parsedids").value = toUser;
-			
-		if (toUser) {
-			document.getElementById("urlHint").innerHTML = baseFile + '?' + toUser;
-			document.getElementById("urlHint").href = baseFile + '?' + toUser;
-		}
-		
-		if (toIdList) {
-			document.getElementById("thingURL").innerHTML = base + 'things.html?' + toIdList;
-			document.getElementById("thingURL").href = base + 'things.html?' + toIdList;
-			document.getElementById("thingURLWrapper").style.display = "block";
-		} else {
-			document.getElementById("thingURLWrapper").style.display = "none";
-		}
-	}
-
-	function writeCollection(collectionString) {
-		document.getElementById("collection").innerHTML = collectionString;
-	}
-	
 	window.onload = loady;
 
 })();

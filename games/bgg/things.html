@@ -1,20 +1,21 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Sort Things</title>
-<meta charset="utf-8" /> 
-<!--
-Based on a BoardGameGeek geeklist sorter by fiddly_bits.
--->
-<link href="sort.css" rel="stylesheet" />
-<script type="text/javascript" src="things.js"></script>
+  <title>Sort Things</title>
+  <meta charset="utf-8" /> 
+  <!--
+      Based on a BoardGameGeek geeklist sorter by fiddly_bits.
+    -->
+  <link href="sort.css" rel="stylesheet" />
+  <script type="text/javascript" src="sort.js"></script>
+  <script type="text/javascript" src="things.js"></script>
 </head>
 <body class="things">
   <h1>Thing Sorter</h1>
 
 	<form>
 					<p class="unwrap">
-						<span>Sort things <input type="text" placeholder="ID list" id="thingIdsINPUT" value="" /></span>
+						<span>Sort things <input type="text" placeholder="ID list" id="sorteeIds" value="" /></span>
 						<span>in order by 
 							<select id="sortBy">
 								<option value="alpha">Alphabetical</option>

@@ -3,6 +3,8 @@
 //
 
 (function () {
+	sorteeKey = "things";
+
 	var thingURL = "https://boardgamegeek.com/xmlapi2/thing?id=";
 	var thingStatus = {};
 	var minutes = 5; //Don't repeat successful requests within this number of minutes.
@@ -15,19 +17,6 @@
 	var defaultIds = "16391,46614,7553,235697,15209,581,226080,1047,226081,171,226586,12608";
 	//Local xsl.
 	var stylesheetURL = "things.xsl";
-	var stylesheet;
-
-	function requestStylesheet(stylesheetURL) {
-		//Fetch stylesheet.
-		var sReq = new XMLHttpRequest();
-		sReq.addEventListener("load", sReqListener);
-		sReq.open("GET", stylesheetURL);
-		sReq.send();
-	}
-
-	function sReqListener() {
-		stylesheet = this.responseXML;
-	}
 	
 	function requestThing(thingId,stats) {
 		var oReq = new XMLHttpRequest();
@@ -53,48 +42,11 @@
 				transformAndWrite(thingXML);
 			} else {
 				//An error occurred.
-				writeThing("<p class='message'>An error occurred" + (this.status ? ": " + this.status + (this.statusText ? " (" + this.statusText + ")" : "") : "") + ".</p>");
+				writeSortStuff("<p class='message'>An error occurred" + (this.status ? ": " + this.status + (this.statusText ? " (" + this.statusText + ")" : "") : "") + ".</p>");
 			} 
 		}	else {
-			writeThing("<p class='loading'>Loading...</p>");
+			writeSortStuff("<p class='loading'>Loading...</p>");
 		}
-	}
-
-	function transformAndWrite(thingXML) {
-		writeThing("");
-		var fragment;
-		try {
-			fragment = transform(thingXML,stylesheet);
-		} catch(e) {
-			fragment = "<p class='message'>An error occurred: " + e.name + ", " + e.message + "</p><p>(This may be due to bad data from BGG or browser-specific issues.)</p>";
-		}
-		document.getElementById("things").appendChild(fragment);
-	}
-
-	function transform(thing,stylesheet) {
-		var xmlDom;
-		var sortBy = document.getElementById("sortBy").value;
-		var ascending = document.getElementById("ascending").checked;
-		var images = document.getElementById("images").checked;
-		var descriptions = document.getElementById("descriptions").checked;
-		var stats = document.getElementById("stats").checked;
-		if (typeof XSLTProcessor == "undefined") {
-			try {
-				xmlDom = thing.transformNode(stylesheet);
-			} catch(e) {
-				xmlDom = "An error occurred (" + e.description + ").";
-			}
-		} else { //webkit
-			var xsltProcessor = new XSLTProcessor();
-			xsltProcessor.setParameter(null, "sortby", sortBy);
-			xsltProcessor.setParameter(null, "ascending", ascending);
-			xsltProcessor.setParameter(null, "images", images);
-			xsltProcessor.setParameter(null, "descriptions", descriptions);
-			xsltProcessor.setParameter(null, "stats", stats);
-			xsltProcessor.importStylesheet(stylesheet);
-			xmlDom = xsltProcessor.transformToFragment(thing, document);
-		}
-		return xmlDom;
 	}
 	
 	function adjustAscending() {
@@ -118,7 +70,7 @@
 	}
 
 	function getThingi() {
-		var thingId = document.getElementById("thingIdsINPUT").value;
+		var thingId = document.getElementById("sorteeIds").value;
 
 		//Force stats if necessary.
 		if (document.getElementById("sortBy").value == "rank" ||
@@ -131,7 +83,7 @@
 		var stats = document.getElementById("stats").checked;
 
 		//Clear old list.
-		writeThing("");
+		clearList();
 
 		//Decide whether to make a new request.  
 		//Need a new one for a new ID (duh) or expiration (in min).
@@ -149,7 +101,7 @@
 
 	function setFromQuery() {
 		if (window.location.search && window.location.search.split("?")[1].length > 0) {
-			document.getElementById("thingIdsINPUT").value = window.location.search.split("?")[1];
+			document.getElementById("sorteeIds").value = window.location.search.split("?")[1];
 			//also autoload.
 			getThingi();
 		}
@@ -172,20 +124,6 @@
 		setURL();
 	}
 
-	function setURL(toIds) {
-		if (toIds)
-			document.getElementById("parsedids").value = toIds;
-		else
-			toIds = defaultIds;
-		
-		document.getElementById("urlHint").innerHTML = baseFile + "?" + toIds;
-		document.getElementById("urlHint").href = baseFile + "?" + toIds;
-	}
-
-	function writeThing(thingString) {
-		document.getElementById("things").innerHTML = thingString;
-	}
-	
 	window.onload = loady;
 
 })();

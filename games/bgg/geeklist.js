@@ -3,6 +3,8 @@
 //
 
 (function () {
+	sorteeKey = "geeklist";
+
 	var geeklistURL = "https://boardgamegeek.com/xmlapi/geeklist/";
 	var geeklistStatus = {};
 	var minutes = 5; //Don't repeat successful requests within this number of minutes.
@@ -18,20 +20,7 @@
 	var defaultId = 351097;
 	//Local xsl.
 	var stylesheetURL = "geeklist.xsl";
-	var stylesheet;
 
-	function requestStylesheet(stylesheetURL) {
-		//Fetch stylesheet.
-		var sReq = new XMLHttpRequest();
-		sReq.addEventListener("load", sReqListener);
-		sReq.open("GET", stylesheetURL);
-		sReq.send();
-	}
-
-	function sReqListener() {
-		stylesheet = this.responseXML;
-	}
-	
 	function requestGeeklist(geeklistId,comments) {
 		var oReq = new XMLHttpRequest();
 		oReq.addEventListener("load", reqListener);
@@ -53,58 +42,6 @@
 		}
 		transformAndWrite(geeklistXML);
 	}
-
-	function transformAndWrite(geeklistXML) {
-		clearGeeklist();
-		var fragment;
-		try {
-			fragment = transform(geeklistXML,stylesheet);
-		} catch(e) {
-			fragment = "<p class='message'>An error occurred: " + e.name + ", " + e.message + "</p><p>(This may be due to bad data from BGG or browser-specific issues.)</p>";
-		}
-		document.getElementById("geeklist").appendChild(fragment);
-		setThings();
-	}
-
-	function setThings() {
-		var entries = document.getElementsByClassName("entry");
-		var elen = Math.min(entries.length,20);
-		var entryIds = [];
-		for (var e = 0; e < elen; e++) {
-			var ide;
-			if (entries[e])
-				ide = entries[e].getAttribute("data-thingid");
-			if (ide)
-				entryIds.push(ide);
-		}
-		setURL(0,entryIds.join(","));
-	}
-
-	function transform(geeklist,stylesheet) {
-		var xmlDom;
-		var sortBy = document.getElementById("sortBy").value;
-		var ascending = document.getElementById("ascending").checked;
-		var images = false; //document.getElementById("images").checked;
-		var descriptions = document.getElementById("descriptions").checked;
-		var comments = document.getElementById("comments").checked;
-		if (typeof XSLTProcessor == "undefined") {
-			try {
-				xmlDom = geeklist.transformNode(stylesheet);
-			} catch(e) {
-				xmlDom = "An error occurred (" + e.description + ").";
-			}
-		} else { //webkit
-			var xsltProcessor = new XSLTProcessor();
-			xsltProcessor.setParameter(null, "sortby", sortBy);
-			xsltProcessor.setParameter(null, "ascending", ascending);
-			xsltProcessor.setParameter(null, "images", images);
-			xsltProcessor.setParameter(null, "descriptions", descriptions);
-			xsltProcessor.setParameter(null, "comments", comments);
-			xsltProcessor.importStylesheet(stylesheet);
-			xmlDom = xsltProcessor.transformToFragment(geeklist, document);
-		}
-		return xmlDom;
-	}
 	
 	function adjustAscending() {
 		//Switch the checkbox value on certain order selections.
@@ -124,12 +61,8 @@
 		}
 	}
 
-	function clearGeeklist() {
-		document.getElementById("geeklist").innerHTML = "";
-	}
-	
 	function getGeekli() {
-		var geeklistId = parseID(document.getElementById("geeklistIdINPUT").value);
+		var geeklistId = parseID(document.getElementById("sorteeIds").value);
 		if (geeklistId == -1)
 			return;
 		else if (geeklistId == 0)
@@ -142,7 +75,7 @@
 
 			var comments = document.getElementById("comments").checked;
 			//Clear old list.
-			clearGeeklist();
+			clearList();
 
 			//Decide whether to make a new request.  
 			//Need a new one for a new ID (duh), added comments, or expiration (in min).
@@ -174,7 +107,7 @@
 		if (window.location.search && parseInt(window.location.search.split("?")[1],10) > 0) {
 			var args = window.location.search.split("?")[1];
 			var listId = parseInt(args,10);
-			document.getElementById("geeklistIdINPUT").value = listId;
+			document.getElementById("sorteeIds").value = listId;
 			//check for sort field
 			if (listId) {
 				var sortByVal = args.split("&sort=")[1];
@@ -201,27 +134,6 @@
 			getGeekli();
 		});
 		setURL();
-	}
-
-	function setURL(toId,toIdList) {
-		//You can pass in any number of arguments.
-		if (typeof toId == "undefined")
-			toId = defaultId;
-		else if (toId)
-			document.getElementById("parsedids").value = toId;
-		
-		if (toId) {
-			document.getElementById("urlHint").innerHTML = baseFile + '?' + toId;
-			document.getElementById("urlHint").href = baseFile + '?' + toId;
-		}
-		
-		if (toIdList) {
-			document.getElementById("thingURL").innerHTML = base + 'things.html?' + toIdList;
-			document.getElementById("thingURL").href = base + 'things.html?' + toIdList;
-			document.getElementById("thingURLWrapper").style.display = "block";
-		} else {
-			document.getElementById("thingURLWrapper").style.display = "none";
-		}
 	}
 	
 	window.onload = loady;
