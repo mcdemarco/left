@@ -2,29 +2,13 @@
 //fetch a geeklist with a cors proxy; sort and display it with xslt (so oldskool!) 
 //
 
-(function () {
+//(function () {
 	sorteeKey = "geeklist";
-
-	var geeklistURL = "https://boardgamegeek.com/xmlapi/geeklist/";
-	var geeklistStatus = {};
-	var minutes = 5; //Don't repeat successful requests within this number of minutes.
-	//The api doesn't always respond with the goods.
-	var waitMessage = "Your request for this geeklist has been accepted and will be processed.";
-	//Requires a proxy because the BGG API is broken in yet another way.
-	//wore the first one out a few times, so added a spare and then my own.
-	//var corsProxy = "https://cors-anywhere.herokuapp.com/";
-	//var corsProxy = "https://galvanize-cors-proxy.herokuapp.com/";
-	var base = location.protocol + "//" + location.host + "/games/bgg/";
-	var baseFile = base + "geeklist.html";
-	var corsProxy = base + "proxy.php?csurl=";
-	var defaultId = 351097;
-	//Local xsl.
-	var stylesheetURL = "geeklist.xsl";
 
 	function requestGeeklist(geeklistId,comments) {
 		var oReq = new XMLHttpRequest();
 		oReq.addEventListener("load", reqListener);
-		oReq.open("GET", corsProxy + geeklistURL + geeklistId + (comments ? "?comments=1" : ""));
+		oReq.open("GET", corsProxy + sortee[sorteeKey].sortStuffURL + geeklistId + (comments ? "?comments=1" : ""));
 		oReq.send();
 	}
 	
@@ -34,31 +18,13 @@
 		//the stylesheet will display that, but we still want to know.
 		if (geeklistXML.firstChild.nodeName == "geeklist") {
 			//This is worth saving.
-			geeklistStatus.date = new Date();
-			geeklistStatus.xml = geeklistXML;
-			geeklistStatus.id = parseInt(geeklistXML.firstChild.getAttribute("id"),10);
-			geeklistStatus.comments = document.getElementById("comments").checked;
-			setURL(geeklistStatus.id);
+			sortStuffStatus.date = new Date();
+			sortStuffStatus.xml = geeklistXML;
+			sortStuffStatus.id = parseInt(geeklistXML.firstChild.getAttribute("id"),10);
+			sortStuffStatus.comments = document.getElementById("comments").checked;
+			setURL(sortStuffStatus.id);
 		}
 		transformAndWrite(geeklistXML);
-	}
-	
-	function adjustAscending() {
-		//Switch the checkbox value on certain order selections.
-		switch(document.getElementById("sortBy").value) {
-			case "alpha":
-			case "manual":
-			case "type":
-			case "user":
-				document.getElementById("ascending").checked = true;
-				break;
-			case "comments":
-			case "thumbs":
-				document.getElementById("ascending").checked = false;
-				break;
-			default:
-				break;
-		}
 	}
 
 	function getGeekli() {
@@ -79,15 +45,15 @@
 
 			//Decide whether to make a new request.  
 			//Need a new one for a new ID (duh), added comments, or expiration (in min).
-			if (geeklistStatus.id && 
-					geeklistStatus.id == geeklistId &&
-					(geeklistStatus.comments || !comments) &&
-					new Date() - geeklistStatus.date < 60000 * minutes) {
+			if (sortStuffStatus.id && 
+					sortStuffStatus.id == geeklistId &&
+					(sortStuffStatus.comments || !comments) &&
+					new Date() - sortStuffStatus.date < 60000 * minutes) {
 				//Re-transform the old data.
-				transformAndWrite(geeklistStatus.xml);
+				transformAndWrite(sortStuffStatus.xml);
 			} else {
 				//Fetch new data.
-				requestGeeklist(geeklistId,comments);
+				requestSortStuff(geeklistId,false,false,comments);
 			}
 		}
 	}
@@ -122,7 +88,7 @@
 	/* onload */
 	function loady() {
 		//Don't need to wait for load for the stylesheet, but for the others.
-		requestStylesheet(stylesheetURL);
+		requestStylesheet();
 		setFromQuery();
 		document.getElementById("sortBy").addEventListener("change", adjustAscending);
 		document.getElementsByTagName("form")[0].addEventListener("submit", function(e) {
@@ -138,4 +104,4 @@
 	
 	window.onload = loady;
 
-})();
+//})();

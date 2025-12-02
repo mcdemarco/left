@@ -2,28 +2,8 @@
 //fetch a collection with a cors proxy; sort and display it with xslt (so oldskool!) 
 //
 
-(function () {
+//(function () {
 	sorteeKey = "collection";
-
-	var collectionURL = "https://boardgamegeek.com/xmlapi2/collection?username=";
-	var collectionStatus = {};
-	var minutes = 5; //Don't repeat successful requests within this number of minutes.
-	//The api doesn't always respond with the goods.
-	var waitMessage = "Your request for this collection has been accepted and will be processed. Please try again later for access.";
-	//Requires a proxy because the BGG API is broken in yet another way.
-	var base = location.protocol + "//" + location.host + "/games/bgg/";
-	var baseFile = base + "collection.html";
-	var corsProxy = base + "proxy.php?csurl=";
-	var defaultId = "fiddly_bits";
-	//Local xsl.
-	var stylesheetURL = "collection.xsl";
-	
-	function requestCollection(collectionId,stats,restriction) {
-		var oReq = new XMLHttpRequest();
-		oReq.addEventListener("readystatechange", reqListener);
-		oReq.open("GET", corsProxy + encodeURIComponent(collectionURL + collectionId + (stats ? "&stats=1" : "") + (restriction && restriction != "all" ? "&" + restriction + "=1" : "")));
-		oReq.send();
-	}
 	
 	function reqListener() {
 		if (this.readyState == XMLHttpRequest.DONE) {
@@ -33,13 +13,13 @@
 				//the stylesheet will display that, but we still want to know.
 				if (collectionXML.firstChild.nodeName == "items") {
 					//This is worth saving.
-					collectionStatus.date = new Date();
-					collectionStatus.xml = collectionXML;
+					sortStuffStatus.date = new Date();
+					sortStuffStatus.xml = collectionXML;
 					//This one isn't anywhere in the response.
-					collectionStatus.id = document.getElementById("sorteeIds").value;
-					collectionStatus.stats = document.getElementById("stats").checked;
-					collectionStatus.restriction = document.querySelector('input[name="restrict"]:checked').value;
-					setURL(collectionStatus.id);
+					sortStuffStatus.id = document.getElementById("sorteeIds").value;
+					sortStuffStatus.stats = document.getElementById("stats").checked;
+					sortStuffStatus.restriction = document.querySelector('input[name="restrict"]:checked').value;
+					setURL(sortStuffStatus.id);
 				}
 				transformAndWrite(collectionXML);
 			} else {
@@ -51,27 +31,6 @@
 		}
 	}
 	
-	function adjustAscending() {
-		//Switch the checkbox value on certain order selections.
-		switch(document.getElementById("sortBy").value) {
-			case "alpha":
-			case "manual":
-			case "playtime":
-			case "rank":
-			case "frank":
-				document.getElementById("ascending").checked = true;
-				break;
-			case "plays":
-			case "myrating":
-			case "rating":
-			case "ratings":
-				document.getElementById("ascending").checked = false;
-				break;
-			default:
-				break;
-		}
-	}
-
 	function getCollectioni() {
 		var collectionId = document.getElementById("sorteeIds").value;
 		var parsedBySlash = collectionId.split('/'); 
@@ -101,16 +60,16 @@
 		
 		//Decide whether to make a new request.  
 		//Need a new one for a new ID (duh), restriction, or expiration (in min).
-		if (collectionStatus.id && 
-				collectionStatus.id == collectionId &&
-				(collectionStatus.stats || !stats) &&
-				(collectionStatus.restriction == restriction) &&
-				new Date() - collectionStatus.date < 60000 * minutes) {
+		if (sortStuffStatus.id && 
+				sortStuffStatus.id == collectionId &&
+				(sortStuffStatus.stats || !stats) &&
+				(sortStuffStatus.restriction == restriction) &&
+				new Date() - sortStuffStatus.date < 60000 * minutes) {
 			//Re-transform the old data.
-			transformAndWrite(collectionStatus.xml);
+			transformAndWrite(sortStuffStatus.xml);
 		} else {
 			//Fetch new data.
-			requestCollection(collectionId,stats,restriction);
+			requestSortStuff(collectionId,stats,restriction);
 		}
 	}
 
@@ -125,7 +84,7 @@
 	/* onload */
 	function loady() {
 		//Don't need to wait for load for the stylesheet, but for the others.
-		requestStylesheet(stylesheetURL);
+		requestStylesheet();
 		setFromQuery();
 		document.getElementById("sortBy").addEventListener("change", adjustAscending);
 		document.getElementsByTagName("form")[0].addEventListener("submit", function(e) {
@@ -141,4 +100,4 @@
 
 	window.onload = loady;
 
-})();
+//})();

@@ -34,17 +34,42 @@ var sortee = {
 		divId:  "things",
 		sortStuffURL: "https://boardgamegeek.com/xmlapi2/thing?id=", //thingURL
 		defaultIds: ["16391", "46614", "7553", "235697", "15209", "581", "226080", "1047", "226081", "171", "226586", "12608"], //??
-	},
-	common: {
-		minutes: 5, //Don't repeat successful requests within this number of minutes. The api doesn't always respond.
-		waitMessage: "Your request has been accepted and will be processed. Please try again later for access.",
-		path: "/games/bgg/",
 	}
 };
 
-//Requires a proxy because the BGG API is broken in yet another way.
 var sorteeKey; //set in caller
 var stylesheet;
+//Requires a proxy because the BGG API is broken in yet another way.
+var corsProxy = getBase() + "proxy.php?csurl=";
+var minutes = 5;  //Don't repeat successful requests within this number of minutes. The api doesn't always respond.
+//var waitMessage = "Your request has been accepted and will be processed. Please try again later for access.",
+
+var	sortStuffStatus = {};
+
+function adjustAscending() {
+	//Switch the checkbox value on certain order selections.
+	switch(document.getElementById("sortBy").value) {
+	case "alpha":
+	case "frank":
+	case "manual":
+	case "playtime":
+	case "rank":
+	case "type":
+	case "user":
+		document.getElementById("ascending").checked = true;
+		break;
+	case "comments":
+	case "myrating":
+	case "plays":
+	case "rating":
+	case "ratings":
+	case "thumbs":
+		document.getElementById("ascending").checked = false;
+		break;
+	default:
+		break;
+	}
+}
 
 function appendSortStuff(fragment) {
 	document.getElementById(sortee[sorteeKey].divId).appendChild(fragment);
@@ -55,26 +80,17 @@ function clearList() {
 }
 
 function getBase() {
-	return location.protocol + "//" + location.host + sortee.common.path;
+	return location.protocol + "//" + location.host + "/games/bgg/";
 }
 
 function getBaseFile() {
 	return getBase() + sortee[sorteeKey].file;
 }
 
-/*
 
-var base = location.protocol + "//" + location.host + sortee.common.path;
-var baseFile = base + sortee[sorteeKey].file;
-var corsProxy = base + "proxy.php?csurl=";
-var defaultId = sortee[sorteeKey].defaultIds[0];
-
-var	sortStuffStatus = {};
-
-*/
-
-function requestStylesheet(stylesheetURL) {
+function requestStylesheet() {
 	//Fetch stylesheet.
+	var stylesheetURL = sortee[sorteeKey].stylesheetURL;
 	var sReq = new XMLHttpRequest();
 	sReq.addEventListener("load", sReqListener);
 	sReq.open("GET", stylesheetURL);
@@ -84,14 +100,18 @@ function requestStylesheet(stylesheetURL) {
 function sReqListener() {
 	stylesheet = this.responseXML;
 }
-/*
-function requestSortStuff(sortStuffId,stats,restriction) {
+
+function requestSortStuff(sortStuffId,stats,restriction,comments) {
 	var oReq = new XMLHttpRequest();
-	oReq.addEventListener("readystatechange", reqListener);
-	oReq.open("GET", corsProxy + encodeURIComponent(sortee[sorteeKey].sortStuffURL + sortStuffId + (stats ? "&stats=1" : "") + (restriction && restriction != "all" ? "&" + restriction + "=1" : "")));
+	if (sorteeKey === "family" || sorteeKey === "geeklist")
+		oReq.addEventListener("load", reqListener);
+	else
+		oReq.addEventListener("readystatechange", reqListener);
+	oReq.open("GET", corsProxy + encodeURIComponent(sortee[sorteeKey].sortStuffURL + sortStuffId + (comments ? "?comments=1" : "") + (stats ? "&stats=1" : "") + (restriction && restriction != "all" ? "&" + restriction + "=1" : "")));
 	oReq.send();
 }
-	
+
+/*
 	function reqListener() {
 		if (this.readyState == XMLHttpRequest.DONE) {
 			if (this.status == 200 || this.status == 202) {
@@ -167,29 +187,8 @@ function requestSortStuff(sortStuffId,stats,restriction) {
 		return xmlDom;
 	}
 
-/*
 
-
-	function adjustAscending() {
-		//Switch the checkbox value on certain order selections.
-		switch(document.getElementById("sortBy").value) {
-			case "alpha":
-			case "manual":
-			case "playtime":
-			case "rank":
-			case "frank":
-				document.getElementById("ascending").checked = true;
-				break;
-			case "plays":
-			case "myrating":
-			case "rating":
-			case "ratings":
-				document.getElementById("ascending").checked = false;
-				break;
-			default:
-				break;
-		}
-	}
+	/*
 
 	function getSortStuffi() {
 		var sortStuffId = document.getElementById("sorteeIds").value;
@@ -243,7 +242,7 @@ function requestSortStuff(sortStuffId,stats,restriction) {
 	// onload
 	function loady() {
 		//Don't need to wait for load for the stylesheet, but for the others.
-		requestStylesheet(stylesheetURL);
+		requestStylesheet();
 		setFromQuery();
 		document.getElementById("sortBy").addEventListener("change", adjustAscending);
 		document.getElementsByTagName("form")[0].addEventListener("submit", function(e) {
