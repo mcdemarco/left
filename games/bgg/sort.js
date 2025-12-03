@@ -2,168 +2,266 @@
 // sort.js - common functions for my BGG sorters - m.c.de marco - fiddly_bits 
 //
 
-var sortee = {
-	collection: {
-		name: "collection",
-		file: "collection.html",
-		stylesheetURL: "collection.xsl",
-		divId:  "collection",
-		sortStuffURL: "https://boardgamegeek.com/xmlapi2/collection?username=", //collectionURL
-		defaultIds: ["fiddly_bits"], //my collection
-	},
-	family: {
-		name: "family",
-		file: "family.html",
-		stylesheetURL: "family.xsl",
-		divId:  "family",
-		sortStuffURL: "https://boardgamegeek.com/xmlapi2/family?id=", //familyURL
-		defaultIds: ["20"], //pyramid family
-	},
-	geeklist: {
-		name: "geeklist",
-		file: "geeklist.html",
-		stylesheetURL: "geeklist.xsl",
-		divId:  "geeklist",
-		sortStuffURL: "https://boardgamegeek.com/xmlapi/geeklist/", //geeklistURL
-		defaultIds: ["351097"], //Games you can play with 504?
-	},
-	things: {
-		name: "things",
-		file: "things.html",
-		stylesheetURL: "things.xsl",
-		divId:  "things",
-		sortStuffURL: "https://boardgamegeek.com/xmlapi2/thing?id=", //thingURL
-		defaultIds: ["16391", "46614", "7553", "235697", "15209", "581", "226080", "1047", "226081", "171", "226586", "12608"], //??
+(function () {
+	
+	var sortee = {
+		collection: {
+			name: "collection",
+			file: "collection.html",
+			stylesheetURL: "collection.xsl",
+			divId:  "collection",
+			sortStuffURL: "https://boardgamegeek.com/xmlapi2/collection?username=", //collectionURL
+			defaultIds: ["fiddly_bits"], //my collection
+			badMsg: "Bad username or URL!"
+		},
+		family: {
+			name: "family",
+			file: "family.html",
+			stylesheetURL: "family.xsl",
+			divId:  "family",
+			sortStuffURL: "https://boardgamegeek.com/xmlapi2/family?id=", //familyURL
+			defaultIds: ["20"], //pyramid family
+			badMsg: "Bad family id or URL!"
+		},
+		geeklist: {
+			name: "geeklist",
+			file: "geeklist.html",
+			stylesheetURL: "geeklist.xsl",
+			divId:  "geeklist",
+			sortStuffURL: "https://boardgamegeek.com/xmlapi/geeklist/", //geeklistURL
+			defaultIds: ["351097"], //Games you can play with 504?
+			badMsg: "Bad geeklist id or URL!"
+		},
+		plays: {
+			name: "plays",
+			file: "plays.html",
+			stylesheetURL: "plays.xsl",
+			divId:  "plays",
+			sortStuffURL: "https://boardgamegeek.com/xmlapi2/plays?username=", //playsURL
+			defaultIds: ["fiddly_bits"], //my plays
+			badMsg: "Bad username or URL!"
+		},
+		things: {
+			name: "things",
+			file: "things.html",
+			stylesheetURL: "things.xsl",
+			divId:  "things",
+			sortStuffURL: "https://boardgamegeek.com/xmlapi2/thing?id=", //thingURL
+			defaultIds: ["16391", "46614", "7553", "235697", "15209", "581", "226080", "1047", "226081", "171", "226586", "12608"], //??
+			badMsg: "Bad ids!"
+		}
+	};
+
+	var sorteeKey; //set in loader
+	var stylesheet;
+	//Requires a proxy because the BGG API is broken in yet another way.
+	var corsProxy = getBase() + "proxy.php?csurl=";
+	var minutes = 5;  //Don't repeat successful requests within this number of minutes. The api doesn't always respond.
+	//var waitMessage = "Your request has been accepted and will be processed. Please try again later for access.",
+
+	var	sortStuffStatus = {};
+
+	function adjustAscending() {
+		//Switch the checkbox value on certain order selections.
+		switch(document.getElementById("sortBy").value) {
+		case "alpha":
+		case "frank":
+		case "manual":
+		case "playtime":
+		case "rank":
+		case "type":
+		case "user":
+			document.getElementById("ascending").checked = true;
+			break;
+		case "comments":
+		case "myrating":
+		case "plays":
+		case "rating":
+		case "ratings":
+		case "thumbs":
+			document.getElementById("ascending").checked = false;
+			break;
+		default:
+			break;
+		}
 	}
-};
 
-var sorteeKey; //set in caller
-var stylesheet;
-//Requires a proxy because the BGG API is broken in yet another way.
-var corsProxy = getBase() + "proxy.php?csurl=";
-var minutes = 5;  //Don't repeat successful requests within this number of minutes. The api doesn't always respond.
-//var waitMessage = "Your request has been accepted and will be processed. Please try again later for access.",
-
-var	sortStuffStatus = {};
-
-function adjustAscending() {
-	//Switch the checkbox value on certain order selections.
-	switch(document.getElementById("sortBy").value) {
-	case "alpha":
-	case "frank":
-	case "manual":
-	case "playtime":
-	case "rank":
-	case "type":
-	case "user":
-		document.getElementById("ascending").checked = true;
-		break;
-	case "comments":
-	case "myrating":
-	case "plays":
-	case "rating":
-	case "ratings":
-	case "thumbs":
-		document.getElementById("ascending").checked = false;
-		break;
-	default:
-		break;
+	function appendSortStuff(fragment) {
+		document.getElementById(sortee[sorteeKey].divId).appendChild(fragment);
 	}
-}
 
-function appendSortStuff(fragment) {
-	document.getElementById(sortee[sorteeKey].divId).appendChild(fragment);
-}
-
-function clearList() {
-	writeSortStuff("");
-}
-
-function getBase() {
-	return location.protocol + "//" + location.host + "/games/bgg/";
-}
-
-function getBaseFile() {
-	return getBase() + sortee[sorteeKey].file;
-}
-
-/* onload */
-function loady() {
-	//Don't need to wait for load for the stylesheet, but for the others.
-	requestStylesheet();
-	setFromQuery();
-	document.getElementById("sortBy").addEventListener("change", adjustAscending);
-	document.getElementsByTagName("form")[0].addEventListener("submit", function(e) {
-		e.preventDefault();
-		getSortStuff();
-		return false;
-	});
-	document.getElementsByTagName("form")[0].addEventListener("change", function(e) {
-		getSortStuff();
-	});
-	setURL();
-}
-
-function parseID(protoId) {
-	if (protoId === "")
-		return -1;
-	if (sorteeKey === "things") {
-		//No-op.  Not clear if I'll call this at all.
-		return protoId;
-	} else if (sorteeKey === "family" || sorteeKey === "geeklist") {
-		if ((protoId.split(sorteeKey + "/")).length > 1)
-			protoId = protoId.split(sorteeKey + "/")[1].split("/")[0];
-		if (parseInt(protoId,10) > 0)
-			return parseInt(protoId,10);
-	} else if (sorteeKey === "collection") {
-		var parsedBySlash = protoId.split('/'); 
-		if (parsedBySlash.length > 0)
-			return parsedBySlash[parsedBySlash.length - 1];
+	function clearList() {
+		writeSortStuff("");
 	}
-	//else
-	return 0;
-}
 
-function requestStylesheet() {
-	//Fetch stylesheet.
-	var stylesheetURL = sortee[sorteeKey].stylesheetURL;
-	var sReq = new XMLHttpRequest();
-	sReq.addEventListener("load", sReqListener);
-	sReq.open("GET", stylesheetURL);
-	sReq.send();
-}
+	function getBase() {
+		return location.protocol + "//" + location.host + "/games/bgg/";
+	}
 
-function sReqListener() {
-	stylesheet = this.responseXML;
-}
+	function getBaseFile() {
+		return getBase() + sortee[sorteeKey].file;
+	}
 
-function requestSortStuff(sortStuffId,stats,restriction,comments) {
-	var oReq = new XMLHttpRequest();
-	if (sorteeKey === "family" || sorteeKey === "geeklist")
-		oReq.addEventListener("load", reqListener);
-	else
+	function getSortStuff() {
+		var sortStuffId = parseID(document.getElementById("sorteeIds").value);
+		if (sortStuffId == -1)
+			return;
+		else if (sortStuffId == 0) {
+			alert(sortee[sorteeKey].badMsg);
+			return;
+		}
+
+		var stats, restriction, comments;
+
+		if (sorteeKey === "collection" || sorteeKey === "things") {
+			//Force stats if necessary.
+			if (document.getElementById("sortBy").value == "rank" ||
+					document.getElementById("sortBy").value == "frank" ||
+					document.getElementById("sortBy").value == "minplayers" ||
+					document.getElementById("sortBy").value == "maxplayers" ||
+					document.getElementById("sortBy").value == "playtime" ||
+					document.getElementById("sortBy").value == "myrating" ||
+					document.getElementById("sortBy").value == "rating" ||
+					document.getElementById("sortBy").value == "ratings" ||
+					document.getElementById("sortBy").value == "comments")
+				document.getElementById("stats").checked = true;
+			
+			stats = document.getElementById("stats").checked;
+			
+			if (sorteeKey === "collection")
+				restriction = document.querySelector('input[name="restrict"]:checked').value;
+
+		} else if (sorteeKey === "geeklist") {
+			//Force comments if necessary.
+			if (document.getElementById("sortBy").value == "comments")
+				document.getElementById("comments").checked = true;
+			
+			comments = document.getElementById("comments").checked;
+		}
+
+		//Clear old list.
+		clearList();
+
+		//Decide whether to make a new request.  
+		//Need a new one for a new ID (duh), collection restriction, geeklist comments, or expiration (in min).
+		if (sortStuffStatus.id && 
+				(sortStuffStatus.id === sortStuffId) &&
+				(! sortStuffStatus.hasOwnProperty("stats") || sortStuffStatus.stats || !stats) &&
+				(! sortStuffStatus.hasOwnProperty("restriction") || sortStuffStatus.restriction === restriction) &&
+				(! sortStuffStatus.hasOwnProperty("comments") || sortStuffStatus.comments || !comments) &&
+				new Date() - sortStuffStatus.date < 60000 * minutes) {
+
+			//Re-transform the old data.
+			console.log("Re-transforming");
+			transformAndWrite(sortStuffStatus.xml);
+			
+		} else {
+			
+			//Fetch new data.
+			console.log("Fetching new");
+			requestSortStuff(sortStuffId,stats,restriction,comments);
+
+		}
+	}
+
+	/* onload */
+	function preload() {
+		//Need to set sorteeKey.
+		sorteeKey = window.location.pathname.split(".html")[0].split("/games/bgg/")[1];
+		//Don't need to wait for load for the stylesheet, but for the others.
+		requestStylesheet();
+	}
+	
+	function load() {
+		setFromQuery();
+		document.getElementById("sortBy").addEventListener("change", adjustAscending);
+		document.getElementsByTagName("form")[0].addEventListener("submit", function(e) {
+			e.preventDefault();
+			getSortStuff();
+			return false;
+		});
+		document.getElementsByTagName("form")[0].addEventListener("change", function(e) {
+			getSortStuff();
+		});
+		setURL();
+	}
+
+	function parseID(protoId) {
+		if (protoId === "")
+			return -1;
+		if (sorteeKey === "things") {
+			//No-op.  Not clear if I'll call this at all.
+			return protoId;
+		} else if (sorteeKey === "family" || sorteeKey === "geeklist") {
+			if ((protoId.split(sorteeKey + "/")).length > 1)
+				protoId = protoId.split(sorteeKey + "/")[1].split("/")[0];
+			if (parseInt(protoId,10) > 0)
+				return parseInt(protoId,10);
+		} else if (sorteeKey === "collection" || sorteeKey === "plays") {
+			var parsedBySlash = protoId.split('/'); 
+			if (parsedBySlash.length > 0)
+				return parsedBySlash[parsedBySlash.length - 1];
+		}
+		//else
+		return 0;
+	}
+
+	function requestStylesheet() {
+		//Fetch stylesheet.
+		var stylesheetURL = sortee[sorteeKey].stylesheetURL;
+		var sReq = new XMLHttpRequest();
+		sReq.addEventListener("load", sReqListener);
+		sReq.open("GET", stylesheetURL);
+		sReq.send();
+	}
+
+	function sReqListener() {
+		stylesheet = this.responseXML;
+		load();
+	}
+
+	function requestSortStuff(sortStuffId,stats,restriction,comments) {
+		var oReq = new XMLHttpRequest();
 		oReq.addEventListener("readystatechange", reqListener);
-	oReq.open("GET", corsProxy + encodeURIComponent(sortee[sorteeKey].sortStuffURL + sortStuffId + (comments ? "?comments=1" : "") + (stats ? "&stats=1" : "") + (restriction && restriction != "all" ? "&" + restriction + "=1" : "")));
-	oReq.send();
-}
+		var URL = sortee[sorteeKey].sortStuffURL + sortStuffId + (comments ? "?comments=1" : "") + (stats ? "&stats=1" : "") + (restriction && restriction != "all" ? "&" + restriction + "=1" : "");
+		oReq.open("GET", corsProxy +  encodeURIComponent(URL));
+		oReq.send();
+	}
 
-/*
 	function reqListener() {
 		if (this.readyState == XMLHttpRequest.DONE) {
 			if (this.status == 200 || this.status == 202) {
+
 				var sortStuffXML = this.responseXML;
 				//Often the response is "wait a minute"; 
 				//the stylesheet will display that, but we still want to know.
-				if (sortStuffXML.firstChild.nodeName == "items") {
+				if (sortStuffXML.firstChild.nodeName == "items" || sortStuffXML.firstChild.nodeName == "geeklist" || sortStuffXML.firstChild.nodeName == "plays" ) {
 					//This is worth saving.
 					sortStuffStatus.date = new Date();
 					sortStuffStatus.xml = sortStuffXML;
-					//This one isn't anywhere in the response.
-					sortStuffStatus.id = document.getElementById("sorteeIds").value;
-					sortStuffStatus.stats = document.getElementById("stats").checked;
-					sortStuffStatus.restriction = document.querySelector('input[name="restrict"]:checked').value;
+
+					console.log(sortStuffXML);
+
+					if (sorteeKey === "collection") {
+						//This one isn't anywhere in the response.
+						sortStuffStatus.id = document.getElementById("sorteeIds").value;
+						sortStuffStatus.stats = document.getElementById("stats").checked;
+						sortStuffStatus.restriction = document.querySelector('input[name="restrict"]:checked').value;
+					} else if (sorteeKey === "family") {
+						sortStuffStatus.id = parseInt(sortStuffXML.firstChild.firstChild.getAttribute("id"),10);
+					} else if (sorteeKey === "geeklist") {
+						sortStuffStatus.id = parseInt(sortStuffXML.firstChild.getAttribute("id"),10);
+						sortStuffStatus.comments = document.getElementById("comments").checked;
+					} else if (sorteeKey === "plays") {
+						sortStuffStatus.id = sortStuffXML.firstChild.getAttribute("username");
+					} else if (sorteeKey === "things") {
+						sortStuffStatus.id = [].slice.call(sortStuffXML.firstChild.children).map(function(elt) {return elt.getAttribute("id");}).join(",");
+						sortStuffStatus.stats = document.getElementById("stats").checked;
+					}
+
 					setURL(sortStuffStatus.id);
 				}
+
 				transformAndWrite(sortStuffXML);
 			} else {
 				//An error occurred.
@@ -172,29 +270,28 @@ function requestSortStuff(sortStuffId,stats,restriction,comments) {
 		}	else {
 			writeSortStuff("<p class='loading'>Loading...</p>");
 		}
-		}
-*/
-
-function setFromQuery() {
-	if (window.location.search && window.location.search.split("?")[1].length > 0) {
-		var args = window.location.search.split("?")[1];
-		//When ids are text or comma-separated lists don't parseInt.
-		var listId = (sorteeKey === "things" || sorteeKey === "collection") ? args : parseInt(args,10);
-		document.getElementById("sorteeIds").value = listId;
-
-		//check for sort field
-		if (args) {
-			var sortByVal = args.split("sort=")[1];
-			if (sortByVal)
-				document.getElementById("sortBy").value = sortByVal;
-		}
-		//also autoload.
-		getSortStuff();
 	}
-}
+
+	function setFromQuery() {
+		if (window.location.search && window.location.search.split("?")[1].length > 0) {
+			var args = window.location.search.split("?")[1];
+			//When ids are text or comma-separated lists don't parseInt.
+			var listId = (sorteeKey === "collection" || sorteeKey ==="plays" || sorteeKey === "things") ? args : parseInt(args,10);
+			document.getElementById("sorteeIds").value = listId;
+
+			//check for sort field
+			if (args) {
+				var sortByVal = args.split("sort=")[1];
+				if (sortByVal)
+					document.getElementById("sortBy").value = sortByVal;
+			}
+			//also autoload.
+			getSortStuff();
+		}
+	}
 
 	function transformAndWrite(sortStuffXML) {
-		writeSortStuff("");
+		clearList();
 		var fragment;
 		try {
 			fragment = transform(sortStuffXML,stylesheet);
@@ -241,98 +338,55 @@ function setFromQuery() {
 		return xmlDom;
 	}
 
+	function setThings() {
+		var entries = document.getElementsByClassName("entry");
+		
+		var elen = Math.min(entries.length,20);//limit until I fix the thing sorter
+		var entryIds = [];
 
-	/*
-		//Still using the one in the child files.
-	function getSortStuffi() {
-		var sortStuffId = document.getElementById("sorteeIds").value;
-		var parsedBySlash = sortStuffId.split('/'); 
-		if (parsedBySlash.length > 0)
-			sortStuffId = parsedBySlash[parsedBySlash.length - 1];
-		if (!sortStuffId) {
-			alert("Bad username or URL!");
-			return;
+		for (var e = 0; e < elen; e++) {
+			var ide;
+			if (entries[e])
+				ide = entries[e].getAttribute("data-thingid");
+			if (ide)
+				entryIds.push(ide);
 		}
-		//Force stats if necessary.
-		if (document.getElementById("sortBy").value == "rank" ||
-				document.getElementById("sortBy").value == "frank" ||
-				document.getElementById("sortBy").value == "minplayers" ||
-				document.getElementById("sortBy").value == "maxplayers" ||
-				document.getElementById("sortBy").value == "playtime" ||
-				document.getElementById("sortBy").value == "myrating" ||
-				document.getElementById("sortBy").value == "rating" ||
-				document.getElementById("sortBy").value == "ratings")
-			document.getElementById("stats").checked = true;
 
-		var stats = document.getElementById("stats").checked;
-		var restriction = document.querySelector('input[name="restrict"]:checked').value;
+		setThingsURL(entryIds.join(","));
+	}
 
-		//Clear old list.
-		writeSortStuff("");
+	function setThingsURL(toIdList) {
+		//No longer overloaded with setURL.
 
-		//Decide whether to make a new request.  
-		//Need a new one for a new ID (duh), restriction, or expiration (in min).
-		if (sortStuffStatus.id && 
-				sortStuffStatus.id == sortStuffId &&
-				(sortStuffStatus.stats || !stats) &&
-				(sortStuffStatus.restriction == restriction) &&
-				new Date() - sortStuffStatus.date < 60000 * minutes) {
-			//Re-transform the old data.
-			transformAndWrite(sortStuffStatus.xml);
+		if (toIdList) {
+			var theURL = getBase() + 'things.html?' + toIdList;
+			document.getElementById("thingURL").innerHTML = theURL;
+			document.getElementById("thingURL").href = theURL;
+			document.getElementById("thingURLWrapper").style.display = "block";
 		} else {
-			//Fetch new data.
-			requestSortStuff(sortStuffId,stats,restriction);
+			document.getElementById("thingURLWrapper").style.display = "none";
+		}
+
+		//There's code in family.js to make multiple links, but I think
+		//I'd rather fix the things request to make multiple calls.
+	}
+
+	function setURL(toId) {
+		if (typeof toId == "undefined")
+			toId = sortee[sorteeKey].defaultIds.join(",");
+		else if (toId)
+			document.getElementById("parsedids").value = toId;
+		
+		if (toId) {
+			document.getElementById("urlHint").innerHTML = getBaseFile() + '?' + toId;
+			document.getElementById("urlHint").href = getBaseFile() + '?' + toId;
 		}
 	}
-	
 
-*/
-
-function setThings() {
-	var entries = document.getElementsByClassName("entry");
-	
-	var elen = Math.min(entries.length,20);//limit until I fix the thing sorter
-	var entryIds = [];
-
-	for (var e = 0; e < elen; e++) {
-		var ide;
-		if (entries[e])
-			ide = entries[e].getAttribute("data-thingid");
-		if (ide)
-			entryIds.push(ide);
+	function writeSortStuff(sortStuffString) {
+		document.getElementById(sortee[sorteeKey].divId).innerHTML= sortStuffString;
 	}
 
-	setThingsURL(entryIds.join(","));
-}
+	window.onload = preload;
 
-function setThingsURL(toIdList) {
-	//No longer overloaded with setURL.
-
-	if (toIdList) {
-		var theURL = getBase() + 'things.html?' + toIdList;
-		document.getElementById("thingURL").innerHTML = theURL;
-		document.getElementById("thingURL").href = theURL;
-		document.getElementById("thingURLWrapper").style.display = "block";
-	} else {
-		document.getElementById("thingURLWrapper").style.display = "none";
-	}
-
-	//There's code in family.js to make multiple links, but I think
-	//I'd rather fix the things request to make multiple calls.
-}
-
-function setURL(toId) {
-	if (typeof toId == "undefined")
-		toId = sortee[sorteeKey].defaultIds.join(",");
-	else if (toId)
-		document.getElementById("parsedids").value = toId;
-	
-	if (toId) {
-		document.getElementById("urlHint").innerHTML = getBaseFile() + '?' + toId;
-		document.getElementById("urlHint").href = getBaseFile() + '?' + toId;
-	}
-}
-
-function writeSortStuff(sortStuffString) {
-	document.getElementById(sortee[sorteeKey].divId).innerHTML= sortStuffString;
-}
+})();

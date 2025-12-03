@@ -20,24 +20,24 @@ cite#footer {
     display:block;
 }
 p.unwrap span {
-	white-space: nowrap;
+    white-space: nowrap;
 }
 p.message {
-	color: tomato;
-	padding: 0.5em 1em;
-	border-left: 3px double tomato;
+    color: tomato;
+    padding: 0.5em 1em;
+    border-left: 3px double tomato;
 }
 
 div.entry {
-	background-color: #F5F5FF;
-	border: solid 1px #8888FF;
-	margin:0.5em;
+    background-color: #F5F5FF;
+    border: solid 1px #8888FF;
+    margin:0.5em;
 }
 div.entry h2,
 div.entry h3 {
-	background-color: #D1DAEF;
-	margin:0; 
-	padding:0.5em;
+    background-color: #D1DAEF;
+    margin:0; 
+    padding:0.5em;
 }
 
 div#header.entry {
@@ -58,16 +58,16 @@ div#header.entry h2 div {
 
 div.entry h2 a,
 div.entry h3 a {
-	text-decoration:none;
+    text-decoration:none;
 }
 div.entry div.entrycontents {
-	padding: 0.5em;
-	display: flex;
-	flex-basis: 100%;
-	justify-content: space-between;
+    padding: 0.5em;
+    display: flex;
+    flex-basis: 100%;
+    justify-content: space-between;
 }
 div.entry div.entrycontents img {
-	align-self: flex-start;
+    align-self: flex-start;
 }
 
 div.right {
@@ -102,17 +102,20 @@ a#thingURL {
 /* .things and collections */
 
 .collection div#header.entry h2 div,
+.plays div#header.entry h2 div,
 .things div#header.entry h2 div {
     color: #888888;
     font-size: smaller;
 }
 .collection div.entry h3,
+.plays div.entry h3,
 .things div.entry h3 {
     display: flex;
     flex-basis: 100%;
     justify-content: space-between;
 }
 .collection div.entry h3 div,
+.plays div.entry h3 div,
 .things div.entry h3 div {
     color: #8888FF;
 }
@@ -176,6 +179,18 @@ a#thingURL {
 
 .collection span.pluralized {
     white-space:nowrap;
+}
+
+.plays div.entrycontents {
+    display: grid!important;
+    grid-template-columns: 2fr 5fr 3fr 
+}
+
+.plays div.left,
+.plays div.right div {
+    white-space:nowrap;
+    font-style: italic;
+    font-size: smaller;
 }
 
 /* I beg to diff'er */
