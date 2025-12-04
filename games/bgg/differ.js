@@ -31,52 +31,41 @@
 	function adjustListType(e) {
 		//Reload the frame on change.
 		var listid = e.target.getAttribute("data-listnum");
+		clearLists(listid);
+
 		var newtype = document.getElementById("list" + listid + "type").value;
 		document.getElementById("frame" + listid).src = path + newtype + ".html";
-		clearLists();
-		window.setTimeout(trimFrames, 500);
 		return;
 	}
 
-	function clearLists() {
-		document.getElementById("diff1").innerHTML = "";
+	function checkDiff() {
+		return (lists[0].ids && lists[1].ids && lists[0].ids.length > 0 && lists[1].ids.length > 0);
+	}
+	
+	function checkList(index) {
+		//First we check on the date tracker.
+		var fraim = document.getElementById("frame" + index).contentDocument;
+		var update = new Date(fraim.body.querySelector("#updated").value);
+		console.log(lists[index - 1].date);
+		if (!lists[index - 1].date || lists[index - 1].date < update) {
+			loadList(index);
+		}
+	}
+	
+	function clearLists(listid) {
+		//Clear the designated list and its UI.
+		document.getElementById("diff" + listid).innerHTML = "";
+		lists[parseInt(listid,10) - 1] = {};
+		//Also clear the calculated lists and UI.
 		document.getElementById("diff12").innerHTML = "<em>The common items will appear here.</em>";
-		document.getElementById("diff2").innerHTML = "";
+		lists[2] = {};
+		lists[3] = {};
+		lists[4] = {};
+		lists[5] = {};
 	}
 	
 	function diffLists(force) {
-
-		for (var i = 0; i < 2; i++) {
-			var list = lists[i];
-			var index = i + 1;
-			var targetElt = document.getElementById("diff" + index);
-			
-			var fraim = document.getElementById("frame" + index).contentDocument;
-			if (list.raw === undefined || list.raw.length === 0 || force) {
-				//Don't want to keep reprocessing.
-				list.type = fraim.body.querySelector("#listtype").value;
-				list.ids = fraim.body.querySelector("#parsedids").value.split(",");
-				list.raw = fraim.body.querySelectorAll('div[data-thingid]');
-				list.numeric = Array.from(list.raw).map(entry => entry.getAttribute("data-thingid")); //,10)).sort((a,b) => a - b);
-				list.set = new Set(list.numeric);
-				list.html = [];
-				
-				if (list.raw.length === 0) {
-					targetElt.innerHTML = "<em>No items found yet.</em>";
-				} else {
-					list.raw.forEach(item => list.html.push( item.querySelector("h3").innerHTML ));
-				}
-				displayHtml(list.html, targetElt);
-			}
-		}
-		
-		if (lists[0].raw.length === 0 || lists[1].raw.length === 0) {
-			
-			//Waiting loop.
-			console.log("Waiting on lists...");
-			setTimeout(diffLists, 5000);
-			
-		} else if (! lists[2].hasOwnProperty("set")) {
+		if (force || ! lists[2].hasOwnProperty("date") || lists[2].date < lists[0].date || lists[2].date < lists[1].date) {
 
 			//Diff and dust.
 			var lintersect = lists[2];
@@ -84,7 +73,8 @@
 			lintersect.set = lists[0].set.intersection(lists[1].set);
 			lintersect.numeric = [...lintersect.set];
 			lintersect.raw = Array.from(lists[0].raw).filter( entry => lintersect.numeric.indexOf(entry.getAttribute("data-thingid")) > -1 );
-
+			lintersect.date = new Date();
+			
 			if (lintersect.raw.length === 0) {
 				targetElt12.innerHTML = "<em>No common items were found.</em>";
 				return;
@@ -131,14 +121,67 @@
 		targetElt.innerHTML = tempFrag;
 	}
 
+	function forceDiff(e) {
+		diffLists(true);
+	}
+
 	/* onload */
-	function loady() {
+	function load() {
 		setFromQuery();
-		document.getElementById("list1type").addEventListener("change", adjustListType);
-		document.getElementById("list2type").addEventListener("change", adjustListType);
-		document.getElementById("diffButton").addEventListener("click", diffLists);
+		for (var i = 1; i <= 2; i++) {
+			document.getElementById("list" + i + "type").addEventListener("change", adjustListType);
+			document.getElementById("frame" + i).addEventListener("load", loadLists);
+		}
+		document.getElementById("diffButton").addEventListener("click", forceDiff);
 		document.getElementById("clearButton").addEventListener("click", clearLists);
-		window.setTimeout(trimFrames, 50);
+	}
+
+	function listenLists(index) {
+		//Most clicks will eventually result in some change to the rendered list but it takes time.
+		window.setTimeout(function(){checkList(index);}, 5000);
+	}
+
+	function loadLists(e) {
+		var index = parseInt(e.srcElement.getAttribute("data-listnum"),10);
+		
+		//Set the listener for future changes here once the body has appeared.
+		var fraim = document.getElementById("frame" + index).contentDocument;
+		fraim.body.addEventListener("click", function(e){listenLists(index);});
+		
+		//If we passed in an id from the parent, it needs some loading time in the frame.
+		window.setTimeout(function(){loadList(index);}, 2000);
+	}
+
+	function loadList(index) {
+		populateList(index, true);
+		trimFrames(index);
+		if (checkDiff)
+			diffLists();
+	}
+
+	function populateList(index) {
+		//The caller needs to check if this is a good and timely idea.
+		var list = lists[index - 1];
+		var targetElt = document.getElementById("diff" + index);
+			
+		var fraim = document.getElementById("frame" + index).contentDocument;
+		var update = new Date(fraim.body.querySelector("#updated").value);
+
+		list.type = fraim.body.querySelector("#listtype").value;
+		list.ids = fraim.body.querySelector("#parsedids").value.split(",");
+		list.raw = fraim.body.querySelectorAll('div[data-thingid]');
+		list.numeric = Array.from(list.raw).map(entry => entry.getAttribute("data-thingid")); //,10)).sort((a,b) => a - b);
+		list.set = new Set(list.numeric);
+		list.html = [];
+		
+		if (list.raw.length === 0) {
+			targetElt.innerHTML = "<em>No items found yet.</em>";
+		} else {
+			list.date = update;
+			list.raw.forEach(item => list.html.push( item.querySelector("h3").innerHTML ));
+		}
+
+		displayHtml(list.html, targetElt);
 	}
 
 	function setFromQuery() {
@@ -157,26 +200,21 @@
 					list++;
 				}
 			}
+			//The frame onload does the checkDiff.			
 		}
 		setDiffURL();
-		//also autoload.
-		window.setTimeout(diffLists, 5000);
 	}
 
-	function trimFrames() {
-		for (var index = 1; index <= 2; index++) {
-			var fraim = document.getElementById("frame" + index).contentDocument;
-			//fraim.body.querySelectorAll('.info').forEach(elt => elt.remove());
-			if (fraim.body.querySelectorAll('cite'))
-				fraim.body.querySelectorAll('cite').forEach(elt => elt.remove());
-			if (fraim.body.querySelectorAll('hr'))
-				fraim.body.querySelectorAll('hr').forEach(elt => elt.remove());
-		}
+	function trimFrames(index) {
+		var fraim = document.getElementById("frame" + index).contentDocument;
+		//fraim.body.querySelectorAll('.info').forEach(elt => elt.remove());
+		if (fraim.body.querySelectorAll('cite'))
+			fraim.body.querySelectorAll('cite').forEach(elt => elt.remove());
+		if (fraim.body.querySelectorAll('hr'))
+			fraim.body.querySelectorAll('hr').forEach(elt => elt.remove());
 	}
 	
 	function setDiffURL() {
-		//TODO: things
-		
 		if (lists[0].type) {
 			var ref = baseFile + "?" + lists[0].type + (lists[0].ids.length > 0  && lists[0].ids[0] ? "=" + lists[0].ids.join(",") : "");
 			if (lists[1].type) {
@@ -187,6 +225,6 @@
 		}
 	}
 	
-	window.onload = loady;
+	window.onload = load;
 
 })();

@@ -17,9 +17,10 @@ BoardGameGeek list differ by fiddly_bits.
       <span>The first list is a 
 	<select id="list1type" data-listnum="1">
 	  <option disabled selected>Select a type</option>
-	  <option value="geeklist">geeklist</option>
-	  <option value="family">family</option>
 	  <option value="collection">collection</option>
+	  <option value="family">family</option>
+	  <option value="geeklist">geeklist</option>
+	  <option value="plays">list of plays</option>
 	  <option value="things">list of things</option>
 	</select>.
       </span>
@@ -27,9 +28,10 @@ BoardGameGeek list differ by fiddly_bits.
       <span>The second list is a 
 	<select id="list2type" data-listnum="2">
 	  <option disabled selected>Select a type</option>
-	  <option value="geeklist">geeklist</option>
-	  <option value="family">family</option>
 	  <option value="collection">collection</option>
+	  <option value="family">family</option>
+	  <option value="geeklist">geeklist</option>
+	  <option value="plays">list of plays</option>
 	  <option value="things">list of things</option>
 	</select>.
       </span>
@@ -44,7 +46,7 @@ BoardGameGeek list differ by fiddly_bits.
 	<p class="info" id="thingURLWrapper" style="display:none;">You can pass the first 20 of any column of games to the thing sorter with the URL <a id="thingURL" href="#"></a></p>
 
 
-	<iframe id="frame1" src="./frame1.html"></iframe><iframe id="frame2" src="./frame2.html"></iframe>
+	<iframe id="frame1" src="./frame1.html" data-listnum="1"></iframe><iframe id="frame2" src="./frame2.html" data-listnum="2"></iframe>
 	<hr />
 
 	<div id="main_content">

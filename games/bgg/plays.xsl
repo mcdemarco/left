@@ -26,112 +26,43 @@
 			<p>(This probably means you should wait a minute and click Sort again.)</p>
 		</xsl:when>
 		<xsl:otherwise>
-			<div id="header" class="entry">
-				<h2>
-					<a href="https://boardgamegeek.com/profile/{//plays/@username}"><xsl:value-of select = "//plays/@username"/></a>
-					<div style="display:inline-block;">
-						<xsl:call-template name="pluralizer">
-							<xsl:with-param name="theCount" select="//plays/@total"/>
-							<xsl:with-param name="theWord" select="'play'"/>
-						</xsl:call-template>
-					</div>
-				</h2>
-			</div>
-			<!--
+		  <div id="header" class="entry">
+		    <h2>
+		      <a href="https://boardgamegeek.com/profile/{//plays/@username}"><xsl:value-of select = "//plays/@username"/></a>
+		      <div style="display:inline-block;">
+			<xsl:value-of select="count(//plays/play)"/> of 
+			<xsl:call-template name="pluralizer">
+			  <xsl:with-param name="theCount" select="//plays/@total"/>
+			  <xsl:with-param name="theWord" select="'play'"/>
+			</xsl:call-template>
+		      </div>
+		    </h2>
+		  </div>
 			<xsl:choose>
 				<xsl:when test="$sortby = 'alpha'">
 					<xsl:apply-templates select="//plays/play" mode="entry">
-						<xsl:sort select = "(name)[1]" data-type="text" order="{$sortorder}" />
+						<xsl:sort select = "item/@name" data-type="text" order="{$sortorder}" />
 					</xsl:apply-templates>
 				</xsl:when>
 				<xsl:when test="$sortby = 'date'">
 					<xsl:apply-templates select="//plays/play" mode="entry">
-						<xsl:sort select = "@collid" data-type="number" order="{$sortorder}" />
+						<xsl:sort select = "@date" data-type="text" order="{$sortorder}" />
 					</xsl:apply-templates>
 				</xsl:when>
-				<xsl:when test="$sortby = 'manual'">
+				<xsl:when test="$sortby = 'location'">
 					<xsl:apply-templates select="//plays/play" mode="entry">
-						<xsl:sort select="position()" data-type="number" order="{$sortorder}" />
-					</xsl:apply-templates>
-				</xsl:when>
-				<xsl:when test="$sortby = 'minplayers'">
-					<xsl:apply-templates select="//plays/play" mode="entry">
-						<xsl:sort select = "stats/@minplayers" data-type="number" order="{$sortorder}" />
-					</xsl:apply-templates>
-				</xsl:when>
-				<xsl:when test="$sortby = 'maxplayers'">
-					<xsl:apply-templates select="//plays/play" mode="entry">
-						<xsl:sort select = "stats/@maxplayers" data-type="number" order="{$sortorder}" />
-					</xsl:apply-templates>
-				</xsl:when>
-				<xsl:when test="$sortby = 'playtime'">
-					<xsl:apply-templates select="//plays/play" mode="entry">
-						<xsl:sort select = "stats/@playingtime" data-type="number" order="{$sortorder}" />
+						<xsl:sort select = "@location" data-type="text" order="{$sortorder}" />
 					</xsl:apply-templates>
 				</xsl:when>
 				<xsl:when test="$sortby = 'plays'">
 					<xsl:apply-templates select="//plays/play" mode="entry">
-						<xsl:sort select = "numplays" data-type="number" order="{$sortorder}" />
-					</xsl:apply-templates>
-				</xsl:when>
-				<xsl:when test="$sortby = 'rank'">
-					<xsl:if test="$sortorder = 'descending'">
-						<xsl:apply-templates select="//plays/play[stats/rating/ranks/rank[@name='boardgame' and @value='Not Ranked']]" mode="entry" />
-					</xsl:if>
-					<xsl:apply-templates select="//plays/play[stats/rating/ranks/rank[@name='boardgame' and not(@value='Not Ranked')]]" mode="entry">
-						<xsl:sort select = "stats/rating/ranks/rank[@name='boardgame']/@value" data-type="number" order="{$sortorder}" />
-					</xsl:apply-templates>
-					<xsl:if test="$sortorder = 'ascending'">
-						<xsl:apply-templates select="//plays/play[stats/rating/ranks/rank[@name='boardgame' and @value='Not Ranked']]" mode="entry" />
-					</xsl:if>
-				</xsl:when>
-				<xsl:when test="$sortby = 'frank'">
-					<xsl:if test="$sortorder = 'descending'">
-						<xsl:apply-templates select="//plays/play[stats/rating/ranks[not(rank[@type='family'])]]" mode="entry" />
-						<xsl:apply-templates select="//plays/play[stats/rating/ranks/rank[@type='family' and @value='Not Ranked']]" mode="entry" />
-					</xsl:if>
-
-					<xsl:apply-templates select="//plays/play[stats/rating/ranks/rank[@type='family' and not(@value='Not Ranked')]]" mode="entry">
-						<xsl:sort select = "stats/rating/ranks/rank[@type='family']/@value" data-type="number" order="{$sortorder}" />
-					</xsl:apply-templates>
-
-					<xsl:if test="$sortorder = 'ascending'">
-						<xsl:apply-templates select="//plays/play[stats/rating/ranks/rank[@type='family' and @value='Not Ranked']]" mode="entry" />
-						<xsl:apply-templates select="//plays/play[stats/rating/ranks[not(rank[@type='family'])]]" mode="entry" />
-					</xsl:if>
-				</xsl:when>
-				<xsl:when test="$sortby = 'myrating'">
-					<xsl:apply-templates select="//plays/play" mode="entry">
-						<xsl:sort select = "stats/rating/@value" data-type="number" order="{$sortorder}" />
-					</xsl:apply-templates>
-				</xsl:when>
-				<xsl:when test="$sortby = 'rating'">
-					<xsl:apply-templates select="//plays/play" mode="entry">
-						<xsl:sort select = "stats/rating/average/@value" data-type="number" order="{$sortorder}" />
-					</xsl:apply-templates>
-				</xsl:when>
-				<xsl:when test="$sortby = 'ratings'">
-					<xsl:apply-templates select="//plays/play" mode="entry">
-						<xsl:sort select = "stats/rating/usersrated/@value" data-type="number" order="{$sortorder}" />
-					</xsl:apply-templates>
-				</xsl:when>
-				<xsl:when test="$sortby = 'type'">
-					<xsl:apply-templates select="//plays/play" mode="entry">
-						<xsl:sort select = "@subtype" data-type="text" order="{$sortorder}" />
-					</xsl:apply-templates>
-				</xsl:when>
-				<xsl:when test="$sortby = 'year'">
-					<xsl:apply-templates select="//plays/play" mode="entry">
-						<xsl:sort select = "yearpublished" data-type="number" order="{$sortorder}" />
+						<xsl:sort select = "@quantity" data-type="number" order="{$sortorder}" />
 					</xsl:apply-templates>
 				</xsl:when>
 				<xsl:otherwise>
-				-->
-				
 					<xsl:apply-templates select="//plays/play" mode="entry"/>
-			<!--	</xsl:otherwise>
+				</xsl:otherwise>
 			</xsl:choose>
-				-->
 		</xsl:otherwise>
 	</xsl:choose>
 </xsl:template>

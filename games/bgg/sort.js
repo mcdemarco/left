@@ -152,13 +152,13 @@
 				new Date() - sortStuffStatus.date < 60000 * minutes) {
 
 			//Re-transform the old data.
-			console.log("Re-transforming");
+			//console.log("Re-transforming");
 			transformAndWrite(sortStuffStatus.xml);
 			
 		} else {
 			
 			//Fetch new data.
-			console.log("Fetching new");
+			//console.log("Fetching new");
 			requestSortStuff(sortStuffId,stats,restriction,comments);
 
 		}
@@ -237,10 +237,12 @@
 				//the stylesheet will display that, but we still want to know.
 				if (sortStuffXML.firstChild.nodeName == "items" || sortStuffXML.firstChild.nodeName == "geeklist" || sortStuffXML.firstChild.nodeName == "plays" ) {
 					//This is worth saving.
-					sortStuffStatus.date = new Date();
+					var updated = new Date();
+					sortStuffStatus.date = updated;
+					document.getElementById("updated").value = updated;
 					sortStuffStatus.xml = sortStuffXML;
 
-					console.log(sortStuffXML);
+					//					console.log(sortStuffXML);
 
 					if (sorteeKey === "collection") {
 						//This one isn't anywhere in the response.
