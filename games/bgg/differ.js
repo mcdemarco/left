@@ -4,8 +4,8 @@
 /* jshint esversion: 6 */
 
 /*TODO:
- *add plays
- *set urls, includung things
+ *test with paged sublists
+ *get updates working on sort
  */
 
 (function () {
@@ -27,49 +27,73 @@
 		{name: "2-1"},
 		{name: "1u2"},
 	];
+	var listNames = ["1", "2", "1n2", "1-2", "2-1", "1u2"];
+	var timeoutHandles = {};
+
 
 	function adjustListType(e) {
 		//Reload the frame on change.
-		var listid = e.target.getAttribute("data-listnum");
-		clearLists(listid);
+		var listname = e.target.getAttribute("data-listname");
+		clearList(listname);
 
-		var newtype = document.getElementById("list" + listid + "type").value;
-		document.getElementById("frame" + listid).src = path + newtype + ".html";
+		var newtype = document.getElementById("list" + listname + "type").value;
+		document.getElementById("frame" + listname).src = path + newtype + ".html";
 		return;
 	}
 
 	function checkDiff() {
-		return (lists[0].ids && lists[1].ids && lists[0].ids.length > 0 && lists[1].ids.length > 0);
+		return (lists[0].numeric && lists[1].numeric && lists[0].numeric.length > 0 && lists[1].numeric.length > 0);
 	}
 	
 	function checkList(index) {
 		//First we check on the date tracker.
 		var fraim = document.getElementById("frame" + index).contentDocument;
 		var update = new Date(fraim.body.querySelector("#updated").value);
-		console.log(lists[index - 1].date);
-		if (!lists[index - 1].date || lists[index - 1].date < update) {
+		var origDate = lists[index - 1].hasOwnProperty("date") ? lists[index - 1].date : new Date(1/1/1970);
+		
+		//console.log("checking list date", index, origDate, update);
+		if (origDate < update) {
 			loadList(index);
 		}
 	}
 	
-	function clearLists(listid) {
-		//Clear the designated list and its UI.
-		document.getElementById("diff" + listid).innerHTML = "";
-		lists[parseInt(listid,10) - 1] = {};
-		//Also clear the calculated lists and UI.
-		document.getElementById("diff12").innerHTML = "<em>The common items will appear here.</em>";
-		lists[2] = {};
-		lists[3] = {};
-		lists[4] = {};
-		lists[5] = {};
+	function clearLists() {
+		//This clears the differ UI, not the frames.
+		//Note that the base lists are not in the UI, only calculated ones.
+		//The intersection gets cleared twice.
+		clearLists("1");
+		clearLists("2");
+	}
+	
+	function clearList(listname) {
+		//Clear the intersection and difference lists for base list listname.
+		var baseindex = listNames.indexOf(listname);
+		var baselist = lists[baseindex];
+		var derivedlist = lists[baseindex + 2];
+		
+		//Clear the designated list and its derived list.
+		baselist = {name: listNames[baseindex]};
+		derivedlist = {name: listNames[baseindex + 2]};
+
+		//Also clear the base/derived list in the UI.
+		document.getElementById("diff" + baselist.name).innerHTML = "";
+		
+		//Also clear the intersection list and its UI.
+		lists[2] = {name: listNames[2]};
+		document.getElementById("diff" + listNames[2]).innerHTML = "<em>The common items will appear here.</em>";
+		
+		unsetThingsURLs();
 	}
 	
 	function diffLists(force) {
+		if (! lists[0].hasOwnProperty("numeric") || !lists[1].hasOwnProperty("numeric") || lists[0].numeric.length === 0 || lists[1].numeric.length === 0) {
+			alert("list not found"); //Shouldn't happen.
+		}
 		if (force || ! lists[2].hasOwnProperty("date") || lists[2].date < lists[0].date || lists[2].date < lists[1].date) {
 
 			//Diff and dust.
 			var lintersect = lists[2];
-			var targetElt12 = document.getElementById("diff12");
+			var targetElt12 = document.getElementById("diff" + lintersect.name);
 			lintersect.set = lists[0].set.intersection(lists[1].set);
 			lintersect.numeric = [...lintersect.set];
 			lintersect.raw = Array.from(lists[0].raw).filter( entry => lintersect.numeric.indexOf(entry.getAttribute("data-thingid")) > -1 );
@@ -84,7 +108,7 @@
 			lintersect.raw.forEach(item => lintersect.html.push( item.querySelector("h3").innerHTML ));
 			displayHtml(lintersect.html, targetElt12);
 
-			var targetElt1 = document.getElementById("diff1");
+			var targetElt1 = document.getElementById("diff1"); // contains either lists[0] or lists[3]
 			lists[3].set = lists[0].set.difference(lists[1].set); //1 without 2
 			lists[3].numeric = [...lists[3].set];
 			lists[3].raw = Array.from(lists[0].raw).filter( entry => lists[3].numeric.indexOf(entry.getAttribute("data-thingid")) > -1 );
@@ -92,7 +116,7 @@
 			lists[3].raw.forEach(item => lists[3].html.push( item.querySelector("h3").innerHTML ));
 			displayHtml(lists[3].html, targetElt1);
 
-			var targetElt2 = document.getElementById("diff2");
+			var targetElt2 = document.getElementById("diff2"); // contains either lists[1] or lists[4]
 			lists[4].set = lists[1].set.difference(lists[0].set); //2 without 1
 			lists[4].numeric = [...lists[4].set];
 			lists[4].raw = Array.from(lists[1].raw).filter( entry => lists[4].numeric.indexOf(entry.getAttribute("data-thingid")) > -1 );
@@ -105,10 +129,13 @@
 			lists[5].raw = Array.from(lists[2].raw).concat(Array.from(lists[3].raw)).concat(Array.from(lists[4].raw));
 			lists[5].html = [];			
 			lists[5].raw.forEach(item => lists[5].html.push( item.querySelector("h3").innerHTML ));
-			//displayHtml(lists[3].html, targetElt1);
+			//displayHtml(lists[5].html, targetElt??);
 
 			setDiffURL();
+			setThingsURLs();
 
+			//console.log(lists);
+			
 		} else {
 			//Already diffed and dusted.
 		}
@@ -137,12 +164,15 @@
 	}
 
 	function listenLists(index) {
+		//console.log("list " + index + " clicked");
+		if (timeoutHandles[index])
+			window.clearTimeout(timeoutHandles[index]);
 		//Most clicks will eventually result in some change to the rendered list but it takes time.
-		window.setTimeout(function(){checkList(index);}, 5000);
+		timeoutHandles[index] = window.setTimeout(function(){checkList(index);}, 5000);
 	}
 
 	function loadLists(e) {
-		var index = parseInt(e.srcElement.getAttribute("data-listnum"),10);
+		var index = parseInt(e.srcElement.getAttribute("data-listname"),10);
 		
 		//Set the listener for future changes here once the body has appeared.
 		var fraim = document.getElementById("frame" + index).contentDocument;
@@ -155,15 +185,15 @@
 	function loadList(index) {
 		populateList(index, true);
 		trimFrames(index);
-		if (checkDiff)
+		if (checkDiff())
 			diffLists();
 	}
 
 	function populateList(index) {
 		//The caller needs to check if this is a good and timely idea.
 		var list = lists[index - 1];
-		var targetElt = document.getElementById("diff" + index);
-			
+		var targetElt = document.getElementById("diff" + list.name);
+
 		var fraim = document.getElementById("frame" + index).contentDocument;
 		var update = new Date(fraim.body.querySelector("#updated").value);
 
@@ -224,7 +254,24 @@
 			document.getElementById("urlHint").href = ref;
 		}
 	}
-	
+
+	function setThingsURLs() {
+		//Sets thing urls for the derived lists.
+		for (var l = 2; l < 5; l++) {
+			var list = lists[l];
+			var theURL = base + "things.html?" + list.numeric.join(",");
+			var theSelector = "div#things" + list.name;
+			var theNumber = list.numeric.length;
+			document.querySelector(theSelector + " a").href = theURL;
+			document.querySelector(theSelector + " span").innerText = theNumber === 1 ? "this game" : "these " + theNumber + " games";
+			document.querySelector(theSelector + " p.thingURLWrapper").style.display = theNumber === 0 ? "none" : "block";
+		}
+	}
+
+	function unsetThingsURLs() {
+		document.querySelectorAll(".thingURLWrapper").forEach(thing => thing.style.display = "none");
+	}
+
 	window.onload = load;
 
 })();

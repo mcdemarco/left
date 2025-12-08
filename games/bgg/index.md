@@ -7,15 +7,23 @@ date: 2018-01-15 19:25:00
 
 Please note that the BoardGameGeek API underwent changes in mid-2025.  These tools have been registered and updated, but if one breaks and you need it back quickly, please let me know by email or geekmail (fiddly_bits).
 
+These tools use XSL.  Please note that Google is planning to [remove XSL from Chrome](https://developer.chrome.com/docs/web-platform/deprecating-xslt) (because "~~don't~~ be evil" also means "~~don't~~ break the internet") soonish.  When this happens I will polyfill these tools, but if I haven't gotten to it and you need the tools, you can apparently use [a Chrome extension](https://chromewebstore.google.com/search/xslt%20polyfill) to restore client-side XSL transforms.
+
 ## Tools for Sorting Games at BGG
 
-My BoardGameGeek sorters started with a [geeklist sorter](/games/bgg/geeklist.html), inspired by the former [lack of geeklist sorting](https://boardgamegeek.com/thread/554406/geeklists-allow-users-change-sort-method) at BoardGameGeek.  It later expanded to a [family sorter](/games/bgg/family.html), a [collection sorter](/games/bgg/collection.html), and a [general thing sorter](/games/bgg/things.html). 
+My BoardGameGeek sorters started with a [geeklist sorter](/games/bgg/geeklist.html), inspired by the former [lack of geeklist sorting](https://boardgamegeek.com/thread/554406/geeklists-allow-users-change-sort-method) at BoardGameGeek.  It later expanded to a [family sorter](/games/bgg/family.html), a [collection sorter](/games/bgg/collection.html), a [general thing sorter](/games/bgg/things.html), and a [play sorter](/games/bgg/plays.html).
 
 The geeklist and family sorter take the corresponding ID from BGG and give you a sortable list of the stuff on that geeklist or in that family, but sort options are restricted to the information that comes back from the BGG API.  From there, you have the option to pass your results to the thing sorter, which can sort by rank, ratings, and many other factors.
 
-The collection sorter has most sort options turned on from the start (you start with the collection owner's username), because there's a lot of information in the API response for collections.  You can still pass those game IDs to the thing sorter if you like.
+The collection sorter has most sort options turned on from the start (you start with the collection owner's username), because there's a lot of information in the API response for collections.  You can still pass those game IDs to the thing sorter if you like.  The play sorter also takes a username, and returns games they've played, with dates, locations, and players, if you entered them.  You can sort by game, date, location, or quantity of plays.
 
-The code calls the BGG API for XML data and makes it pretty using XSL---an ancient, forgotten browser technology.  The processing mostly happens client-side, except for a local proxy on my server to work around BGG's CORS misconfiguration and to handle their new API registration/authentication requirements.  Images are no longer displayed in some cases because the image ID returned by the old XML API is no longer sufficient to retrieve an image.  The other sorters use the newer XML API and can display images if the API provides them.
+The thing sorter and play sorts have buttons to load the next 20 (or 100) items; these are limits that come from BGG, so you will need to click the *Next* button gently.  Afterwards you can sort the entire list.
+
+The code calls the BGG API for XML data and makes it pretty using XSL---an ancient, forgotten browser technology.  The processing mostly happens client-side, except for a local proxy on my server to work around BGG's CORS misconfiguration and to handle their new API registration/authentication requirements.  Images are no longer displayed by the geeklist sorter because the image ID returned by the old XML API is no longer sufficient to retrieve an image.  The other sorters use the newer XML API and can display images where the API provides them.
+
+## Lists Differ
+
+Related to the game sorters is a tool for diffing lists of games.  The [lists differ](/games/bgg/differ.html) will load the sorter pages for one or two of the list types in frames, where you can adjust them as you like, and then find out what is and isn't on both lists.  This tool was inspired by my discovery of [a geeklist for games implemented at Abstract Play](https://boardgamegeek.com/geeklist/333956), and [the family of games implemented at Abstract Play](https://boardgamegeek.com/boardgamefamily/81073/digital-implementations-abstract-play).  You can see how they do or do not fail to overlap by loading [the lists differ example](http://hyde.mcdemarco.net/games/bgg/differ.html?geeklist=333956&family=81073).  (I may have fixed them before you read this.)
 
 ## FAQs and Threads
 

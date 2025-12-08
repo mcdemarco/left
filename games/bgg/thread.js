@@ -56,7 +56,7 @@
 		try {
 			fragment = transform(threadXML,stylesheet);
 		} catch(e) {
-			fragment = (new DomParser).parseFromString("<p class='message'>An error occurred: " + e.name + ", " + e.message + "</p><p>(This may be due to bad data from BGG or browser-specific issues.)</p>");
+			fragment = (new DOMParser).parseFromString("<p class='message'>An error occurred: " + e.name + ", " + e.message + "</p><p>(This may be due to bad data from BGG or browser-specific issues.)</p>");
 		}
 
 		document.getElementById("thread").appendChild(fragment);

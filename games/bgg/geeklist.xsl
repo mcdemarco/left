@@ -30,7 +30,7 @@
 		<xsl:otherwise>
 			<div id="header" class="entry">
 				<h2>
-					<a href="https://boardgamegeek.com/geeklist/{//geeklist/@id}/"><xsl:value-of select="//geeklist/title" /></a>
+					<a target="_blank" href="https://boardgamegeek.com/geeklist/{//geeklist/@id}/"><xsl:value-of select="//geeklist/title" /></a>
 					<div style="display:inline-block;">
 						<xsl:call-template name="pluralizer">
 							<xsl:with-param name="theCount" select="count(//item)"/>
@@ -135,7 +135,7 @@
 		<xsl:param name="geeklistId"/>
 		<div class="entry" data-thingid="{@objectid}">
 			<h3>
-				<a href="https://boardgamegeek.com/geeklist/{$geeklistId}/item/{@id}#item{@id}">
+				<a target="_blank" href="https://boardgamegeek.com/geeklist/{$geeklistId}/item/{@id}#item{@id}">
 					<xsl:value-of select="@objectname" />
 				</a>
 			</h3>

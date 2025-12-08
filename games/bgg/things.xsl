@@ -151,7 +151,7 @@
 	<xsl:template mode="entry" match="item">
 		<div class="entry" data-thingid="{@id}">
 			<h3>
-				<a href="https://boardgamegeek.com/thing/{@id}">
+				<a target="_blank" href="https://boardgamegeek.com/thing/{@id}">
 					<xsl:value-of select="(name[1])/@value" />
 				</a>
 				<div style="display:inline-block;">
@@ -161,7 +161,7 @@
 			<div class="entrycontents">
 				<div>
 					<xsl:if test="$images = 'true'">
-						<a href="{image}"><img alt="" src="{thumbnail}"/></a>
+						<a target="_blank" href="{image}"><img alt="" src="{thumbnail}"/></a>
 					</xsl:if>
 				</div>
 				<xsl:if test="$descriptions = 'true'">
@@ -211,13 +211,13 @@
 						<xsl:value-of select="playingtime/@value"/><xsl:text> minutes</xsl:text><br/>
 					</xsl:if>
 					<xsl:for-each select="link[@type='boardgamecategory']">
-						<a href="https://boardgamegeek.com/{@type}/{@id}/"><xsl:value-of select="@value"/></a><br/>
+						<a target="_blank" href="https://boardgamegeek.com/{@type}/{@id}/"><xsl:value-of select="@value"/></a><br/>
 					</xsl:for-each>
 					<xsl:for-each select="link[@type='boardgamefamily']">
 						<xsl:if test="position() &lt; 5">
-							<a href="./family.html?{@id}">Family:</a>
+							<a target="_blank" href="./family.html?{@id}">Family:</a>
 							<xsl:text> </xsl:text>
-							<a href="https://boardgamegeek.com/{@type}/{@id}/"><xsl:value-of select="@value"/></a>
+							<a target="_blank" href="https://boardgamegeek.com/{@type}/{@id}/"><xsl:value-of select="@value"/></a>
 							<br/>
 						</xsl:if>
 					</xsl:for-each>

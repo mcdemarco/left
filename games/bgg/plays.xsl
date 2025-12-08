@@ -28,7 +28,7 @@
 		<xsl:otherwise>
 		  <div id="header" class="entry">
 		    <h2>
-		      <a href="https://boardgamegeek.com/profile/{//plays/@username}"><xsl:value-of select = "//plays/@username"/></a>
+		      <a target="_blank" href="https://boardgamegeek.com/profile/{//plays/@username}"><xsl:value-of select = "//plays/@username"/></a>
 		      <div style="display:inline-block;">
 			<xsl:value-of select="count(//plays/play)"/> of 
 			<xsl:call-template name="pluralizer">
@@ -71,7 +71,7 @@
  
 		<div class="entry" data-thingid="{item/@objectid}">
 			<h3>
-			  <a href="https://boardgamegeek.com/thing/{item/@objectid}">
+			  <a target="_blank" href="https://boardgamegeek.com/thing/{item/@objectid}">
 			    <xsl:value-of select="item/@name"/>
 			  </a>
 			  <div style="display:inline-block;">

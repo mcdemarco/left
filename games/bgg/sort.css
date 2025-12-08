@@ -151,16 +151,9 @@ a#thingURL {
 .collection input[type=text] {
     width: 10em;
 }
-.collection div.left,
-.collection div.right {
-    width: 33%;
-}
-.collection div.status {
-    padding: 0 0 0 1em;
-    width: 34%;
-}
+
 .collection div.status span {
-    padding-right:1em;
+    padding-left:1em;
     font-style:italic;
 }
 
@@ -174,16 +167,20 @@ a#thingURL {
 
 .collection div.description {
     white-space: pre-wrap;
-    font-size: smaller;
 }
 
 .collection span.pluralized {
     white-space:nowrap;
 }
 
+.collection div.entrycontents,
 .plays div.entrycontents {
     display: grid!important;
     grid-template-columns: 2fr 5fr 3fr 
+}
+
+.collection div.entrycontents {
+    grid-template-columns: 3fr 5fr 2fr 
 }
 
 .plays div.left,

@@ -1,6 +1,7 @@
 //
 // sort.js - common functions for my BGG sorters - m.c.de marco - fiddly_bits 
 //
+/* jshint esversion: 6 */
 
 (function () {
 	
@@ -90,6 +91,13 @@
 		document.getElementById(sortee[sorteeKey].divId).appendChild(fragment);
 	}
 
+	function appendSortStuffXML(oldXML, newXML) {
+		//The switch to firstElementChild and children happened b/c
+		//the plays endpoint was returning particularly messy XML.
+		[...newXML.firstElementChild.children].forEach( node => oldXML.firstElementChild.appendChild(node) );
+		return oldXML;
+	}
+
 	function clearList() {
 		writeSortStuff("");
 	}
@@ -102,7 +110,19 @@
 		return getBase() + sortee[sorteeKey].file;
 	}
 
-	function getSortStuff() {
+	function getPaginatedThings(thingsId) {
+		var thingsArray = thingsId.split(",");
+		var oldPage =  (sortStuffStatus && sortStuffStatus.page) ? sortStuffStatus.page : 0;
+		var start = oldPage * 20;
+		if (thingsArray.length < start)
+			alert("Out of things!");
+
+		var paginatedThings = thingsArray.slice(start, (oldPage + 1) * 20).join(",");
+		//console.log(paginatedThings);
+		return paginatedThings;
+	}
+
+	function getSortStuff(page) {
 		var sortStuffId = parseID(document.getElementById("sorteeIds").value);
 		if (sortStuffId == -1)
 			return;
@@ -139,13 +159,14 @@
 			comments = document.getElementById("comments").checked;
 		}
 
-		//Clear old list.
-		clearList();
+		if (!page) {
+			//Clear old list.
+			clearList();
+		}
 
 		//Decide whether to make a new request.  
 		//Need a new one for a new ID (duh), collection restriction, geeklist comments, or expiration (in min).
-		if (sortStuffStatus.id && 
-				(sortStuffStatus.id === sortStuffId) &&
+		if (! page && sortStuffStatus.id && (sortStuffStatus.id === sortStuffId) &&
 				(! sortStuffStatus.hasOwnProperty("stats") || sortStuffStatus.stats || !stats) &&
 				(! sortStuffStatus.hasOwnProperty("restriction") || sortStuffStatus.restriction === restriction) &&
 				(! sortStuffStatus.hasOwnProperty("comments") || sortStuffStatus.comments || !comments) &&
@@ -154,12 +175,15 @@
 			//Re-transform the old data.
 			//console.log("Re-transforming");
 			transformAndWrite(sortStuffStatus.xml);
+			//Note the update for the differ.
+			document.getElementById("updated").value = new Date();
+
 			
 		} else {
 			
 			//Fetch new data.
 			//console.log("Fetching new");
-			requestSortStuff(sortStuffId,stats,restriction,comments);
+			requestSortStuff(sortStuffId,page,stats,restriction,comments);
 
 		}
 	}
@@ -180,10 +204,13 @@
 			getSortStuff();
 			return false;
 		});
+		if ( sorteeKey === "plays" || sorteeKey === "things")
+			document.getElementById("next").addEventListener("click", function(e) {
+				getSortStuff(true);
+			});
 		document.getElementsByTagName("form")[0].addEventListener("change", function(e) {
 			getSortStuff();
 		});
-		setURL();
 	}
 
 	function parseID(protoId) {
@@ -220,10 +247,21 @@
 		load();
 	}
 
-	function requestSortStuff(sortStuffId,stats,restriction,comments) {
+	function requestSortStuff(sortStuffId,page,stats,restriction,comments) {
 		var oReq = new XMLHttpRequest();
 		oReq.addEventListener("readystatechange", reqListener);
+		
+		if (sorteeKey === "things") {
+			sortStuffId = getPaginatedThings(sortStuffId);
+		}
+		
 		var URL = sortee[sorteeKey].sortStuffURL + sortStuffId + (comments ? "?comments=1" : "") + (stats ? "&stats=1" : "") + (restriction && restriction != "all" ? "&" + restriction + "=1" : "");
+
+		if (sorteeKey === "plays" && page) {
+			URL += "&page=" + ((sortStuffStatus && sortStuffStatus.page) ? sortStuffStatus.page + 1 : 1);
+		}
+		//console.log(URL);
+		
 		oReq.open("GET", corsProxy +  encodeURIComponent(URL));
 		oReq.send();
 	}
@@ -231,18 +269,31 @@
 	function reqListener() {
 		if (this.readyState == XMLHttpRequest.DONE) {
 			if (this.status == 200 || this.status == 202) {
-
+				//console.log(this.responseXML);
 				var sortStuffXML = this.responseXML;
 				//Often the response is "wait a minute"; 
 				//the stylesheet will display that, but we still want to know.
-				if (sortStuffXML.firstChild.nodeName == "items" || sortStuffXML.firstChild.nodeName == "geeklist" || sortStuffXML.firstChild.nodeName == "plays" ) {
+				if (sortStuffXML.firstElementChild.nodeName === "items" || sortStuffXML.firstElementChild.nodeName === "geeklist" || sortStuffXML.firstElementChild.nodeName === "plays" ) {
 					//This is worth saving.
 					var updated = new Date();
 					sortStuffStatus.date = updated;
 					document.getElementById("updated").value = updated;
-					sortStuffStatus.xml = sortStuffXML;
 
-					//					console.log(sortStuffXML);
+					//console.log(sortStuffXML);
+
+					if (sorteeKey === "plays" || sorteeKey === "things") {
+						//Paging is possible.
+						if (!sortStuffStatus.hasOwnProperty("page")) {
+							sortStuffStatus.page = 1;
+							sortStuffStatus.xml = sortStuffXML;
+						} else {
+							sortStuffStatus.page++;
+							appendSortStuffXML(sortStuffStatus.xml,sortStuffXML);
+						}
+					} else
+						sortStuffStatus.xml = sortStuffXML;
+					
+					//console.log(sortStuffStatus.xml);
 
 					if (sorteeKey === "collection") {
 						//This one isn't anywhere in the response.
@@ -250,21 +301,22 @@
 						sortStuffStatus.stats = document.getElementById("stats").checked;
 						sortStuffStatus.restriction = document.querySelector('input[name="restrict"]:checked').value;
 					} else if (sorteeKey === "family") {
-						sortStuffStatus.id = parseInt(sortStuffXML.firstChild.firstChild.getAttribute("id"),10);
+						sortStuffStatus.id = parseInt(sortStuffXML.firstElementChild.firstElementChild.getAttribute("id"),10);
 					} else if (sorteeKey === "geeklist") {
-						sortStuffStatus.id = parseInt(sortStuffXML.firstChild.getAttribute("id"),10);
+						sortStuffStatus.id = parseInt(sortStuffXML.firstElementChild.getAttribute("id"),10);
 						sortStuffStatus.comments = document.getElementById("comments").checked;
 					} else if (sorteeKey === "plays") {
-						sortStuffStatus.id = sortStuffXML.firstChild.getAttribute("username");
+						sortStuffStatus.id = sortStuffXML.firstElementChild.getAttribute("username");
 					} else if (sorteeKey === "things") {
-						sortStuffStatus.id = [].slice.call(sortStuffXML.firstChild.children).map(function(elt) {return elt.getAttribute("id");}).join(",");
+						sortStuffStatus.id = document.getElementById("sorteeIds").value;
+						//was:  [].slice.call(sortStuffXML.firstElementChild.children).map(function(elt) {return elt.getAttribute("id");}).join(",");
 						sortStuffStatus.stats = document.getElementById("stats").checked;
 					}
 
 					setURL(sortStuffStatus.id);
 				}
 
-				transformAndWrite(sortStuffXML);
+				transformAndWrite(sortStuffStatus.xml);
 			} else {
 				//An error occurred.
 				writeSortStuff("<p class='message'>An error occurred" + (this.status ? ": " + this.status + (this.statusText ? " (" + this.statusText + ")" : "") : "") + ".</p>");
@@ -280,12 +332,15 @@
 			//When ids are text or comma-separated lists don't parseInt.
 			var listId = (sorteeKey === "collection" || sorteeKey ==="plays" || sorteeKey === "things") ? args : parseInt(args,10);
 			document.getElementById("sorteeIds").value = listId;
+			setURL(listId);
 
 			//check for sort field
 			if (args) {
 				var sortByVal = args.split("sort=")[1];
 				if (sortByVal)
 					document.getElementById("sortBy").value = sortByVal;
+			} else {
+				setURL();
 			}
 			//also autoload.
 			getSortStuff();
@@ -326,16 +381,21 @@
 				xmlDom = "An error occurred (" + e.description + ").";
 			}
 		} else { //webkit
-			var xsltProcessor = new XSLTProcessor();
-			xsltProcessor.setParameter(null, "sortby", sortBy);
-			xsltProcessor.setParameter(null, "ascending", ascending);
-			xsltProcessor.setParameter(null, "images", images);
-			xsltProcessor.setParameter(null, "descriptions", descriptions);
-			xsltProcessor.setParameter(null, "comment", comment);
-			xsltProcessor.setParameter(null, "comments", comments);
-			xsltProcessor.setParameter(null, "stats", stats);
-			xsltProcessor.importStylesheet(stylesheet);
-			xmlDom = xsltProcessor.transformToFragment(sortStuff, document);
+			try {
+				var xsltProcessor = new XSLTProcessor();
+				xsltProcessor.setParameter(null, "sortby", sortBy);
+				xsltProcessor.setParameter(null, "ascending", ascending);
+				xsltProcessor.setParameter(null, "images", images);
+				xsltProcessor.setParameter(null, "descriptions", descriptions);
+				xsltProcessor.setParameter(null, "comment", comment);
+				xsltProcessor.setParameter(null, "comments", comments);
+				xsltProcessor.setParameter(null, "stats", stats);
+				xsltProcessor.importStylesheet(stylesheet);
+				xmlDom = xsltProcessor.transformToFragment(sortStuff, document);
+			} catch(e) {
+				xmlDom = "An error occurred (" + e.description + ").";
+				console.log(sortStuff);
+			}
 		}
 		return xmlDom;
 	}
@@ -343,7 +403,7 @@
 	function setThings() {
 		var entries = document.getElementsByClassName("entry");
 		
-		var elen = Math.min(entries.length,20);//limit until I fix the thing sorter
+		var elen = entries.length; //let the thing sorter deal with the limits.
 		var entryIds = [];
 
 		for (var e = 0; e < elen; e++) {

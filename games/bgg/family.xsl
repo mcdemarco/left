@@ -26,7 +26,7 @@
 		<xsl:otherwise>
 			<div id="header" class="entry">
 				<h2>
-					<a href="https://boardgamegeek.com/boardgamefamily/{//items/item/@id}/"><xsl:value-of select="//items/item/name[@sortindex=1]/@value" /></a>
+					<a target="_blank" href="https://boardgamegeek.com/boardgamefamily/{//items/item/@id}/"><xsl:value-of select="//items/item/name[@sortindex=1]/@value" /></a>
 					<div style="display:inline-block;">
 						<xsl:call-template name="pluralizer">
 							<xsl:with-param name="theCount" select="count(//link)"/>
@@ -40,7 +40,7 @@
 					</cite>
 					<div class="right">
 						<xsl:if test="$images='true'">
-							<a href="{//items/item/image}"><img src="{//items/item/thumbnail}" alt=""/></a>
+							<a target="_blank" href="{//items/item/image}"><img src="{//items/item/thumbnail}" alt=""/></a>
 						</xsl:if>
 					</div>
 				</div>
@@ -85,7 +85,7 @@
 		<xsl:param name="familyId"/>
 		<div class="entry" data-thingid="{@id}">
 			<h3>
-				<a href="https://boardgamegeek.com/thing/{@id}">
+				<a target="_blank" href="https://boardgamegeek.com/thing/{@id}">
 					<xsl:value-of select="@value" />
 				</a>
 			</h3>
