@@ -32,12 +32,13 @@
 		["thrank","thematic_rank"],
 		["wrank","wargames_rank"],
 	]);
-	var sortStuff;
 
+	var sortStuff;
+	var thingLimit = 500;  //Don't let thing links exceed GET limits,
+  //b/c I'm not in the mood to set up POST or compression.
+	var datadate = "2025-12-09";
 
 	function adjustAscending() {
-		console.log("adjusting ascent");
-
 		//Switch the checkbox value on certain order selections.
 		switch(document.getElementById("sortBy").value) {
 		case "alpha":
@@ -61,104 +62,182 @@
 		default:
 			break;
 		}
-		console.log("reassort please");
 		assort();
 	}
 	
 	function assort() {
-		console.log("in assort");
+		//console.log("in assort");
+		
 		if (sortStuff === undefined) {
 			alert("Waiting for the data to load.");
 			return;
 		}
+
+		document.getElementById("dump").innerHTML = "<center>Sorting...</center>";
 		
 		//It is now safe to move about the cabin.
 		var bynick = document.getElementById("sortBy").value;
 		var by = headers.get(bynick);
-		console.log(by);
 		var asc = document.getElementById("ascending").checked;
+
+		//console.log(by, asc?"asc":"desc");
+
 		var sorter = getSortFn(by);
+
 		sortStuff.sort(sorter);
-		console.log(sortStuff[0]);
+		//console.log(sortStuff[0]);
 		if (!asc)
 			sortStuff.reverse();
 
 		//Before trimming for display, we want to filter out unwanted items.
 		var toDisplay = sortStuff.slice();
-		console.log(toDisplay[0]);
+		
 		var expando = document.getElementById("expand").checked;
 		var filter = document.getElementById("omit").checked;
+		//console.log(toDisplay[0]);
 
 		if (!expando)
 			toDisplay = toDisplay.filter(game => game.is_expansion === 0);
 		if (filter)
 			toDisplay = toDisplay.filter(game => game[by] !== null && game[by] !== undefined && game[by] !== 0);
+
+		//console.log(toDisplay[0]);
 		
 		var slong = parseInt(document.getElementById("ngames").value,10);
 		displayHtml(toDisplay.slice(0,slong), by);
+
+		//Needed for the differ.
+		var updated = new Date();
+		document.getElementById("updated").value = updated;
+	}
+	
+	function cleanNulls(value) {
+		return value === null ? "&#8709;" : value;
 	}
 	
 	function displayHtml(sorted, by) {
-		var tempFrag = "<ol>";
+
+		document.getElementById("dump").innerHTML = "";
+
+		var liment, diment, tempText;
+		var oment = document.createElement("ol");
+
 		var things = [];
+
 		sorted.forEach(game => {
-			tempFrag += "<li class='entry' data-thingid='" + game.id + "'>";
+			//Create the list items, and also populate things.
+			liment = document.createElement('li');
+			liment.classList.add("entry");
+
+			diment = document.createElement('div');
+			diment.setAttribute("data-thingid",game.id);
+			
+			tempText = "<h3>";
 			if (by !== "name")
-				tempFrag += game[by] + " ";
-			tempFrag += "<a href='https://boardgamegeek.com/thing/" + game.id + "' target='_blank'>" + game.name + "</a>";
+				tempText += cleanNulls(game[by]) + " ";
+			
+			tempText += "<a href='https://boardgamegeek.com/thing/" + game.id + "' target='_blank'>" + game.name + "</a> ";
+			
 			if (by !== "yearpublished")
-				tempFrag += "	(" + game.yearpublished  + ") ";
+				tempText += "(" + game.yearpublished  + ") ";
 			if (by !== "bayesaverage")
-				tempFrag += Math.round(game.bayesaverage * 10)/10;
-			tempFrag +=	"</li>";
+				tempText += Math.round(game.bayesaverage * 10)/10;
+
+			tempText += "</h3>";
+			
+			diment.innerHTML = tempText;
+			liment.appendChild(diment);
+			oment.appendChild(liment);
+
 			things.push(game.id);
 		});
-		tempFrag += "</ol>";
-		document.getElementById("dump").innerHTML = tempFrag;
+
+		document.getElementById("dump").appendChild(oment);
 		setThingsURL(things);
 	}
 
 	function getSortFn(bye) {
 		return function sorter(a, b) {
-			//This can fail if some name data has been parsed to numbers.
-			if (bye === "name")
+			if (bye === "name") {
+				//The only non-numeric field.
+				//Note that this can fail if some names get parsed to numbers.
 				return a.name.localeCompare(b.name);
-			else
+			} else if (bye.endsWith("rank")) {
+				//Rank is numeric, but sparse and weird.
+				if ((a[bye] === 0 || a[bye] === null) && b[bye] > 0)
+					return 1;
+				else if ((b[bye] === 0 || b[bye] === null) && a[bye] > 0)
+					return -1;
+				else
+					return a[bye] - b[bye];
+			} else {
+				//All other fields are normal numeric.
 				return a[bye] - b[bye];
+			}
 		};
 	}
 
 	/* onload */
 	function load() {
-		//		setFromQuery();
-		document.getElementById("sortBy").addEventListener("click", adjustAscending);
-		document.getElementsByTagName("form")[0].addEventListener("submit", function(e) {
-			e.preventDefault();
-			assort();
-			return false;
-		});
+		//setFromQuery();
+		document.getElementById("datadate").innerText = datadate;
 
 		//Fetch the CSV.
 		Papa.parse(csvFile, {
 			download: true,
 			header: true,
+			encoding: "utf-8",
 			worker: true,
 			dynamicTyping: {id: true, name: false, yearpublished: true, rank: true, bayesaverage: true, average: true, usersrated: true, is_expansion: true, abstracts_rank: true, cgs_rank: true, childrensgames_rank: true, familygames_rank: true, partygames_rank: true, strategygames_rank: true, thematic_rank: true, wargames_rank: true},
-			preview: 10000,
+			skipEmptyLines: true,
 			complete: setResults
 		});
+
+		//Activate form.
+		document.getElementById("sortBy").addEventListener("change", adjustAscending);//select
+		document.querySelectorAll("input[type=checkbox]").forEach(elt => elt.addEventListener("change", assort));//checkboxes
+		document.getElementById("ngames").addEventListener("change", assort);//text input
+		document.getElementsByTagName("form")[0].addEventListener("submit", function(e) {
+			e.preventDefault();
+			assort();
+			return false;
+		});//submit
+
+		//Activate uploader.
+		const upElement = document.getElementById("fileinput");
+		upElement.addEventListener("change", loadUp);
+	}
+	
+	function loadUp() {
+		const newFile = this.files[0];
+		
+		Papa.parse(newFile,	{
+			header: true,
+			encoding: "utf-8",
+			worker: true,
+			dynamicTyping: {id: true, name: false, yearpublished: true, rank: true, bayesaverage: true, average: true, usersrated: true, is_expansion: true, abstracts_rank: true, cgs_rank: true, childrensgames_rank: true, familygames_rank: true, partygames_rank: true, strategygames_rank: true, thematic_rank: true, wargames_rank: true},
+			skipEmptyLines: true,
+			complete: setResults
+		});
+		//same completion cb.
 	}
 
 	function setResults(results) {
 		sortStuff = results.data.slice();
-		//		console.log(sortStuff);
-		
+		results.errors.forEach(err =>
+			console.log(JSON.stringify(err, null, "\t"))
+		);
+		//console.log(results.meta);
+
 		//First sorting.
 		assort();
 	}
 
 	function setThingsURL(toList) {
 		//Sets thing url for the list.
+		if (toList.length > thingLimit)
+			toList = toList.slice(0,thingLimit);
+
 		var theURL = base + "things.html?" + toList.join(",");
 		var theSelector = "#thingURL";
 		var theNumber = toList.length;

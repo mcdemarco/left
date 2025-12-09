@@ -142,9 +142,12 @@
 	}
 	
 	function displayHtml(listhtml,targetElt) {
-		var tempFrag = "<ol><li class='entry'>";
-		tempFrag += listhtml.join("</li><li class='entry'>");
-		tempFrag += "</li></ol>";
+		var tempFrag = "";
+		if (listhtml.length > 0) {
+			tempFrag = "<ol><li class='entry'>";
+			tempFrag += listhtml.join("</li><li class='entry'>");
+			tempFrag += "</li></ol>";
+		} 
 		targetElt.innerHTML = tempFrag;
 	}
 
@@ -164,7 +167,7 @@
 	}
 
 	function listenLists(index) {
-		//console.log("list " + index + " clicked");
+		console.log("list " + index + " clicked");
 		if (timeoutHandles[index])
 			window.clearTimeout(timeoutHandles[index]);
 		//Most clicks will eventually result in some change to the rendered list but it takes time.

@@ -21,9 +21,15 @@ The hot games sorter has the least information available; it always returns the 
 
 The code calls the BGG API for XML data and makes it pretty using XSL---an ancient, forgotten browser technology.  The processing mostly happens client-side, except for a local proxy on my server to work around BGG's CORS misconfiguration and to handle their new API registration/authentication requirements.  Images are no longer displayed by the geeklist sorter because the image ID returned by the old XML API is no longer sufficient to retrieve an image.  The other sorters use the newer XML API and can display images where the API provides them.
 
+### Data Dump Sorter
+
+The data dump sorter will sort the daily data dump of all games' ranks provided by BGG.  Technically, it's not using the API (or XSL); I went and downloaded the file and you can, too!  By default it uses the last one I downloaded.  (Instructions for using your own, fresher download of the data are included on the page.)  The data dump doesn't provide all that much data, but it is fun to play around with every game on the site.  This tool was made possible largely by [PapaParse](https://www.papaparse.com). 
+
+I made the data dump sorter mainly for feeding into the Lists Differ so you can see, for example, how many of the top 100 games you've played, or how many ranked abstracts are implemented at Abstract Play. 
+
 ## Lists Differ
 
-Related to the game sorters is a tool for diffing lists of games.  The [lists differ](/games/bgg/differ.html) will load the sorter pages for one or two of the list types in frames, where you can adjust them as you like, and then find out what is and isn't on both lists.  This tool was inspired by my discovery of [a geeklist for games implemented at Abstract Play](https://boardgamegeek.com/geeklist/333956), and [the family of games implemented at Abstract Play](https://boardgamegeek.com/boardgamefamily/81073/digital-implementations-abstract-play).  You can see how they do or do not fail to overlap by loading [the lists differ example](/games/bgg/differ.html?geeklist=333956&family=81073).  (I may have fixed them before you read this.)
+Related to the game sorters is a tool for diffing lists of games.  The [lists differ](/games/bgg/differ.html) will load the sorter pages for one or two of the list types in frames, where you can adjust them as you like, and then find out what is and isn't on both lists.  This tool was inspired by my discovery of [a geeklist for games implemented at Abstract Play](https://boardgamegeek.com/geeklist/333956), and [the family of games implemented at Abstract Play](https://boardgamegeek.com/boardgamefamily/81073/digital-implementations-abstract-play).  You can see how they do or do not fail to overlap by loading [the lists differ example](/games/bgg/differ.html?geeklist=333956&family=81073).  (I may have fixed them before you read this, or they may have diverged again since I wrote this.)
 
 ## FAQs and Threads
 

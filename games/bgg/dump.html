@@ -67,14 +67,16 @@
       </p>
     </form>
 
-    <p class="info" id="thingURLWrapper">You can pass these games to the thing sorter with the URL <a id="thingURL" href="#"></a></p>
+    <p class="info">The data dump here was downloaded on <span id="datadate"></span>.  If you want to sort fresher data, log in to BoardGameGeek, download the current zip file from <a href="https://boardgamegeek.com/data_dumps/bg_ranks">this URL</a>, unzip it on your computer, and upload the csv file here: <input type="file" id="fileinput" accept=".csv"></input>.</p>
 
     <div id="main_content">
       <div id="dump">
       </div>
     </div>
 
-    <p class="info"><sup>1</sup>"Bad" values are either zero or absent from the data dump.  If you want to see the most obscure games with the least data, uncheck the box.</p>
+    <p class="info" id="thingURLWrapper">You can pass up to 500 of these games to the thing sorter with the URL <a id="thingURL" href="#"></a></p>
+
+    <p class="info"><sup>1</sup>"Bad" values are either zero or absent from the data dump.  If you want to see the most obscure games with the least data, uncheck this box.</p>
 
     <hr />
 

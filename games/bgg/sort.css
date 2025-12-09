@@ -221,3 +221,15 @@ a#thingURL {
 #dump ol li::marker {
     color: #ccc;
 }
+
+#dump li {
+    margin: 2px;
+}
+
+#dump li div,
+#dump li div h3 {
+    display: inline-block;
+    font-size: 1em;
+    font-weight: normal;
+    margin: 0;
+}
