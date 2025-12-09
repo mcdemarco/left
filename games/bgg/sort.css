@@ -108,6 +108,7 @@ a#thingURL {
     font-size: smaller;
 }
 .collection div.entry h3,
+.hot div.entry h3,
 .plays div.entry h3,
 .things div.entry h3 {
     display: flex;
@@ -115,11 +116,12 @@ a#thingURL {
     justify-content: space-between;
 }
 .collection div.entry h3 div,
+.hot div.entry h3 div,
 .plays div.entry h3 div,
 .things div.entry h3 div {
     color: #8888FF;
+    display: inline-block;
 }
-
 
 .things input[type=text] {
     width: 30em;
@@ -213,4 +215,9 @@ a#thingURL {
 
 #diff li div {
     padding-left: 0.5em;
+    display: inline-block;
+}
+
+#dump ol li::marker {
+    color: #ccc;
 }

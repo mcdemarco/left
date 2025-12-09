@@ -142,9 +142,9 @@
 	}
 	
 	function displayHtml(listhtml,targetElt) {
-		var tempFrag = "<ul><li class='entry'>";
+		var tempFrag = "<ol><li class='entry'>";
 		tempFrag += listhtml.join("</li><li class='entry'>");
-		tempFrag += "</li></ul>";
+		tempFrag += "</li></ol>";
 		targetElt.innerHTML = tempFrag;
 	}
 

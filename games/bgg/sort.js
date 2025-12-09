@@ -33,6 +33,15 @@
 			defaultIds: ["351097"], //Games you can play with 504?
 			badMsg: "Bad geeklist id or URL!"
 		},
+		hot: {
+			name: "hot",
+			file: "hot.html",
+			stylesheetURL: "hot.xsl",
+			divId:  "hot",
+			sortStuffURL: "https://boardgamegeek.com/xmlapi2/hot?",
+			defaultIds: ["boardgame"],
+			badMsg: "Bad hot item type!"
+		},
 		plays: {
 			name: "plays",
 			file: "plays.html",
@@ -224,7 +233,7 @@
 				protoId = protoId.split(sorteeKey + "/")[1].split("/")[0];
 			if (parseInt(protoId,10) > 0)
 				return parseInt(protoId,10);
-		} else if (sorteeKey === "collection" || sorteeKey === "plays") {
+		} else if (sorteeKey === "collection" || sorteeKey === "hot" || sorteeKey === "plays") {
 			var parsedBySlash = protoId.split('/'); 
 			if (parsedBySlash.length > 0)
 				return parsedBySlash[parsedBySlash.length - 1];
@@ -271,6 +280,9 @@
 			if (this.status == 200 || this.status == 202) {
 				//console.log(this.responseXML);
 				var sortStuffXML = this.responseXML;
+
+				//console.log(sortStuffXML);
+
 				//Often the response is "wait a minute"; 
 				//the stylesheet will display that, but we still want to know.
 				if (sortStuffXML.firstElementChild.nodeName === "items" || sortStuffXML.firstElementChild.nodeName === "geeklist" || sortStuffXML.firstElementChild.nodeName === "plays" ) {
@@ -278,8 +290,6 @@
 					var updated = new Date();
 					sortStuffStatus.date = updated;
 					document.getElementById("updated").value = updated;
-
-					//console.log(sortStuffXML);
 
 					if (sorteeKey === "plays" || sorteeKey === "things") {
 						//Paging is possible.
@@ -330,7 +340,7 @@
 		if (window.location.search && window.location.search.split("?")[1].length > 0) {
 			var args = window.location.search.split("?")[1];
 			//When ids are text or comma-separated lists don't parseInt.
-			var listId = (sorteeKey === "collection" || sorteeKey ==="plays" || sorteeKey === "things") ? args : parseInt(args,10);
+			var listId = (sorteeKey === "collection" || sorteeKey ==="hot" || sorteeKey ==="plays" || sorteeKey === "things") ? args : parseInt(args,10);
 			document.getElementById("sorteeIds").value = listId;
 			setURL(listId);
 

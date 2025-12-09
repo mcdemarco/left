@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Sort the Data Dump</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <!--
+	Based on a BoardGameGeek geeklist sorter by fiddly_bits.
+      -->
+    <link href="sort.css" rel="stylesheet" />
+    <script type="text/javascript" src="papaparse.min.js"></script>
+    <script type="text/javascript" src="dump.js"></script>
+  </head>
+  <body class="dump">
+    <h1>Data Dump Sorter</h1>
+
+    <form>
+      <p class="unwrap">
+	<span>Sort the data dump <input type="hidden" id="sorteeIds" value="dump" /></span>
+	<span>in order by 
+	  <select id="sortBy">
+	    <option value="alpha">Name</option>
+	    <option value="year">Year Published</option>
+	    <hr/>
+	    <option value="grating">Geek Rating</option>
+	    <option value="rating">Average Rating</option>
+	    <option value="ratings">Number of Votes</option>
+	    <hr/>
+	    <option value="rank" selected>Overall Rank</option>
+	    <option value="arank">Abstract Rank</option>
+	    <option value="crank">Customizable Rank</option>
+	    <option value="chrank">Children's Rank</option>
+	    <option value="frank">Family Rank</option>
+	    <option value="prank">Party Rank</option>
+	    <option value="strank">Strategy Rank</option>
+	    <option value="thrank">Thematic Rank</option>
+	    <option value="wrank">War Rank</option>
+	    <hr/>
+	    <option value="ids">ID</option>
+	  </select>
+	</span>
+	<span>
+	  <span>
+	    <input type="checkbox" id="ascending" checked/> ascending
+	  </span>
+	  <span style="display:none;">
+	    <input type="checkbox" id="images" title="show image" /> image
+	  </span>
+	</span>
+	<span>
+	  <span>
+	    and return the top 
+	    <input type="text" name="ngames" id="ngames" value="20" title="number of games" /> games,
+	  </span>
+	  <span>
+	    <input type="checkbox" id="expand" checked /> including expansions,
+	  </span>
+	  <span>
+	    <input type="checkbox" id="omit" checked /> omitting bad values.<sup>1</sup>
+	  </span>
+	</span>
+	<span>
+	  <input type="submit" id="submit" value="Sort"/>
+	  <input type="hidden" id="listtype" name="listtype" value="dump" />
+	  <input type="hidden" id="parsedids" name="parsedids" value="" />
+	  <input type="hidden" id="updated" name="updated" value="" />
+	</span>
+      </p>
+    </form>
+
+    <p class="info" id="thingURLWrapper">You can pass these games to the thing sorter with the URL <a id="thingURL" href="#"></a></p>
+
+    <div id="main_content">
+      <div id="dump">
+      </div>
+    </div>
+
+    <p class="info"><sup>1</sup>"Bad" values are either zero or absent from the data dump.  If you want to see the most obscure games with the least data, uncheck the box.</p>
+
+    <hr />
+
+    <cite id="footer">
+      By mcd (<a href="http://boardgamegeek.com/user/fiddly_bits">fiddly_bits</a>) | <a href="./">about</a><br>
+      <img alt="Powered by BoardGameGeek logo" src="powered.png">
+    </cite>
+  </body>
+</html>
