@@ -206,6 +206,7 @@
 	}
 	
 	function load() {
+		setURL(); //to default
 		setFromQuery();
 		document.getElementById("sortBy").addEventListener("change", adjustAscending);
 		document.getElementsByTagName("form")[0].addEventListener("submit", function(e) {
