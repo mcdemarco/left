@@ -229,7 +229,7 @@ a#thingURL {
 #dump li div,
 #dump li div h3 {
     display: inline-block;
-    font-size: 1em;
+    font-size: medium;
     font-weight: normal;
     margin: 0;
 }

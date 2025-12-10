@@ -4,8 +4,7 @@
 /* jshint esversion: 6 */
 
 /*TODO:
- * user loaded csv
- *
+ * multisort
  */
 
 (function () {

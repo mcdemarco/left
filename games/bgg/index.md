@@ -11,7 +11,9 @@ These tools use XSL.  Please note that Google is planning to [remove XSL from Ch
 
 ## Tools for Sorting Games at BGG
 
-My BoardGameGeek sorters started with a [geeklist sorter](/games/bgg/geeklist.html), inspired by the former [lack of geeklist sorting](https://boardgamegeek.com/thread/554406/geeklists-allow-users-change-sort-method) at BoardGameGeek.  It later expanded to a [family sorter](/games/bgg/family.html), a [collection sorter](/games/bgg/collection.html), a [general thing sorter](/games/bgg/things.html), a [play sorter](/games/bgg/plays.html), and a [hot games sorter](/games/bgg/hot.html).
+My BoardGameGeek sorters started with a [geeklist sorter](/games/bgg/geeklist.html), inspired by the former [lack of geeklist sorting](https://boardgamegeek.com/thread/554406/geeklists-allow-users-change-sort-method) at BoardGameGeek.  It later expanded to a [family sorter](/games/bgg/family.html), a [collection sorter](/games/bgg/collection.html), and a [general thing sorter](/games/bgg/things.html).  
+
+More recent additions include a [play sorter](/games/bgg/plays.html), a [hot games sorter](/games/bgg/hot.html), a [data dump sorter](/games/bgg/dump.html), and a sort-of meta-sorter, the [lists differ](/games/bgg/differ.html).
 
 The geeklist and family sorter take the corresponding ID from BGG and give you a sortable list of the stuff on that geeklist or in that family, but sort options are restricted to the information that comes back from the BGG API.  From there, you have the option to pass your results to the thing sorter, which can sort by rank, ratings, and many other factors.
 
@@ -23,9 +25,13 @@ The code calls the BGG API for XML data and makes it pretty using XSL---an ancie
 
 ### Data Dump Sorter
 
-The data dump sorter will sort the daily data dump of all games' ranks provided by BGG.  Technically, it's not using the API (or XSL); I went and downloaded the file and you can, too!  By default it uses the last one I downloaded.  (Instructions for using your own, fresher download of the data are included on the page.)  The data dump doesn't provide all that much data, but it is fun to play around with every game on the site.  This tool was made possible largely by [PapaParse](https://www.papaparse.com). 
+The data dump sorter will sort the daily data dump of all games' ranks provided by BGG.  It doesn't use the API (or XSL); I went and downloaded the file and you can, too!  By default it uses the last one I downloaded.  (Instructions for using your own, fresher download of the data are included on the page.)
 
-I made the data dump sorter mainly for feeding into the Lists Differ so you can see, for example, how many of the top 100 games you've played, or how many ranked abstracts are implemented at Abstract Play. 
+The data dump includes each game's overall rank, any subrankings (*e.g.*, Abstract Games or Wargames), its average rating, the number of voters (who rated the game), its geek rating (a weighted rating related to overall rank), and its year of publication.  The sorter also lets you sort by ID, because it's a handy way to find new entries in the database.
+
+I made the data dump sorter mainly for feeding into the Lists Differ so you can see, for example, how many of the top 100 games you've played, or how many ranked abstracts are implemented at Abstract Play, but it's also fun to play around with sorting *every* game on BoardGameGeek. 
+
+Technically the data dump *is* [part of the BGG XML API](https://boardgamegeek.com/thread/3175068/article/43146960#43146960), but I really didn't use any XML; the tool was made possible largely by [PapaParse](https://www.papaparse.com), "the powerful, in-browser CSV parser."    No real-time communication with BGG is involved in the data dump sorter, so you can sort to your heart's content without running into any rate limitations.  Any slowness you may encounter is the fault of your browser (plus some clunky integration with the lists differ), not of the API.
 
 ## Lists Differ
 
