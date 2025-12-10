@@ -132,10 +132,8 @@
 	}
 
 	function getSortStuff(page) {
-		console.log("getting sortstuff");
-		console.log(document.getElementById("sorteeIds").value);
+		//console.log("getting sortstuff");
 		var sortStuffId = parseID(document.getElementById("sorteeIds").value);
-		console.log(sortStuffId);
 		
 		if (sortStuffId === -1)
 			return;
@@ -186,7 +184,7 @@
 				new Date() - sortStuffStatus.date < 60000 * minutes) {
 
 			//Re-transform the old data.
-			console.log("Re-transforming");
+			//console.log("Re-transforming");
 			transformAndWrite(sortStuffStatus.xml);
 			//Note the update for the differ.
 			document.getElementById("updated").value = new Date();
@@ -195,7 +193,7 @@
 		} else {
 			
 			//Fetch new data.
-			console.log("Fetching new ", sortStuffId);
+			//console.log("Fetching new ", sortStuffId);
 			requestSortStuff(sortStuffId,page,stats,restriction,comments);
 
 		}
@@ -274,7 +272,7 @@
 		if (sorteeKey === "plays" && page) {
 			URL += "&page=" + ((sortStuffStatus && sortStuffStatus.page) ? sortStuffStatus.page + 1 : 1);
 		}
-		console.log(URL);
+		//console.log(URL);
 		
 		oReq.open("GET", corsProxy +  encodeURIComponent(URL));
 		oReq.send();
@@ -283,7 +281,7 @@
 	function reqListener() {
 		if (this.readyState == XMLHttpRequest.DONE) {
 			if (this.status == 200 || this.status == 202) {
-				console.log(this.responseXML);
+				//console.log(this.responseXML);
 				var sortStuffXML = this.responseXML;
 
 				//console.log(sortStuffXML);
