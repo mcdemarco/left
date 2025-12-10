@@ -132,10 +132,14 @@
 	}
 
 	function getSortStuff(page) {
+		console.log("getting sortstuff");
+		console.log(document.getElementById("sorteeIds").value);
 		var sortStuffId = parseID(document.getElementById("sorteeIds").value);
-		if (sortStuffId == -1)
+		console.log(sortStuffId);
+		
+		if (sortStuffId === -1)
 			return;
-		else if (sortStuffId == 0) {
+		else if (sortStuffId === 0) {
 			alert(sortee[sorteeKey].badMsg);
 			return;
 		}
@@ -182,7 +186,7 @@
 				new Date() - sortStuffStatus.date < 60000 * minutes) {
 
 			//Re-transform the old data.
-			//console.log("Re-transforming");
+			console.log("Re-transforming");
 			transformAndWrite(sortStuffStatus.xml);
 			//Note the update for the differ.
 			document.getElementById("updated").value = new Date();
@@ -191,7 +195,7 @@
 		} else {
 			
 			//Fetch new data.
-			//console.log("Fetching new");
+			console.log("Fetching new ", sortStuffId);
 			requestSortStuff(sortStuffId,page,stats,restriction,comments);
 
 		}
@@ -270,7 +274,7 @@
 		if (sorteeKey === "plays" && page) {
 			URL += "&page=" + ((sortStuffStatus && sortStuffStatus.page) ? sortStuffStatus.page + 1 : 1);
 		}
-		//console.log(URL);
+		console.log(URL);
 		
 		oReq.open("GET", corsProxy +  encodeURIComponent(URL));
 		oReq.send();
@@ -279,7 +283,7 @@
 	function reqListener() {
 		if (this.readyState == XMLHttpRequest.DONE) {
 			if (this.status == 200 || this.status == 202) {
-				//console.log(this.responseXML);
+				console.log(this.responseXML);
 				var sortStuffXML = this.responseXML;
 
 				//console.log(sortStuffXML);
@@ -325,6 +329,10 @@
 					}
 
 					setURL(sortStuffStatus.id);
+				} else if (sortStuffXML.firstElementChild.nodeName === "message") {
+					//Not sure this happens with pagination but just in case, don't touch sortStuffStatus.
+					transformAndWrite(sortStuffXML);
+					return;
 				}
 
 				transformAndWrite(sortStuffStatus.xml);
