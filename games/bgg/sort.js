@@ -78,6 +78,7 @@
 		case "frank":
 		case "manual":
 		case "playtime":
+		case "priority":
 		case "rank":
 		case "type":
 		case "user":
@@ -267,14 +268,14 @@
 			sortStuffId = getPaginatedThings(sortStuffId);
 		}
 		
-		var URL = sortee[sorteeKey].sortStuffURL + sortStuffId + (comments ? "?comments=1" : "") + (stats ? "&stats=1" : "") + (restriction && restriction != "all" ? "&" + restriction + "=1" : "");
+		var apiURL = sortee[sorteeKey].sortStuffURL + sortStuffId + (comments ? "?comments=1" : "") + (stats ? "&stats=1" : "") + (restriction && restriction != "all" ? "&" + restriction + "=1" : "");
 
 		if (sorteeKey === "plays" && page) {
-			URL += "&page=" + ((sortStuffStatus && sortStuffStatus.page) ? sortStuffStatus.page + 1 : 1);
+			apiURL += "&page=" + ((sortStuffStatus && sortStuffStatus.page) ? sortStuffStatus.page + 1 : 1);
 		}
 		//console.log(URL);
 		
-		oReq.open("GET", corsProxy +  encodeURIComponent(URL));
+		oReq.open("GET", corsProxy +  encodeURIComponent(apiURL));
 		oReq.send();
 	}
 
@@ -310,7 +311,7 @@
 
 					if (sorteeKey === "collection") {
 						//This one isn't anywhere in the response.
-						sortStuffStatus.id = document.getElementById("sorteeIds").value;
+						sortStuffStatus.id = document.getElementById("sorteeIds").value;//Weird issues with sorteeIds.
 						sortStuffStatus.stats = document.getElementById("stats").checked;
 						sortStuffStatus.restriction = document.querySelector('input[name="restrict"]:checked').value;
 					} else if (sorteeKey === "family") {
@@ -327,7 +328,7 @@
 					}
 
 					setURL(sortStuffStatus.id);
-				} else if (sortStuffXML.firstElementChild.nodeName === "message") {
+				} else if (sortStuffXML.firstElementChild.nodeName === "message" || sortStuffXML.firstElementChild.nodeName === "errors") {
 					//Not sure this happens with pagination but just in case, don't touch sortStuffStatus.
 					transformAndWrite(sortStuffXML);
 					return;
@@ -345,7 +346,7 @@
 
 	function setFromQuery() {
 		if (window.location.search && window.location.search.split("?")[1].length > 0) {
-			var args = window.location.search.split("?")[1];
+			var args = window.location.search.split("?")[1].split("&")[0];
 			//When ids are text or comma-separated lists don't parseInt.
 			var listId = (sorteeKey === "collection" || sorteeKey ==="hot" || sorteeKey ==="plays" || sorteeKey === "things") ? args : parseInt(args,10);
 			document.getElementById("sorteeIds").value = listId;

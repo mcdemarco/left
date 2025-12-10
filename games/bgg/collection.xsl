@@ -73,6 +73,21 @@
 						<xsl:sort select = "numplays" data-type="number" order="{$sortorder}" />
 					</xsl:apply-templates>
 				</xsl:when>
+				<xsl:when test="$sortby = 'priority'">
+					<xsl:if test="$sortorder = 'descending'">
+						<!-- report the nulls first -->
+						<xsl:apply-templates select="//items/item[status[not(@wishlistpriority)]]" mode="entry" />
+					</xsl:if>
+
+					<xsl:apply-templates select="//items/item[status[@wishlistpriority]]" mode="entry">
+						<xsl:sort select = "status/@wishlistpriority" data-type="number" order="{$sortorder}" />
+					</xsl:apply-templates>
+
+					<xsl:if test="$sortorder = 'ascending'">
+						<!-- report the nulls last -->
+						<xsl:apply-templates select="//items/item[status[not(@wishlistpriority)]]" mode="entry" />
+					</xsl:if>
+				</xsl:when>
 				<xsl:when test="$sortby = 'rank'">
 					<xsl:if test="$sortorder = 'descending'">
 						<!-- report the nulls first -->
