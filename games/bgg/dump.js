@@ -32,10 +32,11 @@
 		["wrank","wargames_rank"],
 	]);
 
+	var unsortedStuff;
 	var sortStuff;
 	var thingLimit = 500;  //Don't let thing links exceed GET limits,
   //b/c I'm not in the mood to set up POST or compression.
-	var datadate = "2025-12-09";
+	var datadate = "2025-12-17";
 
 	function adjustAscending() {
 		//Switch the checkbox value on certain order selections.
@@ -67,10 +68,12 @@
 	function assort() {
 		//console.log("in assort");
 		
-		if (sortStuff === undefined) {
+		if (unsortedStuff === undefined) {
 			alert("Waiting for the data to load.");
 			return;
 		}
+
+		sortStuff = presort();
 
 		document.getElementById("dump").innerHTML = "<center>Sorting...</center>";
 		
@@ -221,8 +224,28 @@
 		//same completion cb.
 	}
 
+	function presort() {
+		let presorted = unsortedStuff.slice();
+
+		console.log("presorting");
+		
+
+		if (document.getElementById("baseCHK").checked)
+			presorted = presorted.filter(game => game.is_expansion === 0);
+		console.log(presorted[0]);
+
+		if (document.getElementById("expansionsCHK").checked)
+			presorted = presorted.filter(game => game.is_expansion === 1);
+		console.log(presorted[0]);
+		
+
+		//A great miracle happened here.
+
+		return presorted;
+	}
+
 	function setResults(results) {
-		sortStuff = results.data.slice();
+		unsortedStuff = results.data.slice();
 		results.errors.forEach(err =>
 			console.log(JSON.stringify(err, null, "\t"))
 		);

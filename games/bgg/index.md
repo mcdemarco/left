@@ -37,6 +37,8 @@ Technically the data dump *is* [part of the BGG XML API](https://boardgamegeek.c
 
 Related to the game sorters is a tool for diffing lists of games.  The [lists differ](/games/bgg/differ.html) will load the sorter pages for one or two of the list types in frames, where you can adjust them as you like, and then find out what is and isn't on both lists.  This tool was inspired by my discovery of [a geeklist for games implemented at Abstract Play](https://boardgamegeek.com/geeklist/333956), and [the family of games implemented at Abstract Play](https://boardgamegeek.com/boardgamefamily/81073/digital-implementations-abstract-play).  You can see how they do or do not fail to overlap by loading [the lists differ example](/games/bgg/differ.html?geeklist=333956&family=81073).  (I may have fixed them before you read this, or they may have diverged again since I wrote this.)
 
+It's especially handy if you want to compare some massive list to, say, your collection:  [3D prints vs. my games](/games/bgg/differ.html?geeklist=186909&collection=fiddly_bits) provides direct links to the geeklist entries that are relevant to me.
+
 ## FAQs and Threads
 
 Most BGG Game FAQs are where they belong, [in the wiki](https://boardgamegeek.com/wiki/page/List_of_game_FAQs#), or elsewhere sadly inaccessible to the API, but some are buried in the forums.  The latter unfortunates can be retrieved with the API and pretty-printed using my [thread formatter](/games/bgg/thread.html), as long as they're not too weird or malformed.  There are options to hide the subject lines (which tend to be repetitive) and to hide spoilers (which the API fails to do, just passing raw BBcode spoiler tags instead).

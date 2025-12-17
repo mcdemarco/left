@@ -7,6 +7,12 @@ body {
 	padding:3%;
 }
 
+sup {
+    font-size:x-small;
+    padding-left:1px;
+    padding-right:1px;
+}
+
 p.info {
 	font-size:smaller;
 }
@@ -232,4 +238,10 @@ a#thingURL {
     font-size: medium;
     font-weight: normal;
     margin: 0;
+}
+
+.dump #restrictions {
+    display: grid;
+    grid-template-columns: 2fr 4fr 5fr;
+    grid-gap: 7px;
 }
