@@ -3,8 +3,8 @@
 //
 /* jshint esversion: 6 */
 
-/*TODO:
- * multisort
+/*
+ * TODO: null cases in the presorter?
  */
 
 (function () {
@@ -37,6 +37,9 @@
 	var thingLimit = 500;  //Don't let thing links exceed GET limits,
   //b/c I'm not in the mood to set up POST or compression.
 	var datadate = "2025-12-17";
+
+	//https://stackoverflow.com/a/9645447
+	const collator = new Intl.Collator('en', {'sensitivity': 'base'});
 
 	function adjustAscending() {
 		//Switch the checkbox value on certain order selections.
@@ -78,8 +81,7 @@
 		document.getElementById("dump").innerHTML = "<center>Sorting...</center>";
 		
 		//It is now safe to move about the cabin.
-		var bynick = document.getElementById("sortBy").value;
-		var by = headers.get(bynick);
+		var by = headers.get(document.getElementById("sortBy").value);
 		var asc = document.getElementById("ascending").checked;
 
 		//console.log(by, asc?"asc":"desc");
@@ -115,6 +117,12 @@
 	
 	function cleanNulls(value) {
 		return value === null ? "&#8709;" : value;
+	}
+	
+	function clear() {
+//		document.querySelector("input#ngames").value = 200;
+//		adjustAscending();
+		document.getElementById("dump").innerHTML = "";		
 	}
 	
 	function displayHtml(sorted, by) {
@@ -163,7 +171,7 @@
 			if (bye === "name") {
 				//The only non-numeric field.
 				//Note that this can fail if some names get parsed to numbers.
-				return a.name.localeCompare(b.name);
+				return collator.compare(a.name, b.name);
 			} else if (bye.endsWith("rank")) {
 				//Rank is numeric, but sparse and weird.
 				if ((a[bye] === 0 || a[bye] === null) && b[bye] > 0)
@@ -197,13 +205,15 @@
 
 		//Activate form.
 		document.getElementById("sortBy").addEventListener("change", adjustAscending);//select
+		document.getElementById("restrictBySEL").addEventListener("change", assort);//select
 		document.querySelectorAll("input[type=checkbox]").forEach(elt => elt.addEventListener("change", assort));//checkboxes
-		document.getElementById("ngames").addEventListener("change", assort);//text input
+		document.querySelectorAll("input[type=text]").forEach(elt => elt.addEventListener("change", assort));//text input
 		document.getElementsByTagName("form")[0].addEventListener("submit", function(e) {
 			e.preventDefault();
 			assort();
 			return false;
 		});//submit
+		document.querySelector("form").addEventListener("reset", clear);//form
 
 		//Activate uploader.
 		const upElement = document.getElementById("fileinput");
@@ -229,18 +239,53 @@
 
 		console.log("presorting");
 		
-
+		//The basics.
 		if (document.getElementById("baseCHK").checked)
 			presorted = presorted.filter(game => game.is_expansion === 0);
 		console.log(presorted[0]);
 
 		if (document.getElementById("expansionsCHK").checked)
 			presorted = presorted.filter(game => game.is_expansion === 1);
-		console.log(presorted[0]);
+
+		if (document.getElementById("restrictByCHK").checked) {
+			const by = headers.get(document.getElementById("restrictBySEL").value);
+			presorted = presorted.filter(game => game[by] !== null && game[by] !== undefined && game[by] !== 0);
+		}
+
+		//The ranges.  Year is special.
+		const checkRanges = document.querySelectorAll("span.range input:checked");
+
+		checkRanges.forEach(elt => {
+			const type = elt.id.split("CHK")[0];
+			const truetype = headers.get(elt.id.split("CHK")[0]);
+			const low = document.querySelector("#" + type + "LOW").value;
+			const high = document.querySelector("#" + type + "HIGH").value; 
+
+			if (type === "alpha") {
+
+				if (low !== "")
+					presorted = presorted.filter(game => collator.compare(game[truetype], low) >= 0);
+
+				if (high !== "")
+					presorted = presorted.filter(game => collator.compare(game[truetype], high) <= 0);
+
+
+			} else {
+			
+				if (low !== "")
+					presorted = presorted.filter(game => game[truetype] >= low);
+
+				if (high !== "")
+					presorted = presorted.filter(game => game[truetype] <= high);
+
+			}
+			
+			//There is no year zero.
+			if (type === "year" && ((low !== "" && low < 0) || (high !== "" && high > 0)))
+				presorted = presorted.filter(game => game[truetype] !== 0);
+			
+		});
 		
-
-		//A great miracle happened here.
-
 		return presorted;
 	}
 

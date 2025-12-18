@@ -224,6 +224,10 @@ a#thingURL {
     display: inline-block;
 }
 
+#dump ol {
+    list-style-position: outside;
+}
+
 #dump ol li::marker {
     color: #ccc;
 }

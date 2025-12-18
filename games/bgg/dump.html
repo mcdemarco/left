@@ -63,19 +63,20 @@
 	  <input type="hidden" id="listtype" name="listtype" value="dump" />
 	  <input type="hidden" id="parsedids" name="parsedids" value="" />
 	  <input type="hidden" id="updated" name="updated" value="" />
+          <input type="reset"/>
 	</span>
       </p>
       <hr/>
       <p class="unwrap" id="restrictions">
         <span style="grid-column: 1 /span 2;">Before sorting, restrict the data dump to only:
         </span>
-        <span>
+        <span class="range">
 	  <input type="checkbox" id="gratingCHK" /> geek ratings between <input type="text" id="gratingLOW" placeholder="0" /> and <input type="text" id="gratingHIGH" placeholder="10" />
         </span>
 
         <span>
-	  <input type="checkbox" id="restrictTypeCHK" /> 
-          <select id="restrictTypeSEL">
+	  <input type="checkbox" id="restrictByCHK" /> 
+          <select id="restrictBySEL">
 	    <option value="arank">abstracts</option>
 	    <option value="crank">customizable games</option>
 	    <option value="chrank">children's games</option>
@@ -86,43 +87,35 @@
 	    <option value="wrank">wargames</option>
 	  </select>
         </span>
-        <!--span>
-	    <input type="checkbox" id="restrictRankCHK" /> 
-            <select id="restrictRankSEL">
-	      <option value="rank">ranked games</option>
-	      <option value="grating">geek rated games</option>
-	      <option value="ratings">games with votes</option>
-            </select>
-        </span-->
-        <span>
+        <span class="range">
 	  <input type="checkbox" id="rankCHK" /> ranks between <input type="text" id="rankLOW" placeholder="1" /> and <input type="text" id="rankHIGH" placeholder="30000" />
         </span>
-        <span>
+        <span class="range">
 	  <input type="checkbox" id="ratingCHK" /> average ratings between <input type="text" id="ratingLOW" placeholder="0" /> and <input type="text" id="ratingHIGH" placeholder="10" />
        </span>
 
         <span>
 	  <input type="checkbox" id="baseCHK" /> base games
         </span>
-        <span>
-	  <input type="checkbox" id="nameCHK" /> name between <input type="text" id="nameLOW" placeholder="___" /> and <input type="text" id="nameHIGH" placeholder="墨色山河" />
+        <span class="range">
+	  <input type="checkbox" id="alphaCHK" /> name between <input type="text" id="alphaLOW" placeholder="___" /> and <input type="text" id="alphaHIGH" placeholder="墨墨墨" />
         </span>
-        <span>
+        <span class="range">
 	  <input type="checkbox" id="yearCHK" /> year published between <input type="text" id="yearLOW" placeholder="-3500" /> and <input type="text" id="yearHIGH" placeholder="2028" />
         </span>
         
         <span>
 	  <input type="checkbox" id="expansionsCHK" /> expansions<sup>2</sup>
         </span>
-        <span>
+        <span class="range">
 	  <input type="checkbox" id="idsCHK" /> ids between <input type="text" id="idsLOW" placeholder="1" /> and <input type="text" id="idsHIGH" placeholder="470000" />
         </span>
-        <span>
+        <span class="range">
 	  <input type="checkbox" id="ratingsCHK" /> number of votes between <input type="text" id="ratingsLOW" placeholder="0" /> and <input type="text" id="ratingsHIGH" placeholder="140000" />
         </span>
       </p>
 
-    <p class="info">If you omit one value from a range, that end of the range will be unrestricted.  Note that in some cases, there is a difference between a low value of 0 and an unrestricted range (which may include bad values<sup>1</sup>).  The bad year 0 will be omitted if it falls within the year published range, but not if it falls in an unrestricted range.</p>
+    <p class="info">Ranges are inclusive.  If you omit one of the values from a range, that end of the range will be unrestricted.  Note that in some cases, there is a difference between a low value of 0 and an unrestricted range (which may include bad values<sup>1</sup>).  The bad year 0 will be omitted if it falls within the year published range, but not if it falls in an unrestricted range.</p>
       
     </form>
 
