@@ -9,6 +9,8 @@ Please note that the BoardGameGeek API underwent changes in mid-2025.  These too
 
 These tools use XSL.  Please note that Google is planning to [remove XSL from Chrome](https://developer.chrome.com/docs/web-platform/deprecating-xslt) (because "~~don't~~ be evil" also means "~~don't~~ break the internet") soonish.  When this happens I will polyfill these tools, but if I haven't gotten to it and you need the tools, you can apparently use [a Chrome extension](https://chromewebstore.google.com/search/xslt%20polyfill) to restore client-side XSL transforms.
 
+Due to the internet being full of bots, automatic loading of geeklists, etc., for sorting has been disabled.  Instead you will need to wait for the Sort button to appear and click it.  The management apologizes for any inconvenience.
+
 ## Tools for Sorting Games at BGG
 
 My BoardGameGeek sorters started with a [geeklist sorter](/games/bgg/geeklist.html), inspired by the former [lack of geeklist sorting](https://boardgamegeek.com/thread/554406/geeklists-allow-users-change-sort-method) at BoardGameGeek.  It later expanded to a [family sorter](/games/bgg/family.html), a [collection sorter](/games/bgg/collection.html), and a [general thing sorter](/games/bgg/things.html).  

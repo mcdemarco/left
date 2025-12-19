@@ -87,7 +87,7 @@
 	
 	function diffLists(force) {
 		if (! lists[0].hasOwnProperty("numeric") || !lists[1].hasOwnProperty("numeric") || lists[0].numeric.length === 0 || lists[1].numeric.length === 0) {
-			alert("list not found"); //Shouldn't happen.
+			alert("A list was not found.  Did you click Sort?");
 		}
 		if (force || ! lists[2].hasOwnProperty("date") || lists[2].date < lists[0].date || lists[2].date < lists[1].date) {
 

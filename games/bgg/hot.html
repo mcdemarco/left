@@ -18,7 +18,7 @@
 	<span>in order by 
 	  <select id="sortBy">
 	    <option value="alpha">Alphabetical</option>
-	    <option value="rank" selected>Rank</option>
+	    <option value="rank" selected>Hotness</option>
 	    <option value="year">Year Published</option>
 	  </select>
 	</span>
@@ -30,12 +30,9 @@
 	    <input type="checkbox" id="images" title="show image" /> image
 	  </span>
 	</span>
-	<span>
-	  <input type="submit" value="Sort" />
-	  <input type="hidden" id="listtype" name="listtype" value="hot" />
-	  <input type="hidden" id="parsedids" name="parsedids" value="" />
-	  <input type="hidden" id="updated" name="updated" value="" />
-	</span>
+	<input type="hidden" id="listtype" name="listtype" value="hot" />
+	<input type="hidden" id="parsedids" name="parsedids" value="" />
+	<input type="hidden" id="updated" name="updated" value="" />
       </p>
     </form>
 

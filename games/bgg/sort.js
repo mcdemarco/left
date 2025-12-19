@@ -104,7 +104,10 @@
 	function appendSortStuffXML(oldXML, newXML) {
 		//The switch to firstElementChild and children happened b/c
 		//the plays endpoint was returning particularly messy XML.
-		[...newXML.firstElementChild.children].forEach( node => oldXML.firstElementChild.appendChild(node) );
+		[...newXML.firstElementChild.children].forEach( node => {
+			if (node && node.firstElementChild && node.firstElementChild !== "error")
+				oldXML.firstElementChild.appendChild(node);
+		});
 		return oldXML;
 	}
 
@@ -124,8 +127,10 @@
 		var thingsArray = thingsId.split(",");
 		var oldPage =  (sortStuffStatus && sortStuffStatus.page) ? sortStuffStatus.page : 0;
 		var start = oldPage * 20;
-		if (thingsArray.length < start)
+		if (thingsArray.length < start) {
 			alert("Out of things!");
+			return "";
+		} //else...
 
 		var paginatedThings = thingsArray.slice(start, (oldPage + 1) * 20).join(",");
 		//console.log(paginatedThings);
@@ -212,18 +217,36 @@
 		setURL(); //to default
 		setFromQuery();
 		document.getElementById("sortBy").addEventListener("change", adjustAscending);
-		document.getElementsByTagName("form")[0].addEventListener("submit", function(e) {
-			e.preventDefault();
-			getSortStuff();
-			return false;
-		});
-		if ( sorteeKey === "plays" || sorteeKey === "things")
-			document.getElementById("next").addEventListener("click", function(e) {
+		document.querySelector("form").addEventListener("reset", clearList);
+		window.setTimeout(loadButtons,5000);
+	}
+
+	function loadButtons() {
+		//Due to the internet being 90% bots these days,
+		//take extra precautions against them hitting the API.
+		var formp = document.querySelector("form p");
+		
+		var butn = document.createElement("button");
+		butn.setAttribute("type","button");
+		butn.setAttribute("id","sort");
+		butn.innerText = "Sort";
+		butn.addEventListener("click", getSortStuff);
+		formp.appendChild(butn);
+		
+		if ( sorteeKey === "plays" || sorteeKey === "things") {
+			var buttn = document.createElement("button");
+			buttn.setAttribute("type","button");
+			buttn.setAttribute("id","next");
+			buttn.innerText = "Next " + ( sorteeKey === "plays" ? "100" : "20");
+			buttn.addEventListener("click", function(e) {
 				getSortStuff(true);
 			});
-		document.getElementsByTagName("form")[0].addEventListener("change", function(e) {
-			getSortStuff();
-		});
+			formp.appendChild(buttn);
+		}
+
+		var ubutn = document.createElement("input");
+		ubutn.setAttribute("type","reset");
+		formp.appendChild(ubutn);
 	}
 
 	function parseID(protoId) {
@@ -266,6 +289,8 @@
 		
 		if (sorteeKey === "things") {
 			sortStuffId = getPaginatedThings(sortStuffId);
+			if (sortStuffId === "")
+				return;
 		}
 		
 		var apiURL = sortee[sorteeKey].sortStuffURL + sortStuffId + (comments ? "?comments=1" : "") + (stats ? "&stats=1" : "") + (restriction && restriction != "all" ? "&" + restriction + "=1" : "");
@@ -302,7 +327,8 @@
 							sortStuffStatus.xml = sortStuffXML;
 						} else {
 							sortStuffStatus.page++;
-							appendSortStuffXML(sortStuffStatus.xml,sortStuffXML);
+							console.log(sortStuffXML);
+///							appendSortStuffXML(sortStuffStatus.xml,sortStuffXML);
 						}
 					} else
 						sortStuffStatus.xml = sortStuffXML;
@@ -361,7 +387,7 @@
 				setURL();
 			}
 			//also autoload.
-			getSortStuff();
+			//getSortStuff();
 		}
 	}
 

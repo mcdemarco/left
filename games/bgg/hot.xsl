@@ -68,7 +68,7 @@
 		<div class="entry" data-thingid="{@id}">
 			<h3>
 				<a target="_blank" href="https://boardgamegeek.com/thing/{@id}">
-					<xsl:value-of select="name/@value" />
+					<xsl:value-of select="name/@value" /> (<xsl:value-of select="@rank" />)
 				</a>
 				<div>
 				  <xsl:value-of select="yearpublished/@value" />

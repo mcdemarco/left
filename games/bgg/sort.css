@@ -25,9 +25,15 @@ cite#footer {
     text-align:right;
     display:block;
 }
+
 p.unwrap span {
     white-space: nowrap;
 }
+p.unwrap button {
+    margin: 1em;
+}
+
+
 p.message {
     color: tomato;
     padding: 0.5em 1em;
@@ -165,13 +171,13 @@ a#thingURL {
     font-style:italic;
 }
 
-.collection p.unwrap {
+/*.collection p.unwrap {
     display:flex;
     flex-direction:row;
     align-items:left;
     justify-content: space-between;
     flex-wrap:wrap;
-}
+}*/
 
 .collection div.description {
     white-space: pre-wrap;
