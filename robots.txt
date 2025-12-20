@@ -7,9 +7,12 @@ Disallow: /bio/nonfiction/
 Disallow: /book/
 Disallow: /feed/
 Disallow: /files/recipes/
-Disallow: /games/bgg/
 Disallow: /node/
 Disallow: /social/
 Disallow: /tamination/
 Disallow: /tools/504/rules/
 Disallow: /tools/scree/1.0/
+Disallow: /tools/scree/1.0.1/
+Disallow: /tools/scree/1.0.2/
+Allow: /games/bgg/index.html
+Disallow: /games/bgg/

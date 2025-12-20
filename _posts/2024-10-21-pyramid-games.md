@@ -13,4 +13,4 @@ At first I conceived of Hexcana as a Gnostica variant, but adding two new direct
 
 Playtesting will have to wait for the acquisition of a round Tarot deck and a live Zarcana ~~victim~~ partner.
 
-Since my last gaming post, but still a few months ago, I also added Jacynth City (yet another Zark City variant) to my [Decktet](/games/decktet/) and [pyramid games](/games/pyramids/) lists.  Today I am also posting the draft rules of [Darcana](/games/decktet/darcana/), a reimplementation of Dectana with more Gnostica, less Zarcana, and a solo/automata mode.
+Since my last gaming post, but still a few months ago, I also added Jacynth City (yet another Zark City variant) to my [Decktet](/games/decktet/) and [pyramid games](/games/pyramid/) lists.  Today I am also posting the draft rules of [Darcana](/games/decktet/darcana/), a reimplementation of Dectana with more Gnostica, less Zarcana, and a solo/automata mode.

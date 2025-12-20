@@ -218,7 +218,7 @@
 		setFromQuery();
 		document.getElementById("sortBy").addEventListener("change", adjustAscending);
 		document.querySelector("form").addEventListener("reset", clearList);
-		window.setTimeout(loadButtons,5000);
+		window.setTimeout(loadButtons,2500);
 	}
 
 	function loadButtons() {
