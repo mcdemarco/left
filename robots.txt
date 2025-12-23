@@ -1,6 +1,7 @@
 # robots.txt for http://www.mcdemarco.net/
 # mostly old directories being redirected
 # plus aggression against my bgg tools
+# plus two incompetent bots
 
 User-agent: *
 Disallow: /bio/nonfiction/
@@ -16,3 +17,7 @@ Disallow: /tools/scree/1.0.1/
 Disallow: /tools/scree/1.0.2/
 Allow: /games/bgg/index.html
 Disallow: /games/bgg/
+
+User-agent: ahrefsbot
+User-agent: mj12bot
+Disallow: /
