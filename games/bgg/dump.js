@@ -13,6 +13,8 @@
 	var base = location.protocol + "//" + location.host + path;
 	var baseFile = base + "dump.html";
 	var csvFile = base + "boardgames_ranks.csv";
+	var datadate = "2025-12-26";
+
 	var headers = new Map([
 		["ids","id"],
 		["alpha","name"],
@@ -36,7 +38,6 @@
 	var sortStuff;
 	var thingLimit = 500;  //Don't let thing links exceed GET limits,
   //b/c I'm not in the mood to set up POST or compression.
-	var datadate = "2025-12-17";
 
 	//https://stackoverflow.com/a/9645447
 	const collator = new Intl.Collator('en', {'sensitivity': 'base'});

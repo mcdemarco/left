@@ -372,9 +372,10 @@
 
 	function setFromQuery() {
 		if (window.location.search && window.location.search.split("?")[1].length > 0) {
-			var args = window.location.search.split("?")[1].split("&")[0];
+			var args = window.location.search.split("?")[1];
+			var arg0 = args.split("&")[0];
 			//When ids are text or comma-separated lists don't parseInt.
-			var listId = (sorteeKey === "collection" || sorteeKey ==="hot" || sorteeKey ==="plays" || sorteeKey === "things") ? args : parseInt(args,10);
+			var listId = (sorteeKey === "collection" || sorteeKey ==="hot" || sorteeKey ==="plays" || sorteeKey === "things") ? arg0 : parseInt(arg0,10);
 			document.getElementById("sorteeIds").value = listId;
 			setURL(listId);
 
@@ -386,8 +387,6 @@
 			} else {
 				setURL();
 			}
-			//also autoload.
-			//getSortStuff();
 		}
 	}
 
