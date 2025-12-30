@@ -327,8 +327,8 @@
 							sortStuffStatus.xml = sortStuffXML;
 						} else {
 							sortStuffStatus.page++;
-							console.log(sortStuffXML);
-///							appendSortStuffXML(sortStuffStatus.xml,sortStuffXML);
+							//console.log(sortStuffXML);
+							appendSortStuffXML(sortStuffStatus.xml,sortStuffXML);
 						}
 					} else
 						sortStuffStatus.xml = sortStuffXML;
