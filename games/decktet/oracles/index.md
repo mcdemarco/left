@@ -6,11 +6,13 @@ menu: games
 date: 2025-03-12 17:50:00
 ---
 
-Oracles is my Soothsayers-like game for the Decktet.
+Oracles is a 2--4 player lead-follow game for the Decktet based on Soothsayers.  It can also be played solo with an automaton (see below).
+
+There's a quick reference [here](./reference.html).
 
 ## Requirements
 
-* one deck(tet) per player
+* one deck(tet) per player or automaton
 * a bank of suit tokens
 * a supply of 18 of another color or type of token for victory points
 
@@ -18,21 +20,24 @@ Oracles is my Soothsayers-like game for the Decktet.
 
 Set up the bank, including the victory points.  
 
+Give each player one suit token of each suit.
+
 Divide the Decktets into:
 
-* Aces  (6 per player)
-* Ranked cards (2--9) (24/48/72 cards)
-* Crowns and extended deck cards. (15/30/45 cards)
+* Aces (6 per player)
+* Rank cards (2--9) (48/72/96 cards, depending on player/Decktet count)
+* Crowns (12/18/24 cards)
+* Extended deck cards. (18/27/36 cards)
 
-Give one set of all six Aces to each player.  They lay them out in suit order to form their base tableau row.  They should also leave space below the aces for cards they will eventually capture (that is, add to the extended tableau row).
+Give one set of six Aces to each player.  They lay them out in suit order to form their base tableau row.  They should also leave space below the aces for cards they will eventually forge (that is, add to the extended tableau row).
 
 ![The starting tableau](starting-tableau.svg)
 
-Shuffle the ranked cards to form the base deck.  Deal out six in the center of the table to form the base market.  Also deal four cards to each player.
+Shuffle the ranked cards to form the base deck.  Deal four cards to each player.  Deal out six in the center of the table to form the base market, discarding any 7's, 8's, or 9's that come out to form a base discard pile.
 
-Shuffle the remaining cards to form the extended deck.  Deal out three in the center of the table to form the extended market.
+Shuffle the remaining cards to form the extended deck.  Deal one card to each player.  Deal out three in the center of the table to form the extended market.  Discard any Courts or Excuses to an extended discard pile.
 
-Optionally, set aside 6 victory tokens in a third market area and write down the prices:  7/12/18/23/31/39 (suit tokens).
+Optionally, set aside 6 victory tokens in a third market area and write down the prices:  7/12/18/25/33/41 **identical** suit tokens.
 
 ![The markets](market-layout.svg)
 
@@ -44,19 +49,21 @@ The player who most recently consulted an oracle goes first.
 
 Players' tableaux should be laid out and remain in suit order.  The main goal of the game is to build up your twelve tableau piles until you are ahead in enough of them to claim victory.  The uppermost card in each base pile determines your current power in that suit.  When building on a tableau pile, you must always match the original suit (the suit of the ace), even if the ace has been moved away, and increase in rank.  New cards are stacked on top of old ones.
 
-When first ascending a base suit, the ace is moved down to the extended deck row, thus:
+When first increasing a base suit, the ace is moved down to the extended deck row, thus:
 
 ![Moving an ace down](moving-ace.svg)
 
-If you are the first player to ascend in that suit, also mark the moved ace with a victory point token. (See below.)
+If you are the first player to increase in that suit, also mark the moved ace with a victory point token. (See below.)
 
-The extended tableau piles are ranked/filled in the order *Ace*, *Crown*, *Pawn*, *Court*, *Excuse*.  The Ace must be present to place a Crown (whether by capture or other means).  The base pile value must be greater than 3 to place a Pawn, greater than 5 to place a Court, and greater than 7 to place an Excuse.  You need not place a Crown before placing a Pawn or a Court, etc.  If for some reason you need to place an extended deck card of the same or lower rank onto an extended tableau pile, discard any intervening cards that are not in strictly ascending rank.
+The extended tableau piles are ranked/filled in the order *Ace*, *Crown*, *Pawn*, *Court*, *Excuse*.  The Ace must be present to place a Crown (whether by forging or other means).  The base pile value must be greater than 3 to place a Pawn, greater than 5 to place a Court, and greater than 7 to place an Excuse.  You need not place a Crown before placing a Pawn or a Court, etc.  If for some reason you need to place an extended deck card of the same or lower rank onto an extended tableau pile, discard any intervening cards that are not in strictly ascending rank.
 
 ![An eyeball-less tableau](blind-tableau.svg)
 
+If a card is moved away from a base tableau pile leaving no cards in the pile, the Ace must be returned to that pile.  Any extended tableau cards that were on top of it may remain, but any further placements or movements of extended deck cards must follow the usual restrictions.  If the Ace had an eyeball (see below), it should be moved to another player's pile or returned to the bank.
+
 #### Victory Points for Piles
 
-Whenever a player attains the highest current rank in a base or extended tableau suit, place a victory token on that card to mark it.  For mystical reasons, a victory token is also called a "third eye" or "eyeball."
+Whenever a player attains the highest current rank in a base or extended tableau suit (regardless of the means or whose turn it is), place a victory token on that card to mark it.  For mystical reasons, a victory token is also called a "third eye" or "eyeball."
 
 Take the first eyeball of each pile from the bank, but afterwards take it from another player when *surpassing* them in rank for that tableau pile.  There should only ever be twelve eyeballs in use on the players' tableaux, one for each base tableau suit and one for each extended tableau suit.
 
@@ -66,34 +73,35 @@ Additional eyeballs may be bought using extended deck powers.  Keep these eyebal
 
 ## Gameplay
 
+This is a lead-follow type of game.  The first player leads a suit, and all other players have the option to follow. 
 Each suit has powers which vary according to the ranks of your base or extended tableau pile for that suit.  Generally speaking, these powers are:
 
 1. **Moons**: add flexibility to lead/follow actions
 2. **Suns**: draw cards from the base market or deck
-3. **Leaves**: play cards from your hand to your base tableau piles
-4. **Waves**: play cards from the extended market to your extended tableau piles
+3. **Waves**: play cards from your hand to your base tableau piles ("increase")
+4. **Leaves**: buy cards from the extended market and play them to your extended tableau piles ("forge")
 5. **Wyrms**: rearrange your tableaux or exchange suit tokens
 6. **Knots**: earn suit tokens or buy victory points
 
-This is a lead-follow type of game.  The first player leads, and all other players have the option to follow.  Only after all players have followed are the markets refilled from the corresponding decks.  When either deck is exhausted, you may shuffle the discards.  If ever you cannot refill the base deck market completely, the game ends immediately.
+The powers of the suits depend on the card that is topmost in your tableau pile for that suit.  These powers are expressed (below) in quantities that often involve dividing the rank by another number.  You should always round *down* when doing this division.
 
 ### Lead
 
-The first player leads by declaring a card from their base tableau, and the suit it is on.
+The first player leads by declaring a card from their base tableau, and the suit it is on.  The lead powers are:
 
-1. **Moons**:  When leading a ranked card on their Moons pile, the effect is to lead the other suit, at its Moon rank.
-   (The ace of Moons may not be led; the first player will have to lead an ace of another suit).  
+1. **Moons**:  When leading a ranked card on one's Moons pile, the effect is to lead the other suit, but at its Moon rank.
+   (The ace of Moons may not be led.)
 2. **Suns**: Draw (rank/2 + 1) cards from the base market or base deck.  (Shuffle base discards when necessary.)
-3. **Leaves**: Ascend (rank + rank/3 + 2) levels in any combination of suits.  Skipping a rank costs one of your Ascend actions each, and only (rank/4 + 1) ranks may be skipped.
-4. **Waves**: Capture (rank/4 + 1) extended deck cards using tokens and (rank) base cards.  You must match at least min((3 - rank/3), suits) of the target card's suits with each card, and with the sum of your spent tokens.  *All* tokens must match the captured card's suit(s).
-5. **Wyrms**: Rearrange, depending on the second suit:
+3. **Waves**: Increase (rank/2 + 1) levels in any combination of suits.  Skipping a rank costs one of your Increase actions plus the two matching suit tokens *per rank omitted*, and only (rank/4 + 1) ranks may be omitted to increase a particular card.
+4. **Leaves**: Forge (rank/4 + 1) extended deck cards using tokens and (rank/2 + 2) base cards.  Each base card must match at least one of the target card's suits, all tokens must match the forged card's suit(s), *and* all of its suits must be matched by cards or tokens (or both).
+5. **Wyrms**: Rearrange, depending on the other suit:
    * Moons: choose one of the other 5 suits and perform its action (*this combination does not occur in the base deck*)
    * Suns:  discard (rank/2 + 1) cards from the market
-   * Leaves: move (rank/2 + 1) cards around your base tableau
-   * Waves: discard (rank/3 + 1) cards from the extended market, or move (rank/3 + 1) cards around your extended tableau
-   * Wyrms: take up to (rank/3 + 2) cards from your base tableau into your hand
-   * Knots: exchange (rank) suit tokens 
-6. **Knots**: Earn (rank/2 + 4) knots and/or the other suit token, in any combination.
+   * Waves: take up to (rank/2 + 1) cards from your base tableau into your hand
+   * Leaves: discard (rank/2 + 1) cards from the extended market, or move (rank/2 + 1) cards around your extended tableau
+   * Wyrms: move (rank/2 + 1) cards around your base tableau, up to a difference of (rank/2 + 1) in rank (*this choice is always available*)
+   * Knots: exchange (rank/2 + 1) suit tokens with the bank for any other suit(s)
+6. **Knots**: Earn (rank/2 + 2) knots and/or the other suit token, in any combination.
 
 ### Follow
 
@@ -103,24 +111,26 @@ A player may follow if:
 * They have a card of lower rank, on the same suit of their tableau, **and** pay the leader the difference in suit tokens *matching* the led suit.
 * They have a Moon of any rank that shares the led suit, and pay the leader the difference in suit tokens if their own rank is lower.  In this case they may pay in any combination of Moons tokens and tokens of the matching suit.
 
-Otherwise, they pass and earn (rank/4 + 1) suit tokens of the led suit.
+Otherwise, they pass (see below).  Only after all players have followed are the markets refilled from the corresponding decks.  When either deck is exhausted, you may shuffle the discards.  If ever you cannot completely refill the base deck market (even after shuffling), the game ends immediately.
 
-Follow powers are:
+The follow powers are:
 
-1. **Moons**: When Moons are "led", a follower may follow the leader's other Moons suit, at the leader's Moons rank, the follower's other Moons suit, as if it were led at the leader's Moons rank, or the *other* suit on the follower's top card of the led suit.
+1. **Moons**: When Moons are "led", a follower may follow the leader's other Moons suit, at the leader's Moons rank and the follower's rank in the the other suit (the usual follow) **or** at the follower's Moons rank.
 2. **Suns**: Draw (rank/3 + 1) cards from the base market or base deck.
-3. **Leaves**: Ascend (rank + rank/3) levels in any combination of suits.  Skipping a rank costs one of your Ascend actions each, and only (rank/4 + 1) ranks may be skipped.
-4. **Waves**: Capture (rank/5 + 1) extended deck cards using tokens and (rank/2 + 1) base cards.  You must match at least min((3 - rank/4), suits) of the target card's suits with each card, and with the sum of your spent tokens.  *All* tokens must match the captured card's suit(s).
-5. **Wyrms**: Rearrange, depending on the second suit:
+3. **Waves**: Increase (rank/4 + 2) levels in any combination of suits.  Skipping a rank costs one of your Increase actions each, and only (rank/5 + 1) ranks may be skipped to increase a particular card.
+4. **Leaves**: Forge (rank/5 + 1) extended deck cards using tokens and (rank/3 + 2) base cards.  Each base card must match at least one of the target card's suits, all tokens must match the forged card's suit(s), *and* all of its suits must be matched by cards or tokens (or both).
+5. **Wyrms**: Rearrange, depending on suit:
    * Moons: choose one of the other 5 suits and perform its action (*this combination does not occur in the base deck*)
-   * Suns:  discard (rank/3 + 1) cards from the base market.
-   * Leaves: move (rank/3 + 1) cards around your base tableau.
-   * Waves: move (rank/4 + 1) cards around your extended tableau.
-   * Wyrms: take up to (rank/4 + 1) cards from your base tableau into your hand
-   * Knots: exchange (rank/2 + 1) suit tokens for other suits
-6. **Knots**: Earn (rank/2 + 1) knot and (rank/2 + 1) of the other suit token.
+   * Suns:  discard (rank/3 + 1) cards from the base market
+   * Waves: take up to (rank/3 + 1) cards from your base tableau into your hand
+   * Leaves: move (rank/3 + 1) cards around your extended tableau
+   * Wyrms: move (rank/3 + 1) cards around your base tableau, up to a difference of (rank/3 + 1) in rank  (*this choice is always available*)
+   * Knots: exchange (rank/3 + 1) suit tokens with the bank for any other suit(s)
+6. **Knots**: Earn (rank/2 + 1) knot **or** (rank/2 + 1) of the other suit token.  (When following with the Ace of Knots, you get only one Knot suit token.)
 
-Note that passing is different from following the Knots suit.
+### Pass
+
+Note that passing is different from following the Knots suit.  When passing, the follower earns (rank/4 + 1) suit tokens of the suit that was led.
 
 ### Extended Powers
 
@@ -131,10 +141,10 @@ The extended deck powers are derived in a regular way from the following list:
 
 * Moons: collect 2 more suit tokens from followers when leading a matching suit, or pay 1 suit token less when following a matching suit
 * Suns: draw 2 extra cards when leading and 1 extra when following Suns
-* Leaves: ascend 2 extra levels when leading and 1 extra when following Leaves
-* Waves: use 2 extra base cards on capture when leading and 1 extra when following Waves
-* Wyrms: rearrange 2 extra cards or suit tokens when leading and 1 extra when following Wyrms; **or** when leading or following *any* suit, you may perform that suit's Wyrms action on 2 cards or tokens when leading and 1 card or token when following
-* Knots: earn 2 extra suit tokens when leading or 1 extra when following Knots, **or** when buying an eyeball from the eyeball market get a discount of 2 tokens when leading or 1 token when following (note that this is the only way to buy an eyeball on a follow)
+* Waves: increase 2 extra levels when leading and 1 extra when following Leaves
+* Leaves: use 2 extra base cards on forge when leading and 1 extra when following Waves
+* Wyrms: rearrange 2 extra cards or suit tokens when leading and 1 extra when following Wyrms; **or** when leading or following *any* suit, you may in addition perform that suit's Wyrms action on 2 cards or tokens when leading and 1 card or token when following
+* Knots: earn 2 extra suit tokens when leading or 1 extra when following Knots, **or** buy an eyeball from the eyeball market on lead or follow (after earning)
 
 Aces provide no extended deck powers.
 
@@ -178,7 +188,9 @@ Otherwise, the game ends when the base market cannot be refilled.  In that case,
 
 ## Solo/Bot
 
-The solo game uses a bot and a suit die (or a plain d6; 1 = Moons, 2 = Suns, etc.) to simulate a second player.  You may also use the bot as an additional player in a multiplayer game.
+The solo game uses a bot and a suit die (or a plain d6; 1 = Moons, 2 = Suns, etc.) to simulate a second player.  You may also use the bot as an additional player in a multiplayer game.  The bot requires an additonal Decktet, like human players do.
+
+When playing with a bot, the markets should be kept in order, with older cards at the beginning of the market and new cards added to the end.
 
 The bot follows all the rules of the game, with the following exceptions:
 
@@ -188,19 +200,25 @@ The bot follows all the rules of the game, with the following exceptions:
 4. The per-suit bot exceptions are:
   * **Moons**: The bot leads or follows its secondary suit, if present.
   * **Suns**: When drawing cards from the base market, the bot takes cards in order.  If the base market is or becomes empty, it draws any remaining cards from the base deck.
-  * **Leaves**: The bot also draws cards from the base market in order to ascend.  First, it draws any single-level ascends it can perform, going in order across the market.  Next, *if* it has more than one ascend remaining, it draws any two-level ascends, and so on as long as it has any ascends remaining.  If the base market is or becomes empty, *and* it has ascends remaining, it may draw cards from the top of the base deck until it finds one it can ascend using its remaining budget.  It may repeat this action as long as its remaining budget after an ascend from the deck is *larger* than what it spent on the previous ascend from the deck.  Any card it draws and does not use is discarded.
-  * **Waves**: The bot does not pay to capture extended deck cards; it captures as many as permitted by its current base Waves level.  If the extended market is empty, the bot does not capture any cardss.  Otherwise, it *must* take and play extended market card(s), in order.  A card taken by the bot is played on the first pile where it legally increases the level.  If there is no such pile matching the card, it is placed in the first matching suit pile In suit order, even if that means going down more levels than a later placement would.  If the placement is completely illegal (the bot has no ace yet), the card is discarded; it still counts as one of the bot's permitted captures.
+  * **Waves**: The bot also draws cards from the base market in order to increase.  First, it draws any single-level increases it can perform, going in order across the market.  Next, *if* it has more than one increase remaining, it draws any two-level increases, and so on as long as it has any increases remaining.  If the base market is not usable for the bot, or is (or becomes) empty, *and* it has increases remaining, it may draw cards from the top of the base deck until it finds one it can increase using its remaining budget.  It may repeat this action as long as its remaining budget after an increase from the deck is *larger* than what it spent on the previous increase from the deck.  Any card it draws and does not use is discarded.
+  * **Leaves**: The bot does not pay to forge extended deck cards; it forges as many as permitted by its current base Waves level.  If the extended market is empty, the bot does not forge any cards.  Otherwise, it *must* take and play extended market card(s), in order.  A card taken by the bot is played on the first pile where it legally increases the level.  If there is no such pile matching the card, it is placed in the first matching suit pile In suit order, even if that means going down more levels than a later placement would.  If the placement is completely illegal (the bot has no ace available yet), the card is discarded; it still counts as one of the bot's permitted forges.
   * **Wyrms**: The bot never uses Wyrms powers.
   * **Knots**: The bot always buys an eyeball, when the rules allow it to *and* it can afford to.
 
-Note that the bot consumes the base deck and may end the game that way.
+Note that the bot consumes the base deck and may end the game that way.  For a longer game, keep the bot's hand in order and increase from there first (at all levels), then from the market as above.
 
 ## Notes
 
+Unlike this page, the [quick reference](./reference.html) uses JavaScript to calculate the various card and token counts from ranks.
+
 Some suits do not appear together on basic Decktet cards:  suns with leaves, moons with wyrms, and waves with knots.  The other 12 two-suit combinations vary in frequency.
 
-An Oracle deck is a more freeform, and generally smaller, divination deck than a traditional Tarot deck.
+Normally, Aces and Crowns belong to the basic Decktet, and only the rest of the "extended" deck in Oracles belong to the extended Decktet deck proper.
 
-### Credits 
+### Credits
 
-This game is based on [Soothsayers](https://boardgamegeek.com/boardgame/441114/soothsayers), an original card game by Jeff Grisenthwaite based partly on a traditional Tarot deck.  The bot is based on [my solo mode/bot for Soothsayers](http://mcdemarco.net/blog/2026/02/24/solo-soothsayers/).
+This game is based on [Soothsayers](https://boardgamegeek.com/boardgame/441114/soothsayers), an original card game by Jeff Grisenthwaite based partly on a traditional Tarot deck.  An Oracle deck is a more freeform, and generally smaller, divination deck than a traditional Tarot deck; thus the name.
+
+The bot is based on [my solo mode/bot for Soothsayers](http://mcdemarco.net/blog/2026/02/24/solo-soothsayers/).
+
+v 0.1 &copy; (such as it is) 2026 M.C.DeMarco

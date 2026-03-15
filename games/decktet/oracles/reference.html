@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+    <title>Oracles Quick Reference</title>
+    
+    <style>
+      /* styles borrowed from hegemino scoresheet */
+      html {
+        color: #1a1a1a;
+        background-color: #fdfdfd;
+      }
+      body {
+	      margin: 0 auto;
+	      padding: 5%;
+	      hyphens: auto;
+	      overflow-wrap: break-word;
+	      text-rendering: optimizeLegibility;
+	      font-kerning: normal;
+      }
+      main {
+	      display: grid;
+	      grid-template-columns: repeat(4 20%) auto;
+	      column-gap: 5em;
+	      row-gap: 3em;
+      }
+      div#top {
+	      grid-column-start: span 5;
+        grid-row: 1;
+      }
+      div#middle {
+	      grid-column-start: span 4;
+        grid-row: 2;
+      }
+      div#setup1 {
+	      grid-column-start: span 2;
+        grid-row: 3;
+      }
+      div#setup2 {
+	      grid-column-start: span 3;
+        grid-row: 3;
+      }
+      @media (max-width: 600px) {
+        body {
+          font-size: 0.9em;
+          padding: 12px;
+        }
+        h1 {
+          font-size: 1.8em;
+        }
+      }
+
+      @font-face {
+	      font-family: "Fortune Letters";
+	      src: url(../darcana/css/fortune-letters.ttf) format("truetype");
+      }
+      @font-face {
+	      font-family: "Fortune Widgets";
+	      src: url(../darcana/css/fortune-widgets.ttf) format("truetype");
+      }
+      h1, h2, h3, h4, h5, h6, th, strong {
+	      font-family: 'Fortune Letters', Futura, Geneva, sans-serif;
+      }
+      /* turn off Fortune Letters for a minute because it's lacking in thin space characters*/
+      span.font {
+	      font-family: Budoni, serif;
+	      font-weight: bold;
+      }
+      span.widgets {
+        font-family: 'Fortune Widgets', Futura, Geneva, sans-serif;
+      }
+
+      table td {
+	      font-size: normal;
+	      border: 1px solid #dde;
+	      border-radius: 3px;
+	      background-color: #f8f8ff;
+	      text-align: center;
+	      padding: 1px 2px;
+	      width: 15%;
+       
+      }
+
+      td.lead, .lead td {
+    	  background-color: #e8e8f8;
+      }
+
+      td.xsmall {
+	      font-size: xx-small;
+      }
+      td.small {
+	      font-size: small;
+      }
+      td.large {
+	      font-size: x-large;
+      }
+      .space {
+	      letter-spacing: 2px;
+      }
+      .price th, .price td {
+	      padding:2px 5px;
+        width: unset;
+        max-width: 3em;
+      }
+
+      ::highlight(x-highlight-na) {
+        color: #bbb;
+      }
+      
+      ::highlight(x-highlight) {
+        color: peru;
+      }
+      
+      .lead ::highlight(x-highlight) {
+        color: crimson;
+      }
+
+      .follow ::highlight(x-highlight) {
+        color: dodgerblue;
+      }
+
+      ::highlight(range-color-1) {
+        color: #668;
+        text-decoration: none;
+      }
+      ::highlight(rainbow-color-2) {
+        color: darkblue;
+        text-decoration: underline;
+      }
+      ::highlight(rainbow-color-3) {
+        color: darkred;
+        text-decoration: none;
+      }
+
+    </style>
+
+  </head>
+  <body>
+    <h1>Oracles Quick Reference</h1>
+    <main>
+
+      <div id="top">
+        <h2>Lead/Follow Powers</h2>
+        <table x-data="{ranks: [1,2,3,4,5,6,7,8,9]}">
+          <tr>
+	          <th></th><th>Moons</th><th>Suns</th><th>Waves</th><th>Leaves</th><th>Wyrms</th><th>Knots</th>
+          </tr>
+          <tr>
+	          <th>Power</th><td>Lead/Follow</td><td>Draw</td><td>Increase</td><td>Forge</td><td>Rearrange</td><td>Earn</td>
+          </tr>
+          <tr class="lead">
+	          <th>Lead</th>
+	          <td class="small">other suit @ Moons rank</td>
+	          <td class="space" x-text="ranks.map(r => Math.floor(r/2) + 1).join('/')" x-highlight="[6, 11]"></td>
+	          <td class="space" x-text="ranks.map(r => Math.floor(r/2) + 2).join('/')" x-highlight="[6, 11]"></td>
+	          <td class="space" x-text="ranks.map(r => Math.floor(r/4) + 1).join('/')" x-highlight="[6, 11]"></td>
+	          <td class="space" x-text="ranks.map(r => Math.floor(r/2) + 1).join('/')" x-highlight="[6, 11]"></td>
+	          <td class="space" x-text="ranks.map(r => Math.floor(r/2) + 2).join('/')" x-highlight="[6, 11]"></td>
+          </tr>
+          <tr class="follow">
+	          <th>Follow</th>
+	          <td class="small">other suit @ Moons or other rank</td>
+	          <td class="space" x-text="ranks.map(r => Math.floor(r/3) + 1).join('/')" x-highlight="[6, 11]"></td>
+	          <td class="space" x-text="ranks.map(r => Math.floor(r/4) + 2).join('/')" x-highlight="[6, 11]"></td>
+	          <td class="space" x-text="ranks.map(r => Math.floor(r/5) + 1).join('/')" x-highlight="[6, 11]"></td>
+	          <td class="space" x-text="ranks.map(r => Math.floor(r/3) + 1).join('/')" x-highlight="[6, 11]"></td>
+	          <td class="space" x-text="ranks.map(r => Math.floor(r/2) + 1).join('/')" x-highlight="[6, 11]"></td>
+          </tr>
+          <tr>
+	          <th></th><td></td><td>cards</td><td>increases</td><td>cards</td><td>cards or tokens</td><td>tokens</td>
+          </tr>
+          <tr>
+	          <th>Pass</th>
+	          <td class="small">Moon tokens or...</td>
+	          <td colspan = "5"><span class="space" x-text="ranks.map(r => Math.floor(r/4) + 1).join('/')" x-highlight="[6, 11]"></span> &nbsp;tokens of the led suit</td>
+          </tr>
+          <tr>
+	          <th>Extended<br/>Power</th>
+	          <td class="small">Charge more/pay less to&nbsp;follow</td>
+	          <td class="small">Draw more</td>
+	          <td class="small">Increase more</td>
+	          <td class="small">Forge more</td>
+	          <td class="small">Rearrange more</td>
+	          <td class="small">Buy eyeballs</td>
+          </tr>
+
+          <tr>
+	          <th></th><th colspan = "6"><h3>Lead/Follow Restrictions</h3></th>
+          </tr>
+
+          <tr class="lead">
+	          <th>Lead</th>
+	          <td></td>
+	          <td></td>
+	          <td class="space" x-text="ranks.map(r => Math.floor(r/4) + 1).join('/')" x-highlight="[6, 11]"></td>
+	          <td class="space" x-text="ranks.map(r => Math.floor(r/2) + 2).join('/')" x-highlight="[6, 11]"></td>
+	          <td class="space" x-text="ranks.map(r => Math.floor(r/2) + 1).join('/')" x-highlight="[6, 11]"></td>
+	          <td></td>
+          </tr>
+          <tr class="follow">
+	          <th>Follow</th>
+	          <td></td>
+	          <td></td>
+	          <td class="space" x-text="ranks.map(r => Math.floor(r/4) + 2).join('/')" x-highlight="[6, 11]"></td>
+	          <td class="space" x-text="ranks.map(r => Math.floor(r/3) + 2).join('/')" x-highlight="[6, 11]"></td>
+	          <td class="space" x-text="ranks.map(r => Math.floor(r/3) + 1).join('/')" x-highlight="[6, 11]"></td>
+	          <td>only 1 suit</td>
+          </tr>
+          <tr>
+	          <th></th><td></td><td></td><td>ranks skipped</td><td>hand cards spent</td><td>rank difference (<span class="widgets">Y</span>)</td><td class="small">only one token on Ace</td>
+          </tr>
+        </table>
+
+      </div>
+
+      
+      <div id="middle">
+        <h2>The Extended Deck</h2>
+
+        <table>
+	        <tr>
+	          <th></th><th>Price</th><th>Tableau Pile Suit Power</th><th>Other Suit Powers</th><th class="lead">Lead</th><th>Follow</th>
+	        </tr>
+	        <tr>
+	          <th>Ace</th><td x-highlight.na="'n/a'">n/a</td><td>none</td><td x-highlight.na="'n/a'">n/a</td><td class="lead" x-highlight.na="'n/a'">n/a</td><td x-highlight.na="'n/a'">n/a</td>
+	        </tr>
+	        <tr>
+	          <th>Crown</th><td>10</td><td>on follow only</td><td x-highlight.na="'n/a'">n/a</td><td class="lead" x-highlight.na="'n/a'">n/a</td><td>+1</td>
+	        </tr>
+	        <tr>
+	          <th>Pawn</th><td>11</td><td>on lead or follow (adding other suits)</td><td>on follow only</td><td class="lead">+2</td><td>+1</td>
+	        </tr>
+	        <tr>
+	          <th>Court</th><td>12</td><td>on lead or follow (adding other suits)</td><td>on lead or follow (adding other suits)</td><td class="lead">+2</td><td>+1</td>
+	        </tr>
+	        <tr>
+	          <th>The Excuse</th><td>13</td><td>on lead or follow (without suit restrictions)</td><td x-highlight.na="'n/a'">n/a</td><td class="lead">+3</td><td>+2</td>
+	        </tr>
+        </table>
+
+      </div>
+
+
+      <div>
+
+        <h2>Eyeball Prices</h2>
+
+        <table class="price" x-data="{prices: [7,12,18,25,33,41]}">
+          <tr>
+            <th>&nbsp;</th><th></th>
+          </tr>
+	        <template x-for="price in prices">
+	            <tr>
+                <td class="large">◎</td><td x-text="price"></td>
+	            </tr>
+	        </template>
+        </table>
+        <p>Pay using a single suit.</p>
+        
+      </div>
+
+
+      <div id="setup1">
+        <h2>Setup</h2>
+        <p>Each player receives:
+        <ul>
+          <li>a set of 6 aces</li>
+          <li>a set of 6 suit tokens</li>
+          <li>a hand of 4 base cards and 1 extended deck card</li>
+        </ul>
+      </div>
+      <div id="setup2">
+        <h2>&nbsp;</h2>
+        <p>The markets are set up with:</p>
+        <ul>
+          <li>six base deck cards, discarding any 7s, 8s, or 9s</li>
+          <li>three extended deck cards, discarding any Courts or Excuses</li>
+          <li>optionally, six eyeballs on a price sheet</li>
+        </ul>
+      </div>
+
+    </main>
+
+    <script src="//unpkg.com/alpinejs-highlight" defer></script>
+    <script src="//unpkg.com/alpinejs" defer></script>
+    
+  </body>
+</html>
