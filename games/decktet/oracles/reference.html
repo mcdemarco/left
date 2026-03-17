@@ -79,7 +79,11 @@
 	      text-align: center;
 	      padding: 1px 2px;
 	      width: 15%;
-       
+      }
+
+      table#extended td {
+        width: auto;
+        padding: 1px 7px;
       }
 
       td.lead, .lead td {
@@ -195,7 +199,7 @@
 	          <td></td>
 	          <td class="space" x-text="ranks.map(r => Math.floor(r/4) + 1).join('/')" x-highlight="[6, 11]"></td>
 	          <td class="space" x-text="ranks.map(r => Math.floor(r/2) + 2).join('/')" x-highlight="[6, 11]"></td>
-	          <td class="space" x-text="ranks.map(r => Math.floor(r/2) + 1).join('/')" x-highlight="[6, 11]"></td>
+	          <td class="space" x-text="ranks.map(r => Math.floor(r/3) + 2).join('/')" x-highlight="[6, 11]"></td>
 	          <td></td>
           </tr>
           <tr class="follow">
@@ -218,24 +222,24 @@
       <div id="middle">
         <h2>The Extended Deck</h2>
 
-        <table>
+        <table id="extended">
 	        <tr>
-	          <th></th><th>Price</th><th>Tableau Pile Suit Power</th><th>Other Suit Powers</th><th class="lead">Lead</th><th>Follow</th>
+	          <th></th><th>Price</th><th>Level</th><th>Tableau Pile Suit Power</th><th>Other Suit Powers</th><th class="lead">Lead</th><th>Follow</th>
 	        </tr>
 	        <tr>
-	          <th>Ace</th><td x-highlight.na="'n/a'">n/a</td><td>none</td><td x-highlight.na="'n/a'">n/a</td><td class="lead" x-highlight.na="'n/a'">n/a</td><td x-highlight.na="'n/a'">n/a</td>
+	          <th>Ace</th><td x-highlight.na="'n/a'">n/a</td><td x-highlight.na="'n/a'">n/a</td><td>none</td><td x-highlight.na="'n/a'">n/a</td><td class="lead" x-highlight.na="'n/a'">n/a</td><td x-highlight.na="'n/a'">n/a</td>
 	        </tr>
 	        <tr>
-	          <th>Crown</th><td>10</td><td>on follow only</td><td x-highlight.na="'n/a'">n/a</td><td class="lead" x-highlight.na="'n/a'">n/a</td><td>+1</td>
+	          <th>Crown</th><td>10</td><td>2</td><td>on follow only</td><td x-highlight.na="'n/a'">n/a</td><td class="lead" x-highlight.na="'n/a'">n/a</td><td>+1</td>
 	        </tr>
 	        <tr>
-	          <th>Pawn</th><td>11</td><td>on lead or follow (adding other suits)</td><td>on follow only</td><td class="lead">+2</td><td>+1</td>
+	          <th>Pawn</th><td>11</td><td>4</td><td>on lead or follow (adding other suits)</td><td>on follow only</td><td class="lead">+2</td><td>+1</td>
 	        </tr>
 	        <tr>
-	          <th>Court</th><td>12</td><td>on lead or follow (adding other suits)</td><td>on lead or follow (adding other suits)</td><td class="lead">+2</td><td>+1</td>
+	          <th>Court</th><td>12</td><td>6</td><td>on lead or follow (adding other suits)</td><td>on lead or follow (adding other suits)</td><td class="lead">+2</td><td>+1</td>
 	        </tr>
 	        <tr>
-	          <th>The Excuse</th><td>13</td><td>on lead or follow (without suit restrictions)</td><td x-highlight.na="'n/a'">n/a</td><td class="lead">+3</td><td>+2</td>
+	          <th>The Excuse</th><td>13</td><td>8</td><td>on lead or follow (without suit restrictions)</td><td x-highlight.na="'n/a'">n/a</td><td class="lead">+3</td><td>+2</td>
 	        </tr>
         </table>
 

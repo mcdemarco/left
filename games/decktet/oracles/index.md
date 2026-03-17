@@ -53,17 +53,19 @@ When first increasing a base suit, the ace is moved down to the extended deck ro
 
 ![Moving an ace down](moving-ace.svg)
 
-If you are the first player to increase in that suit, also mark the moved ace with a victory point token. (See below.)
+This just shows that that suit is now eligible for forging extended deck cards.
 
-The extended tableau piles are ranked/filled in the order *Ace*, *Crown*, *Pawn*, *Court*, *Excuse*.  The Ace must be present to place a Crown (whether by forging or other means).  The base pile value must be greater than 3 to place a Pawn, greater than 5 to place a Court, and greater than 7 to place an Excuse.  You need not place a Crown before placing a Pawn or a Court, etc.  If for some reason you need to place an extended deck card of the same or lower rank onto an extended tableau pile, discard any intervening cards that are not in strictly ascending rank.
+The extended tableau piles are ranked/filled in the order *Ace*, *Crown*, *Pawn*, *Court*, *Excuse*.  The Ace must be present to place any higher cards (whether by forging or other means).  At least one suit on the card must match the Ace.  (The Excuse matches everything.)  The base pile's value must be at least 2 to place a Crown in that suit, at least 4 for a Pawn, at least 6 to place a Court, and at least 8 to place an Excuse.  You need not place a Crown before placing a Pawn or a Court, etc.  If for some reason you need to place an extended deck card of the same or lower rank onto an extended tableau pile, discard any intervening cards that are not of lower rank than the new card.
+
+Extended deck cards are paid for using base cards from your hand and/or suit tokens.  Each base card must match at least one of the target card's suits, all tokens must match the forged card's suit(s), *and* all of its suits must be matched by cards or tokens (or both).  When placing the Excuse, all cards and tokens must match the tableau suit where you place it.
 
 ![An eyeball-less tableau](blind-tableau.svg)
 
-If a card is moved away from a base tableau pile leaving no cards in the pile, the Ace must be returned to that pile.  Any extended tableau cards that were on top of it may remain, but any further placements or movements of extended deck cards must follow the usual restrictions.  If the Ace had an eyeball (see below), it should be moved to another player's pile or returned to the bank.
+If a card is moved away from a base tableau pile leaving no cards in the pile, the Ace must be returned to that pile.  Any extended tableau cards that were on top of it may remain, but any further placements or movements of extended deck cards must follow the usual restrictions.
 
 #### Victory Points for Piles
 
-Whenever a player attains the highest current rank in a base or extended tableau suit (regardless of the means or whose turn it is), place a victory token on that card to mark it.  For mystical reasons, a victory token is also called a "third eye" or "eyeball."
+Whenever a player attains the highest current rank in a base or extended tableau suit (regardless of the means or whose turn it is), place a victory token on that card to mark it.  For mystical reasons, a victory token is also called a "third eye" or "eyeball."  (But eyeballs never go on Aces.)
 
 Take the first eyeball of each pile from the bank, but afterwards take it from another player when *surpassing* them in rank for that tableau pile.  There should only ever be twelve eyeballs in use on the players' tableaux, one for each base tableau suit and one for each extended tableau suit.
 
@@ -93,13 +95,13 @@ The first player leads by declaring a card from their base tableau, and the suit
    (The ace of Moons may not be led.)
 2. **Suns**: Draw (rank/2 + 1) cards from the base market or base deck.  (Shuffle base discards when necessary.)
 3. **Waves**: Increase (rank/2 + 1) levels in any combination of suits.  Skipping a rank costs one of your Increase actions plus the two matching suit tokens *per rank omitted*, and only (rank/4 + 1) ranks may be omitted to increase a particular card.
-4. **Leaves**: Forge (rank/4 + 1) extended deck cards using tokens and (rank/2 + 2) base cards.  Each base card must match at least one of the target card's suits, all tokens must match the forged card's suit(s), *and* all of its suits must be matched by cards or tokens (or both).
+4. **Leaves**: Forge (rank/4 + 1) extended deck cards using tokens and (rank/2 + 2) base cards.
 5. **Wyrms**: Rearrange, depending on the other suit:
    * Moons: choose one of the other 5 suits and perform its action (*this combination does not occur in the base deck*)
    * Suns:  discard (rank/2 + 1) cards from the market
    * Waves: take up to (rank/2 + 1) cards from your base tableau into your hand
    * Leaves: discard (rank/2 + 1) cards from the extended market, or move (rank/2 + 1) cards around your extended tableau
-   * Wyrms: move (rank/2 + 1) cards around your base tableau, up to a difference of (rank/2 + 1) in rank (*this choice is always available*)
+   * Wyrms: move (rank/2 + 1) cards around your base tableau, up to a difference of (rank/3 + 2) in rank (*this choice is always available*)
    * Knots: exchange (rank/2 + 1) suit tokens with the bank for any other suit(s)
 6. **Knots**: Earn (rank/2 + 2) knots and/or the other suit token, in any combination.
 
@@ -144,7 +146,7 @@ The extended deck powers are derived in a regular way from the following list:
 * Waves: increase 2 extra levels when leading and 1 extra when following Leaves
 * Leaves: use 2 extra base cards on forge when leading and 1 extra when following Waves
 * Wyrms: rearrange 2 extra cards or suit tokens when leading and 1 extra when following Wyrms; **or** when leading or following *any* suit, you may in addition perform that suit's Wyrms action on 2 cards or tokens when leading and 1 card or token when following
-* Knots: earn 2 extra suit tokens when leading or 1 extra when following Knots, **or** buy an eyeball from the eyeball market on lead or follow (after earning)
+* Knots: earn 2 extra suit tokens when leading or 1 extra when following Knots, **or** buy an eyeball from the eyeball market on lead or follow (without earning)
 
 Aces provide no extended deck powers.
 
@@ -157,20 +159,24 @@ Crowns provide only the follow power for its suit from the list above.
 Pawns provide lead and follow powers for the tableau suit the Pawn is on, and follow powers for the Pawn's other two suits.
 When leading or following the tableau suit the Pawn is on, you may consider the Pawn's additional suits as if they were on your base card.
 
+<!--
 * **the Watchman** (Moons, Wyrms, Knots)
 * **the Harvest** (Moons, Suns, Leaves)
 * **the Light Keeper** (Suns, Waves, Knots)
 * **the Borderland** (Waves, Leaves, Wyrms)
+-->
 
 #### Courts
 
 Courts provide lead and follow powers for the tableau suit the Court is on, and for the Court's other two suits.
 When leading or following any of the Court's suits, you may consider the Court's additional suits as if they were on your base card.
 
+<!--
 * **the Window** (Suns, Leaves, Knots)
 * **the Island** (Suns, Waves, Wyrms)
 * **the Consul** (Moons, Waves, Knots)
 * **the Rite** (Moons, Leaves, Wyrms)
+-->
 
 #### The Excuse
 
@@ -221,4 +227,4 @@ This game is based on [Soothsayers](https://boardgamegeek.com/boardgame/441114/s
 
 The bot is based on [my solo mode/bot for Soothsayers](http://mcdemarco.net/blog/2026/02/24/solo-soothsayers/).
 
-v 0.1 &copy; (such as it is) 2026 M.C.DeMarco
+v 0.2 &copy; (such as it is) 2026 M.C.DeMarco
