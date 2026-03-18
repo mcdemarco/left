@@ -183,9 +183,9 @@
 	          <th>Extended<br/>Power</th>
 	          <td class="small">Charge more/pay less to&nbsp;follow</td>
 	          <td class="small">Draw more</td>
-	          <td class="small">Increase more</td>
+	          <td class="small">Skip for less</td>
 	          <td class="small">Forge more</td>
-	          <td class="small">Rearrange more</td>
+	          <td class="small">Mix suits</td>
 	          <td class="small">Buy eyeballs</td>
           </tr>
 
@@ -206,7 +206,7 @@
 	          <th>Follow</th>
 	          <td></td>
 	          <td></td>
-	          <td class="space" x-text="ranks.map(r => Math.floor(r/4) + 2).join('/')" x-highlight="[6, 11]"></td>
+	          <td class="space" x-text="ranks.map(r => Math.floor(r/5) + 1).join('/')" x-highlight="[6, 11]"></td>
 	          <td class="space" x-text="ranks.map(r => Math.floor(r/3) + 2).join('/')" x-highlight="[6, 11]"></td>
 	          <td class="space" x-text="ranks.map(r => Math.floor(r/3) + 1).join('/')" x-highlight="[6, 11]"></td>
 	          <td>only 1 suit</td>
@@ -279,7 +279,7 @@
         <p>The markets are set up with:</p>
         <ul>
           <li>six base deck cards, discarding any 7s, 8s, or 9s</li>
-          <li>three extended deck cards, discarding any Courts or Excuses</li>
+          <li>three extended deck cards, discarding any Courts, Excuses, or duplicates</li>
           <li>optionally, six eyeballs on a price sheet</li>
         </ul>
       </div>

@@ -35,7 +35,7 @@ Give one set of six Aces to each player.  They lay them out in suit order to for
 
 Shuffle the ranked cards to form the base deck.  Deal four cards to each player.  Deal out six in the center of the table to form the base market, discarding any 7's, 8's, or 9's that come out to form a base discard pile.
 
-Shuffle the remaining cards to form the extended deck.  Deal one card to each player.  Deal out three in the center of the table to form the extended market.  Discard any Courts or Excuses to an extended discard pile.
+Shuffle the remaining cards to form the extended deck.  Deal one card to each player.  Deal out three in the center of the table to form the extended market.  Discard any Courts, Excuses, or duplicate cards to an extended discard pile.
 
 Optionally, set aside 6 victory tokens in a third market area and write down the prices:  7/12/18/25/33/41 **identical** suit tokens.
 
@@ -94,14 +94,14 @@ The first player leads by declaring a card from their base tableau, and the suit
 1. **Moons**:  When leading a ranked card on one's Moons pile, the effect is to lead the other suit, but at its Moon rank.
    (The ace of Moons may not be led.)
 2. **Suns**: Draw (rank/2 + 1) cards from the base market or base deck.  (Shuffle base discards when necessary.)
-3. **Waves**: Increase (rank/2 + 1) levels in any combination of suits.  Skipping a rank costs one of your Increase actions plus the two matching suit tokens *per rank omitted*, and only (rank/4 + 1) ranks may be omitted to increase a particular card.
+3. **Waves**: Increase (rank/2 + 1) levels in any combination of suits.  Skipping a rank costs one of your Increase actions, plus a number of tokens equal to the rank(s) of the skipped card(s), with a discount of one token if all tokens match your Waves suits or the suit your are increasing.  Only (rank/4 + 1) ranks may be skipped to increase a particular card.
 4. **Leaves**: Forge (rank/4 + 1) extended deck cards using tokens and (rank/2 + 2) base cards.
-5. **Wyrms**: Rearrange, depending on the other suit:
-   * Moons: choose one of the other 5 suits and perform its action (*this combination does not occur in the base deck*)
+5. **Wyrms**: Rearrange as follows, choosing *one* suit.  If that suit is *not* on your top card, pay 1 matching suit token to take the action.
+   * Moons: discard (rank/2 + 1) cards from the extended market (*this combination does not occur in the base deck*)
    * Suns:  discard (rank/2 + 1) cards from the market
    * Waves: take up to (rank/2 + 1) cards from your base tableau into your hand
-   * Leaves: discard (rank/2 + 1) cards from the extended market, or move (rank/2 + 1) cards around your extended tableau
-   * Wyrms: move (rank/2 + 1) cards around your base tableau, up to a difference of (rank/3 + 2) in rank (*this choice is always available*)
+   * Leaves: move (rank/2 + 1) cards around your extended tableau
+   * Wyrms: move (rank/2 + 1) cards around your base tableau, up to a difference of (rank/3 + 2) in rank (*this choice is always available for free*)
    * Knots: exchange (rank/2 + 1) suit tokens with the bank for any other suit(s)
 6. **Knots**: Earn (rank/2 + 2) knots and/or the other suit token, in any combination.
 
@@ -113,26 +113,30 @@ A player may follow if:
 * They have a card of lower rank, on the same suit of their tableau, **and** pay the leader the difference in suit tokens *matching* the led suit.
 * They have a Moon of any rank that shares the led suit, and pay the leader the difference in suit tokens if their own rank is lower.  In this case they may pay in any combination of Moons tokens and tokens of the matching suit.
 
-Otherwise, they pass (see below).  Only after all players have followed are the markets refilled from the corresponding decks.  When either deck is exhausted, you may shuffle the discards.  If ever you cannot completely refill the base deck market (even after shuffling), the game ends immediately.
+Otherwise, they pass (see below).  
 
 The follow powers are:
 
 1. **Moons**: When Moons are "led", a follower may follow the leader's other Moons suit, at the leader's Moons rank and the follower's rank in the the other suit (the usual follow) **or** at the follower's Moons rank.
 2. **Suns**: Draw (rank/3 + 1) cards from the base market or base deck.
-3. **Waves**: Increase (rank/4 + 2) levels in any combination of suits.  Skipping a rank costs one of your Increase actions each, and only (rank/5 + 1) ranks may be skipped to increase a particular card.
+3. **Waves**: Increase (rank/4 + 2) levels in any combination of suits.  Skipping a rank costs one of your Increase actions each, plus a number of tokens equal to the rank(s) of the skipped card(s).  (There is no discount on follow.)  Only (rank/5 + 1) ranks may be skipped to increase to a particular card.
 4. **Leaves**: Forge (rank/5 + 1) extended deck cards using tokens and (rank/3 + 2) base cards.  Each base card must match at least one of the target card's suits, all tokens must match the forged card's suit(s), *and* all of its suits must be matched by cards or tokens (or both).
-5. **Wyrms**: Rearrange, depending on suit:
-   * Moons: choose one of the other 5 suits and perform its action (*this combination does not occur in the base deck*)
-   * Suns:  discard (rank/3 + 1) cards from the base market
+5. **Wyrms**: Rearrange as follows, choosing *one* suit.  If that suit is *not* on your top Wyrms card, pay 1 matching suit token to take the action.
+   * Moons: discard (rank/3 + 1) cards from the extended market (*this combination does not occur in the base deck*)
+   * Suns: discard (rank/3 + 1) cards from the base market
    * Waves: take up to (rank/3 + 1) cards from your base tableau into your hand
    * Leaves: move (rank/3 + 1) cards around your extended tableau
-   * Wyrms: move (rank/3 + 1) cards around your base tableau, up to a difference of (rank/3 + 1) in rank  (*this choice is always available*)
+   * Wyrms: move (rank/3 + 1) cards around your base tableau, up to a difference of (rank/3 + 1) in rank (*this choice is always available for free*)
    * Knots: exchange (rank/3 + 1) suit tokens with the bank for any other suit(s)
-6. **Knots**: Earn (rank/2 + 1) knot **or** (rank/2 + 1) of the other suit token.  (When following with the Ace of Knots, you get only one Knot suit token.)
+6. **Knots**: Earn (rank/2 + 1) knot tokens **or** (rank/2 + 1) of the other suit token.  (When following with the Ace of Knots, you earn only one Knot suit token.)
 
 ### Pass
 
 Note that passing is different from following the Knots suit.  When passing, the follower earns (rank/4 + 1) suit tokens of the suit that was led.
+
+Only after all players have followed or passed are the markets refilled from the corresponding decks.  There are no restrictions on what can appear in the markets after the initial setup.
+
+When either deck is exhausted, shuffle the discards to continue refilling the market.  If you cannot completely refill the base deck market (even after shuffling), the game ends immediately.
 
 ### Extended Powers
 
@@ -143,9 +147,9 @@ The extended deck powers are derived in a regular way from the following list:
 
 * Moons: collect 2 more suit tokens from followers when leading a matching suit, or pay 1 suit token less when following a matching suit
 * Suns: draw 2 extra cards when leading and 1 extra when following Suns
-* Waves: increase 2 extra levels when leading and 1 extra when following Leaves
-* Leaves: use 2 extra base cards on forge when leading and 1 extra when following Waves
-* Wyrms: rearrange 2 extra cards or suit tokens when leading and 1 extra when following Wyrms; **or** when leading or following *any* suit, you may in addition perform that suit's Wyrms action on 2 cards or tokens when leading and 1 card or token when following
+* Waves: pay 2 fewer tokens to skip ranks when leading and 1 less when following Waves
+* Leaves: use 2 extra base cards on forge when leading and 1 extra when following Leaves
+* Wyrms: perform rearrangements for 2 extra suits when leading and 1 extra suit when following Wyrms
 * Knots: earn 2 extra suit tokens when leading or 1 extra when following Knots, **or** buy an eyeball from the eyeball market on lead or follow (without earning)
 
 Aces provide no extended deck powers.
@@ -202,16 +206,16 @@ The bot follows all the rules of the game, with the following exceptions:
 
 1. The bot goes first.
 2. The bot chooses which suit to lead using the suit die.  If it rolls a suit where it does nothing on lead, the other players may still follow.  In any other case where the bot needs to choose a suit, also use a suit die.
-3. The bot pays the normal price to follow.  It follows whenever it can afford to, even if it cannot actually perform the follow action (see below).
+3. The bot pays the normal price to follow.  It follows whenever it can afford to.   If it cannot afford to follow (or in cases specified below), it passes and collects the suit token(s) like a human player would.
 4. The per-suit bot exceptions are:
-  * **Moons**: The bot leads or follows its secondary suit, if present.
-  * **Suns**: When drawing cards from the base market, the bot takes cards in order.  If the base market is or becomes empty, it draws any remaining cards from the base deck.
-  * **Waves**: The bot also draws cards from the base market in order to increase.  First, it draws any single-level increases it can perform, going in order across the market.  Next, *if* it has more than one increase remaining, it draws any two-level increases, and so on as long as it has any increases remaining.  If the base market is not usable for the bot, or is (or becomes) empty, *and* it has increases remaining, it may draw cards from the top of the base deck until it finds one it can increase using its remaining budget.  It may repeat this action as long as its remaining budget after an increase from the deck is *larger* than what it spent on the previous increase from the deck.  Any card it draws and does not use is discarded.
-  * **Leaves**: The bot does not pay to forge extended deck cards; it forges as many as permitted by its current base Waves level.  If the extended market is empty, the bot does not forge any cards.  Otherwise, it *must* take and play extended market card(s), in order.  A card taken by the bot is played on the first pile where it legally increases the level.  If there is no such pile matching the card, it is placed in the first matching suit pile In suit order, even if that means going down more levels than a later placement would.  If the placement is completely illegal (the bot has no ace available yet), the card is discarded; it still counts as one of the bot's permitted forges.
-  * **Wyrms**: The bot never uses Wyrms powers.
-  * **Knots**: The bot always buys an eyeball, when the rules allow it to *and* it can afford to.
+    * **Moons**: The bot leads or follows its secondary suit, if present.
+    * **Suns**: When drawing cards from the base market, the bot takes cards in order.  If the base market is or becomes empty, it draws any remaining cards from the base deck.
+    * **Waves**: The bot also draws cards from the base market in order to increase, but first it draws from its hand.  The bot pays the appropriate tokens to skip levels, in the order *Waves, its other Waves suit, the target suit*, and it gets the usual discount.  The process is: first, it draws any single-level increases it can perform, going in order through its hand.  Next, *if* it has more than one increase remaining, it draws any two-level increases, and so on as long as it has any increases remaining.  Once it has exhausted the possibilities in its hand, it performs the same process with the base market.  If the base market is not usable for the bot, or is (or becomes) empty, *and* it has increases remaining, it may draw cards from the top of the base deck until it finds one it can increase using its remaining budget.  It may repeat this action as long as its remaining budget after an increase from the deck is *larger* than what it spent on the previous increase from the deck.  Any card it draws and does not use is discarded.
+    * **Leaves**: The bot also does not pay to forge extended deck cards; it forges as many as permitted by its current base Waves level.  If the extended market is empty, the bot does not forge any cards.  Otherwise, it *must* take and play extended market card(s), in order.  A card taken by the bot is played on the first pile where it legally increases the level.  If there is no such pile matching the card, it is placed in the first matching suit pile in suit order, even if that means going down more levels than a later placement would.  If all placements are illegal (*i.e.*, the bot has no ace available yet), the card is discarded; it counts as one of the bot's permitted forges.
+    * **Wyrms**: The bot never uses Wyrms powers.  If the bot rolls to lead Wyrms, it instead leads its highest base suit (with ties broken in order from Moons to Knots).  On follow, it earns the usual number of Wyrms tokens.
+    * **Knots**: The bot always buys an eyeball, when the rules allow it to *and* it can afford to.
 
-Note that the bot consumes the base deck and may end the game that way.  For a longer game, keep the bot's hand in order and increase from there first (at all levels), then from the market as above.
+Note that the bot consumes the base deck and may end the game that way.  For a shorter game, ignore the bot's hand and only increase from the market.
 
 ## Notes
 
@@ -227,4 +231,4 @@ This game is based on [Soothsayers](https://boardgamegeek.com/boardgame/441114/s
 
 The bot is based on [my solo mode/bot for Soothsayers](http://mcdemarco.net/blog/2026/02/24/solo-soothsayers/).
 
-v 0.2 &copy; (such as it is) 2026 M.C.DeMarco
+v 0.4 &copy; (such as it is) 2026 M.C.DeMarco
