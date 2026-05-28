@@ -33,6 +33,15 @@
 			defaultIds: ["351097"], //Games you can play with 504?
 			badMsg: "Bad geeklist id or URL!"
 		},
+		geeklistCSV: {
+			name: "geeklistCSV",
+			file: "geeklistCSV.html",
+			stylesheetURL: "geeklistCSV.xsl",
+			divId:  "geeklistCSV",
+			sortStuffURL: "https://boardgamegeek.com/xmlapi/geeklist/", //geeklistURL
+			defaultIds: ["351097"], //Games you can play with 504?
+			badMsg: "Bad geeklist id or URL for CSV!"
+		},
 		hot: {
 			name: "hot",
 			file: "hot.html",
@@ -168,7 +177,7 @@
 			if (sorteeKey === "collection")
 				restriction = document.querySelector('input[name="restrict"]:checked').value;
 
-		} else if (sorteeKey === "geeklist") {
+		} else if (sorteeKey === "geeklist" || sorteeKey === "geeklistCSV") {
 			//Force comments if necessary.
 			if (document.getElementById("sortBy").value == "comments")
 				document.getElementById("comments").checked = true;
@@ -255,7 +264,7 @@
 		if (sorteeKey === "things") {
 			//No-op.  Not clear if I'll call this at all.
 			return protoId;
-		} else if (sorteeKey === "family" || sorteeKey === "geeklist") {
+		} else if (sorteeKey === "family" || sorteeKey === "geeklist" || sorteeKey === "geeklistCSV") {
 			if ((protoId.split(sorteeKey + "/")).length > 1)
 				protoId = protoId.split(sorteeKey + "/")[1].split("/")[0];
 			if (parseInt(protoId,10) > 0)
@@ -342,7 +351,7 @@
 						sortStuffStatus.restriction = document.querySelector('input[name="restrict"]:checked').value;
 					} else if (sorteeKey === "family") {
 						sortStuffStatus.id = parseInt(sortStuffXML.firstElementChild.firstElementChild.getAttribute("id"),10);
-					} else if (sorteeKey === "geeklist") {
+					} else if (sorteeKey === "geeklist" || sorteeKey === "geeklistCSV") {
 						sortStuffStatus.id = parseInt(sortStuffXML.firstElementChild.getAttribute("id"),10);
 						sortStuffStatus.comments = document.getElementById("comments").checked;
 					} else if (sorteeKey === "plays") {
