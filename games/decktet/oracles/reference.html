@@ -156,8 +156,8 @@
           <tr class="lead">
 	          <th>Lead</th>
 	          <td class="small">other suit @ Moons rank</td>
-	          <td class="space" x-text="ranks.map(r => Math.floor(r/2) + 1).join('/')" x-highlight="[6, 11]"></td>
-	          <td class="space" x-text="ranks.map(r => Math.floor(r/2) + 2).join('/')" x-highlight="[6, 11]"></td>
+	          <td class="space" x-text="ranks.map(r => Math.floor(r/3) + 2).join('/')" x-highlight="[6, 11]"></td>
+	          <td class="space" x-text="ranks.map(r => Math.floor(r/3) + 2).join('/')" x-highlight="[6, 11]"></td>
 	          <td class="space" x-text="ranks.map(r => Math.floor(r/4) + 1).join('/')" x-highlight="[6, 11]"></td>
 	          <td class="space" x-text="ranks.map(r => Math.floor(r/2) + 1).join('/')" x-highlight="[6, 11]"></td>
 	          <td class="space" x-text="ranks.map(r => Math.floor(r/2) + 2).join('/')" x-highlight="[6, 11]"></td>
@@ -226,20 +226,16 @@
 	        <tr>
 	          <th></th><th>Price</th><th>Level</th><th>Tableau Pile Suit Power</th><th>Other Suit Powers</th><th class="lead">Lead</th><th>Follow</th>
 	        </tr>
+          <tr>
+	          <th>Crown</th><td>10</td><td>2+</td><td x-highlight.na="'n/a'">n/a</td><td x-highlight.na="'n/a'">n/a</td><td class="lead" x-highlight.na="'n/a'">n/a</td><td x-highlight.na="'n/a'">n/a</td>
 	        <tr>
-	          <th>Ace</th><td x-highlight.na="'n/a'">n/a</td><td x-highlight.na="'n/a'">n/a</td><td>none</td><td x-highlight.na="'n/a'">n/a</td><td class="lead" x-highlight.na="'n/a'">n/a</td><td x-highlight.na="'n/a'">n/a</td>
+	          <th>Pawn</th><td>11</td><td>4+</td><td>on lead only (adding other suits)</td><td>on lead only (adding other suits)</td><td class="lead">+1</td><td x-highlight.na="'n/a'">n/a</td>
 	        </tr>
 	        <tr>
-	          <th>Crown</th><td>10</td><td>2</td><td>on follow only</td><td x-highlight.na="'n/a'">n/a</td><td class="lead" x-highlight.na="'n/a'">n/a</td><td>+1</td>
+	          <th>Court</th><td>12</td><td>6+</td><td>on lead or follow (adding other suits)</td><td>on lead or follow (adding other suits)</td><td class="lead">+2</td><td>+1</td>
 	        </tr>
 	        <tr>
-	          <th>Pawn</th><td>11</td><td>4</td><td>on lead or follow (adding other suits)</td><td>on follow only</td><td class="lead">+2</td><td>+1</td>
-	        </tr>
-	        <tr>
-	          <th>Court</th><td>12</td><td>6</td><td>on lead or follow (adding other suits)</td><td>on lead or follow (adding other suits)</td><td class="lead">+2</td><td>+1</td>
-	        </tr>
-	        <tr>
-	          <th>The Excuse</th><td>13</td><td>8</td><td>on lead or follow (without suit restrictions)</td><td x-highlight.na="'n/a'">n/a</td><td class="lead">+3</td><td>+2</td>
+	          <th>The Excuse</th><td>13</td><td>8+</td><td>on lead or follow (without suit restrictions)</td><td x-highlight.na="'n/a'">n/a</td><td class="lead">+3</td><td>+2</td>
 	        </tr>
         </table>
 
@@ -279,7 +275,7 @@
         <p>The markets are set up with:</p>
         <ul>
           <li>six base deck cards, discarding any 7s, 8s, or 9s</li>
-          <li>three extended deck cards, discarding any Courts, Excuses, or duplicates</li>
+          <li>three extended deck cards, discarding any Courts or Excuses</li>
           <li>optionally, six eyeballs on a price sheet</li>
         </ul>
       </div>

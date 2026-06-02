@@ -33,9 +33,9 @@ Give one set of six Aces to each player.  They lay them out in suit order to for
 
 ![The starting tableau](starting-tableau.svg)
 
-Shuffle the ranked cards to form the base deck.  Deal four cards to each player.  Deal out six in the center of the table to form the base market, discarding any 7's, 8's, or 9's that come out to form a base discard pile.
+Shuffle the ranked cards and Crowns to form the base deck.  Deal four cards to each player.  Deal out six in the center of the table to form the base market, discarding any 7's, 8's, or 9's that come out to form a base discard pile.
 
-Shuffle the remaining cards to form the extended deck.  Deal one card to each player.  Deal out three in the center of the table to form the extended market.  Discard any Courts, Excuses, or duplicate cards to an extended discard pile.
+Shuffle the remaining cards to form the extended deck.  Deal one card to each player.  Deal out three in the center of the table to form the extended market.  Discard any Courts or Excuses to an extended discard pile.
 
 Optionally, set aside 6 victory tokens in a third market area and write down the prices:  7/12/18/25/33/41 **identical** suit tokens.
 
@@ -43,7 +43,7 @@ Optionally, set aside 6 victory tokens in a third market area and write down the
 
 The player who most recently consulted an oracle goes first.
 
-## Goals 
+## Goals
 
 ### The Tableaux
 
@@ -55,13 +55,17 @@ When first increasing a base suit, the ace is moved down to the extended deck ro
 
 This just shows that that suit is now eligible for forging extended deck cards.
 
+The base tableau piles are built up from Ace to Crown.  Crowns are unique in that they may be placed in either the base or extended tableau.  In the base tableau, they are the highest card of their suit, and they also have a special Increase ability (see below).  In the base tableau, a Crown's power is the same as that of a 9, but they outrank a 9 for scoring purposes.  In the extended tableau, Crowns are the lowest scoring card of their suit, and have no special powers.
+
 The extended tableau piles are ranked/filled in the order *Ace*, *Crown*, *Pawn*, *Court*, *Excuse*.  The Ace must be present to place any higher cards (whether by forging or other means).  At least one suit on the card must match the Ace.  (The Excuse matches everything.)  The base pile's value must be at least 2 to place a Crown in that suit, at least 4 for a Pawn, at least 6 to place a Court, and at least 8 to place an Excuse.  You need not place a Crown before placing a Pawn or a Court, etc.  If for some reason you need to place an extended deck card of the same or lower rank onto an extended tableau pile, discard any intervening cards that are not of lower rank than the new card.
 
-Extended deck cards are paid for using base cards from your hand and/or suit tokens.  Each base card must match at least one of the target card's suits, all tokens must match the forged card's suit(s), *and* all of its suits must be matched by cards or tokens (or both).  When placing the Excuse, all cards and tokens must match the tableau suit where you place it.
+Extended deck cards are paid for using base cards from your hand and/or suit tokens.  Each base card must match at least one of the target card's suits, all tokens must match the forged card's suit(s), *and* all of its suits must be matched by at least one card or token each.  When placing the Excuse, all cards and tokens must match the tableau suit where it is being placed.
+
+Crowns must be forged from your hand, not from the base market.  When forging, you may also forge the single extended deck card in your hand.  (All other extended deck cards are forged from the extended market.)  When forging from your hand, you pay the usual price.
 
 ![An eyeball-less tableau](blind-tableau.svg)
 
-If a card is moved away from a base tableau pile leaving no cards in the pile, the Ace must be returned to that pile.  Any extended tableau cards that were on top of it may remain, but any further placements or movements of extended deck cards must follow the usual restrictions.
+If a card is moved away from a base tableau pile leaving no cards in the pile, the Ace must be returned to that pile.  Any extended tableau cards that were on top of it may remain, but any further placements or movements of extended tableau cards must follow the usual restrictions.
 
 #### Victory Points for Piles
 
@@ -94,7 +98,7 @@ The first player leads by declaring a card from their base tableau, and the suit
 1. **Moons**:  When leading a ranked card on one's Moons pile, the effect is to lead the other suit, but at its Moon rank.
    (The ace of Moons may not be led.)
 2. **Suns**: Draw (rank/2 + 1) cards from the base market or base deck.  (Shuffle base discards when necessary.)
-3. **Waves**: Increase (rank/2 + 1) levels in any combination of suits.  Skipping a rank costs one of your Increase actions, plus a number of tokens equal to the rank(s) of the skipped card(s), with a discount of one token if all tokens match your Waves suits or the suit your are increasing.  Only (rank/4 + 1) ranks may be skipped to increase a particular card.
+3. **Waves**: Increase (rank/3 + 2) levels in any combination of suits.  You may skip a rank by discarding the Crown of that suit, or by paying a number of tokens equal to the omitted rank and matching that suit.  Skipping a rank consumes a second increase, as if you had played the card.
 4. **Leaves**: Forge (rank/4 + 1) extended deck cards using tokens and (rank/2 + 2) base cards.
 5. **Wyrms**: Rearrange as follows, choosing *one* suit.  If that suit is *not* on your top card, pay 1 matching suit token to take the action.
    * Moons: discard (rank/2 + 1) cards from the extended market (*this combination does not occur in the base deck*)
@@ -152,11 +156,7 @@ The extended deck powers are derived in a regular way from the following list:
 * Wyrms: perform rearrangements for 2 extra suits when leading and 1 extra suit when following Wyrms
 * Knots: earn 2 extra suit tokens when leading or 1 extra when following Knots, **or** buy an eyeball from the eyeball market on lead or follow (without earning)
 
-Aces provide no extended deck powers.
-
-#### Crowns
-
-Crowns provide only the follow power for its suit from the list above.
+Aces and Crowns provide no extended deck powers.
 
 #### Pawns
 
@@ -194,7 +194,7 @@ A player wins immediately if they have eyeballs on all six base deck tableau pil
 
 ![A winning tableau](ending-tableau.svg)
 
-Otherwise, the game ends when the base market cannot be refilled.  In that case, the first tiebreaker is remaining suit tokens.  The second tiebreaker is highest level of extended deck tableau cards (the most Crowns, then the most Courts, then the most Pawns, then the most Aces).  If there is still a tie, do likewise with the base tableau levels.
+Otherwise, the game ends when the base market cannot be refilled.  In that case, the first tiebreaker is remaining suit tokens.  The second tiebreaker is highest level of extended deck tableau cards (the most Excuses, then the most Courts, then the most Pawns, then the most Crowns, then the most Aces).  If there is still a tie, do likewise with the base tableau levels.
 
 ## Solo/Bot
 
