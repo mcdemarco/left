@@ -4,111 +4,123 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
   <meta name="apple-mobile-web-app-title" content="Print Queue" />
-  <meta name="theme-color" content="#020617" />
+  <meta name="theme-color" content="#f8fafc" />
   <title>Print Queue</title>
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html, body { height: 100%; background: #020617; color: #e2e8f0; font-family: 'DM Sans', system-ui, sans-serif; }
+    html, body { height: 100%; background: #f1f5f9; color: #1e293b; font-family: 'DM Sans', system-ui, sans-serif; }
     body { padding-top: env(safe-area-inset-top); padding-bottom: env(safe-area-inset-bottom); }
     input, select, textarea, button { font-family: inherit; }
-    select { appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%2364748b' d='M6 8L1 3h10z'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 0.75rem center; padding-right: 2rem !important; }
+    select { appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%2394a3b8' d='M6 8L1 3h10z'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 0.75rem center; padding-right: 2rem !important; }
     input[type=number] { -moz-appearance: textfield; }
     input[type=number]::-webkit-outer-spin-button, input[type=number]::-webkit-inner-spin-button { -webkit-appearance: none; }
     ::-webkit-scrollbar { width: 4px; height: 4px; }
     ::-webkit-scrollbar-track { background: transparent; }
-    ::-webkit-scrollbar-thumb { background: #1e293b; border-radius: 2px; }
+    ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 2px; }
     #app { min-height: 100vh; }
-    .header { border-bottom: 1px solid #0f172a; padding: 1.25rem 1.25rem 1rem; display: flex; align-items: center; justify-content: space-between; position: sticky; top: 0; background: #020617; z-index: 10; }
-    .header h1 { font-family: 'DM Serif Display', serif; font-size: 1.3rem; color: #f8fafc; font-weight: 400; }
-    .header-sub { font-size: 0.75rem; color: #475569; margin-top: 2px; }
+
+    /* Header */
+    .header { border-bottom: 1px solid #e2e8f0; padding: 1rem 1.25rem 0.85rem; display: flex; align-items: center; justify-content: space-between; position: sticky; top: 0; background: #f8fafc; z-index: 10; box-shadow: 0 1px 3px rgba(0,0,0,.06); }
+    .header h1 { font-family: 'DM Serif Display', serif; font-size: 1.3rem; color: #0f172a; font-weight: 400; }
+    .header-sub { font-size: 0.72rem; color: #94a3b8; margin-top: 1px; }
     .header-actions { display: flex; gap: 0.5rem; align-items: center; }
-    .btn { border: none; cursor: pointer; font-family: inherit; border-radius: 8px; font-weight: 600; transition: opacity .15s; }
-    .btn:active { opacity: 0.75; }
-    .btn-ghost { background: transparent; color: #64748b; padding: 0.55rem 0.85rem; font-size: 0.875rem; border: 1px solid #1e293b !important; }
-    .btn-sm { padding: 0.25rem 0.65rem; font-size: 0.78rem; background: transparent; border: 1px solid #1e293b; border-radius: 6px; cursor: pointer; font-family: inherit; transition: opacity .15s; }
-    .btn-sm:active { opacity: 0.7; }
-    .filters { display: flex; gap: 0.5rem; padding: 0.85rem 1.25rem; overflow-x: auto; scrollbar-width: none; }
+    .btn-ghost { background: transparent; color: #64748b; padding: 0.45rem 0.8rem; font-size: 0.82rem; border: 1px solid #cbd5e1; border-radius: 8px; cursor: pointer; font-weight: 600; transition: background .15s; }
+    .btn-ghost:active { background: #e2e8f0; }
+
+    /* Filters */
+    .filters { display: flex; gap: 0.4rem; padding: 0.75rem 1.25rem 0; overflow-x: auto; scrollbar-width: none; }
     .filters::-webkit-scrollbar { display: none; }
-    .filter-btn { padding: 0.35rem 0.85rem; border-radius: 20px; border: 1px solid #1e293b; background: transparent; color: #64748b; font-size: 0.78rem; font-weight: 600; cursor: pointer; white-space: nowrap; font-family: inherit; transition: all .15s; }
+    .filter-btn { padding: 0.3rem 0.75rem; border-radius: 20px; border: 1px solid #e2e8f0; background: white; color: #64748b; font-size: 0.75rem; font-weight: 600; cursor: pointer; white-space: nowrap; font-family: inherit; transition: all .15s; }
     .filter-btn:active { opacity: 0.7; }
-    .job-list { padding: 0 1.25rem 5rem; display: flex; flex-direction: column; gap: 0.75rem; }
-    .status-group-header { font-size: 0.7rem; font-weight: 700; color: #334155; text-transform: uppercase; letter-spacing: .08em; padding: 0.5rem 0 0.25rem; margin-top: 0.25rem; }
-    .empty { text-align: center; color: #334155; padding: 3rem 0; font-size: 0.9rem; }
-    .job-card { background: #0f172a; border: 1px solid #1e293b; border-radius: 12px; padding: 0.9rem 1rem; display: flex; flex-direction: column; gap: 0.45rem; transition: border-color .2s, opacity .2s, transform .15s; touch-action: none; user-select: none; -webkit-user-select: none; }
-    .job-card.dragging { opacity: 0.4; }
+
+    /* Group toggle */
+    .group-toggle { display: flex; gap: 0.4rem; padding: 0.5rem 1.25rem 0.25rem; }
+    .group-btn { padding: 0.25rem 0.7rem; border-radius: 20px; border: 1px solid #e2e8f0; background: white; color: #94a3b8; font-size: 0.72rem; font-weight: 600; cursor: pointer; font-family: inherit; transition: all .15s; }
+    .group-btn-active { border-color: #94a3b8; background: #f1f5f9; color: #475569; }
+
+    /* Job list */
+    .job-list { padding: 0.5rem 1.25rem 5rem; display: flex; flex-direction: column; gap: 0.4rem; }
+    .status-group-header { font-size: 0.68rem; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; padding: 0.6rem 0 0.2rem; margin-top: 0.1rem; }
+    .empty { text-align: center; color: #94a3b8; padding: 3rem 0; font-size: 0.9rem; }
+
+    /* Job card — compact */
+    .job-card { background: white; border: 1px solid #e2e8f0; border-radius: 10px; padding: 0.55rem 0.75rem; display: flex; align-items: center; gap: 0.55rem; transition: border-color .2s, opacity .2s; touch-action: none; user-select: none; -webkit-user-select: none; box-shadow: 0 1px 2px rgba(0,0,0,.04); }
+    .job-card.dragging { opacity: 0.35; }
     .job-card.drag-over { border-color: #3b82f6; border-style: dashed; }
-    .job-card-top { display: flex; align-items: flex-start; gap: 0.65rem; }
-    .drag-handle { color: #334155; font-size: 1rem; flex-shrink: 0; margin-top: 2px; cursor: grab; padding: 0 2px; line-height: 1; }
-    .color-dots { display: flex; gap: 3px; flex-shrink: 0; margin-top: 5px; }
-    .color-dot { width: 10px; height: 10px; border-radius: 50%; }
-    .job-name { font-weight: 700; color: #f1f5f9; font-size: 0.92rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-    .job-meta { font-size: 0.75rem; color: #64748b; margin-top: 2px; }
-    .status-badge { padding: 0.2rem 0.55rem; border-radius: 20px; border: none; cursor: pointer; font-size: 0.7rem; font-weight: 600; display: flex; align-items: center; gap: 0.3rem; white-space: nowrap; flex-shrink: 0; font-family: inherit; transition: opacity .15s; }
+    .drag-handle { color: #cbd5e1; font-size: 1rem; flex-shrink: 0; cursor: grab; line-height: 1; }
+    .color-dots { display: flex; gap: 2px; flex-shrink: 0; }
+    .color-dot { width: 8px; height: 8px; border-radius: 50%; }
+    .card-body { flex: 1; min-width: 0; }
+    .job-name { font-weight: 600; color: #0f172a; font-size: 0.88rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .job-meta { font-size: 0.72rem; color: #94a3b8; margin-top: 1px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .card-right { display: flex; align-items: center; gap: 0.4rem; flex-shrink: 0; }
+    .priority-pip { font-size: 0.65rem; font-weight: 700; padding: 0.1rem 0.35rem; border-radius: 4px; letter-spacing: .03em; }
+    .priority-High { background: #fee2e2; color: #dc2626; }
+    .priority-Medium { background: #fef3c7; color: #d97706; }
+    .priority-Low { background: #f1f5f9; color: #94a3b8; }
+    .status-badge { padding: 0.15rem 0.5rem; border-radius: 20px; border: none; cursor: pointer; font-size: 0.68rem; font-weight: 600; display: flex; align-items: center; gap: 0.28rem; white-space: nowrap; font-family: inherit; transition: opacity .15s; }
     .status-badge:active { opacity: 0.7; }
-    .status-dot { width: 6px; height: 6px; border-radius: 50%; display: inline-block; }
-    .job-location { display: flex; align-items: center; gap: 0.5rem; font-size: 0.75rem; color: #475569; }
-    .job-location-text { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; flex: 1; }
-    .job-stats { display: flex; gap: 0.6rem; flex-shrink: 0; }
-    .job-notes { font-size: 0.78rem; color: #64748b; background: #020617; border-radius: 6px; padding: 0.4rem 0.6rem; border-left: 2px solid #1e293b; }
-    .job-actions { display: flex; justify-content: flex-end; gap: 0.5rem; margin-top: 0.15rem; }
-    .modal-overlay { position: fixed; inset: 0; background: rgba(0,0,0,.8); backdrop-filter: blur(4px); display: flex; align-items: flex-end; justify-content: center; z-index: 50; }
+    .status-dot { width: 5px; height: 5px; border-radius: 50%; display: inline-block; }
+    .edit-btn { background: none; border: none; cursor: pointer; color: #94a3b8; font-size: 1rem; padding: 0.1rem 0.2rem; line-height: 1; transition: color .15s; }
+    .edit-btn:active { color: #3b82f6; }
+
+    /* Modal */
+    .modal-overlay { position: fixed; inset: 0; background: rgba(15,23,42,.45); backdrop-filter: blur(3px); display: flex; align-items: flex-end; justify-content: center; z-index: 50; }
     @media (min-height: 600px) { .modal-overlay { align-items: center; } }
-    .modal { background: #0f172a; border: 1px solid #1e293b; border-radius: 16px 16px 0 0; width: 100%; max-width: 520px; max-height: 92vh; overflow-y: auto; padding: 1.5rem 1.25rem; box-shadow: 0 -20px 60px rgba(0,0,0,.6); padding-bottom: calc(1.5rem + env(safe-area-inset-bottom)); }
+    .modal { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 16px 16px 0 0; width: 100%; max-width: 520px; max-height: 92vh; overflow-y: auto; padding: 1.5rem 1.25rem; box-shadow: 0 -8px 40px rgba(0,0,0,.12); padding-bottom: calc(1.5rem + env(safe-area-inset-bottom)); }
     @media (min-height: 600px) { .modal { border-radius: 16px; max-height: 90vh; } }
     .modal-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.25rem; }
-    .modal-title { font-family: 'DM Serif Display', serif; font-size: 1.1rem; color: #f1f5f9; font-weight: 400; }
-    .modal-close { background: none; border: none; color: #64748b; cursor: pointer; font-size: 1.25rem; line-height: 1; padding: 0.25rem; }
+    .modal-title { font-family: 'DM Serif Display', serif; font-size: 1.1rem; color: #0f172a; font-weight: 400; }
+    .modal-close { background: none; border: none; color: #94a3b8; cursor: pointer; font-size: 1.2rem; line-height: 1; padding: 0.25rem; }
     .field { margin-bottom: 0.9rem; }
-    .field label { display: block; font-size: 0.7rem; font-weight: 700; color: #64748b; text-transform: uppercase; letter-spacing: .06em; margin-bottom: 0.35rem; }
+    .field label { display: block; font-size: 0.68rem; font-weight: 700; color: #94a3b8; text-transform: uppercase; letter-spacing: .06em; margin-bottom: 0.3rem; }
     .field-row { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; }
-    .input { width: 100%; padding: 0.55rem 0.75rem; border-radius: 8px; border: 1px solid #1e293b; background: #020617; color: #e2e8f0; font-size: 0.9rem; font-family: inherit; outline: none; -webkit-appearance: none; }
-    .input:focus { border-color: #3b82f6; }
+    .input { width: 100%; padding: 0.5rem 0.7rem; border-radius: 8px; border: 1px solid #e2e8f0; background: #f8fafc; color: #0f172a; font-size: 0.88rem; font-family: inherit; outline: none; -webkit-appearance: none; transition: border-color .15s; }
+    .input:focus { border-color: #3b82f6; background: white; }
     textarea.input { resize: vertical; min-height: 70px; }
-    .type-toggle { display: flex; gap: 0.4rem; }
-    .type-btn { flex: 1; padding: 0.45rem 0; border-radius: 6px; border: 1px solid #1e293b; background: transparent; color: #64748b; font-size: 0.8rem; font-weight: 600; cursor: pointer; font-family: inherit; transition: all .15s; }
-    .type-btn.active { border-color: #3b82f6; background: #172554; color: #60a5fa; }
+    .toggle-group { display: flex; gap: 0.35rem; }
+    .toggle-btn { flex: 1; padding: 0.4rem 0; border-radius: 6px; border: 1px solid #e2e8f0; background: #f8fafc; color: #64748b; font-size: 0.78rem; font-weight: 600; cursor: pointer; font-family: inherit; transition: all .15s; }
+    .toggle-btn.active { border-color: #3b82f6; background: #eff6ff; color: #2563eb; }
+    .priority-btn.active-High { border-color: #dc2626; background: #fef2f2; color: #dc2626; }
+    .priority-btn.active-Medium { border-color: #d97706; background: #fffbeb; color: #d97706; }
+    .priority-btn.active-Low { border-color: #94a3b8; background: #f8fafc; color: #64748b; }
     .color-picker { display: flex; gap: 0.4rem; flex-wrap: wrap; padding-top: 0.1rem; }
-    .color-swatch { width: 28px; height: 28px; border-radius: 50%; border: none; cursor: pointer; position: relative; outline: 3px solid transparent; outline-offset: 2px; transition: outline .15s; }
-    .color-swatch.selected { outline-color: white; }
-    .color-check { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; font-size: 0.55rem; color: white; font-weight: 900; text-shadow: 0 0 3px rgba(0,0,0,.9); }
-    .color-error { font-size: 0.72rem; color: #ef4444; margin-top: 0.3rem; }
+    .color-swatch { width: 26px; height: 26px; border-radius: 50%; border: 2px solid transparent; cursor: pointer; position: relative; outline: 2px solid transparent; outline-offset: 2px; transition: outline .15s; }
+    .color-swatch.selected { outline-color: #3b82f6; }
+    .color-check { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; font-size: 0.55rem; color: white; font-weight: 900; text-shadow: 0 0 3px rgba(0,0,0,.6); }
     .modal-footer { display: flex; gap: 0.75rem; margin-top: 1.25rem; }
-    .btn-cancel { flex: 1; padding: 0.65rem; border-radius: 8px; border: 1px solid #334155; background: transparent; color: #94a3b8; cursor: pointer; font-family: inherit; font-size: 0.9rem; }
-    .btn-save { flex: 2; padding: 0.65rem; border-radius: 8px; border: none; font-family: inherit; font-size: 0.9rem; font-weight: 600; cursor: pointer; transition: opacity .15s; }
-    .btn-save:active { opacity: 0.8; }
-    .toast { font-size: 0.78rem; color: #4ade80; }
-    .group-btn { padding: 0.3rem 0.75rem; border-radius: 20px; border: 1px solid #1e293b; background: transparent; color: #64748b; font-size: 0.75rem; font-weight: 600; cursor: pointer; font-family: inherit; transition: all .15s; }
-    .group-btn-active { border-color: #475569; background: #1e293b; color: #94a3b8; }
-    .fab { position: fixed; bottom: calc(1.5rem + env(safe-area-inset-bottom)); right: 1.25rem; width: 52px; height: 52px; border-radius: 50%; background: #3b82f6; color: white; border: none; font-size: 1.5rem; cursor: pointer; box-shadow: 0 4px 20px rgba(59,130,246,.4); display: flex; align-items: center; justify-content: center; z-index: 9; transition: transform .15s; }
-    .fab:active { transform: scale(0.93); }
-    .drag-ghost { position: fixed; pointer-events: none; z-index: 999; opacity: 0.85; border-radius: 12px; background: #1e293b; border: 1px solid #3b82f6; padding: 0.9rem 1rem; font-size: 0.92rem; font-weight: 700; color: #f1f5f9; box-shadow: 0 8px 32px rgba(0,0,0,.5); max-width: 320px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .btn-cancel { flex: 1; padding: 0.6rem; border-radius: 8px; border: 1px solid #e2e8f0; background: #f8fafc; color: #64748b; cursor: pointer; font-family: inherit; font-size: 0.88rem; }
+    .btn-save { flex: 2; padding: 0.6rem; border-radius: 8px; border: none; font-family: inherit; font-size: 0.88rem; font-weight: 600; cursor: pointer; }
+    .btn-delete { width: 100%; padding: 0.6rem; border-radius: 8px; border: 1px solid #fecaca; background: #fef2f2; color: #dc2626; cursor: pointer; font-family: inherit; font-size: 0.88rem; font-weight: 600; margin-top: 0.5rem; }
+    .toast { font-size: 0.78rem; color: #16a34a; }
+    .fab { position: fixed; bottom: calc(1.25rem + env(safe-area-inset-bottom)); right: 1.25rem; width: 50px; height: 50px; border-radius: 50%; background: #3b82f6; color: white; border: none; font-size: 1.4rem; cursor: pointer; box-shadow: 0 4px 16px rgba(59,130,246,.35); display: flex; align-items: center; justify-content: center; z-index: 9; transition: transform .15s; }
+    .fab:active { transform: scale(0.92); }
+    .drag-ghost { position: fixed; pointer-events: none; z-index: 999; opacity: 0.9; border-radius: 10px; background: white; border: 1px solid #3b82f6; padding: 0.55rem 0.75rem; font-size: 0.88rem; font-weight: 600; color: #0f172a; box-shadow: 0 8px 24px rgba(0,0,0,.15); max-width: 280px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
   </style>
 </head>
 <body>
 <div id="app"></div>
-
 <script>
-const CATEGORIES = ["Craft","Educational","Fidget","Game","Home","Hueforge","Puzzle","Printer","Toy","Train","Other"];
+const CATEGORIES = ["Character/Figure","Fan Art","Functional","Toy","Game","Decoration","Other"];
 const STATUSES = ["Idea","Modeling","Blocked","Queued","Printing","Done","Paused"];
-const LOCATIONS = ["MakerWorld","Printables","Thingiverse","Cults3D","My Computer","In My Head","Other"];
+const LOCATIONS = ["MakerWorld","Printables","Thingiverse","My Computer","In My Head","Other"];
 const COLORS = ["#ef4444","#f97316","#eab308","#22c55e","#3b82f6","#a855f7","#ec4899","#6b7280","#000000","#ffffff","#EBDBCC"];
 const FILAMENT_TYPES = ["PLA","PETG","Other"];
+const PRIORITIES = ["High","Medium","Low"];
 const STORAGE_KEY = "print-queue-jobs";
-
-// "All" view group order
 const ALL_VIEW_ORDER = ["Queued","Printing","Paused","Blocked","Modeling","Idea","Done"];
 
 const STATUS_STYLE = {
-  "Idea":                {bg:"#1e1b2e",text:"#a78bfa",dot:"#7c3aed"},
-  "Modeling":            {bg:"#1a1f2e",text:"#818cf8",dot:"#4f46e5"},
-  "Paused":              {bg:"#2d1f1f",text:"#f87171",dot:"#ef4444"},
-  "Blocked":             {bg:"#2d1a00",text:"#fb923c",dot:"#f97316"},
-  "Queued":              {bg:"#1e293b",text:"#94a3b8",dot:"#475569"},
-  "Printing":            {bg:"#172554",text:"#60a5fa",dot:"#3b82f6"},
-  "Done":                {bg:"#052e16",text:"#4ade80",dot:"#22c55e"},
+  "Idea":     {bg:"#f3f0ff",text:"#7c3aed",dot:"#7c3aed"},
+  "Modeling": {bg:"#eef2ff",text:"#4f46e5",dot:"#4f46e5"},
+  "Blocked":  {bg:"#fff7ed",text:"#ea580c",dot:"#f97316"},
+  "Queued":   {bg:"#f1f5f9",text:"#475569",dot:"#94a3b8"},
+  "Printing": {bg:"#eff6ff",text:"#2563eb",dot:"#3b82f6"},
+  "Done":     {bg:"#f0fdf4",text:"#16a34a",dot:"#22c55e"},
+  "Paused":   {bg:"#fff1f2",text:"#e11d48",dot:"#f43f5e"},
 };
 const NEXT_STATUS = {
   "Idea":"Modeling","Modeling":"Queued","Blocked":"Queued",
@@ -118,12 +130,10 @@ const LOC_ICON = {MakerWorld:"🌍",Printables:"📦",Thingiverse:"🎲","My Com
 
 const defaultJob = () => ({
   id:null, name:"", category:CATEGORIES[0], location:LOCATIONS[0],
-  locationDetail:"", forWho:"", filamentColors:[COLORS[0]],
-  filamentType:"PLA", status:"Idea", notes:"", printHours:"", plates:"", createdAt:null
+  locationDetail:"", forWho:"", filamentColors:[],
+  filamentType:"PLA", priority:"Medium", status:"Idea",
+  notes:"", printHours:"", plates:"", createdAt:null
 });
-
-// Each job has a sortOrder map: { [status]: number }
-// We store per-status order as a position index on each job
 
 let state = { jobs: loadJobs(), filter: "All", groupBy: "status", modal: null, toast: "" };
 
@@ -134,7 +144,6 @@ function saveJobs(jobs) {
   try { localStorage.setItem(STORAGE_KEY, JSON.stringify(jobs)); } catch {}
 }
 
-// Get jobs for display, ordered correctly
 function getDisplayed() {
   const { jobs, filter, groupBy } = state;
   if (filter !== "All") {
@@ -149,7 +158,6 @@ function getDisplayed() {
     }
     return result;
   }
-  // All view: group by ALL_VIEW_ORDER, each group sorted by its per-status order
   const result = [];
   for (const status of ALL_VIEW_ORDER) {
     const group = [...jobs].filter(j => j.status === status)
@@ -159,11 +167,7 @@ function getDisplayed() {
   return result;
 }
 
-function render() {
-  document.getElementById("app").innerHTML = buildApp();
-  attachEvents();
-  attachDrag();
-}
+function render() { document.getElementById("app").innerHTML = buildApp(); attachEvents(); attachDrag(); }
 
 function buildApp() {
   const { jobs, filter, groupBy, toast } = state;
@@ -177,21 +181,18 @@ function buildApp() {
     } else {
       for (const group of displayed) {
         const st = group.status ? STATUS_STYLE[group.status] : null;
-        const headerColor = st ? st.dot : "#64748b";
-        listHTML += `<div class="status-group-header" style="color:${headerColor}">${group.label}</div>`;
-        listHTML += group.jobs.map(j => buildCard(j)).join("");
+        listHTML += `<div class="status-group-header" style="color:${st?st.dot:"#94a3b8"}">${group.label}</div>`;
+        listHTML += group.jobs.map(buildCard).join("");
       }
     }
   } else {
-    if (displayed.length === 0) {
-      listHTML = `<div class="empty">No ${filter} jobs.</div>`;
-    } else {
-      listHTML = displayed.map(j => buildCard(j)).join("");
-    }
+    listHTML = displayed.length === 0
+      ? `<div class="empty">No ${filter} jobs.</div>`
+      : displayed.map(buildCard).join("");
   }
 
   const groupToggle = filter === "All" ? `
-    <div style="display:flex;gap:0.4rem;padding:0 1.25rem 0.75rem">
+    <div class="group-toggle">
       <button class="group-btn${groupBy==="status"?" group-btn-active":""}" data-group="status">By Status</button>
       <button class="group-btn${groupBy==="category"?" group-btn-active":""}" data-group="category">By Category</button>
     </div>` : "";
@@ -199,13 +200,13 @@ function buildApp() {
   return `
     <div class="header">
       <div><h1>🖨 Print Queue</h1><div class="header-sub">${jobs.length} job${jobs.length!==1?"s":""} total</div></div>
-      <div class="header-actions">${toast?`<span class="toast">${toast}</span>`:""}<button class="btn btn-ghost" id="btn-export">↓ Export</button></div>
+      <div class="header-actions">${toast?`<span class="toast">${toast}</span>`:""}<button class="btn-ghost" id="btn-export">↓ Export</button></div>
     </div>
     <div class="filters">${["All",...STATUSES].map(s => {
       const count = s==="All"?jobs.length:counts[s];
       const active = filter===s;
       const st = s!=="All"?STATUS_STYLE[s]:null;
-      return `<button class="filter-btn" data-filter="${s}" style="border-color:${active?(st?.dot||"#3b82f6"):"#1e293b"};background:${active?(st?.bg||"#172554"):"transparent"};color:${active?(st?.text||"#60a5fa"):"#64748b"}">${s}${count>0?` <span style="opacity:.65">${count}</span>`:""}</button>`;
+      return `<button class="filter-btn" data-filter="${s}" style="border-color:${active?(st?.dot||"#3b82f6"):"#e2e8f0"};background:${active?(st?.bg||"#eff6ff"):"white"};color:${active?(st?.text||"#2563eb"):"#64748b"}">${s}${count>0?` <span style="opacity:.6">${count}</span>`:""}</button>`;
     }).join("")}</div>
     ${groupToggle}
     <div class="job-list" id="job-list">${listHTML}</div>
@@ -215,17 +216,28 @@ function buildApp() {
 
 function buildCard(job) {
   const s = STATUS_STYLE[job.status] || STATUS_STYLE["Idea"];
-  const colors = job.filamentColors || [job.filamentColor||"#6b7280"];
+  const colors = job.filamentColors || [];
+  const metaParts = [job.category];
+  if (job.filamentType) metaParts.push(job.filamentType);
+  if (job.forWho) metaParts.push(`for ${job.forWho}`);
+  if (job.printHours) metaParts.push(`⏱${job.printHours}h`);
+  if (job.plates) metaParts.push(`🗂${job.plates}p`);
+
+  const priorityHTML = job.priority && job.priority !== "Low"
+    ? `<span class="priority-pip priority-${job.priority}">${job.priority}</span>` : "";
+
   return `<div class="job-card" data-id="${job.id}" data-status="${job.status}">
-    <div class="job-card-top">
-      <span class="drag-handle" data-drag-handle="${job.id}">⠿</span>
-      <div class="color-dots">${colors.map(c=>`<div class="color-dot" style="background:${c}"></div>`).join("")}</div>
-      <div style="flex:1;min-width:0"><div class="job-name">${esc(job.name)}</div><div class="job-meta">${esc(job.category)}${job.filamentType?` · ${job.filamentType}`:""}${job.forWho?` · for ${esc(job.forWho)}`:""}</div></div>
-      <button class="status-badge" data-cycle="${job.id}" style="background:${s.bg};color:${s.text}"><span class="status-dot" style="background:${s.dot}"></span>${job.status}</button>
+    <span class="drag-handle" data-drag-handle="${job.id}">⠿</span>
+    <div class="color-dots">${colors.map(c=>`<div class="color-dot" style="background:${c};border:1px solid rgba(0,0,0,.08)"></div>`).join("")}</div>
+    <div class="card-body">
+      <div class="job-name">${esc(job.name)}</div>
+      <div class="job-meta">${esc(metaParts.join(" · "))}</div>
     </div>
-    <div class="job-location"><span>${LOC_ICON[job.location]||"📍"}</span><span class="job-location-text">${esc(job.location)}${job.locationDetail?` — ${esc(job.locationDetail)}`:""}</span>${(job.printHours||job.plates)?`<span class="job-stats">${job.printHours?`<span>⏱ ${job.printHours}h</span>`:""}${job.plates?`<span>🗂 ${job.plates}p</span>`:""}</span>`:""}</div>
-    ${job.notes?`<div class="job-notes">${esc(job.notes)}</div>`:""}
-    <div class="job-actions"><button class="btn-sm" style="color:#94a3b8" data-edit="${job.id}">Edit</button><button class="btn-sm" style="color:#ef4444" data-delete="${job.id}">Delete</button></div>
+    <div class="card-right">
+      ${priorityHTML}
+      <button class="status-badge" data-cycle="${job.id}" style="background:${s.bg};color:${s.text}"><span class="status-dot" style="background:${s.dot}"></span>${job.status}</button>
+      <button class="edit-btn" data-edit="${job.id}" title="Edit">✏️</button>
+    </div>
   </div>`;
 }
 
@@ -234,36 +246,53 @@ function buildModal(job) {
   const canSave = job.name.trim();
   const locNeedsDetail = job.location !== "In My Head";
   const locLabel = job.location==="My Computer"?"File path / folder":job.location==="Other"?"Location detail":"URL or search term";
+
   return `<div class="modal-overlay" id="modal-overlay"><div class="modal">
     <div class="modal-header"><span class="modal-title">${isNew?"New Print Job":"Edit Job"}</span><button class="modal-close" id="modal-close">✕</button></div>
+
     <div class="field"><label>Model Name</label><input class="input" id="f-name" value="${esc(job.name)}" placeholder="e.g. Captain America Shield" /></div>
+
     <div class="field-row">
       <div class="field"><label>Category</label><select class="input" id="f-category">${CATEGORIES.map(c=>`<option${c===job.category?" selected":""}>${c}</option>`).join("")}</select></div>
       <div class="field"><label>Status</label><select class="input" id="f-status">${STATUSES.map(s=>`<option${s===job.status?" selected":""}>${s}</option>`).join("")}</select></div>
     </div>
-    <div class="field"><label>For Who</label><input class="input" id="f-forWho" value="${esc(job.forWho)}" placeholder="e.g. kids, myself, gift..." /></div>
+
     <div class="field-row">
-      <div class="field"><label>Est. Print Time (hrs)</label><input class="input" type="number" id="f-printHours" value="${job.printHours||""}" placeholder="e.g. 3.5" min="0" step="0.5" /></div>
-      <div class="field"><label>Number of Plates</label><input class="input" type="number" id="f-plates" value="${job.plates||""}" placeholder="e.g. 2" min="1" step="1" /></div>
+      <div class="field"><label>For Who</label><input class="input" id="f-forWho" value="${esc(job.forWho)}" placeholder="e.g. kids, myself…" /></div>
+      <div class="field"><label>Priority</label><div class="toggle-group">${PRIORITIES.map(p=>`<button class="toggle-btn priority-btn${p===job.priority?" active-"+p:""}" data-priority="${p}">${p}</button>`).join("")}</div></div>
     </div>
+
+    <div class="field-row">
+      <div class="field"><label>Est. Print Time (hrs)</label><input class="input" type="number" id="f-printHours" value="${job.printHours||""}" placeholder="3.5" min="0" step="0.5" /></div>
+      <div class="field"><label>Number of Plates</label><input class="input" type="number" id="f-plates" value="${job.plates||""}" placeholder="2" min="1" step="1" /></div>
+    </div>
+
     <div class="field"><label>Model Location</label><select class="input" id="f-location">${LOCATIONS.map(l=>`<option${l===job.location?" selected":""}>${l}</option>`).join("")}</select></div>
     ${locNeedsDetail?`<div class="field"><label>${locLabel}</label><input class="input" id="f-locationDetail" value="${esc(job.locationDetail)}" placeholder="${job.location==="MakerWorld"?"https://makerworld.com/...":""}" /></div>`:""}
+
     <div class="field-row" style="align-items:start">
-      <div class="field"><label>Filament Type</label><div class="type-toggle">${FILAMENT_TYPES.map(t=>`<button class="type-btn${t===job.filamentType?" active":""}" data-type="${t}">${t}</button>`).join("")}</div></div>
-      <div class="field"><label>Colors</label><div class="color-picker">${COLORS.map(c=>{const sel=(job.filamentColors||[]).includes(c);return `<button class="color-swatch${sel?" selected":""}" data-color="${c}" style="background:${c}">${sel?`<span class="color-check">✓</span>`:""}</button>`;}).join("")}</div></div>
+      <div class="field"><label>Filament Type</label><div class="toggle-group">${FILAMENT_TYPES.map(t=>`<button class="toggle-btn${t===job.filamentType?" active":""}" data-type="${t}">${t}</button>`).join("")}</div></div>
+      <div class="field"><label>Colors</label><div class="color-picker">${COLORS.map(c=>{
+        const sel=(job.filamentColors||[]).includes(c);
+        const border = c==="#ffffff"?"border:1px solid #e2e8f0":"";
+        return `<button class="color-swatch${sel?" selected":""}" data-color="${c}" style="background:${c};${border}">${sel?`<span class="color-check">✓</span>`:""}</button>`;
+      }).join("")}</div></div>
     </div>
-    <div class="field"><label>Notes</label><textarea class="input" id="f-notes" placeholder="Slicer settings, reminders, ideas...">${esc(job.notes)}</textarea></div>
+
+    <div class="field"><label>Notes</label><textarea class="input" id="f-notes" placeholder="Slicer settings, reminders, ideas…">${esc(job.notes)}</textarea></div>
+
     <div class="modal-footer">
       <button class="btn-cancel" id="modal-cancel">Cancel</button>
-      <button class="btn-save" id="modal-save" ${canSave?"":"disabled"} style="background:${canSave?"#3b82f6":"#1e3a5f"};color:${canSave?"white":"#475569"};cursor:${canSave?"pointer":"default"}">Save Job</button>
+      <button class="btn-save" id="modal-save" ${canSave?"":"disabled"} style="background:${canSave?"#3b82f6":"#bfdbfe"};color:${canSave?"white":"#93c5fd"};cursor:${canSave?"pointer":"default"}">Save</button>
     </div>
+    ${!isNew?`<button class="btn-delete" id="modal-delete">Delete Job</button>`:""}
   </div></div>`;
 }
 
 function esc(s) { return String(s||"").replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;"); }
 
-// ---- Drag and Drop (touch + mouse) ----
-let drag = null; // { jobId, status, ghost, startX, startY, lastOverId }
+// ---- Drag ----
+let drag = null;
 
 function attachDrag() {
   document.querySelectorAll("[data-drag-handle]").forEach(handle => {
@@ -273,35 +302,23 @@ function attachDrag() {
 }
 
 function onDragStart(e) {
-  if (state.groupBy === "category") return; // no drag in category view
+  if (state.groupBy === "category" && state.filter === "All") return;
   const isTouching = e.type === "touchstart";
   const point = isTouching ? e.touches[0] : e;
-  const handle = e.currentTarget;
-  const card = handle.closest(".job-card");
+  const card = e.currentTarget.closest(".job-card");
   if (!card) return;
-
   const jobId = +card.dataset.id;
   const status = card.dataset.status;
-
-  // Create ghost
   const ghost = document.createElement("div");
   ghost.className = "drag-ghost";
   ghost.textContent = card.querySelector(".job-name")?.textContent || "";
   ghost.style.left = (point.clientX - 20) + "px";
   ghost.style.top = (point.clientY - 20) + "px";
   document.body.appendChild(ghost);
-
   card.classList.add("dragging");
   drag = { jobId, status, ghost, lastOverId: null };
-
-  if (isTouching) {
-    e.preventDefault();
-    document.addEventListener("touchmove", onDragMove, { passive: false });
-    document.addEventListener("touchend", onDragEnd);
-  } else {
-    document.addEventListener("mousemove", onDragMove);
-    document.addEventListener("mouseup", onDragEnd);
-  }
+  if (isTouching) { e.preventDefault(); document.addEventListener("touchmove", onDragMove, {passive:false}); document.addEventListener("touchend", onDragEnd); }
+  else { document.addEventListener("mousemove", onDragMove); document.addEventListener("mouseup", onDragEnd); }
 }
 
 function onDragMove(e) {
@@ -309,129 +326,76 @@ function onDragMove(e) {
   const isTouching = e.type === "touchmove";
   const point = isTouching ? e.touches[0] : e;
   if (isTouching) e.preventDefault();
-
   drag.ghost.style.left = (point.clientX - 20) + "px";
   drag.ghost.style.top = (point.clientY - 20) + "px";
-
-  // Find card under finger/cursor
   drag.ghost.style.display = "none";
   const el = document.elementFromPoint(point.clientX, point.clientY);
   drag.ghost.style.display = "";
   const overCard = el?.closest(".job-card");
-
   document.querySelectorAll(".job-card.drag-over").forEach(c => c.classList.remove("drag-over"));
-
-  if (overCard && overCard.dataset.id !== String(drag.jobId)) {
-    // Only allow dropping within same status group in filtered view,
-    // OR within same status group in All view
-    const overStatus = overCard.dataset.status;
-    if (overStatus === drag.status) {
-      overCard.classList.add("drag-over");
-      drag.lastOverId = +overCard.dataset.id;
-    } else {
-      drag.lastOverId = null;
-    }
-  } else {
-    drag.lastOverId = null;
-  }
+  if (overCard && overCard.dataset.id !== String(drag.jobId) && overCard.dataset.status === drag.status) {
+    overCard.classList.add("drag-over");
+    drag.lastOverId = +overCard.dataset.id;
+  } else { drag.lastOverId = null; }
 }
 
-function onDragEnd(e) {
+function onDragEnd() {
   if (!drag) return;
-  document.removeEventListener("touchmove", onDragMove);
-  document.removeEventListener("touchend", onDragEnd);
-  document.removeEventListener("mousemove", onDragMove);
-  document.removeEventListener("mouseup", onDragEnd);
-
+  document.removeEventListener("touchmove", onDragMove); document.removeEventListener("touchend", onDragEnd);
+  document.removeEventListener("mousemove", onDragMove); document.removeEventListener("mouseup", onDragEnd);
   drag.ghost.remove();
-  document.querySelectorAll(".job-card.dragging, .job-card.drag-over").forEach(c => {
-    c.classList.remove("dragging","drag-over");
-  });
-
-  if (drag.lastOverId !== null) {
-    reorder(drag.jobId, drag.lastOverId, drag.status);
-  }
+  document.querySelectorAll(".job-card.dragging, .job-card.drag-over").forEach(c => c.classList.remove("dragging","drag-over"));
+  if (drag.lastOverId !== null) reorder(drag.jobId, drag.lastOverId, drag.status);
   drag = null;
 }
 
 function reorder(fromId, toId, status) {
-  // Get sorted list for this status
-  const group = [...state.jobs]
-    .filter(j => j.status === status)
+  const group = [...state.jobs].filter(j => j.status === status)
     .sort((a,b) => (a.sortOrders?.[status]??9999) - (b.sortOrders?.[status]??9999));
-
-  const fromIdx = group.findIndex(j => j.id === fromId);
-  const toIdx = group.findIndex(j => j.id === toId);
-  if (fromIdx === -1 || toIdx === -1 || fromIdx === toIdx) return;
-
-  // Move item
-  const [moved] = group.splice(fromIdx, 1);
-  group.splice(toIdx, 0, moved);
-
-  // Reassign sortOrders for this status
-  group.forEach((j, i) => {
-    if (!j.sortOrders) j.sortOrders = {};
-    j.sortOrders[status] = i;
-  });
-
-  // Merge back into state.jobs
-  const updated = state.jobs.map(j => {
-    const g = group.find(x => x.id === j.id);
-    return g || j;
-  });
-
-  state.jobs = updated;
-  saveJobs(state.jobs);
-  render();
+  const fi = group.findIndex(j=>j.id===fromId), ti = group.findIndex(j=>j.id===toId);
+  if (fi===-1||ti===-1||fi===ti) return;
+  const [moved] = group.splice(fi,1); group.splice(ti,0,moved);
+  group.forEach((j,i) => { if(!j.sortOrders)j.sortOrders={}; j.sortOrders[status]=i; });
+  state.jobs = state.jobs.map(j => group.find(x=>x.id===j.id)||j);
+  saveJobs(state.jobs); render();
 }
 
-// ---- Regular events ----
+// ---- Events ----
 function attachEvents() {
   document.querySelectorAll(".filter-btn").forEach(btn =>
     btn.addEventListener("click", () => { state.filter = btn.dataset.filter; render(); }));
-
   document.querySelectorAll("[data-group]").forEach(btn =>
     btn.addEventListener("click", () => { state.groupBy = btn.dataset.group; render(); }));
-
   document.getElementById("btn-add")?.addEventListener("click", () => { state.modal = defaultJob(); render(); });
   document.getElementById("btn-export")?.addEventListener("click", handleExport);
-
   document.querySelectorAll("[data-cycle]").forEach(btn =>
     btn.addEventListener("click", e => { e.stopPropagation(); cycleStatus(+btn.dataset.cycle); }));
-
   document.querySelectorAll("[data-edit]").forEach(btn =>
     btn.addEventListener("click", () => {
       const job = state.jobs.find(j => j.id === +btn.dataset.edit);
       if (job) { state.modal = {...job}; render(); }
     }));
 
-  document.querySelectorAll("[data-delete]").forEach(btn =>
-    btn.addEventListener("click", () => {
-      if (confirm("Delete this job?")) {
-        state.jobs = state.jobs.filter(j => j.id !== +btn.dataset.delete);
-        saveJobs(state.jobs); render();
-      }
-    }));
-
   const overlay = document.getElementById("modal-overlay");
   if (!overlay) return;
-  overlay.addEventListener("click", e => { if (e.target === overlay) closeModal(); });
+  overlay.addEventListener("click", e => { if (e.target===overlay) closeModal(); });
   document.getElementById("modal-close")?.addEventListener("click", closeModal);
   document.getElementById("modal-cancel")?.addEventListener("click", closeModal);
+  document.getElementById("modal-delete")?.addEventListener("click", () => {
+    if (confirm("Delete this job?")) {
+      state.jobs = state.jobs.filter(j => j.id !== state.modal.id);
+      saveJobs(state.jobs); state.modal = null; render();
+    }
+  });
 
-  const bind = (id, key) => {
-    const el = document.getElementById(id);
-    if (el) el.addEventListener("input", () => { state.modal[key] = el.value; updateSaveBtn(); });
-  };
-  bind("f-name","name"); bind("f-forWho","forWho"); bind("f-printHours","printHours");
-  bind("f-plates","plates"); bind("f-notes","notes");
+  const bind = (id, key) => { const el=document.getElementById(id); if(el)el.addEventListener("input",()=>{state.modal[key]=el.value;updateSaveBtn();}); };
+  bind("f-name","name"); bind("f-forWho","forWho"); bind("f-printHours","printHours"); bind("f-plates","plates"); bind("f-notes","notes");
 
   ["f-category","f-status","f-location","f-locationDetail"].forEach(id => {
     const el = document.getElementById(id);
     if (el) el.addEventListener("change", () => {
-      const key = id.replace("f-","");
-      state.modal[key] = el.value;
-      if (key === "location") render();
+      state.modal[id.replace("f-","")] = el.value;
+      if (id==="f-location") render();
     });
   });
 
@@ -439,6 +403,14 @@ function attachEvents() {
     btn.addEventListener("click", () => {
       state.modal.filamentType = btn.dataset.type;
       document.querySelectorAll("[data-type]").forEach(b => b.classList.toggle("active", b===btn));
+    }));
+
+  document.querySelectorAll("[data-priority]").forEach(btn =>
+    btn.addEventListener("click", () => {
+      state.modal.priority = btn.dataset.priority;
+      document.querySelectorAll("[data-priority]").forEach(b => {
+        b.className = `toggle-btn priority-btn${b.dataset.priority===state.modal.priority?" active-"+b.dataset.priority:""}`;
+      });
     }));
 
   document.querySelectorAll("[data-color]").forEach(btn =>
@@ -451,83 +423,66 @@ function attachEvents() {
         b.classList.toggle("selected", sel);
         b.innerHTML = sel ? `<span class="color-check">✓</span>` : "";
       });
-      updateSaveBtn();
     }));
 
   document.getElementById("modal-save")?.addEventListener("click", () => {
     const job = {...state.modal};
-    ["name","forWho","printHours","plates","notes"].forEach(k => {
-      const el = document.getElementById(`f-${k}`); if (el) job[k] = el.value;
-    });
-    ["category","status","location"].forEach(k => {
-      const el = document.getElementById(`f-${k}`); if (el) job[k] = el.value;
-    });
-    const detail = document.getElementById("f-locationDetail");
-    if (detail) job.locationDetail = detail.value;
+    ["name","forWho","printHours","plates","notes"].forEach(k => { const el=document.getElementById(`f-${k}`); if(el)job[k]=el.value; });
+    ["category","status","location"].forEach(k => { const el=document.getElementById(`f-${k}`); if(el)job[k]=el.value; });
+    const detail = document.getElementById("f-locationDetail"); if(detail)job.locationDetail=detail.value;
     if (!job.name.trim()) return;
-
     const isNew = !job.id;
     if (isNew) {
-      job.id = Date.now();
-      job.createdAt = new Date().toISOString();
-      // Set sortOrder to end of its status group
-      const groupSize = state.jobs.filter(j => j.status === job.status).length;
+      job.id = Date.now(); job.createdAt = new Date().toISOString();
       if (!job.sortOrders) job.sortOrders = {};
-      job.sortOrders[job.status] = groupSize;
+      job.sortOrders[job.status] = state.jobs.filter(j=>j.status===job.status).length;
     }
-    state.jobs = isNew ? [job, ...state.jobs] : state.jobs.map(j => j.id===job.id ? job : j);
-    saveJobs(state.jobs);
-    state.modal = null;
-    render();
+    state.jobs = isNew ? [job,...state.jobs] : state.jobs.map(j=>j.id===job.id?job:j);
+    saveJobs(state.jobs); state.modal = null; render();
   });
 }
 
 function updateSaveBtn() {
-  const btn = document.getElementById("modal-save"); if (!btn) return;
+  const btn = document.getElementById("modal-save"); if(!btn)return;
   const ok = state.modal.name.trim();
   btn.disabled = !ok;
-  btn.style.background = ok ? "#3b82f6" : "#1e3a5f";
-  btn.style.color = ok ? "white" : "#475569";
-  btn.style.cursor = ok ? "pointer" : "default";
+  btn.style.background = ok?"#3b82f6":"#bfdbfe";
+  btn.style.color = ok?"white":"#93c5fd";
+  btn.style.cursor = ok?"pointer":"default";
 }
 
 function closeModal() { state.modal = null; render(); }
 
 function cycleStatus(id) {
   state.jobs = state.jobs.map(j => {
-    if (j.id !== id) return j;
+    if (j.id!==id) return j;
     const newStatus = NEXT_STATUS[j.status];
-    const groupSize = state.jobs.filter(x => x.status === newStatus).length;
-    const sortOrders = { ...(j.sortOrders||{}), [newStatus]: groupSize };
-    return { ...j, status: newStatus, sortOrders };
+    const sortOrders = {...(j.sortOrders||{}), [newStatus]: state.jobs.filter(x=>x.status===newStatus).length};
+    return {...j, status:newStatus, sortOrders};
   });
-  saveJobs(state.jobs);
-  render();
+  saveJobs(state.jobs); render();
 }
 
 function handleExport() {
   const json = JSON.stringify(state.jobs, null, 2);
-  try {
-    navigator.clipboard.writeText(json)
-      .then(() => showToast("Copied to clipboard!"))
-      .catch(() => showExportFallback(json));
-  } catch { showExportFallback(json); }
+  try { navigator.clipboard.writeText(json).then(()=>showToast("Copied!")).catch(()=>showExportFallback(json)); }
+  catch { showExportFallback(json); }
 }
 
 function showExportFallback(json) {
   const overlay = document.createElement("div");
-  overlay.style.cssText = "position:fixed;inset:0;background:rgba(0,0,0,.85);z-index:100;display:flex;align-items:center;justify-content:center;padding:1.5rem";
-  overlay.innerHTML = `<div style="background:#0f172a;border:1px solid #1e293b;border-radius:12px;padding:1.25rem;width:100%;max-width:480px">
-    <p style="color:#94a3b8;font-size:0.85rem;margin-bottom:0.75rem">Select all and copy:</p>
-    <textarea readonly style="width:100%;height:200px;background:#020617;color:#e2e8f0;border:1px solid #1e293b;border-radius:8px;padding:0.75rem;font-size:0.78rem;font-family:monospace;resize:none">${json.replace(/</g,"&lt;")}</textarea>
-    <button style="margin-top:0.75rem;width:100%;padding:0.65rem;border-radius:8px;border:none;background:#3b82f6;color:white;font-family:inherit;font-size:0.9rem;font-weight:600;cursor:pointer" onclick="this.closest('div').parentElement.remove()">Done</button>
+  overlay.style.cssText = "position:fixed;inset:0;background:rgba(15,23,42,.5);z-index:100;display:flex;align-items:center;justify-content:center;padding:1.5rem";
+  overlay.innerHTML = `<div style="background:white;border:1px solid #e2e8f0;border-radius:12px;padding:1.25rem;width:100%;max-width:480px">
+    <p style="color:#64748b;font-size:0.85rem;margin-bottom:0.75rem">Select all and copy:</p>
+    <textarea readonly style="width:100%;height:200px;background:#f8fafc;color:#0f172a;border:1px solid #e2e8f0;border-radius:8px;padding:0.75rem;font-size:0.78rem;font-family:monospace;resize:none">${json.replace(/</g,"&lt;")}</textarea>
+    <button style="margin-top:0.75rem;width:100%;padding:0.6rem;border-radius:8px;border:none;background:#3b82f6;color:white;font-family:inherit;font-size:0.88rem;font-weight:600;cursor:pointer" onclick="this.closest('div').parentElement.remove()">Done</button>
   </div>`;
-  overlay.addEventListener("click", e => { if (e.target===overlay) overlay.remove(); });
+  overlay.addEventListener("click", e => { if(e.target===overlay)overlay.remove(); });
   document.body.appendChild(overlay);
   overlay.querySelector("textarea").select();
 }
 
-function showToast(msg) { state.toast = msg; render(); setTimeout(() => { state.toast = ""; render(); }, 2500); }
+function showToast(msg) { state.toast=msg; render(); setTimeout(()=>{state.toast="";render();},2000); }
 
 render();
 </script>
