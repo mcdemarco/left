@@ -215,7 +215,6 @@ function buildApp() {
 }
 
 function buildCard(job) {
-  const s = STATUS_STYLE[job.status] || STATUS_STYLE["Idea"];
   const colors = job.filamentColors || [];
   const metaParts = [job.category];
   if (job.filamentType) metaParts.push(job.filamentType);
@@ -223,19 +222,18 @@ function buildCard(job) {
   if (job.printHours) metaParts.push(`⏱${job.printHours}h`);
   if (job.plates) metaParts.push(`🗂${job.plates}p`);
 
-  const priorityHTML = job.priority && job.priority !== "Low"
-    ? `<span class="priority-pip priority-${job.priority}">${job.priority}</span>` : "";
+  const highPriority = job.priority === "High"
+    ? `<span style="display:inline-block;width:7px;height:7px;border-radius:50%;background:#ef4444;flex-shrink:0;margin-top:1px"></span>` : "";
 
   return `<div class="job-card" data-id="${job.id}" data-status="${job.status}">
     <span class="drag-handle" data-drag-handle="${job.id}">⠿</span>
     <div class="color-dots">${colors.map(c=>`<div class="color-dot" style="background:${c};border:1px solid rgba(0,0,0,.08)"></div>`).join("")}</div>
     <div class="card-body">
       <div class="job-name">${esc(job.name)}</div>
-      <div class="job-meta">${esc(metaParts.join(" · "))}</div>
+      <div class="job-meta" style="display:flex;align-items:center;gap:0.3rem">${highPriority}<span>${esc(metaParts.join(" · "))}</span></div>
     </div>
     <div class="card-right">
-      ${priorityHTML}
-      <button class="status-badge" data-cycle="${job.id}" style="background:${s.bg};color:${s.text}"><span class="status-dot" style="background:${s.dot}"></span>${job.status}</button>
+      <button class="edit-btn" data-cycle="${job.id}" title="→ ${NEXT_STATUS[job.status]}" style="color:#3b82f6;font-size:0.8rem;font-weight:700;padding:0.1rem 0.3rem;border:1px solid #bfdbfe;border-radius:5px;background:#eff6ff">▶</button>
       <button class="edit-btn" data-edit="${job.id}" title="Edit">✏️</button>
     </div>
   </div>`;
@@ -284,8 +282,8 @@ function buildModal(job) {
     <div class="modal-footer">
       <button class="btn-cancel" id="modal-cancel">Cancel</button>
       <button class="btn-save" id="modal-save" ${canSave?"":"disabled"} style="background:${canSave?"#3b82f6":"#bfdbfe"};color:${canSave?"white":"#93c5fd"};cursor:${canSave?"pointer":"default"}">Save</button>
+      ${!isNew?`<button class="btn-delete" id="modal-delete" style="flex:none;width:42px;padding:0;display:flex;align-items:center;justify-content:center">🗑</button>`:""}
     </div>
-    ${!isNew?`<button class="btn-delete" id="modal-delete">Delete Job</button>`:""}
   </div></div>`;
 }
 
