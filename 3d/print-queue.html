@@ -498,8 +498,20 @@ function handleImport() {
 
 function handleExport() {
   const json = JSON.stringify(state.jobs, null, 2);
-  try { navigator.clipboard.writeText(json).then(()=>showToast("Copied!")).catch(()=>showExportFallback(json)); }
-  catch { showExportFallback(json); }
+  try {
+    const blob = new Blob([json], {type: 'application/json'});
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = `print-queue-${new Date().toISOString().slice(0,10)}.json`;
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    setTimeout(() => URL.revokeObjectURL(url), 1000);
+    showToast("Exported!");
+  } catch(e) {
+    showExportFallback(json);
+  }
 }
 
 function showExportFallback(json) {
