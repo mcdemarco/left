@@ -111,7 +111,18 @@ const COLORS = ["#ef4444","#f97316","#eab308","#22c55e","#3b82f6","#a855f7","#ec
 const FILAMENT_TYPES = ["PLA","PETG","Other"];
 const PRIORITIES = ["High","Medium","Low"];
 const STORAGE_KEY = "print-queue-jobs";
+const SETTINGS_KEY = "print-queue-settings";
 const ALL_VIEW_ORDER = ["Queued","Printing","Paused","Blocked","Modeling","Idea","Done"];
+
+function loadSettings() {
+  try { const r = localStorage.getItem(SETTINGS_KEY); return r ? JSON.parse(r) : {}; } catch { return {}; }
+}
+function saveSettings(s) {
+  try { localStorage.setItem(SETTINGS_KEY, JSON.stringify(s)); } catch {}
+}
+
+let settings = loadSettings(); // { token, gistId }
+let syncStatus = "idle"; // idle | syncing | synced | error | offline
 
 const STATUS_STYLE = {
   "Idea":     {bg:"#f3f0ff",text:"#7c3aed",dot:"#7c3aed"},
@@ -135,7 +146,14 @@ const defaultJob = () => ({
   notes:"", printHours:"", plates:"", createdAt:null
 });
 
-let state = { jobs: loadJobs(), filter: "All", groupBy: "status", modal: null, toast: "" };
+let state = { jobs: loadJobs(), filter: "All", groupBy: "status", modal: null, toast: "", showSettings: false };
+
+// On startup, try to fetch from Gist
+if (settings.token && settings.gistId) {
+  fetchFromGist().then(jobs => {
+    if (jobs) { state.jobs = jobs; saveJobs(jobs); render(); }
+  });
+}
 
 function loadJobs() {
   try { const r = localStorage.getItem(STORAGE_KEY); return r ? JSON.parse(r) : []; } catch { return []; }
@@ -200,7 +218,7 @@ function buildApp() {
   return `
     <div class="header">
       <div style="display:flex;align-items:center;gap:0.5rem"><svg width="28" height="28" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg" style="flex-shrink:0"><rect width="80" height="80" rx="18" fill="#eff6ff"/><rect x="10" y="16" width="60" height="50" rx="4" fill="#dbeafe" stroke="#3b82f6" stroke-width="1.5"/><rect x="15" y="21" width="50" height="38" rx="3" fill="#f0f9ff" stroke="#93c5fd" stroke-width="1"/><rect x="18" y="50" width="44" height="5" rx="2" fill="#bfdbfe" stroke="#3b82f6" stroke-width="1.5"/><rect x="15" y="57" width="50" height="4" rx="2" fill="#dbeafe" stroke="#3b82f6" stroke-width="1"/><line x1="15" y1="21" x2="15" y2="57" stroke="#93c5fd" stroke-width="1.5"/><line x1="65" y1="21" x2="65" y2="57" stroke="#93c5fd" stroke-width="1.5"/><line x1="15" y1="29" x2="65" y2="29" stroke="#2563eb" stroke-width="2.5"/><rect x="33" y="23" width="14" height="9" rx="2" fill="#2563eb"/><polygon points="37,32 43,32 42,38 38,38" fill="#1d4ed8"/><rect x="31" y="42" width="18" height="8" rx="2" fill="#60a5fa" stroke="#3b82f6" stroke-width="1"/><circle cx="59" cy="19" r="5" fill="#dbeafe" stroke="#3b82f6" stroke-width="1.5"/><circle cx="59" cy="19" r="2" fill="#eff6ff" stroke="#3b82f6" stroke-width="1"/></svg><div><h1>Print Queue</h1><div class="header-sub">${jobs.length} job${jobs.length!==1?"s":""} total</div></div></div>
-      <div class="header-actions">${toast?`<span class="toast">${toast}</span>`:""}<button class="btn-ghost" id="btn-import">↑ Import</button><button class="btn-ghost" id="btn-export">↓ Export</button></div>
+      <div class="header-actions">${toast?`<span class="toast">${toast}</span>`:""}<button class="btn-ghost" id="btn-sync" title="Sync with GitHub Gist" style="${settings.token?"":`opacity:0.4`}">${syncStatusIcon()}</button><button class="btn-ghost" id="btn-settings">⚙️</button><button class="btn-ghost" id="btn-import">↑</button><button class="btn-ghost" id="btn-export">↓</button></div>
     </div>
     <div class="filters">${["All",...STATUSES].map(s => {
       const count = s==="All"?jobs.length:counts[s];
@@ -211,7 +229,8 @@ function buildApp() {
     ${groupToggle}
     <div class="job-list" id="job-list">${listHTML}</div>
     <button class="fab" id="btn-add">+</button>
-    ${state.modal ? buildModal(state.modal) : ""}`;
+    ${state.modal ? buildModal(state.modal) : ""}
+    ${state.showSettings ? buildSettings() : ""}`;
 }
 
 function buildCard(job) {
@@ -284,6 +303,38 @@ function buildModal(job) {
       <button class="btn-save" id="modal-save" ${canSave?"":"disabled"} style="background:${canSave?"#3b82f6":"#bfdbfe"};color:${canSave?"white":"#93c5fd"};cursor:${canSave?"pointer":"default"}">Save</button>
       ${!isNew?`<button class="btn-delete" id="modal-delete" style="flex:none;width:42px;padding:0;display:flex;align-items:center;justify-content:center">🗑</button>`:""}
     </div>
+  </div></div>`;
+}
+
+function syncStatusIcon() {
+  if (!settings.token) return "☁️";
+  if (syncStatus === "syncing") return "⏳";
+  if (syncStatus === "synced") return "✓";
+  if (syncStatus === "error") return "⚠️";
+  if (syncStatus === "offline") return "📵";
+  return "☁️";
+}
+
+function buildSettings() {
+  return `<div class="modal-overlay" id="settings-overlay"><div class="modal">
+    <div class="modal-header"><span class="modal-title">GitHub Gist Sync</span><button class="modal-close" id="settings-close">✕</button></div>
+
+    <p style="font-size:0.82rem;color:#64748b;margin-bottom:1rem;line-height:1.5">Sync your queue to a private GitHub Gist so it's accessible from any device. Create a token at <strong>github.com/settings/tokens</strong> with <strong>gist</strong> scope.</p>
+
+    <div class="field">
+      <label>Personal Access Token</label>
+      <input class="input" id="s-token" type="password" value="${esc(settings.token||"")}" placeholder="ghp_..." autocomplete="off" />
+    </div>
+    <div class="field">
+      <label>Gist ID <span style="font-weight:400;text-transform:none;letter-spacing:0">(leave blank to auto-find or create on first sync)</span></label>
+      <input class="input" id="s-gistid" value="${esc(settings.gistId||"")}" placeholder="auto-detected or created on first sync" />
+    </div>
+
+    <div class="modal-footer">
+      <button class="btn-cancel" id="settings-cancel">Cancel</button>
+      <button class="btn-save" id="settings-save" style="background:#3b82f6;color:white;cursor:pointer">Save</button>
+    </div>
+    ${settings.token ? `<button style="margin-top:0.5rem;width:100%;padding:0.6rem;border-radius:8px;border:1px solid #e2e8f0;background:#f8fafc;color:#64748b;cursor:pointer;font-family:inherit;font-size:0.88rem" id="settings-clear">Clear credentials</button>` : ""}
   </div></div>`;
 }
 
@@ -365,8 +416,51 @@ function attachEvents() {
   document.querySelectorAll("[data-group]").forEach(btn =>
     btn.addEventListener("click", () => { state.groupBy = btn.dataset.group; render(); }));
   document.getElementById("btn-add")?.addEventListener("click", () => { state.modal = defaultJob(); render(); });
+  document.getElementById("btn-settings")?.addEventListener("click", () => { state.showSettings = true; render(); });
+  document.getElementById("btn-sync")?.addEventListener("click", () => { if (settings.token) handleSync(); else { state.showSettings = true; render(); } });
   document.getElementById("btn-import")?.addEventListener("click", handleImport);
   document.getElementById("btn-export")?.addEventListener("click", handleExport);
+
+  // Settings panel
+  const settingsOverlay = document.getElementById("settings-overlay");
+  if (settingsOverlay) {
+    settingsOverlay.addEventListener("click", e => { if (e.target===settingsOverlay) closeSettings(); });
+    document.getElementById("settings-close")?.addEventListener("click", closeSettings);
+    document.getElementById("settings-cancel")?.addEventListener("click", closeSettings);
+    document.getElementById("settings-save")?.addEventListener("click", async () => {
+      const token = document.getElementById("s-token")?.value.trim();
+      const gistId = document.getElementById("s-gistid")?.value.trim();
+      settings = { ...settings, token, gistId };
+      saveSettings(settings);
+      syncStatus = "idle";
+      closeSettings();
+      if (token && !gistId) {
+        // Try to find an existing print-queue.json gist
+        showToast("Looking for existing Gist…");
+        const found = await findGistId(token);
+        if (found) {
+          settings = { ...settings, gistId: found };
+          saveSettings(settings);
+          showToast("Found existing Gist!");
+          // Fetch data from it
+          const jobs = await fetchFromGist();
+          if (jobs) { state.jobs = jobs; saveJobs(jobs); render(); }
+        } else {
+          showToast("Token saved — Gist will be created on first sync.");
+        }
+      } else if (token) {
+        showToast("Settings saved!");
+      }
+    });
+    document.getElementById("settings-clear")?.addEventListener("click", () => {
+      if (confirm("Clear GitHub credentials?")) {
+        settings = {};
+        saveSettings(settings);
+        syncStatus = "idle";
+        closeSettings();
+      }
+    });
+  }
   document.querySelectorAll("[data-cycle]").forEach(btn =>
     btn.addEventListener("click", e => { e.stopPropagation(); cycleStatus(+btn.dataset.cycle); }));
   document.querySelectorAll("[data-edit]").forEach(btn =>
@@ -460,6 +554,71 @@ function cycleStatus(id) {
     return {...j, status:newStatus, sortOrders};
   });
   saveJobs(state.jobs); render();
+}
+
+function closeSettings() { state.showSettings = false; render(); }
+
+async function fetchFromGist() {
+  if (!settings.token || !settings.gistId) return null;
+  try {
+    const res = await fetch(`https://api.github.com/gists/${settings.gistId}`, {
+      headers: { Authorization: `token ${settings.token}`, Accept: "application/vnd.github.v3+json" }
+    });
+    if (!res.ok) return null;
+    const data = await res.json();
+    const file = data.files?.["print-queue.json"];
+    if (!file) return null;
+    return JSON.parse(file.content);
+  } catch { return null; }
+}
+
+async function findGistId(token) {
+  try {
+    // Fetch up to 100 gists and look for one containing print-queue.json
+    const res = await fetch("https://api.github.com/gists?per_page=100", {
+      headers: { Authorization: `token ${token}`, Accept: "application/vnd.github.v3+json" }
+    });
+    if (!res.ok) return null;
+    const gists = await res.json();
+    const match = gists.find(g => g.files?.["print-queue.json"]);
+    return match ? match.id : null;
+  } catch { return null; }
+}
+
+async function handleSync() {
+  if (!settings.token) { state.showSettings = true; render(); return; }
+  syncStatus = "syncing"; render();
+  try {
+    const json = JSON.stringify(state.jobs, null, 2);
+    let gistId = settings.gistId;
+
+    if (!gistId) {
+      // Create new gist
+      const res = await fetch("https://api.github.com/gists", {
+        method: "POST",
+        headers: { Authorization: `token ${settings.token}`, Accept: "application/vnd.github.v3+json", "Content-Type": "application/json" },
+        body: JSON.stringify({ description: "Print Queue data", public: false, files: { "print-queue.json": { content: json } } })
+      });
+      if (!res.ok) throw new Error("Failed to create Gist");
+      const data = await res.json();
+      gistId = data.id;
+      settings = { ...settings, gistId };
+      saveSettings(settings);
+    } else {
+      // Update existing gist
+      const res = await fetch(`https://api.github.com/gists/${gistId}`, {
+        method: "PATCH",
+        headers: { Authorization: `token ${settings.token}`, Accept: "application/vnd.github.v3+json", "Content-Type": "application/json" },
+        body: JSON.stringify({ files: { "print-queue.json": { content: json } } })
+      });
+      if (!res.ok) throw new Error("Failed to update Gist");
+    }
+    syncStatus = "synced";
+    showToast("Synced!");
+  } catch(e) {
+    syncStatus = navigator.onLine ? "error" : "offline";
+    showToast(navigator.onLine ? "Sync failed" : "Offline");
+  }
 }
 
 function handleImport() {
