@@ -105,7 +105,7 @@
 <div id="app"></div>
 <script>
 const CATEGORIES = ["Craft","Educational","Fidget","Game","Home","Hueforge","Puzzle","Printer","Toy","Train","Other"];
-const STATUSES = ["Idea","Modeling","Blocked","Queued","Printing","Done","Paused"];
+const STATUSES = ["Idea","Modeling","Blocked","Queued","Printing","Done","Paused","Archived"];
 const LOCATIONS = ["MakerWorld","Printables","Thingiverse","My Computer","In My Head","Other"];
 const COLORS = ["#ef4444","#f97316","#eab308","#22c55e","#3b82f6","#a855f7","#ec4899","#6b7280","#000000","#ffffff","#EBDBCC"];
 const FILAMENT_TYPES = ["PLA","PETG","Other"];
@@ -132,10 +132,11 @@ const STATUS_STYLE = {
   "Printing": {bg:"#eff6ff",text:"#2563eb",dot:"#3b82f6"},
   "Done":     {bg:"#f0fdf4",text:"#16a34a",dot:"#22c55e"},
   "Paused":   {bg:"#fff1f2",text:"#e11d48",dot:"#f43f5e"},
+  "Archived": {bg:"#f8fafc",text:"#94a3b8",dot:"#cbd5e1"},
 };
 const NEXT_STATUS = {
   "Idea":"Modeling","Modeling":"Queued","Blocked":"Queued",
-  "Queued":"Printing","Printing":"Done","Done":"Queued","Paused":"Queued"
+  "Queued":"Printing","Printing":"Done","Done":"Queued","Paused":"Queued","Archived":"Queued"
 };
 const LOC_ICON = {MakerWorld:"🌍",Printables:"📦",Thingiverse:"🎲","My Computer":"💾","In My Head":"🧠",Other:"📍"};
 
@@ -148,11 +149,32 @@ const defaultJob = () => ({
 
 let state = { jobs: loadJobs(), filter: "All", groupBy: "status", modal: null, toast: "", showSettings: false };
 
-// On startup, try to fetch from Gist
+// Auto-archive on startup
+function autoArchive() {
+  const now = new Date();
+  const oneMonthAgo = new Date(now);
+  oneMonthAgo.setMonth(oneMonthAgo.getMonth() - 1);
+  let changed = false;
+  state.jobs = state.jobs.map(j => {
+    if (j.status !== "Done") return j;
+    if (!j.doneAt || new Date(j.doneAt) < oneMonthAgo) {
+      changed = true;
+      return { ...j, status: "Archived" };
+    }
+    return j;
+  });
+  if (changed) saveJobs(state.jobs);
+}
+// On startup, try to fetch from Gist, then autoArchive regardless
 if (settings.token && settings.gistId) {
   fetchFromGist().then(jobs => {
-    if (jobs) { state.jobs = jobs; saveJobs(jobs); render(); }
+    if (jobs) { state.jobs = jobs; }
+    autoArchive();
+    saveJobs(state.jobs);
+    render();
   });
+} else {
+  autoArchive();
 }
 
 function loadJobs() {
@@ -164,6 +186,10 @@ function saveJobs(jobs) {
 
 function getDisplayed() {
   const { jobs, filter, groupBy } = state;
+  const activeJobs = jobs.filter(j => j.status !== "Archived");
+  if (filter === "Archived") {
+    return [...jobs].filter(j => j.status === "Archived");
+  }
   if (filter !== "All") {
     return [...jobs].filter(j => j.status === filter)
       .sort((a,b) => (a.sortOrders?.[filter]??9999) - (b.sortOrders?.[filter]??9999));
@@ -171,14 +197,22 @@ function getDisplayed() {
   if (groupBy === "category") {
     const result = [];
     for (const cat of CATEGORIES) {
-      const group = jobs.filter(j => j.category === cat);
+      const group = activeJobs.filter(j => j.category === cat);
       if (group.length) result.push({ label: cat, key: "cat:"+cat, jobs: group });
+    }
+    return result;
+  }
+  if (groupBy === "priority") {
+    const result = [];
+    for (const pri of PRIORITIES) {
+      const group = activeJobs.filter(j => (j.priority || "Medium") === pri);
+      if (group.length) result.push({ label: pri + " Priority", key: "pri:"+pri, jobs: group });
     }
     return result;
   }
   const result = [];
   for (const status of ALL_VIEW_ORDER) {
-    const group = [...jobs].filter(j => j.status === status)
+    const group = [...activeJobs].filter(j => j.status === status)
       .sort((a,b) => (a.sortOrders?.[status]??9999) - (b.sortOrders?.[status]??9999));
     if (group.length) result.push({ label: status, status, jobs: group });
   }
@@ -209,21 +243,22 @@ function buildApp() {
       : displayed.map(buildCard).join("");
   }
 
-  const groupToggle = filter === "All" ? `
+  const groupToggle = (filter === "All") ? `
     <div class="group-toggle">
       <button class="group-btn${groupBy==="status"?" group-btn-active":""}" data-group="status">By Status</button>
       <button class="group-btn${groupBy==="category"?" group-btn-active":""}" data-group="category">By Category</button>
+      <button class="group-btn${groupBy==="priority"?" group-btn-active":""}" data-group="priority">By Priority</button>
     </div>` : "";
 
   return `
     <div class="header">
-      <div style="display:flex;align-items:center;gap:0.5rem"><svg width="28" height="28" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg" style="flex-shrink:0"><rect width="80" height="80" rx="18" fill="#eff6ff"/><rect x="10" y="16" width="60" height="50" rx="4" fill="#dbeafe" stroke="#3b82f6" stroke-width="1.5"/><rect x="15" y="21" width="50" height="38" rx="3" fill="#f0f9ff" stroke="#93c5fd" stroke-width="1"/><rect x="18" y="50" width="44" height="5" rx="2" fill="#bfdbfe" stroke="#3b82f6" stroke-width="1.5"/><rect x="15" y="57" width="50" height="4" rx="2" fill="#dbeafe" stroke="#3b82f6" stroke-width="1"/><line x1="15" y1="21" x2="15" y2="57" stroke="#93c5fd" stroke-width="1.5"/><line x1="65" y1="21" x2="65" y2="57" stroke="#93c5fd" stroke-width="1.5"/><line x1="15" y1="29" x2="65" y2="29" stroke="#2563eb" stroke-width="2.5"/><rect x="33" y="23" width="14" height="9" rx="2" fill="#2563eb"/><polygon points="37,32 43,32 42,38 38,38" fill="#1d4ed8"/><rect x="31" y="42" width="18" height="8" rx="2" fill="#60a5fa" stroke="#3b82f6" stroke-width="1"/><circle cx="59" cy="19" r="5" fill="#dbeafe" stroke="#3b82f6" stroke-width="1.5"/><circle cx="59" cy="19" r="2" fill="#eff6ff" stroke="#3b82f6" stroke-width="1"/></svg><div><h1>Print Queue</h1><div class="header-sub">${jobs.length} job${jobs.length!==1?"s":""} total</div></div></div>
-      <div class="header-actions">${toast?`<span class="toast">${toast}</span>`:""}<button class="btn-ghost" id="btn-sync" title="Sync with GitHub Gist" style="${settings.token?"":`opacity:0.4`}">${syncStatusIcon()}</button><button class="btn-ghost" id="btn-settings">⚙️</button><button class="btn-ghost" id="btn-import">↑</button><button class="btn-ghost" id="btn-export">↓</button></div>
+      <div style="display:flex;align-items:center;gap:0.5rem"><svg width="60" height="60" viewBox="0 0 180 180" xmlns="http://www.w3.org/2000/svg" style="flex-shrink:0"><rect width="180" height="180" rx="40" fill="#eff6ff"/><rect x="25" y="36" width="130" height="114" rx="9" fill="#dbeafe" stroke="#3b82f6" stroke-width="3.5"/><rect x="40" y="48" width="100" height="86" rx="7" fill="#f0f9ff" stroke="#93c5fd" stroke-width="2"/><rect x="40" y="113" width="100" height="12" rx="4" fill="#bfdbfe" stroke="#3b82f6" stroke-width="3"/><rect x="35.423" y="129" width="108.581" height="8.783" rx="4" fill="#dbeafe" stroke="#3b82f6" stroke-width="2.5"/><line x1="36.697" y1="67" x2="142.138" y2="67" stroke="#2563eb" stroke-width="6" stroke-linecap="round"/><rect x="74" y="52" width="32" height="20" rx="5" fill="#2563eb"/><polygon points="83.104 72 96.597 72 94.067 84.02 85.634 84.02" fill="#1d4ed8"/><line x1="90" y1="89" x2="90" y2="100" stroke="#93c5fd" stroke-width="3" stroke-dasharray="5 4" stroke-linecap="round"/><rect x="70" y="100" width="40" height="13" rx="4" fill="#60a5fa" stroke="#3b82f6" stroke-width="2.5"/><rect x="78.869" y="86" width="24" height="14" rx="3" fill="#93c5fd" stroke="#3b82f6" stroke-width="2"/><circle cx="133" cy="43" r="13" fill="#dbeafe" stroke="#3b82f6" stroke-width="3"/><circle cx="133" cy="43" r="5" fill="#eff6ff" stroke="#3b82f6" stroke-width="2.5"/><path d="M 133 30 C 133 22 126.226 15.849 113.113 14.609 C 100 13.369 93.446 24.942 90.113 51.609 C 88.78 58.276 90.112 58.596 90.112 51.929" fill="none" stroke="#3b82f6" stroke-width="2.5" stroke-dasharray="6 4" stroke-linecap="round"/><circle cx="128" cy="141" r="6" fill="#22c55e"/></svg><div><h1>Print Queue</h1><div class="header-sub">${jobs.length} job${jobs.length!==1?"s":""} total</div></div></div>
+      <div class="header-actions">${toast?`<span class="toast">${toast}</span>`:""}<button class="btn-ghost" id="btn-sync" title="Sync to GitHub Gist" style="${settings.token?"":`opacity:0.4`}">${syncStatusIcon()}</button><button class="btn-ghost" id="btn-import" title="Import jobs from JSON">↑</button><button class="btn-ghost" id="btn-export" title="Export jobs to JSON">↓</button><button class="btn-ghost" id="btn-settings" title="Gist sync settings">⚙️</button></div>
     </div>
-    <div class="filters">${["All",...STATUSES].map(s => {
-      const count = s==="All"?jobs.length:counts[s];
+    <div class="filters">${["All","Queued","Archived"].map(s => {
+      const count = s==="All" ? jobs.filter(j=>j.status!=="Archived").length : jobs.filter(j=>j.status===s).length;
       const active = filter===s;
-      const st = s!=="All"?STATUS_STYLE[s]:null;
+      const st = STATUS_STYLE[s] || null;
       return `<button class="filter-btn" data-filter="${s}" style="border-color:${active?(st?.dot||"#3b82f6"):"#e2e8f0"};background:${active?(st?.bg||"#eff6ff"):"white"};color:${active?(st?.text||"#2563eb"):"#64748b"}">${s}${count>0?` <span style="opacity:.6">${count}</span>`:""}</button>`;
     }).join("")}</div>
     ${groupToggle}
@@ -252,7 +287,9 @@ function buildCard(job) {
       <div class="job-meta" style="display:flex;align-items:center;gap:0.3rem">${highPriority}<span>${esc(metaParts.join(" · "))}</span></div>
     </div>
     <div class="card-right">
-      <button class="edit-btn" data-cycle="${job.id}" title="→ ${NEXT_STATUS[job.status]}" style="color:#3b82f6;font-size:0.8rem;font-weight:700;padding:0.1rem 0.3rem;border:1px solid #bfdbfe;border-radius:5px;background:#eff6ff">▶</button>
+      ${(job.status !== "Archived" && state.filter !== "Archived" && !(state.filter === "All" && (state.groupBy === "category" || state.groupBy === "priority")))
+        ? `<button class="edit-btn" data-cycle="${job.id}" title="→ ${NEXT_STATUS[job.status]}" style="color:#3b82f6;font-size:0.8rem;font-weight:700;padding:0.1rem 0.3rem;border:1px solid #bfdbfe;border-radius:5px;background:#eff6ff">▶</button>`
+        : `<span style="font-size:0.68rem;font-weight:600;padding:0.15rem 0.45rem;border-radius:20px;background:${(STATUS_STYLE[job.status]||STATUS_STYLE['Idea']).bg};color:${(STATUS_STYLE[job.status]||STATUS_STYLE['Idea']).text}">${job.status}</span>`}
       <button class="edit-btn" data-edit="${job.id}" title="Edit">✏️</button>
     </div>
   </div>`;
@@ -352,6 +389,7 @@ function attachDrag() {
 
 function onDragStart(e) {
   if (state.groupBy === "category" && state.filter === "All") return;
+  if (state.groupBy === "priority" && state.filter === "All") return;
   const isTouching = e.type === "touchstart";
   const point = isTouching ? e.touches[0] : e;
   const card = e.currentTarget.closest(".job-card");
@@ -551,7 +589,8 @@ function cycleStatus(id) {
     if (j.id!==id) return j;
     const newStatus = NEXT_STATUS[j.status];
     const sortOrders = {...(j.sortOrders||{}), [newStatus]: state.jobs.filter(x=>x.status===newStatus).length};
-    return {...j, status:newStatus, sortOrders};
+    const doneAt = newStatus === "Done" ? new Date().toISOString() : j.doneAt;
+    return {...j, status:newStatus, sortOrders, doneAt};
   });
   saveJobs(state.jobs); render();
 }
@@ -615,6 +654,7 @@ async function handleSync() {
     }
     syncStatus = "synced";
     showToast("Synced!");
+    setTimeout(() => { syncStatus = "idle"; render(); }, 5000);
   } catch(e) {
     syncStatus = navigator.onLine ? "error" : "offline";
     showToast(navigator.onLine ? "Sync failed" : "Offline");
@@ -695,21 +735,19 @@ render();
   const SIZE = 180;
   const svgStr = `<svg width="${SIZE}" height="${SIZE}" viewBox="0 0 180 180" xmlns="http://www.w3.org/2000/svg">
     <rect width="180" height="180" rx="40" fill="#eff6ff"/>
-    <rect x="22" y="36" width="136" height="114" rx="9" fill="#dbeafe" stroke="#3b82f6" stroke-width="3.5"/>
-    <rect x="34" y="48" width="112" height="86" rx="7" fill="#f0f9ff" stroke="#93c5fd" stroke-width="2"/>
+    <rect x="25" y="36" width="130" height="114" rx="9" fill="#dbeafe" stroke="#3b82f6" stroke-width="3.5"/>
+    <rect x="40" y="48" width="100" height="86" rx="7" fill="#f0f9ff" stroke="#93c5fd" stroke-width="2"/>
     <rect x="40" y="113" width="100" height="12" rx="4" fill="#bfdbfe" stroke="#3b82f6" stroke-width="3"/>
-    <rect x="34" y="129" width="112" height="9" rx="4" fill="#dbeafe" stroke="#3b82f6" stroke-width="2.5"/>
-    <line x1="34" y1="48" x2="34" y2="129" stroke="#93c5fd" stroke-width="3.5" stroke-linecap="round"/>
-    <line x1="146" y1="48" x2="146" y2="129" stroke="#93c5fd" stroke-width="3.5" stroke-linecap="round"/>
-    <line x1="34" y1="67" x2="146" y2="67" stroke="#2563eb" stroke-width="6" stroke-linecap="round"/>
+    <rect x="35.423" y="129" width="108.581" height="8.783" rx="4" fill="#dbeafe" stroke="#3b82f6" stroke-width="2.5"/>
+    <line x1="36.697" y1="67" x2="142.138" y2="67" stroke="#2563eb" stroke-width="6" stroke-linecap="round"/>
     <rect x="74" y="52" width="32" height="20" rx="5" fill="#2563eb"/>
-    <polygon points="82,72 98,72 95,88 85,88" fill="#1d4ed8"/>
+    <polygon points="83.104 72 96.597 72 94.067 84.02 85.634 84.02" fill="#1d4ed8"/>
     <line x1="90" y1="89" x2="90" y2="100" stroke="#93c5fd" stroke-width="3" stroke-dasharray="5 4" stroke-linecap="round"/>
-    <rect x="70" y="95" width="40" height="18" rx="4" fill="#60a5fa" stroke="#3b82f6" stroke-width="2.5"/>
-    <rect x="78" y="82" width="24" height="14" rx="3" fill="#93c5fd" stroke="#3b82f6" stroke-width="2"/>
+    <rect x="70" y="100" width="40" height="13" rx="4" fill="#60a5fa" stroke="#3b82f6" stroke-width="2.5"/>
+    <rect x="78.869" y="86" width="24" height="14" rx="3" fill="#93c5fd" stroke="#3b82f6" stroke-width="2"/>
     <circle cx="133" cy="43" r="13" fill="#dbeafe" stroke="#3b82f6" stroke-width="3"/>
     <circle cx="133" cy="43" r="5" fill="#eff6ff" stroke="#3b82f6" stroke-width="2.5"/>
-    <path d="M133,30 Q133,18 115,15 Q97,12 92,52 Q90,62 90,52" fill="none" stroke="#3b82f6" stroke-width="2.5" stroke-dasharray="6 4" stroke-linecap="round"/>
+    <path d="M 133 30 C 133 22 126.226 15.849 113.113 14.609 C 100 13.369 93.446 24.942 90.113 51.609 C 88.78 58.276 90.112 58.596 90.112 51.929" fill="none" stroke="#3b82f6" stroke-width="2.5" stroke-dasharray="6 4" stroke-linecap="round"/>
     <circle cx="128" cy="141" r="6" fill="#22c55e"/>
   </svg>`;
 
